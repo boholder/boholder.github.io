@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+    <title type="text">BoHolder的网站:产出、想法与其他</title>
+    <subtitle type="html">BoHolder's site: about my crafts,thought,etc</subtitle>
+    <updated>2020-07-17T21:17:22+08:00</updated>
+    <id>https://boholder.github.io/</id>
+    <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
+    <link rel="self" type="application/atom+xml" href="https://boholder.github.io/atom.xml" />
+    <author>
+            <name> BoHolder</name>
+            <uri>https://boholder.github.io/</uri>
+            
+                <email>bottleholder@anche.no</email>
+            </author>
+    <rights>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</rights>
+    <generator uri="https://gohugo.io/" version="0.58.1">Hugo</generator>
+        <entry>
+            <title type="text">初尝TDD的疑惑与对应解决方案</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/posts/tdd-tips-zh/" />
+            <id>https://boholder.github.io/posts/tdd-tips-zh/</id>
+            <updated>2020-07-17T21:13:56+08:00</updated>
+            <published>2020-07-17T00:00:00+00:00</published>
+            <author>
+                    <name> BoHolder</name>
+                    <uri>https://boholder.github.io/</uri>
+                    <email>bottleholder@anche.no</email>
+                    </author>
+            <rights>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</rights>
+    
+    <summary type="html"><![CDATA[不需要写非法输入测试，直接写业务逻辑；避免错误的步子大的测试；简化问题场景->逐步添加限制|条件]]></summary>
+            
+                <content type="html"><![CDATA[
+
+<h2 id="0-对读者的知识要求">0.对读者的知识要求</h2>
+
+<ul>
+<li>简单掌握任一编程语言，明白“软件测试”的定义、类别与各测试类别的作用。</li>
+</ul>
+
+<h2 id="1-什么是tdd">1.什么是TDD</h2>
+
+<p>TDD的全称是
+“测试驱动开发（Test-driven development）”<sup class="footnote-ref" id="fnref:0"><a href="#fn:0">1</a></sup>
+，“是一种软件开发过程中的应用方法，由极限编程中倡导，以其倡导先写测试程序，然后编码实现其功能得名”。</p>
+
+<p>一个TDD循环的简单流程是：</p>
+
+<ol>
+<li>编写一个需求对应的测试，该测试以一个功能方法的 <strong>一部分逻辑</strong> 为目标。</li>
+<li>编写简洁的业务逻辑代码，以通过测试。</li>
+<li>回归测试，运行和这部分逻辑相关的所有测试（或者简单的把整个测试类run一下），确认全通过。</li>
+<li>重构代码，修正步骤2中因思考逻辑而忽略的设计原则|设计模式（比如if-else中重复的代码可以提取成一个方法）。</li>
+<li>重新执行步骤3，确保重构没破坏功能。回到步骤1。</li>
+</ol>
+
+<h2 id="2-tdd的好处">2.TDD的好处</h2>
+
+<p>在此引用Uncle Bob的《代码整洁之道-程序员的职业素养》（另，推荐阅读此系列书）一书中他第一次看到TDD的回忆：</p>
+
+<blockquote>
+<p>...首先，他写了一个单元测试的一小部分，没几行代码。然后，他写了刚好能使那个测试通过的代码。
+接着，他又写了些测试，然后再写一些代码...从编码到运行的周期如此之短...Kent居然每30秒运行一次（测试）程序...
+忽然，我发现这种周期似曾相识！许多年前，当我还是孩子的时候...解释型语言,无需编译构建，你要做的只是添加一行代码，
+然后执行，再添加，再执行...使用这些语言的编程效率极高。</p>
+</blockquote>
+
+<p>（我看到“30秒”那里，就对TDD感兴趣了。）Bob大叔说得对，我们在刚开始编程时都有一个时期，小心翼翼，一次只加一行代码，
+然后运行看看print出的变量值发生了什么变化。</p>
+
+<blockquote>
+<p>符合预期的变化会给我们信心，而且直白的目标使下一行要加的代码“呼之欲出”。</p>
+</blockquote>
+
+<p>这就是TDD的魔力所在。它鼓励你拿出勇气去重构（烂）代码，因为你不再害怕重构它有破坏功能的风险，
+快速方便的回归测试集的re-run报告帮你撑腰。</p>
+
+<p>TDD还有如下优势：</p>
+
+<ul>
+<li>测试的代码覆盖率接近100%。</li>
+<li>这些测试不仅是单元测试的一部分，也是代码形式的用例和文档。</li>
+<li>便于执行自动化回归测试（单元测试层面）。</li>
+<li>测试间相互隔离，鼓励每次循环时编写的新逻辑间保持松耦合。</li>
+<li>TDD要求测试先行，这有助于帮助开发人员拆解需求。</li>
+</ul>
+
+<h2 id="3-我认为的-实施tdd的知识要求">3.（我认为的）实施TDD的知识要求</h2>
+
+<ul>
+<li>熟练使用当前项目所用语言的特性与类库，和单元测试工具。
+前者减少因为不熟悉语言而卡壳愣住的概率，后者是使用TDD的硬性要求。</li>
+<li>会拆解需求，从理想情况到需求所定义的限制性条件，一步步增加条件。（第4部分中详细解释）</li>
+</ul>
+
+<h2 id="4-实施tdd过程中的困惑和解决方案">4.实施TDD过程中的困惑和解决方案</h2>
+
+<p>TDD理论说来容易，但如果自身技能不够扎实，只是从头疼怎么写业务代码转到头疼怎么写测试而已。
+测试先行意味着，测试写得不够“好”，则直接影响开发人员进一步的思考方向，严重时会把开发人员带进思考泥潭。</p>
+
+<h3 id="4-1-不需要在编写测试时编写非法输入测试">4.1.不需要在编写测试时编写非法输入测试</h3>
+
+<table>
+<thead>
+<tr>
+<th>问：如何在使用TDD时保证代码的健壮性？是否需要考虑非法输入？</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>答：TDD时不需要。TDD之后，部分代码会需要，再加上就是。</td>
+</tr>
+
+<tr>
+<td>资料：<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">2</a></sup>的第二个回答，<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">3</a></sup>1.</td>
+</tr>
+</tbody>
+</table>
+
+<p>编写非法输入测试(比如输入NULL，空对象指针etc，这不是一个正规名词但涵盖范围正确）是QA（测试人员）的任务，
+当他们测试时，会在至少是单元测试的层面的封装（或者调用链）上测试非法输入，这意味着 <strong>不是每个方法都要考虑非法输入</strong> ，
+而TDD的测试会覆盖到每个方法。
+另外，在TDD之后而不是TDD时考虑这个部分，修改代码会更头脑清晰更方便（回归测试给的信心）。</p>
+
+<p>同时应该注意的是，如果业务逻辑本身要求“分情况考虑”，
+那么像是数组长度=0，以及由“情况”的排列组合得出的对应的“合法的”边界测试（edge cases），就要在TDD时覆盖到。
+正确实例：<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">4</a></sup> （这是一个优雅如禅宗公案的“kata”）最后，为了考虑逻辑的“周全性”而添加的两个测试。（一个输入情况对应一个测试）</p>
+
+<h3 id="4-2-避免错误的步子大的测试">4.2.避免错误的步子大的测试</h3>
+
+<table>
+<thead>
+<tr>
+<th>问：我写出了下一个测试，但在编业务代码时卡壳了</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>答：先排除自身编码不熟练的因素，然后检查这个测试，</td>
+</tr>
+
+<tr>
+<td>是不是覆盖的逻辑太大了，重新写一个小一些的测试（4.3详解）</td>
+</tr>
+
+<tr>
+<td>资料：<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">3</a></sup>3.，<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">4</a></sup>文章中间</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>酒要一口一口地喝，路要一步一步走，步子迈大了，容易_ _ _。————《让子弹飞》</p>
+</blockquote>
+
+<p>在TDD过程中，业务逻辑编码只需要恰好满足使测试通过，
+如果坚持住这个原则，那么唯一使编程步骤卡壳的原因就在于：
+开发人员不能快速想出通过测试的方案，又陷入了使用TDD前的窘境————没有短又直白的编码目标，头疼怎么一步到位。
+这个测试不能驱动编码思路*呼之欲出*，说明这个测试有问题，需要重新换一个。
+两个资料里都提到了这样含义的话：</p>
+
+<blockquote>
+<p>避免一个测试覆盖太大的逻辑范围，这违反了TDD单个测试对应小目标的原则。</p>
+</blockquote>
+
+<p>错误实例：就像文章<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">4</a></sup>中“我”在第一次分析需求时，选择了不明朗的测试“演化”方向，
+导致最后一步测试，实质上对应的是一步到位处理超过一种的新加入的情况，无法延续现有的代码继续修改以通过测试。</p>
+
+<p>现在的问题转换为“如何写出下一个测试”，请接着读4.3。</p>
+
+<h3 id="4-3-简化问题场景-逐步添加限制-条件">4.3.简化问题场景-&gt;逐步添加限制|条件</h3>
+
+<table>
+<thead>
+<tr>
+<th>问：我无法写出下一个测试，卡壳了</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>答：接着上一步测试的目的，继续分析需求，我们走到哪了？或者我们应该换个思路重新分析需求？</td>
+</tr>
+
+<tr>
+<td>资料：<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">3</a></sup>2.，<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">4</a></sup>文章中间</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>&quot;When faced with a problem you do not understand, do any part of it you do understand,
+then look at it again.&quot;</p>
+</blockquote>
+
+<p>这是文章<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">4</a></sup>给出的引用，来自一部科幻小说。下面我要写的是我根据文章<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">4</a></sup>和其他kata解决需求的思路悟出的门路，
+总结来说：</p>
+
+<blockquote>
+<p>不要按步骤1-2-3线性流程切分需求，而是按套娃，
+从理想的简单状态机（简单输入简单处理输出|复杂输入简化处理输出）到有条件|限制的复杂状态机（复杂处理+复杂输入|输出），
+一步步完善处理逻辑。</p>
+</blockquote>
+
+<p>如果你手边有《计算机网络》这类书，看看每个层的第一个教学使用的理论协议的假设条件有多理想，以数据链路层的协议为例：
+单工，发送方和接收方的网络层总是准备就绪，数据处理不计时间，
+可用缓存无限大，信道不会在物理层损坏|丢失。
+这种理想协议只会在教科书上存在，但它形象地描述了该层协议 <em>可能的风险|考量</em> 。
+之后的篇幅逐渐引入各种机制来解决理想协议中忽略的考量，最终一个能在现实场景中使用的协议完成了。</p>
+
+<p>咱们的测试也应该像设计协议一样，每次只测试一个考量|一种情况，
+修改少量代码通过这个测试，接着向下走，直到考虑了所有情况。</p>
+
+<p>正确实例：文章<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">4</a></sup>后半段，“我”针对“字符串按位换行”需求，先考虑了没有空白符的“纯”字符串简单情况，然后因为引入空白符，
+多增加了三种情况（分割点在空白符左、相同、右），多写三个测试并修改代码通过它们，最终完成了逻辑。</p>
+
+<h2 id="参考文章">参考文章</h2>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:0"><a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank">https://en.wikipedia.org/wiki/Test-driven_development</a>
+ <a class="footnote-return" href="#fnref:0">↩</a></li>
+<li id="fn:1"><a href="https://softwareengineering.stackexchange.com/questions/224711/tdd-workflow-for-implementation-specific-edge-cases" target="_blank">https://softwareengineering.stackexchange.com/questions/224711/tdd-workflow-for-implementation-specific-edge-cases</a>
+ <a class="footnote-return" href="#fnref:1">↩</a></li>
+<li id="fn:2"><a href="https://silkandspinach.net/2014/06/02/tdd-three-easy-mistakes/" target="_blank">https://silkandspinach.net/2014/06/02/tdd-three-easy-mistakes/</a>
+ <a class="footnote-return" href="#fnref:2">↩</a></li>
+<li id="fn:3"><a href="http://thecleancoder.blogspot.com/2010/10/craftsman-62-dark-path.html" target="_blank">http://thecleancoder.blogspot.com/2010/10/craftsman-62-dark-path.html</a>
+ <a class="footnote-return" href="#fnref:3">↩</a></li>
+</ol>
+</div>
+]]></content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                                <category scheme="https://boholder.github.io/categories/programming/" term="programming" label="programming" />
+                            
+                        
+                    
+                
+                    
+                
+                    
+                        
+                            
+                                <category scheme="https://boholder.github.io/tags/programming/" term="programming" label="programming" />
+                            
+                        
+                            
+                                <category scheme="https://boholder.github.io/tags/blog/" term="blog" label="blog" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Java实现大整数排列组合，解决抽卡欧气计算问题</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/posts/java_arrangement_combination_zh/" />
+            <id>https://boholder.github.io/posts/java_arrangement_combination_zh/</id>
+            <updated>2020-07-17T16:46:45+08:00</updated>
+            <published>2019-07-27T00:00:00+00:00</published>
+            <author>
+                    <name> BoHolder</name>
+                    <uri>https://boholder.github.io/</uri>
+                    <email>bottleholder@anche.no</email>
+                    </author>
+            <rights>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</rights>
+    
+    <summary type="html"><![CDATA[白送的10连，抽爆，抽完攀比思想冒头，循环乘嘛，实现一个！（其实是不想在WolframAlpha（一个付费在线数学计算应用）里输长长一串）]]></summary>
+            
+                <content type="html"><![CDATA[
+
+<h2 id="背景">背景</h2>
+
+<p>最近玩的某游戏开了新卡池，抽了8个10连共计80次，<br />
+出了4个稀有度最高的角色，<br />
+我突发奇想想算算我这个爆率算什么水平，<br />
+程序模拟一下，顺便复习排列组合。</p>
+
+<h2 id="程序设计">程序设计</h2>
+
+<p>Java标准类库中，没有排列组合甚至阶乘的现成方法，  <a href="https://stackoverflow.com/questions/891031/is-there-a-method-that-calculates-a-factorial-in-java" target="_blank">搜了一下</a><br />
+但为了这个引入一个第三方库又未免太麻烦，于是自己来实现。</p>
+
+<p>实现第一想到的是int和long两个基本类型，<a href="https://www.iteye.com/blog/ly5633-1219408" target="_blank">但想了想发现有坑</a> ：int最多12！，long最多到20！<br />
+这可不行，我这都80抽了。<br />
+于是换Java的BigDecimal类（大整数）。</p>
+
+<p>问题换算成伪代码是这样：<br />
+res=0<br />
+res += c(n, i) *  爆率^i *  (1 - a)^(n-i)     (i=a~b,i为整数)</p>
+
+<h2 id="代码">代码</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">import java.math.BigDecimal;
+
+public class factorial {
+
+	public static void main(String[] args) {
+
+		// 出货率2.5%
+		double a = 0.025d;
+		int n = 80;
+		// result
+		double res = 0;
+		double res2 = 0;
+
+		for (int i = 0; i &lt; 5; i++) {
+			res2 += c(n, i).longValue() * Math.pow(a, i) * Math.pow(1 - a, n - i);
+		}
+		System.out.println(&#34;0~4: &#34; + res2);
+
+		for (int i = 4; i &lt; n + 1; i++) {
+			res += c(n, i).longValue() * Math.pow(a, i) * Math.pow(1 - a, n - i);
+		}
+		System.out.println(&#34;4~80: &#34; + res);
+	}
+
+	// n!
+	public static BigDecimal n(int n) {
+		if (n == 0)
+			return new BigDecimal(0);
+
+		BigDecimal result = new BigDecimal(1);
+		BigDecimal a;
+		for (int i = 2; i &lt; n + 1; i++) {
+			a = new BigDecimal(i);
+			result = result.multiply(a);
+		}
+		return result;
+	}
+
+	// n!/m!
+	public static BigDecimal n2m(int n, int m) {
+
+		BigDecimal result = new BigDecimal(n);
+		BigDecimal a;
+		for (int i = n - 1; i &gt; m; i--) {
+			a = new BigDecimal(i);
+			result = result.multiply(a);
+		}
+		return result;
+	}
+
+	// n!/(n-m)! === a(n,m)
+	public static BigDecimal a(int n, int m) {
+		if (m == 0)
+			return new BigDecimal(1);
+
+		BigDecimal result = new BigDecimal(n);
+		BigDecimal a;
+		for (int i = n - 1; i &gt; n - m; i--) {
+			a = new BigDecimal(i);
+			result = result.multiply(a);
+		}
+		return result;
+	}
+
+	// c(n,m) === a(n,m)/(m)!
+	public static BigDecimal c(int n, int m) {
+		if (m == 0)
+			return new BigDecimal(1);
+		if (m == n)
+			return new BigDecimal(1);
+
+		// 优化计算，避免大除大
+		if (m &gt; n / 2)
+			return n2m(n, m).divide(n(n - m));
+		else
+			return a(n, m).divide(n(m));
+	}
+
+}</pre></td></tr></table>
+</div>
+</div>
+<h2 id="结果-结论">结果&amp;结论</h2>
+
+<ul>
+<li>0~4:  0.8176930694561881</li>
+<li>4~80:  0.14056818112756556</li>
+</ul>
+
+<p>抽80次，出0~4次货的概率 高达94.9%、<br />
+出4次及以上的概率为 14%，其中出4次占9%<br />
+这样一看我还行，乐上加乐，没钱人的开心就是这么简单。</p>
+]]></content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                                <category scheme="https://boholder.github.io/categories/programming/" term="programming" label="programming" />
+                            
+                        
+                    
+                
+                    
+                
+                    
+                        
+                            
+                                <category scheme="https://boholder.github.io/tags/java/" term="java" label="java" />
+                            
+                        
+                            
+                                <category scheme="https://boholder.github.io/tags/programming/" term="programming" label="programming" />
+                            
+                        
+                            
+                                <category scheme="https://boholder.github.io/tags/blog/" term="blog" label="blog" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">HTTP cookie的安全性、安全使用方法和攻击防御手段</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/posts/cookie_security_zh/" />
+            <id>https://boholder.github.io/posts/cookie_security_zh/</id>
+            <updated>2020-07-17T16:46:07+08:00</updated>
+            <published>2019-05-18T00:00:00+00:00</published>
+            <author>
+                    <name> BoHolder</name>
+                    <uri>https://boholder.github.io/</uri>
+                    <email>bottleholder@anche.no</email>
+                    </author>
+            <rights>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</rights>
+    
+    <summary type="html"><![CDATA[工作需要，要上台讲讲cookie安全性，索性总结成博客，自认为蛮全的]]></summary>
+            
+                <content type="html"><![CDATA[
+
+<h2 id="前言">前言</h2>
+
+<p>本文将把，截至2019-05-18的，从互联网上搜集到</p>
+
+<p>（&quot;cookie+security&quot;-&gt;Google与StartPage前两页结果为源+相关学术文献）的,<br />
+有关Cookie标准与用法、cookie安全性的信息，汇总索引，以方便读者学习了解相关信息。</p>
+
+<p>本文需要读者对计算机网络有大致了解，<br />
+没有了解也可以，术语会挂上解释链接，但阅读体验就比较差了。</p>
+
+<p>小段英文的翻译交给谷歌处理。</p>
+
+<h2 id="目录">目录</h2>
+
+<p>2部分与3部分的解决方案部分有重复，<br />
+但我认为还是把攻防和开发分开，缺陷与解决结合，比较方便阅读。</p>
+
+<ol>
+<li><a href="#what-is-cookie">Cookie是什么&amp;用法</a></li>
+<li><a href="#security-risk-in-design-and-use-and-solution">设计、使用中的安全隐患以及相应改进</a></li>
+<li><a href="#attack-on-cookies-and-solution">针对cookie窃取的攻击与相应防御</a></li>
+<li><a href="#academic-discussion-about-cookies">学术讨论涉及cookie的攻防</a></li>
+<li><a href="#summary">总结</a></li>
+</ol>
+
+<h2 id="what-is-cookie">What is cookie</h2>
+
+<p><strong>1.Cookie是什么&amp;用法</strong></p>
+
+<h3 id="定义">定义</h3>
+
+<p>英文<a href="https://en.wikipedia.org/wiki/HTTP_cookie" target="_blank">维基百科</a> 还是蛮丰富的，中文维基简单点，可以看<a href="https://baike.baidu.com/item/cookie/1119" target="_blank">百度百科</a>。</p>
+
+<p>RFC：<a href="https://tools.ietf.org/html/rfc2109" target="_blank">rfc2109-1997</a> -&gt; <a href="https://tools.ietf.org/html/rfc2965" target="_blank">rfc2965-2000</a> -&gt; <a href="https://tools.ietf.org/html/rfc6265" target="_blank">rfc6265-2011</a> -&gt; <a href="https://datatracker.ietf.org/doc/draft-ietf-httpbis-rfc6265bis/" target="_blank">rfc6265bis</a></p>
+
+<p><a href="https://hc.apache.org/httpcomponents-client-ga/tutorial/html/statemgmt.html" target="_blank">https://hc.apache.org/httpcomponents-client-ga/tutorial/html/statemgmt.html</a></p>
+
+<p>在最新的定义cookie的RFC2965上，是这么说的：</p>
+
+<blockquote>
+<p>we will use the term cookie to refer to the state<br />
+   information that passes between an origin server and user agent,<br />
+   and that gets stored by the user agent.</p>
+
+<p>我们将使用术语cookie来指代在源服务器和用户代理之间传递的状态信息，<br />
+以及由用户代理存储的状态信息。</p>
+</blockquote>
+
+<p>简单总结，cookie是：服务器与客户端间标识状态的信息，储存在客户端<br />
+（硬盘或内存，视类型而定），由服务器增删改读。<br />
+用途：满足对无状态的HTTP协议，想让它<strong>有状态</strong>的需求，一种修补措施。</p>
+
+<p>比如一个服务器，需要同时与多个客户端通信。</p>
+
+<ul>
+<li>因为HTTP协议@的无连接性，所以需要一个额外方法区分不同客户端。</li>
+<li>然后因为计算机网络的网络层路由有<a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" target="_blank">CIDR-无类域间路由</a>、<a href="https://en.wikipedia.org/wiki/Network_address_translation" target="_blank">NAT-网络地址转换</a> 这类协议存在，<br />
+服务器不能单靠记录IP或者MAC这些HTTP包里的信息标识每一个客户端。</li>
+</ul>
+
+<p>因此Netscape Draft在1994年率先定义了cookie这一解决方案<br />
+（此处apache.org的原文链接好像失效了），之后被整理成rfc2109。</p>
+
+<p>cookie可以用来干什么？<a href="https://en.wikipedia.org/wiki/HTTP_cookie#Uses" target="_blank">维基</a> 给了三个功能：</p>
+
+<ol>
+<li>会话管理</li>
+<li>个性化定制 <a href="https://en.wikipedia.org/wiki/Zombie_cookie" target="_blank">wikipedia-Zombie cookie （有点意思）</a></li>
+<li>追踪</li>
+</ol>
+
+<h3 id="格式-用法">格式&amp;用法</h3>
+
+<p>一个cookie由一个键值对（key=value）组成，同时在<em>被设置时</em> 会附加一些变量（attributes），<br />
+这些变量用来控制该cookie的使用方法。</p>
+
+<p>想了解详细属性，看<a href="https://tools.ietf.org/html/rfc6265#section-5.2" target="_blank">rfc6265-The Set-Cookie Header</a> ，<br />
+找不到新鲜的全面的中文材料，有个不错的<a href="https://imququ.com/post/host-only-cookie.html#toc-3" target="_blank">博客@Jerry Qu</a> ，但是是13年的。</p>
+
+<p>比如，我们时常听闻的第三方cookie，在设置时会标一个<code>Third-party</code>属性，<br />
+表明这是从非当前网站（URL框里的网站）设置的。</p>
+
+<p>当一个网站有引用（&lt;img&gt;...）其他网站，比如广告网站的广告资源时，<br />
+浏览器加载该网站时，也会向广告网站发GET请求，<br />
+第三方cookie就随着资源一起来到了浏览器上。</p>
+
+<p>对cookie的操作不再赘述，有需请自取。</p>
+
+<p><a href="https://en.wikipedia.org/wiki/HTTP_cookie#Implementation" target="_blank">https://en.wikipedia.org/wiki/HTTP_cookie#Implementation</a></p>
+
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" target="_blank">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie</a></p>
+
+<p><a href="https://tools.ietf.org/html/rfc6265#section-4.2" target="_blank">https://tools.ietf.org/html/rfc6265#section-4.2</a></p>
+
+<h2 id="security-risk-in-design-and-use-and-solution">Security risk in design and use and solution</h2>
+
+<p><strong>2.Cookie设计与使用中的安全隐患，以及相应改进</strong></p>
+
+<p>Cookie安全性这点，<a href="https://tools.ietf.org/html/rfc6265#section-8" target="_blank">rfc6265中有一整段(8. Security Considerations)</a> 去阐述，<br />
+务必读一下，总结的很好，我会跳过那些内容，只给出一个目录以供预览。</p>
+
+<table>
+<thead>
+<tr>
+<th>分标题</th>
+<th>简述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Overview</td>
+<td>总览</td>
+</tr>
+
+<tr>
+<td>Ambient Authority</td>
+<td>cookie是一种权限凭证</td>
+</tr>
+
+<tr>
+<td>Clear Text</td>
+<td>明文传输问题</td>
+</tr>
+
+<tr>
+<td>Session Identifiers</td>
+<td>非可读的会话标识符</td>
+</tr>
+
+<tr>
+<td>Weak Confidentiality</td>
+<td>cookie在各种层面保密性都弱</td>
+</tr>
+
+<tr>
+<td>Reliance on DNS</td>
+<td>cookie的安全性以DNS安全为前提</td>
+</tr>
+</tbody>
+</table>
+
+<p>与其说其设计不周全，不如说cookie因本身位置的限制无法保证设计安全，<br />
+rfc还警告开发人员不要把cookie作为唯一的认证环节。</p>
+
+<blockquote>
+<p>rfc6265: In addition, by default, cookies do not provide confidentiality or integrity<br />
+from network attackers, even when used in conjunction with HTTPS.</p>
+
+<p>此外，默认情况下，cookie不会为网络攻击者提供机密性或完整性，<br />
+即使与HTTPS结合使用也是如此。</p>
+</blockquote>
+
+<h3 id="1-服务器只能读取cookie键值对-读不到属性">1.服务器只能读取cookie键值对，读不到属性</h3>
+
+<blockquote>
+<p><a href="https://tools.ietf.org/html/rfc6265#section-4.2.2" target="_blank">rfc6265#section-4.2.2</a> :<br />
+   Notice that the cookie attributes are not returned.<br />
+   In particular,the server cannot determine from the Cookie header alone<br />
+   when a cookie will expire, for which hosts the cookie is valid,<br />
+   for which paths the cookie is valid,
+   or whether the cookie was set with the Secure or HttpOnly attributes.</p>
+
+<p><a href="https://tools.ietf.org/html/rfc6265#section-4.2.2" target="_blank">rfc6265#section-4.2.2</a> :<br />
+请注意，不返回cookie属性。特别是，当cookie过期时，<br />
+服务器无法单独从Cookie标头确定，cookie对哪些主机有效，cookie的路径有效，<br />
+或者cookie是否使用Secure或HttpOnly属性设置。</p>
+</blockquote>
+
+<p>同时在设置cookie时，客户端并不会发回结果反馈。这使得服务器不知道cookie是否被正确设置。<br />
+这等于要从数据库读一个不知道是否干净的数据，对数据完整性有影响。</p>
+
+<h4 id="解决-服务器容错与键名-走私-smuggle">解决：服务器容错与键名“走私（Smuggle）”</h4>
+
+<p>大多数情况下，可以用服务器逻辑容错。<br />
+<a href="https://www.owasp.org/images/a/a0/OWASPLondon20171130_Cookie_Security_Myths_Misconceptions_David_Johansson.pdf" target="_blank">OWASPLondon20171130_Cookie_Security_Myths_Misconceptions_David_Johansson</a><br />
+此报告提供了在cookie名里添加“私货”以标识属性的方法，<br />
+比如一个cookie设置了属性<code>http-only</code>，名字就加个前缀HTTP_ONLY_。</p>
+
+<h3 id="2-domain-path-属性影响完整性">2. “Domain”“Path”属性影响完整性</h3>
+
+<p><a href="https://tools.ietf.org/html/rfc6265#section-5.2.3" target="_blank">rfc6265-两个属性的设置</a></p>
+
+<p><a href="https://tools.ietf.org/html/rfc6265#section-5.1.2" target="_blank">rfc6265-两个属性在客户端的处理算法</a></p>
+
+<p>不贴原文了，简单地总结（参照维基）：</p>
+
+<h4 id="path-是指域名-host下的路径归属"><code>Path</code> 是指域名|Host下的路径归属。</h4>
+
+<ul>
+<li>比如两网站<code>example.com/site1/index.htm</code>,<code>example/com/site2/index.htm</code>，<br />
+设置Path属性为<code>/site1</code>,<code>/site2</code>两个值以分离两个目录中的页面的cookie。</li>
+<li>有些网站的不同目录是运行不同功能的，比如两个朋友共租一个域名运营博客，用上述方式划分。<br />
+通过这种方式可以做到分离两个博客的cookie。
+<br /></li>
+</ul>
+
+<p>看起来很好，但稍有不慎（或故意为之），就可以用来绕过<a href="https://en.wikipedia.org/wiki/Same-origin_policy" target="_blank">SOE-同源策略</a> 。<br />
+比如，设置path成<code>/</code>，好，域名下所有页面都能读该cookie了。</p>
+
+<p>这是一种减少网站开发人员工作量的窍门，也能被攻击者用来做窃取cookie的手段。</p>
+
+<h4 id="domain-是指域名归属"><code>Domain</code> 是指域名归属。</h4>
+
+<p>它和<code>Path</code>属性的缺点差不多类型，设置了<code>Domain</code>的cookie是<strong>默认暴露给所有子域名</strong>的。<br />
+我们都知道，同域名不一定等于同服务器IP，所以攻击者可以劫持域名解析偷cookie。<br />
+因为这个原因，实际开发中一般不建议设置<code>Domain</code>属性。</p>
+
+<h4 id="解决-samesite-属性-2016年-不设置-domain-属性">解决：<code>SameSite</code> 属性(2016年)&amp;不设置<code>Domain</code>属性</h4>
+
+<h5 id="samesite"><code>SameSite</code></h5>
+
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/HTTP_cookie#Same-site_cookie" target="_blank">维基#Same-site_cookie</a>:<br />
+    In 2016 Google Chrome version 51 introduced a new kind of cookie, the same-site cookie,<br />
+    which can only be sent in requests originating from the same origin as the target domain.<br />
+    This restriction mitigates attacks such as cross-site request forgery (XSRF).<br />
+     A cookie is given this characteristic by setting the SameSite flag to Strict or Lax.<br />
+     <a href="https://tools.ietf.org/html/draft-west-first-party-cookies-07" target="_blank">google：draft-ietf-httpbis-cookie-same-site </a></p>
+
+<p>2016年，谷歌Chrome版本51引入了一种新型cookie，即同一站点的cookie，<br />
+只能在源自与目标域相同的源的请求中发送。此限制可缓解诸如跨站点请求伪造（XSRF）等攻击。<br />
+通过将SameSite标志设置为Strict或Lax，可以为cookie提供此特性。</p>
+</blockquote>
+
+<p>标准支持：截至撰文时间(2019-05)，<br />
+* 开发支持：查到的是node.js的express、PHP7.3支持，应该还有没搜到的
+* 浏览器支持：几个主流浏览器，的新版本都已支持，不再列举名字。</p>
+
+<p><a href="https://www.lambdatest.com/SameSite-cookie-attribute" target="_blank">Browser Compatibility Testing of 'SameSite' cookie - LambdaTest</a></p>
+
+<h5 id="不设置-domain-属性">不设置<code>Domain</code>属性</h5>
+
+<p><a href="https://stackoverflow.com/questions/12387338/what-is-a-host-only-cookie" target="_blank">Stack over flow-What is a host only cookie?</a></p>
+
+<p>之所以不设置<code>Domain</code>属性，其实是为了激活<code>host-only-flag</code>，<br />
+<strong>当host-only-flag被设置，子域名无法访问此cookie。</strong></p>
+
+<p><a href="https://tools.ietf.org/html/rfc6265#section-5.3" target="_blank">rfc6265-5.3.  Storage Model</a></p>
+
+<h3 id="3-对cookie的误用">3.对cookie的误用</h3>
+
+<p>上面算是设计问题，下面是多数文章主要讲的，开发者对cookie的误用。</p>
+
+<h4 id="①http-明文传递-cookie">①http 明文传递 cookie</h4>
+
+<p>cookie默认不加密传输，可以在传输中被坏家伙窃听或修改。</p>
+
+<p><strong>解决：设置<code>Secure</code>属性&amp;cookie加密和签名</strong></p>
+
+<p><a href="https://tools.ietf.org/html/rfc6265#section-5.2.5" target="_blank">rfc6265-5.2.5.  The Secure Attribute</a><br />
+<code>Secure</code>属性保证cookie只在HTTPS环境下可被传输。</p>
+
+<p>和数据库设计一样，为了保险，应尽量减少数据中非必须的信息量。<br />
+cookie值可以是随机生成的字符串（会话凭证）而不是具体信息，<br />
+在下次登录时修改，以应对cookie窃取与重放攻击。</p>
+
+<blockquote>
+<p>rfc6265:<br />
+Servers SHOULD encrypt and sign the contents of cookies<br />
+(using whatever format the server desires) when transmitting them to the<br />
+user agent (even when sending the cookies over a secure channel).</p>
+
+<p>当将服务器传输给用户代理时，服务器应该对cookie的内容进行加密和签名<br />
+（使用服务器所需的任何格式）（即使通过安全通道发送cookie）。</p>
+</blockquote>
+
+<h4 id="②cookie-默认可被客户端api-js-etc-读取">②cookie 默认可被客户端API(JS etc)读取</h4>
+
+<p><strong>解决：设置时加 <code>Http-only-flag</code> ，禁止客户端JS读取cookie。</strong></p>
+
+<h4 id="③错误规划-max-age-expires">③错误规划<code>max-age</code>、<code>expires</code></h4>
+
+<p><a href="https://tools.ietf.org/html/rfc6265#section-5.2" target="_blank">rfc6265-The Set-Cookie Header</a></p>
+
+<p>标准太长，简单总结：<br />
+<code>max-age</code>: 类似TTL，以秒计，到时删除。<br />
+<code>expires</code>: GMT时间字符串（Wed, 09 Jun 2021 10:18:14 GMT）,到时删除。<br />
+<code>max-age</code> 是 <code>expires</code> 的一个补充性属性。没有这两个属性，cookie被视为<a href="https://en.wikipedia.org/wiki/HTTP_cookie#Session_cookie" target="_blank">session cookie</a> 。<br />
+cookie保留在客户端的时间越长，被攻击的可能性越高。</p>
+
+<h4 id="解决-谨慎设计-max-age-expires-的值">解决：谨慎设计<code>max-age</code>、<code>expires</code>的值</h4>
+
+<p>越敏感的数据，越要设置时间短，保持用户频繁认证。</p>
+
+<h2 id="attack-on-cookies-and-solution">Attack on cookies and solution</h2>
+
+<p><strong>3.针对cookie窃取的攻击与相应防御</strong></p>
+
+<p>以下所有攻击手段，都能单独拉出来写好多篇技术报告|分享，<br />
+很明显本文没有这个篇幅，因此本文征求做到全而不详，并附链接以供详求。</p>
+
+<h3 id="为什么我们要攻击-保护cookie">为什么我们要攻击|保护cookie？</h3>
+
+<p><a href="https://odino.org/security-hardening-http-cookies/" target="_blank">这篇文章</a> 的一段话讲得不错：</p>
+
+<blockquote>
+<p>Because the data they contain is, more often than not, extremely sensitive<br />
+— cookies are generally used to store session IDs or access tokens,<br />
+an attacker’s holy grail.<br />
+Once they are exposed or compromised, attackers can impersonate users,<br />
+or escalate their privileges on your application.</p>
+
+<p>因为它们包含的数据通常非常敏感 - 通常用于存储会话ID或访问令牌，攻击者的圣杯。<br />
+一旦他们暴露或受到攻击，攻击者就可以冒充用户，或者升级他们对您的应用程序的权限。</p>
+</blockquote>
+
+<h3 id="常见攻击方式">常见攻击方式</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/HTTP_cookie#Cookie_theft_and_session_hijacking" target="_blank">维基百科</a>总结了几种常见的攻击方式，包括攻击过程简介与防御手段，在此不复述，只提供目录。</p>
+
+<table>
+<thead>
+<tr>
+<th>攻击</th>
+<th>防御</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>MITM</td>
+<td>TLS&amp;<code>secure</code>attr</td>
+</tr>
+
+<tr>
+<td>DNS Poisoning</td>
+<td>TLS&amp;<code>secure</code>attr</td>
+</tr>
+
+<tr>
+<td>DOM-Based-XSS</td>
+<td><code>http-only-flag</code>&amp;<code>SameSite</code>attr</td>
+</tr>
+
+<tr>
+<td>反射型XSS+恶意代理服务器</td>
+<td><code>secure</code>attr&amp;<code>SameSite</code>attr</td>
+</tr>
+
+<tr>
+<td>CSRF</td>
+<td><code>SameSite</code>attr</td>
+</tr>
+</tbody>
+</table>
+
+<p>还有一类维基没提到的，针对<a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" target="_blank">TLS协议</a> 的攻击。<br />
+TLS协议不是完全安全的，因为设计或实现的缺陷，<br />
+已有不少在特定情况下针对TLS的攻击出现，<br />
+主要目的是使HTTPS降为“等同于”HTTP的情况（即复原密文为明文），<br />
+这不是一个新方向，列举几个比较有名的攻击方式：</p>
+
+<ul>
+<li><a href="https://www.contextis.com/en/blog/server-technologies-https-beast-attack" target="_blank">BEAST</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lucky_Thirteen_attack" target="_blank">Lucky 13</a></li>
+<li><a href="https://blog.qualys.com/ssllabs/2012/09/14/crime-information-leakage-attack-against-ssltls" target="_blank">CRIME</a></li>
+<li><a href="http://breachattack.com/" target="_blank">BREACH</a></li>
+</ul>
+
+<h3 id="非常见方式">非常见方式</h3>
+
+<p>非单一的、利用知识组合各种部分的针对cookie的攻击方式，<br />
+可惜我只找到一个。</p>
+
+<h4 id="①cookiejacking-rosario-valotta-2011-05-link-https-sites-google-com-site-tentacoloviola-cookiejacking">①cookiejacking-Rosario Valotta-2011-05<a href="https://sites.google.com/site/tentacoloviola/cookiejacking" target="_blank">[link]</a></h4>
+
+<p>该方法利用了IE浏览器的“跨域交互策略”的一个漏洞，<br />
+外部HTML的&lt;iframe&gt;标签可以加载本地cookie文件（本应不能）。<br />
+恶意服务器通过一系列正常的手段获知用于构造cookie路径的信息，<br />
+然后通过此漏洞读取cookie，并利用<a href="https://www.securitysift.com/who-do-you-trust-cross-domain-content-extraction-with-clickjacking/" target="_blank">Clickjacking</a> 手段传输cookie至服务器。<br />
+因为读的是文件，任何cookie都会被窃取。</p>
+
+<p>微软<a href="https://digitizor.com/cookiejacking-patch/" target="_blank">6月</a> 给这个漏洞打了补丁。<br />
+至于Clickjacking，<code>x-frame-options</code><a href="https://www.keycdn.com/blog/x-frame-options" target="_blank">(XFO)</a> 可以防止。</p>
+
+<h2 id="academic-discussion-about-cookies">Academic discussion about cookies</h2>
+
+<p><strong>关于cookie的学术讨论</strong></p>
+
+<p>本来想把理论方面作为2、3段的添头，没想到专家们已经在纸头上打过一两轮攻防了。<br />
+故单开此段，索引几个我觉得有意思的学术文献。</p>
+
+<h3 id="cookie-masking-cookie-掩盖">cookie masking-cookie 掩盖</h3>
+
+<blockquote>
+<p><a href="https://dl.acm.org/citation.cfm?id=2714592" target="_blank">TLS Record Protocol: Security Analysis and<br />
+ Defense-in-depth Countermeasures for HTTPS</a><br />
+ Author: Olivier Levillain etc<br />
+ Time: 2015</p>
+</blockquote>
+
+<p>这个研究总结了针对TLS记录协议的5个攻击方式，并给出了两个cookie掩盖方式：<br />
+TLS Scramble &amp; MCookies，以保证在意外导致HTTP明文传输的情况下，<br />
+继续保持cookie等秘密信息机密性。</p>
+
+<blockquote>
+<p><a href="https://link.springer.com/article/10.1007%2Fs12095-018-0280-y" target="_blank">Statistical attacks on cookie masking for RC4</a><br />
+Author: Kenneth G. PatersonEmail author etc<br />
+Time: 2018-02</p>
+</blockquote>
+
+<p>该文验证了上篇文章两种掩盖方式理论上可被加大提供算力后破解，<br />
+因此该掩盖方式只能提供不强的机密性。</p>
+
+<h3 id="测信道攻击">测信道攻击</h3>
+
+<blockquote>
+<p><a href="https://link.springer.com/chapter/10.1007/978-3-319-89641-0_11" target="_blank">Path Leaks of HTTPS Side-Channel by Cookie Injection</a><br />
+Author: Fuqing Chen etc<br />
+Time: 2018-04</p>
+</blockquote>
+
+<p>该文阐述了一种攻击方式和两种应用方面：<br />
+利用cookie的弱同源策略（上文有提），实施cookie注入，<br />
+用注入的cookie来推断敏感信息，进而复原一部分密文（比如请求的URL）。<br />
+没看完，大概是利用当时浏览器的cookie路径匹配的算法的一个缺陷。</p>
+
+<blockquote>
+<p><a href="https://link.springer.com/chapter/10.1007/978-3-662-47854-7_6" target="_blank">Protecting Encrypted Cookies from<br />
+Compression Side-Channel Attacks</a><br />
+Author: Janaka Alawatugoda etc<br />
+Time: 2015-07</p>
+</blockquote>
+
+<p>有那么两种对TLS的攻击：<a href="https://blog.qualys.com/ssllabs/2012/09/14/crime-information-leakage-attack-against-ssltls" target="_blank">CRIME</a> 和 <a href="http://breachattack.com/" target="_blank">BREACH</a> （上文有提）,<br />
+它们基于传输前压缩过程中产生的额外信息量，复现敏感信息，<br />
+针对它们的常规解决方法是禁止传输中压缩，<br />
+这意味着加大使用带宽资源。<br />
+该文阐述了两种新的压缩方式，用于实现压缩并保护机密信息的功能。</p>
+
+<h2 id="summary">Summary</h2>
+
+<p><strong>总结</strong></p>
+
+<p>首先，关于此文，不包括素材阅读的，纯搜索时间，大概只有2小时多，<br />
+因此即使是截至2019-05，此文大概还是遗漏了许多值得一提的部分，请读者海涵。</p>
+
+<p>其次，经过编写此文，作者对cookie的认识有了很大变化，认清了cookie能力是很有限的，<br />
+以后编写web服务也会注意cookie的正确运用。希望各位读者也能从此文中学到知识。</p>
+]]></content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                                <category scheme="https://boholder.github.io/categories/web-security/" term="web-security" label="web-security" />
+                            
+                        
+                    
+                
+                    
+                
+                    
+                        
+                            
+                                <category scheme="https://boholder.github.io/tags/web-security/" term="web-security" label="web-security" />
+                            
+                        
+                            
+                                <category scheme="https://boholder.github.io/tags/cookie/" term="cookie" label="cookie" />
+                            
+                        
+                            
+                                <category scheme="https://boholder.github.io/tags/blog/" term="blog" label="blog" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">一次软件开发岗的面试经验总结</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/posts/190424-job-interview-summary-zh/" />
+            <id>https://boholder.github.io/posts/190424-job-interview-summary-zh/</id>
+            <updated>2020-07-17T16:45:14+08:00</updated>
+            <published>2019-04-10T00:00:00+00:00</published>
+            <author>
+                    <name> BoHolder</name>
+                    <uri>https://boholder.github.io/</uri>
+                    <email>bottleholder@anche.no</email>
+                    </author>
+            <rights>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</rights>
+    
+    <summary type="html"><![CDATA[当时在读社工方面的闲书，很明显感受到此文中我将面试官视为一个目标，这有好有坏。自从写此文已过5个月，我已参与过一次实习，对于就职和求职的印象也改变了不少，但我想保留住那时的奇想。]]></summary>
+            
+                <content type="html"><![CDATA[
+
+<p>最近参加一次面试，结果是：失败了，但我却为又学到了一些东西（也可能是我的错觉）而开心不已。<del>（残机数还有好多呢，急不来）</del></p>
+
+<p>面试我的小哥（这次是一对一面试）是个很温和的人，我借这次面试的机会向他问清了<strong>企业需要软工专业本科生会什么</strong>，这对我下一步的就业努力方向有不错的指导意义。</p>
+
+<p>在本文中我将阐述我对小哥教诲的理解&amp;我对这次经历的思考分析，分享给有需要的各位，希望能对各位的就业活动起到帮助。我更希望有已经就业或者就是HR的朋友，觉得我写得简直胡扯或者有盲点，然后给我发个issue或者email把我批判一番。我渴望接触到不同的观点，你们的反馈会使我进步。<del>（就业是逃不掉的，我选择早点面对）</del></p>
+
+<h2 id="1-面试与简历的关系">1. 面试与简历的关系</h2>
+
+<h3 id="1-1-简历内容左右面试提问内容">1.1 简历内容左右面试提问内容</h3>
+
+<p>面试的提问内容取决于岗位要求，但应该也有相当的比例是取决于简历里你描述的专业技能内容的。</p>
+
+<p>面试官一般是从业了不短时间的该岗位的多面手，你的关于本专业的知识量对他来说是很那啥的。为了了解你的专业能力，面试官需要问你某几个小方向的问题，比如计算机网络，比如密码学，比如编译原理。问题深度可能取决于你的临场表现和笔试成绩（我猜的），但<strong>问题方向的选择，应该是（面试官个人技能∩你简历专业技能的陈述）</strong>，这个是最大集合，还有可能再缩小。</p>
+
+<p><strong>别忘了，简历内容是我们控制的，也就是说某种程度上我们可以左右面试提问的内容。</strong> <em>在社会工程中，控制了谈话内容就可以为造框架（你可以理解为“气氛”）提供很大的便利，继而达成目标，在本场景中我们的目标是：面试官对我们专业能力的认可。</em></p>
+
+<h3 id="1-2-针对性地准备简历-量力而行-够用就好">1.2 针对性地准备简历：量力而行，够用就好</h3>
+
+<p>这里不谈整张简历，只阐述上面提到的和面试必定相关的内容，即专业技能描述（下称技能）部分。</p>
+
+<p>我个人认为<strong>写简历是一个量力而行的活儿</strong>。肚子里有多少墨水写多少，即使没参加过竞赛拿过奖，基本的东西写写调一调段间距，占满一张A4纸还是可以的，没必要凑字数。倒不如说凑字数的简历更减分。</p>
+
+<p>对，我知道简历是控制第一印象的重要文件，但最好别为了第一印象在简历里造火箭（夸大能力）。简历造火箭，第一印象好，请你来面试，一问就露馅，拿不到offer，你说咱们最后除了自己还骗到谁了。</p>
+
+<p>那么如何写技能呢？</p>
+
+<ul>
+<li>我觉得以个人的角度，可以分成教学计划的授课部分，和因兴趣而学习的课外部分。</li>
+<li>然后以企业的角度，又可以分成招聘要求的部分，和与岗位相关的加分部分。</li>
+</ul>
+
+<p>前后不是双射（一一对应）关系，学的不一定用，没学的人不一定不要求，但我想先声明有这么两个角度。</p>
+
+<p>然后，写上去的技能都应该与你申请的岗位相关。招聘要求上规定的技能最好都写上 <del>（但不会的不写吃扣分也比瞎写强，实诚是好事）</del>：</p>
+
+<ul>
+<li>招聘要求上明文规定的要求掌握的知识，有时可以把它准确映射到你的一门课程，教科书再翻一遍吧，可能提问难度比期末考还高。
+
+<ul>
+<li>（例：熟练了解网络结构与协议-&gt;《计算机网络》）</li>
+</ul></li>
+<li>然后招聘要求上还可能有相对模糊的内容，针对这方面内容，知识体系要建立起来，就好像你自己写了一本教材一样，有目录。因为对这种技能的提问，一般第一个问题是“哪几种？”“都有什么？”的这类泛问题。
+
+<ul>
+<li>（例：对攻防有一定了解-&gt;“我对于[BOF,XSS,SQLinsert,...]等常用攻击方式有较全面的认识”）</li>
+</ul></li>
+</ul>
+
+<p>招聘要求上的写完后就自由发挥了，可以附加一些没要求到的技能做加分项。如果不是每一份简历都针对一个招聘要求的话，多写点泛用技能也可以让简历更泛用。</p>
+
+<p><strong>但一定要记住一点，写上去的每一项技能都会被默认为“熟练掌握到构成了知识体系，可以随便问”，这是用自己的信誉给这些名词签名。</strong> 加分技能不是加分题，做错了要倒扣分的。量力而行，不要多多益善。<em>从攻防角度来说，每多写一个技能都是增加暴露的攻击面，就跟一个系统多开一个端口一样。我们平时说，端口当然是够用就好，这里也一样，够用就好。</em></p>
+
+<h3 id="1-3-遐想-瞎想">1.3 遐想 <del>（瞎想）</del></h3>
+
+<p>投简历是在面试之前，从投简历到接受面试这段时间你的技能树（甚至简历）可能会有变化，但最好还是以当时的简历为准，准备面试。（可以给简历文件夹建个git仓库?）多花点时间找个安静的地方认真改改自己的简历吧，投出去就收不回来了。</p>
+
+<h2 id="2-准备面试">2. 准备面试</h2>
+
+<h3 id="2-1-virtual-void-就职-面试-大学所学">2.1 virtual void 就职.面试（大学所学）；</h3>
+
+<p>这是我的一点思考，如何把大学四年所学（包括教学和自学）对接到以后工作上。</p>
+
+<p>我们先定义一下，所学=利用工具的实践能力（下称实践）+不涉及工具的理论知识（下称理论），假设，四年所学&gt;工作需要。</p>
+
+<p>先说结论：<strong>工作需要的理论和实践，必须留下；不需要的理论，建议留下；不需要的实践，可以丢掉</strong>。</p>
+
+<p>我是那种只有用到才去学习的“懒汉式”设计。（但是这个也包括我主观能动，如果我觉得什么很有意思，也会去学。）我觉得不少本科生朋友，在对专业技能的态度上和我差不多，比如有个专业课，需要什么语言什么工具，只能乖乖去自学，然后课程一结束，清空大脑缓存，准备接受下一学期的课程。这个我个人来看哈，合情合理，有些东西确实以后工作如果不是那个方向就用不到，但偏偏教学计划中设了这个课程，很无奈，为了学分也要学。</p>
+
+<p>但是，但是朋友，实践课是为理论课服务的。行是知之始,知是行之成。老师让我们学用一个工具，从教学目的上来看，是为了让学生理解并验证抽象的理论知识。</p>
+
+<p>举个例子，我们的计算机组成课，最后课设弄了个16进制加减乘除“计算机”，用quantum ii画的，那是个编译FPGA芯片的软件，用硬件描述语言(VHDL)。以后工作应该不会用到这个软件和语言，但是经过这个课设，我们对计算机组成有了很具体的认识，这个认识是理论部分，但出自实践。</p>
+
+<p>根据我对工作的了解（问已经有工作的同行网友），工作时对理论的需求是很随机的，这时一个懂理论的人的工作速度跟一个现搜现查的人是绝对不可比的。我根据这点，决定将所有学过的理论尽可能保留下来<del>（其实也挡不住遗忘）</del>。<em>人的思维方式是和其接触到的环境挂钩的，多学点理论，可能会在学相似事物时建立关系融会贯通，加速学习过程，没坏处！</em></p>
+
+<p>至于实践，我个人思考，工作够用就行了，岗位相对固定的话，实践需求应该也是相对固定的。多几个会用的工具可能在平时非工作的自由开发中比较顺手，但不会也不至于影响工作。<del>这里不考虑想升职加薪换岗等做额外努力的人，先找到工作再说吧！</del></p>
+
+<h3 id="2-2-需要有一门专精的编程语言">2.2 需要有一门专精的编程语言</h3>
+
+<p>根据小哥的回答，不管是招实习生还是正式工，<strong>企业需要的是一个“PnP(即插即用)”的员工。即使是培训，也不会培训太久，一般是边做边学，要先有基础，能直接上手干活。</strong></p>
+
+<p>看来我之前的“编程本身是一种能力，无关语言”的观点是有点错误的，错在把“编程”的理论以偏概全为理论+实践。</p>
+
+<p>然后我又问了小哥是否需要刷题，他说“也不是刷题”，我理解他的意思就是：刷题是为了验证实践能力或者过笔试，是片面的，不管刷不刷题，反正实践能力一定要有，以能干活为准。</p>
+
+<h3 id="2-3-技能以岗位要求为准">2.3 技能以岗位要求为准。</h3>
+
+<p>企业招人就是要干活的，面试是为了验证理论水平（笔试倾向于验证实践能力），结合简历所写的技能准备吧。</p>
+
+<p><strong>面试就是闭卷考试，超大型，多科目，就是交互通道从纸笔变成面谈了。所以要把所有知识都装进脑子的内存里（想想都脑壳疼），不要留在储存介质上。</strong></p>
+
+<p>我有个坏习惯，就是我的记性不太好，所以干脆把大脑变成一个索引库，需要什么现搜。因为之前都学过，所以稍微浏览一遍就立刻装载进内存里自由使用了。然后这个知识会在大脑里缓存一段时间直到再次遗忘。举个例子，就好像突然要用一年没用过的一门编程语言，看看文档就能用了。</p>
+
+<p>这次面试上，小哥否定了我的这个“好主意”，他的理由就和上面说的一样，工作时对理论需求随机，现搜太减慢工作速度。我觉得他说的挺有道理，我打算试着重新捋一遍要用的理论，看看能不能减小减小体积，融会贯通到我的思维模式中，这样我平时行为也会用到这些理论，就不会忘了。</p>
+
+<h2 id="3-结语">3. 结语</h2>
+
+<p>那么就写这么多，一写就写多是我的老毛病了，发布时一般都是删改过一遍的。抛砖引玉，希望我能听到更多人关于就职的建议和体会，或者对本文的评论，我想在真正进入社会前先模拟出一套社会人的行为模式，社会人的行为模式和大学生的行为模式差别应该蛮大的。</p>
+]]></content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                                <category scheme="https://boholder.github.io/categories/job/" term="job" label="job" />
+                            
+                        
+                    
+                
+                    
+                
+                    
+                        
+                            
+                                <category scheme="https://boholder.github.io/tags/job/" term="job" label="job" />
+                            
+                        
+                            
+                                <category scheme="https://boholder.github.io/tags/blog/" term="blog" label="blog" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>
