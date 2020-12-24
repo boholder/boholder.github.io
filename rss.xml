@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>BoHolder的网站：博客，小玩意及其他</title>
+        <link>https://boholder.github.io/</link>
+        <description>BoHolder&#39;s site: crafts, blogs etc</description>
+        <generator>Hugo 0.79.1 https://gohugo.io/</generator>
+        
+            <language>zh-CN</language>
+        
+        
+            <managingEditor>bottleholder@anche.no (BoHolder)</managingEditor>
+        
+        
+            <webMaster>bottleholder@anche.no (BoHolder)</webMaster>
+        
+        
+            <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
+        
+        <lastBuildDate>Thu, 24 Dec 2020 23:19:42 &#43;0800</lastBuildDate>
+        
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
+        
+        
+            <item>
+                <title>对适用于个人的电子数据备份体系的总结</title>
+                <link>https://boholder.github.io/blogs/individual-data-backup-summary/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/individual-data-backup-summary/</guid>
+                <pubDate>Mon, 07 Dec 2020 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
+                <description>对个人数据备份实操的个人见解</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/blog/">blog</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/sre/">SRE</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>初尝TDD的疑惑与对应解决方案</title>
+                <link>https://boholder.github.io/blogs/tdd-tips-zh/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/tdd-tips-zh/</guid>
+                <pubDate>Fri, 17 Jul 2020 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
+                <description>不需要写非法输入测试，直接写业务逻辑；避免错误的步子大的测试；简化问题场景-&gt;逐步添加限制|条件</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/programming/">programming</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/programming/">programming</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Java实现大整数排列组合，解决抽卡欧气计算问题</title>
+                <link>https://boholder.github.io/blogs/java_arrangement_combination_zh/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/java_arrangement_combination_zh/</guid>
+                <pubDate>Sat, 27 Jul 2019 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
+                <description>白送的10连，抽爆，抽完攀比思想冒头，循环乘嘛，实现一个！（其实是不想在WolframAlpha（一个付费在线数学计算应用）里输长长一串）</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/programming/">programming</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/java/">java</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/programming/">programming</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>HTTP cookie的安全性、安全使用方法和攻击防御手段</title>
+                <link>https://boholder.github.io/blogs/cookie_security_zh/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/cookie_security_zh/</guid>
+                <pubDate>Sat, 18 May 2019 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
+                <description>工作需要，要上台讲讲cookie安全性，索性总结成博客，自认为蛮全的</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/web-security/">web-security</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/web-security/">web-security</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/cookie/">cookie</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>BoHolder&#39;s site: crafts, blogs etc</title>
+        <link>https://boholder.github.io/en/</link>
+        <description>BoHolder&#39;s site: crafts, blogs etc</description>
+        <generator>Hugo 0.79.1 https://gohugo.io/</generator>
+        
+            <language>en</language>
+        
+        
+            <managingEditor>bottleholder@anche.no (BoHolder)</managingEditor>
+        
+        
+            <webMaster>bottleholder@anche.no (BoHolder)</webMaster>
+        
+        
+            <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
+        
+        <lastBuildDate>Thu, 24 Dec 2020 23:19:42 &#43;0800</lastBuildDate>
+        
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/en/rss.xml" />
+        
+        
+            <item>
+                <title>Safety signs for programming</title>
+                <link>https://boholder.github.io/en/crafts/program-safety-sign/</link>
+                <guid isPermaLink="true">https://boholder.github.io/en/crafts/program-safety-sign/</guid>
+                <pubDate>Sun, 22 Sep 2019 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
+                <description>I maked up some safety signs for software development department based on the content of ISO 7010 (graphic hazard symbols). Take it easy, they are only for entertainment purposes. BTW, the size of these images is 3000-1000, and you can use them as Twitter header pictures.</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/en/categories/design/">design</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/en/tags/design/">design</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/en/tags/blog/">blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>DIY notepad&#43;&#43;，MarkDown(Obsidian) User-Defined-Language for Notepad&#43;&#43;2.1(syntax highlight)</title>
+                <link>https://boholder.github.io/en/crafts/markdown-obsidian-user-defined-language-for-notepadpp2.1/</link>
+                <guid isPermaLink="true">https://boholder.github.io/en/crafts/markdown-obsidian-user-defined-language-for-notepadpp2.1/</guid>
+                <pubDate>Wed, 22 May 2019 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
+                <description>I found that Markdown is really suitable for me who won&#39;t open the ms word but open a text editor. But my favorite notepad++ does not have the markdown syntax highlighting for dark theme, and I have no search, what should I do? Just make one, and share it!</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/en/categories/config/">config</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/en/tags/config/">config</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/en/tags/ide/">IDE</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+    </channel>
+</rss>
