@@ -1,1 +1,8 @@
+User-agent: Googlebot-Image
+Disallow: / 
+
+User-agent: Baiduspider
+Disallow: / 
+
 User-agent: *
+Allow: /

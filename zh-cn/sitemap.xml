@@ -1,264 +1,289 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://boholder.github.io/tags/blog/</loc>
-    <lastmod>2020-12-24T22:33:16+08:00</lastmod>
+    <loc>https://boholder.github.io/zh-cn/tags/blog/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/tags/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en-us"
                 href="https://boholder.github.io/tags/blog/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/categories/blog/</loc>
-    <lastmod>2020-12-24T22:33:16+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/</loc>
-    <lastmod>2020-12-24T22:33:16+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
+                href="https://boholder.github.io/zh-cn/tags/blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
                 href="https://boholder.github.io/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/tags/sre/</loc>
-    <lastmod>2020-12-24T22:33:16+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/blogs/individual-data-backup-summary/</loc>
-    <lastmod>2020-12-24T22:33:16+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/tags/programming/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/categories/programming/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/blogs/tdd-tips-zh/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/tags/design/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/tags/design/"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/zh-cn/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/categories/programming/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/categories/programming/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://boholder.github.io/tags/design/"
+                href="https://boholder.github.io/zh-cn/categories/programming/"
                 />
   </url>
   
   <url>
-    <loc>https://boholder.github.io/categories/design/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
+    <loc>https://boholder.github.io/zh-cn/tags/programming/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/categories/design/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://boholder.github.io/categories/design/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/crafts/program-safety-sign/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/crafts/program-safety-sign/"
+                hreflang="en-us"
+                href="https://boholder.github.io/tags/programming/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://boholder.github.io/crafts/program-safety-sign/"
+                href="https://boholder.github.io/zh-cn/tags/programming/"
                 />
   </url>
   
   <url>
-    <loc>https://boholder.github.io/about/</loc>
-    <lastmod>2020-12-24T22:13:30+08:00</lastmod>
+    <loc>https://boholder.github.io/zh-cn/categories/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://boholder.github.io/about/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/tags/java/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/blogs/java_arrangement_combination_zh/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/tags/ide/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/tags/ide/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://boholder.github.io/tags/ide/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/crafts/markdown-obsidian-user-defined-language-for-notepadpp2.1_zh/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/tags/cookie/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/blogs/cookie_security_zh/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/tags/web-security/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/categories/web-security/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/categories/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en-us"
                 href="https://boholder.github.io/categories/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/blogs/</loc>
-    <lastmod>2020-12-20T21:44:52+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/blogs/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://boholder.github.io/blogs/"
+                href="https://boholder.github.io/zh-cn/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://boholder.github.io/archive/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/archive/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://boholder.github.io/archive/"
-                />
+    <loc>https://boholder.github.io/zh-cn/posts/tdd-tips-zh/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://boholder.github.io/crafts/</loc>
-    <lastmod>2020-12-20T21:45:17+08:00</lastmod>
+    <loc>https://boholder.github.io/zh-cn/tags/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/crafts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://boholder.github.io/crafts/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/tags/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en-us"
                 href="https://boholder.github.io/tags/"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/zh-cn/tags/"
+                />
   </url>
   
   <url>
-    <loc>https://boholder.github.io/series/</loc>
-    <lastmod>2020-12-09T09:15:50+08:00</lastmod>
+    <loc>https://boholder.github.io/zh-cn/tags/design/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://boholder.github.io/en/series/"
+                hreflang="en-us"
+                href="https://boholder.github.io/tags/design/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
+                href="https://boholder.github.io/zh-cn/tags/design/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/categories/design/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/categories/design/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/zh-cn/categories/design/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/arts/program-safety-sign/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/about/</loc>
+    <lastmod>2020-07-17T21:56:22+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/zh-cn/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/tags/java/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/posts/java_arrangement_combination_zh/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/tags/ide/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/tags/ide/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/zh-cn/tags/ide/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/code/markdown-obsidian-user-defined-language-for-notepadpp2.1_zh/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/tags/cookie/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/posts/cookie_security_zh/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/tags/web-security/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/categories/web-security/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/categories/job/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/tags/job/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/posts/190424-job-interview-summary-zh/</loc>
+    <lastmod>2020-07-17T21:21:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/posts/</loc>
+    <lastmod>2019-09-20T19:27:44+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/zh-cn/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/code/</loc>
+    <lastmod>2019-09-20T19:27:44+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/zh-cn/code/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/archive/</loc>
+    <lastmod>2019-09-20T19:27:44+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/archive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/zh-cn/archive/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/arts/</loc>
+    <lastmod>2019-09-20T20:18:34+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/arts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/zh-cn/arts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/zh-cn/series/</loc>
+    <lastmod>2019-09-20T19:27:44+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
                 href="https://boholder.github.io/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/zh-cn/series/"
                 />
   </url>
   
