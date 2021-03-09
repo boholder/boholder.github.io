@@ -18,7 +18,7 @@
 
     
     
-        <script src="/en-us/js/meme.min.3db72af81b8cb22026f06df94c46b96973d43ad58aa0cd1cf74a2cf135f6daac.js"></script>
+        <script src="/en-us/js/meme.min.ed6d962c27c578899498b18cb909fc9e1a53ce505251c79f36a6377ae6d32238.js"></script>
 
     
 
@@ -324,19 +324,26 @@
         
 
         
-
-        
-            <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script>
-  const gitalk = new Gitalk({
-    clientID: '',
-    clientSecret: '',
-    repo: '',
-    owner: '',
-    admin: [''],
-    id: location.pathname, 
-    distractionFreeMode: false 
-  });
+            <script>
+    function loadComments() {
+        (function() {
+            var utterances = document.getElementById("utterances");
+            var script = document.createElement('script');
+            script.src = 'https://utteranc.es/client.js';
+            script.async = true;
+            script.crossOrigin = 'anonymous';
+            script.setAttribute('repo', 'boholder\/boholder.github.io');
+            script.setAttribute('issue-term', 'pathname');
+            const isDark = getCurrentTheme() === 'dark';
+        if (isDark) {
+            script.setAttribute('theme', 'photon-dark');
+        } else {
+            script.setAttribute('theme', 'github-light');
+        }
+            
+            utterances.appendChild(script);
+        })();
+    }
 </script>
         
 
