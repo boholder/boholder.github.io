@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
     <title type="text">BoHolder&#39;s site: crafts, blogs etc</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2021-03-11T10:26:56&#43;08:00</updated>
+    <updated>2021-03-26T09:18:12&#43;08:00</updated>
     <id>https://boholder.github.io/en-us/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/en-us/atom.xml" />
@@ -119,7 +119,7 @@ But I hope you can be amused by my images.&lt;/p&gt;
             <title type="text">DIY notepad&#43;&#43;，MarkDown(Obsidian) User-Defined-Language for Notepad&#43;&#43;2.1(syntax highlight)</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/crafts/markdown-obsidian-user-defined-language-for-notepadpp2.1/" />
             <id>https://boholder.github.io/en-us/crafts/markdown-obsidian-user-defined-language-for-notepadpp2.1/</id>
-            <updated>2020-12-24T23:32:42&#43;08:00</updated>
+            <updated>2021-03-26T09:16:00&#43;08:00</updated>
             <published>2019-05-22T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -158,7 +158,7 @@ If it&amp;rsquo;s succeed, notepad++ will pop up a info window.&lt;/li&gt;
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/categories/config/" term="config" label="config" />
+                                <category scheme="https://boholder.github.io/en-us/categories/programming/" term="programming" label="programming" />
                             
                         
                     
@@ -168,7 +168,7 @@ If it&amp;rsquo;s succeed, notepad++ will pop up a info window.&lt;/li&gt;
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/tags/config/" term="config" label="config" />
+                                <category scheme="https://boholder.github.io/en-us/tags/programming/" term="programming" label="programming" />
                             
                         
                             

@@ -39,9 +39,29 @@
   </url><url>
     <loc>https://boholder.github.io/tags/programming/</loc>
     <lastmod>2021-03-11T10:26:20+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/en-us/tags/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/tags/programming/"
+                />
   </url><url>
     <loc>https://boholder.github.io/categories/programming/</loc>
     <lastmod>2021-03-11T10:26:20+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/en-us/categories/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/categories/programming/"
+                />
   </url><url>
     <loc>https://boholder.github.io/blogs/tdd-tips-zh/</loc>
     <lastmod>2021-03-11T10:26:20+08:00</lastmod>
