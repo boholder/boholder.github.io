@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://boholder.github.io/en-us/tags/blog/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>
@@ -14,7 +15,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/tags/blog/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/</loc>
     <lastmod>2021-03-26T09:16:00+08:00</lastmod>
     <xhtml:link
@@ -27,7 +30,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/tags/design/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
@@ -40,7 +45,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/tags/design/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/categories/design/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
@@ -53,7 +60,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/categories/design/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/crafts/program-safety-sign/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
@@ -66,7 +75,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/crafts/program-safety-sign/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/about/</loc>
     <lastmod>2021-03-09T11:45:55+08:00</lastmod>
     <xhtml:link
@@ -79,10 +90,14 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/about/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/crafts/markdown-obsidian-user-defined-language-for-notepadpp2.1/</loc>
     <lastmod>2021-03-26T09:16:00+08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/tags/ide/</loc>
     <lastmod>2021-03-26T09:16:00+08:00</lastmod>
     <xhtml:link
@@ -95,7 +110,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/tags/ide/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/tags/programming/</loc>
     <lastmod>2021-03-26T09:16:00+08:00</lastmod>
     <xhtml:link
@@ -108,7 +125,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/tags/programming/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/categories/programming/</loc>
     <lastmod>2021-03-26T09:16:00+08:00</lastmod>
     <xhtml:link
@@ -121,7 +140,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/categories/programming/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/archive/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
@@ -134,7 +155,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/archive/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/blogs/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
@@ -147,7 +170,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/blogs/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/categories/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
@@ -160,7 +185,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/categories/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/crafts/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
@@ -173,7 +200,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/crafts/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/series/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
@@ -186,7 +215,9 @@
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/series/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/en-us/tags/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
@@ -200,4 +231,5 @@
                 href="https://boholder.github.io/en-us/tags/"
                 />
   </url>
+  
 </urlset>
