@@ -23,10 +23,462 @@
         
             <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
         
-        <lastBuildDate>Sat, 01 May 2021 00:29:56 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 23 May 2021 18:18:57 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
+        
+            <item>
+                <title>单元测试的不同方式</title>
+                <link>https://boholder.github.io/blogs/unit-test-methods/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/unit-test-methods/</guid>
+                <pubDate>Sun, 23 May 2021 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
+                
+                    <description>&lt;h2 id=&#34;对读者的知识要求前言&#34;&gt;对读者的知识要求&amp;amp;前言&lt;/h2&gt;
+&lt;h3 id=&#34;要求&#34;&gt;要求&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;掌握任一编程语言，明白“单元测试”即相关概念定义和作用，写过单元测试。&lt;/li&gt;
+&lt;li&gt;王婆卖瓜：如果不确定自己是否明白“单元测试的定义”，
+请看&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#41-%E4%B8%BA%E7%BC%96%E7%A0%81%E6%B5%8B%E8%AF%95&#34;&gt;这段解释“为编码测试”的文字&lt;/a&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
+&lt;p&gt;在本文中我将介绍编写单元测试(和组件测试，实践中这两个概念拆不开)时可使用的三种调用-期望方式，用途各不相同：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;对运行时间的测试&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;特征：调用被测函数，并记录调用前后时间差值，计算运行时间。&lt;/li&gt;
+&lt;li&gt;目的：测试运行时间表现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;基于用例的测试(example-based testing)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;特征：写明特定的桩(stub)的反应(mock::given&amp;hellip;thenReturn&amp;hellip;)，
+写明调用被测函数时的测试数据，期望(expect,assert)特定的输出。&lt;/li&gt;
+&lt;li&gt;目的：确认模块对特定输入的输出符合预期的特定值
+(包括对被测在运行中调用桩时传入的参数，和对调用本身的返回值两方面)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;基于特性的测试(property-based testing)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;特征：基于函数与调用者的契约(contract)，生成随机的测试数据并反复调用被测函数，
+期待被测因没有正确根据输入修正自己的行为，抛出被测逻辑中没有考虑到的异常。&lt;/li&gt;
+&lt;li&gt;目的：测试被测函数是否满足契约。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;有研究（没找到论文链接）显示，人脑对信息的记忆和理解不仅发生在接受时，还发生在接受后的一段时间。
+我打算先介绍运行时间测试（很短很容易理解），再讲“基于用例的测试”（我们都熟悉的那种），最后试着让你理解一个新概念：“基于特性的测试”。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这篇文章结构是头轻脚重，篇幅比例是2:3:5，运行时间测试这部分的存在非常突兀，但我不想把这部分剔除。&lt;/li&gt;
+&lt;li&gt;标题包含“单元测试”就是想说明，下文介绍的内容都能在单元测试层面实现，并指导编码。&lt;/li&gt;
+&lt;li&gt;“基于特性的测试”在网上有诸多争议性观点，我试着对其中一些给出基于自己理解的解释。&lt;/li&gt;
+&lt;li&gt;文中唯一的举例代码所用的编程语言为Java，无需担心的是，不同语言到撰文止都已有各自的成熟的基于用例的和基于特性的测试库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1-对运行时间的测试&#34;&gt;1. 对运行时间的测试&lt;/h2&gt;
+&lt;p&gt;解决方案是在&lt;a href=&#34;https://book.douban.com/subject/11614538/&#34;&gt;《The Clean Coder(程序员的职业素养)》&lt;/a&gt; 中读到的。
+书里的一段对测试用例的协商对话（7.2验收测试）无意间描述了这个方案：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;测试人员A：该函数运行时间不应超过两秒。&lt;/li&gt;
+&lt;li&gt;测试人员B：无法为“不应超过两秒”编写测试，我们可以引入概率，即保证99.5%情况下符合。&lt;/li&gt;
+&lt;li&gt;测试人员A: 如果要编写循环1000次测试，期望超时次数小于5，这个用例将耗时1小时，不现实。&lt;/li&gt;
+&lt;li&gt;测试人员B: 可以执行15次操作，期望运行时间确切为2秒的
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%A8%99%E6%BA%96%E5%88%86%E6%95%B8&#34;&gt;Z-score（标准分数）&lt;/a&gt;
+大于2.57。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上述对话提到了两点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;需要用概率约束关于性能的需求，这种需求才可编写测试体现。&lt;/li&gt;
+&lt;li&gt;合理运用抽样统计思想可减少测试所需的重复运行次数。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;在勉强把它归为一类吗&#34;&gt;在勉强把它归为一类吗？&lt;/h3&gt;
+&lt;p&gt;嗯，有自觉。在单元测试层面，因测试框架对程序的控制权有限，能测的所谓“性能”仅仅指运行时间。
+这个方式本质算作第二种“基于用例的测试”，但它的期望目标比较特殊，所以单独提出来介绍印象会比较深。&lt;/p&gt;
+&lt;p&gt;虽然提起性能就是集成测试，需求中对性能要求的范围也往往是整个流程链路，
+但这个确实能在单元测试层面实现。
+比如每个高级些的语言都会有查看当前时间戳的库函数，
+调用前后计算差值，就能得到与真实情况偏差不大的运行时间。
+注意测试框架往往提供方式限制单个测试用例的运行时间，
+那个的设计意图是防止单个用例影响整体测试运行，
+不适合用来测运行时间，因为不能测量重复运行，单样本在统计学上不能验证假设。&lt;/p&gt;
+&lt;p&gt;在单元测试中测试运行时间有两个好处：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;不需要等到集成测试时发现问题再打回来优化，fall fast嘛，至少保证这部分没有拖后腿。&lt;/li&gt;
+&lt;li&gt;根据“单元测试指导编码”的原则，如果对模块的内部的函数有不同实现方案，
+该函数运行负担较重且可测试，就可计算并利用运行时间作为方案取舍的参考。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2-基于用例的测试example-based-testing-ebt&#34;&gt;2. 基于用例的测试(example-based testing, EBT)&lt;/h2&gt;
+&lt;p&gt;用例本该用来翻译case或use case，这是术语，
+但想了想还是把example翻译成用例合适，搜了下中文的博客也都用的这个翻译。
+清楚与明确，就是EBT的优点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;对于计算类函数，可以做边界值测试。&lt;/li&gt;
+&lt;li&gt;对于功能类函数（后端CRUD工作），可以写个冒烟测试（冒烟是集成测试的术语，在此借其定义）检查代码能否正常工作。
+或者输入异常测试数据、给桩mock异常反应，测试被测函数的异常处理流程。&lt;/li&gt;
+&lt;li&gt;TDD时需要故意写使测试失败的测试用例以启发编码，这是标准操作流程。&lt;/li&gt;
+&lt;li&gt;再比如你想逐步debug，使用EBT可以让你清楚地知道程序走到每一步时应有的状态。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;运用设计模式简化构造复杂测试数据实例的过程&#34;&gt;运用设计模式简化构造复杂测试数据实例的过程&lt;/h3&gt;
+&lt;p&gt;在MVx架构模式族中，中间模块的方法的参数通常是领域定义的Model，Model的某种集合，甚至主Model嵌套属性Model。
+关于如何简生成过程，有以下内容供参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Java语言，&lt;a href=&#34;https://stackoverflow.com/questions/12568742/generating-test-data-for-unit-test-cases-for-nested-objects&#34;&gt;StackOverFlow上的这个问题&lt;/a&gt;
+可能对你有所帮助。你也可以用&lt;a href=&#34;https://projectlombok.org/&#34;&gt;Lombok库&lt;/a&gt; ，
+它的&lt;code&gt;@Builder&lt;/code&gt;注解可以生成Builder模式的对象构造代码。
+或者IDEA编辑器，也有生成Setter方法的功能，但Builder模式比调用Setter构造对象方便。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;非Java语言，&lt;a href=&#34;http://www.natpryce.com/articles/000714.html&#34;&gt;这篇博客&lt;/a&gt; 中提到的几个设计模式，
+比如&lt;a href=&#34;http://wiki.c2.com/?ObjectMother&#34;&gt;Object Mother(数据生成工具类)&lt;/a&gt; ，&lt;a href=&#34;https://wiki.c2.com/?TestDataBuilder&#34;&gt;Builder&lt;/a&gt;
+可以简化重复的构建语句。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;示范代码&#34;&gt;示范代码&lt;/h3&gt;
+&lt;p&gt;下面示例代码使用Java语言及其下的测试框架与库：
+&lt;a href=&#34;https://junit.org/junit5/&#34;&gt;Junit&lt;/a&gt; ，&lt;a href=&#34;http://hamcrest.org/&#34;&gt;Hamcrest&lt;/a&gt; ，
+&lt;a href=&#34;https://site.mockito.org/&#34;&gt;Mockito&lt;/a&gt; 。
+目的是测试MVC模型中一个Service的getEntitiesBy()方法的正常逻辑(略去部分代码)：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;设定环境&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;假设DB中存在（对Mapper进行mock）与输入Request内容对应的记录。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;期望&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1. 桩：该方法会使用输入的Request中的索引值&amp;quot;normal&amp;quot;调用Mapper查询数据库，获取对应记录包装成的Entity Model。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2. 返回值：该方法应返回一个消息代码为&amp;quot;ok&amp;quot;的Response对象，其数据应为一个Entity对象的列表，首个元素的状态应与Mapper返回的对象相同。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// -------service.ServiceTest
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Given-When-Then - Behavior Driven Development (BDD)
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Test&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;withNormalResponse&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;normal&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;// given, Mockito
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;given&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mapper&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getEntitiesBy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;willReturn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buildDummyMapperReturn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;// when
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;Response&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;actual&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;service&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getEntitiesBy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buildRequest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;// then, Hamcrest, 对调用的返回值的期望
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;assertThat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;actual&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getMessage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(),&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;is&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ok&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;assertThat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;actual&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getCategory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(),&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;is&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;assertThat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;actual&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(),&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;is&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;n&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;// Mockito, 对被测调用桩时传入的参数的期望
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;ArgumentCaptor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mapperArgCaptor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ArgumentCaptor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;forClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;verify&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mapper&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;times&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getEntitiesBy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mapperArgCaptor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;capture&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;whatMapperGot&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mapperArgCaptor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;assertThat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;whatMapperGot&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;is&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;// 构造Mapper桩所返回的测试数据
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Entity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;buildDummyMapperReturn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Collections&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;singletonList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Entity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setCategory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;n&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;// -------dto.Response
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Getter&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Lombok
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Setter&lt;/span&gt;
+&lt;span class=&#34;nd&#34;&gt;@Accessors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;chain&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Entity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;// -------dao.entity.Entity
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Getter&lt;/span&gt;
+&lt;span class=&#34;nd&#34;&gt;@Setter&lt;/span&gt;
+&lt;span class=&#34;nd&#34;&gt;@Accessors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;chain&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; 
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Entity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;3-基于特性的测试property-based-testing-pbt&#34;&gt;3. 基于特性的测试(property-based testing, PBT)&lt;/h2&gt;
+&lt;h3 id=&#34;名词解释&#34;&gt;名词解释&lt;/h3&gt;
+&lt;p&gt;实在不好意思，我得先让你读一些难懂的名词定义，
+关键内容大多是从&lt;a href=&#34;https://book.douban.com/subject/35006892/&#34;&gt;《程序员修炼之道(第2版)》&lt;/a&gt; 抄来的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;例程（routine）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“例程是某个系统对外提供的功能接口或服务的集合。
+比如操作系统的API、服务等就是例程；
+Delphi或C++Builder提供的标准函数和库函数等也是例程。” &amp;ndash;&lt;a href=&#34;https://baike.baidu.com/item/%E4%BE%8B%E7%A8%8B/2390628&#34;&gt;百度百科&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;契约式设计（development based on contract, DBC, 或contract-driven development）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;出自&lt;a href=&#34;https://archive.org/details/objectorientedso00meye_0&#34;&gt;《面向对象软件构造(Object-Oriented Software Construction)》&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;前置条件：例程期望自己运行前环境的状态符合它运行的需求。&lt;/li&gt;
+&lt;li&gt;后置条件：例程保证自己退出时，环境的状态是什么样子。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;类的不变式&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;从调用者的角度来看，类会确保不变式始终为真。&lt;/li&gt;
+&lt;li&gt;在例程的内部处理期间，可以不遵守不变式，但退出时不变式需为真。&lt;/li&gt;
+&lt;li&gt;因为Eiffel是OO语言，所以《OOSC》的作者将该概念命名为“类”的不变式，
+实际上这个名词指的是例程所依靠的模块的内部状态，在OO语言里，就是类实例的状态。
+《修炼之道》作者指出，在函数式语言中，状态是在函数间传递的数据本身，不变式概念依然有效。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;例程与调用者的契约：
+&lt;ul&gt;
+&lt;li&gt;如果调用者满足例程所有前置条件，则例程保证退出时所有后置条件和不变式为真。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果任一方没有履行契约，就会调用（之前同意的）补救措施——抛出异常，或程序终止。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;基于特性的测试&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《修炼之道》：契约和不变式放在一起并称为特性，我们基于它做自动化测试。&lt;/li&gt;
+&lt;li&gt;PBT库Hypothesis的作者的&lt;a href=&#34;https://hypothesis.works/articles/what-is-property-based-testing/&#34;&gt;解释PBT概念的文章&lt;/a&gt; ：
+&lt;ol&gt;
+&lt;li&gt;内部对调用者透明(&lt;a href=&#34;https://hypothesis.works/articles/referential-transparency/&#34;&gt;referential transparency&lt;/a&gt;))&lt;/li&gt;
+&lt;li&gt;指定随机实例的类型(types)&lt;/li&gt;
+&lt;li&gt;随机生成(randomization)&lt;/li&gt;
+&lt;li&gt;对相关工具的使用(the use of any particular tool or library)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;只有ebt还不够&#34;&gt;只有EBT还不够&lt;/h3&gt;
+&lt;p&gt;EBT优点在精准，缺点在太精准。一言以蔽之，EBT引入了太多主观且与需求无关的细节，且能测试到的代码运行路径的覆盖率及其有限。&lt;/p&gt;
+&lt;p&gt;甚至个别用例会导致类似机器学习过拟合的效果，让代码偏离了原本的意图。
+这更多是错认为“测试所表达的意图不会变且一直正确”的思维陷阱所导致的。
+在EBT中，测试用例就是主观对需求的理解，需要在修改功能时不断检查无法通过的测试是否仍具有意义。
+比如TDD实践中所使用的单元测试方式就是EBT，
+在这篇记录两个开发者使用TDD流程结对编程实现一个Kata的
+&lt;a href=&#34;https://sites.google.com/site/unclebobconsultingllc/home/articles/the-bowling-game-an-example-of-test-first-pair-programming&#34;&gt;文章&lt;/a&gt;
+中，两人会讨论“是否该把之前写的一个测试用例删除，因为它所代表的操作已不会在现实发生，虽然之前是有意义的”，还好他们凭经验避开了。&lt;/p&gt;
+&lt;p&gt;从EBT转向PBT，像从&lt;a href=&#34;https://en.wikipedia.org/wiki/Programming_paradigm&#34;&gt;命令式(imperative)编程范式&lt;/a&gt; 到声明式(declarative)编程范式的转变。
+命令式是给出具体过程的实现，就像EBT要明确构造调用被测函数时的测试数据的状态。
+而声明式只是声明想做什么，具体过程交给解释器，
+PBT也是只对特性的假设下准确定义，但关于在抽象定义的特性的限制下如何生成大量测试数据，交给PBT库。
+这样我们仅仅给出了足够定义特性的信息，而没有引入对具体取值的依赖，符合&lt;a href=&#34;https://en.wikipedia.org/wiki/Interface_segregation_principle&#34;&gt;ISP原则&lt;/a&gt; 。
+两者仅在对测试数据的构造方式上有差别，而对于被测函数的期望两者是相同精确的，都要明确写成assert, expect&amp;hellip;语句。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://increment.com/testing/in-praise-of-property-based-testing/&#34;&gt;这篇文章&lt;/a&gt; 里不仅有关于EBT与PBT的代码级比较，还有使用PBT发现EBT难以暴露的bug的两个真实案例。&lt;/p&gt;
+&lt;p&gt;不过我个人认为，PBT并不能完全取代EBT，比如边界值这个案例，
+如果不是CI那种持续地测，没准儿只运行一次单元测试没能随机出特定的边界值呢。
+而且两者也不互斥，可以针对同一个API写两种测试，更可靠。&lt;/p&gt;
+&lt;p&gt;另外，我看到不止一个地方这样描述PBT：它会给你带来惊喜。&lt;/p&gt;
+&lt;h3 id=&#34;pbt和fuzzing概念的区分&#34;&gt;PBT和Fuzzing概念的区分&lt;/h3&gt;
+&lt;p&gt;PBT很像小到被测函数范围的&lt;a href=&#34;http://en.wikipedia.org/wiki/Fuzzing&#34;&gt;Fuzzing&lt;/a&gt; ，
+目的是用大量随机输入无情地对待代码，尝试找出它代码上没有体现到，但是需求上承诺要做到的特性
+（对于Fuzzing来说，被测软件应该承诺做到尽可能的鲁棒性和安全性）。
+&lt;a href=&#34;https://hypothesis.works/articles/what-is-property-based-testing/&#34;&gt;这篇文章&lt;/a&gt; 阐述了两者间差别与相同之处：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fuzzing是完全由计算机控制的随机过程，而PBT在随机的范围上基于特性进行了人为限定。&lt;/li&gt;
+&lt;li&gt;PBT工具与Fuzzing工具在运行流程上高度相似，两者可相互替代使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;从这个区别上我们也能看出，PBT不仅会利用计算机的随机与自动化摆脱思维对需求的偏见，
+还能反过来促使开发人员思考总结并用代码表达出函数真正的、广范围的契约与不变式。
+PBT可作为单元测试的一种方式，在单元测试层面，其最重要目的也是“启发编码”。&lt;/p&gt;
+&lt;h3 id=&#34;pbt到底在哪个概念层级&#34;&gt;PBT到底在哪个概念层级&lt;/h3&gt;
+&lt;p&gt;我认为PBT的明确对立概念应该是EBT，发生混淆的原因有两点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;EBT已与太多的熟悉的概念绑定：TDD实践中明确使用EBT，谈起单元测试就是EBT；
+谈起集成测试、QA以及更高层的测试，也是用具体的测试集去书面化需求文档，
+测试集大多为EBT（但同时也存在引入随机测试数据的测试平台）。&lt;/li&gt;
+&lt;li&gt;PBT运行时间多于EBT，不符合单元测试或者TDD要求的秒级结果反馈。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;你可能会看到有观点说单元测试、TDD和PBT是对立的概念，《修炼之道》里部分文字也有这个意思。
+当人们使用对比手法介绍PBT时，如果无法把EBT这个细类概念从大类概念中抽出，并明确地指出来，就会无意中造成这种表达理解上的误差。&lt;/p&gt;
+&lt;p&gt;也有观点说PBT独立于单元测试、集成测试等测试层级概念，是“额外的一类测试”，我反对这个观点。
+首先，我了解到的几个现有的PBT库都兼容在了原先存在的为EBT编写的成熟测试框架下，
+或者应该说是测试框架逐渐变成了无关测试方式的抽象框架，这是事实依据。
+其次从定义上区分，测试层级描述的是项目活动，区别主要在参与该活动的&lt;a href=&#34;https://en.wikipedia.org/wiki/Project_stakeholder&#34;&gt;项目干系人(stakeholder)&lt;/a&gt; 
+的类别，和运行时对系统覆盖的范围，和PBT所定义的东西相差甚远。
+PBT可以用在单元测试中，也可以用在集成测试中，它描述的仅仅是一种构造测试数据的思路。&lt;/p&gt;
+&lt;h3 id=&#34;我认为单元测试中可以使用pbt&#34;&gt;我认为单元测试中可以使用PBT&lt;/h3&gt;
+&lt;p&gt;在编程实践而非项目管理定义上，单元测试（和组件测试，组件测试在定义上比单元测试多涉及一个mock）有几个共识的特征：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;由开发人员为指导编码所写。&lt;/li&gt;
+&lt;li&gt;被测代码范围最大为单个模块，我们会使用Mock技术编写模块所依赖的桩，
+模拟上层调用者调用模块的API，模拟被测模块的上下文。&lt;/li&gt;
+&lt;li&gt;自动化与可重复运行。&lt;/li&gt;
+&lt;li&gt;测试粒度比集成测试等包含多模块的层级更细。&lt;/li&gt;
+&lt;li&gt;测试反映了开发人员对代码行为的期望。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;我们可以判断说PBT没有违反上述单元测试的定义。PBT与单元测试的矛盾大概在运行时间上。&lt;/p&gt;
+&lt;h4 id=&#34;单元测试运行时间的大部分受不可控因素影响&#34;&gt;单元测试运行时间的大部分受不可控因素影响&lt;/h4&gt;
+&lt;p&gt;TDD等倡导测试优先的学派，为了实践需要，额外为单元测试增加了“测试集运行速度需缩短到秒级”的要求。
+这个要求是基于现代电脑的高性能前提提出的，而且我猜测，单元测试被TDD概念反过来影响，加之开发人员们主观感受，
+认为单元测试就是而且应该是很快的。&lt;/p&gt;
+&lt;p&gt;但我们在实践中已经了解到，一旦引入Mock机制，运行一次某个类对应的单元（严格来说是组件）测试的总时间，
+绝大部分为测试框架执行mock加载上下文的时间，正比于我们想测的模块所涉及的依赖的启动复杂程度。&lt;/p&gt;
+&lt;p&gt;举例，以我的经验（大概只是工作电脑性能低），对于Java的Spring-boot应用中的单个Junit测试类，
+使用&lt;code&gt;@RunWith(MockitoJUnitRunner.class)&lt;/code&gt;最快，大概启动10秒左右；
+如果要用&lt;code&gt;@RunWith(SpringRunner.class)&lt;/code&gt;，&lt;code&gt;@SpringBootTest&lt;/code&gt;就要启动30多秒；
+如果被测代码还包含从配置文件中读取配置的内容，需要额外用&lt;code&gt;@TestPropertySource&lt;/code&gt;在启动时导入测试配置文件，
+又要加个10秒左右。
+不管测一个方法还是测所有方法也是加载同一个上下文，最小化上下文还是需要这么多启动时间。
+肯定每次运行时都要看控制台里application启动时慢慢输出的log，然后刷刷两下所有用例都测完，测试退出。
+这类代码从实践上考虑就无法使用TDD开发，但这些测试就是它们的单元测试。&lt;/p&gt;
+&lt;p&gt;我个人认为，正确理解单元测试的速度要求需要&lt;strong&gt;相对于&lt;/strong&gt;集成测试来说，
+单元测试相比集成测试运行时间低至少一个数量级，这种说法是对的。
+同时通过Mock这个例子，我们发现单元测试的运行时间取决于代码的依赖的复杂度、电脑性能等不可控因素上
+（有些牵强？哈哈抱歉，大概就是想表达这么个意思，没讨论到的因素还有很多）。&lt;/p&gt;
+&lt;h4 id=&#34;单元测试中能否用pbt取决于具体欲测特性的复杂度&#34;&gt;单元测试中能否用PBT，取决于具体欲测特性的复杂度&lt;/h4&gt;
+&lt;p&gt;这个说法真模糊啊，但我只能拿出这种说法了。
+你看，单个PBT用例相比单个EBT用例，慢就慢在要测多于一个测试数据，加上生成数据的时间，关键在运行时间。
+但是生成数据的范围和单个数据测试的时间又是由特性决定的，下面分别对两方面解释一下。&lt;/p&gt;
+&lt;p&gt;关于大家和PBT库认为单个PBT用例的运行次数，或者说生成测试集的大小，我搜索的结果是，
+从提供限定大小的参数的库，到默认100个的固定数量的随机测试集的库，
+到正统的不许设定数据集大小，粒度只能指定到数据类型，需要持续运行测试的看法，都有。
+首先，肯定运行越多越好，持续集成里的测试可以这么写。其次，单元测试肯定受不了相对较长的运行时间。&lt;/p&gt;
+&lt;p&gt;《修炼之道》给的介绍PBT的例子有这两个：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;运行100次，随机列表作为输入，测试排序方法调用前后列表长度没变，排序结果正确，运行时间0.95秒。&lt;/li&gt;
+&lt;li&gt;运行100次，从大小为4的集合中随机取元素作为输入，测试“库存始终大于0”不变式，找到了bug，没写运行时间。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;嗯，第二个例子100次不算多，能找到bug是因为这个bug比较“容易”被引爆，“容易”是个主观定性的词，描述了这个特性的复杂度。
+&lt;a href=&#34;https://blog.ssanj.net/posts/2016-06-26-property-based-testing-patterns.html&#34;&gt;这篇文章&lt;/a&gt; 里介绍了一些PBT常见模式，
+不少模式（所代表的特性）复杂度并不高。&lt;/p&gt;
+&lt;p&gt;鉴于我们的单元测试时间可能大部分还是会消耗在执行mock上，花10秒运行1000次测试来测试一个特性，
+这样对整个模块的PBT单元测试大概要跑几分钟（共十几个特性），似乎是可以接受的。&lt;/p&gt;
+&lt;h3 id=&#34;如何构造pbt所需测试数据&#34;&gt;如何构造PBT所需测试数据&lt;/h3&gt;
+&lt;p&gt;基本&lt;a href=&#34;https://hypothesis.works/articles/quickcheck-in-every-language/&#34;&gt;每个编程语言都有PBT库&lt;/a&gt;
+（这篇2016年的文章信息稍有过时），
+这类PBT测试库通常会提供，对其服务的语言的原生库内的类的实例的随机构造方法。
+有点绕，用Java下的&lt;a href=&#34;https://pholser.github.io/junit-quickcheck/site/1.0/usage/basic-types.html&#34;&gt;junit-quickcheck&lt;/a&gt; 
+库举例就是：该库会提供对Java基本类型、String、常用集合类、Date等类的随机构造方法。
+这种构造方法因库而异，在提供给用户使用的方式上稍有不同，
+比如&lt;a href=&#34;https://pholser.github.io/junit-quickcheck/site/1.0/usage/other-types.html&#34;&gt;junit-quickcheck&lt;/a&gt; 使用参数上的注解，
+Python下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quickstart.html&#34;&gt;Hypothesis&lt;/a&gt; 使用方法上的注解。&lt;/p&gt;
+&lt;p&gt;这样方便你写测试时进一步构造自己软件所在领域的Model之类的实例。
+构造方式与PBT相似，还是要运用上文EBT部分所述的技巧自己手工编写，
+只是把Model的属性赋值部分换成库提供的随机生成方法。
+具体到代码，可以参照&lt;a href=&#34;https://dev.to/quii/property-based-testing-in-real-life-4db8&#34;&gt;这篇文章&lt;/a&gt; 的做法。&lt;/p&gt;
+&lt;h3 id=&#34;更多关于pbt的参考内容&#34;&gt;更多关于PBT的参考内容&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;一个叫jqwik的Java PBT库的&lt;a href=&#34;https://jqwik.net/property-based-testing.html&#34;&gt;介绍页面&lt;/a&gt; 给出了不少关于PBT的资料。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.ssanj.net/posts/2016-06-26-property-based-testing-patterns.html&#34;&gt;文章 Property-based Testing Patterns&lt;/a&gt; 
+易懂地说明了PBT中可遵守的一些模式，可根据这些模式来指导总结代码中的特性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;5-总结&#34;&gt;5. 总结&lt;/h2&gt;
+&lt;p&gt;希望这篇文章给你讲明白了，或者至少你可以把所有参考资料读一遍，自己形成理解。
+试试在工作中把PBT用起来，如果害怕擅自导入PBT包被发现，不提交至VCS就行。
+顺带一提我还没实践过，打算下次迭代时试试。我预计即使是后端日常CRUD功能，
+根据那篇&lt;a href=&#34;https://blog.ssanj.net/posts/2016-06-26-property-based-testing-patterns.html&#34;&gt;PBT Patterns文章&lt;/a&gt; 
+，针对数据变换或判断的方法都可能能总结出特性。&lt;/p&gt;
+&lt;p&gt;抛砖引玉，欢迎在评论中指点指正，或给出另一个角度的看法，好让我对这些概念了解更深。&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/programming/">programming</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/programming/">programming</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>对适用于个人的电子数据备份体系的总结</title>
@@ -262,7 +714,7 @@ VeraCrypt是多平台的，或许你可以先试试它。&lt;/p&gt;
                                 
                                 
                                 
-                                    <category domain="https://boholder.github.io/categories/blog/">blog</category>
+                                    <category domain="https://boholder.github.io/categories/thought/">thought</category>
                                 
                             
                         
@@ -545,7 +997,7 @@ then look at it again.&amp;rdquo;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;忏悔&lt;/p&gt;
 &lt;p&gt;我，Dave，因告诉别人自己不再编写测试，而大出风头。这样做的部分原因是想动摇那些把测试变成宗教的人的信仰。
-这样说的部分原因是，这（某种程序上）是真的。&lt;/p&gt;
+这样说的部分原因是，这（某种程度上）是真的。&lt;/p&gt;
 &lt;p&gt;我已经编写了45年的代码，30多年中我都写了自动化测试。构思写测试，已经成了我编码方式的一部分&amp;hellip;
 我决定停止编写测试几个月，看看代码会出什么事。令人惊讶的是，影响“不是很大”，我花了一些时间来找出原因。&lt;/p&gt;
 &lt;p&gt;我相信这个原因是，（对我来说）测试的好处更主要来自思考测试，以及思考测试对对代码造成的影响。
@@ -1114,7 +1566,7 @@ Time: 2015-07&lt;/p&gt;
                                 
                                 
                                 
-                                    <category domain="https://boholder.github.io/categories/web-security/">web-security</category>
+                                    <category domain="https://boholder.github.io/categories/computer-security/">computer-security</category>
                                 
                             
                         

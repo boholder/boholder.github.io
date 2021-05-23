@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://boholder.github.io/tags/blog/</loc>
-    <lastmod>2021-03-11T10:26:20+08:00</lastmod>
+    <lastmod>2021-05-23T18:13:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -18,13 +18,8 @@
   </url>
   
   <url>
-    <loc>https://boholder.github.io/categories/blog/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://boholder.github.io/</loc>
-    <lastmod>2021-03-11T10:26:20+08:00</lastmod>
+    <lastmod>2021-05-23T18:13:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -38,18 +33,8 @@
   </url>
   
   <url>
-    <loc>https://boholder.github.io/tags/sre/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/blogs/individual-data-backup-summary/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://boholder.github.io/tags/programming/</loc>
-    <lastmod>2021-03-11T10:26:20+08:00</lastmod>
+    <lastmod>2021-05-23T18:13:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -64,7 +49,7 @@
   
   <url>
     <loc>https://boholder.github.io/categories/programming/</loc>
-    <lastmod>2021-03-11T10:26:20+08:00</lastmod>
+    <lastmod>2021-05-23T18:13:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -78,8 +63,28 @@
   </url>
   
   <url>
+    <loc>https://boholder.github.io/blogs/unit-test-methods/</loc>
+    <lastmod>2021-05-23T18:13:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/tags/sre/</loc>
+    <lastmod>2021-05-20T17:26:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/categories/thought/</loc>
+    <lastmod>2021-05-20T17:26:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/blogs/individual-data-backup-summary/</loc>
+    <lastmod>2021-05-20T17:26:31+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/blogs/tdd-tips-zh/</loc>
-    <lastmod>2021-03-11T10:26:20+08:00</lastmod>
+    <lastmod>2021-05-20T17:26:31+08:00</lastmod>
   </url>
   
   <url>
@@ -99,7 +104,7 @@
   
   <url>
     <loc>https://boholder.github.io/categories/design/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
+    <lastmod>2021-05-20T17:26:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -154,7 +159,7 @@
   
   <url>
     <loc>https://boholder.github.io/tags/ide/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
+    <lastmod>2021-05-20T17:26:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -169,27 +174,27 @@
   
   <url>
     <loc>https://boholder.github.io/crafts/markdown-obsidian-user-defined-language-for-notepadpp2.1_zh/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
+    <lastmod>2021-05-20T17:26:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/categories/computer-security/</loc>
+    <lastmod>2021-05-20T17:26:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://boholder.github.io/tags/cookie/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
+    <lastmod>2021-05-20T17:26:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://boholder.github.io/blogs/cookie_security_zh/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
+    <lastmod>2021-05-20T17:26:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://boholder.github.io/tags/web-security/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/categories/web-security/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
+    <lastmod>2021-05-20T17:26:31+08:00</lastmod>
   </url>
   
   <url>
