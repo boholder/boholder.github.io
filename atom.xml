@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2021-05-26T22:06:47&#43;08:00</updated>
+    <updated>2021-05-26T22:14:19&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -20,18 +20,18 @@
             <title type="text">译文：从源码中学习（阅读源码，初学者的有效成长方式）</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/learn-from-source-code/" />
             <id>https://boholder.github.io/blogs/learn-from-source-code/</id>
-            <updated>2021-05-26T17:30:54&#43;08:00</updated>
+            <updated>2021-05-26T22:09:01&#43;08:00</updated>
             <published>2021-05-25T00:00:00&#43;00:00</published>
             <author>
-                    <name>Nic</name>
+                    <name>Nick Mose</name>
                     <uri>https://coderscat.com/about/</uri>
                     </author>
             <rights>all rights reserved</rights><summary type="html">为什么我们需要阅读源代码；如何阅读代码，并尽可能从源代码中学到更多</summary>
             
                 <content type="html">&lt;p&gt;这是一篇译制博客文章，原博客为
 &lt;a href=&#34;https://coderscat.com/learn-from-source-code/&#34;&gt;Learn from Source Code (an Effective Way to Grow for Beginners)&lt;/a&gt;
-，原作者为&lt;a href=&#34;mailto:nickmose8@gmail.com&#34;&gt;Nic&lt;/a&gt; 。
-&lt;a href=&#34;mailto:boholder@anche.no&#34;&gt;我&lt;/a&gt; 向Nic申请获得了此文的中文翻译权与中文翻译文章发布权。&lt;/p&gt;
+，原作者为&lt;a href=&#34;mailto:nickmose8@gmail.com&#34;&gt;Nick Mose&lt;/a&gt; 。
+&lt;a href=&#34;mailto:boholder@anche.no&#34;&gt;我&lt;/a&gt; 向Nick申请获得了此文的中文翻译权与中文翻译文章发布权。&lt;/p&gt;
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;上周我在和一位年轻程序员聊天时，他问到我：“如何阅读源码？”，我们讨论了一段时间，我还列举了几种有效阅读源码的方式。
 然后他说：“你应该就这个话题写篇文章，这对初学者很有帮助，而且这种经验无法从书籍和教程中获得。”

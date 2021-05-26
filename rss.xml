@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
         
-        <lastBuildDate>Wed, 26 May 2021 22:06:47 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 26 May 2021 22:14:19 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
@@ -38,8 +38,8 @@
                 
                     <description>&lt;p&gt;这是一篇译制博客文章，原博客为
 &lt;a href=&#34;https://coderscat.com/learn-from-source-code/&#34;&gt;Learn from Source Code (an Effective Way to Grow for Beginners)&lt;/a&gt;
-，原作者为&lt;a href=&#34;mailto:nickmose8@gmail.com&#34;&gt;Nic&lt;/a&gt; 。
-&lt;a href=&#34;mailto:boholder@anche.no&#34;&gt;我&lt;/a&gt; 向Nic申请获得了此文的中文翻译权与中文翻译文章发布权。&lt;/p&gt;
+，原作者为&lt;a href=&#34;mailto:nickmose8@gmail.com&#34;&gt;Nick Mose&lt;/a&gt; 。
+&lt;a href=&#34;mailto:boholder@anche.no&#34;&gt;我&lt;/a&gt; 向Nick申请获得了此文的中文翻译权与中文翻译文章发布权。&lt;/p&gt;
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;上周我在和一位年轻程序员聊天时，他问到我：“如何阅读源码？”，我们讨论了一段时间，我还列举了几种有效阅读源码的方式。
 然后他说：“你应该就这个话题写篇文章，这对初学者很有帮助，而且这种经验无法从书籍和教程中获得。”
