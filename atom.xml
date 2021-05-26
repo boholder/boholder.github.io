@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2021-05-23T18:18:57&#43;08:00</updated>
+    <updated>2021-05-26T22:06:47&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -17,10 +17,235 @@
     <rights>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</rights>
     <generator uri="https://gohugo.io/" version="0.79.1">Hugo</generator>
         <entry>
+            <title type="text">译文：从源码中学习（阅读源码，初学者的有效成长方式）</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/learn-from-source-code/" />
+            <id>https://boholder.github.io/blogs/learn-from-source-code/</id>
+            <updated>2021-05-26T17:30:54&#43;08:00</updated>
+            <published>2021-05-25T00:00:00&#43;00:00</published>
+            <author>
+                    <name>Nic</name>
+                    <uri>https://coderscat.com/about/</uri>
+                    </author>
+            <rights>all rights reserved</rights><summary type="html">为什么我们需要阅读源代码；如何阅读代码，并尽可能从源代码中学到更多</summary>
+            
+                <content type="html">&lt;p&gt;这是一篇译制博客文章，原博客为
+&lt;a href=&#34;https://coderscat.com/learn-from-source-code/&#34;&gt;Learn from Source Code (an Effective Way to Grow for Beginners)&lt;/a&gt;
+，原作者为&lt;a href=&#34;mailto:nickmose8@gmail.com&#34;&gt;Nic&lt;/a&gt; 。
+&lt;a href=&#34;mailto:boholder@anche.no&#34;&gt;我&lt;/a&gt; 向Nic申请获得了此文的中文翻译权与中文翻译文章发布权。&lt;/p&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;上周我在和一位年轻程序员聊天时，他问到我：“如何阅读源码？”，我们讨论了一段时间，我还列举了几种有效阅读源码的方式。
+然后他说：“你应该就这个话题写篇文章，这对初学者很有帮助，而且这种经验无法从书籍和教程中获得。”
+那么开始吧，下面是我关于阅读源码的小技巧。&lt;/p&gt;
+&lt;h2 id=&#34;为什么我们需要读源码&#34;&gt;为什么我们需要读源码&lt;/h2&gt;
+&lt;p&gt;我们程序员每天都要和源码打交道。经过数年的学习，大多数程序员可以“写”代码，或者至少是拷贝并修改代码。
+而且，我们教授编程的方式强调编写代码的艺术，而不是如何阅读代码。
+当我说“阅读代码”，我是指&lt;strong&gt;有意地专门阅读代码&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;众所周知，编程和写作有诸多相同之处。
+唐纳德·克努特甚至引入了&lt;a href=&#34;https://en.wikipedia.org/wiki/Literate_programming&#34;&gt;文学编程(literate programming)&lt;/a&gt; 编程范式。
+编程与写作有相同的理念：&lt;a href=&#34;https://www.coderscat.com/how-to-learn-all-pl&#34;&gt;表达我们的想法&lt;/a&gt; 。
+还记得你在学校是怎么学习写作的吗？我们的写作能力来源于从小学开始直到现在的大量的文本阅读。
+多年以来，我们阅读了不同难度的伟大作家的作品，并练习了多种写作技巧。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“如果你没时间读，你就没时间（或工具）写，就这么简单。”
+—— 斯蒂芬·金，&lt;a href=&#34;https://book.douban.com/subject/3888123/&#34;&gt;《写作这回事：创作生涯回忆录》&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;正如斯蒂芬·金所观察到的那样，一个作家必须广泛而频繁地阅读，才能形成自己的声音，
+并学会写出促使读者拿起书并痴读的句式和故事结构。
+&lt;strong&gt;和读书一样，有意地阅读代码可以帮助程序员加速成长，尤其是对中级(intermediate)程序员而言。&lt;/strong&gt;
+这样做有三个好处。&lt;/p&gt;
+&lt;h3 id=&#34;站在巨人的肩膀上&#34;&gt;站在巨人的肩膀上&lt;/h3&gt;
+&lt;p&gt;我们从他人身上学习。优秀的源代码就像文学杰作，它不仅仅只提供了知识和信息，还提供了启迪。&lt;/p&gt;
+&lt;p&gt;通过浏览Linux内核、Redis、Nginx、Rails或其他著名项目，
+你可以从全球范围的成千上万的顶级程序员那里汲取智慧。
+在这些项目中可以找到无数的良好编程示例、编程范式选择、设计和架构。
+向他人学习的另一个好处是能够避免常见的坑，大多数坑早已被他人踩过。&lt;/p&gt;
+&lt;h3 id=&#34;解决困难问题&#34;&gt;解决困难问题&lt;/h3&gt;
+&lt;p&gt;在你的职业生涯中，你终将会碰到谷歌都无法解决的问题。
+如果你还没碰到过这种问题，这只是因为你编程的时间还不足够长 :)。
+阅读源码是调查这类问题的好方法，也是学习新东西的好机会。&lt;/p&gt;
+&lt;h3 id=&#34;扩展你的边界&#34;&gt;扩展你的边界&lt;/h3&gt;
+&lt;p&gt;大多数程序员只在少数特别领域编过程。
+一般而言，如果你不时常推自己一把，你的编程技能会维持在你同事间的平均水平。
+不要满足于修补bug或在现有系统中添加琐碎特性的工作。
+相反，你可以试着扩展到一个新的领域，持续尝试找到一个你在日常工作中接触不到、但你感兴趣的领域。
+这将从整体上拓宽你对编程的理解。&lt;/p&gt;
+&lt;h2 id=&#34;应该读什么样的源码&#34;&gt;应该读什么样的源码&lt;/h2&gt;
+&lt;p&gt;综上，阅读源码是有益的。
+那么下一个问题，有这么多优秀作品可供选择，我们该选择并阅读什么样的源码呢？
+你必须从选择目标开始。如果不在这个步骤上下点功夫，你从源码中学习的效果就会打折扣。
+这里有一些典型场景：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;当你想学习一门新语言。学新语言可&lt;a href=&#34;https://coderscat.com/how-to-learn-all-pl&#34;&gt;不只是学会语法&lt;/a&gt; 。
+不管怎样，阅读源码是一个非常有效的学习新语言的方式。我从&lt;a href=&#34;https://github.com/rust-rosetta/rust-rosetta&#34;&gt;rust-rosetta&lt;/a&gt;
+项目中学到了很多Rust语言知识。&lt;a href=&#34;http://rosettacode.org/wiki/Category:Programming_Languages&#34;&gt;Rosetta Code&lt;/a&gt;
+是一个收集同一批通用任务在不同语言上的解决方案的项目，这是一个可用来学习新语言的有用资源。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当你想了解一个特殊的算法或实现。
+例如，我们都会使用标准库中的sort函数，你有没有好奇过它是怎么实现的？
+或者当你要使用Redis中的Set结构，它是用什么数据结构实现的？
+为了解决这些疑惑，你只需要读源码中与之相关的实现部分，通常只有很少的文件或函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当你在特殊的框架中编程。这意味着你对该框架已经有了一定的经验，
+这是个阅读一些框架本身的源码的好机会。
+很显然，了解框架的源码有助于提高你对框架的理解。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当你想拓展进入新的领域，你可以阅读这个领域的经典著名的项目的源码。
+比如说，如果你在做Web开发的工作，你对分布式系统感兴趣吗？
+如果你的答案是“是”而且你懂Golang，也许&lt;a href=&#34;https://github.com/etcd-io/etcd&#34;&gt;etcd&lt;/a&gt;
+是你的选择。你想钻研操作系统的内部构成吗？那么也许&lt;a href=&#34;https://github.com/mit-pdos/xv6-public&#34;&gt;xv6&lt;/a&gt;
+是一个好的开始。我们处在一个许多优秀开源项目都托管在了Github的好时代，请试着寻找一些这种项目。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;记住，&lt;strong&gt;选择与你当前的编程技能与知识水平相当的项目。&lt;/strong&gt; 
+如果你选择了远超你当前技能水平的项目，最终你会感到沮丧。
+读一些相对较小的项目，接着读更大的项目。
+如果目前你不能理解某些特定的代码片段，这意味着你有个知识缺口(knowledge gap)。
+把代码放到一边去，试着读一些相关的书、论文或其他文档，当你更有信心时再回来接着读代码。
+我们总能在一个模式中取得进展：读（代码、书、论文），写，更多的读，更多的写。&lt;/p&gt;
+&lt;h2 id=&#34;如何读源码&#34;&gt;如何读源码&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/How-Read-Book-Classic-Intelligent/dp/0671212095&#34;&gt;《How to read a book》&lt;/a&gt;
+是一本指导人进行明智地阅读的书。作为初学者，我们值得投入时间和精力去思考我们应该如何阅读代码。
+&lt;strong&gt;阅读代码不是件容易的事。&lt;/strong&gt; 光是阅读源码是不够的，你要试着去理解他人的设计和想法。&lt;/p&gt;
+&lt;h3 id=&#34;预先准备&#34;&gt;预先准备&lt;/h3&gt;
+&lt;p&gt;为了更有效率地阅读代码，你需要提前在手边准备这些东西：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一个你可以熟练使用的编辑器。你需要拥有快速搜索关键字或变量名的能力。
+有时你需要查找函数的引用和定义。和你的编辑器相处融洽些。
+为了更加有效率，试着学习仅使用键盘操作编辑器。
+这会使你专注于代码而不受打扰（译：指额外思考编辑器操作）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;掌握基本的Git或其他版本控制工具的技能，这样你就能比较代码在版本间的差异。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;与源码有关的文档。文档可以为你的阅读提供参考，尤其是设计文档、编码规范等文档。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;具有一定的编程语言与设计模式的知识和经验。这对（阅读）大项目是强制性的。
+如果你很了解一门编程语言，你也会了解关于源码组织与编程范式的最佳实践。
+当然，这需要时间来积累。要有耐心。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;流程与技巧&#34;&gt;流程与技巧&lt;/h3&gt;
+&lt;p&gt;阅读过程不是线性的。你不会就那么一个接一个地读源文件。
+相反，大多数时候我们会从顶到底地阅读代码。
+下面是一些更有效率阅读代码的小技巧：&lt;/p&gt;
+&lt;h4 id=&#34;结合上下文阅读代码&#34;&gt;结合上下文阅读代码&lt;/h4&gt;
+&lt;p&gt;当你阅读代码时，请持续提出问题。
+例如，如果一个应用有缓存策略，一个好问题就是：如果键无效了会怎样？缓存中的值如何更新？
+带着这些问题阅读代码，就是结合上下文。或者说因为你有了一个目标，你会变得享受阅读的过程。
+你甚至可以自己做一些假设，然后在代码中寻找验证。&lt;/p&gt;
+&lt;p&gt;你有点像侦探：&lt;strong&gt;你想发现代码的真相，代码的逻辑，代码是如何像故事一般上下流动的。&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;把实例跑起来并与之交互&#34;&gt;把实例跑起来并与之交互&lt;/h4&gt;
+&lt;p&gt;源码就像乐高积木，只是已经组装好了。
+如果你想了解它们是怎么组装在一起的，你需要和它交互，有时甚至要把它拆开。
+阅读同一模块的老版本同样有帮助。从Git中阅读版本差异，试着弄清楚特定的特性是如何实现的
+（修改日志在这个场景很有用）。
+举个例子，我发现Lua的第一个版本相当简单，这可以帮助我了解作者最初的设计理念。&lt;/p&gt;
+&lt;p&gt;Debug是另一种与代码交互的方式。试着在代码中加一些断点（或打印一些变量值），
+然后弄明白打印到控制台中的所有输出。&lt;/p&gt;
+&lt;p&gt;如果你对代码了解比较透彻了，试着对代码做一些修改，重新build并把它跑起来。
+最简单的方式是试着调整配置项，去看不同配置的运行结果。
+之后你可以试着添加一些细微的特性。
+如果这些特性对其他人也有用，你应该把代码贡献到上游。&lt;/p&gt;
+&lt;h4 id=&#34;了解数据结构间的关系&#34;&gt;了解数据结构间的关系&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“糟糕的程序员担心代码，优秀的程序员担心数据结构和它们的关系。”
+-Linus Torvalds&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;数据结构是一个程序中最重要的元素。用笔或者你喜欢的其他工具画出数据结构间的关系。
+这个图就是源码的映射。你会在阅读过程中时常参考这个图。一些工具比如&lt;a href=&#34;https://scitools.com/&#34;&gt;scitools&lt;/a&gt;
+可以用来生成UML类图。
+（译：这个方法用在写代码中能节约翻Model声明文件的时间，推荐用纸笔，不占屏幕）&lt;/p&gt;
+&lt;h4 id=&#34;了解模块间的依赖关系与边界&#34;&gt;了解模块间的依赖关系与边界&lt;/h4&gt;
+&lt;p&gt;大项目中会包含许多模块，一个模块经常只拥有单一职责。
+这有助于我们减少代码复杂度，在适当的层级上做抽象。
+模块的接口是抽象的边界，我们可以一个接一个地阅读模块。
+如果你在阅读一个使用Make构建的C/C++项目，Makefile是了解模块间如何组织的好切入点。&lt;/p&gt;
+&lt;p&gt;边界本身也很有用。优秀的代码组织得很好，变量名与函数名的命名风格体现着可读性。
+你不需要阅读全部源文件，你可以&lt;strong&gt;忽略不重要的或你熟悉的部分&lt;/strong&gt;。
+如果你确定一个模块是仅仅是为了被解析而设计的(just designed for parsing)，
+那么你已经大致了解了它的功能；那么你就可以跳过不读这个模块。
+当然，这将大大节约时间。&lt;/p&gt;
+&lt;h4 id=&#34;使用测试用例&#34;&gt;使用测试用例&lt;/h4&gt;
+&lt;p&gt;测试用例也是帮助代码理解的一个很好的补充。&lt;strong&gt;测试用例就是文档。&lt;/strong&gt;
+当你在阅读一个类时，试着把对应的测试代码一起读了。
+测试用例能帮你弄清一个类的接口，和该类的典型用法。
+集成测试用例可以让你顺着走过程序的整体流程，适合输入一些特殊值并debug运行。&lt;/p&gt;
+&lt;h4 id=&#34;点评&#34;&gt;点评&lt;/h4&gt;
+&lt;p&gt;为什么不在花了不少时间阅读一个项目后，写一篇代码点评呢？就像写一篇书评一样。
+你可以写下代码中好的和不好的部分，还可以记下你从中学到了什么。
+攥写这类文章可以帮助你阐明自己的理解，也有助于其他人阅读源码。&lt;/p&gt;
+&lt;h2 id=&#34;一些好书&#34;&gt;一些好书&lt;/h2&gt;
+&lt;p&gt;我发现阅读代码是一个远超我想象的广泛话题。没有系统性训练该技能的方法。
+总而言之，不断练习，找到你自己的方式。下面是一些帮助你提升代码阅读能力的好书：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/&#34;&gt;《Design Patterns: Elements of Reusable Object-Oriented Software》&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/dp/0134494164/&#34;&gt;《Clean Architecture: A Craftsman’s Guide to Software Structure and Design》&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/How-Read-Book-Classic-Intelligent/dp/0671212095/&#34;&gt;《How to Read a Book: The Classic Guide to Intelligent Reading》&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;啊哈，这本书对程序员也很有用。&lt;/p&gt;
+&lt;h2 id=&#34;译者的话&#34;&gt;译者的话&lt;/h2&gt;
+&lt;p&gt;这篇文章是为苦于不知从何开始阅读陌生项目代码的人（包括我）准备的。
+截止撰文时间为止，我认为这篇文章是在同话题中较为务实的一篇，
+不仅包含理念，还包含不少具体可实践的建议，因此我想把它分享给更多人。
+而且我想如果它有中文版本，愿意读下去的人会多一些，我也方便向周围的人分享，于是我向Nic申请了翻译权。
+我把标题改了改，这样搜索“源码”“学习”、“阅读源码”都能搜到。&lt;/p&gt;
+&lt;p&gt;这篇文章对我而言，最大作用是帮我突破了“不需要有意地专门阅读代码”的心理障碍。
+我一直以为既然“写代码的时间中十之六七都是花在读既有代码上”（语出《Clean Code》），
+就没必要再花时间专门读代码，我大错特错。&lt;/p&gt;
+&lt;p&gt;个人经验：驱动我“专门读代码”的最大动机是好奇心，和小孩拆小物件为了看内部构造差不多。
+学习OO设计模式，我建议阅读&lt;a href=&#34;https://book.douban.com/subject/2243615/&#34;&gt;《Head First 设计模式》&lt;/a&gt;
+，这本书超有趣，比四人帮那本删减了一些不常用的模式，但是你能轻松读下去。&lt;/p&gt;
+&lt;p&gt;阅读了解项目代码是参与（开源）项目的第一步，希望这篇文章能帮助你参与到心仪的项目中去。
+这也可以帮助你在工作中了解同组同事的工作，而“了解同组同事的工作对工作有诸多潜在益处”
+（语出一个高级程序员的博客，没找到链接）。
+来吧，花点时间挑一个看上眼的项目（或者就读你手头的项目别人写的部分），
+找到你最感兴趣的功能，读一读它是怎么实现的。&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/categories/programming/" term="programming" label="programming" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/tags/programming/" term="programming" label="programming" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/tags/blog/" term="blog" label="blog" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">单元测试的不同方式</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/unit-test-methods/" />
             <id>https://boholder.github.io/blogs/unit-test-methods/</id>
-            <updated>2021-05-23T18:13:27&#43;08:00</updated>
+            <updated>2021-05-25T17:37:03&#43;08:00</updated>
             <published>2021-05-23T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -736,7 +961,7 @@ VeraCrypt是多平台的，或许你可以先试试它。&lt;/p&gt;
             <title type="text">TDD实践经验分享与对TDD实践程度的讨论</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/tdd-tips-zh/" />
             <id>https://boholder.github.io/blogs/tdd-tips-zh/</id>
-            <updated>2021-05-20T17:26:31&#43;08:00</updated>
+            <updated>2021-05-25T17:37:03&#43;08:00</updated>
             <published>2020-07-17T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
