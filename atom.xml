@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2021-05-26T22:14:19&#43;08:00</updated>
+    <updated>2021-05-28T11:12:51&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -15,12 +15,12 @@
                 <email>bottleholder@anche.no</email>
             </author>
     <rights>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</rights>
-    <generator uri="https://gohugo.io/" version="0.79.1">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.81.0">Hugo</generator>
         <entry>
             <title type="text">译文：从源码中学习（阅读源码，初学者的有效成长方式）</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/learn-from-source-code/" />
             <id>https://boholder.github.io/blogs/learn-from-source-code/</id>
-            <updated>2021-05-26T22:09:01&#43;08:00</updated>
+            <updated>2021-05-26T22:16:41&#43;08:00</updated>
             <published>2021-05-25T00:00:00&#43;00:00</published>
             <author>
                     <name>Nick Mose</name>
@@ -201,8 +201,7 @@
 学习OO设计模式，我建议阅读&lt;a href=&#34;https://book.douban.com/subject/2243615/&#34;&gt;《Head First 设计模式》&lt;/a&gt;
 ，这本书超有趣，比四人帮那本删减了一些不常用的模式，但是你能轻松读下去。&lt;/p&gt;
 &lt;p&gt;阅读了解项目代码是参与（开源）项目的第一步，希望这篇文章能帮助你参与到心仪的项目中去。
-这也可以帮助你在工作中了解同组同事的工作，而“了解同组同事的工作对工作有诸多潜在益处”
-（语出一个高级程序员的博客，没找到链接）。
+这也可以帮助你在工作中了解同组同事的工作，而&lt;a href=&#34;https://laike9m.com/blog/jin-ji-nian-wo-zai-zhi-chang-cai-guo-de-keng,143/#-4&#34;&gt;“了解同组同事的工作对工作有诸多潜在益处”&lt;/a&gt; 。
 来吧，花点时间挑一个看上眼的项目（或者就读你手头的项目别人写的部分），
 找到你最感兴趣的功能，读一读它是怎么实现的。&lt;/p&gt;
 </content>

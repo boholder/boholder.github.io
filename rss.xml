@@ -10,7 +10,7 @@
         <title>BoHolder的网站：博客，小玩意及其他</title>
         <link>https://boholder.github.io/</link>
         <description>BoHolder&#39;s site: crafts, blogs etc</description>
-        <generator>Hugo 0.79.1 https://gohugo.io/</generator>
+        <generator>Hugo 0.81.0 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
         
-        <lastBuildDate>Wed, 26 May 2021 22:14:19 &#43;0800</lastBuildDate>
+        <lastBuildDate>Fri, 28 May 2021 11:12:51 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
@@ -209,8 +209,7 @@
 学习OO设计模式，我建议阅读&lt;a href=&#34;https://book.douban.com/subject/2243615/&#34;&gt;《Head First 设计模式》&lt;/a&gt;
 ，这本书超有趣，比四人帮那本删减了一些不常用的模式，但是你能轻松读下去。&lt;/p&gt;
 &lt;p&gt;阅读了解项目代码是参与（开源）项目的第一步，希望这篇文章能帮助你参与到心仪的项目中去。
-这也可以帮助你在工作中了解同组同事的工作，而“了解同组同事的工作对工作有诸多潜在益处”
-（语出一个高级程序员的博客，没找到链接）。
+这也可以帮助你在工作中了解同组同事的工作，而&lt;a href=&#34;https://laike9m.com/blog/jin-ji-nian-wo-zai-zhi-chang-cai-guo-de-keng,143/#-4&#34;&gt;“了解同组同事的工作对工作有诸多潜在益处”&lt;/a&gt; 。
 来吧，花点时间挑一个看上眼的项目（或者就读你手头的项目别人写的部分），
 找到你最感兴趣的功能，读一读它是怎么实现的。&lt;/p&gt;
 </description>
