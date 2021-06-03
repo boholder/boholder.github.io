@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
         
-        <lastBuildDate>Fri, 28 May 2021 11:39:38 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 03 Jun 2021 09:50:59 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
@@ -262,8 +262,11 @@
 &lt;h3 id=&#34;要求&#34;&gt;要求&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;掌握任一编程语言，明白“单元测试”即相关概念定义和作用，写过单元测试。&lt;/li&gt;
-&lt;li&gt;王婆卖瓜：如果不确定自己是否明白“单元测试的定义”，
-请看&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#41-%E4%B8%BA%E7%BC%96%E7%A0%81%E6%B5%8B%E8%AF%95&#34;&gt;这段解释“为编码测试”的文字&lt;/a&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;王婆卖瓜：如果不确定自己是否明白“单元测试的定义”，
+请看&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#41-%E4%B8%BA%E7%BC%96%E7%A0%81%E6%B5%8B%E8%AF%95&#34;&gt;这段解释“为编码测试”的文字&lt;/a&gt; 。&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;现在&lt;a href=&#34;https://martinfowler.com/articles/2021-test-shapes.html&#34;&gt;单元测试和集成测试的定义因学派、组织和团队而异&lt;/a&gt; ，
+我预先说明，本文中“单元测试”指“程序员为编码而编写的，
+可能会使用mock技术的，针对单个类(组件？)的，总运行时间在几分钟内的测试”。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
 &lt;p&gt;在本文中我将介绍编写单元测试(和组件测试，实践中这两个概念拆不开)时可使用的三种调用-期望方式，用途各不相同：&lt;/p&gt;
