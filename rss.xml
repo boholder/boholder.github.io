@@ -10,7 +10,7 @@
         <title>BoHolder的网站：博客，小玩意及其他</title>
         <link>https://boholder.github.io/</link>
         <description>BoHolder&#39;s site: crafts, blogs etc</description>
-        <generator>Hugo 0.79.1 https://gohugo.io/</generator>
+        <generator>Hugo 0.81.0 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
         
-        <lastBuildDate>Sat, 12 Jun 2021 16:09:11 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 17 Jun 2021 09:25:47 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
