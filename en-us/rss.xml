@@ -21,9 +21,9 @@
             <webMaster>bottleholder@anche.no (BoHolder)</webMaster>
         
         
-            <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
+            <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Thu, 17 Jun 2021 09:25:47 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 19 Aug 2021 16:46:31 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/en-us/rss.xml" />
         
@@ -36,7 +36,7 @@
                 
                     <author>bottleholder@anche.no (BoHolder)</author>
                 
-                <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
                 
                     <description>&lt;h2 id=&#34;show-them&#34;&gt;Show them!&lt;/h2&gt;
 &lt;h3 id=&#34;wash-your-hands-before-debugging&#34;&gt;Wash your hands before debugging&lt;/h3&gt;
@@ -132,7 +132,7 @@ But I hope you can be amused by my images.&lt;/p&gt;
                 
                     <author>bottleholder@anche.no (BoHolder)</author>
                 
-                <copyright>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</copyright>
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
                 
                     <description>&lt;h2 id=&#34;1-intro&#34;&gt;1. Intro&lt;/h2&gt;
 &lt;p&gt;I started writing markdown documents with Notepad++ and awesome plugin &lt;a href=&#34;https://github.com/nea/MarkdownViewerPlusPlus&#34;&gt;MarkdownViewerPlusPlus&lt;/a&gt; .&lt;/p&gt;

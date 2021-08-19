@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
     <title type="text">BoHolder&#39;s site: crafts, blogs etc</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2021-06-17T09:25:47&#43;08:00</updated>
+    <updated>2021-08-19T16:46:31&#43;08:00</updated>
     <id>https://boholder.github.io/en-us/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/en-us/atom.xml" />
@@ -14,7 +14,7 @@
             
                 <email>bottleholder@anche.no</email>
             </author>
-    <rights>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</rights>
+    <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
     <generator uri="https://gohugo.io/" version="0.81.0">Hugo</generator>
         <entry>
             <title type="text">Safety signs for programming</title>
@@ -27,7 +27,7 @@
                     <uri>https://boholder.github.io/</uri>
                     <email>bottleholder@anche.no</email>
                     </author>
-            <rights>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</rights><summary type="html">I maked up some safety signs for software development department based on the content of ISO 7010 (graphic hazard symbols). Take it easy, they are only for entertainment purposes. BTW, the size of these images is 3000-1000, and you can use them as Twitter header pictures.</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">I maked up some safety signs for software development department based on the content of ISO 7010 (graphic hazard symbols). Take it easy, they are only for entertainment purposes. BTW, the size of these images is 3000-1000, and you can use them as Twitter header pictures.</summary>
             
                 <content type="html">&lt;h2 id=&#34;show-them&#34;&gt;Show them!&lt;/h2&gt;
 &lt;h3 id=&#34;wash-your-hands-before-debugging&#34;&gt;Wash your hands before debugging&lt;/h3&gt;
@@ -126,7 +126,7 @@ But I hope you can be amused by my images.&lt;/p&gt;
                     <uri>https://boholder.github.io/</uri>
                     <email>bottleholder@anche.no</email>
                     </author>
-            <rights>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</rights><summary type="html">I found that Markdown is really suitable for me who won&#39;t open the ms word but open a text editor. But my favorite notepad++ does not have the markdown syntax highlighting for dark theme, and I have no search, what should I do? Just make one, and share it!</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">I found that Markdown is really suitable for me who won&#39;t open the ms word but open a text editor. But my favorite notepad++ does not have the markdown syntax highlighting for dark theme, and I have no search, what should I do? Just make one, and share it!</summary>
             
                 <content type="html">&lt;h2 id=&#34;1-intro&#34;&gt;1. Intro&lt;/h2&gt;
 &lt;p&gt;I started writing markdown documents with Notepad++ and awesome plugin &lt;a href=&#34;https://github.com/nea/MarkdownViewerPlusPlus&#34;&gt;MarkdownViewerPlusPlus&lt;/a&gt; .&lt;/p&gt;
