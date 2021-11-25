@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2021-11-25T15:23:36&#43;08:00</updated>
+    <updated>2021-11-25T15:34:09&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">白话解释单元测试中的Mock概念</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/every-method-deserves-a-test/" />
             <id>https://boholder.github.io/blogs/every-method-deserves-a-test/</id>
-            <updated>2021-11-25T15:22:42&#43;08:00</updated>
+            <updated>2021-11-25T15:27:41&#43;08:00</updated>
             <published>2021-11-25T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -235,8 +235,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/postimg/2021/mock-1.svg&#34; alt=&#34;一张展示用Mock技巧回避删库的图片&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;延伸&#34;&gt;延伸&lt;/h2&gt;
-&lt;p&gt;特别的，Mockito含有断言Mock组件行为的API，比如上面示例中断言方法调用次数。一般单独的Mock技巧只能用来取值，还要结合其他断言库去验证值的正确性。
-Mock技巧不止局限于单元测试层面，这是一个通用概念。假如上面的坏计算模块不再依赖删库模块，而是自己实现了删库操作&amp;hellip;&amp;hellip;没事，我们还能往数据库里导&lt;a href=&#34;https://mockaroo.com/&#34;&gt;假数据&lt;/a&gt; 或者一整个的&lt;a href=&#34;https://springtestdbunit.github.io/spring-test-dbunit/&#34;&gt;数据库实例&lt;/a&gt; 都是假的，这是在集成测试中应用Mock概念的一个例子。&lt;/p&gt;
+&lt;p&gt;特别的，Mockito含有断言Mock组件行为的API，比如上面示例中断言方法调用次数。一般单独的Mock技巧只能用来取值，还要结合其他断言库去验证值的正确性。Mock不仅可以让我们取得被测模块传给依赖的值，还能让我们设定依赖对被测模块调用的返回值，我称之为“第二种输入”，比如让依赖抛异常，看被测模块能否妥善处理。&lt;/p&gt;
+&lt;p&gt;Mock技巧不止局限于单元测试层面，这是一个通用概念。假如上面的坏计算模块不再依赖删库模块，而是自己实现了删库操作&amp;hellip;&amp;hellip;没事，我们还能往数据库里导&lt;a href=&#34;https://mockaroo.com/&#34;&gt;假数据&lt;/a&gt; 或者一整个的&lt;a href=&#34;https://springtestdbunit.github.io/spring-test-dbunit/&#34;&gt;数据库实例&lt;/a&gt; 都是假的，这是在集成测试中应用Mock概念的一个例子。&lt;/p&gt;
 </content>
             
             
