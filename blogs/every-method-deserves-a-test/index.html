@@ -54,14 +54,14 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-11-25T00:00:00+00:00",
-        "dateModified": "2021-11-25T15:27:41+08:00",
+        "dateModified": "2021-11-25T15:35:03+08:00",
         "url": "https://boholder.github.io/blogs/every-method-deserves-a-test/",
         "headline": "白话解释单元测试中的Mock概念",
         "description": "使用Mock技巧测试模块对依赖的调用",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
         "wordCount":  2005 ,
-        "image": ["https://boholder.github.io/img/postimg/2021/mock-0.svg","https://boholder.github.io/img/postimg/2021/mock-1.svg"],
+        "image": ["https://boholder.github.io/img/postimg/2021/mock-0.svg","https://boholder.github.io/img/postimg/2021/mock-1.svg","https://boholder.github.io/img/postimg/2021/mock-2.svg"],
         "author": {
             "@type": "Person",
             "description": "Slow is smooth, smooth is fast.",
@@ -104,7 +104,7 @@
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/img/postimg/2021/mock-0.svg" />
 <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-11-25T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2021-11-25T15:27:41&#43;08:00" />
+    <meta property="article:modified_time" content="2021-11-25T15:35:03&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -198,7 +198,7 @@
     
     
         
-        <time datetime="2021-11-25T15:27:41&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.11.25</time>
+        <time datetime="2021-11-25T15:35:03&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.11.25</time>
     
     
     
@@ -440,6 +440,7 @@
 <h2 id="延伸"><a href="#延伸" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:延伸" class="headings">延伸</a></h2>
 <p>特别的，Mockito含有断言Mock组件行为的API，比如上面示例中断言方法调用次数。一般单独的Mock技巧只能用来取值，还要结合其他断言库去验证值的正确性。Mock不仅可以让我们取得被测模块传给依赖的值，还能让我们设定依赖对被测模块调用的返回值，我称之为“第二种输入”，比如让依赖抛异常，看被测模块能否妥善处理。</p>
 <p>Mock技巧不止局限于单元测试层面，这是一个通用概念。假如上面的坏计算模块不再依赖删库模块，而是自己实现了删库操作&hellip;&hellip;没事，我们还能往数据库里导<a href="https://mockaroo.com/" target="_blank" rel="noopener">假数据</a> 或者一整个的<a href="https://springtestdbunit.github.io/spring-test-dbunit/" target="_blank" rel="noopener">数据库实例</a> 都是假的，这是在集成测试中应用Mock概念的一个例子。</p>
+<p><img src="/img/postimg/2021/mock-2.svg" alt="展示单元测试需要设置输入值和依赖的返回值，而要断言输入值、输出值和被测对依赖的调用值的图片"></p>
 
             </div>
 
@@ -468,7 +469,7 @@
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2021-11-25 15:27:41 CST" style="cursor:help">
+        <span title="Updated @ 2021-11-25 15:35:03 CST" style="cursor:help">
 
 <svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2021-11-25</text><text x="915" y="140" textLength="650" transform="scale(.1)">2021-11-25</text></g></svg>
         </span></div>
