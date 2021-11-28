@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2021-11-25T15:48:35&#43;08:00</updated>
+    <updated>2021-11-28T18:46:39&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -15,12 +15,192 @@
                 <email>bottleholder@anche.no</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-    <generator uri="https://gohugo.io/" version="0.81.0">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.79.1">Hugo</generator>
+        <entry>
+            <title type="text">组装台式电脑的经验总结</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/introspection-of-pc-diy/" />
+            <id>https://boholder.github.io/blogs/introspection-of-pc-diy/</id>
+            <updated>2021-11-28T18:45:04&#43;08:00</updated>
+            <published>2021-11-28T00:00:00&#43;00:00</published>
+            <author>
+                    <name>BoHolder</name>
+                    <uri>https://boholder.github.io/</uri>
+                    <email>bottleholder@anche.no</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">从选配件到装机到拷数据</summary>
+            
+                <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;我不是装机发烧友，过程中也请教了不少朋友和互联网，但现在想想其实不是很麻烦，主要是没有整体的知识框架，是无知导致的畏手畏脚。所以把最近第一次组装台式主机的经历和总结记下来，如果能帮到其他人就更好了。&lt;/p&gt;
+&lt;h2 id=&#34;选配件&#34;&gt;选配件&lt;/h2&gt;
+&lt;p&gt;就算知道配件的知识，什么接口什么协议，那些都是抽象的行业标准，对选配件没太大帮助。比如你知道牛奶的国标，但还是在货架旁纠结买哪个品牌的牛奶。和买牛奶一样，选电脑配件就是选品牌，需要对品牌甚至品牌下的产品线有一个整体的了解，不是发烧友一般不会主动去获取这方面的知识。下面我会多次提到某个配件“竞争品牌多，勤搜索论坛和评测，注意别翻车”这类话，就是指，首先搜着看一些广谱的推荐文章，选定一些品牌型号，然后挨个在网上搜这个型号的评价。&lt;/p&gt;
+&lt;h3 id=&#34;要注意的整体指标&#34;&gt;要注意的整体指标&lt;/h3&gt;
+&lt;p&gt;选配件时整体指标有这几个：预算，期望的机箱大小，期望的功能。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;预算限制各个配件间的性能（=价格）平衡，有一个大概的认知，自己是在选高中低哪个层次的配置。配件间的性能平衡有点水桶效应的感觉，但其实有经验可以把预算向自己期望的功能上倾斜。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;独立显卡不便宜，会吃掉相当一部分预算，最好认真考虑自己是否需要独立显卡，可能去了独显，给CPU配好点，用集显一样满足，还能空出不少预算给其他配件。&lt;/li&gt;
+&lt;li&gt;我的预算没设上限，因为：1.我本来经验就不够，不想再花多余精力去学习如何平衡预算。2.电脑天天用，用使用时间折算下来每小时花费会很低，所以我想对自己好点，指着高端机配，价格铁定低不了，认了，多花点时间攒钱就是。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;机箱大小会从物理上限制一些大块头配件的选择，比如想组i-atx或者m-atx的小机箱，三风扇显卡肯定塞不下。我发现，双风扇的显卡和同型号的三风扇显卡的性能差一截，价格却贵1000，于是放宽了自己组m-atx机箱的限制，决定用三风扇显卡组atx机箱。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;期望的功能和各配件性能选择挂钩，比如想多任务就多加内存，想运行大型计算任务就选好的CPU，想玩3A游戏就配一个差不多的独显&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这个的原则怎么说呢，和房子硬装修差不多，一是保证自己当前的需求，二是留下为未来升级时兼容的空间（免得日后发现不兼容，迫不得已再掏一笔钱买兼容的底层配件，比如主板）。我的需求是这样：能够给现在和未来5年的3A游戏开最高配置，能够无限期长地（做美梦）满足硬盘和内存容量之外的未来需求。&lt;/li&gt;
+&lt;li&gt;可以看百度贴吧显卡吧的&lt;a href=&#34;https://tieba.baidu.com/p/7596093640?see_lz=1&#34;&gt;每月装机推荐贴&lt;/a&gt;了解更多配件和功能间的相关关系。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;有顺序地选择配件产品&#34;&gt;有顺序地选择配件产品&lt;/h3&gt;
+&lt;p&gt;我们都知道，主机机箱里头的东西有这几个配件：CPU、主板、内存、硬盘、显卡、电源、CPU风扇，然后还有外面保护它们的机箱。其实它们之间的型号、兼容性、需求是相互关联的，这样就可以固定下来一个选配件的顺序，减少型号选择范围：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 先选CPU和CPU风扇。&lt;/strong&gt; 台式机的CPU就两家公司的产品在竞争，Intel和AMD。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;如果买整盒的CPU，里面会附送官方设计的CPU风扇，但只买CPU散片+第三方CPU风扇DIY灵活度更高和价格更实惠一些。虽然我怕麻烦直接买了整盒就是了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（注意Intel的芯片针脚是平面，但AMD的是密密的针脚，装AMD的CPU要注意不手抖，针脚坏一个就报废了。其实这个对选哪家没影响。）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我看这几年Intel老是被笑话挤牙膏，但是AMD的新的CPU架构却表现不错，值得期待。本着对未来升级CPU时的（主板）兼容，我选了AMD。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. 选完CPU，对应的主板型号也固定了。&lt;/strong&gt; 因为&lt;a href=&#34;https://baike.baidu.com/item/%E4%B8%BB%E6%9D%BF%E8%8A%AF%E7%89%87%E7%BB%84/237571&#34;&gt;主板芯片组&lt;/a&gt;是和CPU相对应的。然后主板的品牌，御三家，华硕、微星、技嘉，三选一&lt;del&gt;选择你的神奇宝贝&lt;/del&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我选的华硕，因为我那个型号的主板华硕的有个额外功能，我看中了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. 再之后独立地选内存和硬盘。&lt;/strong&gt; 这两个产品的竞争企业就多了，所以要勤搜索论坛，挑有口碑的大牌子买，注意选个没翻车的型号。也要注意数量不要超过主板上预留的对应接口数量。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;内存注意买需要的容量除以2或4，两条或四条相同的内存条（组装双通道），然后两条内存就注意插主板的2，4两个插口（没搜到这个什么讲究，据说这样好），4条就1234四个插口都用上。品牌我选的金士顿FURY。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;年中时有段时间兴起Chia加密货币，用大容量HDD挖这个币性价比高，那段时间消费者级别的大容量（&amp;gt;3T）HDD直接断货。现在好像不火了，硬盘又有货了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;现在HDD厂商在推广&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%8F%A0%E7%93%A6%E7%A3%81%E8%AE%B0%E5%BD%95&#34;&gt;叠瓦磁记录技术&lt;/a&gt;，虽然它有潜力，但目前性能不如老技术&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%9E%82%E7%9B%B4%E7%A3%81%E8%AE%B0%E5%BD%95&#34;&gt;垂直磁记录&lt;/a&gt;，所以买HDD暂时别买新出的叠瓦盘产品。话说回来，这是不是这意味着垂直磁盘的存货越来越少了&amp;hellip;&amp;hellip;不知道厂商们是否还在运行垂直磁盘的流水线。HDD品牌我选的希捷酷鱼。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;还有就是时间沉淀对于黑料爆料比较重要。我的SSD开始就是2021年年初从显卡吧的装机贴里的推荐表格选的，西数黑盘SN850，然后选完放一边了。之后要买的时候群友提醒我&lt;a href=&#34;https://www.youtube.com/watch?v=e5qjT-wRk1U&#34;&gt;SN850翻车了&lt;/a&gt;，我一搜，嘿，就2021年年中刚出的事，然后我换了三星的970。得亏群友提醒一句，也得亏我拖延买配件（等最后也没等来的显卡降价）的时机拖得久。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4. 大头来了，选独立显卡。&lt;/strong&gt; 设计显卡芯片的核心公司有两家，Nvidia和AMD，但是拿到芯片并制造显卡的制造商有很多家，注意别翻车。比较好的一线还是御三家华硕、微星、技嘉。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;以前的老主板存在主板PCI插口型号和显卡插口型号的兼容性问题，现在都是PCI-E可以不再顾虑了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最近要特别关心挖矿（挖加密货币）导致的不良二手显卡流入市场的问题。有这几个建议：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;买新卡，别图便宜买网上的二手，风险大不值得。&lt;/li&gt;
+&lt;li&gt;N卡的话，买V2版本芯片的显卡，即挖矿性能限制（LHR）版，包装上会标注V2，&lt;a href=&#34;https://new.qq.com/omn/20210703/20210703A040HP00.html&#34;&gt;芯片序列号也会与先前的未限制版有所不同&lt;/a&gt;。包装盒上和显卡内部都会有序列号，担心盒子被掉包的话，显卡内部的序列号要插上主板，用一些软件看（我是没预装驱动，主板不识别显卡，吓坏了以为显卡坏了，最后装完系统装上驱动用GeForce Experience看的序列号）。&lt;/li&gt;
+&lt;li&gt;显卡出场日期尽量晚，可以给显卡制造商客服打电话，报序列号查询。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我最后买了华硕的30系N卡，因为看测评，新的A卡的性价比好像打不过N卡。价格，唉，回头和朋友一聊，我买了个较原价溢价40%的“双十一特惠价”，就这还是现在的中国大陆市场上比较便宜的价格，认了，不想等了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;5. 主板和显卡，一横一竖，构成了对机箱的长宽高度要求。&lt;/strong&gt; 选机箱主要看大小和预留的配件位置数量。机箱这个技术门槛很低，竞争的厂家就更多了，注意搜评测避免翻车不好的设计。注意机箱预留的SATA口硬盘位置数量要满足之前对硬盘的选择。机箱上能搞得花样（附加功能）比较多，选什么看人，我选了先马的黑洞，图它的静音降噪设计。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. 跟着机箱一起买的是机箱冷却配件。&lt;/strong&gt; 一般是风扇，用水冷的人一般知识丰富，应该不需要这篇文章的指导（偏见）。买几个风扇？得看配件的性能（发热量），这我搞不懂。所以我买机箱时直接选的满数量的风扇的组合套装，因为散热不足比散热溢出更危险，而且风扇耗电量并不高，没必要抠门。买什么样的风扇？我买的是不智能控制转速的恒定转速的静音风扇，风扇大小看机箱的设计允许。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7. 耗电的配件选好了，计算功耗选电源。&lt;/strong&gt; 电源技术门槛不高，竞争厂家很多，注意别翻车。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在搜索引擎上搜&lt;a href=&#34;https://www.google.com/search?q=Power+Supply+Calculator&#34;&gt;“Power Supply Calculator”&lt;/a&gt;有很多功耗计算器。也可以对用电大户比如独立显卡专门搜索一下功耗。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电源的品质有一些层级，从铜牌、银牌到金牌、钛金&amp;hellip;&amp;hellip;整的跟MMORPG的装备品质一样。这个指的是转换效率的高低，直观体现就是高负载时发热少、耗电少。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;但是注意！电源功率不足会损害硬件，而且电源的功率/价格比和其他配件的价格相比很不值得抠门，考虑到未来升级的兼容性，最好买功率溢出个一二百瓦的电源。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我选择了安钛克的金牌HCG750，因为我搜索发现论坛对这个型号的表现比较满意。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;终于选完了，现在看一眼候选表的总价，叹一口气，并开始攒钱。顺便时不时地关注一下配件的市场价格变动和新的黑料。有个好的时机就出钱买下来吧，可以独立地购买并更换不同配件。但是因为我是第一次装机，手边没有现成的机器，无法独立验证各配件的可用性，所以我只能一次全部买下来然后火急火燎地测试，争取在商家保证期内申请退换货。还好后来有惊无险，没有发生问题。&lt;/p&gt;
+&lt;h2 id=&#34;走一步看一步的装机&#34;&gt;走一步看一步的装机&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;防呆不防傻，大力出奇迹。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这句话是个梗，现在的配件间的接口都有防呆设计，比如换一个方向就插不上扣不上之类（不会出现USB接口的需要试插三回的量子态设计），但是不能避免装不上硬装，一使劲把脆弱的插口搞报废的情况，所以应该对自己的配件温柔点，想想它值多少钱。&lt;/p&gt;
+&lt;p&gt;现在的配件都标准化了，简化了装机所需的必备知识量，不是专业人士也可以按着指导自己动手组装。其实装机就两种步骤交替做，把两个配件的接口插好，用螺丝把配件固定位置。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;工具只有螺丝刀足够了，不过&lt;strong&gt;非常建议准备好头部带磁性的螺丝刀&lt;/strong&gt;，小螺丝没装好掉进缝隙间，粗粗的手指头是伸不进去的，只能用这种螺丝刀吸出来，而且磁性螺丝刀也能提高第一次拧螺丝就对好口的概率。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;环境的话，首先要有一个高度合适方便长时间工作的平面，然后平面周围要有充足的光源。我趁着阳光充足的周末，把我们家的餐桌拉到窗户旁，作为临时的工作台。最后拖到日落都没装完，我又拿来一盏台灯做光源。光照对精密操作很重要，要看字号很小的标记，要对准很小的口拧很小的螺丝。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于装机指导材料，首先我推荐BiliBili上装机猿这个PO主的三集系列视频：&lt;a href=&#34;https://www.bilibili.com/video/BV17J411L7Rr&#34;&gt;【装机猿】学装机免费 学不会下期还免费&lt;/a&gt;，&lt;a href=&#34;https://www.bilibili.com/video/BV1TJ411j7xk&#34;&gt;【装机猿】装机免费学② 免费爽！一直免费一直爽！&lt;/a&gt;，&lt;a href=&#34;https://www.bilibili.com/video/BV15J4115774&#34;&gt;【装机猿】免费学装机③ 还用我帮帮你么？&lt;/a&gt;。别看人家插科打诨地讲，里面的知识足够我这种第一次接触的新手明白装机的顺序和要领。&lt;/p&gt;
+&lt;p&gt;不过其实可以按装机步骤去针对性地搜索教程，视频为佳。比如一个空荡荡的机箱，装机的顺序应该是：往机箱上固定机箱风扇、硬盘、（提前插好线的）电源、主板（主板上最好提前插好CPU、CPU风扇、内存条、M.2接口的SSD）、显卡。每一步都可以搜索&amp;quot;机箱名字&amp;quot;+&amp;ldquo;配件名字&amp;rdquo;，学习如何把配件固定到机箱上。剩下的知识由装机猿的视频补足，比如主板上各种接口的连接方式，还有电源线的连接方式。主板的说明书会很详细地写明其他配件连接到主板的安装方式。&lt;/p&gt;
+&lt;p&gt;注意装电源时，先把电源线插上电源，把线另一头穿过机箱上各种固定孔为下面的连接提供便利（搜索如何“走线”），再把电源固定到机箱上。电源如果是模组化的话，它包装盒里有好多各种连接线，但是你买的配件数量一般小于电源能供电的配件数量，所以这里见仁见智：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;把线都插上，但只连接需要数量的线，没用到的线小心地用轧带固定好，以备以后增加配件的需求。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只插需要数量的线，没用到的线收起来，日后增加配件就把电源拆下来再插线（电源固定在机箱内时不太方便插线，那个线蛮难插拔的）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;还有就是主板上的M.2插口位（SSD位），我这个主板有两个，一个是裸露的，一个被一块金属板遮住了位置。我以为金属板是装饰，之后做数据迁移，迫不得已要插两条SSD，搜索拆掉金属板的方法，才得知金属板下有硅脂，这是一块散热板，就是为做系统盘的SSD准备的位置。&lt;/p&gt;
+&lt;p&gt;从中午12点到晚上23点，从完全0经验、一地没拆封的配件，到装好主机、配件盒子在杂物间里摞得连死亡搁浅的配送员都要称赞的整齐。装完后没有满足感，反而有点害怕，因为马上就要检验成果了——点亮。&lt;/p&gt;
+&lt;h2 id=&#34;点亮先装临时系统检查配件情况&#34;&gt;点亮！先装临时系统检查配件情况&lt;/h2&gt;
+&lt;p&gt;提心吊胆的时刻来了。这个“点亮”什么意思，我也没搜到，有说是显示器、有说是硬盘灯、有说是RGB。我这个机子比较奇怪，不用BIOS设置，自动切到独显（查过说这个是现代主板的默认操作），所以插主板的HDMI口，显示器不亮，吓了一身冷汗，换成插显卡的HDMI口就接通了。&lt;/p&gt;
+&lt;p&gt;只要主板、CPU、内存、显示器正常，我们就能进BIOS。BIOS里就能显示各配件的参数，如果一个配件没能被主板识别，那就麻烦了。比如我这次BIOS不识别显卡，吓得我当场就先提交了换货申请，然后继续排查问题。还有就是如果BIOS不能正常启动，会提示一些英文错误，比如我就马虎地把CPU风扇插错了主板接口（没插CPU_FAN插成了CHA_FAN，俩接口一样），BIOS就提醒“cpu fan error（检测不到CPU风扇转速）”。&lt;/p&gt;
+&lt;p&gt;我预先准备了一个Windows装机U盘（对我是Windows用户），所以我直接在BIOS上把引导切到装机U盘，在空白的硬盘上装了个Windows。赶紧联网下载Nvidia的支持软件Nvidia Control Panel，装显卡驱动。然后虚惊一场，显卡可以正常被识别，序列号也没有问题。然后我用这个临时的Windows系统（之后要恢复成我笔记本上的系统）运行了那些跑分软件，比如&lt;a href=&#34;https://geeks3d.com/furmark/&#34;&gt;FurMark&lt;/a&gt;跑显卡压力测试、&lt;a href=&#34;https://crystalmark.info/en/software/crystaldiskinfo/&#34;&gt;CrystalDiskInfo&lt;/a&gt;看硬盘情况&amp;hellip;&amp;hellip;看指标一切正常，我松了口气，开始准备数据迁移，完全没有预料到数据迁移才是整个装机过程中最艰难的阶段。&lt;/p&gt;
+&lt;h2 id=&#34;艰难的数据迁移之路&#34;&gt;艰难的数据迁移之路&lt;/h2&gt;
+&lt;p&gt;这里多嘴说一句，现在的SSD厂商会提供从HDD把Windows系统迁移到SSD的实用工具程序，比如三星的&lt;a href=&#34;https://www.samsung.com/semiconductor/minisite/ssd/download/tools/&#34;&gt;Data Migration Software&lt;/a&gt;，如果你的需求就是这个，直接用这类软件做迁移，非常方便。&lt;/p&gt;
+&lt;h3 id=&#34;windows系统还原机制因远古的硬盘发现逻辑意外失效了&#34;&gt;Windows系统还原机制因远古的硬盘发现逻辑意外失效了&lt;/h3&gt;
+&lt;p&gt;我本来想用Windows自带的系统还原机制，直接用装机盘执行高级启动，然后还原我在笔记本上用“备份和还原(Win7)”做的备份（我一直用它做备份，以前用的SyncToy不能备份系统分区，只能备份文件）。之前我的笔记本上有两个盘，SSD做系统盘（C区），HDD做数据（其他区），现在我的新电脑上也是一个SSD一个HDD，而且临时Windows在SSD上。我想聪明的微软的工程师们写的系统还原程序，一定可以正确地运行吧。想法很好，事实上它运行的也很好，但我一觉醒来傻眼了：我的SSD里装的是数据分区，而HDD变成了系统盘。&lt;/p&gt;
+&lt;p&gt;为什么？我又运行了一次装机盘，发现了问题所在：Windows装机程序将我的SSD认成了第二块硬盘（Disk 1），而把HDD认成了第一块（Disk 0），我本应在装临时系统时就注意到这个问题的。我搜索到了看起来匹配的&lt;a href=&#34;https://support.microsoft.com/en-us/topic/disk-drive-numbers-may-not-correspond-to-the-sata-channel-numbers-when-you-install-windows-on-a-computer-that-has-multiple-sata-or-raid-disks-864bae20-e7dd-6b4e-7cdd-359be0a6d546&#34;&gt;原因&lt;/a&gt;，但遗憾地发现没有可用的解决方案。简单来说，Windows对硬盘的排序逻辑是越过BIOS通过硬盘驱动遍历请求硬盘，并根据它们的响应顺序确定硬盘次序。SSD，你为什么响应跑不过HDD，是你的驱动不够快吗？唉。&lt;/p&gt;
+&lt;p&gt;事后诸葛亮的猜测，此时我直接用实用工具把系统从HDD迁到SSD，再单独把文件恢复，这事就结了。&lt;/p&gt;
+&lt;h3 id=&#34;尝试耍聪明骗windows还原程序失败&#34;&gt;尝试耍聪明骗Windows还原程序，失败&lt;/h3&gt;
+&lt;p&gt;我思考了一下，我的数据盘仅仅是数据盘，没有任何其他系统分区，所以我可以手动给HDD分区，通过Windows的文件还原的机制来还原文件。只想办法往SSD里还原系统就好了。现在问题是识别硬盘顺序颠倒，好，我把HDD拔了，只恢复系统分区和C盘，这一对一，能成功吧？结果是不行，系统还原程序报错不执行，说“错误0 指定不存在的设备”。&lt;/p&gt;
+&lt;p&gt;我想是不是这次备份牵扯到两个硬盘，所以备份里有相关信息记着有两个硬盘，只恢复C盘和系统分区，它也要求有两块硬盘。我再做一个只有C盘和系统盘的备份，只涉及一块硬盘，可以吗？结果是，不行，它还是报那个错。事后诸葛亮地猜测，如果当时我把笔记本的机械硬盘线拔了再备份C盘和系统盘，也许就能成功。&lt;/p&gt;
+&lt;h3 id=&#34;上pe和diskgenius复制硬盘成功&#34;&gt;上PE和DiskGenius复制硬盘，·成功&lt;/h3&gt;
+&lt;p&gt;实在不行啊，上终极方案：直接对数据动手。我把笔记本里的SSD拆了，装在新电脑主板上，然后插上我的PE盘（这里推荐使用&lt;a href=&#34;https://www.wepe.com.cn/&#34;&gt;WinPE工具箱&lt;/a&gt;，可惜里面DiskGenius是32位，我需要64位的，又自己加了一个），用&lt;a href=&#34;https://www.diskgenius.cn/&#34;&gt;DiskGenius&lt;/a&gt;强行复制硬盘数据，然后重新引导了MBR。这下成了，看起来注册表和高级系统变量还在，但有部分程序不能启动，比如Office套件，NodeJS之类，重装软件就好了。光这个迁移来来回回折腾了三天。&lt;/p&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
+&lt;p&gt;现在可以愉快地使用新电脑了。我对新电脑做了一次“备份和还原(Win7)”，备份成功了，那下次是不是这个备份会往Disk 1上还原系统盘呢，我不知道。只能希望这个台式机不会出现需要还原系统的大错误了。😬&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/categories/thought/" term="thought" label="thought" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/tags/blog/" term="blog" label="blog" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">白话解释单元测试中的Mock概念</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/every-method-deserves-a-test/" />
             <id>https://boholder.github.io/blogs/every-method-deserves-a-test/</id>
-            <updated>2021-11-25T15:35:03&#43;08:00</updated>
+            <updated>2021-11-25T15:49:40&#43;08:00</updated>
             <published>2021-11-25T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -260,7 +440,7 @@
                             
                             
                             
-                                <category scheme="https://boholder.github.io/tags/test/" term="test" label="test" />
+                                <category scheme="https://boholder.github.io/tags/unit-test/" term="unit-test" label="unit-test" />
                             
                         
                             
@@ -1264,6 +1444,12 @@ Python下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quicksta
                             
                             
                             
+                                <category scheme="https://boholder.github.io/tags/unit-test/" term="unit-test" label="unit-test" />
+                            
+                        
+                            
+                            
+                            
                                 <category scheme="https://boholder.github.io/tags/programming/" term="programming" label="programming" />
                             
                         
@@ -1845,6 +2031,12 @@ then look at it again.&amp;rdquo;&lt;/p&gt;
                     
                 
                     
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/tags/unit-test/" term="unit-test" label="unit-test" />
+                            
                         
                             
                             

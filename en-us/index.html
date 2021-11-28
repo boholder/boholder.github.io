@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.81.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.79.1" /><meta name="theme-color" content="#fff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,11 +14,11 @@
 
     <title>BoHolder’s site: crafts, blogs etc</title>
 
-    <link rel="stylesheet" href="/en-us/css/meme.min.2f6be0e2f5fbdeaac7f23d69b896e4e2d9445bc94729bcc32838d5a25830206a.css"/>
+    <link rel="stylesheet" href="/en-us/css/meme.min.b4e4157d2acba5932e254c7c7109c225239e0474311c2129e631a82198173a04.css"/>
 
     
     
-        <script src="/en-us/js/meme.min.7740b4012a59fb14a21441ba7fdc745fd28de970c641afbd9075a5993c0a688d.js"></script>
+        <script src="/en-us/js/meme.min.463d7a8dbb6b9003d2d89958bc7b74d11cdce1f553815eeb303a095a9b7b5af4.js"></script>
 
     
 
@@ -338,7 +338,10 @@ UDL documentation site
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>
