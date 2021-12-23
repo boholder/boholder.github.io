@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2021-11-28T19:16:21&#43;08:00</updated>
+    <updated>2021-12-23T21:40:10&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -16,6 +16,67 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
     <generator uri="https://gohugo.io/" version="0.79.1">Hugo</generator>
+        <entry>
+            <title type="text">SRP提醒你不要盲目遵守DRY设计原则</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/srp-against-dry/" />
+            <id>https://boholder.github.io/blogs/srp-against-dry/</id>
+            <updated>2021-12-23T21:38:58&#43;08:00</updated>
+            <published>2021-12-23T00:00:00&#43;00:00</published>
+            <author>
+                    <name>BoHolder</name>
+                    <uri>https://boholder.github.io/</uri>
+                    <email>bottleholder@anche.no</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">应该允许符合SRP的代码冗余，要谨慎抽取不涉及具体业务逻辑的公共函数。</summary>
+            
+                <content type="html">&lt;p&gt;首先提醒一下记得&lt;a href=&#34;https://en.wikipedia.org/wiki/Single-responsibility_principle&#34;&gt;单一职责原则（SRP）&lt;/a&gt;是面向对象实践下的设计原则，也是&lt;a href=&#34;https://en.wikipedia.org/wiki/SOLID&#34;&gt;SOLID&lt;/a&gt;五大面向对象设计原则之一。然后&lt;a href=&#34;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&#34;&gt;不要重复自己（DRY）&lt;/a&gt;原则则是更泛化的编程原则，也可以用在编程工作以外。这个短文讲两个原则的关系，总归还是把前提限定在了面向对象编程之内。&lt;/p&gt;
+&lt;p&gt;我记得这是哪本书上的例子，大概是&lt;a href=&#34;https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882&#34;&gt;Clean Code&lt;/a&gt;，它是用这个例子来解释SRP的含义的，我稍微改一下，不翻原书了：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需求1：有三种员工，经理和普通员工和临时工，计算他们薪资的算法是相同的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;需求1映射到代码里就是，三个分开的员工类，然后三个类计算薪资的方法内部会调用同一个工具函数，DRY，对吧。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需求2：计算经理薪资的算法变了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简单嘛，我们会动手把经理类的薪资计算逻辑内化到经理类的薪资计算方法里，因为现在经理的薪资计算逻辑是“特例”的；然后员工和临时工维持不变，继续使用公共的工具函数，因为计算他们的薪资逻辑是“通用”的，完事。&lt;/p&gt;
+&lt;p&gt;但实际上，实现需求1时就已经违反了SRP了。这个“薪资计算”是一个&lt;strong&gt;具体的业务逻辑&lt;/strong&gt;，即使三种员工是相同的算法，也应该把这个算法复制三份，粘贴到三个类的薪资计算方法里，抽成公共函数是个错误的选择。公共函数应该是与业务逻辑无关的。这就是SRP的含义，一段和业务相关的代码应该独一份存在，修改它不会影响到其他组件，或者说，&lt;strong&gt;这段代码只对一个修改理由负责&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;“与业务逻辑有关”的，为了DRY原则而抽取的函数也有，比如一个组件里被多次调用的私有函数，该函数只为该组件的修改而负责，因此没有违反SRP。&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/categories/programming/" term="programming" label="programming" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/tags/programming/" term="programming" label="programming" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/tags/blog/" term="blog" label="blog" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">组装台式电脑的经验总结</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/introspection-of-pc-diy/" />
