@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2021-12-23T21:40:10&#43;08:00</updated>
+    <updated>2022-01-08T14:58:54&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">SRP提醒你不要盲目遵守DRY设计原则</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/srp-against-dry/" />
             <id>https://boholder.github.io/blogs/srp-against-dry/</id>
-            <updated>2021-12-23T21:38:58&#43;08:00</updated>
+            <updated>2021-12-23T21:41:12&#43;08:00</updated>
             <published>2021-12-23T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
