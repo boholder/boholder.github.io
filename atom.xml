@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2022-01-08T14:58:54&#43;08:00</updated>
+    <updated>2022-01-26T12:47:31&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -15,7 +15,7 @@
                 <email>bottleholder@anche.no</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-    <generator uri="https://gohugo.io/" version="0.79.1">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.81.0">Hugo</generator>
         <entry>
             <title type="text">SRP提醒你不要盲目遵守DRY设计原则</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/srp-against-dry/" />
@@ -718,11 +718,11 @@
 &lt;p&gt;IDEA的debug功能挺强大的，尤其是debug中途修改变量值，可以作为写不出单元测试时的替代操作。它还允许现改代码并编译替换运行中的类文件，允许drop堆栈来实现“反悔”回到上一步调用处，使得程序可以在一段逻辑中反复运行，测试各种情况。可以用上文提到的Learn插件学习IDEA的debug功能，或者读&lt;a href=&#34;https://www.jetbrains.com/help/idea/debugging-code.html&#34;&gt;官方文档&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;编程思想&#34;&gt;编程思想&lt;/h2&gt;
 &lt;h3 id=&#34;编程原则&#34;&gt;编程原则&lt;/h3&gt;
-&lt;p&gt;编程原则（principle）是一些抽象化的格言，用来规范提醒程序员的编程行为实践。比如提到面向对象编程实践就是&lt;a href=&#34;https://www.baeldung.com/solid-principles&#34;&gt;SOLID五大原则&lt;/a&gt;。还有什么ETC（easy to change）原则，DRY（do not repeat yourself）原则，FEP（fail early，不够仨单词的原则会把原则的P也算进缩写）等。这些原则不是术语，算是程序员间的共识（或者叫黑话），而且可能同一原则有不同解释方式和缩写变体。&lt;/p&gt;
+&lt;p&gt;编程原则（principle）是一些抽象化的格言，用来规范提醒程序员的编程行为实践。比如提到面向对象编程实践就是&lt;a href=&#34;https://www.baeldung.com/solid-principles&#34;&gt;SOLID五大原则&lt;/a&gt;。还有什么ETC（easy to change）原则，DRY（do not repeat yourself）原则，FEP（fail early，不够仨单词的原则会把原则的P也算进缩写）等，&lt;a href=&#34;https://coolshell.cn/articles/4535.html&#34;&gt;这里有一篇&lt;/a&gt;解释了部分常用编程原则的文章。这些原则不是术语，算是程序员间的共识（或者叫黑话），而且可能同一原则有不同解释方式和缩写变体。&lt;/p&gt;
 &lt;p&gt;编程原则试图从抽象层面对抗未来必然会出现的代码变更，尽可能让代码变更变得容易，少修改已经写好的代码。我借用一下忘了哪本书中提到的观点：把软件开发学科与建筑学科相类比的观点（软件架构architecture一词是从建筑学借来的，软件设计模式也是基于建筑学典著&lt;a href=&#34;https://book.douban.com/subject/1157145/&#34;&gt;建筑模式语言&lt;/a&gt;启发出现）已经过时，因为开发流程不再是严格遵守计划表的&lt;a href=&#34;https://zhuanlan.zhihu.com/p/81383161&#34;&gt;瀑布式开发&lt;/a&gt;。软件开发更像园艺，你把种子种在花园里，不能控制植物的自然生长（未来的需求变更），只能通过园艺技术（&lt;a href=&#34;https://book.douban.com/subject/4262627/&#34;&gt;代码重构&lt;/a&gt;）修剪、梳理花园。&lt;/p&gt;
 &lt;p&gt;编程原则无关编程语言，甚至在编程之外的工作和生活中都能借鉴，算是一种行为哲学。希望你能聆听这些编程原则，写出易于变更的代码。&lt;/p&gt;
 &lt;h3 id=&#34;设计模式&#34;&gt;设计模式&lt;/h3&gt;
-&lt;p&gt;请看这篇文章了解设计模式：&lt;a href=&#34;https://draveness.me/holy-grail-design-pattern/#fnref:5&#34;&gt;圣杯与银弹 · 没用的设计模式&lt;/a&gt;。以我的经验而言，设计模式最大的用途是减少沟通成本，冲这个用途值得花时间学一些常用的设计模式的概念。&lt;/p&gt;
+&lt;p&gt;请看这篇文章了解设计模式：&lt;a href=&#34;https://draveness.me/holy-grail-design-pattern/#fnref:5&#34;&gt;圣杯与银弹 · 没用的设计模式&lt;/a&gt;。以我的经验而言，设计模式最大的用途是减少沟通成本，冲这个用途值得花时间学一些常用的设计模式的概念。设计模式在不同编程语言上的实现会因为编程语言的特性而不同，所以你也会看到诸如“Xxx语言的Yyy设计模式”的标题。&lt;/p&gt;
 &lt;h2 id=&#34;完成编程工作所需的外围技能&#34;&gt;完成编程工作所需的外围技能&lt;/h2&gt;
 &lt;p&gt;你可以在网络上搜索什么&amp;quot;Xxx职业技能树|知识图谱|技术栈&amp;quot;，有许多人试图总结出这么一个东西，但是要我说，看看&lt;a href=&#34;https://www.ruanyifeng.com/blog/2021/06/drunk-post-of-a-programmer.html&#34;&gt;这位有10年间有多岗位经验的reddit老哥&lt;/a&gt;是怎么描述这个行业的技术栈的：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -779,15 +779,13 @@
 &lt;h3 id=&#34;之前没接触过it行业的基础知识&#34;&gt;之前没接触过IT行业的基础知识？&lt;/h3&gt;
 &lt;p&gt;基础知识体系无法突击补习，这是慢活，更别提还会遗忘。目前大学的软件工程|计算机科学专业会开设大约10门左右的IT专业课程，也就是说你和科班出身的IT专业本科毕业生的差距在10本左右的教科书，以及几个练手的小项目。&lt;/p&gt;
 &lt;p&gt;不补基础知识体系的前提下完成公司要求的编程工作是可以的，现在的编程语言和工具已经把底层实现都封装起来了。但它会在工作上限制你的思考：不知道原理，就没法想象你的程序如何运行，也就没法深入地思考一个解决方案的细节，心里很不舒服。或者&amp;hellip;小心&lt;a href=&#34;https://droidyue.com/blog/2019/03/24/cargo-cults-programming/&#34;&gt;货物崇拜编程&lt;/a&gt;，它是指新手程序员常犯的那种“网上找解决方案复制粘贴下来”的不良编程实践。越不熟悉基础知识，越可能在工作中出现货物崇拜编程现象，这可能会在程序里埋下炸弹，最终伤害你或身边的程序员。&lt;/p&gt;
-&lt;p&gt;这里有一个好的起步课程：&lt;/p&gt;
+&lt;p&gt;这里有一些好的起步课程：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1HJ411q7bm&#34;&gt;【中英字幕|2019 CS50|哈佛大学编程入门】 CS50 Harvard University2019&lt;/a&gt;
-用非术语讲解IT行业里的一些知识体系。真正的0基础开始学。可惜课不太全。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1HJ411q7bm&#34;&gt;【中英字幕|2019 CS50|哈佛大学编程入门】 CS50 Harvard University2019&lt;/a&gt; 用非术语讲解IT行业里的一些知识体系。真正的0基础开始学。可惜课不太全。&lt;a href=&#34;https://www.bilibili.com/video/BV1dx411i7dW&#34;&gt;【哈佛大学-编程入门】 CS50 Harvard University（2016）11集（全）&lt;/a&gt; 这个课全了，可惜没中文字幕。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1dx411i7dW&#34;&gt;【哈佛大学-编程入门】 CS50 Harvard University（2016）11集（全）&lt;/a&gt;
-课全了，可惜没中文字幕。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://awe.berkeley.edu/2020/04/23/guide-to-declaring-cs/&#34;&gt;A Guide to Declaring Computer Science at Berkeley&lt;/a&gt; UC伯克利大学的EECS（我理解为国内的软件工程）的教学资源在&lt;a href=&#34;https://inst.eecs.berkeley.edu/&#34;&gt;它的官网上&lt;/a&gt;都有公开分享，包括Youtube上的讲课录屏、教义、实验等。起步课程是CS61A（适合没有编程经验的学生上手编程，且为学生灌输来自&lt;a href=&#34;https://en.wikipedia.org/wiki/Structure_and_Interpretation_of_Computer_Programs&#34;&gt;SICP&lt;/a&gt;神书的关于计算机程序的一系列抽象概念（概念成了体系，日后可以帮你事半功倍地理解更复杂的模型）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;我推荐的阅读材料&#34;&gt;我推荐的阅读材料&lt;/h3&gt;
