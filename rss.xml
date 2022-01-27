@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Thu, 27 Jan 2022 13:15:26 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 27 Jan 2022 14:48:11 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
@@ -41,12 +41,7 @@
                     <description>&lt;h2 id=&#34;怎么理解&#34;&gt;怎么理解&lt;/h2&gt;
 &lt;p&gt;看&lt;a href=&#34;composingprograms.com/pages/16-higher-order-functions.html&#34;&gt;这篇文章&lt;/a&gt;的1.6.6 Currying这一节。&lt;/p&gt;
 &lt;h3 id=&#34;前提编程语言得支持这个玩法&#34;&gt;前提：编程语言得支持这个玩法&lt;/h3&gt;
-&lt;p&gt;按次序表达思考过程：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;有些编程语言允许在函数内定义函数。&lt;/li&gt;
-&lt;li&gt;这种函数内定义的函数，可以捕获它们&lt;strong&gt;被定义时&lt;/strong&gt;（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。&lt;/li&gt;
-&lt;li&gt;于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函数，可以捕获它们&lt;strong&gt;被定义时&lt;/strong&gt;（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。&lt;/p&gt;
 &lt;h3 id=&#34;柯里化&#34;&gt;柯里化&lt;/h3&gt;
 &lt;p&gt;柯里化指，把接受多个参数的函数，变成一个连续的&lt;strong&gt;单个参数&lt;/strong&gt;的函数。
 这样会弄出来一堆零碎的中间函数，不过中间函数都隐藏在最高阶（柯里化后只接第一个参数，返回接受其他参数的函数）的函数的内部了，外部只能看到这第一个函数的定义，所以从外部看起来不是很凌乱。&lt;/p&gt;

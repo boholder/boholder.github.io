@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2022-01-27T13:15:26&#43;08:00</updated>
+    <updated>2022-01-27T14:48:11&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -20,24 +20,19 @@
             <title type="text">柯里化是什么怎么用</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/currying-zh/" />
             <id>https://boholder.github.io/blogs/currying-zh/</id>
-            <updated>2022-01-27T13:14:49&#43;08:00</updated>
+            <updated>2022-01-27T13:17:33&#43;08:00</updated>
             <published>2022-01-27T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
                     <uri>https://boholder.github.io/</uri>
                     <email>bottleholder@anche.no</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 按次序表达思考过程： 有些编程语言允许在函数内定义函数。 这种函数内定义的函数，可以捕获它们被定义时（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。 于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。 柯里化 柯里化指，把接受多个参数的函数，变成一个连续的单个参数的函数。 这样会弄出来一堆零碎的中间函数，不过中间函数都隐藏在最高阶（柯里化后只接第一个参数，返回接受其他参数的函数）的函数的内部了，外部只能看到这第一个……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函数，可以捕获它们被定义时（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。 柯里化 柯里化指，把接受多个参数的函数，变成一个连续的单个参数的函数。 这样会弄出来一堆零碎的中间函数，不过中间函数都隐藏在最高阶（柯里化后只接第一个参数，……</summary>
             
                 <content type="html">&lt;h2 id=&#34;怎么理解&#34;&gt;怎么理解&lt;/h2&gt;
 &lt;p&gt;看&lt;a href=&#34;composingprograms.com/pages/16-higher-order-functions.html&#34;&gt;这篇文章&lt;/a&gt;的1.6.6 Currying这一节。&lt;/p&gt;
 &lt;h3 id=&#34;前提编程语言得支持这个玩法&#34;&gt;前提：编程语言得支持这个玩法&lt;/h3&gt;
-&lt;p&gt;按次序表达思考过程：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;有些编程语言允许在函数内定义函数。&lt;/li&gt;
-&lt;li&gt;这种函数内定义的函数，可以捕获它们&lt;strong&gt;被定义时&lt;/strong&gt;（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。&lt;/li&gt;
-&lt;li&gt;于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函数，可以捕获它们&lt;strong&gt;被定义时&lt;/strong&gt;（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。&lt;/p&gt;
 &lt;h3 id=&#34;柯里化&#34;&gt;柯里化&lt;/h3&gt;
 &lt;p&gt;柯里化指，把接受多个参数的函数，变成一个连续的&lt;strong&gt;单个参数&lt;/strong&gt;的函数。
 这样会弄出来一堆零碎的中间函数，不过中间函数都隐藏在最高阶（柯里化后只接第一个参数，返回接受其他参数的函数）的函数的内部了，外部只能看到这第一个函数的定义，所以从外部看起来不是很凌乱。&lt;/p&gt;
@@ -163,7 +158,7 @@
             <title type="text">SRP提醒你不要盲目遵守DRY设计原则</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/srp-against-dry-zh/" />
             <id>https://boholder.github.io/blogs/srp-against-dry-zh/</id>
-            <updated>2022-01-27T11:08:49&#43;08:00</updated>
+            <updated>2022-01-27T13:17:33&#43;08:00</updated>
             <published>2021-12-23T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -224,7 +219,7 @@
             <title type="text">组装台式电脑的经验总结</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/introspection-of-pc-diy-zh/" />
             <id>https://boholder.github.io/blogs/introspection-of-pc-diy-zh/</id>
-            <updated>2022-01-27T11:09:09&#43;08:00</updated>
+            <updated>2022-01-27T13:17:33&#43;08:00</updated>
             <published>2021-11-28T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -404,7 +399,7 @@
             <title type="text">白话解释单元测试中的Mock概念</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/mock-in-nutshell-zh/" />
             <id>https://boholder.github.io/blogs/mock-in-nutshell-zh/</id>
-            <updated>2022-01-27T11:08:39&#43;08:00</updated>
+            <updated>2022-01-27T13:17:33&#43;08:00</updated>
             <published>2021-11-25T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -1206,7 +1201,7 @@
             <title type="text">单元测试的不同方式</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/unit-test-methods-zh/" />
             <id>https://boholder.github.io/blogs/unit-test-methods-zh/</id>
-            <updated>2022-01-27T11:08:11&#43;08:00</updated>
+            <updated>2022-01-27T13:17:33&#43;08:00</updated>
             <published>2021-05-23T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -1670,7 +1665,7 @@ Python下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quicksta
             <title type="text">对适用于个人的电子数据备份体系的总结</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/individual-data-backup-summary-zh/" />
             <id>https://boholder.github.io/blogs/individual-data-backup-summary-zh/</id>
-            <updated>2022-01-27T11:09:16&#43;08:00</updated>
+            <updated>2022-01-27T13:17:33&#43;08:00</updated>
             <published>2020-12-07T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -1931,7 +1926,7 @@ VeraCrypt是多平台的，或许你可以先试试它。&lt;/p&gt;
             <title type="text">TDD实践经验分享与对TDD实践程度的讨论</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/tdd-tips-zh/" />
             <id>https://boholder.github.io/blogs/tdd-tips-zh/</id>
-            <updated>2021-11-28T18:47:36&#43;08:00</updated>
+            <updated>2022-01-27T13:17:33&#43;08:00</updated>
             <published>2020-07-17T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
