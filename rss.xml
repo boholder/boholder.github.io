@@ -23,15 +23,155 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Wed, 26 Jan 2022 12:47:31 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 27 Jan 2022 13:15:26 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
         
             <item>
+                <title>柯里化是什么怎么用</title>
+                <link>https://boholder.github.io/blogs/currying-zh/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/currying-zh/</guid>
+                <pubDate>Thu, 27 Jan 2022 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+                
+                    <description>&lt;h2 id=&#34;怎么理解&#34;&gt;怎么理解&lt;/h2&gt;
+&lt;p&gt;看&lt;a href=&#34;composingprograms.com/pages/16-higher-order-functions.html&#34;&gt;这篇文章&lt;/a&gt;的1.6.6 Currying这一节。&lt;/p&gt;
+&lt;h3 id=&#34;前提编程语言得支持这个玩法&#34;&gt;前提：编程语言得支持这个玩法&lt;/h3&gt;
+&lt;p&gt;按次序表达思考过程：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;有些编程语言允许在函数内定义函数。&lt;/li&gt;
+&lt;li&gt;这种函数内定义的函数，可以捕获它们&lt;strong&gt;被定义时&lt;/strong&gt;（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。&lt;/li&gt;
+&lt;li&gt;于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;柯里化&#34;&gt;柯里化&lt;/h3&gt;
+&lt;p&gt;柯里化指，把接受多个参数的函数，变成一个连续的&lt;strong&gt;单个参数&lt;/strong&gt;的函数。
+这样会弄出来一堆零碎的中间函数，不过中间函数都隐藏在最高阶（柯里化后只接第一个参数，返回接受其他参数的函数）的函数的内部了，外部只能看到这第一个函数的定义，所以从外部看起来不是很凌乱。&lt;/p&gt;
+&lt;p&gt;有些语言（比如Haskell）的函数，只支持单个参数，于是只能用柯里化这种方式来积累参数，实现多个参数的函数定义。&lt;/p&gt;
+&lt;h2 id=&#34;例子幂乘power&#34;&gt;例子：幂乘（power）&lt;/h2&gt;
+&lt;p&gt;我直接用人家文章里的python代码吧。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;curried_pow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;pow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这是一个幂乘高阶（工厂）函数，你可以用这个函数生成计算特定幂乘数的函数（预先把第一个参数，即幂乘数，塞入生成后的函数的闭包）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;square&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;curried_pow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;cube&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;curried_pow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这样第一个参数就保留在这两个生成的函数的闭包里了，然后再拿着返回的函数去应用到实际的（业务逻辑）计算：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# curried_pow(2)(4) = 4^2 = 16&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;sixteen&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;square&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# curried_pow(3)(2) = 2^3 = 8&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;eight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cube&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;体会&#34;&gt;体会&lt;/h2&gt;
+&lt;p&gt;你会发现，我们想用柯里化的时候，得把配置类（先固定好）的参数放在前面，计算变量类（后使用时填入）的参数放在后面，这样就能顺畅地先配置再执行，就像上面的例子。&lt;/p&gt;
+&lt;p&gt;那要是反过来呢，函数的意思会变：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;curried_pow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# x,y颠倒顺序&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;pow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# 对2做n次幂乘&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;pow_on_2_with&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;curried_pow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 对3做n次幂乘&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;pow_on_3_with&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;curried_pow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# curried_pow(2)(4) = 2^4 = 16&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;sixteen&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pow_on_2_with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# curried_pow(3)(2) = 3^2 = 9&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;nine&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pow_on_3_with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/programming/">programming</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/programming/">programming</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
                 <title>SRP提醒你不要盲目遵守DRY设计原则</title>
-                <link>https://boholder.github.io/blogs/srp-against-dry/</link>
-                <guid isPermaLink="true">https://boholder.github.io/blogs/srp-against-dry/</guid>
+                <link>https://boholder.github.io/blogs/srp-against-dry-zh/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/srp-against-dry-zh/</guid>
                 <pubDate>Thu, 23 Dec 2021 00:00:00 &#43;0000</pubDate>
                 
                     <author>bottleholder@anche.no (BoHolder)</author>
@@ -88,8 +228,8 @@
         
             <item>
                 <title>组装台式电脑的经验总结</title>
-                <link>https://boholder.github.io/blogs/introspection-of-pc-diy/</link>
-                <guid isPermaLink="true">https://boholder.github.io/blogs/introspection-of-pc-diy/</guid>
+                <link>https://boholder.github.io/blogs/introspection-of-pc-diy-zh/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/introspection-of-pc-diy-zh/</guid>
                 <pubDate>Sun, 28 Nov 2021 00:00:00 &#43;0000</pubDate>
                 
                     <author>bottleholder@anche.no (BoHolder)</author>
@@ -265,8 +405,8 @@
         
             <item>
                 <title>白话解释单元测试中的Mock概念</title>
-                <link>https://boholder.github.io/blogs/every-method-deserves-a-test/</link>
-                <guid isPermaLink="true">https://boholder.github.io/blogs/every-method-deserves-a-test/</guid>
+                <link>https://boholder.github.io/blogs/mock-in-nutshell-zh/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/mock-in-nutshell-zh/</guid>
                 <pubDate>Thu, 25 Nov 2021 00:00:00 &#43;0000</pubDate>
                 
                     <author>bottleholder@anche.no (BoHolder)</author>
@@ -1057,8 +1197,8 @@
         
             <item>
                 <title>单元测试的不同方式</title>
-                <link>https://boholder.github.io/blogs/unit-test-methods/</link>
-                <guid isPermaLink="true">https://boholder.github.io/blogs/unit-test-methods/</guid>
+                <link>https://boholder.github.io/blogs/unit-test-methods-zh/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/unit-test-methods-zh/</guid>
                 <pubDate>Sun, 23 May 2021 00:00:00 &#43;0000</pubDate>
                 
                     <author>bottleholder@anche.no (BoHolder)</author>
@@ -1518,8 +1658,8 @@ Python下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quicksta
         
             <item>
                 <title>对适用于个人的电子数据备份体系的总结</title>
-                <link>https://boholder.github.io/blogs/individual-data-backup-summary/</link>
-                <guid isPermaLink="true">https://boholder.github.io/blogs/individual-data-backup-summary/</guid>
+                <link>https://boholder.github.io/blogs/individual-data-backup-summary-zh/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/individual-data-backup-summary-zh/</guid>
                 <pubDate>Mon, 07 Dec 2020 00:00:00 &#43;0000</pubDate>
                 
                     <author>bottleholder@anche.no (BoHolder)</author>
@@ -1914,7 +2054,6 @@ then look at it again.&amp;rdquo;&lt;/p&gt;
 这种理想协议只会在教科书上存在，但它形象地描述了该层协议 &lt;em&gt;可能的风险|考量&lt;/em&gt; 。 之后的篇幅逐渐引入各种机制来解决理想协议中忽略的考量，最终一个能在现实场景中使用的协议完成了。&lt;/p&gt;
 &lt;p&gt;咱们的测试也应该像设计协议一样，每次只测试一个考量|一种情况， 修改少量代码通过这个测试，接着向下走，直到考虑了所有情况。&lt;/p&gt;
 &lt;p&gt;正确实例：文章&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;后半段，“我”针对“字符串按位换行”需求，先考虑了没有空白符的“纯”字符串简单情况，然后因为引入空白符， 多增加了三种情况（分割点在空白符左、相同、右），多写三个测试并修改代码通过它们，最终完成了逻辑。&lt;/p&gt;
-&lt;h2 id=&#34;参考文章因渲染问题跑到了最下面&#34;&gt;参考文章（因渲染问题跑到了最下面）&lt;/h2&gt;
 &lt;h2 id=&#34;2021-03-11更新&#34;&gt;2021-03-11更新&lt;/h2&gt;
 &lt;p&gt;我对TDD有了新的理解：TDD对新手来说比较难以实践，不建议新手去用。有以下几点理由：&lt;/p&gt;
 &lt;ol&gt;
