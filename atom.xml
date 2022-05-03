@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2022-02-16T10:33:56&#43;08:00</updated>
+    <updated>2022-05-04T03:27:29&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -15,12 +15,102 @@
                 <email>bottleholder@anche.no</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-    <generator uri="https://gohugo.io/" version="0.81.0">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.79.1">Hugo</generator>
+        <entry>
+            <title type="text">懒人做饭</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/lazy-cooking-zh/" />
+            <id>https://boholder.github.io/blogs/lazy-cooking-zh/</id>
+            <updated>2022-05-04T03:22:49&#43;08:00</updated>
+            <published>2022-05-03T00:00:00&#43;00:00</published>
+            <author>
+                    <name>BoHolder</name>
+                    <uri>https://boholder.github.io/</uri>
+                    <email>bottleholder@anche.no</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">每一步都体现了懒</summary>
+            
+                <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近疫情动不动禁堂食，在家做饭的频率被迫提高了不少，总结出了点自己喂饱自己的经验，分享。想起来什么写什么。&lt;/p&gt;
+&lt;h2 id=&#34;用品推荐&#34;&gt;用品推荐&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;电饭煲&lt;/strong&gt;。现代文明利器，蒸米，蒸面食，煮粥，熬汤。买普通的大小（家庭用），电饭煲做出来的菜都可以吃多顿，用单人电饭煲一顿饭一做，多处理几次食材还多刷几次锅。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;微波炉&lt;/strong&gt;。现代文明利器2，理论上只要水分含量控制好，能做出各种美食。至少能把生的变成熟的，味道？再调味呗。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;18寸不粘锅奶锅&lt;/strong&gt;，正好煮一人份。我买的16寸，但实际体验下来16寸略小，食材（主要是生蔬菜占空）多一点就凸出锅沿了，不方便翻动食材，很狼狈。奶锅下个面条，煮卤肉、火锅、乱炖，一顿一做，趁手的大小刷锅刷起来也省事。&lt;/p&gt;
+&lt;p&gt;有说奶锅可以直接当碗省了刷碗的事，但是因为我的餐具是金属的，怕把不沾涂层刮坏，所以我不这样做。对了，注意不粘涂层的保养，比如别空烧、冷却后再刷锅、用塑料塑胶厨具。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;煎锅（平底锅）&lt;/strong&gt;。懒，但是偶尔还想炒个菜煎个饼。奶锅锅底太小，炒起来不方便，还是用正儿八经的煎锅得劲。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;伸缩式洗菜金属筐&lt;/strong&gt;。我买的宜家的，就那种架在水池上的、用细铁丝网编成的筐。老家用的是塑料的双层盆，下面是实底的，上面带孔，这样能暂时把蔬菜泡在水里。这种我也买了，实践了几次发现，我根本不买需要浸泡的麻烦的蔬菜种类，所以不如金属网方便，就图洗菜时蔬菜有一个干净的临时放置的位置。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;菜刀&amp;amp;案板&lt;/strong&gt;。菜刀不用买方正的传统的那种，买细一点的切肉刀或者尖刀就行，除非你菜谱上常有西瓜白菜金瓜之类个头大的家伙。一把刀什么都切了，不讲究。案板买大点，洗案板没土没油很方便不怕大，买小了切菜时没有足够的空间临时放置切下来后表面积变大（三维展开）的菜，需要另找一个容器放切好的菜，比较手忙脚乱。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;好大一个大碗&lt;/strong&gt;。以能单手不费劲抓牢为前提尽量买大碗。为了搭配微波炉，买不带金属装饰的陶瓷碗。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;烤三明治机&lt;/strong&gt;。便宜的也要好几百，买不买见仁见智。上下两边铁盘加热，有定时功能，可以看作小号的电饼铛。方便是真方便，定时一拧不用管，铁盘够小洗刷也方便。除了面包片还可以煎鸡蛋、加热面食，操作两三次就凑够了一顿饭的面食量。另外我发现把面食加热到变干或出现金黄色，就会变得很好吃，可能是个人口味。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可食用洗洁精&lt;/strong&gt;。是最近才出现的产品吗？我使用它不到一年。可以直接洗蔬菜水果，有效平衡了懒得花时间处理蔬菜和对食材卫生程度的纠结之间的矛盾，让我和我自己和解。&lt;/p&gt;
+&lt;h2 id=&#34;蔬菜&#34;&gt;蔬菜&lt;/h2&gt;
+&lt;p&gt;如果你平时常买叶菜，NO，你不是真懒。真正懒如我的人会买方便洗菜的论个算的种类：萝卜、茄子、黄瓜、西红柿、西葫芦、柿子椒、洋葱&amp;hellip;&amp;hellip;这些菜比起叶菜多了一个上案板切块的步骤，但即使算上这个也比一叶叶小心翼翼地洗菜来得方便（个人体会）。超市切圆段的冬瓜、金瓜也是不错的选择，切切蒸煮一下就能吃。&lt;/p&gt;
+&lt;p&gt;除了中餐的蘸酱拼盘和西式沙拉，我从东北同事那多知道了一些能生吃的菜，比如柿子椒，切条沾豆瓣酱和烧烤酱真的贼好吃。现在夏天了，懒得做菜但又不得不摄入蔬菜，调味生吃是一个好办法。冬天的话就水煮/微波炉加热+调味。&lt;/p&gt;
+&lt;p&gt;单人买菜最难的问题是有意识地控制一次购买的量。如果你和我一样，一天不一定做一顿带蔬菜的饭，那一次购物买两三顿饭的量、一两种蔬菜就足够了，努力不要让蔬菜在冰箱里过一个星期。&lt;/p&gt;
+&lt;p&gt;基于新鲜蔬菜的观点，我不看好袋装即食的沙拉，一袋至少吃两顿，水分多，叶菜，这些都不利于保存，在我冰箱里放三四天后就感觉不新鲜了（个人体会）。&lt;/p&gt;
+&lt;p&gt;为了应对可能的疫情封锁，我还网购了几包压缩蔬菜片。和方便面里的菜包类似，开水冲泡食用，味道属实一般，但可贵在能保存6个月。其实我已经开始担心没有封锁怎么处理它了，怎么调味都盖不住那种泡发出来的泡水的味道，好难吃，做沙拉难以下咽，只能煮面条之类放点 :(。&lt;/p&gt;
+&lt;h2 id=&#34;淀粉&#34;&gt;淀粉&lt;/h2&gt;
+&lt;p&gt;除了米、面条，我还屯了压缩饼干、零食饼干、意面、燕麦片、罐装八宝粥、罐装玉米粒、黑芝麻糊、方便面。主食顿顿要吃，花样多一点比较好。这里面有一些是方便食品，懒得做饭吃饭时十分钟内填到不饿。我这还有几袋一时兴起买回来的肠粉粉、章鱼烧粉，通通和面煎饼，挺花时间，但煎饼的好吃程度值回时间成本。顺带一提淀粉因为水分少，储存时间挺长。&lt;/p&gt;
+&lt;h2 id=&#34;蛋白质&#34;&gt;蛋白质&lt;/h2&gt;
+&lt;p&gt;虽然说禁了堂食，但我还是会买了饭提回家吃，然后餐馆的饭不缺脂质和蛋白质（和淀粉），唯一缺的是蔬菜。自己做饭的话，我很少买肉，做法也只有微波炉烤鸡胸肉、炒、卤煮肉。购买食材的欲望来自于对成品菜的想象，大概我是因为脑中肉类菜谱少，所以对肉不感兴趣也说不定。&lt;/p&gt;
+&lt;p&gt;各种豆子和大豆制品也是优质的蛋白质来源。我常买豆腐，タマモクロス说得好啊，这个豆腐，是万能的食材，很容易填饱肚子，和其他食材百搭，而且也符合我们的生吃策略。其他豆子比如超市能买到的冷冻豌豆或者豆罐头，吃起来很方便。&lt;/p&gt;
+&lt;p&gt;为了应对疫情，理想的可以长时间存放的脱水蛋白质是肉干，但肉干好贵，买不起。所以我买了：豆浆粉、豆干零食、冷冻豆腐干，大豆真是好东西呀。另外一提，豆腐或者非零食的豆干等豆制品，保质期只有短短几天，当作蔬菜一样快买快吃比较好。&lt;/p&gt;
+&lt;h2 id=&#34;维生素&#34;&gt;维生素&lt;/h2&gt;
+&lt;p&gt;我买了综合维生素。搜了下在正常饮食时不需要吃它，甚至吃了还有点我讲不明白的坏处（某几种物质摄入过量会导致什么）。所以我会在一天没有正经吃饭时怀着想要补救的心情吃一粒。&lt;/p&gt;
+&lt;h2 id=&#34;做菜&#34;&gt;做菜&lt;/h2&gt;
+&lt;p&gt;这些是我现在能想起来的尝试过的简单菜谱，或者做菜的经验。或者你找个做饭APP，直接搜工具比如“微波炉”、“电饭煲”，它们能做的菜式可能超乎你想象的多。&lt;/p&gt;
+&lt;p&gt;用有定时的电器“做饭”的好处是不需要时刻盯着，解放人力。奶锅煮东西也不麻烦，煮的好处是只占用一只手拿着厨具搅食材或者调节火力，另一只手可以玩手机。眼时不时瞟一眼锅别让水溢出，手敷衍地搅一搅防止食材粘锅底。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;微波炉烤鸡胸肉片&lt;/strong&gt; 鸡胸肉切薄片，涂抹调味料，贴在大碗内测，微波炉高火转8分钟，没熟加钟。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;微波炉茄子&lt;/strong&gt; 茄子横竖切四条再切段成块，加液体调味料和其他料，微波炉中火4分钟，拿出来（注意烫）用筷子让烤得有些干的茄子块沾一遍碗底部的液体调味料（料理的精髓之一是控制水分），让其保持水分，再中火4分钟。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;微波炉地瓜&lt;/strong&gt; 地瓜洗干净一些，留点土也没事。厨房用纸沾满水包住地瓜（再一次，微波炉料理中的水分控制），微波炉中火4分钟，拿出来（注意烫）给变干的纸浇点水，再4分钟。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;卤肉&lt;/strong&gt; 排骨、鸡腿、鸡胸肉切大块，奶锅开水焯半熟。换水，加买的卤肉料，大火煮开卤水，确定水不会溢出也不会烧干后换小火，溜去做其他事一两小时，回来关火。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;肠粉粉蔬菜丝饼&lt;/strong&gt; 这个麻烦，算分享一个正常的菜谱吧，巨嫩巨好吃，信我。肠粉粉和面（麻烦），蔬菜切丝（麻烦）撒盐出水，蔬菜丝倒进面糊，煎饼（麻烦）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/categories/life/" term="life" label="life" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/tags/blog/" term="blog" label="blog" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">柯里化及相关延伸思考</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/currying-zh/" />
             <id>https://boholder.github.io/blogs/currying-zh/</id>
-            <updated>2022-02-07T14:50:21&#43;08:00</updated>
+            <updated>2022-02-16T10:34:45&#43;08:00</updated>
             <published>2022-01-27T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
