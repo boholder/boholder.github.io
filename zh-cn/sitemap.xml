@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://boholder.github.io/tags/blog/</loc>
-    <lastmod>2022-05-04T03:22:49+08:00</lastmod>
+    <lastmod>2022-05-19T00:12:44+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://boholder.github.io/</loc>
-    <lastmod>2022-05-04T03:22:49+08:00</lastmod>
+    <lastmod>2022-05-19T00:12:44+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -33,13 +33,33 @@
   </url>
   
   <url>
+    <loc>https://boholder.github.io/categories/programming/</loc>
+    <lastmod>2022-05-19T00:12:44+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/en-us/categories/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/categories/programming/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://boholder.github.io/blogs/yarrow-divition-zh/</loc>
+    <lastmod>2022-05-19T00:12:44+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://boholder.github.io/categories/life/</loc>
-    <lastmod>2022-05-04T03:22:49+08:00</lastmod>
+    <lastmod>2022-05-04T03:28:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://boholder.github.io/blogs/lazy-cooking-zh/</loc>
-    <lastmod>2022-05-04T03:22:49+08:00</lastmod>
+    <lastmod>2022-05-04T03:28:31+08:00</lastmod>
   </url>
   
   <url>
@@ -54,21 +74,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://boholder.github.io/tags/programming/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://boholder.github.io/categories/programming/</loc>
-    <lastmod>2022-02-16T10:34:45+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://boholder.github.io/en-us/categories/programming/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://boholder.github.io/categories/programming/"
                 />
   </url>
   

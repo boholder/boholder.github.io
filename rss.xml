@@ -23,10 +23,98 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Wed, 04 May 2022 03:27:29 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 19 May 2022 00:13:07 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
+        
+            <item>
+                <title>大衍筮法脚本</title>
+                <link>https://boholder.github.io/blogs/yarrow-divition-zh/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/yarrow-divition-zh/</guid>
+                <pubDate>Tue, 17 May 2022 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+                
+                    <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;读音：大衍（yan3）筮（shi4）法。&lt;/p&gt;
+&lt;p&gt;好奇，多搜点知识总结一下，再写个脚本模拟。&lt;/p&gt;
+&lt;h2 id=&#34;相关知识&#34;&gt;相关知识&lt;/h2&gt;
+&lt;h3 id=&#34;大衍之数&#34;&gt;大衍之数&lt;/h3&gt;
+&lt;p&gt;搜到&lt;a href=&#34;https://www.zhihu.com/question/33646380&#34;&gt;这篇知乎文章里的答案&lt;/a&gt;讲了大衍之数的各种来历。&lt;/p&gt;
+&lt;p&gt;“大衍之数”定义在《易传·系辞》（儒家整理记录的易经思想书，易经分好多流派，类似武术流派）里记录大衍筮法的原话开头，这是完整方法的原话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;大衍之數五十，其用四十有九。分而爲二以象兩，掛一以象三，揲之以四以象四時，歸奇於扐以象閏。五歲再閏，故再扐而後卦。乾之策二百一十有六，坤之策百四十有四，凡三百有六十，當期之日。二篇之策，萬有一千五百二十，當萬物之數也。是故四營而成易，十有八變而成卦，八卦而小成，引而伸之，觸類而長之，天下之能事畢矣。（PS：古文没标点每间隔，这些标点是现代人加的）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;为什么大衍之数是五十，为什么用四十九？请读第二个知乎链接。没有统一定论，各种引经据典一通计算得出这两个数，据说争论两千年了。最科学的解释大概是：计算概率发现从四十九（也有答案说四十七、四十八也行）开始执行过程，最终得到的阴、阳两大类结果的概率相似，巧了。我觉得《易经》可能也是古人从天地之数（五十五）或者大衍之数（五十）或者其他什么和天地相关的神秘数字推演，发现数字四十九的奇妙之处，所以也没提怎么变到四十九，实用主义，或者内法奥秘，不传外不成文。&lt;/p&gt;
+&lt;h2 id=&#34;大衍筮法&#34;&gt;大衍筮法&lt;/h2&gt;
+&lt;p&gt;知识1：中国古代说占、卜、筮是有区别的&lt;a href=&#34;https://zhuanlan.zhihu.com/p/356420437&#34;&gt;[1]&lt;/a&gt; &lt;a href=&#34;https://new.qq.com/omn/20210117/20210117A0B15B00.html&#34;&gt;[2]&lt;/a&gt;，“占”是指算命，统称；“卜”是烧龟壳看裂纹；“筮”就是特指用这个蓍（shi1）草。所以把这个大衍筮法说成“蓍草占&lt;strong&gt;卜&lt;/strong&gt;”，严格意义上不对。&lt;/p&gt;
+&lt;p&gt;知识2：龟壳比蓍草材料珍贵，所以“卜”比“筮”更严肃。有说法“卜、筮不相袭也。大事有时日，小事无时日，有筮。”——《礼记·表记》，白话解释是“大事有日程，用卜；小事随机突发，用筮”。（&lt;a href=&#34;https://read01.com/RM7NjJe.html&#34;&gt;研究:《 刘彬：子思与《易》关系新证》&lt;/a&gt;链接是谷歌搜到的内容农场网站上的复制，维普百科和知网的链接都不能直接下载PDF，咱也不知道内容农场怎么弄到这种文本的）&lt;/p&gt;
+&lt;p&gt;知识3：蓍草是什么植物？看&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%93%8D&#34;&gt;维基百科&lt;/a&gt;，“菊科蓍属多年生草本植物”。多年生，我在搜索时看到说古人就是因为它多年生，生长周期长肯定吸收了天地灵气，所以用它做数占。口语英语翻译为&lt;a href=&#34;https://en.wikipedia.org/wiki/Achillea_millefolium&#34;&gt;yarrow&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;搜到&lt;a href=&#34;https://www.zhihu.com/zvideo/1383722112176238593&#34;&gt;这个动画&lt;/a&gt;讲了命令式的操作过程，7分钟建议一看。&lt;/p&gt;
+&lt;p&gt;详细过程先不提，总之进行了复杂的过程（三变），最终得到6、7、8、9四个数字中的一个，称为爻（yao3）。爻有两种，八卦符号（例：坎 ☵）里的阴（中间断开的两短横）、阳（长横），但是在大衍筮法里分得更细：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;6 = 老阴 X&lt;/li&gt;
+&lt;li&gt;7 = 少阳 —&lt;/li&gt;
+&lt;li&gt;8 = 少阴 - -&lt;/li&gt;
+&lt;li&gt;9 = 老阳 O&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;老少啥意思，不知道，动画说6最小所以是老阴，9最大同理老阳，7、8次第。但是老阴、老阳这两个被称为“动爻”，可以变成相反的类别（阴变阳、阳变阴，体现天地变化的）。虽然动画里每个动爻都变了，但继续搜索发现不是每个动爻都要变爻，是由解读者根据自身门派对易经的解读和各种环境变量（天干地支季节人际关系生辰八字balabala）决定变的子过程，有点抽象工厂模式的意思。原始卦象叫“本卦”，变之后叫“变卦”或“之卦”。这就是为什么说“起卦容易解卦难”，要我说就是故意往算法里加个专业知识黑盒，让普通人难以自行解卦，也增加了命运感神秘感随机性之类。我的脚本里打算让Python的&lt;a href=&#34;https://crypto.stackexchange.com/questions/39186/what-does-it-mean-for-a-random-number-generator-to-be-cryptographically-secure/39188#39188&#34;&gt;RNG&lt;/a&gt;API——&lt;a href=&#34;https://docs.python.org/3/library/os.html#os.urandom&#34;&gt;os.urandom()&lt;/a&gt;来帮我考虑是否变爻，扯远了说这RNG也是体现天地意志的，反正不受人意志影响。&lt;/p&gt;
+&lt;p&gt;一个八卦是三个横杠，要三个爻组成。&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%85%AD%E5%8D%81%E5%9B%9B%E5%8D%A6&#34;&gt;六十四卦&lt;/a&gt;中一个卦象含上下两个八卦图案。所以总共要进行 十八变-六爻-两八卦-一卦象，那个复杂操作要循环十八次。&lt;/p&gt;
+&lt;p&gt;个人认为大衍筮法就是一个手动操作的随机性算法。&lt;/p&gt;
+&lt;h2 id=&#34;大衍筮法的结果概率&#34;&gt;大衍筮法的结果概率&lt;/h2&gt;
+&lt;p&gt;资料 &lt;a href=&#34;http://www.360doc.com/content/18/0228/11/36557188_733116745.shtml&#34;&gt;[1]&lt;/a&gt; &lt;a href=&#34;http://202.194.14.19/CN/Y2018/V0/I1/47&#34;&gt;[2]&lt;/a&gt; &lt;a href=&#34;https://www.eee-learning.com/article/3368&#34;&gt;[3]&lt;/a&gt; &lt;a href=&#34;https://webcache.googleusercontent.com/search?q=cache:6qTcK5_2RfcJ:blog.sina.com.cn/s/blog_bfc84c450101l3bk.html&#34;&gt;[4 三变中的概率传递链]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我坦白，没看懂。但我似乎能总结：没有准确答案。这里要提到一个细节做前置知识：每一变中，都有一个“将整体的蓍草用左右手分成任意两堆”（“分而为二以象二”）的原子操作。理论计算概率时要用某种分布模型来代替这个操作的结果，用相等概率、二分、标准正态等不同模型代入概率传递链中计算出的概率是不同的。现实中这个操作由起卦执行者决定，其实是个真随机。所以结论是因为现实并不符合某种确定的分布模型，所以没有准确的理论答案。&lt;/p&gt;
+&lt;p&gt;根据&lt;a href=&#34;https://www.zhihu.com/question/33646380/answer/131429959&#34;&gt;知乎答案&lt;/a&gt;，以等概率分布代入分两堆操作结果，爻的阴阳概率相同：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;6 老阴 1/16&lt;/li&gt;
+&lt;li&gt;7 少阳 5/16&lt;/li&gt;
+&lt;li&gt;8 少阴 7/16&lt;/li&gt;
+&lt;li&gt;9 老阳 3/16&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但因为卦象自身有二项分布的特点，比如六爻全阴或全阳的概率本来就比其他混合的卦象概率低，然后最终结果其实是三变的随机和卦象分布的叠加（概率传播），所以无论三变用什么分布模型，最后六爻概率总是接近卦象的二项分布。&lt;/p&gt;
+&lt;p&gt;有些简单的起卦模拟程序会简化求出每个爻的流程，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一枚硬币，正面是阳，反面是阴。扔六次。&lt;/li&gt;
+&lt;li&gt;参照大衍筮法，三枚硬币，正面是2，反面是3，求和得到6、7、8、9，扔六次。&lt;/li&gt;
+&lt;li&gt;参照大衍筮法，三颗骰子，奇数是2，偶数是3，求和得到6、7、8、9，掷六次。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因为计算结果接近卦象分布，所以这爻用什么方法求，最终概率都差不太多。大衍筮法的优势在于：计算初始情况的结果基数多达四十九，我猜测这个基数越大，越计算随机。三变中的“随机分两堆”是大衍筮法的随机性的精髓，引入人工决策，即引入真随机。我的脚本也会碰到这个模拟问题，还是让RNG模拟人类执行者，情况基数沿用大衍筮法的四十九。&lt;/p&gt;
+&lt;h2 id=&#34;程序&#34;&gt;程序&lt;/h2&gt;
+&lt;p&gt;了解完理论，失去了一半动力，本质是弄个随机性算法再映射到六十四卦象，而且我又没专业知识解卦。但还是写了，不写不完整：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/boholder/a5bb81e17df0a4854ac9c8c0a5abd16c&#34;&gt;https://gist.github.com/boholder/a5bb81e17df0a4854ac9c8c0a5abd16c&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;了个心思。&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/programming/">programming</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>懒人做饭</title>
