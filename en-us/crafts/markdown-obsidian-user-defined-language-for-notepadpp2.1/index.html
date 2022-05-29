@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
 
     <meta name="generator" content="Hugo 0.79.1" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,7 +17,7 @@
 
     <title>DIY notepad&#43;&#43;，MarkDown(Obsidian) User-Defined-Language for Notepad&#43;&#43;2.1(syntax highlight) | BoHolder&#39;s site: crafts, blogs etc</title>
 
-    <link rel="stylesheet" href="/en-us/css/meme.min.1a906d7968618d81bd866d95f66fc11460bf9d37d64cb6f3b385539f40f4311c.css"/>
+    <link rel="stylesheet" href="/en-us/css/meme.min.18448b2e1360760c1692a475b446386d5343479ad69ca307338dcaecc4518321.css"/>
 
     
     
@@ -445,7 +448,7 @@ If it&rsquo;s succeed, notepad++ will pop up a info window.</li>
         <ul class="post-nav">
             
                 <li class="post-nav-prev">
-                    <a href="/en-us/crafts/program-safety-sign/" rel="prev">&lt; Safety signs for programming</a>
+                    <a href="/en-us/about/boholder/" rel="prev">&lt; About my virtual character: Boholder</a>
                 </li>
             
             
@@ -526,6 +529,9 @@ If it&rsquo;s succeed, notepad++ will pop up a info window.</li>
     function loadComments() {
         (function() {
             var utterances = document.getElementById("utterances");
+            if (!utterances) {
+                return;
+            }
             var script = document.createElement('script');
             script.src = 'https://utteranc.es/client.js';
             script.async = true;

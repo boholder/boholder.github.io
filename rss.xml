@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Thu, 19 May 2022 00:14:52 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 29 May 2022 22:17:58 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
@@ -85,6 +85,7 @@
 &lt;h2 id=&#34;程序&#34;&gt;程序&lt;/h2&gt;
 &lt;p&gt;了解完理论，失去了一半动力，本质是弄个随机性算法再映射到六十四卦象，而且我又没专业知识解卦。但还是写了，不写不完整：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://gist.github.com/boholder/a5bb81e17df0a4854ac9c8c0a5abd16c&#34;&gt;https://gist.github.com/boholder/a5bb81e17df0a4854ac9c8c0a5abd16c&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://boholder.github.io/share/yarrow_divination.py&#34;&gt;下载（不更新补丁，请优先gist）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;了个心思。&lt;/p&gt;
 </description>
                 

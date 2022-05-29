@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2022-05-19T00:14:52&#43;08:00</updated>
+    <updated>2022-05-29T22:17:58&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">大衍筮法脚本</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/yarrow-divination-zh/" />
             <id>https://boholder.github.io/blogs/yarrow-divination-zh/</id>
-            <updated>2022-05-19T00:12:44&#43;08:00</updated>
+            <updated>2022-05-28T16:22:37&#43;08:00</updated>
             <published>2022-05-17T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -76,6 +76,7 @@
 &lt;h2 id=&#34;程序&#34;&gt;程序&lt;/h2&gt;
 &lt;p&gt;了解完理论，失去了一半动力，本质是弄个随机性算法再映射到六十四卦象，而且我又没专业知识解卦。但还是写了，不写不完整：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://gist.github.com/boholder/a5bb81e17df0a4854ac9c8c0a5abd16c&#34;&gt;https://gist.github.com/boholder/a5bb81e17df0a4854ac9c8c0a5abd16c&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://boholder.github.io/share/yarrow_divination.py&#34;&gt;下载（不更新补丁，请优先gist）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;了个心思。&lt;/p&gt;
 </content>
             

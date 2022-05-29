@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
     <title type="text">BoHolder&#39;s site: crafts, blogs etc</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2022-05-19T00:14:52&#43;08:00</updated>
+    <updated>2022-05-29T22:17:58&#43;08:00</updated>
     <id>https://boholder.github.io/en-us/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/en-us/atom.xml" />
@@ -16,6 +16,121 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
     <generator uri="https://gohugo.io/" version="0.79.1">Hugo</generator>
+        <entry>
+            <title type="text">Introducing a Minecraft treehouse I built (contains a total of 200MBsize images)</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/crafts/minecraft-tree-house/" />
+            <id>https://boholder.github.io/en-us/crafts/minecraft-tree-house/</id>
+            <updated>2022-05-29T22:16:39&#43;08:00</updated>
+            <published>2022-05-27T00:00:00&#43;00:00</published>
+            <author>
+                    <name>BoHolder</name>
+                    <uri>https://boholder.github.io/</uri>
+                    <email>bottleholder@anche.no</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">I am happy as a young girl taking a bunch of screenshots and want more people to see it.</summary>
+            
+                <content type="html">&lt;p&gt;Warning again, &lt;strong&gt;this blog contains a total of 200MBsize images&lt;/strong&gt;, you may want to wait until you are connected to a no-traffic-limit network before reading.&lt;/p&gt;
+&lt;h2 id=&#34;location&#34;&gt;Location&lt;/h2&gt;
+&lt;p&gt;One of the Minecraft servers that I&amp;rsquo;m playing just cleaned its old savings and upgraded to version 1.18.2, just in time for my periodic rekindling of the passion to play Minecraft. When I was traveling through the main world, looking for an ideal place for building house, at the end of the endless jungle, the mouth of the river, two trees from the forest close to each other caught my attention.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-00.png?raw=true&#34; alt=&#34;Whole-building-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This location is not far from the server&amp;rsquo;s spawn point, about three fireworks elytra flying distance, easily to accessible. Surrounded by the river, the sea, and other players&#39; buildings not far away, the scenery is pleasant. &amp;ldquo;That&amp;rsquo;s it&amp;rdquo;, I thought.&lt;/p&gt;
+&lt;p&gt;(This server has a p2p economic system, which allows players to easily but the best equipment, making it optional to skip the initial development phase and focus on other creative activities. Usually we use nether world&amp;rsquo;s transportation system built by respected hardworking altruists for long distance traveling, and &lt;a href=&#34;https://minecraft.fandom.com/wiki/Elytra&#34;&gt;elytra&lt;/a&gt; as short distance moving method.)&lt;/p&gt;
+&lt;p&gt;Jungle trees are the tallest trees you can find in Minecraft, which is suitable for building treehouse. But building a treehouse on a single jungle tree, naturally has a 2*2 width trunk, the horizontal space will be limited by the thin (comparing to the width of floor) trunk, which in turn will limit the freedom of interior design and the expandability of the main part in all directions. Thankfully the two trees are just the right distance apart from each other, allowing me to build a cascading structure between the two trees like a woolen thread, which can challenges my imagination.&lt;/p&gt;
+&lt;h2 id=&#34;main-design-idea&#34;&gt;Main design idea&lt;/h2&gt;
+&lt;p&gt;My preferred architectural style is to blend the building with the natural environment, and I am not good at building exterior parts such as roofs and walls, so I used to hollow out mountains or drilled into the ground in my previous houses, focusing only on the design of ant-hole-like interior spaces. The treehouse won&amp;rsquo;t allow me to hide everything ugly behind the wall, both interior and exterior should be elegant at the same level, which is a new learning opportunity for me.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m&amp;hellip; sort of dislike buildings that overhanging from the ground (unless you build an entire floating island, that&amp;rsquo;s coll) or exaggeratedly shaped. Although the unreal physical characteristics of Minecraft are mocked by players with meme, and I haven&amp;rsquo;t actually systemically learned architecture. I wanted my building to have elements reflect that it gets some supporting structure inside and alongside. That&amp;rsquo;s why I artificially built &amp;ldquo;branches&amp;rdquo; or support structures like grid arranged logs to give the impression that this treehouse is sturdy and solid.&lt;/p&gt;
+&lt;p&gt;Except for the living room and bedroom on top, I chose to keep the building open to the outside space by just enclose the edges with fences without walls and build small roofs only on areas need rain proofing (imaginary functions, you know what I mean). (Luckily this server has set up to ban the spawning of annoying &lt;a href=&#34;https://minecraft.fandom.com/wiki/Phantom&#34;&gt;phantoms&lt;/a&gt;.) These open areas serve as public areas where the interior design can be seen at a glance, and provide a large enough area for elytra takeoff and landing.&lt;/p&gt;
+&lt;h2 id=&#34;a-visit&#34;&gt;A visit&lt;/h2&gt;
+&lt;h3 id=&#34;the-hall---public-space&#34;&gt;The Hall - public space&lt;/h3&gt;
+&lt;p&gt;Start to feel bored listening to me? Come on, let me show you around. First we need to landing exactly at the &amp;ldquo;entrance&amp;rdquo; area.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-01.png?raw=true&#34; alt=&#34;Entering-entrance-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-02.png?raw=true&#34; alt=&#34;Entering-entrance-image-2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-03.png?raw=true&#34; alt=&#34;Entrance-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The left barrel stands for the mailbox, and there is a shelf for containing all the odds and ends on the right. The yellow carpet, is &lt;a href=&#34;https://minecraft.fandom.com/wiki/Hay_Bale&#34;&gt;hay bales&lt;/a&gt; in fact, can reduce the fall damage by 80%. (Well, usually I won&amp;rsquo;t try to land on this small entrance.) Not far from a swing hanging on a branch, covered by the trunk from the direction of the hall, providing a secluded place where private chats can take place. (Only when no guest visiting I guess.)&lt;/p&gt;
+&lt;p&gt;Then we enter the hall.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-04.png?raw=true&#34; alt=&#34;Entering-hall-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-06.png?raw=true&#34; alt=&#34;Hall-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pay attention to the left, a bird feeder and a bird bath. The birds may come here when no human stay in the hall. The two bird caring furniture are attached to a flower shelf, which adds more nature element on the hall. Room a little far away is the chess room, we&amp;rsquo;ll check it later.&lt;/p&gt;
+&lt;p&gt;The truck is surrounded by steps for going to upper layers. Take a look at that trunk, I expanded it to 3*3 width for fitting a ladder entrance down to the ground. But after creepers chasing me and &lt;strong&gt;CLIMBED&lt;/strong&gt; up to the hall and blow everything up two times, and exploded another one time on the ground when I was not able to grab the ladder fast enough after I placed a trapdoor to prevent mobs climbing, I sadly decided to seal that entrance permanently.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-05.png?raw=true&#34; alt=&#34;Hall-image-2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the center of the hall stands a billiard table, adding some liveliness for the hall. Beside is the workshop, that area&amp;rsquo;s wooden slab floor was replaced with stone slab, I won&amp;rsquo;t want the (imaginary) sparks from the furnaces set the fire. And the storage area, a Minecraft player always need more chests. You can see in this screenshot that we are standing on the multiple usage table at right in the previous screenshot, below the table I embed a barrel for storing snacks for coming guests. Sitting on the benches, eating snacks and chatting with friends, oh&amp;hellip; there is no more enjoyable time than this.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-07.png?raw=true&#34; alt=&#34;Chess-room-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here is the chess room, if you want to stay a little far away from noisy guys on the benches, come here and relax your heart with nice landscape, chess and books. Now Lets turn around and step on the steps.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-08.png?raw=true&#34; alt=&#34;Chess-room-image-2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-09.png?raw=true&#34; alt=&#34;Chess-room-image-3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-10.png?raw=true&#34; alt=&#34;Hall-overlook-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You can&amp;rsquo;t believe it, just when I&amp;rsquo;m climbing steps, the heavy rain falls, too mach rains in the jungle (in fact the entire main world), but guess I need to adapt it since I&amp;rsquo;ve settled down here. And the billiard table gets another real useful function. You see, I remained gaps between fences at this plane in the middle of the steps, so I can quickly jump down to the hall, but the problem is this plane is four blocks higher than the hall floor, which is enough for causing one drop damage. After I build the billiard table, I can jump onto the table and avoid drop damage.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-11.png?raw=true&#34; alt=&#34;Flower-shelf-image&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-meditation-room---semi-public-space&#34;&gt;The meditation room - semi-public space&lt;/h3&gt;
+&lt;p&gt;Keep climbing, then we reach the meditation room.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-12.png?raw=true&#34; alt=&#34;Meditation-room-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-13.png?raw=true&#34; alt=&#34;Meditation-room-image-2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This is the most remote area from hustle and bustle and close to the nature. The bookshelves also act as walls, blocking the view from outside. You can sit on the low bench, lie on the carpet, read, do yoga, meditate, or just think quietly. If you want more sensory stimulation, you can use the campfire next to the cabinet to smoke some spices.&lt;/p&gt;
+&lt;h3 id=&#34;the-enclosed-top-area---private-space&#34;&gt;The enclosed top area - private space&lt;/h3&gt;
+&lt;p&gt;Although I would like to close to the nature, but somehow I can&amp;rsquo;t let go of my dependence on a warm, safe and modernized home. This motivation drives me to build a solid living area, on the top of one of two trees, only can be reached by climbing a long ladder, which let a person quickly away from the dangerous ground, increase the physical height as well as sense of security.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-14.png?raw=true&#34; alt=&#34;The-ladder-to-the-top-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This area is made of thick logs for the walls, and the interior is decorated with modern furniture and appliances, and of course, the indispensable - a big soft bed! (this is a logic flaw on my part, I wasn&amp;rsquo;t thinking about how to get enough power to keep appliances working!)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-15.png?raw=true&#34; alt=&#34;Balcony-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Climbing up and we reach the balcony first. I wasn&amp;rsquo;t expecting so much rain, and I&amp;rsquo;m afraid the cloths I hang out here will never dry. Maybe I should consider ordering a dryer.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-16.png?raw=true&#34; alt=&#34;Kitchen-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Look inside though the glass, we can see the whole open kitchen with two stoves, oven, sink, and sideboard above. There is not much space available inside, so I used light-transmitting materials as much as possible to expand the space perceived by a person. As you can see in the screenshot, a black glass wall, a transparent skylight, a white glass dining table, and I even managed to open a small window behind the stoves. The combination of these methods is quite effective I think.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-17.png?raw=true&#34; alt=&#34;Living-room-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Considering that the view outside the room is jungle and the walls are logs, the interior design of living room should also close to the natural style. I chose the unobtrusive &lt;a href=&#34;https://minecraft.fandom.com/wiki/Deepslate&#34;&gt;deep slate&lt;/a&gt; for the kitchen, and covered the eye-catching white quartz sofa with dark green to integrating into the overall interior style.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-18.png?raw=true&#34; alt=&#34;Living-room-image-2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Using the trapdoors to build the wall between the living room and bedroom, to reduce the isolation feeling of this inadequate space. I replaced the space where truck used to be with a brown-cased vending machine, stocked with cold beer.&lt;/p&gt;
+&lt;p&gt;The last stop, the deepest part of the private space, the bedroom. With a bed and a computer, I can spend whole day in these few square meters&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-19.png?raw=true&#34; alt=&#34;Bedroom-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-20.png?raw=true&#34; alt=&#34;Bedroom-image-2&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;lighting-design&#34;&gt;Lighting design&lt;/h2&gt;
+&lt;p&gt;Because of the openness I chose, I carefully designed the positions of artificial light sources. I placed as few as possible without creating monster spawn-able surface, to prevent the treehouse from appearing to bright at night. And this design give the public area a natural, somber, harmonious atmosphere after the sunset.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-29.png?raw=true&#34; alt=&#34;Whole-building-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-21.png?raw=true&#34; alt=&#34;Entrance-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-22.png?raw=true&#34; alt=&#34;Hall-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-23.png?raw=true&#34; alt=&#34;Chess-room-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-24.png?raw=true&#34; alt=&#34;Hall-overlook-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-25.png?raw=true&#34; alt=&#34;Meditation-room-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-26.png?raw=true&#34; alt=&#34;Balcony-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-27.png?raw=true&#34; alt=&#34;Living-room-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-28.png?raw=true&#34; alt=&#34;Bedroom-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In addition, as you can imagine, the shade of all the platforms creates a great monster-spawning area on the ground, and the monsters seem to be partying underneath day and night. But I didn&amp;rsquo;t want to place light sources on the ground around, because it would spoil the &amp;ldquo;only treehouse emitting light at night&amp;rdquo; visual effect, the &amp;ldquo;someone living here along with endless jungle&amp;rdquo; atmosphere. I finally came up with a solution - leaving the necessary road for passing, planting &lt;a href=&#34;https://minecraft-archive.fandom.com/wiki/Wither_Rose&#34;&gt;wither rose&lt;/a&gt; beside the trunks.&lt;/p&gt;
+&lt;p&gt;During the night, along with periodical seconds of monsters hurting sound, the tree house silent in tranquility.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-30.png?raw=true&#34; alt=&#34;Wither-rose-surrounding-the-trunks-image&#34;&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/en-us/categories/design/" term="design" label="design" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/en-us/tags/design/" term="design" label="design" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/en-us/tags/blog/" term="blog" label="blog" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Safety signs for programming</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/crafts/program-safety-sign/" />
