@@ -23,10 +23,84 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Sun, 29 May 2022 22:17:58 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 15 Oct 2022 23:05:56 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
+        
+            <item>
+                <title>信息在网上随风飘飞</title>
+                <link>https://boholder.github.io/blogs/nformation-flies-in-the-wind-on-the-internet/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/nformation-flies-in-the-wind-on-the-internet/</guid>
+                <pubDate>Sat, 15 Oct 2022 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+                
+                    <description>&lt;p&gt;这篇文章阐述我的一个想法：发布到互联网上的信息，一旦发布就很难全网抹除，发布时间越长越难抹除。这是因为信息特殊的性质——可读=可复制副本=拥有。&lt;/p&gt;
+&lt;h2 id=&#34;预言故事诽谤如随风飘飞的鸡毛&#34;&gt;预言故事：诽谤如随风飘飞的鸡毛&lt;/h2&gt;
+&lt;p&gt;有这样一篇预言故事&lt;a href=&#34;https://philipchircop.wordpress.com/2014/05/28/picking-up-feathers/&#34;&gt;《捡起鸡毛》&lt;/a&gt;，很短，我翻译一下：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;一位妇女忏悔自己诽谤他人。告解神父，一位睿智的老者，他慈爱地听着，赦免了她的罪，并指定给了她一项奇怪的悔罪行为——他让她回家找一只母鸡然后回来，当她沿街走时要拔掉母鸡的羽毛。当她回来时，神父说:
+“现在请回家去，边走边捡起你在路上拔下的每一根羽毛。”妇女告诉他这是不可能的，因为几乎可以肯定的是，风已经把它们吹走了。神父告诉她：&amp;quot;
+你看，就像风吹散了羽毛就不可能再捡起来一样，流言蜚语和诽谤一旦从我们嘴里说出来，就不可能再收集起来。&amp;quot;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;公开发布的信息一如风中鸡毛&#34;&gt;公开发布的信息一如风中鸡毛&lt;/h2&gt;
+&lt;p&gt;公开发布的信息就像在风中撒手的鸡毛，不管自愿与否都实际放弃了控制权。就像公共场合说出的话，不知道谁会听到，不知道听到的人中有多少人会记住，也不知道记住的人中多少人会把这个话传给其他不在场的人。信息的传递方式在现实和网络上分毫不差。&lt;/p&gt;
+&lt;p&gt;有人会感叹互联网信息的可用性差，比如老平台被公司关闭、域名到期或服务器下线导致的网站下线、磁力链接失效&amp;hellip;&amp;hellip;或许信息还躺在世界上某个硬盘中，甚至在私有域中，只是不可公开读取。如果时光能倒流，回到还能读取信息的时候，任何人都可以将其备份并永久保存到本地。不知浏览器何时拥有的“脱机可用”这功能，大概很久前就有。即使没保存，这不是还有回忆吗，也是信息特性的证明，没人能抹除你的记忆。&lt;/p&gt;
+&lt;p&gt;如果你当时忘了备份，可能有其他网民或系统帮你备了份。比起讨厌更应该感谢保存互联网信息的系统，不管是用自动爬虫的搜索引擎还是接受快照请求的存档网站，毕竟它们将保存的信息公开给了所有人，分享和开放是好事。另外我们永远不可能知道某个已经不可访问的信息在全球有多少个离线备份。&lt;/p&gt;
+&lt;h2 id=&#34;非公开上传的信息也难逃一劫&#34;&gt;非公开上传的信息也难逃一劫&lt;/h2&gt;
+&lt;p&gt;并非信息设置为非公开就万事大吉。信息被联网上传到另一个地方，都或多或少暴露在风险下。&lt;/p&gt;
+&lt;h3 id=&#34;信息被主动出卖&#34;&gt;信息被主动出卖&lt;/h3&gt;
+&lt;p&gt;公司利用用户协议，用你产生的信息赚钱（&lt;a href=&#34;https://www.reddit.com/r/explainlikeimfive/comments/2m3f05/eli5_if_something_is_free_you_are_the_product/&#34;&gt;“如果你免费使用某个公司提供的服务，那么你输入上传的一切都&lt;em&gt;可以&lt;/em&gt;是公司的商品”&lt;/a&gt;）（当然公司要想办法赚钱）。不一定是公司本身，可能是公司内碰巧同时有坏心思和你的信息的访问权限的员工。&lt;/p&gt;
+&lt;p&gt;软件业务流程设计中有个概念叫“数据的&lt;a href=&#34;https://stackoverflow.com/questions/378331/physical-vs-logical-hard-vs-soft-delete-of-database-record&#34;&gt;软删除&lt;/a&gt;（soft delete, logical delete）”，即不真正删除信息，而是标记为“不可用”。这个技术本来是用在比如“操作记录审计”，“误删除可恢复”等合适的地方，但现在被越来越多滥用在保存可牟利的用户信息、用户内容上。告诉用户手机号修改成功，但偷偷留着老的；告诉用户误发的推文删除成功，但其实没删——我不知道这算不算欺骗。&lt;/p&gt;
+&lt;p&gt;这类最糟的情况目前仍是最常见的情况，真令人伤心。&lt;/p&gt;
+&lt;h3 id=&#34;信息被骇客偷走&#34;&gt;信息被骇客偷走&lt;/h3&gt;
+&lt;p&gt;欧盟发布的&lt;a href=&#34;https://gdpr-info.eu/&#34;&gt;GDPR&lt;/a&gt;保护了用户对个人数据的控制权（也许算只保护了欧盟网民），也推进了公司业务方面许多好的数据隐私改进。假如你所使用的平台是一家遵守GDPR的“好”公司，你可以随时删除你上传的任何数据，没有软删除的欺骗。或者你信不过公司，使用非盈利组织的服务或干脆自己搭建服务。服务器背后的人不会主动出卖你的信息，现在信息安全了吗？&lt;/p&gt;
+&lt;p&gt;呃，还不安全。你看，当你还没删除时，信息仍留在服务器上。你是否记得，有一类不会遵守规则法律的人行网络行窃之事&amp;hellip;&amp;hellip;对，骇客（cracker）。骇客攻入服务器，把数据偷走（拷一份）拿去卖钱。在这个（信息不会被主动出卖的）情况里，你的信息是否安全=平台的安全防护工作做得好不好。除了自建平台外你无法控制这点，只得信任和期待。至于自建平台，服务器安全维护这份工作&amp;hellip;&amp;hellip;至少我个人能力做不到让我自己信服。&lt;/p&gt;
+&lt;h3 id=&#34;如何保存非公开信息离线和加密&#34;&gt;如何保存非公开信息？离线和加密&lt;/h3&gt;
+&lt;p&gt;“这样我就能安全分享（公开）信息了？” &lt;strong&gt;你不能分享了&lt;/strong&gt;，因为信息的特性，看过的人会记住（Who&amp;rsquo;s Lila?），再写到互联网上，不就又变成数字备份了&amp;hellip;&amp;hellip;保密协议是个可选方案，寄希望于对方是遵守规则的人。&lt;/p&gt;
+&lt;p&gt;于是你咬咬牙决定不分享信息了，只有自己能查看。如果你决定只在一台设备上查看，把数据放在本地就足够安全，至少现在这个时代骇客比起有杀毒软件有防火墙的个人电脑，更倾向于捣鼓错误配置的服务器。如果你想借助平台在多个设备间传输信息，或想让保存在本地的数据更安全，你应该使用&lt;a href=&#34;https://boholder.github.io/blogs/individual-data-backup-summary-zh/#%E5%8A%A0%E5%AF%86&#34;&gt;&lt;strong&gt;加密技术&lt;/strong&gt;&lt;/a&gt;加密你的信息。&lt;/p&gt;
+&lt;h2 id=&#34;相关想法&#34;&gt;相关想法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;信息尤其个人信息，公开状态就是0和1，一旦上传过，默认算作（被出卖或攻击）公开，没有后悔药。要么永远捏得死死的不上传到公共领域（许多麻烦）；要么坦然面对，亡羊补牢，预防之后可能出现的身份盗用、骚扰等情况。我没足够地位和资源做到前者，只好选择后者。也可以准备很多套可弃用的身份，比如在中国手机号是网络身份证，可购买各运营商的虚拟手机号。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;还是劝大家不要在网上公开透露个人信息，包括和网友聊天或推文发送自己的生活工作细节，和你共享生活（同城）或工作（同行）的网友真的从寥寥几句知道很多事，因为你们共享经验和上下文，相同信息量能触发更多关联知识。万一网友有坏心思，麻烦很大。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;信息传递的本质不知道能否用熵增原理解释——质能守衡但信息熵不会减少。扯远了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/thought/">thought</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>大衍筮法脚本</title>

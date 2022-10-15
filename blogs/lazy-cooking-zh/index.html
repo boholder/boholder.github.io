@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.463d7a8dbb6b9003d2d89958bc7b74d11cdce1f553815eeb303a095a9b7b5af4.js"></script>
+        <script src="/js/meme.min.680d320222acf961c844b533251fe9ff7f0d239a7b0867358eec94db81344cd4.js"></script>
 
     
 
@@ -389,9 +389,9 @@
                     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
 
 <script>
-    var typeNumber = 0;
-    var errorCorrectionLevel = 'L';
-    var qr = qrcode(typeNumber, errorCorrectionLevel);
+    const typeNumber = 0;
+    const errorCorrectionLevel = 'L';
+    const qr = qrcode(typeNumber, errorCorrectionLevel);
     qr.addData('https:\/\/boholder.github.io\/blogs\/lazy-cooking-zh\/');
     qr.make();
     document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
@@ -415,15 +415,15 @@
             <ul class="related-list">
                 
                     <li class="related-item">
+                        <a href="/blogs/nformation-flies-in-the-wind-on-the-internet/" class="related-link">信息在网上随风飘飞</a>
+                    </li>
+                
+                    <li class="related-item">
                         <a href="/blogs/yarrow-divination-zh/" class="related-link">大衍筮法脚本</a>
                     </li>
                 
                     <li class="related-item">
                         <a href="/blogs/currying-zh/" class="related-link">柯里化及相关延伸思考</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/blogs/srp-against-dry-zh/" class="related-link">SRP提醒你不要盲目遵守DRY设计原则</a>
                     </li>
                 
             </ul>
@@ -564,12 +564,12 @@
             <script>
     function loadComments() {
         (function() {
-            var utterances = document.getElementById("utterances");
+            const utterances = document.getElementById("utterances");
             if (!utterances) {
                 return;
             }
-            var script = document.createElement('script');
-            script.src = 'https://utteranc.es/client.js';
+            const script = document.createElement('script');
+            script.src = 'https:\/\/utteranc.es\/client.js';
             script.async = true;
             script.crossOrigin = 'anonymous';
             script.setAttribute('repo', 'boholder\/boholder.github.io');
@@ -608,7 +608,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
-
 
 
 
