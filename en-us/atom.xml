@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
     <title type="text">BoHolder&#39;s site: crafts, blogs etc</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2022-10-15T23:05:55&#43;08:00</updated>
+    <updated>2022-11-19T13:06:33&#43;08:00</updated>
     <id>https://boholder.github.io/en-us/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/en-us/atom.xml" />
@@ -15,7 +15,7 @@
                 <email>bottleholder@anche.no</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-    <generator uri="https://gohugo.io/" version="0.79.1">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.106.0">Hugo</generator>
         <entry>
             <title type="text">Introducing a Minecraft treehouse I built (contains a total of 200MBsize images)</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/crafts/minecraft-tree-house/" />
@@ -33,7 +33,7 @@
 &lt;h2 id=&#34;location&#34;&gt;Location&lt;/h2&gt;
 &lt;p&gt;One of the Minecraft servers that I&amp;rsquo;m playing just cleaned its old savings and upgraded to version 1.18.2, just in time for my periodic rekindling of the passion to play Minecraft. When I was traveling through the main world, looking for an ideal place for building house, at the end of the endless jungle, the mouth of the river, two trees from the forest close to each other caught my attention.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-00.png?raw=true&#34; alt=&#34;Whole-building-image&#34;&gt;&lt;/p&gt;
-&lt;p&gt;This location is not far from the server&amp;rsquo;s spawn point, about three fireworks elytra flying distance, easily to accessible. Surrounded by the river, the sea, and other players&#39; buildings not far away, the scenery is pleasant. &amp;ldquo;That&amp;rsquo;s it&amp;rdquo;, I thought.&lt;/p&gt;
+&lt;p&gt;This location is not far from the server&amp;rsquo;s spawn point, about three fireworks elytra flying distance, easily to accessible. Surrounded by the river, the sea, and other players&amp;rsquo; buildings not far away, the scenery is pleasant. &amp;ldquo;That&amp;rsquo;s it&amp;rdquo;, I thought.&lt;/p&gt;
 &lt;p&gt;(This server has a p2p economic system, which allows players to easily but the best equipment, making it optional to skip the initial development phase and focus on other creative activities. Usually we use nether world&amp;rsquo;s transportation system built by respected hardworking altruists for long distance traveling, and &lt;a href=&#34;https://minecraft.fandom.com/wiki/Elytra&#34;&gt;elytra&lt;/a&gt; as short distance moving method.)&lt;/p&gt;
 &lt;p&gt;Jungle trees are the tallest trees you can find in Minecraft, which is suitable for building treehouse. But building a treehouse on a single jungle tree, naturally has a 2*2 width trunk, the horizontal space will be limited by the thin (comparing to the width of floor) trunk, which in turn will limit the freedom of interior design and the expandability of the main part in all directions. Thankfully the two trees are just the right distance apart from each other, allowing me to build a cascading structure between the two trees like a woolen thread, which can challenges my imagination.&lt;/p&gt;
 &lt;h2 id=&#34;main-design-idea&#34;&gt;Main design idea&lt;/h2&gt;
@@ -149,7 +149,7 @@
 &lt;p&gt;&lt;img src=&#34;https://boholder.github.io/en-us/img/other/2019/wash-hands-before-debugging.png&#34; alt=&#34;wash-hands-before-debugging.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Origin: ISO7010-M011 - Wash your hands&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;Origin symbol: same as origin&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This one is related to a habit in our country. In ancient times, when doing sacred things, in order to ensure success and prove their sincerity, people would bathe and put on clean clothes. 
+&lt;p&gt;This one is related to a habit in our country. In ancient times, when doing sacred things, in order to ensure success and prove their sincerity, people would bathe and put on clean clothes.
 Even now, some young people wash their hands and faces before play the paid lottery of the game to ensure that they can get good rewards. Sounds funny, right? In fact, I am also doing it.&lt;/p&gt;
 &lt;p&gt;Therefore, before doing the sacred debug, you should wash your hands with sincerity to ensure bugs discovery. Try it before the next debug work.&lt;/p&gt;
 &lt;h3 id=&#34;refer-to-offical-manual-to-avoid-potential-errors&#34;&gt;Refer to offical manual to avoid potential errors&lt;/h3&gt;
@@ -187,7 +187,7 @@ Even now, some young people wash their hands and faces before play the paid lott
 &lt;p&gt;&lt;img src=&#34;https://boholder.github.io/en-us/img/postimg/2019/wash-hands-before-return-to-libc.jpg&#34; alt=&#34;wash-hands-before-return-to-libc.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;In particular, I declare that &lt;em&gt;&lt;strong&gt;I don&amp;rsquo;t have any rights to the image above&lt;/strong&gt;&lt;/em&gt;. I made it a static image just because the Tracking Protection feature of a browser like Firefox prevents getting a Twitter image from my website.&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;follow-up-plan&#34;&gt;Follow-up plan&lt;/h2&gt;
-&lt;p&gt;Um&amp;hellip; Actually it is the reason why I am anxious to build a website. 
+&lt;p&gt;Um&amp;hellip; Actually it is the reason why I am anxious to build a website.
 I need a fully controllable image sharing interface to host this idea.&lt;/p&gt;
 &lt;p&gt;I originally wanted to make up about 10 or so. I didn&amp;rsquo;t expect the inspiration to be exhausted after 5 pictures.
 Well, I&amp;rsquo;ll keep it for now, and I&amp;rsquo;ll update when I come out new idea.&lt;/p&gt;

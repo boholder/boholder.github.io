@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.79.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.106.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,11 +17,11 @@
 
     <title>TDD实践经验分享与对TDD实践程度的讨论 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.7d562b07993eae729575b1199df226bd2ce460a2614df07b947421a83fa14d19.css"/>
+    <link rel="stylesheet" href="/css/meme.min.7780377e1693677f62b929ecba68175ffba021d490a49fac3a6065b3be54944d.css"/>
 
     
     
-        <script src="/js/meme.min.680d320222acf961c844b533251fe9ff7f0d239a7b0867358eec94db81344cd4.js"></script>
+        <script src="/js/meme.min.88dcafd9937dec27b87f333937e9be42cdffb410dd0317d810f064321461f0ad.js"></script>
 
     
 
@@ -63,7 +63,7 @@
         "description": "TDD是好的，但要求对测试库很熟悉才能实践；但这不妨碍我们按照TDD的思路来指导代码编写",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
-        "wordCount":  6959 ,
+        "wordCount":  6955 ,
         "image": "https://boholder.github.io/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
@@ -214,7 +214,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;6959</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;6955</span>
     
     
         
@@ -354,7 +354,7 @@
 <td>是不是覆盖的逻辑太大了，重新写一个小一些的测试（4.3详解）</td>
 </tr>
 <tr>
-<td>资料：<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup>3.，<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup>文章中间</td>
+<td>资料：<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>3.，<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
 </tr>
 </tbody>
 </table></div>
@@ -366,7 +366,7 @@
 <blockquote>
 <p>避免一个测试覆盖太大的逻辑范围，这违反了TDD单个测试对应小目标的原则。</p>
 </blockquote>
-<p>错误实例：就像文章<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup>中“我”在第一次分析需求时，选择了不明朗的测试“演化”方向， 导致最后一步测试，实质上对应的是一步到位处理超过一种的新加入的情况，无法延续现有的代码继续修改以通过测试。</p>
+<p>错误实例：就像文章<sup id="fnref2:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>中“我”在第一次分析需求时，选择了不明朗的测试“演化”方向， 导致最后一步测试，实质上对应的是一步到位处理超过一种的新加入的情况，无法延续现有的代码继续修改以通过测试。</p>
 <p>现在的问题转换为“如何写出下一个测试”，请接着读4.3。</p>
 <h3 id="43简化问题场景-逐步添加限制条件"><a href="#43简化问题场景-逐步添加限制条件" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:43简化问题场景-逐步添加限制条件" class="headings">4.3.简化问题场景-&gt;逐步添加限制|条件</a></h3>
 <div class="table-container"><table>
@@ -380,7 +380,7 @@
 <td>答：接着上一步测试的目的，继续分析需求，我们走到哪了？或者我们应该换个思路重新分析需求？</td>
 </tr>
 <tr>
-<td>资料：<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup>2.，<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup>文章中间</td>
+<td>资料：<sup id="fnref2:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>2.，<sup id="fnref3:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
 </tr>
 </tbody>
 </table></div>
@@ -388,7 +388,7 @@
 <p>&ldquo;When faced with a problem you do not understand, do any part of it you do understand,
 then look at it again.&rdquo;</p>
 </blockquote>
-<p>这是文章<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup>给出的引用，来自一部科幻小说。下面我要写的是我根据文章<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup>和其他kata解决需求的思路悟出的门路， 总结来说：</p>
+<p>这是文章<sup id="fnref4:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>给出的引用，来自一部科幻小说。下面我要写的是我根据文章<sup id="fnref5:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>和其他kata解决需求的思路悟出的门路， 总结来说：</p>
 <blockquote>
 <p>不要按步骤1-2-3线性流程切分需求，而是按套娃，
 从理想的简单状态机（简单输入简单处理输出|复杂输入简化处理输出）到有条件|限制的复杂状态机（复杂处理+复杂输入|输出），
@@ -397,14 +397,14 @@ then look at it again.&rdquo;</p>
 <p>如果你手边有《计算机网络》这类书，看看每个层的第一个教学使用的理论协议的假设条件有多理想，以数据链路层的协议为例： 单工，发送方和接收方的网络层总是准备就绪，数据处理不计时间， 可用缓存无限大，信道不会在物理层损坏|丢失。
 这种理想协议只会在教科书上存在，但它形象地描述了该层协议 <em>可能的风险|考量</em> 。 之后的篇幅逐渐引入各种机制来解决理想协议中忽略的考量，最终一个能在现实场景中使用的协议完成了。</p>
 <p>咱们的测试也应该像设计协议一样，每次只测试一个考量|一种情况， 修改少量代码通过这个测试，接着向下走，直到考虑了所有情况。</p>
-<p>正确实例：文章<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup>后半段，“我”针对“字符串按位换行”需求，先考虑了没有空白符的“纯”字符串简单情况，然后因为引入空白符， 多增加了三种情况（分割点在空白符左、相同、右），多写三个测试并修改代码通过它们，最终完成了逻辑。</p>
+<p>正确实例：文章<sup id="fnref6:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>后半段，“我”针对“字符串按位换行”需求，先考虑了没有空白符的“纯”字符串简单情况，然后因为引入空白符， 多增加了三种情况（分割点在空白符左、相同、右），多写三个测试并修改代码通过它们，最终完成了逻辑。</p>
 <h2 id="2021-03-11更新"><a href="#2021-03-11更新" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:2021-03-11更新" class="headings">2021-03-11更新</a></h2>
 <p>我对TDD有了新的理解：TDD对新手来说比较难以实践，不建议新手去用。有以下几点理由：</p>
 <ol>
 <li>
 <p>写测试速度很难跟上思考速度。</p>
 <ul>
-<li>TDD本质上是把对方法|函数的功能的要求编进测试用例，要求是思考形成的， 
+<li>TDD本质上是把对方法|函数的功能的要求编进测试用例，要求是思考形成的，
 如果对编程语言（＆第三方测试框架）不是如母语一样熟悉，
 写测试的速度跟不上思考的速度，就需要阻塞思考，慢慢写出一个个测试用例。</li>
 <li>就像阻塞快速的CPU去做慢速的I/O一样，更惨的是不是人人都是周伯通，
@@ -489,7 +489,7 @@ then look at it again.&rdquo;</p>
 我们也看到人们成为TDD的奴隶：</p>
 <ol>
 <li>花费过多时间确保100%测试覆盖率</li>
-<li>做了很多冗余（<em>无用</em>）的测试 
+<li>做了很多冗余（<em>无用</em>）的测试
 （<em>书中举例：刚开始编写方法时，对一个特定测试值（这是从特例到公式的必要一步TDD步骤）， 编写之后显著会重复|重写的AD-HOC逻辑</em>）</li>
 <li>TDD的设计从底层开始，然后逐步上升。</li>
 </ol>
@@ -525,23 +525,23 @@ then look at it again.&rdquo;</p>
 <p>Andy说我不应该加上这个知识栏，他担心这会诱使缺乏经验的开发人员不写测试。下面是我的折衷方案：</p>
 <p>应该编写测试吗？要，但等你写了30年后，不妨从容地做些实验，看看它究竟给你带来的什么好处。</p>
 </blockquote>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
-<p><a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Test-driven_development</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+<li id="fn:1">
+<p><a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Test-driven_development</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
-<p><a href="https://softwareengineering.stackexchange.com/questions/224711/tdd-workflow-for-implementation-specific-edge-cases" target="_blank" rel="noopener">https://softwareengineering.stackexchange.com/questions/224711/tdd-workflow-for-implementation-specific-edge-cases</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+<li id="fn:2">
+<p><a href="https://softwareengineering.stackexchange.com/questions/224711/tdd-workflow-for-implementation-specific-edge-cases" target="_blank" rel="noopener">https://softwareengineering.stackexchange.com/questions/224711/tdd-workflow-for-implementation-specific-edge-cases</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
-<p><a href="https://silkandspinach.net/2014/06/02/tdd-three-easy-mistakes/" target="_blank" rel="noopener">https://silkandspinach.net/2014/06/02/tdd-three-easy-mistakes/</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+<li id="fn:3">
+<p><a href="https://silkandspinach.net/2014/06/02/tdd-three-easy-mistakes/" target="_blank" rel="noopener">https://silkandspinach.net/2014/06/02/tdd-three-easy-mistakes/</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a>&#160;<a href="#fnref1:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:4" role="doc-endnote">
-<p><a href="http://thecleancoder.blogspot.com/2010/10/craftsman-62-dark-path.html" target="_blank" rel="noopener">http://thecleancoder.blogspot.com/2010/10/craftsman-62-dark-path.html</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+<li id="fn:4">
+<p><a href="http://thecleancoder.blogspot.com/2010/10/craftsman-62-dark-path.html" target="_blank" rel="noopener">http://thecleancoder.blogspot.com/2010/10/craftsman-62-dark-path.html</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a>&#160;<a href="#fnref1:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref3:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref4:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref5:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref6:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
             </div>
 
