@@ -23,10 +23,256 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Sat, 19 Nov 2022 13:06:34 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 10 Dec 2022 22:05:35 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
+        
+            <item>
+                <title>我对人情的理解</title>
+                <link>https://boholder.github.io/blogs/favor/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/favor/</guid>
+                <pubDate>Sat, 10 Dec 2022 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+                
+                    <description>&lt;h2 id=&#34;希望读者从文中获益&#34;&gt;希望读者从文中获益&lt;/h2&gt;
+&lt;p&gt;前几天一技术群在讨论话题“是否要接受父母决定的道路（就业）”，我把该话题理解为“是否该接受父母的人情”（实际上该话题可分解为“是否接受并顺从父母的决定”+“是否使用父母的人情/是否对父母欠下人情债”），叭叭叭一顿说，激起不少反对声音。我试着解释，但没能解释清楚，留下一地鸡毛就逃走了。我们搞开发的喜欢以文档为共识和契约，于是我打算用这篇文章讲清楚我个人对于人情及相关概念的理解。&lt;/p&gt;
+&lt;p&gt;写本文的目的不是为了面子之类的虚的，无意冒犯任何人，我就觉得（内省：这可能是我的误解）好像很多人因为生活背景等原因过度厌恶人情，导致白白错过了一些微小的幸福，我觉得可惜（内省：同理心泛滥，这算优越感的隐晦体现吗）。&lt;strong&gt;我希望这篇文章能为理解人情提供另一个角度&lt;/strong&gt;，把模糊的人情分解，把理应被道德谴责的黑色和有益的白色分开（当然中间有分不开的灰色部分），分享一下我从社交与互惠中得到的收获。文章结构松散，想到什么写什么，跳着看感兴趣的即可。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我在玩火，试图讨论主观概念。&lt;strong&gt;这个话题受主观影响，没有正确答案&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;我害怕这篇文章激起争论或关注，我是极度厌恶“热度”的人。希望最后我不会主动把这篇文章删掉。&lt;/li&gt;
+&lt;li&gt;我对进一步讨论没太大兴趣。如果您对我的理解持不赞同意见，我建议咱们求同存异，聊点编程、ACG之类的（有人能指点一下我在Python中遇到的&lt;a href=&#34;https://github.com/boholder/puntgun/issues/17&#34;&gt;reactivex与asyncio结合使用的疑惑&lt;/a&gt;吗？DS2的预告片谁看懂了？）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;人情的正当性并非所有人情交换都违反规则&#34;&gt;人情的正当性：并非所有人情交换都违反规则&lt;/h2&gt;
+&lt;p&gt;严格意义上讲，只要不涉及对公共规则的违反，没产生&lt;a href=&#34;https://en.wikipedia.org/wiki/Externality&#34;&gt;外部性效应&lt;/a&gt;，是纯粹的互助，就没有不公平一说。我“从白到黑”举三个例子，都是真事。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;白的例子：有一天突然下了大雨，下班高峰期打车也排队，我决定撑伞走路回家，麻烦的是那天正好要带些东西回家，边打伞边提东西挺狼狈。刚走出公司，路旁缓缓停下一辆车，车窗摇下，是一位和我关系不错的同事，他招呼我上车送我回家，我接受了，我俩在车上聊地挺开心。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;群友举了个绝妙的灰色例子：外国小镇中，开车的小违章被警察看到，警察能否高抬贵手免开一百刀的罚单，取决于开车者和警察的个人交情（小镇都是熟面孔）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;黑的例子就很多了，就是常规意义上的我们所认知的有腐臭味的那种，走后门，找关系，勾结，拉帮结派……&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我想我们能达成一致：白例子令人感到温馨，黑例子应被人不齿。我们在开罚单这个例子上也许有分歧，它轻微违反了公共规则。就交通罚款的设立目的来说，是为了给违规行为增加负反馈，警察因人情免除罚款，可能使开车者未来继续违规，这对他人不公平。但谁又能知道是否良心谴责和对警察的人情债可替代现金罚款，约束开车者呢。&lt;/p&gt;
+&lt;p&gt;至此我可以进一步澄清部分主旨：&lt;strong&gt;我希望大家不要因人情中黑的部分而厌恶所有互助行为&lt;/strong&gt;（我想也不会有人这么做）。也许这时你发现我把“好的互助”也放在了人情中（虽然我认为人情不代指行动而代指行动的产物），和你理解的“人情是坏的、有利益勾结的”不一样。因为这些“好的互助”也符合我的人情体系，你帮我，我帮你，天经地义，这是抽象的，没有好坏。&lt;/p&gt;
+&lt;h2 id=&#34;建模人情&#34;&gt;建模人情&lt;/h2&gt;
+&lt;p&gt;我对“人情”的理解（定义）是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;一种可积累、使用的资源，难以量化，但可以&lt;a href=&#34;https://en.wikipedia.org/wiki/Qualitative&#34;&gt;质化&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;类似货币，是“价值等价物”，可借用金融概念解释。A帮了B，A在B心里积累了人情，B对A负人情债。&lt;/li&gt;
+&lt;li&gt;因为是资源，所以可以作为衡量行动成本收益天平的砝码。&lt;/li&gt;
+&lt;li&gt;将社会关系抽象为有向图，人是节点，人情是边的权值。因为是有向图，所以A和B可互相独立地积累人情。&lt;/li&gt;
+&lt;li&gt;没有中央记账。假设每个人对数值的衡量相同（A与B对于同样的人情点数所认为的重要性相同），每个人的人情账本上对同一边的权值大小（或同一件事所价值的人情量）理解可不同。（A觉得随手帮B无所谓，B觉得A是大恩人）&lt;/li&gt;
+&lt;li&gt;人情通过互惠reciprocity行动相互积累，单次施惠时，一方选择提出给予，一方选择同意接受与否，口语称“帮忙”。&lt;/li&gt;
+&lt;li&gt;因为不像金融体系中有法律和契约保证，人情的“返还”概率（或倍率）可用接受者社会信用来评价。自己对自己的信用评价和他人对自己的信用评价不同。&lt;/li&gt;
+&lt;li&gt;人情系统可超越个人，在组织乃至国家层面成立（一定有个我不知道的社会学名词讲这个概念）。&lt;/li&gt;
+&lt;li&gt;人情资源也可在关系亲密者间转移或分摊，或者说代理使用？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最后建模的计算公式：
+&lt;strong&gt;A在B处积累的人情 =&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;A账: A认为B的信用 * A认为“A帮过B的忙的总价值”&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;B账: B的实际信用 * B认为“A帮过B的忙的总价值”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对于A、B两人，有两个方向*两个账本（信用评价，帮忙价值）=四个值（打星为主观判断）：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;编号&lt;/th&gt;
+&lt;th&gt;记账主体&lt;/th&gt;
+&lt;th&gt;给予者&lt;/th&gt;
+&lt;th&gt;接受者&lt;/th&gt;
+&lt;th&gt;帮忙价值*&lt;/th&gt;
+&lt;th&gt;接受者信用*&lt;/th&gt;
+&lt;th&gt;最终人情值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;Ab价&lt;/td&gt;
+&lt;td&gt;Ab信&lt;/td&gt;
+&lt;td&gt;Ab价*Ab信&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;A欠B&lt;/td&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;Aa价&lt;/td&gt;
+&lt;td&gt;Aa信&lt;/td&gt;
+&lt;td&gt;Aa价*Aa信&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;编号&lt;/th&gt;
+&lt;th&gt;记账主体&lt;/th&gt;
+&lt;th&gt;给予者&lt;/th&gt;
+&lt;th&gt;接受者&lt;/th&gt;
+&lt;th&gt;帮忙价值*&lt;/th&gt;
+&lt;th&gt;接受者信用*&lt;/th&gt;
+&lt;th&gt;最终人情值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;Bb价&lt;/td&gt;
+&lt;td&gt;Ba信&lt;/td&gt;
+&lt;td&gt;Bb价*Ba信&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;B欠A&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;Ba价&lt;/td&gt;
+&lt;td&gt;Bb信&lt;/td&gt;
+&lt;td&gt;Ba价*Bb信&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;分析给予和接受的决策&#34;&gt;分析给予和接受的决策&lt;/h3&gt;
+&lt;p&gt;人情的积累是个相互给予的过程，每次给予成立，是双向正反馈，路越走越宽，两人间关系纽带越来越紧密。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给予有正向动机：利他主义altruism（无私） + 利己主义egoism （期待回报）+ 回报感激（Ta帮过我）&lt;/li&gt;
+&lt;li&gt;同意接受有好处：实际的好处 + 感激之情（心里暖暖的）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因为没有中央记账，双方在对方处积攒的人情（编号2，编号4）不能达成相互抵消的共识，仅能在自己的小账本里打算盘（1抵2，3抵4）。&lt;/p&gt;
+&lt;p&gt;抛开社会关系造成的压力（真能抛开？），给予方A对一次给予决策有完全的主动性。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若给予完全由利己主义驱动，A在帮助B时不能得知该行动真正的价值（编号4，两个因素都由B决定），只能参照判断。&lt;strong&gt;这种“不清不楚”的特征让很多人皱眉远离，但这只是利己动机的部分，给予者可以让利他主义占动机上风，享受“做好事真开心”的感觉。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;感谢利他主义的存在，“无偿（不期待回报）帮助陌生人”这一美好的事得以发生。&lt;/li&gt;
+&lt;li&gt;根据我的生活经验，实际情况下给予的动机一般为利他与利己混合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;抛开社会关系造成的压力，接受方B也有完全的主动性选择是否接受。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;接受的正向动机 = 实际的好处 + 感激之情 - 增加的人情债&lt;/li&gt;
+&lt;li&gt;B对A增加的人情债（编号1）也是不清不楚的参照判断，&lt;strong&gt;我猜厌恶人情的人大多是在决策是否接受时激发了&lt;a href=&#34;https://en.wikipedia.org/wiki/Loss_aversion&#34;&gt;损失厌恶&lt;/a&gt;，这很合理&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我认为坏东西大多是利用社会关系的杠杆从人情中单方面牟利的，比如双方有不平等关系，优势方总可以利用压力强迫弱势方服从，优势方在给予（PUA-强迫给予信息）和接受（抢夺）都强势。&lt;/p&gt;
+&lt;h3 id=&#34;现实中的人情点数交换机制&#34;&gt;现实中的人情点数交换机制&lt;/h3&gt;
+&lt;p&gt;我觉得这段用游戏做比喻最合适。现代大型游戏，比如MMORPG或单机游戏，一般不仅仅只有交易系统一个&lt;strong&gt;物品交换机制&lt;/strong&gt;。比如MMORPG里有公会、势力组织，遵照“贡献度”机制，你可以通过帮助组织赚取贡献度，再&lt;strong&gt;消耗&lt;/strong&gt;贡献度交换特殊物品。单机里我能想到两种：1. RimWorld有&lt;a href=&#34;https://rimworldwiki.com/wiki/Factions#Faction_Relationships&#34;&gt;阵营关系&lt;/a&gt;机制，当你受到袭击时，可&lt;strong&gt;消耗&lt;/strong&gt;关系呼叫友方阵营支援。2. 很多养成游戏里和NPC的好感度&lt;strong&gt;只升不降&lt;/strong&gt;
+，达到一定程度后解锁新功能（如女神异闻录5里&lt;a href=&#34;https://zh.moegirl.org.cn/zh-hant/%E5%B7%9D%E4%B8%8A%E8%B4%9E%E4%BB%A3&#34;&gt;让老师帮忙洗衣服&lt;/a&gt;&amp;hellip;&amp;hellip;）。我认为现实中的人情交换机制是只升不降好感度系统和动态贡献度系统的混合。&lt;/p&gt;
+&lt;p&gt;为什么玩家愿意使用这些机制？因为有&lt;strong&gt;金钱换不来的特殊物品&lt;/strong&gt;做奖励。现实里金钱买不到的特殊资源比游戏只多不少，这些资源有各种各样的原因无法市场化。资源并不一定是实物，倒不如说我更喜欢信息，因为交换代价很小但可能价值比较大。没有这些花哨东西，游戏照样能通关；现实只是用交易系统，仍然能正常生活。这机制它就在那，使用的决定权在你。我是本着不用白不用的态度去用的，而且和背景差异大的人接触能学到很多可能一辈子都不会了解的信息。&lt;/p&gt;
+&lt;h2 id=&#34;社交好处多&#34;&gt;社交好处多&lt;/h2&gt;
+&lt;p&gt;刚开始写大纲时，我把人情和社交混为一谈，现在我认为积累人情的互惠只是各类社交行动中的一种，是集合包含关系。如果把人情和社交混起来，则“鼓励积累人情”变成了“鼓励不要自我封闭，去社交”，我也被误导着收集了一些资料。这些资料质量还挺高，我要把它们贴在这里，也不枉收集了。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;弱链接weak ties&lt;a href=&#34;https://scholar.google.com/scholar?q=+weak+ties+benefit&#34;&gt;好处多多&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;统计表明大部分求职者的工作由“非亲密关系”，即弱链接推荐提供。&lt;/li&gt;
+&lt;li&gt;将社会关系绘制为无向图，关系紧密的群体间的关系多由群体中个人的弱链接提供。而这些人因占据两群体间的“关口”位置，（在模拟资源分配中）比其他节点有优势。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;人情交换机制可作为交易机制的保险。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当交易机制意外失效时（如区域封锁导致物资供给不足）&amp;hellip;&amp;hellip;&lt;/li&gt;
+&lt;li&gt;结婚的社会意义就是两个家庭|家族的“相互保”。———— &lt;a href=&#34;https://book.douban.com/subject/35837685/&#34;&gt;《文明的逻辑》 陈志武&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;社交纽带使得脆弱的个体组成团队，更好地抵御风险。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们的身体将社交视为必需品而非嗜好品。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;著名的科普视频系列Kurzgesagt中有两集谈到相关内容：&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=n3Xv_g3g-mA&amp;amp;t=85s&#34;&gt;Loneliness&lt;/a&gt;：孤独如同饥饿，是自然生理需求，驱使我们为了社交而行动，这个演化可能是由远古时期“不合作就会死”的恶劣环境选择出来的。比较要命的是，研究表明社交不足会让大脑产生压力，而压力会损害健康。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=WPPPFqsECz0&amp;amp;t=120s&#34;&gt;An Antidote to Dissatisfaction&lt;/a&gt;：感激是治愈不满的良药，而感激或许源于社交行为中的互惠。&lt;/li&gt;
+&lt;li&gt;不过我发现，每个人的社交需求槽长度是不一样的，想办法满足自己的槽就行了。现在我们利用网络可以轻松找到符合自己兴趣的话题并参与进去，现实里不见人也可以。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;说到&lt;strong&gt;连结&lt;/strong&gt;，我一定要提一下&lt;del&gt;公主连结&lt;/del&gt;&lt;a href=&#34;https://www.gcores.com/collections/75&#34;&gt;死亡搁浅&lt;/a&gt;这个游戏，&lt;del&gt;游戏制作人&lt;/del&gt;监督&lt;a href=&#34;https://zh.wikipedia.org/zh-hans/%E5%B0%8F%E5%B2%9B%E7%A7%80%E5%A4%AB&#34;&gt;小岛秀夫&lt;/a&gt;用他天才般的大脑构想了一个濒临崩溃的世界，让玩家随着操作的角色一起&lt;strong&gt;重新连接&lt;/strong&gt;各个分散的人类据点，并从中体会&lt;strong&gt;纽带&lt;/strong&gt;的重要性。它明明是个单人游玩的单机游戏，却能让玩家体会到与NPC乃至其他玩家之间的&lt;strong&gt;连结&lt;/strong&gt;，从而不会感到孤独。感兴趣请务必玩一下。&lt;/p&gt;
+&lt;h2 id=&#34;应用题&#34;&gt;应用题&lt;/h2&gt;
+&lt;h3 id=&#34;正常社交就能积累人情无需应酬&#34;&gt;正常社交就能积累人情，无需应酬&lt;/h3&gt;
+&lt;p&gt;聊天时一位群友对我的反驳是“我不想应酬”，我先搜了“应酬”的字典义：1.交际来往2.以礼待人3.私人开的宴会。啊呀，如果他指的是含义一即社交的话，我只好用“社交是必需品”来劝说他了。但是若按现代人思维理解，加上我对他工作地点的了解，大概是工作相关的酒场应酬吧，不是好事啊，确实不该去。&lt;/p&gt;
+&lt;p&gt;互惠并不需要强迫自己，甚至会乐意这样做，因为是互惠，有来有回。我倾向于通过聊天来交换信息，和谁都能聊两句：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我成了面馆里的熟客，与老板聊天得知老板愿意为熟客按兰州拉面的宽度特别准备面条，并爱上了二粗宽度的牛肉面。&lt;/li&gt;
+&lt;li&gt;和公司、小区物业的保洁保安聊家常，混个脸熟，物业有什么打算，打听一下就提前知道了。&lt;/li&gt;
+&lt;li&gt;只要有机会，我会在打车时和司机聊天，问问滴滴又搞了什么我看不懂的操作，师傅您怎么看。😂&lt;/li&gt;
+&lt;li&gt;取快递人不多时我会报快递号取件而不是在手机里操作，顺便聊两句。&lt;/li&gt;
+&lt;li&gt;在电梯里和邻居独处，聊两句，夸夸孩子夸夸狗，都没有夸夸衣服发型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这算外向吗？我觉得还行吧，开口说话成本很低，但聊天的潜在收益可能很高，我是务实又好奇的人。我知道一位比我更善于和陌生人交谈的人——&lt;a href=&#34;https://twitter.com/freiheityu&#34;&gt;余晟老师&lt;/a&gt;
+，他时不时在推特上分享自己和不同国家的陌生人交流的事。嗯&amp;hellip;&amp;hellip;不想聊天？也行，怀着一颗善良的心，他人有困难能帮就帮，行动比耍嘴皮子更能让人印象深刻，你默默做过的好事，和你一样的好人都会默默记在心里。对了，Kurzgesagt有期视频专门讲怎么交朋友，有需就看看：&lt;a href=&#34;https://www.youtube.com/watch?v=I9hJ_Rux9y0&#34;&gt;Why You Are Lonely and How to Make Friends&lt;/a&gt;。如果你真的想积累黑色的人情和关系，我觉得我不够格教（笑），去书店里看看那本《厚黑学》下架了吗？&lt;/p&gt;
+&lt;h3 id=&#34;如何谨慎地欠人情债&#34;&gt;如何谨慎地欠人情债&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;A在B处积累的人情 =&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;A账: A认为B的信用 * A认为“A帮过B的忙的总价值”&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;B账: B的实际信用 * B认为“A帮过B的忙的总价值”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;聊天时，群友指出我只说了欠人情债的好处，丝毫不说还人情债时的坏处，我坏。我补充一下，首先我认为人情并没有&lt;strong&gt;还&lt;/strong&gt;债这一概念，人情系统是通过相互给予实现的，往好处想，在没有套路的童话世界里，给予的行为是由利他主义和感激之情驱动的。&lt;/p&gt;
+&lt;p&gt;但我们也提到了给予的利己主义动机，社会关系的压力，损失厌恶等成本衡量概念，不能当作没说过。好吧，既然我们已经使用了债务概念，且让我继续用它打比喻，装作一个精明的人，考虑成本收益平衡。&lt;/p&gt;
+&lt;p&gt;首先列一下信用贷款的大致公式（A借款给B，期望从B上收益），以A对B信用评价为核心，A会从风险和收益两方面考虑：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A对B的信用评价 正比于 A对B贷款授信额度 （防止B还不了款的风险控制）&lt;/li&gt;
+&lt;li&gt;A对B的信用评价 反比于 A与B签署的贷款协议的利率 （从B上的预期收益更大，才能平衡风险）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所有网络借贷平台，日利率滚起来都比正常银行的信用卡月利率高。网络借贷平台对贷款客户的信用评价低，走的是高风险高收益模型。银行对信用卡客户信用评价高，不担心风险，用低利率鼓励客户使用信用卡。&lt;/p&gt;
+&lt;p&gt;那么我们作为办理信用贷款的B：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;我们会首选大型商业银行作为贷款方（前提是我们的信用尚可），因为我们不希望我们欠的债务（A帮过B的忙的总价值）（A的预期收益）在A看来比我们认为的多（还款利率设定的高）。类比到人情，我们&lt;a href=&#34;https://www.youtube.com/watch?v=LHfF7slQhh4&#34;&gt;不会选择接受&lt;/a&gt;看低我们、想从我们身上获取更多的人的给予。&lt;/li&gt;
+&lt;li&gt;为了顺利还款，维持信用评级，我们不会借超过还款能力的金额。银行追求低风险，我们想贷也不会贷给我们。但是有坏借贷平台，愿意给我们贷明显离谱的金额，代价是超高利率，如果还不上的话&amp;hellip;&amp;hellip;请脑补各种催债情景。类比到人情，我们不会选择接受提供给我们的明显无法偿还的给予。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;接受的主动权在我们这，即使A再怎么希望把我们变成摇钱树，我们不咬钩就行。例外是引入社会关系压力后的场景，A强迫我们接受，这怎么办，不好说，我建议远离A，到A观测不到或触及不到的地方。&lt;/p&gt;
+&lt;h3 id=&#34;是否应使用父母的人情&#34;&gt;是否应使用父母的人情&lt;/h3&gt;
+&lt;p&gt;现在回答开头提到的问题，这是个主观题，没有正确答案，我试着用我的模型里回答。这时我发现公式应该再加一个动机变量“期望回报系数|认为被期望回报系数”，但我懒了不想改上面的文字了。父母是给予方，我们是接受方，为了突出主要矛盾，假设：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;“帮忙价值”极高，孩子无法偿还。&lt;/li&gt;
+&lt;li&gt;父母对孩子和孩子对自身的“信用评价”都高。&lt;/li&gt;
+&lt;li&gt;父母被拒绝或期望落空都会失望。&lt;/li&gt;
+&lt;li&gt;孩子在判断动机失败时，会做出实际与自身利益相悖的决策，会失望。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;即人情债数值极高，关键在“期望回报系数”。对父母和孩子两个动机变量的取值分别假设，排列组合共四种场景，由孩子决策是否选择接受：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;父母的真正动机：1.利他（你是我们孩子，我们无偿给你资源） 2.利己（我们期望从你身上获得投资回报）&lt;/li&gt;
+&lt;li&gt;孩子对父母的动机判断（人情债计算）：1.父母不求回报 2.父母期望回报&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;其实孩子用来决策的信息只有自己的判断，加上父母真正动机，只有“父母和孩子都认为不期望回报”这一种情况下孩子会接受，且未来不会让父母失望。其他三种情况要么父母立刻失望，要么未来失望。孩子失望和不失望二比二对半开，还行。当然父母和孩子还可以通过谈心来统一判断。&lt;/p&gt;
+&lt;p&gt;之前群聊时还引入了“孩子有无能力拒绝父母并自立”，“是否喜爱父母”，“父母是否有控制欲”之类的变量。抛开模型的话，如果我是孩子，场景是就业，我更倾向于不让父母伤心，接受并且把父母提供的选择作为保底，自己尝试符合自己兴趣的风险更大收益更高的机会。&lt;/p&gt;
+&lt;p&gt;我想大部分父母对孩子的爱还是无偿的吧。&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/thought/">thought</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>信息在网上随风飘飞</title>

@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://boholder.github.io/tags/blog/</loc>
-    <lastmod>2022-10-15T23:07:30+08:00</lastmod>
+    <lastmod>2022-12-10T22:03:29+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/</loc>
-    <lastmod>2022-10-15T23:07:30+08:00</lastmod>
+    <lastmod>2022-12-10T22:03:29+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -29,7 +29,10 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/categories/thought/</loc>
-    <lastmod>2022-10-15T23:07:30+08:00</lastmod>
+    <lastmod>2022-12-10T22:03:29+08:00</lastmod>
+  </url><url>
+    <loc>https://boholder.github.io/blogs/favor/</loc>
+    <lastmod>2022-12-10T22:03:29+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/nformation-flies-in-the-wind-on-the-internet/</loc>
     <lastmod>2022-10-15T23:07:30+08:00</lastmod>
