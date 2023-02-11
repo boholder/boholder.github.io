@@ -23,10 +23,158 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Sat, 10 Dec 2022 22:05:35 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 11 Feb 2023 20:38:20 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
+        
+            <item>
+                <title>用Maven reactor命令行选项节约build时间</title>
+                <link>https://boholder.github.io/blogs/maven-build-advance/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/maven-build-advance/</guid>
+                <pubDate>Sat, 11 Feb 2023 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+                
+                    <description>&lt;h2 id=&#34;微服务开发下的build困扰&#34;&gt;微服务开发下的build困扰&lt;/h2&gt;
+&lt;p&gt;前提：Java开发，Maven做依赖管理，JetBrains IntelliJ IDEA做IDE&lt;/p&gt;
+&lt;p&gt;在Java微服务开发下，项目开发结构(repo)可能有两种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;所有模块(maven module)，包括服务（Spring Application）和自己开发的依赖模块，都塞在一个项目里。
+&lt;ul&gt;
+&lt;li&gt;方便管理各模块间的关系，方便写代码&lt;/li&gt;
+&lt;li&gt;git log 很乱很多，但也方便集中检查&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;服务和自己开发的依赖模块独立在不同项目里
+&lt;ul&gt;
+&lt;li&gt;不方便管理模块关系&lt;/li&gt;
+&lt;li&gt;git log 少又清晰，只有该组件相关的提交&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;（以我的工作经历来看，两种结构怎么选好像和开发组的人员结构有关：
+如果负责不同服务的小组紧密围绕在开发组长周围，选集中式的面儿大；
+如果小组间相互不太紧密，比如这个项目是不同部门联合开发之类，选分散式的面儿大。）&lt;/p&gt;
+&lt;p&gt;现在假设：&lt;code&gt;服务A -依赖-&amp;gt; 依赖B&lt;/code&gt;。现在我想改依赖B的代码，启动服务A检查修改效果。
+（假如B不方便写单测，比如写了个自定义某框架相关的配置类，只能启动看看效果）
+正确的操作步骤为&lt;strong&gt;先build B，再debug run A&lt;/strong&gt;，虽然JetBrains会监控服务A的代码变化并在run时rebuild A，但它不会（至少默认不会）监控A依赖的B的变化。
+这个算常识，对吧，但人总有大意的时候，我已经不止一次忘记先build B，然后debug A它行为就死活不变，直到花很长时间发现这个原因。&lt;/p&gt;
+&lt;p&gt;怎样实现启动A时让B自动build？&lt;/p&gt;
+&lt;p&gt;对分散式结构，我至今没什么好招，都跨文件目录了，感觉只有用外部工具才能实现，至今没找到此类工具或Maven plugin/ IDEA plugin。
+如果下个我参与的项目是分散式，我打算自己写一个工具。还好现在我所在的组采用集中式结构。&lt;/p&gt;
+&lt;p&gt;首先想到的是Maven的&lt;a href=&#34;https://maven.apache.org/guides/mini/guide-multiple-modules.html&#34;&gt;reactor&lt;/a&gt;内部机制，
+如果在顶级（maven root）项目上build，reactor就能根据拓扑排序依次build所有模块。
+现在出现了另一个问题：浪费时间在build不需要的模块上。
+比如我组的项目里有个胖服务，光build它就10分钟，这样会让开发体验变得不流畅。&lt;/p&gt;
+&lt;p&gt;Maven提供了一些&lt;a href=&#34;https://maven.apache.org/guides/mini/guide-multiple-modules.html#command-line-options&#34;&gt;命令行选项&lt;/a&gt;实现这种需求。
+我没能找到一个讲得非常明白的博客，所以自己写一篇。&lt;/p&gt;
+&lt;h2 id=&#34;maven-reactor-cmd-options&#34;&gt;Maven reactor cmd options&lt;/h2&gt;
+&lt;p&gt;这里有一个&lt;a href=&#34;https://github.com/boholder/sample-multiple-module-proj&#34;&gt;示例项目&lt;/a&gt;，它的依赖结构和reactor给出的root build顺序是：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dep-util
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dep-service  dep-util2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; |      \      /
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;app-1     app-2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[INFO] Archetype - sample-multiple-module-proj                            [pom]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[INFO] dep-util                                                           [jar]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[INFO] dep-service                                                        [jar]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[INFO] app-1                                                              [jar]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[INFO] dep-util2                                                          [jar]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[INFO] app-2                                                              [jar]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;以此项目来解释各选项的作用，注意这里只挑一般会用到的选项写，全部选项请看链接（没写的都是几乎不会用的选项）。&lt;/p&gt;
+&lt;h3 id=&#34;projects&#34;&gt;projects&lt;/h3&gt;
+&lt;p&gt;特别指定一个模块的子集去build，不build其他的。
+如：&lt;code&gt;mvn --projects &amp;quot;dep-util, dep-util2&amp;quot; clean install&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;[INFO] dep-util ........................................... SUCCESS [  0.995 s]
+[INFO] dep-util2 .......................................... SUCCESS [  0.084 s]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这个选项比较万能，不会沿依赖链传递build，指定什么build什么。
+比如我改了&lt;code&gt;dep-util2&lt;/code&gt;，但没改接口，所以&lt;code&gt;app-2&lt;/code&gt;不需要改代码也不需要build，选这个命令是最适合的。&lt;/p&gt;
+&lt;h3 id=&#34;resume-from&#34;&gt;resume-from&lt;/h3&gt;
+&lt;p&gt;这个选项本意是指定一个build fail的callback，“如果主build命令失败，从root build顺序的中间指定模块开始重新尝试build”。
+但是它可以单独用，效果是直接从中间开始build。单独用到的机会很少，因为从指定的中间到底部可能包含我们不想build的模块。
+比如我们改了&lt;code&gt;dep-util&lt;/code&gt;和&lt;code&gt;app-1&lt;/code&gt;，&lt;code&gt;mvn --resume-from dep-util clean install&lt;/code&gt;，等于从顶build到尾，把&lt;code&gt;dep-util2&lt;/code&gt;和&lt;code&gt;app-2&lt;/code&gt;也build了。&lt;/p&gt;
+&lt;h3 id=&#34;also-make&#34;&gt;also-make&lt;/h3&gt;
+&lt;p&gt;这个选项用于想同时build依赖和服务，意为“也build主命令目标的依赖”，目标选服务，会向下递归传递。比如：改了&lt;code&gt;dep-util&lt;/code&gt;和&lt;code&gt;app-1&lt;/code&gt;，
+&lt;code&gt;mvn --projects app-1 --also-make clean install&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;[INFO] dep-util ........................................... SUCCESS [  0.824 s]
+[INFO] dep-service ........................................ SUCCESS [  0.106 s]
+[INFO] app-1 .............................................. SUCCESS [  0.109 s]
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;also-make-dependents&#34;&gt;also-make-dependents&lt;/h3&gt;
+&lt;p&gt;这个是&lt;code&gt;--also-make&lt;/code&gt;的相反选项，“也build使用主命令目标的模块”，目标选依赖，会向上传递。
+如：&lt;code&gt;mvn --projects dep-util --also-make-dependents clean install&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;[INFO] dep-util ........................................... SUCCESS [  1.010 s]
+[INFO] dep-service ........................................ SUCCESS [  0.105 s]
+[INFO] app-1 .............................................. SUCCESS [  0.109 s]
+[INFO] app-2 .............................................. SUCCESS [  0.097 s]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;用在接下来要在本地环境同时开多个服务做测试的情况（微服务一个请求串多个服务常有的事）。&lt;/p&gt;
+&lt;h2 id=&#34;尾&#34;&gt;尾&lt;/h2&gt;
+&lt;p&gt;把mvn命令配到IDEA的服务启动配置的&amp;quot;before run&amp;quot;就行了。
+建议对这个服务保存两个配置，如果没改代码每次启动都build也不是我们想看到的。
+另外提醒一下，我们有时会用鼠标在IDEA的Maven插件的界面中，运行Maven命令弹窗-&amp;gt;最右选择目标模块，
+这个操作不等于加&lt;code&gt;--projects&lt;/code&gt;选项，即比如&lt;code&gt;mvn --also-make clean install&lt;/code&gt;+&lt;code&gt;选中app-1&lt;/code&gt;是无效的，只build &lt;code&gt;app-1&lt;/code&gt;。&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/programming/">programming</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/programming/">programming</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/java/">java</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>我对人情的理解</title>
@@ -3349,6 +3497,31 @@ Time: 2015-07&lt;/p&gt;
                                     <category domain="https://boholder.github.io/tags/blog/">blog</category>
                                 
                             
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://boholder.github.io/blogs/dear-to-step-into-the-underneath/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/dear-to-step-into-the-underneath/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+                
+                    <description>&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
                         
                     
                 
