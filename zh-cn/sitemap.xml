@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://boholder.github.io/tags/blog/</loc>
-    <lastmod>2023-02-11T20:36:26+08:00</lastmod>
+    <lastmod>2023-02-12T10:20:48+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/</loc>
-    <lastmod>2023-02-11T20:36:26+08:00</lastmod>
+    <lastmod>2023-02-12T10:20:48+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -29,10 +29,10 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/tags/java/</loc>
-    <lastmod>2023-02-11T20:36:26+08:00</lastmod>
+    <lastmod>2023-02-11T20:47:44+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/programming/</loc>
-    <lastmod>2023-02-11T20:36:26+08:00</lastmod>
+    <lastmod>2023-02-12T10:20:48+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -45,7 +45,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/categories/programming/</loc>
-    <lastmod>2023-02-11T20:36:26+08:00</lastmod>
+    <lastmod>2023-02-12T10:20:48+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -57,8 +57,11 @@
                 href="https://boholder.github.io/categories/programming/"
                 />
   </url><url>
+    <loc>https://boholder.github.io/blogs/what-i-learned-from-putgun/</loc>
+    <lastmod>2023-02-12T10:20:48+08:00</lastmod>
+  </url><url>
     <loc>https://boholder.github.io/blogs/maven-build-advance/</loc>
-    <lastmod>2023-02-11T20:36:26+08:00</lastmod>
+    <lastmod>2023-02-11T20:47:44+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/categories/thought/</loc>
     <lastmod>2022-12-10T22:06:29+08:00</lastmod>
@@ -195,7 +198,7 @@
     <lastmod>2021-05-20T17:26:31+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/dear-to-step-into-the-underneath/</loc>
-    <lastmod>2023-02-11T18:39:57+08:00</lastmod>
+    <lastmod>2023-02-11T20:47:44+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>

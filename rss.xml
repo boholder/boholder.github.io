@@ -23,10 +23,159 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Sat, 11 Feb 2023 20:38:20 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 12 Feb 2023 10:23:47 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
+        
+            <item>
+                <title>我在开发Puntgun中学到的东西</title>
+                <link>https://boholder.github.io/blogs/what-i-learned-from-putgun/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/what-i-learned-from-putgun/</guid>
+                <pubDate>Sat, 11 Feb 2023 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+                
+                    <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/boholder/puntgun&#34;&gt;Puntgun&lt;/a&gt;是我写的一个命令行工具，Python语言，帮助推特账号管理自动化。
+从2022年二月底开始写，到2022年十一月底碰到一个&lt;a href=&#34;https://github.com/boholder/puntgun/issues/17&#34;&gt;对我来说很难实现的编程问题&lt;/a&gt;，
+加上当时马斯克成功收购推特，之后心思就不再它上面了。2023年2月9日，推特不再提供免费API，算是帮我下手了结了这个项目。
+（从十一月的新闻我就判断马斯克不倾向于开放生态，不利好我这项目，你看果然吧，但确实没想到能做这么绝。）
+这是我第一个尝试运营社区的项目，然后事情还没开始就结束啦。😂
+项目框架已经写好了，可以自定义规则，示范用的规则没写几条就碰到了那个难题，算是基本实现目标吧。&lt;/p&gt;
+&lt;p&gt;失败是成功之母，前提是记得总结经验，故有此文与大家分享，如果读文有感而发，请务必在评论区评论，让我学习一下你的经验。&lt;/p&gt;
+&lt;h2 id=&#34;第三方开发风险大&#34;&gt;第三方开发风险大&lt;/h2&gt;
+&lt;p&gt;虽然但是，推特一直是开放平台的标杆啊啊啊，oauth和雪花算法都是它给业界贡献的，开发者API全，还有官方维护API库（没Python语言）。
+我觉得任谁都想不到推特能在马斯克收购后转变这么大，或者我眼光浅没有从投资角度去分析推特居然经营不善到要被收购。
+第三方开发风险大，嗯，这回栽个大的。&lt;/p&gt;
+&lt;p&gt;2022年初的选题思考：开发面向用户的应用型软件，比开发面向开发者的库更容易找到还没人做的空缺，也更容易吸引人气。
+我是在手动Block各种奇怪Follower时发现这个选题的，像我这种小账号每次意外被大量Fo，手动筛选Follower都要花半小时，肯定有很多用户苦于没法自动化管理。
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Punt_gun&#34;&gt;Punt gun&lt;/a&gt;巨型猎鸟霰弹枪，用规则批量Block，我看行。后来自然而然地扩展成多用途工具，mute、打印、调用HTTP，想得很美。&lt;/p&gt;
+&lt;p&gt;以后慎重选择依赖平台做第三方开发，至少不能依赖商业平台，等于把项目的命拱手让给不可控风险。&lt;/p&gt;
+&lt;h2 id=&#34;原型与便签&#34;&gt;原型与便签&lt;/h2&gt;
+&lt;p&gt;《程序员修炼之道》-第二章：注重实效的途径-原型与便签（翻了下书第一版也有这节）。
+这节讲的是：&lt;strong&gt;如果使用原型实验可行性，记得贴个便签时刻提醒自己这是个需要无情丢掉的原型，不要投入太多，不要直接基于它做开发。&lt;/strong&gt;
+我读过这书，记得这节，但我犯了这个错误，错误导致了那个至少占50%责任的编程难题。&lt;/p&gt;
+&lt;p&gt;这个难题是这样形成的：&lt;/p&gt;
+&lt;p&gt;我这个工具会大量调用推特API，确实是I/O bound项目。Python有现成又好用的nio包，asyncio。
+我用的叫tweepy的第三方推特API库，提供两种调用，一种是&lt;a href=&#34;https://docs.tweepy.org/en/latest/client.html&#34;&gt;blocking I/O&lt;/a&gt;，一种是&lt;a href=&#34;https://docs.tweepy.org/en/latest/asyncclient.html&#34;&gt;asyncio形式&lt;/a&gt;的。
+2022年初，我不会asyncio，然后我想先跑通请求验证一下可行性，之后再改成nio，就选择了blocking形式的tweepy API。
+显然我没在显示器上贴便签，把这事给忘了，在开发过程中一直没替换成nio。&lt;/p&gt;
+&lt;p&gt;这个工具的基本功能是“输入推文或用户信息，多个规则匹配，决定对其的操作”，是类似责任链模式的那么一种东西。
+根据我的工作经验判断，这个模式很像应用网关的过滤器链，可以仿照着开发。
+在我的Java开发工作中，reactive形式的WebFlux库（或RxJava库）是合适又方便的框架。
+Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&lt;/a&gt;规范的&lt;a href=&#34;https://rxpy.readthedocs.io/en/latest/&#34;&gt;RxPy&lt;/a&gt;框架，好，用它。&lt;/p&gt;
+&lt;p&gt;&amp;hellip;&amp;hellip;直到我在开发将近完成时才发现rxpy和asyncio不能兼容。经过详尽搜索后（有兴趣请看&lt;a href=&#34;https://github.com/ReactiveX/RxPY/issues/669&#34;&gt;我提的issue&lt;/a&gt;），我面临着：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在rxpy的asyncio库中实现我需要但没有的API | 在rxpy库中实现兼容asyncio的接口 =
+&lt;ul&gt;
+&lt;li&gt;了解Reactivex规范的实现方式 +&lt;/li&gt;
+&lt;li&gt;精通asyncio +&lt;/li&gt;
+&lt;li&gt;精通rxpy项目 =&lt;/li&gt;
+&lt;li&gt;我还没这个本事，根据issues，贡献这个库的人都有在其他语言的rx库中贡献或工作过的经历。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;不考虑第一方兼容，两者独立运行，通过threading库或multiprocessing库协调 =
+&lt;ul&gt;
+&lt;li&gt;首先得让它俩都正常跑起来（这很难） +&lt;/li&gt;
+&lt;li&gt;精通这俩库中的一种 +&lt;/li&gt;
+&lt;li&gt;实现一种数据传递方式，在两机制间传递信息（单用Queue只能通一边，怕是要上共享内存+锁那种，这两边至少把数据来回倒腾两次，没有上限）=&lt;/li&gt;
+&lt;li&gt;俗话说的好，引入多线程就是引入至少一个bug，还自己实现多线程方面的内容，我不会，也不想引入，日后维护纯添麻烦。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;放弃rxpy（因为不能放弃nio），用asyncio重新写一遍关键代码（因为asyncio的特性，基本得全重写）。
+&lt;ul&gt;
+&lt;li&gt;如果推特没宣布关API，我打算用这种，但自己实现一种类似责任链机制也不简单。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;幸好，推特没有给我这个赎罪（？）的机会。这个错实实在在是我亲手埋下的，请大家务必记得做原型就贴便签。&lt;/p&gt;
+&lt;h2 id=&#34;认清需求后再推翻重写一遍&#34;&gt;认清需求后再推翻重写一遍&lt;/h2&gt;
+&lt;p&gt;我在五月二号，开始开发两个整月后，&lt;a href=&#34;https://github.com/boholder/puntgun/commit/ce1f395bd135d1484ba4332f6362fcac6dcd345c&#34;&gt;把项目推翻&lt;/a&gt;重新写了一遍，我认为这个决定做对了。&lt;/p&gt;
+&lt;p&gt;大家可以翻一下各种著名项目的最开始的commit，大概都差不多：模块划分频繁更改、各种rename&amp;hellip;&amp;hellip;说明开发刚开始，没人知道自己想做什么。
+软件开发学说里有系统边界这个概念，但我们的项目需求是内生的，没人告诉我们要写什么。
+怎么办，总之先写着，直到真正确定下想做什么之前全都是原型，是自己（dev）为自己（customer）写的prototype，启发自己的需求。
+等到你真正明白自己这个项目的系统边界了，再从头开始&lt;strong&gt;为这个目的而设计项目结构&lt;/strong&gt;，别不舍得。
+这里我再掉一下书袋，还是《程序员修炼之道》第二版，有个什么“（汽车）不要开出前灯范围”的章节，讲的是相关方面（推荐读这本书，很棒）。&lt;/p&gt;
+&lt;h2 id=&#34;列个计划表&#34;&gt;列个计划表&lt;/h2&gt;
+&lt;p&gt;自己的项目啥都想要，正常。但是我推荐列一个计划表，比如用&lt;a href=&#34;https://github.com/boholder/puntgun/projects/1&#34;&gt;github的project&lt;/a&gt;。
+自己的项目不会有排期，所以泳道图的堆栈式结构就足够了，用来给要做的事排优先级。
+也可以加一个泳道存灵感，总之把长期开发中想到的东西都写在计划表里，给大脑工作区腾地方，也不怕遗忘。&lt;/p&gt;
+&lt;p&gt;根据我的经验，选择困难时，无论是不知道选哪个实现方案还是买哪件商品，消去法（列条件限制）比较管用。
+用语言描述你的目标，列出各个方案，重点放在“这个方案会让项目增加什么复杂性|硬性限制”上，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这个方案能满足我哪些需要？&lt;/li&gt;
+&lt;li&gt;这个方案我是要自己实现还是使用现成的库？
+&lt;ul&gt;
+&lt;li&gt;自己实现，可行性？（时间等成本上）值得吗？&lt;/li&gt;
+&lt;li&gt;引入现成的库会对我的项目增加什么新约束？（切记上文的教训）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以先实现简单的，之后再做优化。简单的完成品比精致的半成品重要。
+前提是它被封装地很好，不会对外部造成影响。
+即使是自己在开发整个项目，封装依然可以帮忙节约大量的认知负担。
+设计好外围的交互关系后，一次只专注于一个模块的内部设计。
+拆分功能到足够小，小到能凭经验把它实现。&lt;/p&gt;
+&lt;h2 id=&#34;注释和单元测试拯救记忆力&#34;&gt;注释和单元测试拯救记忆力&lt;/h2&gt;
+&lt;p&gt;哈，这回可没人用覆盖率逼我写单测了，也没规定要求写那没人看的word接口文档。这回我的单测只能帮到一个同事——未来想重构的我。
+我记性不好，很不好的那种不好，每天下班我要记一下自己在做什么，睡一觉如同内存掉电，没记录的话要坐工位上半小时才能想起来。
+这项目，我就周末逮着点时间写写，要是不多写点单测和注释和TODO，怕是每周看到代码都像刚接手的项目，不可能持续小一年。
+至少对我来说，单测和注释（和计划表）是维持这个项目的一大重要支撑。&lt;/p&gt;
+&lt;h2 id=&#34;技术栈不熟可以抄&#34;&gt;技术栈不熟可以抄&lt;/h2&gt;
+&lt;p&gt;隔语言如隔山，换门语言做开发并不仅需要学会语言本身，工程结构，编码规范，CI中要用到的检查工具，开发、测试所依赖的框架&amp;hellip;&amp;hellip;基本要全换。
+自己一个个要素去搜，费时费力。有没有好办法？有，找一个已经成熟的和你的项目结构类似的项目，读+搜着学习它的工具配置和代码结构，抄到我们这边。
+这个技巧我用过两次了，我的&lt;a href=&#34;https://github.com/boholder/naming&#34;&gt;naming&lt;/a&gt;小工具是Rust写的命令行工具，抄的我记得应该是&lt;a href=&#34;https://github.com/databricks/click&#34;&gt;click&lt;/a&gt;，
+这次的puntgun是Python写的命令行工具，抄的&lt;a href=&#34;https://github.com/pdm-project/pdm&#34;&gt;PDM&lt;/a&gt;。
+通过抄成熟项目，避免了自己闭门造车搞出一个不成熟的开发环境（未知技术栈对我们来说是unknown unknown嘛，不看到就不会知道还有这么方便的工具），抄着学不丢人，半吊子才丢人。&lt;/p&gt;
+&lt;h2 id=&#34;后记之后干点啥&#34;&gt;后记：之后干点啥？&lt;/h2&gt;
+&lt;p&gt;经验总结到此为止，希望我的经历能对你开发个人项目有所帮助。&lt;/p&gt;
+&lt;p&gt;我买了块&lt;a href=&#34;https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html&#34;&gt;树莓派pico-W&lt;/a&gt;，还买了块&lt;a href=&#34;https://www.waveshare.net/shop/Pico-LCD-1.3.htm&#34;&gt;小显示屏&lt;/a&gt;，
+试试bare metal coding，大概会对各种计组知识有更深的理解吧，如果没放弃的话。&lt;/p&gt;
+&lt;p&gt;最近推特中文圈有个高手云集的讨论&lt;a href=&#34;https://twitter.com/xuwenhao/status/1622108853944057858&#34;&gt;AI编程理论可行性和对行业冲击的串&lt;/a&gt;，
+我相信其中的观点比如“当AI创造的成本压得比维护现有代码低，维护就不复存在了”（就像家电维修成本高不如换新的），
+然后我们短暂而自豪的coding culture大部分都是为了“更好地维护”这一目的设计的，
+我对失去信仰的恐惧大概比对失去工作的恐惧还要更甚。
+我想了两个转行方向，做profiling和做渗透测试，但经过咨询推友发现这两个方向都不能在“成熟AI编程”前提下站稳不受冲击。
+大概唯一的慰藉就是看看现在的AI给出的错误百出的编程答案，心想这碗饭还能多吃几年。&lt;/p&gt;
+&lt;p&gt;整理心态积极拥抱变化吧，这也是我们这行的信条之一，与君共勉。&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/programming/">programming</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/programming/">programming</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>用Maven reactor命令行选项节约build时间</title>
