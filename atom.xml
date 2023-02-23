@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2023-02-12T10:23:47&#43;08:00</updated>
+    <updated>2023-02-23T23:00:57&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -17,10 +17,100 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
     <generator uri="https://gohugo.io/" version="0.106.0">Hugo</generator>
         <entry>
+            <title type="text">关于SSTV的知识</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/sstv-0/" />
+            <id>https://boholder.github.io/blogs/sstv-0/</id>
+            <updated>2023-02-23T23:00:31&#43;08:00</updated>
+            <published>2023-02-23T00:00:00&#43;00:00</published>
+            <author>
+                    <name>BoHolder</name>
+                    <uri>https://boholder.github.io/</uri>
+                    <email>bottleholder@anche.no</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">学习笔记</summary>
+            
+                <content type="html">&lt;p&gt;谢谢&lt;a href=&#34;https://www.youtube.com/watch?v=q9chAP5AmCU&#34;&gt;乔伊的视频&lt;/a&gt;让我对无线电产生了兴趣。&lt;/p&gt;
+&lt;h2 id=&#34;补一补专业知识&#34;&gt;补一补专业知识&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shuxuele.com/algebra/amplitude-period-frequency-phase-shift.html&#34;&gt;数学上的波，频率、幅度、位移的感念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/37535928&#34;&gt;信号调制&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;载波（carrier）：作为传输基底的纯净的固定周期（频率）的高频率信号。&lt;/p&gt;
+&lt;p&gt;调制（modulation）：动词或动名词，一种信号处理方式，通过往指定的载波中嵌入真正想传递的信号（信息）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为什么要调制：
+&lt;ol&gt;
+&lt;li&gt;发信号的天线长度要不小于信号波长十分之一，高频波长短，容易用较短的天线辐射出去。&lt;/li&gt;
+&lt;li&gt;通过调制人工将不同信号隔离在不同频率，信号不串台。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;调制分为数字调制和模拟调制，指的是原始信息的形式
+&lt;ul&gt;
+&lt;li&gt;数字是01（比如无线网卡）&lt;/li&gt;
+&lt;li&gt;模拟是个连续的波（比如麦克风直连电台发信器）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;模拟调制的几种方式中有我们收音机上会看到的FM、AM，英语字面缩写。
+&lt;ul&gt;
+&lt;li&gt;Frequency modulation是调频（频率越高图示的线越横向密集，声音越尖）。&lt;/li&gt;
+&lt;li&gt;Amplitude modulation是调幅（幅度越大图示的线谷峰高低差越大，声音越响）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sstv格式&#34;&gt;SSTV格式&lt;/h2&gt;
+&lt;p&gt;SSTV（slow-scan television，慢扫描电视）是一种将图片信息嵌入音频信号（并发送）的方式。SSTV选用的方式是FM，把图片的像素亮度映射为频率，越亮频率越高，彩色图片是发送颜色各自的亮度。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sigidwiki.com/wiki/Slow-Scan_Television_%28SSTV%29&#34;&gt;https://www.sigidwiki.com/wiki/Slow-Scan_Television_%28SSTV%29&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Slow-scan_television&#34;&gt;https://en.wikipedia.org/wiki/Slow-scan_television&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.yumpu.com/en/document/read/7259948/proposal-for-sstv-mode-specifications&#34;&gt;https://www.yumpu.com/en/document/read/7259948/proposal-for-sstv-mode-specifications&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sstv-handbook.com/&#34;&gt;https://www.sstv-handbook.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;就像网络通信协议一样，在发送真正的数据前，SSTV会发送校准头（calibration header），虽然没搜到后者，但感觉和令人怀念的&lt;a href=&#34;https://www.youtube.com/watch?v=QDS4B0mM-ew&#34;&gt;拨号上网的开头声音&lt;/a&gt;是一样的，因为是模拟调制的校准头所以每次听都是一样的声音。&lt;/p&gt;
+&lt;p&gt;校准头之后是传输模式（mode），用VIS code（vertical interval signaling）这种编码传输，每30ms跳一次频率。除去开头结尾的两个1200Hz信号，1100Hz=1，1300Hz=0，共7bit+最后奇偶校验位。这7位二进制当成数字转换成十进制，对应某个模式。比如&lt;code&gt;Robot36&lt;/code&gt;模式的数字是&lt;code&gt;8d（d=十进制）&lt;/code&gt;。这些模式是不同人发明的，但开头都是校准头和VIS，类似网络中标准协议框架和具体实现？&lt;/p&gt;
+&lt;p&gt;VIS发完了，1ms都不耽搁，开始发数据。逐行从左往右从上往下，类似多图杀猫时期的图片加载。每行开始先是一个同步脉冲（sync pulse），再是真正的亮度对应的频率。如果有多个颜色就是连续发送，有些模式的颜色间可能有分隔信号用的短脉冲。数据发完就结束了，没有tail的概念。&lt;/p&gt;
+&lt;p&gt;SSTV的载波可以是各种频率，比如业余无线电的UHF（300～3000MHz）和VHF（30～300MHz）或高频（3MHz~30MHz）。但是SSTV的信号本身的频率范围是1100Hz~2300Hz，在人耳听力范围（20Hz~20000Hz）内，直接从图片生成的SSTV音频，或用收音机解调（制）无线信号再用扬声器放出的声音，人耳是能听到的。&lt;/p&gt;
+&lt;p&gt;解析SSTV信号，就是在音频信号里找校准头，然后顺着解析VIS，最后按模式规则解析数据，把频率反向转换回像素。重要的三要素：时长，频率，信息排列顺序。&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/categories/computer-science/" term="computer science" label="computer science" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/tags/computer-science/" term="computer science" label="computer science" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/tags/sstv/" term="sstv" label="sstv" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">我在开发Puntgun中学到的东西</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/what-i-learned-from-putgun/" />
             <id>https://boholder.github.io/blogs/what-i-learned-from-putgun/</id>
-            <updated>2023-02-12T10:20:48&#43;08:00</updated>
+            <updated>2023-02-12T10:24:28&#43;08:00</updated>
             <published>2023-02-11T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
