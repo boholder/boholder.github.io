@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://boholder.github.io/</loc>
-    <lastmod>2023-02-23T23:00:31+08:00</lastmod>
+    <lastmod>2023-03-15T01:20:19+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -15,17 +15,20 @@
                 href="https://boholder.github.io/"
                 />
   </url><url>
-    <loc>https://boholder.github.io/tags/computer-science/</loc>
-    <lastmod>2023-02-23T23:00:31+08:00</lastmod>
+    <loc>https://boholder.github.io/categories/fun/</loc>
+    <lastmod>2023-03-15T01:20:19+08:00</lastmod>
   </url><url>
-    <loc>https://boholder.github.io/categories/computer-science/</loc>
-    <lastmod>2023-02-23T23:00:31+08:00</lastmod>
+    <loc>https://boholder.github.io/tags/stablediffusion/</loc>
+    <lastmod>2023-03-15T01:20:19+08:00</lastmod>
+  </url><url>
+    <loc>https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/</loc>
+    <lastmod>2023-03-15T01:20:19+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/sstv/</loc>
-    <lastmod>2023-02-23T23:00:31+08:00</lastmod>
+    <lastmod>2023-02-23T23:02:46+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/sstv-0/</loc>
-    <lastmod>2023-02-23T23:00:31+08:00</lastmod>
+    <lastmod>2023-02-23T23:02:46+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/blog/</loc>
     <lastmod>2023-02-12T10:24:28+08:00</lastmod>
