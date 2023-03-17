@@ -10,7 +10,7 @@
         <title>BoHolder&#39;s site: crafts, blogs etc</title>
         <link>https://boholder.github.io/en-us/</link>
         <description>BoHolder&#39;s site: crafts, blogs etc</description>
-        <generator>Hugo 0.106.0 https://gohugo.io/</generator>
+        <generator>Hugo 0.111.3 https://gohugo.io/</generator>
         
             <language>en-US</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Wed, 15 Mar 2023 01:22:11 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 18 Mar 2023 00:17:34 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/en-us/rss.xml" />
         

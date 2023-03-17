@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.106.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.111.3"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -299,7 +299,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nd">@Test</span>
 </span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testAdd</span><span class="o">()</span> <span class="o">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">Test</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Test</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertEquals</span><span class="o">(</span><span class="n">3</span><span class="o">,</span> <span class="n">t</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">assertEquals</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="n">t</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">));</span>
 </span></span><span class="line"><span class="cl">    <span class="o">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">changeName</span><span class="o">(</span><span class="n">User</span> <span class="n">user</span><span class="o">)</span> <span class="o">{</span>
@@ -431,13 +431,13 @@
 </span></span><span class="line"><span class="cl">                <span class="o">.</span><span class="na">willReturn</span><span class="o">(</span><span class="s">&#34;删库成功！&#34;</span><span class="o">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">// 调用坏计算模块，同时也把返回值测了。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">assertThat</span><span class="o">(</span><span class="n">calculator</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">),</span> <span class="n">is</span><span class="o">(</span><span class="n">3</span><span class="o">));</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">assertThat</span><span class="o">(</span><span class="n">calculator</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="n">is</span><span class="o">(</span><span class="mi">3</span><span class="o">));</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="c1">// 让我们看看坏计算模块对Mock删库模块说了什么
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">ArgumentCaptor</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">captor</span> <span class="o">=</span> <span class="n">ArgumentCaptor</span><span class="o">.</span><span class="na">forClass</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 捕获（查看）坏计算模块传给Mock删库模块的delete()方法的参数
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 顺便期望坏计算模块只调用了一次删库模块的delete()方法
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">verify</span><span class="o">(</span><span class="n">mockDeleter</span><span class="o">,</span> <span class="n">times</span><span class="o">(</span><span class="n">1</span><span class="o">)).</span><span class="na">delete</span><span class="o">(</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">capture</span><span class="o">());</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">verify</span><span class="o">(</span><span class="n">mockDeleter</span><span class="o">,</span> <span class="n">times</span><span class="o">(</span><span class="mi">1</span><span class="o">)).</span><span class="na">delete</span><span class="o">(</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">capture</span><span class="o">());</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">// 早就料到（期望）
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">assertThat</span><span class="o">(</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">getValue</span><span class="o">(),</span> <span class="n">is</span><span class="o">(</span><span class="s">&#34;生产环境数据库&#34;</span><span class="o">));</span>
 </span></span><span class="line"><span class="cl">    <span class="o">}</span>
