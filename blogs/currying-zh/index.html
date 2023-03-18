@@ -17,7 +17,7 @@
 
     <title>柯里化及相关延伸思考 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.7780377e1693677f62b929ecba68175ffba021d490a49fac3a6065b3be54944d.css"/>
+    <link rel="stylesheet" href="/css/meme.min.d6933b61e48687e05e79f76a96679e6686baf551f831383556fbace43cfaece0.css"/>
 
     
     
@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="BoHolder" /><meta name="description" content="怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函数，可以捕获它们被定义时（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。 柯里化 柯里化指，把接受多个参数的函数，变成一个连续的单个参数的函数。 这样会弄出来一堆零碎的中间函数，不过中间函数都隐藏在最高阶（柯里化后只接第一个参数，……" />
+    <meta name="author" content="BoHolder" /><meta name="description" content="怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种……" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -60,7 +60,7 @@
         "dateModified": "2022-02-16T10:34:45+08:00",
         "url": "https://boholder.github.io/blogs/currying-zh/",
         "headline": "柯里化及相关延伸思考",
-        "description": "怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函数，可以捕获它们被定义时（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。 柯里化 柯里化指，把接受多个参数的函数，变成一个连续的单个参数的函数。 这样会弄出来一堆零碎的中间函数，不过中间函数都隐藏在最高阶（柯里化后只接第一个参数，……",
+        "description": "怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种……",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
         "wordCount":  1492 ,
@@ -100,7 +100,7 @@
 
 
 <meta property="og:title" content="柯里化及相关延伸思考" />
-<meta property="og:description" content="怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函数，可以捕获它们被定义时（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。 柯里化 柯里化指，把接受多个参数的函数，变成一个连续的单个参数的函数。 这样会弄出来一堆零碎的中间函数，不过中间函数都隐藏在最高阶（柯里化后只接第一个参数，……" />
+<meta property="og:description" content="怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种……" />
 <meta property="og:url" content="https://boholder.github.io/blogs/currying-zh/" />
 <meta property="og:site_name" content="BoHolder的网站：博客，小玩意及其他" />
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />

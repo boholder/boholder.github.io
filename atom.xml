@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2023-03-18T15:17:03&#43;08:00</updated>
+    <updated>2023-03-18T15:45:15&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">为anime角色训练LoRA模型</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/" />
             <id>https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/</id>
-            <updated>2023-03-18T00:19:34&#43;08:00</updated>
+            <updated>2023-03-18T15:17:40&#43;08:00</updated>
             <published>2023-03-14T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -287,7 +287,7 @@
                     <uri>https://boholder.github.io/</uri>
                     <email>bottleholder@anche.no</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">前言 Puntgun是我写的一个命令行工具，Python语言，帮助推特账号管理自动化。 从2022年二月底开始写，到2022年十一月底碰到一个对我来说很难实现的编程问题， 加上当时马斯克成功收购推特，之后心思就不再它上面了。2023年2月9日，推特不再提供免费API，算是帮我下手了结了这个项目。 （从十一月的新闻我就判断马斯克不倾向于开放生态，不利好我这项目，你看果然吧，但确实没想到能做这么绝。） 这是我第一个尝试运营社区的项目，然后事情还没开始就结束啦。😂 项目框架已经写好了，可以自定义规则，示范用的规则没写几条就碰到了那个难题，算是基本实现目标吧。 失败是成功之母，前提是记得总结经验，故有此文与大家分享……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">前言 Puntgun是我写的一个命令行工具，Python语言，帮助推特账号管理自动化。 从2022年二月底开始写，到2022年十一月底碰到一个对我来说很难实现的编程问题， 加上当时马斯克成功收购推特，之后心……</summary>
             
                 <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/boholder/puntgun&#34;&gt;Puntgun&lt;/a&gt;是我写的一个命令行工具，Python语言，帮助推特账号管理自动化。
@@ -439,7 +439,7 @@ Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&
                     <uri>https://boholder.github.io/</uri>
                     <email>bottleholder@anche.no</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">微服务开发下的build困扰 前提：Java开发，Maven做依赖管理，JetBrains IntelliJ IDEA做IDE 在Java微服务开发下，项目开发结构(repo)可能有两种： 所有模块(maven module)，包括服务（Spring Application）和自己开发的依赖模块，都塞在一个项目里。 方便管理各模块间的关系，方便写代码 git log 很乱很多，但也方便集中检查 服务和自己开发的依赖模块独立在不同项目里 不方便管理模块关系 git log 少又清晰，只有该组件相关的提交 （以我的工作经历来看，两种结构怎么选好像和开发组的人员结构有关： 如果负责不同服务的小组紧密围绕在开发组长周围，选集中式的面儿大； 如果小组间相互不太紧密，比如……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">微服务开发下的build困扰 前提：Java开发，Maven做依赖管理，JetBrains IntelliJ IDEA做IDE 在Java微服务开发下，项目开发结构(repo)可能有两种： 所有模块(maven module)……</summary>
             
                 <content type="html">&lt;h2 id=&#34;微服务开发下的build困扰&#34;&gt;微服务开发下的build困扰&lt;/h2&gt;
 &lt;p&gt;前提：Java开发，Maven做依赖管理，JetBrains IntelliJ IDEA做IDE&lt;/p&gt;
@@ -1098,7 +1098,7 @@ Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&
                     <uri>https://boholder.github.io/</uri>
                     <email>bottleholder@anche.no</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函数，可以捕获它们被定义时（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。 柯里化 柯里化指，把接受多个参数的函数，变成一个连续的单个参数的函数。 这样会弄出来一堆零碎的中间函数，不过中间函数都隐藏在最高阶（柯里化后只接第一个参数，……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种……</summary>
             
                 <content type="html">&lt;h2 id=&#34;怎么理解&#34;&gt;怎么理解&lt;/h2&gt;
 &lt;p&gt;看&lt;a href=&#34;composingprograms.com/pages/16-higher-order-functions.html&#34;&gt;这篇文章&lt;/a&gt;的1.6.6 Currying这一节。&lt;/p&gt;
