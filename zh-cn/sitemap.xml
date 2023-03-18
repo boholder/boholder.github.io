@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://boholder.github.io/</loc>
-    <lastmod>2023-03-15T01:23:05+08:00</lastmod>
+    <lastmod>2023-03-18T00:19:34+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -16,13 +16,43 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/categories/fun/</loc>
-    <lastmod>2023-03-15T01:23:05+08:00</lastmod>
+    <lastmod>2023-03-18T00:19:34+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/en-us/categories/fun/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/categories/fun/"
+                />
   </url><url>
     <loc>https://boholder.github.io/tags/stablediffusion/</loc>
-    <lastmod>2023-03-15T01:23:05+08:00</lastmod>
+    <lastmod>2023-03-18T00:19:34+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/en-us/tags/stablediffusion/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/tags/stablediffusion/"
+                />
   </url><url>
     <loc>https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/</loc>
-    <lastmod>2023-03-15T01:23:05+08:00</lastmod>
+    <lastmod>2023-03-18T00:19:34+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/"
+                />
   </url><url>
     <loc>https://boholder.github.io/tags/sstv/</loc>
     <lastmod>2023-03-15T01:23:05+08:00</lastmod>

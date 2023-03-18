@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Sat, 18 Mar 2023 00:17:34 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 18 Mar 2023 15:17:03 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
@@ -42,7 +42,7 @@
 &lt;p&gt;完成这个事需要：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;对Python编写和环境搭建有一定了解，ML项目或者老项目免不了有点依赖冲突。为了避免依赖混淆，我给每个工具都准备了独立的venv。&lt;/li&gt;
-&lt;li&gt;如果电脑是Nvdia支持cuda的GPU，记得每个项目安装依赖前先把pytorch-cuda给装了，这个用GPU，pytorch是用CPU的。安装参考&lt;a href=&#34;https://github.com/openai/whisper/discussions/47&#34;&gt;这个讨论&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;如果电脑是Nvidia支持cuda的GPU，记得每个项目安装依赖前先把pytorch-cuda给装了，这个用GPU，pytorch是用CPU的。安装参考&lt;a href=&#34;https://github.com/openai/whisper/discussions/47&#34;&gt;这个讨论&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;一台不错的电脑，即使最后训练配置不够，是用colab之类在云上跑，数据集预处理之类还是本地跑比较方便。最后我是在本地炼的。装的是pytorch-cuda，最后torch还是选择了用CPU跑，不是很懂怎么回事，但也有好处：虽然慢但不用担心内存溢出。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;用到的工具/项目：&lt;/p&gt;
@@ -169,8 +169,8 @@
 &lt;/ul&gt;
 &lt;p&gt;Python3.10，先安装lora-scripts（同时会安装sd-scripts的依赖），再install LyCORIS库，这三个项目共用一个venv。基底模型用的&lt;a href=&#34;https://huggingface.co/andite/anything-v4.0&#34;&gt;anything-v4.5&lt;/a&gt;。我&lt;a href=&#34;https://github.com/boholder/lora-scripts/commit/0780625ad726a0a03f9f3cb2b3ec19131e5ce582&#34;&gt;改了一下&lt;/a&gt;lora-scripts，加上了关于LyCORIS的新参数。这里注意sd-scripts是在lora-scripts目录下的，但运行配置中的数据集目录似乎要加上&lt;code&gt;..&lt;/code&gt;父目录（sd-scripts运行时的work directory是自己本目录？）。&lt;/p&gt;
 &lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
-&lt;p&gt;如果我能用通过&lt;a href=&#34;https://distill.pub/2017/feature-visualization/&#34;&gt;Feature Visualization&lt;/a&gt; （对图片任务模型）、token聚类（对文本任务模型）这些技术可视化地研究一下我生成的LoRA模型内部就好了，好奇它学了真步哪些特征。搜了下还没有基于stable diffusion模型的现成工具，作罢。如果你知道相关材料，请不惜赐教。&lt;/p&gt;
-&lt;p&gt;祝大家都能练出自己老婆，实现妄想自由。&lt;/p&gt;
+&lt;p&gt;如果我能用通过&lt;a href=&#34;https://distill.pub/2017/feature-visualization/&#34;&gt;Feature Visualization&lt;/a&gt; （对图片任务模型）、token聚类（对文本任务模型）这些技术可视化地研究一下我生成的LoRA模型内部就好了，好奇它学了真步哪些特征。搜了下还没有基于stable diffusion模型的现成工具，作罢。另外我仍然对caption如何起作用不太清楚，但在网上搜不到更多解释。如果你知道相关材料，请不惜赐教。&lt;/p&gt;
+&lt;p&gt;祝大家都能炼出自己老婆，实现妄想自由。&lt;/p&gt;
 </description>
                 
                 
