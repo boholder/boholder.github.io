@@ -55,7 +55,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/blog/</loc>
-    <lastmod>2022-05-29T22:19:16+08:00</lastmod>
+    <lastmod>2022-05-29T22:16:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -68,7 +68,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/design/</loc>
-    <lastmod>2022-05-29T22:19:16+08:00</lastmod>
+    <lastmod>2022-05-29T22:16:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -81,7 +81,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/categories/design/</loc>
-    <lastmod>2022-05-29T22:19:16+08:00</lastmod>
+    <lastmod>2022-05-29T22:16:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -93,8 +93,8 @@
                 href="https://boholder.github.io/en-us/categories/design/"
                 />
   </url><url>
-    <loc>https://boholder.github.io/en-us/crafts/minecraft-tree-house/</loc>
-    <lastmod>2022-05-29T22:19:16+08:00</lastmod>
+    <loc>https://boholder.github.io/en-us/blogs/minecraft-tree-house/</loc>
+    <lastmod>2022-05-29T22:16:39+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/en-us/blogs/game-of-life-kata/</loc>
     <lastmod>2022-05-28T16:22:37+08:00</lastmod>
@@ -125,17 +125,17 @@
                 href="https://boholder.github.io/en-us/categories/programming/"
                 />
   </url><url>
-    <loc>https://boholder.github.io/en-us/crafts/program-safety-sign/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
+    <loc>https://boholder.github.io/en-us/blogs/program-safety-sign/</loc>
+    <lastmod>2021-11-28T10:45:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://boholder.github.io/crafts/program-safety-sign/"
+                href="https://boholder.github.io/blogs/program-safety-sign/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://boholder.github.io/en-us/crafts/program-safety-sign/"
+                href="https://boholder.github.io/en-us/blogs/program-safety-sign/"
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/about/</loc>
@@ -154,11 +154,11 @@
     <loc>https://boholder.github.io/en-us/about/boholder/</loc>
     <lastmod>2022-05-28T16:22:37+08:00</lastmod>
   </url><url>
-    <loc>https://boholder.github.io/en-us/crafts/markdown-obsidian-user-defined-language-for-notepadpp2.1/</loc>
-    <lastmod>2021-03-26T09:16:00+08:00</lastmod>
+    <loc>https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/</loc>
+    <lastmod>2021-11-28T10:45:31+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/ide/</loc>
-    <lastmod>2021-03-26T09:16:00+08:00</lastmod>
+    <lastmod>2021-11-28T10:45:31+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
