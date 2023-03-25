@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
     <title type="text">BoHolder&#39;s site: crafts, blogs etc</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2023-03-24T21:55:45&#43;08:00</updated>
+    <updated>2023-03-25T14:21:31&#43;08:00</updated>
     <id>https://boholder.github.io/en-us/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/en-us/atom.xml" />
@@ -29,7 +29,8 @@
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">From data collecting to training</summary>
             
-                <content type="html">&lt;p&gt;I saw the &lt;a href=&#34;https://civitai.com/models/16104/holo-spice-and-wolf&#34;&gt;LoRA model&lt;/a&gt; of Hero from &amp;ldquo;Wolf and Spice&amp;rdquo; posted by &lt;a href=&#34;https://twitter.com/fuyufjh&#34;&gt;Eric Fu&lt;/a&gt; earlier. My heart ignited an impulse, who does not want to refine a model for waifu? So&amp;hellip; I tried to make it done. The process was recorded for your reference.&lt;/p&gt;
+                <content type="html">&lt;p&gt;&lt;em&gt;This article was completed with the help of &lt;a href=&#34;https://www.DeepL.com/Translator&#34;&gt;www.DeepL.com/Translator&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I saw the &lt;a href=&#34;https://civitai.com/models/16104/holo-spice-and-wolf&#34;&gt;LoRA model&lt;/a&gt; of Hero from &amp;ldquo;Wolf and Spice&amp;rdquo; posted by &lt;a href=&#34;https://twitter.com/fuyufjh&#34;&gt;Eric Fu&lt;/a&gt; earlier. My heart ignited an impulse, who does not want to refine a model for waifu? So&amp;hellip; I tried to make it done. The process was recorded for your reference.&lt;/p&gt;
 &lt;p&gt;To complete this thing requires you have:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -217,7 +218,7 @@ decided to remove the backgrounds. (Lately I learned that we can use &lt;a href=
             <title type="text">Introducing a Minecraft treehouse I built (contains a total of 200MBsize images)</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/minecraft-tree-house/" />
             <id>https://boholder.github.io/en-us/blogs/minecraft-tree-house/</id>
-            <updated>2022-05-29T22:16:39&#43;08:00</updated>
+            <updated>2023-03-24T21:56:27&#43;08:00</updated>
             <published>2022-05-27T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -1385,10 +1386,201 @@ to help you, and it was integrated right in the IDEA afterwards.&lt;/p&gt;
         </entry>
     
         <entry>
+            <title type="text">Tips of the electronic data backup system applicable to individuals</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/individual-data-backup-summary/" />
+            <id>https://boholder.github.io/en-us/blogs/individual-data-backup-summary/</id>
+            <updated>2023-03-25T14:16:51&#43;08:00</updated>
+            <published>2020-12-07T00:00:00&#43;00:00</published>
+            <author>
+                    <name>BoHolder</name>
+                    <uri>https://boholder.github.io/</uri>
+                    <email>bottleholder@anche.no</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">Personal insights into the practicalities of personal data backup</summary>
+            
+                <content type="html">&lt;p&gt;&lt;em&gt;This article was completed with the help of &lt;a href=&#34;https://www.DeepL.com/Translator&#34;&gt;www.DeepL.com/Translator&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Electronic data (hereinafter referred to as &amp;ldquo;Data&amp;rdquo;) is stored on electronic media and can only be read and written by electronic devices, which means that additional equipment may need to be purchased to meet the need for its storage and processing.&lt;/p&gt;
+&lt;p&gt;In this paper, all self-created terms that do not have a corresponding term-level definition will be cited using brackets to highlight the term to prevent confusion to the reader (example: [self-created term]). Also, this article uses backquotes to quote terms that have been mentioned above (e.g., &lt;code&gt;terminology&lt;/code&gt;). This article is a summary of my reflections on the loss of four and a half months of work data due to stupidity and accidents. The content of this article is only personal
+opinion, discusses welcome.&lt;/p&gt;
+&lt;h2 id=&#34;data-classification-bases-on-importance&#34;&gt;Data classification bases on importance&lt;/h2&gt;
+&lt;p&gt;Data is classified into several levels of importance (severity of loss).&lt;/p&gt;
+&lt;h3 id=&#34;level-1&#34;&gt;Level 1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Encryption key:
+&lt;ul&gt;
+&lt;li&gt;used to decrypt large blocks of data that are encrypted, but once the encrypted data lost the corresponding encryption key is useless too.&lt;/li&gt;
+&lt;li&gt;i.e. it is interdependent with the data it encrypts (in usage).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Seed of TOTP (Time-based One-Time Password):
+&lt;ul&gt;
+&lt;li&gt;it is guaranteed that it can generate TOTP 6-digit number by itself, so it does not depend on other (already entered into the authenticator APP and cannot be extracted) data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Platform account, software activation serial number, platform login Licence&amp;hellip;&amp;hellip; these &amp;ldquo;credentials&amp;rdquo;:
+&lt;ul&gt;
+&lt;li&gt;Equivalent to &lt;code&gt;encryption key&lt;/code&gt;, it is the &amp;ldquo;access chunk of data credentials (on the platforms)&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;It corresponds to &amp;ldquo;encrypted&amp;rdquo; data that is usually not kept by individuals (platform services) or easily accessible again (paid software).&lt;/li&gt;
+&lt;li&gt;That is, it does not depend on the data it &amp;ldquo;encrypts&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Features:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;small size, usually hardly more than 10MB or even 1MB (in total), this feature is beneficial for &lt;code&gt;multi-copy backup&lt;/code&gt; requirements, easy to save on multiple storage media.&lt;/li&gt;
+&lt;li&gt;large value, the confirmation of the loss of this type of data is usually accompanied by irreparable huge losses. (Luckily platforms allow you retrieve passwords.)&lt;/li&gt;
+&lt;li&gt;you do not want to make them public (1), nor do you want to lose them completely (2).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Preservation methods:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Encrypted preservation.&lt;/li&gt;
+&lt;li&gt;Multi-copy backup, including local storage dedicated devices (mobile hard drives, home NAS) and cloud storages.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;level-2&#34;&gt;Level 2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Personal Information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Often referred as &amp;ldquo;personal privacy&amp;rdquo;, generated as a result of personal experience, or containing information that identifies a particular individual, mostly in the form of documents, multimedia.&lt;/li&gt;
+&lt;li&gt;Only the parts you &lt;strong&gt;can control&lt;/strong&gt; are of interest here.
+As for what is uploaded externally or generated on external platforms, it is best to control it at the source, i.e. always upload the least amount of information that is most irrelevant to the reality of your own identity.
+(Believe me, compliance with this principle will not affect online social behavior).&lt;/li&gt;
+&lt;li&gt;Examples of documents that are [personal information]: &amp;ldquo;personal information summary&amp;rdquo; such as job resumes, containing a video or a photo of face (even if it is a low-resolution non-frontal face). Records of communication with others on the Internet (chat logs, emails, documents containing information about yourself sent by others, etc.)&lt;/li&gt;
+&lt;li&gt;The difference between &amp;ldquo;personal information&amp;rdquo; and &amp;ldquo;credentials&amp;rdquo; is the size of the file and its content. &amp;ldquo;Credentials&amp;rdquo; are like keys, while &amp;ldquo;personal information&amp;rdquo; is the treasure chest.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Other information that you want to keep secret varies from person to person:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For example, information that is not related to &amp;ldquo;personal information&amp;rdquo; in the narrow sense, but is still included in the broader sense of &amp;ldquo;personal privacy&amp;rdquo; (such as data related to personal interests).&lt;/li&gt;
+&lt;li&gt;All data that you do not want to be made public or disclosed (whether it is appropriate to make it public, you have a natural right to keep it private as your wish).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Features:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;variable size and increases with age, depending on individual interest personality career differences. Most of the volume can be controlled within 500G (fashionistas who love photography may still not be satisfied with this already overestimated capacity).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the value is variable, but for you these are important, which is enough as a reason to perform backup. (Bad guys and good friends who are interested in you are usually interested in this information as well.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Preservation methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Encrypted preservation (the key used for encryption can be saved in [Level 1 Data]).&lt;/li&gt;
+&lt;li&gt;At least one full local backup, and optional cloud backup.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;level-3&#34;&gt;Level 3&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;General data accumulated on the hard disk during the use of electronic devices, including program and operation records, documents, etc. Encryption or not is irrelevant, but in general you do not want to lose it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Features:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;very large, but only need to purchase additional storage with a capacity suitable for their needs (including potential needs for the next few years).&lt;/li&gt;
+&lt;li&gt;Smaller in value, but worth the money and effort to add an insurance.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Preservation methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;At least one full local backup.&lt;/li&gt;
+&lt;li&gt;Also consider periodically transferring large files that are simply stored on hard drives but not used often to a storage dedicated device (like a mobile hard disk).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;other-personal-insights-related-to-encryption-and-backup&#34;&gt;Other personal insights related to encryption and backup&lt;/h2&gt;
+&lt;h3 id=&#34;encryption&#34;&gt;Encryption&lt;/h3&gt;
+&lt;p&gt;Let me recommend tools for you! The author has been using &lt;a href=&#34;https://www.veracrypt.fr/en/Home.html&#34;&gt;VeraCrypt&lt;/a&gt; for several years for all encryption-related operations. It is open-source, multi-platform, and fully functional, and it has recently become active again after a few years of stagnation!&lt;/p&gt;
+&lt;p&gt;What could be better than a long-lasting and still active open-source software project? VeraCrypt can encrypt the entire drive or create a strongly encrypted &amp;ldquo;file-type driver&amp;rdquo;. When decrypted and mounted, it becomes an accessible disk, and when unmounted, it becomes a portable file that can be backed up like a normal single file. Perfect!&lt;/p&gt;
+&lt;p&gt;Note here, don&amp;rsquo;t be confused by VeraCrypt&amp;rsquo;s File Driver feature, I just tried Bitlocker recklessly because he didn&amp;rsquo;t read the document without making a backup, and stored the backup key in the File Driver, forgetting that the file itself is stored in the Driver set up with Bitlocker, lock the key inside the chest and&amp;hellip;&amp;hellip; can not open the chest forever.&lt;/p&gt;
+&lt;p&gt;For Windows Professional users, &lt;a href=&#34;https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview&#34;&gt;Microsoft Windows BitLocker&lt;/a&gt; is also a handy tool, being commercial grade software, it is easy to use and has Microsoft&amp;rsquo;s continuous quality support. However, it can only encrypt Driver, so it is not very convenient when combined with cloud backup operations. For Driver encrypted with BitLocker software, you need to decrypt it manually before backup, or set it to decrypt automatically after boot (login). As a side effect, this will expose the encrypted files to be readable in an unencrypted state during backup, so the security requirement of the environment at the time of backing up the data is a bit stricter.&lt;/p&gt;
+&lt;p&gt;Sorry, I don&amp;rsquo;t know much about the common software collections for Mac and Linux, and cannot introduce the platform-exclusive software corresponding to them. The VeraCrypt is multi-platform, so maybe you can try it first.&lt;/p&gt;
+&lt;p&gt;In particular, for [Level 1 data], encrypted storage means encrypting a separate driver containing [Level 1 data] with another human-readable passphrase (password). This requires that you remember at least one &amp;ldquo;master key&amp;rdquo;, which is used to decrypt the data that contains other keys. I use the file Driver provided by VeraCrypt to store such information, which is primitive, but I stubbornly believe it is &amp;ldquo;more secure&amp;rdquo;. There are many other programs on the market that provide direct encryption and backup services for such keys, such as &lt;a href=&#34;https://1password.com/zh-cn/&#34;&gt;1Password&lt;/a&gt;. Even modern browsers such as Firefox and Chrome have built-in services for managing web passwords. And you can purchase a little hardware like the &lt;a href=&#34;https://www.yubico.com/&#34;&gt;Yubikey&lt;/a&gt; to carry your keys be your side just like a key ring. You will find one that suits your taste.&lt;/p&gt;
+&lt;h3 id=&#34;backup&#34;&gt;Backup&lt;/h3&gt;
+&lt;p&gt;First identifying the data that needs to be backed up. For example, for me, there is one [Level 1 data], two [Level 2 data] (personal confidential documents and work confidential documents), and five [Level 3 data] (home desktop, home laptop, work laptop, cell phone, tablet). The cell phone and tablet are actually backed up in the [Level 3 data] section of the computer&amp;rsquo;s hard drive, which themselves are mix of Level 1~3 and my solution is to encrypt their backups (treated as [Level 2 data]), but storing these backups within the computer&amp;rsquo;s [Level 3 data] backups.&lt;/p&gt;
+&lt;h4 id=&#34;backup-storage-location&#34;&gt;Backup storage location&lt;/h4&gt;
+&lt;p&gt;Because the data is saved on electronic media, based on the physical presence of storage devices, for the choice of backup location, I have not considered redundant backups within the same storage location, but to achieve hardware-level isolation, regardless of geographic location, at least at the hard drive level. In a mobile hard drive in a desk drawer OR a NAS on the floor OR in a cluster of servers of a cloud storage service, the difference between these methods is the geographical location where the data is stored.&lt;/p&gt;
+&lt;p&gt;For example, I sort of dislike the cloud storage services and don&amp;rsquo;t have the need to transfer data in large quantities to multiple devices (subjective + objective reasons), so I don&amp;rsquo;t use a cloud storage service that is objectively really affordable and convenient. I also did not set up a home NAS, but only purchased two large-capacity mobile hard drives, regular backup of [Level 2 data] and [Level 3 data] on two hard drives, one in the company cabinet, one at home, rounded up also considered off-site disaster recovery, to allow a fire and man-made disasters. As for the [Level 1 data], it is saved on the desktop at home, the laptop at home, two mobile hard drives, and the company laptop, for a total of five backups.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;After this accident, I decided to &lt;strong&gt;upload [Level 1 data] and [Level 2 data] to Microsoft OneDrive&lt;/strong&gt;. Anyway, more backups are better, since it is encrypted and the size is not very big, so I can upload the backup quickly.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;PS: It is better to have [Level 1 data] in each backup location where [Level 2 data] is located, because the two are interdependent, which can be understood as the key is more than the number of treasure chests, and the key is placed next to each treasure chest, and there is a &amp;ldquo;master key&amp;rdquo; as a protection mechanism for the key. (For people like me who use standalone encryption software, I need to put the portable version of the encryption software together with [Level 1 data] and [Level 2 data]&lt;/p&gt;
+&lt;h4 id=&#34;backup-frequency&#34;&gt;Backup frequency&lt;/h4&gt;
+&lt;p&gt;This was the biggest problem in the backup system exposed by the man-made disaster I experienced this time &amp;mdash; &lt;strong&gt;not frequent enough to do backup&lt;/strong&gt;, to be precise for the company laptop backups. I decided to set the backup frequency to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Biweekly backups on local mobile hard drives at home and at work (and incidentally on cell phones and tablets).&lt;/li&gt;
+&lt;li&gt;Two mobile hard drives at home and at work are crossed monthly to form two full backups.&lt;/li&gt;
+&lt;li&gt;[Level 1 data] and [Level 2 data] are set up on the computers for automatic Windows OneDrive updating, and uploaded after each change.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;problems-with-automated-synchronization-between-backups&#34;&gt;Problems with (automated) synchronization between backups&lt;/h4&gt;
+&lt;p&gt;This issue is again to reflect the advantages of network drives, after experience, OneDrive on Windows can do real-time backup, you can use this feature to ensure consistency between backups on networked devices. If you don&amp;rsquo;t want to use a network drive service, you can also build your own home NAS. As long as you can ensure that the storage devices are connected to the Internet, there are always ready-made solutions to set up an automated data synchronization system. For example, Windows 10 comes with a &amp;ldquo;backup&amp;rdquo; feature that can synchronize at directory-level granularity as short as once every 10 minutes. But devices that can&amp;rsquo;t be networked, like my two mobile HDDs, I think of as the &amp;ldquo;tape warehouse&amp;rdquo; of commercial solutions - large and inexpensive, stable storage media (comparing to SSD), but can not read/write over the network. They can only be updated manually, but at best, they can be plugged into a computer on time, and the rest should be left to a backup tool that only needs to be manually configured once.&lt;/p&gt;
+&lt;h2 id=&#34;postscript&#34;&gt;Postscript&lt;/h2&gt;
+&lt;p&gt;Originally, my backup frequency is once a month. A busy work schedule has caused me to go months without a backup for my work laptop. I&amp;rsquo;m still thankful for the accident, because false security is more dangerous than not having insurance. Another insight based on SRE theory is to back up before important operations, but don&amp;rsquo;t forget that if you can&amp;rsquo;t do the backup first, you should stop continuing important operations, so &lt;strong&gt;&amp;ldquo;the process fall in safe&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/en-us/categories/thought/" term="thought" label="thought" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/en-us/tags/sre/" term="SRE" label="SRE" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/en-us/tags/blog/" term="blog" label="blog" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">Safety signs for programming</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/program-safety-sign/" />
             <id>https://boholder.github.io/en-us/blogs/program-safety-sign/</id>
-            <updated>2021-11-28T10:45:31&#43;08:00</updated>
+            <updated>2023-03-24T21:56:27&#43;08:00</updated>
             <published>2019-09-22T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -1487,7 +1679,7 @@ But I hope you can be amused by my images.&lt;/p&gt;
             <title type="text">DIY notepad&#43;&#43;，MarkDown(Obsidian) User-Defined-Language for Notepad&#43;&#43;2.1(syntax highlight)</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/" />
             <id>https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/</id>
-            <updated>2021-11-28T10:45:31&#43;08:00</updated>
+            <updated>2023-03-24T21:56:27&#43;08:00</updated>
             <published>2019-05-22T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>

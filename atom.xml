@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2023-03-24T21:55:45&#43;08:00</updated>
+    <updated>2023-03-25T14:21:30&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">为anime角色训练LoRA模型</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/" />
             <id>https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/</id>
-            <updated>2023-03-18T15:17:40&#43;08:00</updated>
+            <updated>2023-03-24T21:56:27&#43;08:00</updated>
             <published>2023-03-14T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -194,9 +194,9 @@
     
         <entry>
             <title type="text">关于SSTV的知识</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/sstv-0/" />
-            <id>https://boholder.github.io/blogs/sstv-0/</id>
-            <updated>2023-03-15T01:23:05&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/sstv-intro/" />
+            <id>https://boholder.github.io/blogs/sstv-intro/</id>
+            <updated>2023-03-12T13:24:41&#43;08:00</updated>
             <published>2023-02-23T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -830,9 +830,9 @@ Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&
     
         <entry>
             <title type="text">信息在网上随风飘飞</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/nformation-flies-in-the-wind-on-the-internet/" />
-            <id>https://boholder.github.io/blogs/nformation-flies-in-the-wind-on-the-internet/</id>
-            <updated>2022-10-15T23:07:30&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/information-flies-in-the-wind-on-the-internet/" />
+            <id>https://boholder.github.io/blogs/information-flies-in-the-wind-on-the-internet/</id>
+            <updated>2022-10-15T23:05:32&#43;08:00</updated>
             <published>2022-10-15T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -907,9 +907,9 @@ Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&
     
         <entry>
             <title type="text">大衍筮法脚本</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/yarrow-divination-zh/" />
-            <id>https://boholder.github.io/blogs/yarrow-divination-zh/</id>
-            <updated>2022-05-28T16:22:37&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/yarrow-divination/" />
+            <id>https://boholder.github.io/blogs/yarrow-divination/</id>
+            <updated>2022-05-28T16:19:31&#43;08:00</updated>
             <published>2022-05-17T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -999,9 +999,9 @@ Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&
     
         <entry>
             <title type="text">懒人做饭</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/lazy-cooking-zh/" />
-            <id>https://boholder.github.io/blogs/lazy-cooking-zh/</id>
-            <updated>2022-05-04T03:28:31&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/lazy-cooking/" />
+            <id>https://boholder.github.io/blogs/lazy-cooking/</id>
+            <updated>2022-05-04T03:22:49&#43;08:00</updated>
             <published>2022-05-03T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -1089,9 +1089,9 @@ Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&
     
         <entry>
             <title type="text">柯里化及相关延伸思考</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/currying-zh/" />
-            <id>https://boholder.github.io/blogs/currying-zh/</id>
-            <updated>2022-02-16T10:34:45&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/currying/" />
+            <id>https://boholder.github.io/blogs/currying/</id>
+            <updated>2022-05-04T03:25:57&#43;08:00</updated>
             <published>2022-01-27T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -1314,8 +1314,8 @@ Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&
     
         <entry>
             <title type="text">SRP提醒你不要盲目遵守DRY设计原则</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/srp-against-dry-zh/" />
-            <id>https://boholder.github.io/blogs/srp-against-dry-zh/</id>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/srp-against-dry/" />
+            <id>https://boholder.github.io/blogs/srp-against-dry/</id>
             <updated>2022-01-27T13:17:33&#43;08:00</updated>
             <published>2021-12-23T00:00:00&#43;00:00</published>
             <author>
@@ -1375,8 +1375,8 @@ Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&
     
         <entry>
             <title type="text">组装台式电脑的经验总结</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/introspection-of-pc-diy-zh/" />
-            <id>https://boholder.github.io/blogs/introspection-of-pc-diy-zh/</id>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/introspection-of-pc-diy/" />
+            <id>https://boholder.github.io/blogs/introspection-of-pc-diy/</id>
             <updated>2022-01-27T13:17:33&#43;08:00</updated>
             <published>2021-11-28T00:00:00&#43;00:00</published>
             <author>
@@ -1555,9 +1555,9 @@ Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&
     
         <entry>
             <title type="text">白话解释单元测试中的Mock概念</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/mock-in-nutshell-zh/" />
-            <id>https://boholder.github.io/blogs/mock-in-nutshell-zh/</id>
-            <updated>2022-01-27T13:17:33&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/mock-in-nutshell/" />
+            <id>https://boholder.github.io/blogs/mock-in-nutshell/</id>
+            <updated>2022-05-04T03:25:57&#43;08:00</updated>
             <published>2021-11-25T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -1819,9 +1819,9 @@ Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&
     
         <entry>
             <title type="text">编程所需要的东西</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/what-you-need-for-programming-zh/" />
-            <id>https://boholder.github.io/blogs/what-you-need-for-programming-zh/</id>
-            <updated>2022-01-26T12:48:30&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/what-you-need-for-programming/" />
+            <id>https://boholder.github.io/blogs/what-you-need-for-programming/</id>
+            <updated>2022-05-04T03:25:57&#43;08:00</updated>
             <published>2021-08-16T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -2357,8 +2357,8 @@ Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&
     
         <entry>
             <title type="text">单元测试的不同方式</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/unit-test-methods-zh/" />
-            <id>https://boholder.github.io/blogs/unit-test-methods-zh/</id>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/unit-test-methods/" />
+            <id>https://boholder.github.io/blogs/unit-test-methods/</id>
             <updated>2022-01-27T13:17:33&#43;08:00</updated>
             <published>2021-05-23T00:00:00&#43;00:00</published>
             <author>
@@ -2821,8 +2821,8 @@ Python下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quicksta
     
         <entry>
             <title type="text">对适用于个人的电子数据备份体系的总结</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/individual-data-backup-summary-zh/" />
-            <id>https://boholder.github.io/blogs/individual-data-backup-summary-zh/</id>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/individual-data-backup-summary/" />
+            <id>https://boholder.github.io/blogs/individual-data-backup-summary/</id>
             <updated>2022-01-27T13:17:33&#43;08:00</updated>
             <published>2020-12-07T00:00:00&#43;00:00</published>
             <author>
@@ -2832,13 +2832,7 @@ Python下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quicksta
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">对个人数据备份实操的个人见解</summary>
             
-                <content type="html">&lt;p&gt;本文中个人电子数据特指&lt;strong&gt;只凭大脑记不住或可能随时间遗忘模糊的&lt;/strong&gt;、
-对拥有其的个人来说该部分数据&lt;strong&gt;丢失或泄露将会对本人社会参与状态或本人身心状态造成不利影响的&lt;/strong&gt;，
-电子数据（下文简称“数据”）。
-数据保存在电子介质上，且只能通过电子设备读写， 这意味着可能需要购买额外设备以满足对其保存、处理的需要。&lt;/p&gt;
-&lt;p&gt;本文在引用所有没有对应术语级定义的自创名词时，将使用大括号高亮该名词，防止读者迷惑（例：【自创名词】）。
-同时本文使用反引号引用上文已提到的有对应术语的名词（例：&lt;code&gt;术语名词&lt;/code&gt;）。
-本文为作者因愚蠢与意外，丢失了四个半月工作数据的反思总结文。本文内容仅个人见解，欢迎指点与讨论。&lt;/p&gt;
+                <content type="html">&lt;p&gt;数据保存在电子介质上，且只能通过电子设备读写，这意味着可能需要购买额外设备以满足对其保存、处理的需要。本文在引用所有没有对应术语级定义的自创名词时，将使用大括号高亮该名词，防止读者迷惑（例：【自创名词】）。同时本文使用反引号引用上文已提到的有对应术语的名词（例：&lt;code&gt;术语名词&lt;/code&gt;）。本文为我因愚蠢与意外，丢失了四个半月工作数据的反思总结文。本文内容仅个人见解，欢迎指点与讨论。&lt;/p&gt;
 &lt;h2 id=&#34;数据重要性分级&#34;&gt;数据重要性分级&lt;/h2&gt;
 &lt;p&gt;数据按重要性（丢失后的损失大小）分为几个等级。&lt;/p&gt;
 &lt;h3 id=&#34;一级&#34;&gt;一级&lt;/h3&gt;
@@ -2849,13 +2843,12 @@ Python下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quicksta
 &lt;li&gt;加密密钥：
 &lt;ul&gt;
 &lt;li&gt;用于解密被加密的大块数据，但数据丢失对应加密密钥也没用了&lt;/li&gt;
-&lt;li&gt;即它与它所加密的数据相互依赖。&lt;/li&gt;
+&lt;li&gt;即它与它所加密的数据（在使用上）相互依赖。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;TOTP(Time-based One-Time Password)的seed：
 &lt;ul&gt;
-&lt;li&gt;保有它本身能生成TOTP6位数字，&lt;/li&gt;
-&lt;li&gt;即它不依赖于其他（已经被输入验证器APP中且无法提取出的）数据。&lt;/li&gt;
+&lt;li&gt;保有它本身能生成TOTP6位数字，即它不依赖于其他（已经被输入验证器APP中且无法提取出的）数据。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;平台账户、软件激活序列号、平台登录Licence&amp;hellip;&amp;hellip;统称“凭证”：
@@ -2870,10 +2863,10 @@ Python下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quicksta
 &lt;li&gt;
 &lt;p&gt;信息特征：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;体积小，通常很难超过100MB，该特征对&lt;code&gt;多副本备份&lt;/code&gt;要求有利，易于保存在多个存储媒介上。&lt;/li&gt;
+&lt;li&gt;体积小，通常很难超过10MB甚至1MB，该特征对&lt;code&gt;多副本备份&lt;/code&gt;要求有利，易于保存在多个存储媒介上。&lt;/li&gt;
 &lt;li&gt;价值大，该类数据的确认丢失通常伴随着不可挽回的巨大损失，欲哭无泪的那种心情。
 （还好平台账户还能找回密码！）&lt;/li&gt;
-&lt;li&gt;你不想让它公开（加密），也不想彻底丢失它（多副本备份）。&lt;/li&gt;
+&lt;li&gt;你不想让它公开（需要加密），也不想彻底丢失它（多副本备份）。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -2893,15 +2886,9 @@ Python下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quicksta
 &lt;p&gt;个人信息：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;常被以“个人隐私”统称，因个人经历生成、或包含可识别特定个人的身份信息，多为文档、多媒体类型。&lt;/li&gt;
-&lt;li&gt;此处只且只能关心你&lt;strong&gt;可以控制&lt;/strong&gt;的部分（，
-至于上传到外部或在外部平台上产生的，最好在源头控制它，即永远上传最无关自己现实身份的最少信息，
-相信我，遵守该原则不会影响网络社交行为，这个话题和论证可以另外写一本书的量，就此打住）。&lt;/li&gt;
-&lt;li&gt;属于【个人信息】的文件举例：求职简历等“个人信息汇总提交型文档”，包含本人脸部（哪怕是低分辨率的非正脸）的照片视频，
-与他人在网络上的交流记录（聊天记录、邮件、别人发来的内含自己信息的文档等）
-&lt;ul&gt;
+&lt;li&gt;此处只且只能关心你&lt;strong&gt;可以控制&lt;/strong&gt;的部分，至于上传到外部或在外部平台上产生的，最好在源头控制它，即永远上传最无关自己现实身份的最少信息，相信我，遵守该原则不会影响正常的网络社交。&lt;/li&gt;
+&lt;li&gt;属于【个人信息】的文件举例：求职简历等“个人信息汇总型文档”（求职简历真的富矿），包含本人脸部（哪怕是低分辨率的非正脸）的照片视频；与他人在网络上的交流记录（聊天记录、邮件、别人发来的内含自己信息的文档等）&lt;/li&gt;
 &lt;li&gt;【个人信息】和&lt;code&gt;凭证&lt;/code&gt;的差别在于文件体积大小和含义，&lt;code&gt;凭证&lt;/code&gt;就像钥匙，而【个人信息】就是宝藏本身。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -2939,11 +2926,7 @@ Python下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quicksta
 &lt;li&gt;
 &lt;p&gt;数据类别：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;在电子设备使用过程中积累在硬盘中的一般数据，包括程序和操作记录、文档等：
-&lt;ul&gt;
-&lt;li&gt;加密与否无关紧要，但一般来说不会想丢失它。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;在电子设备使用过程中积累在硬盘中的一般数据，包括程序和操作记录、文档等。加密与否无关紧要，但一般来说不会想丢失它。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -2963,87 +2946,31 @@ Python下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quicksta
 &lt;/ul&gt;
 &lt;h2 id=&#34;其他与加密和备份相关的个人见解&#34;&gt;其他与加密和备份相关的个人见解&lt;/h2&gt;
 &lt;h3 id=&#34;加密&#34;&gt;加密&lt;/h3&gt;
-&lt;p&gt;来推荐工具吧！作者已使用好几年且现在仍然在使用&lt;a href=&#34;https://www.veracrypt.fr/en/Home.html&#34;&gt;VeraCrypt&lt;/a&gt;
-(&lt;a href=&#34;https://github.com/veracrypt/VeraCrypt&#34;&gt;github项目地址&lt;/a&gt;)
-作为所有加密相关操作的工具软件，开源、多平台且功能完备，而且曾经停滞过几年的它现在又活跃起来了！
-还有什么比一个长久又仍在活跃的开源软件项目更棒的呢。VeraCrypt既可以加密整个Driver
-（驱动器？盘？我还是用英文吧）， 又可以建立一个强加密的“文件型Driver”，
-解密挂载时是一个可存取文件的盘，卸载后就是一个Portable的文件。
-Portable=可以当作普通单一文件进行备份处理，完美。&lt;/p&gt;
-&lt;p&gt;有个非程序小缺陷，直接从官网下载时非常慢，50kb/s(35M total)，且只能单线程请求数据。
-别担心，我们还有&lt;a href=&#34;https://sourceforge.net/projects/veracrypt/&#34;&gt;sourceforge的分流&lt;/a&gt;。
-（注意！不要被VeraCrypt的文件Driver功能迷惑了眼睛，
-作者就是因为不读文档没做备份鲁莽试用Bitlocker时，将备份密钥存入文件Driver，
-忘记了该文件本身储存在设置了Bitlocker的Driver中，迷惑操作。）&lt;/p&gt;
-&lt;p&gt;对于Windows专业版用户来说，
-&lt;a href=&#34;https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview&#34;&gt;Microsoft Windows BitLocker&lt;/a&gt;
-也是一个趁手的工具，作为商业级软件，它使用方便，且有微软的持续质量支持。但它只能加密Driver，
-因此与备份操作结合时不太方便。使用BitLocker软件加密的Driver，
-在备份前需要手动解密，或设置开机（登录）后自动解密，这样备份操作才不会因读取Driver失败而失败。
-作为副作用，这会让加密文件在备份过程中暴露在可被读取的未加密状态下，因此对备份时环境的安全性（断网关服务）要求严格些。&lt;/p&gt;
-&lt;p&gt;不好意思，作者对Mac和Linux的常用软件集合了解不多，无法介绍对应其上的平台独有软件，
-VeraCrypt是多平台的，或许你可以先试试它。&lt;/p&gt;
-&lt;p&gt;特别的，对【一级数据】而言，加密保存指使用另外一个人类可读的密钥（俗语：密码）
-加密存有【一级数据】的独立的Driver（或其他可独立转移的“数据集合结构”）。
-这要求你至少记住这么一个“主密钥”，“主密钥”用来解密出其他密钥。
-作者使用VeraCrypt提供的文件Driver保存此类信息，该方法很原始，但作者固执认为它“更安全”。
-市面上还有许多诸如&lt;a href=&#34;https://1password.com/zh-cn/&#34;&gt;1Password&lt;/a&gt;等直接提供此类信息加密与备份服务的软件，
-甚至连Firefox，Chrome等现代浏览器中就内置了网站密码管理服务，稍加尝试就能找到合你口味的。&lt;/p&gt;
+&lt;p&gt;来推荐工具吧！我已使用好几年且现在仍然在使用&lt;a href=&#34;https://www.veracrypt.fr/en/Home.html&#34;&gt;VeraCrypt&lt;/a&gt;作为所有加密相关操作的工具软件，开源、多平台且功能完备，而且曾经停滞过几年的它现在又活跃起来了！还有什么比一个长久又仍在活跃的开源软件项目更棒的呢。VeraCrypt既可以加密整个Driver，又可以建立一个强加密的“文件型Driver”，解密挂载时是一个可存取文件的盘，卸载后就是一个Portable的文件。Portable=可以当作普通单一文件进行备份处理，完美。有个非程序小缺陷，直接从官网下载时非常慢，50kb/s(35M total)，且只能单线程请求数据。别担心，我们还有&lt;a href=&#34;https://sourceforge.net/projects/veracrypt/&#34;&gt;sourceforge的分流&lt;/a&gt;。（注意！不要被VeraCrypt的文件Driver功能迷惑了眼睛，我就是因为不读文档没做备份鲁莽试用Bitlocker时，将备份密钥存入文件Driver，忘记了该文件本身储存在设置了Bitlocker的Driver中，迷惑操作。）&lt;/p&gt;
+&lt;p&gt;对于Windows专业版用户来说，&lt;a href=&#34;https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview&#34;&gt;Microsoft Windows BitLocker&lt;/a&gt;也是一个趁手的工具，作为商业级软件，它使用方便，且有微软的持续质量支持。但它只能加密Driver，因此与备份操作结合时不太方便。使用BitLocker软件加密的Driver，在备份前需要手动解密，或设置开机（登录）后自动解密，这样备份操作才不会因读取Driver失败而失败。作为副作用，这会让加密文件在备份过程中暴露在可被读取的未加密状态下，因此对备份时环境的安全性（断网关服务）要求严格些。&lt;/p&gt;
+&lt;p&gt;不好意思，我对Mac和Linux的常用软件集合了解不多，无法介绍对应其上的平台独有软件，VeraCrypt是多平台的，或许你可以先试试它。&lt;/p&gt;
+&lt;p&gt;特别的，对【一级数据】而言，加密保存指使用另外一个人类可读的密钥（俗语：密码）加密存有【一级数据】的独立的Driver（或其他可独立转移的“数据集合结构”）。这要求你至少记住这么一个“主密钥”，“主密钥”用来解密出其他密钥。我使用VeraCrypt提供的文件Driver保存此类信息，该方法很原始，但我固执认为它“更安全”。市面上还有许多诸如&lt;a href=&#34;https://1password.com/zh-cn/&#34;&gt;1Password&lt;/a&gt;等直接提供此类信息加密与备份服务的软件，甚至连Firefox，Chrome等现代浏览器中就内置了网站密码管理服务，或者你可以买一个U盘大小的硬件（比如Yubikey）随身携带。稍加尝试就能找到合你口味的。&lt;/p&gt;
 &lt;h3 id=&#34;备份&#34;&gt;备份&lt;/h3&gt;
-&lt;p&gt;考虑备份要首先识别需要被备份的数据主体，
-可以认为一个主体是一个包含多个同类文件的，可独立转移的集合。
-举例，对于作者来说，有一个【一级数据】，
-两个【二级数据】（个人保密文档和工作保密文档），
-五个【三级数据】（家里台式机，家里笔记本，工作笔记本，手机，平板电脑）
-（手机和平板电脑是独特的，它们实际上是备份在电脑硬盘的【三级数据】部分中，
-它们本身属于一二三级混合，作者的方案是将它们的备份加密（作为【二级数据】处理），
-但随电脑的【三级数据】备份。）&lt;/p&gt;
+&lt;p&gt;考虑备份要首先识别需要被备份的数据主体，可以认为一个主体是一个包含多个同类文件的，可独立转移的集合。举例，对于我来说，有一个【一级数据】，两个【二级数据】（个人保密文档和工作保密文档），五个【三级数据】（家里台式机，家里笔记本，工作笔记本，手机，平板电脑）（手机和平板电脑是独特的，它们实际上是备份在电脑硬盘的【三级数据】部分中，它们本身属于一二三级混合，我的方案是将它们的备份加密（作为【二级数据】处理），但随电脑的【三级数据】备份。）&lt;/p&gt;
 &lt;h4 id=&#34;备份位置&#34;&gt;备份位置？&lt;/h4&gt;
-&lt;p&gt;因为数据保存在电子介质上，是基于物理存在的存储设备的，
-因此对于备份位置的选择，作者没有考虑过同存储位置内的冗余备份，
-而是做到硬件级隔离，先不管地理位置（在抽屉里的移动硬盘还是地上的NAS还是网盘服务的主机集群中），
-至少是硬盘级别的隔离。&lt;/p&gt;
-&lt;p&gt;举例：作者本人讨厌网络存储服务且没有多设备大量转移数据的需求（主观+客观原因），
-因此没有使用客观来讲确实经济实惠又方便的网盘服务。
-作者也没有设置家庭NAS，只是购买了两块大容量移动硬盘，
-定期把【二级数据】和【三级数据】备份在两块硬盘上，
-一块在公司柜子里，一块在家里，四舍五入也算异地容灾了，容个火灾和人祸。
-至于【一级数据】，保存在家里台式机、家里笔记本电脑、两块移动硬盘、公司笔记本电脑，共五个备份。&lt;/p&gt;
+&lt;p&gt;因为数据保存在电子介质上，是基于物理存在的存储设备的，因此对于备份位置的选择，我没有考虑过同存储位置内的冗余备份，而是做到硬件级隔离，先不管地理位置（在抽屉里的移动硬盘还是地上的NAS还是网盘服务的主机集群中），至少是硬盘级别的隔离。&lt;/p&gt;
+&lt;p&gt;我本人讨厌网络存储服务且没有多设备大量转移数据的需求（主观+客观原因），因此没有使用客观来讲确实经济实惠又方便的网盘服务。我也没有设置家庭NAS，只是购买了两块大容量移动硬盘，定期把【二级数据】和【三级数据】备份在两块硬盘上，一块在公司柜子里，一块在家里，四舍五入也算异地容灾了，容个火灾和人祸。至于【一级数据】，保存在家里台式机、家里笔记本电脑、两块移动硬盘、公司笔记本电脑，共五个备份。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;经过这次意外后作者决定将【一级数据】和【二级数据】额外上传到Microsoft OneDrive上，
+&lt;p&gt;经过这次意外后我决定将【一级数据】和【二级数据】额外上传到Microsoft OneDrive上，
 反正加密了，备份数量多多益善，而且大小不是很大，能快速完成备份。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;PS：【一级数据】最好存在于每个【二级数据】所在的备份位置中，因为两者相互依赖，
-可以理解为钥匙配得比宝箱数量多，钥匙放在每一个宝箱旁，还有“主密钥”做为钥匙的保护机制。
-（像作者这种使用独立加解密软件的人，还需要额外将加解密软件的免安装便携版与【一级数据】和【二级数据】放在一起）&lt;/p&gt;
+&lt;p&gt;PS：【一级数据】最好存在于每个【二级数据】所在的备份位置中，因为两者相互依赖，可以理解为钥匙配得比宝箱数量多，钥匙放在每一个宝箱旁，还有“主密钥”做为钥匙的保护机制。（像我这种使用独立加解密软件的人，还需要额外将加解密软件的免安装便携版与【一级数据】和【二级数据】放在一起。&lt;/p&gt;
 &lt;h4 id=&#34;备份频率&#34;&gt;备份频率？&lt;/h4&gt;
-&lt;p&gt;这是作者本次经历的人祸所暴露出的备份体系中的最大问题，
-&lt;strong&gt;备份不够频繁&lt;/strong&gt;，准确的说是对于公司笔记本电脑备份不频繁。
-作者决定将之后的备份频率设置到：&lt;/p&gt;
+&lt;p&gt;这是我本次经历的人祸所暴露出的备份体系中的最大问题&lt;strong&gt;备份不够频繁&lt;/strong&gt;，准确的说是对于公司笔记本电脑备份不频繁。我决定将之后的备份频率设置到：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;家中和公司的本地移动硬盘上每周备份一次（顺便备份手机与平板电脑）。&lt;/li&gt;
 &lt;li&gt;家中和公司的两个移动硬盘每月交叉形成两份完整备份。&lt;/li&gt;
 &lt;li&gt;【一级数据】和【二级数据】在电脑上设置自动网盘上传，每次更改过后就上传。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;备份间的自动化同步问题&#34;&gt;备份间的（自动化）同步问题&lt;/h4&gt;
-&lt;p&gt;这个问题又要体现网盘的优势了，经过体验，OneDrive在Windows上可以做到实时备份，
-可以使用该特性保证联网存储设备上备份间的一致性。
-如果不想使用网盘服务，也可自建家庭NAS，
-只要是能保证储存设备间相互联网，总能有现成的解决方案建立起自动化的数据同步系统。
-比如Windows10系统自带的&amp;quot;备份&amp;quot;功能，可做到目录级粒度最短每10分钟同步一次。&lt;/p&gt;
-&lt;p&gt;但是无法联网的设备，比如我那两块移动硬盘，我把它看作商业级方案中的“磁带仓库”————
-容量大且便宜，保存介质稳定，但无法通过网络读写。
-只能通过手动操作的方式对其进行备份更新，但最多也只是按时把它拿出来插在电脑上，
-剩下的应交给只需手动配置一次的电脑上的软件级备份工具。&lt;/p&gt;
+&lt;p&gt;这个问题又要体现网盘的优势了，经过体验，OneDrive在Windows上可以做到实时备份，可以使用该特性保证联网存储设备上备份间的一致性。如果不想使用网盘服务，也可自建家庭NAS，只要是能保证储存设备间相互联网，总能有现成的解决方案建立起自动化的数据同步系统。比如Windows10系统自带的&amp;quot;备份&amp;quot;功能，可做到目录级粒度最短每10分钟同步一次。但是无法联网的设备，比如我那两块移动硬盘，我把它看作商业级方案中的“磁带仓库”——容量大且便宜，保存介质稳定，但无法通过网络读写。只能通过手动操作的方式对其进行备份更新，但最多也只是按时把它拿出来插在电脑，剩下的应交给只需手动配置一次的电脑上的软件级备份工具。&lt;/p&gt;
 &lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
-&lt;p&gt;本来作者的备份频率是一个月一次，在家里有好好遵守设定好的TODO为设备备份，
-但公司的电脑因为嫌沉发懒，一直没带回家，加之上班就是工作下班就是回家，
-这几个月都没在公司专门为工作笔记本备过份。
-更灵异的是，在出事前的昨天晚上，作者看视频时脑中突然蹦出“好像工作笔记本好久没备过份了”，
-随即被视频的精彩打消了顾虑，或许是冥冥中注定一劫让我清醒过来吧。
-还是要感谢这次意外的，因为虚假的安全比不设保险更危险。
-另外一个基于SRE理论的感悟是，重要操作前先备份，
-但别忘了&lt;strong&gt;无法做到先备份则应停止继续重要操作，Process fall in safe&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;本来作者的备份频率是一个月一次，在家里有好好遵守设定好的TODO为设备备份，但公司的电脑因为嫌沉发懒，一直没带回家，加之上班就是工作下班就是回家，这几个月都没在公司专门为工作笔记本备过份。更灵异的是，在出事前的昨天晚上，作者看视频时脑中突然蹦出“好像工作笔记本好久没备过份了”，随即被视频的精彩打消了顾虑，或许是冥冥中注定一劫让我清醒过来吧。还是要感谢这次意外的，因为虚假的安全比不设保险更危险。另外一个基于SRE理论的感悟是，重要操作前先备份，但别忘了&lt;strong&gt;无法做到先备份则应停止继续重要操作，Process fall in safe&lt;/strong&gt;。&lt;/p&gt;
 </content>
             
             
@@ -3082,9 +3009,9 @@ VeraCrypt是多平台的，或许你可以先试试它。&lt;/p&gt;
     
         <entry>
             <title type="text">TDD实践经验分享与对TDD实践程度的讨论</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/tdd-tips-zh/" />
-            <id>https://boholder.github.io/blogs/tdd-tips-zh/</id>
-            <updated>2022-01-27T13:17:33&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/tdd-tips/" />
+            <id>https://boholder.github.io/blogs/tdd-tips/</id>
+            <updated>2022-05-04T03:25:57&#43;08:00</updated>
             <published>2020-07-17T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -3106,7 +3033,7 @@ VeraCrypt是多平台的，或许你可以先试试它。&lt;/p&gt;
 与对于“测试”概念的新颖理解方式。&lt;/p&gt;
 &lt;p&gt;希望本文能消除你对于TDD概念与实践的疑惑，让你在平时编码时能够从TDD的思维方式中获得好处，而不必苦苦承受遵守TDD流程实践中的重复与艰难。&lt;/p&gt;
 &lt;h2 id=&#34;1什么是tdd&#34;&gt;1.什么是TDD&lt;/h2&gt;
-&lt;p&gt;TDD的全称是 “测试驱动开发（Test-driven development）”&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;
+&lt;p&gt;TDD的全称是 “测试驱动开发（Test-driven development）”&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;
 ，“是一种软件开发过程中的应用方法，由极限编程中倡导，以其倡导先写测试程序，然后编码实现其功能得名”。&lt;/p&gt;
 &lt;p&gt;一个TDD循环的简单流程是：&lt;/p&gt;
 &lt;ol&gt;
@@ -3156,13 +3083,13 @@ VeraCrypt是多平台的，或许你可以先试试它。&lt;/p&gt;
 &lt;td&gt;答：TDD时不需要。TDD之后，部分代码会需要，再加上就是。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;资料：&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;的第二个回答，&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;1.&lt;/td&gt;
+&lt;td&gt;资料：&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;的第二个回答，&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;1.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;编写非法输入测试(比如输入NULL，空对象指针etc，这不是一个正规名词但涵盖范围正确）是QA（测试人员）的任务， 当他们测试时，会在至少是单元测试的层面的封装（或者调用链）上测试非法输入，这意味着 &lt;strong&gt;不是每个方法都要考虑非法输入&lt;/strong&gt; ，
 而TDD的测试会覆盖到每个方法。 另外，在TDD之后而不是TDD时考虑这个部分，修改代码会更头脑清晰更方便（回归测试给的信心）。&lt;/p&gt;
-&lt;p&gt;同时应该注意的是，如果业务逻辑本身要求“分情况考虑”， 那么像是数组长度=0，以及由“情况”的排列组合得出的对应的“合法的”边界测试（edge cases），就要在TDD时覆盖到。 正确实例：&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;
+&lt;p&gt;同时应该注意的是，如果业务逻辑本身要求“分情况考虑”， 那么像是数组长度=0，以及由“情况”的排列组合得出的对应的“合法的”边界测试（edge cases），就要在TDD时覆盖到。 正确实例：&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;
 （这是一个优雅如禅宗公案的“kata”）最后，为了考虑逻辑的“周全性”而添加的两个测试。（一个输入情况对应一个测试）&lt;/p&gt;
 &lt;h3 id=&#34;42避免错误的步子大的测试&#34;&gt;4.2.避免错误的步子大的测试&lt;/h3&gt;
 &lt;table&gt;
@@ -3179,7 +3106,7 @@ VeraCrypt是多平台的，或许你可以先试试它。&lt;/p&gt;
 &lt;td&gt;是不是覆盖的逻辑太大了，重新写一个小一些的测试（4.3详解）&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;资料：&lt;sup id=&#34;fnref1:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;3.，&lt;sup id=&#34;fnref1:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;文章中间&lt;/td&gt;
+&lt;td&gt;资料：&lt;sup id=&#34;fnref1:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;3.，&lt;sup id=&#34;fnref1:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;文章中间&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -3191,7 +3118,7 @@ VeraCrypt是多平台的，或许你可以先试试它。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;避免一个测试覆盖太大的逻辑范围，这违反了TDD单个测试对应小目标的原则。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;错误实例：就像文章&lt;sup id=&#34;fnref2:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;中“我”在第一次分析需求时，选择了不明朗的测试“演化”方向， 导致最后一步测试，实质上对应的是一步到位处理超过一种的新加入的情况，无法延续现有的代码继续修改以通过测试。&lt;/p&gt;
+&lt;p&gt;错误实例：就像文章&lt;sup id=&#34;fnref2:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;中“我”在第一次分析需求时，选择了不明朗的测试“演化”方向， 导致最后一步测试，实质上对应的是一步到位处理超过一种的新加入的情况，无法延续现有的代码继续修改以通过测试。&lt;/p&gt;
 &lt;p&gt;现在的问题转换为“如何写出下一个测试”，请接着读4.3。&lt;/p&gt;
 &lt;h3 id=&#34;43简化问题场景-逐步添加限制条件&#34;&gt;4.3.简化问题场景-&amp;gt;逐步添加限制|条件&lt;/h3&gt;
 &lt;table&gt;
@@ -3205,7 +3132,7 @@ VeraCrypt是多平台的，或许你可以先试试它。&lt;/p&gt;
 &lt;td&gt;答：接着上一步测试的目的，继续分析需求，我们走到哪了？或者我们应该换个思路重新分析需求？&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;资料：&lt;sup id=&#34;fnref2:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;2.，&lt;sup id=&#34;fnref3:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;文章中间&lt;/td&gt;
+&lt;td&gt;资料：&lt;sup id=&#34;fnref2:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;2.，&lt;sup id=&#34;fnref3:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;文章中间&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -3213,7 +3140,7 @@ VeraCrypt是多平台的，或许你可以先试试它。&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;When faced with a problem you do not understand, do any part of it you do understand,
 then look at it again.&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;这是文章&lt;sup id=&#34;fnref4:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;给出的引用，来自一部科幻小说。下面我要写的是我根据文章&lt;sup id=&#34;fnref5:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;和其他kata解决需求的思路悟出的门路， 总结来说：&lt;/p&gt;
+&lt;p&gt;这是文章&lt;sup id=&#34;fnref4:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;给出的引用，来自一部科幻小说。下面我要写的是我根据文章&lt;sup id=&#34;fnref5:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;和其他kata解决需求的思路悟出的门路， 总结来说：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;不要按步骤1-2-3线性流程切分需求，而是按套娃，
 从理想的简单状态机（简单输入简单处理输出|复杂输入简化处理输出）到有条件|限制的复杂状态机（复杂处理+复杂输入|输出），
@@ -3222,7 +3149,7 @@ then look at it again.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;如果你手边有《计算机网络》这类书，看看每个层的第一个教学使用的理论协议的假设条件有多理想，以数据链路层的协议为例： 单工，发送方和接收方的网络层总是准备就绪，数据处理不计时间， 可用缓存无限大，信道不会在物理层损坏|丢失。
 这种理想协议只会在教科书上存在，但它形象地描述了该层协议 &lt;em&gt;可能的风险|考量&lt;/em&gt; 。 之后的篇幅逐渐引入各种机制来解决理想协议中忽略的考量，最终一个能在现实场景中使用的协议完成了。&lt;/p&gt;
 &lt;p&gt;咱们的测试也应该像设计协议一样，每次只测试一个考量|一种情况， 修改少量代码通过这个测试，接着向下走，直到考虑了所有情况。&lt;/p&gt;
-&lt;p&gt;正确实例：文章&lt;sup id=&#34;fnref6:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;后半段，“我”针对“字符串按位换行”需求，先考虑了没有空白符的“纯”字符串简单情况，然后因为引入空白符， 多增加了三种情况（分割点在空白符左、相同、右），多写三个测试并修改代码通过它们，最终完成了逻辑。&lt;/p&gt;
+&lt;p&gt;正确实例：文章&lt;sup id=&#34;fnref6:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;后半段，“我”针对“字符串按位换行”需求，先考虑了没有空白符的“纯”字符串简单情况，然后因为引入空白符， 多增加了三种情况（分割点在空白符左、相同、右），多写三个测试并修改代码通过它们，最终完成了逻辑。&lt;/p&gt;
 &lt;h2 id=&#34;2021-03-11更新&#34;&gt;2021-03-11更新&lt;/h2&gt;
 &lt;p&gt;我对TDD有了新的理解：TDD对新手来说比较难以实践，不建议新手去用。有以下几点理由：&lt;/p&gt;
 &lt;ol&gt;
@@ -3354,16 +3281,16 @@ then look at it again.&amp;rdquo;&lt;/p&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;https://en.wikipedia.org/wiki/Test-driven_development&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;https://en.wikipedia.org/wiki/Test-driven_development&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://softwareengineering.stackexchange.com/questions/224711/tdd-workflow-for-implementation-specific-edge-cases&#34;&gt;https://softwareengineering.stackexchange.com/questions/224711/tdd-workflow-for-implementation-specific-edge-cases&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://softwareengineering.stackexchange.com/questions/224711/tdd-workflow-for-implementation-specific-edge-cases&#34;&gt;https://softwareengineering.stackexchange.com/questions/224711/tdd-workflow-for-implementation-specific-edge-cases&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://silkandspinach.net/2014/06/02/tdd-three-easy-mistakes/&#34;&gt;https://silkandspinach.net/2014/06/02/tdd-three-easy-mistakes/&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fnref1:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fnref2:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://silkandspinach.net/2014/06/02/tdd-three-easy-mistakes/&#34;&gt;https://silkandspinach.net/2014/06/02/tdd-three-easy-mistakes/&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fnref1:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fnref2:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:4&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;http://thecleancoder.blogspot.com/2010/10/craftsman-62-dark-path.html&#34;&gt;http://thecleancoder.blogspot.com/2010/10/craftsman-62-dark-path.html&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fnref1:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fnref2:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fnref3:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fnref4:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fnref5:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips-zh/#fnref6:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://thecleancoder.blogspot.com/2010/10/craftsman-62-dark-path.html&#34;&gt;http://thecleancoder.blogspot.com/2010/10/craftsman-62-dark-path.html&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fnref1:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fnref2:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fnref3:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fnref4:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fnref5:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fnref6:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -3410,109 +3337,10 @@ then look at it again.&amp;rdquo;&lt;/p&gt;
         </entry>
     
         <entry>
-            <title type="text">Safety signs for programming</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/program-safety-sign/" />
-            <id>https://boholder.github.io/blogs/program-safety-sign/</id>
-            <updated>2021-11-28T10:45:31&#43;08:00</updated>
-            <published>2019-09-22T00:00:00&#43;00:00</published>
-            <author>
-                    <name>BoHolder</name>
-                    <uri>https://boholder.github.io/</uri>
-                    <email>bottleholder@anche.no</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">I maked up some safety signs for software development department based on the content of ISO 7010 (graphic hazard symbols). Take it easy, they are only for entertainment purposes. BTW, the size of these images is 3000-1000, and you can use them as Twitter header pictures.</summary>
-            
-                <content type="html">&lt;h2 id=&#34;show-them&#34;&gt;Show them!&lt;/h2&gt;
-&lt;h3 id=&#34;wash-your-hands-before-debugging&#34;&gt;Wash your hands before debugging&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/other/2019/wash-hands-before-debugging.png&#34; alt=&#34;wash-hands-before-debugging.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Origin: ISO7010-M011 - Wash your hands&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;Origin symbol: same as origin&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This one is related to a habit in our country. In ancient times, when doing sacred things, in order to ensure success and prove their sincerity, people would bathe and put on clean clothes.
-Even now, some young people wash their hands and faces before play the paid lottery of the game to ensure that they can get good rewards. Sounds funny, right? In fact, I am also doing it.&lt;/p&gt;
-&lt;p&gt;Therefore, before doing the sacred debug, you should wash your hands with sincerity to ensure bugs discovery. Try it before the next debug work.&lt;/p&gt;
-&lt;h3 id=&#34;refer-to-offical-manual-to-avoid-potential-errors&#34;&gt;Refer to offical manual to avoid potential errors&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/other/2019/Refer-to-official-manual-to-avoid-potential-errors.png&#34; alt=&#34;Refer-to-official-manual-to-avoid-potential-errors.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Origin: ISO7010-M002 – Refer to instruction manual/booklet&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;Origin symbol: same as origin&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;I believe that every software developer has this experience: tring a new framework or tool, through Stack Overflow or a personal blog, or a third-party website that provides a simple series of tutorials. Yes, this is tempting, because the official documentation is always hard to be read through because of its length.&lt;/p&gt;
-&lt;p&gt;But this obviously increases a variety of potential risks: incorrectly initializing operations, incomplete API lists, and so on, which can ultimately delay development plans. The first time I used MongoDB was to read the W3C API documentation, because it wasn&amp;rsquo;t complete, it took me a long time to look for a working API, until I realized that I wasn&amp;rsquo;t looking at the official documentation.&lt;/p&gt;
-&lt;p&gt;So I think it is necessary to make a notice to tell every programmer, even I believe that most of us already know it.&lt;/p&gt;
-&lt;h3 id=&#34;no-pushing-unfinished-code-into-master-branch&#34;&gt;No pushing unfinished code into master branch&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/other/2019/no-pushing-unfinished-code-into-master-branch.png&#34; alt=&#34;no-pushing-unfinished-code-into-master-branch.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Origin: ISO7010-P017 – No pushing&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;Origin symbol: see below&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/postimg/2019/200px-ISO_7010_P017.svg.png&#34; alt=&#34;200px-ISO_7010_P017.svg.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;I even think that the code should not to be pushed to the remote until the code passes the developer&amp;rsquo;s own unit test. This may be a bit too undue? I&amp;rsquo;m not sure.&lt;/p&gt;
-&lt;p&gt;This sign comes from my true experience. When an untested code is uploaded to the remote git repository on Friday night, and is automatically published to the test environment, our poor test environment down. I won&amp;rsquo;t talk about the technical details (in fact, I am not very sure about the reason). Our code configuration administrator spent a day positioning the problem next Monday, and forced to rebase git back to Friday morning.&lt;/p&gt;
-&lt;p&gt;Anyway, it is worthwhile to promote the development operation, that code should be tested locally before being pushed to the remote.&lt;/p&gt;
-&lt;h3 id=&#34;no-pushing-server-hard-for-passing-stress-test&#34;&gt;No pushing server hard for passing stress test&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/other/2019/no-pushing-server-hard-for-passing-stress-test.png&#34; alt=&#34;no-pushing-server-hard-for-passing-stress-test.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Origin: ISO7010-P017 – No pushing&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;Origin symbol: see above&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;push someone hard, push server hard(ware), that&amp;rsquo;s all. I am not a native English speaker, I think this is a pun, um.&lt;/p&gt;
-&lt;p&gt;If this is not a pun, then treat it as a sick joke.&lt;/p&gt;
-&lt;h3 id=&#34;break-it-to-obtain-access&#34;&gt;Break it to obtain access&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/other/2019/beak-to-obtain-access-sign.png&#34; alt=&#34;beak-to-obtain-access-sign.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Origin: ISO7010-E008 – Break to obtain access&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;Origin symbol: see below&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/postimg/2019/200px-ISO_7010_E008.svg.png&#34; alt=&#34;200px-ISO_7010_E008.svg.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The purpose of this symbol in ISO 7010 is to break the protective glass, to obtain emergency equipment such as a fire alarm button or fire extinguisher.&lt;/p&gt;
-&lt;p&gt;The meaning of my sign has a bit of cracker&amp;rsquo;s thought: Break (the security system of) this device to gain its access. One thing you must understand is that have access of a device does not have to break it, or its security system. It&amp;rsquo;s because the original text of ISO 7010 is so, I just want to keep the text same.&lt;/p&gt;
-&lt;h2 id=&#34;source-of-inspiration&#34;&gt;Source of inspiration&lt;/h2&gt;
-&lt;p&gt;Here is &lt;a href=&#34;https://en.wikipedia.org/wiki/ISO_7010&#34;&gt;wikipedia ISO 7010 link&lt;/a&gt; , and here is &lt;a href=&#34;https://www.iso.org/obp/ui/#iso:std:iso:7010:ed-3:v1:en&#34;&gt;origin iso.org link about ISO 7010&lt;/a&gt; .&lt;/p&gt;
-&lt;p&gt;When I saw the head picture of a security researcher, &lt;a href=&#34;https://twitter.com/thegrugq&#34;&gt;&lt;strong&gt;thaddeus e. grugq&lt;/strong&gt;&amp;rsquo;s Twitter&lt;/a&gt; , I was amused by the idea of it. The source of this sign seems to be &lt;a href=&#34;https://duo.com/&#34;&gt;Duo Security&lt;/a&gt; , according to text in this image, but I can&amp;rsquo;t search for it to prove my guess.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Return-to-libc_attack&#34;&gt;&amp;ldquo;return-to-libc&amp;rdquo;&lt;/a&gt; is a computer security attack method, &amp;ldquo;libc&amp;rdquo; is not a real department or laboratory#C&amp;rsquo;s abbreviation. As Duo Security is a computer security business, who designed it must did this by purpose.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/postimg/2019/wash-hands-before-return-to-libc.jpg&#34; alt=&#34;wash-hands-before-return-to-libc.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;In particular, I declare that &lt;em&gt;&lt;strong&gt;I don&amp;rsquo;t have any rights to the image above&lt;/strong&gt;&lt;/em&gt;. I made it a static image just because the Tracking Protection feature of a browser like Firefox prevents getting a Twitter image from my website.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;follow-up-plan&#34;&gt;Follow-up plan&lt;/h2&gt;
-&lt;p&gt;Um&amp;hellip; Actually it is the reason why I am anxious to build a website.
-I need a fully controllable image sharing interface to host this idea.&lt;/p&gt;
-&lt;p&gt;I originally wanted to make up about 10 or so. I didn&amp;rsquo;t expect the inspiration to be exhausted after 5 pictures.
-Well, I&amp;rsquo;ll keep it for now, and I&amp;rsquo;ll update when I come out new idea.&lt;/p&gt;
-&lt;p&gt;Unfortunately, I don&amp;rsquo;t think any of the five pictures will match that twitter head picture.&lt;br&gt;
-But I hope you can be amused by my images.&lt;/p&gt;
-&lt;p&gt;That&amp;rsquo;s all, see you next time.&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://boholder.github.io/categories/design/" term="design" label="design" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://boholder.github.io/tags/design/" term="design" label="design" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://boholder.github.io/tags/blog/" term="blog" label="blog" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
             <title type="text">Java实现大整数排列组合，解决抽卡欧气计算问题</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/java_arrangement_combination_zh/" />
-            <id>https://boholder.github.io/blogs/java_arrangement_combination_zh/</id>
-            <updated>2020-12-24T23:32:42&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/java-arrangement-combination/" />
+            <id>https://boholder.github.io/blogs/java-arrangement-combination/</id>
+            <updated>2021-11-28T10:45:31&#43;08:00</updated>
             <published>2019-07-27T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -3669,8 +3497,8 @@ public class factorial {
     
         <entry>
             <title type="text">自制notepad&#43;&#43;，MarkDown(Obsidian配色)用户定义语言格式（自定义高亮）</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1_zh/" />
-            <id>https://boholder.github.io/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1_zh/</id>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/markdown-obsidian-user-defined-language-for-notepadpp/" />
+            <id>https://boholder.github.io/blogs/markdown-obsidian-user-defined-language-for-notepadpp/</id>
             <updated>2021-11-28T10:45:31&#43;08:00</updated>
             <published>2019-05-22T00:00:00&#43;00:00</published>
             <author>
@@ -3734,9 +3562,9 @@ public class factorial {
     
         <entry>
             <title type="text">HTTP cookie的安全性、安全使用方法和攻击防御手段</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/cookie_security_zh/" />
-            <id>https://boholder.github.io/blogs/cookie_security_zh/</id>
-            <updated>2021-05-20T17:26:31&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/cookie_security/" />
+            <id>https://boholder.github.io/blogs/cookie_security/</id>
+            <updated>2021-11-28T10:45:31&#43;08:00</updated>
             <published>2019-05-18T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -3756,11 +3584,11 @@ public class factorial {
 &lt;p&gt;2部分与3部分的解决方案部分有重复，&lt;br&gt;
 但我认为还是把攻防和开发分开，缺陷与解决结合，比较方便阅读。&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security_zh/#what-is-cookie&#34;&gt;Cookie是什么&amp;amp;用法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security_zh/#security-risk-in-design-and-use-and-solution&#34;&gt;设计、使用中的安全隐患以及相应改进&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security_zh/#attack-on-cookies-and-solution&#34;&gt;针对cookie窃取的攻击与相应防御&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security_zh/#academic-discussion-about-cookies&#34;&gt;学术讨论涉及cookie的攻防&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security_zh/#summary&#34;&gt;总结&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#what-is-cookie&#34;&gt;Cookie是什么&amp;amp;用法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#security-risk-in-design-and-use-and-solution&#34;&gt;设计、使用中的安全隐患以及相应改进&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#attack-on-cookies-and-solution&#34;&gt;针对cookie窃取的攻击与相应防御&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#academic-discussion-about-cookies&#34;&gt;学术讨论涉及cookie的攻防&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#summary&#34;&gt;总结&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;what-is-cookie&#34;&gt;What is cookie&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;1.Cookie是什么&amp;amp;用法&lt;/strong&gt;&lt;/p&gt;
