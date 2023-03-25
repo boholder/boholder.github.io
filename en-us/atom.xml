@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
     <title type="text">BoHolder&#39;s site: crafts, blogs etc</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2023-03-25T14:21:31&#43;08:00</updated>
+    <updated>2023-03-25T18:45:18&#43;08:00</updated>
     <id>https://boholder.github.io/en-us/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/en-us/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">Train a LoRA model for an anime character</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/" />
             <id>https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/</id>
-            <updated>2023-03-18T15:17:40&#43;08:00</updated>
+            <updated>2023-03-25T14:23:00&#43;08:00</updated>
             <published>2023-03-14T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -1389,7 +1389,7 @@ to help you, and it was integrated right in the IDEA afterwards.&lt;/p&gt;
             <title type="text">Tips of the electronic data backup system applicable to individuals</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/individual-data-backup-summary/" />
             <id>https://boholder.github.io/en-us/blogs/individual-data-backup-summary/</id>
-            <updated>2023-03-25T14:16:51&#43;08:00</updated>
+            <updated>2023-03-25T14:23:00&#43;08:00</updated>
             <published>2020-12-07T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
