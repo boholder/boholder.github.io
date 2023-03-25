@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2023-03-25T18:45:18&#43;08:00</updated>
+    <updated>2023-03-25T18:52:00&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -432,7 +432,7 @@ Python生态里有对标&lt;a href=&#34;https://reactivex.io/&#34;&gt;reactivex&
             <title type="text">用Maven reactor命令行选项节约build时间</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/maven-build-advance/" />
             <id>https://boholder.github.io/blogs/maven-build-advance/</id>
-            <updated>2023-02-11T20:47:44&#43;08:00</updated>
+            <updated>2023-03-25T18:45:58&#43;08:00</updated>
             <published>2023-02-11T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
