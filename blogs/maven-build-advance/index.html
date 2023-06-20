@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.111.3"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.81.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,11 +17,11 @@
 
     <title>用Maven reactor命令行选项节约build时间 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.d6933b61e48687e05e79f76a96679e6686baf551f831383556fbace43cfaece0.css"/>
+    <link rel="stylesheet" href="/css/meme.min.873d7a3b45cd7b8b23c3e6db490df7744be3beb789eb1b7339c568c93b913000.css"/>
 
     
     
-        <script src="/js/meme.min.88dcafd9937dec27b87f333937e9be42cdffb410dd0317d810f064321461f0ad.js"></script>
+        <script src="/js/meme.min.8e0f2fa693601eb1e65e59b72a205947ff07e9f707fe673ace2110af7f531d0d.js"></script>
 
     
 
@@ -262,7 +262,7 @@
 <p>这里有一个<a href="https://github.com/boholder/sample-multiple-module-proj" target="_blank" rel="noopener">示例项目</a>，它的依赖结构和reactor给出的root build顺序是：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -276,35 +276,35 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">dep-util
-</span></span><span class="line"><span class="cl"> |
-</span></span><span class="line"><span class="cl">dep-service  dep-util2
-</span></span><span class="line"><span class="cl"> |      \      /
-</span></span><span class="line"><span class="cl">app-1     app-2
-</span></span><span class="line"><span class="cl">   
-</span></span><span class="line"><span class="cl">[INFO] Archetype - sample-multiple-module-proj                            [pom]
-</span></span><span class="line"><span class="cl">[INFO] dep-util                                                           [jar]
-</span></span><span class="line"><span class="cl">[INFO] dep-service                                                        [jar]
-</span></span><span class="line"><span class="cl">[INFO] app-1                                                              [jar]
-</span></span><span class="line"><span class="cl">[INFO] dep-util2                                                          [jar]
-</span></span><span class="line"><span class="cl">[INFO] app-2                                                              [jar]
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-text" data-lang="text">dep-util
+ |
+dep-service  dep-util2
+ |      \      /
+app-1     app-2
+   
+[INFO] Archetype - sample-multiple-module-proj                            [pom]
+[INFO] dep-util                                                           [jar]
+[INFO] dep-service                                                        [jar]
+[INFO] app-1                                                              [jar]
+[INFO] dep-util2                                                          [jar]
+[INFO] app-2                                                              [jar]
+</code></pre></td></tr></table></div>
 </div>
 </div><h3 id="projects"><a href="#projects" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:projects" class="headings">projects</a></h3>
 <p>简写<code>-pl</code>，特别指定一个模块的子集去build，不build其他的。
 如：<code>mvn --projects &quot;dep-util, dep-util2&quot; clean install</code></p>
-<pre tabindex="0"><code class="language-log" data-lang="log">[INFO] dep-util ........................................... SUCCESS [  0.995 s]
+<pre><code class="language-log" data-lang="log">[INFO] dep-util ........................................... SUCCESS [  0.995 s]
 [INFO] dep-util2 .......................................... SUCCESS [  0.084 s]
 </code></pre><p>这个选项比较万能，不会沿依赖链传递build，指定什么build什么。
 比如我改了<code>dep-util2</code>，但没改接口，选这个命令是最适合的。回到开头的问题，如果我频繁改模块B，B直接被服务A依赖，那每次运行只需手动build模块B，再跑Run/Debug自动build服务A。</p>
 <p>我在SOF上<a href="https://stackoverflow.com/a/49979240/11397457" target="_blank" rel="noopener">找到</a>了一个自动化程度高一些的命令，根据git修改记录自动取需要build的模块名：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">mvn install -pl $(git status <span class="p">|</span> grep -E <span class="s2">&#34;modified:|deleted:|added:&#34;</span> <span class="p">|</span> awk &#39;{print $2}&#39; <span class="p">|</span> cut -f1 -d<span class="s2">&#34;/&#34;</span>)
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-cmd" data-lang="cmd">mvn install -pl $(git status <span class="p">|</span> grep -E <span class="s2">&#34;modified:|deleted:|added:&#34;</span> <span class="p">|</span> awk &#39;{print $2}&#39; <span class="p">|</span> cut -f1 -d<span class="s2">&#34;/&#34;</span>)
+</code></pre></td></tr></table></div>
 </div>
 </div><h3 id="resume-from"><a href="#resume-from" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:resume-from" class="headings">resume-from</a></h3>
 <p>简写<code>-rf</code>（一阵恶寒），这个选项本意是指定一个build fail的callback，“如果主build命令失败，从root build顺序的中间指定模块开始重新尝试build”。
@@ -313,13 +313,13 @@
 <h3 id="also-make"><a href="#also-make" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:also-make" class="headings">also-make</a></h3>
 <p>简写<code>-am</code>，这个选项用于想同时build依赖和服务，意为“也build主命令目标的依赖”，目标选服务，会向下递归传递。比如：改了<code>dep-util</code>和<code>app-1</code>，
 <code>mvn --projects app-1 --also-make clean install</code></p>
-<pre tabindex="0"><code class="language-log" data-lang="log">[INFO] dep-util ........................................... SUCCESS [  0.824 s]
+<pre><code class="language-log" data-lang="log">[INFO] dep-util ........................................... SUCCESS [  0.824 s]
 [INFO] dep-service ........................................ SUCCESS [  0.106 s]
 [INFO] app-1 .............................................. SUCCESS [  0.109 s]
 </code></pre><h3 id="also-make-dependents"><a href="#also-make-dependents" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:also-make-dependents" class="headings">also-make-dependents</a></h3>
 <p>简写<code>-amd</code>，这个是<code>--also-make</code>的相反选项，“也build使用主命令目标的模块”，目标选依赖，会向上传递。
 如：<code>mvn --projects dep-util --also-make-dependents clean install</code></p>
-<pre tabindex="0"><code class="language-log" data-lang="log">[INFO] dep-util ........................................... SUCCESS [  1.010 s]
+<pre><code class="language-log" data-lang="log">[INFO] dep-util ........................................... SUCCESS [  1.010 s]
 [INFO] dep-service ........................................ SUCCESS [  0.105 s]
 [INFO] app-1 .............................................. SUCCESS [  0.109 s]
 [INFO] app-2 .............................................. SUCCESS [  0.097 s]
@@ -470,11 +470,11 @@
                     </li>
                 
                     <li class="related-item">
-                        <a href="/blogs/what-i-learned-from-putgun/" class="related-link">我在开发Puntgun中学到的东西</a>
+                        <a href="/blogs/java-9-to-17/" class="related-link">Java9到17我关心的新特性</a>
                     </li>
                 
                     <li class="related-item">
-                        <a href="/blogs/currying/" class="related-link">柯里化及相关延伸思考</a>
+                        <a href="/blogs/one-record-about-debuging-unkown-unkown/" class="related-link">记一次穷尽猜测的Debug过程</a>
                     </li>
                 
             </ul>

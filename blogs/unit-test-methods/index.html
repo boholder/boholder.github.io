@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.111.3"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.81.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,11 +17,11 @@
 
     <title>单元测试的不同方式 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.d6933b61e48687e05e79f76a96679e6686baf551f831383556fbace43cfaece0.css"/>
+    <link rel="stylesheet" href="/css/meme.min.873d7a3b45cd7b8b23c3e6db490df7744be3beb789eb1b7339c568c93b913000.css"/>
 
     
     
-        <script src="/js/meme.min.88dcafd9937dec27b87f333937e9be42cdffb410dd0317d810f064321461f0ad.js"></script>
+        <script src="/js/meme.min.8e0f2fa693601eb1e65e59b72a205947ff07e9f707fe673ace2110af7f531d0d.js"></script>
 
     
 
@@ -398,7 +398,7 @@
 </table></div>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -447,54 +447,54 @@
 </span><span class="lnt">47
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// -------service.ServiceTest
-</span></span></span><span class="line"><span class="cl"><span class="c1">// Given-When-Then - Behavior Driven Development (BDD)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">withNormalResponse</span><span class="o">(){</span>
-</span></span><span class="line"><span class="cl">    <span class="n">String</span> <span class="n">index</span> <span class="o">=</span> <span class="s">&#34;normal&#34;</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// given, Mockito
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">given</span><span class="o">(</span><span class="n">mapper</span><span class="o">.</span><span class="na">getEntitiesBy</span><span class="o">(</span><span class="n">index</span><span class="o">))</span>
-</span></span><span class="line"><span class="cl">        <span class="o">.</span><span class="na">willReturn</span><span class="o">(</span><span class="n">buildDummyMapperReturn</span><span class="o">());</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// when
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">Response</span> <span class="n">actual</span><span class="o">=</span><span class="n">service</span><span class="o">.</span><span class="na">getEntitiesBy</span><span class="o">(</span><span class="n">buildRequest</span><span class="o">(</span><span class="n">index</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// then, Hamcrest, 对调用的返回值的期望
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">assertThat</span><span class="o">(</span><span class="n">actual</span><span class="o">.</span><span class="na">getMessage</span><span class="o">(),</span><span class="n">is</span><span class="o">(</span><span class="s">&#34;ok&#34;</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="n">assertThat</span><span class="o">(</span><span class="n">actual</span><span class="o">.</span><span class="na">getData</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getCategory</span><span class="o">(),</span><span class="n">is</span><span class="o">(</span><span class="s">&#34;c&#34;</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="n">assertThat</span><span class="o">(</span><span class="n">actual</span><span class="o">.</span><span class="na">getData</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getName</span><span class="o">(),</span><span class="n">is</span><span class="o">(</span><span class="s">&#34;n&#34;</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// Mockito, 对被测调用桩时传入的参数的期望
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">ArgumentCaptor</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">mapperArgCaptor</span><span class="o">=</span><span class="n">ArgumentCaptor</span><span class="o">.</span><span class="na">forClass</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">verify</span><span class="o">(</span><span class="n">mapper</span><span class="o">,</span><span class="n">times</span><span class="o">(</span><span class="mi">1</span><span class="o">)).</span><span class="na">getEntitiesBy</span><span class="o">(</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">capture</span><span class="o">());</span>
-</span></span><span class="line"><span class="cl">    <span class="n">String</span> <span class="n">whatMapperGot</span><span class="o">=</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">assertThat</span><span class="o">(</span><span class="n">whatMapperGot</span><span class="o">,</span><span class="n">is</span><span class="o">(</span><span class="n">index</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 构造Mapper桩所返回的测试数据
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">private</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Entity</span><span class="o">&gt;</span> <span class="nf">buildDummyMapperReturn</span><span class="o">(){</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">Collections</span><span class="o">.</span><span class="na">singletonList</span><span class="o">(</span><span class="k">new</span> <span class="n">Entity</span><span class="o">().</span><span class="na">setCategory</span><span class="o">(</span><span class="s">&#34;c&#34;</span><span class="o">).</span><span class="na">setName</span><span class="o">(</span><span class="s">&#34;n&#34;</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// -------dto.Response
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Getter</span> <span class="c1">// Lombok
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Setter</span>
-</span></span><span class="line"><span class="cl"><span class="nd">@Accessors</span><span class="o">(</span><span class="n">chain</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Response</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">message</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Entity</span><span class="o">&gt;</span> <span class="n">data</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="nf">Response</span><span class="o">(</span><span class="n">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">message</span> <span class="o">=</span> <span class="n">message</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// -------dao.entity.Entity
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Getter</span>
-</span></span><span class="line"><span class="cl"><span class="nd">@Setter</span>
-</span></span><span class="line"><span class="cl"><span class="nd">@Accessors</span><span class="o">(</span><span class="n">chain</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span> 
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Entity</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">category</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// -------service.ServiceTest
+</span><span class="c1">// Given-When-Then - Behavior Driven Development (BDD)
+</span><span class="c1"></span><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">withNormalResponse</span><span class="o">(){</span>
+    <span class="n">String</span> <span class="n">index</span> <span class="o">=</span> <span class="s">&#34;normal&#34;</span><span class="o">;</span>
+    <span class="c1">// given, Mockito
+</span><span class="c1"></span>    <span class="n">given</span><span class="o">(</span><span class="n">mapper</span><span class="o">.</span><span class="na">getEntitiesBy</span><span class="o">(</span><span class="n">index</span><span class="o">))</span>
+        <span class="o">.</span><span class="na">willReturn</span><span class="o">(</span><span class="n">buildDummyMapperReturn</span><span class="o">());</span>
+    <span class="c1">// when
+</span><span class="c1"></span>    <span class="n">Response</span> <span class="n">actual</span><span class="o">=</span><span class="n">service</span><span class="o">.</span><span class="na">getEntitiesBy</span><span class="o">(</span><span class="n">buildRequest</span><span class="o">(</span><span class="n">index</span><span class="o">));</span>
+    <span class="c1">// then, Hamcrest, 对调用的返回值的期望
+</span><span class="c1"></span>    <span class="n">assertThat</span><span class="o">(</span><span class="n">actual</span><span class="o">.</span><span class="na">getMessage</span><span class="o">(),</span><span class="n">is</span><span class="o">(</span><span class="s">&#34;ok&#34;</span><span class="o">));</span>
+    <span class="n">assertThat</span><span class="o">(</span><span class="n">actual</span><span class="o">.</span><span class="na">getData</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="n">0</span><span class="o">).</span><span class="na">getCategory</span><span class="o">(),</span><span class="n">is</span><span class="o">(</span><span class="s">&#34;c&#34;</span><span class="o">));</span>
+    <span class="n">assertThat</span><span class="o">(</span><span class="n">actual</span><span class="o">.</span><span class="na">getData</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="n">0</span><span class="o">).</span><span class="na">getName</span><span class="o">(),</span><span class="n">is</span><span class="o">(</span><span class="s">&#34;n&#34;</span><span class="o">));</span>
+    <span class="c1">// Mockito, 对被测调用桩时传入的参数的期望
+</span><span class="c1"></span>    <span class="n">ArgumentCaptor</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">mapperArgCaptor</span><span class="o">=</span><span class="n">ArgumentCaptor</span><span class="o">.</span><span class="na">forClass</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+    <span class="n">verify</span><span class="o">(</span><span class="n">mapper</span><span class="o">,</span><span class="n">times</span><span class="o">(</span><span class="n">1</span><span class="o">)).</span><span class="na">getEntitiesBy</span><span class="o">(</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">capture</span><span class="o">());</span>
+    <span class="n">String</span> <span class="n">whatMapperGot</span><span class="o">=</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
+    <span class="n">assertThat</span><span class="o">(</span><span class="n">whatMapperGot</span><span class="o">,</span><span class="n">is</span><span class="o">(</span><span class="n">index</span><span class="o">));</span>
+<span class="o">}</span>
+
+<span class="c1">// 构造Mapper桩所返回的测试数据
+</span><span class="c1"></span><span class="kd">private</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Entity</span><span class="o">&gt;</span> <span class="nf">buildDummyMapperReturn</span><span class="o">(){</span>
+    <span class="k">return</span> <span class="n">Collections</span><span class="o">.</span><span class="na">singletonList</span><span class="o">(</span><span class="k">new</span> <span class="n">Entity</span><span class="o">().</span><span class="na">setCategory</span><span class="o">(</span><span class="s">&#34;c&#34;</span><span class="o">).</span><span class="na">setName</span><span class="o">(</span><span class="s">&#34;n&#34;</span><span class="o">));</span>
+<span class="o">}</span>
+
+<span class="c1">// -------dto.Response
+</span><span class="c1"></span><span class="nd">@Getter</span> <span class="c1">// Lombok
+</span><span class="c1"></span><span class="nd">@Setter</span>
+<span class="nd">@Accessors</span><span class="o">(</span><span class="n">chain</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Response</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">message</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Entity</span><span class="o">&gt;</span> <span class="n">data</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Response</span><span class="o">(</span><span class="n">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">message</span> <span class="o">=</span> <span class="n">message</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// -------dao.entity.Entity
+</span><span class="c1"></span><span class="nd">@Getter</span>
+<span class="nd">@Setter</span>
+<span class="nd">@Accessors</span><span class="o">(</span><span class="n">chain</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span> 
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Entity</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">category</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><h2 id="3-基于特性的测试property-based-testing-pbt"><a href="#3-基于特性的测试property-based-testing-pbt" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-基于特性的测试property-based-testing-pbt" class="headings">3. 基于特性的测试(property-based testing, PBT)</a></h2>
 <h3 id="名词解释"><a href="#名词解释" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:名词解释" class="headings">名词解释</a></h3>
@@ -592,7 +592,7 @@ PBT可作为单元测试的一种方式，在单元测试层面，其最重要�
 <p>也有观点说PBT独立于单元测试、集成测试等测试层级概念，是“额外的一类测试”，我反对这个观点。
 首先，我了解到的几个现有的PBT库都兼容在了原先存在的为EBT编写的成熟测试框架下，
 或者应该说是测试框架逐渐变成了无关测试方式的抽象框架，这是事实依据。
-其次从定义上区分，测试层级描述的是项目活动，区别主要在参与该活动的<a href="https://en.wikipedia.org/wiki/Project_stakeholder" target="_blank" rel="noopener">项目干系人(stakeholder)</a>
+其次从定义上区分，测试层级描述的是项目活动，区别主要在参与该活动的<a href="https://en.wikipedia.org/wiki/Project_stakeholder" target="_blank" rel="noopener">项目干系人(stakeholder)</a> 
 的类别，和运行时对系统覆盖的范围，和PBT所定义的东西相差甚远。
 PBT可以用在单元测试中，也可以用在集成测试中，它描述的仅仅是一种构造测试数据的思路。</p>
 <h3 id="我认为单元测试中可以使用pbt"><a href="#我认为单元测试中可以使用pbt" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:我认为单元测试中可以使用pbt" class="headings">我认为单元测试中可以使用PBT</a></h3>
@@ -646,7 +646,7 @@ PBT可以用在单元测试中，也可以用在集成测试中，它描述的�
 <p>基本<a href="https://hypothesis.works/articles/quickcheck-in-every-language/" target="_blank" rel="noopener">每个编程语言都有PBT库</a>
 （这篇2016年的文章信息稍有过时），
 这类PBT测试库通常会提供，对其服务的语言的原生库内的类的实例的随机构造方法。
-有点绕，用Java下的<a href="https://pholser.github.io/junit-quickcheck/site/1.0/usage/basic-types.html" target="_blank" rel="noopener">junit-quickcheck</a>
+有点绕，用Java下的<a href="https://pholser.github.io/junit-quickcheck/site/1.0/usage/basic-types.html" target="_blank" rel="noopener">junit-quickcheck</a> 
 库举例就是：该库会提供对Java基本类型、String、常用集合类、Date等类的随机构造方法。
 这种构造方法因库而异，在提供给用户使用的方式上稍有不同，
 比如<a href="https://pholser.github.io/junit-quickcheck/site/1.0/usage/other-types.html" target="_blank" rel="noopener">junit-quickcheck</a> 使用参数上的注解，
@@ -658,14 +658,14 @@ Python下的<a href="https://hypothesis.readthedocs.io/en/latest/quickstart.html
 <h3 id="更多关于pbt的参考内容"><a href="#更多关于pbt的参考内容" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:更多关于pbt的参考内容" class="headings">更多关于PBT的参考内容</a></h3>
 <ul>
 <li>一个叫jqwik的Java PBT库的<a href="https://jqwik.net/property-based-testing.html" target="_blank" rel="noopener">介绍页面</a> 给出了不少关于PBT的资料。</li>
-<li><a href="https://blog.ssanj.net/posts/2016-06-26-property-based-testing-patterns.html" target="_blank" rel="noopener">文章 Property-based Testing Patterns</a>
+<li><a href="https://blog.ssanj.net/posts/2016-06-26-property-based-testing-patterns.html" target="_blank" rel="noopener">文章 Property-based Testing Patterns</a> 
 易懂地说明了PBT中可遵守的一些模式，可根据这些模式来指导总结代码中的特性。</li>
 </ul>
 <h2 id="5-总结"><a href="#5-总结" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:5-总结" class="headings">5. 总结</a></h2>
 <p>希望这篇文章给你讲明白了，或者至少你可以把所有参考资料读一遍，自己形成理解。
 试试在工作中把PBT用起来，如果害怕擅自导入PBT包被发现，不提交至VCS就行。
 顺带一提我还没实践过，打算下次迭代时试试。我预计即使是后端日常CRUD功能，
-根据那篇<a href="https://blog.ssanj.net/posts/2016-06-26-property-based-testing-patterns.html" target="_blank" rel="noopener">PBT Patterns文章</a>
+根据那篇<a href="https://blog.ssanj.net/posts/2016-06-26-property-based-testing-patterns.html" target="_blank" rel="noopener">PBT Patterns文章</a> 
 ，针对数据变换或判断的方法都可能能总结出特性。</p>
 <p>抛砖引玉，欢迎在评论中指点指正，或给出另一个角度的看法，好让我对这些概念了解更深。</p>
 

@@ -15,7 +15,7 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>关于SSTV的知识 | BoHolder的网站：博客，小玩意及其他</title>
+    <title>记一次穷尽猜测的Debug过程 | BoHolder的网站：博客，小玩意及其他</title>
 
     <link rel="stylesheet" href="/css/meme.min.873d7a3b45cd7b8b23c3e6db490df7744be3beb789eb1b7339c568c93b913000.css"/>
 
@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="BoHolder" /><meta name="description" content="学习笔记" />
+    <meta name="author" content="BoHolder" /><meta name="description" content="又是一次“不可能”的行为最终被发现是存在视野之外的原因，但拓宽视野很难" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -49,21 +49,21 @@
     
 
     
-    <link rel="canonical" href="https://boholder.github.io/blogs/sstv-intro/" />
+    <link rel="canonical" href="https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/" />
     
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "datePublished": "2023-02-23T00:00:00+00:00",
-        "dateModified": "2023-03-25T14:23:00+08:00",
-        "url": "https://boholder.github.io/blogs/sstv-intro/",
-        "headline": "关于SSTV的知识",
-        "description": "学习笔记",
+        "datePublished": "2023-03-29T00:00:00+00:00",
+        "dateModified": "2023-03-29T19:35:02+08:00",
+        "url": "https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/",
+        "headline": "记一次穷尽猜测的Debug过程",
+        "description": "又是一次“不可能”的行为最终被发现是存在视野之外的原因，但拓宽视野很难",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
-        "wordCount":  1183 ,
+        "wordCount":  0 ,
         "image": "https://boholder.github.io/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
@@ -99,14 +99,14 @@
 
 
 
-<meta property="og:title" content="关于SSTV的知识" />
-<meta property="og:description" content="学习笔记" />
-<meta property="og:url" content="https://boholder.github.io/blogs/sstv-intro/" />
+<meta property="og:title" content="记一次穷尽猜测的Debug过程" />
+<meta property="og:description" content="又是一次“不可能”的行为最终被发现是存在视野之外的原因，但拓宽视野很难" />
+<meta property="og:url" content="https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/" />
 <meta property="og:site_name" content="BoHolder的网站：博客，小玩意及其他" />
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2023-02-23T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2023-03-25T14:23:00&#43;08:00" />
+    <meta property="article:published_time" content="2023-03-29T00:00:00&#43;00:00" />
+    <meta property="article:modified_time" content="2023-03-29T19:35:02&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -176,12 +176,12 @@
 
         <article class="content post h-entry" data-align="justify" data-type="blogs" data-toc-num="true">
 
-            <h1 class="post-title p-name">关于SSTV的知识</h1>
+            <h1 class="post-title p-name">记一次穷尽猜测的Debug过程</h1>
 
             
 
             
-                <div class="post-description p-summary">学习笔记</div>
+                <div class="post-description p-summary">又是一次“不可能”的行为最终被发现是存在视野之外的原因，但拓宽视野很难</div>
                 
             
 
@@ -191,11 +191,11 @@
 <div class="post-meta">
     
         
-        <time datetime="2023-02-23T00:00:00&#43;00:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2023.2.23</time>
+        <time datetime="2023-03-29T00:00:00&#43;00:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2023.3.29</time>
     
     
         
-        <time datetime="2023-03-25T14:23:00&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2023.3.25</time>
+        <time datetime="2023-03-29T19:35:02&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2023.3.29</time>
     
     
     
@@ -203,17 +203,17 @@
         
         
             
-                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/categories/fun/" class="category-link p-category">fun</a></span>
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/categories/programming/" class="category-link p-category">programming</a></span>
             
         
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1183</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;0</span>
     
     
         
-        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;3&nbsp;分钟</span>
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;0&nbsp;分钟</span>
     
     
     
@@ -221,54 +221,8 @@
 
             
 
-            <nav class="contents">
-  <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
-    <li><a id="contents:补一补专业知识" href="#补一补专业知识">补一补专业知识</a></li>
-    <li><a id="contents:sstv格式" href="#sstv格式">SSTV格式</a></li>
-  </ol>
-</nav><div class="post-body e-content">
-                <p>谢谢<a href="https://www.youtube.com/watch?v=q9chAP5AmCU" target="_blank" rel="noopener">乔伊的视频</a>让我对无线电产生了兴趣。</p>
-<h2 id="补一补专业知识"><a href="#补一补专业知识" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:补一补专业知识" class="headings">补一补专业知识</a></h2>
-<ul>
-<li><a href="https://www.shuxuele.com/algebra/amplitude-period-frequency-phase-shift.html" target="_blank" rel="noopener">数学上的波，频率、幅度、位移的感念</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/37535928" target="_blank" rel="noopener">信号调制</a></li>
-</ul>
-<p>载波（carrier）：作为传输基底的纯净的固定周期（频率）的高频率信号。</p>
-<p>调制（modulation）：动词或动名词，一种信号处理方式，通过往指定的载波中嵌入真正想传递的信号（信息）</p>
-<ul>
-<li>为什么要调制：
-<ol>
-<li>发信号的天线长度要不小于信号波长十分之一，高频波长短，容易用较短的天线辐射出去。</li>
-<li>通过调制人工将不同信号隔离在不同频率，信号不串台。</li>
-</ol>
-</li>
-<li>调制分为数字调制和模拟调制，指的是原始信息的形式
-<ul>
-<li>数字是01（比如无线网卡）</li>
-<li>模拟是个连续的波（比如麦克风直连电台发信器）。</li>
-</ul>
-</li>
-<li>模拟调制的几种方式中有我们收音机上会看到的FM、AM，英语字面缩写。
-<ul>
-<li>Frequency modulation是调频（频率越高图示的线越横向密集，声音越尖）。</li>
-<li>Amplitude modulation是调幅（幅度越大图示的线谷峰高低差越大，声音越响）。</li>
-</ul>
-</li>
-</ul>
-<h2 id="sstv格式"><a href="#sstv格式" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:sstv格式" class="headings">SSTV格式</a></h2>
-<p>SSTV（slow-scan television，慢扫描电视）是一种将图片信息嵌入音频信号（并发送）的方式。SSTV选用的方式是FM，把图片的像素亮度映射为频率，越亮频率越高，彩色图片是发送颜色各自的亮度。</p>
-<ul>
-<li><a href="https://www.sigidwiki.com/wiki/Slow-Scan_Television_%28SSTV%29" target="_blank" rel="noopener">https://www.sigidwiki.com/wiki/Slow-Scan_Television_%28SSTV%29</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Slow-scan_television" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Slow-scan_television</a></li>
-<li><a href="https://www.yumpu.com/en/document/read/7259948/proposal-for-sstv-mode-specifications" target="_blank" rel="noopener">https://www.yumpu.com/en/document/read/7259948/proposal-for-sstv-mode-specifications</a></li>
-<li><a href="https://www.sstv-handbook.com/" target="_blank" rel="noopener">https://www.sstv-handbook.com/</a></li>
-</ul>
-<p>就像网络通信协议一样，在发送真正的数据前，SSTV会发送校准头（calibration header），虽然没搜到后者，但感觉和令人怀念的<a href="https://www.youtube.com/watch?v=QDS4B0mM-ew" target="_blank" rel="noopener">拨号上网的开头声音</a>是一样的，因为是模拟调制的校准头所以每次听都是一样的声音。</p>
-<p>校准头之后是传输模式（mode），用VIS code（vertical interval signaling）这种编码传输，每30ms跳一次频率。除去开头结尾的两个1200Hz信号，1100Hz=1，1300Hz=0，共7bit+最后奇偶校验位。这7位二进制当成数字转换成十进制，对应某个模式。比如<code>Robot36</code>模式的数字是<code>8d（d=十进制）</code>。这些模式是不同人发明的，但开头都是校准头和VIS，类似网络中标准协议框架和具体实现？</p>
-<p>VIS发完了，1ms都不耽搁，开始发数据。逐行从左往右从上往下，类似多图杀猫时期的图片加载。每行开始先是一个同步脉冲（sync pulse），再是真正的亮度对应的频率。如果有多个颜色就是连续发送，有些模式的颜色间可能有分隔信号用的短脉冲。数据发完就结束了，没有tail的概念。</p>
-<p>SSTV的载波可以是各种频率，比如业余无线电的UHF（300～3000MHz）和VHF（30～300MHz）或高频（3MHz~30MHz）。但是SSTV的信号本身的频率范围是1100Hz~2300Hz，在人耳听力范围（20Hz~20000Hz）内，直接从图片生成的SSTV音频，或用收音机解调（制）无线信号再用扬声器放出的声音，人耳是能听到的。</p>
-<p>解析SSTV信号，就是在音频信号里找校准头，然后顺着解析VIS，最后按模式规则解析数据，把频率反向转换回像素。重要的三要素：时长，频率，信息排列顺序。</p>
-
+            <nav class="contents"></nav><div class="post-body e-content">
+                
             </div>
 
             
@@ -281,7 +235,7 @@
                 
                 
                 
-                <li class="copyright-item link"><span class="copyright-item-text">链接：</span>: <a href="/blogs/sstv-intro/" target="_blank" rel="noopener">https://boholder.github.io/blogs/sstv-intro/</a></li>
+                <li class="copyright-item link"><span class="copyright-item-text">链接：</span>: <a href="/blogs/one-record-about-debuging-unkown-unkown/" target="_blank" rel="noopener">https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/</a></li>
             
             <li class="copyright-item license"><span class="copyright-item-text">版权：</span>: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
             
@@ -296,9 +250,9 @@
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2023-03-25 14:23:00 CST" style="cursor:help">
+        <span title="Updated @ 2023-03-29 19:35:02 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-03-25</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-03-25</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-03-29</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-03-29</text></g></svg>
         </span></div>
 
 
@@ -333,14 +287,14 @@
             
                 <div class="share-item twitter">
                     
-                    <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/sstv-intro/&amp;text=%e5%85%b3%e4%ba%8eSSTV%e7%9a%84%e7%9f%a5%e8%af%86&amp;hashtags=sstv,&amp;via=%25!s%28%3cnil%3e%29" title="Share on Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                    <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/&amp;text=%e8%ae%b0%e4%b8%80%e6%ac%a1%e7%a9%b7%e5%b0%bd%e7%8c%9c%e6%b5%8b%e7%9a%84Debug%e8%bf%87%e7%a8%8b&amp;hashtags=programming,blog,&amp;via=%25!s%28%3cnil%3e%29" title="Share on Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item facebook">
                     
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/blogs/sstv-intro/&amp;hashtag=%23sstv" title="Share on Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/&amp;hashtag=%23programming" title="Share on Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
                 </div>
             
 
@@ -349,7 +303,7 @@
             
                 <div class="share-item telegram">
                     
-                    <a href="https://t.me/share/url?url=https://boholder.github.io/blogs/sstv-intro/&amp;text=%e5%85%b3%e4%ba%8eSSTV%e7%9a%84%e7%9f%a5%e8%af%86" title="Share on Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                    <a href="https://t.me/share/url?url=https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/&amp;text=%e8%ae%b0%e4%b8%80%e6%ac%a1%e7%a9%b7%e5%b0%bd%e7%8c%9c%e6%b5%8b%e7%9a%84Debug%e8%bf%87%e7%a8%8b" title="Share on Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
                 </div>
             
 
@@ -371,7 +325,7 @@
     const typeNumber = 0;
     const errorCorrectionLevel = 'L';
     const qr = qrcode(typeNumber, errorCorrectionLevel);
-    qr.addData('https:\/\/boholder.github.io\/blogs\/sstv-intro\/');
+    qr.addData('https:\/\/boholder.github.io\/blogs\/one-record-about-debuging-unkown-unkown\/');
     qr.make();
     document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
 </script>
@@ -394,7 +348,15 @@
             <ul class="related-list">
                 
                     <li class="related-item">
-                        <a href="/blogs/train-a-lora-model-for-an-anime-character/" class="related-link">为anime角色训练LoRA模型</a>
+                        <a href="/blogs/java-9-to-17/" class="related-link">Java9到17我关心的新特性</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/blogs/what-i-learned-from-putgun/" class="related-link">我在开发Puntgun中学到的东西</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/blogs/maven-build-advance/" class="related-link">用Maven reactor命令行选项节约build时间</a>
                     </li>
                 
             </ul>
@@ -412,7 +374,15 @@
                 
                 
                     
-                    <a href="/tags/sstv/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>sstv</a>
+                    <a href="/tags/programming/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>programming</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/blog/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>blog</a>
                 
             
         </div>
@@ -423,13 +393,13 @@
         
     <footer class="minimal-footer">
         
-            <div class="post-tag"><a href="/tags/sstv/" rel="tag" class="post-tag-link">#sstv</a></div>
+            <div class="post-tag"><a href="/tags/programming/" rel="tag" class="post-tag-link">#programming</a> <a href="/tags/blog/" rel="tag" class="post-tag-link">#blog</a></div>
         
         
         
             
                 <div class="post-category">
-                    <a href="/categories/fun/" class="post-category-link">fun</a>
+                    <a href="/categories/programming/" class="post-category-link">programming</a>
                 </div>
             
         
@@ -451,12 +421,12 @@
         <ul class="post-nav">
             
                 <li class="post-nav-prev">
-                    <a href="/blogs/train-a-lora-model-for-an-anime-character/" rel="prev">&lt; 为anime角色训练LoRA模型</a>
+                    <a href="/blogs/java-9-to-17/" rel="prev">&lt; Java9到17我关心的新特性</a>
                 </li>
             
             
                 <li class="post-nav-next">
-                    <a href="/blogs/what-i-learned-from-putgun/" rel="next">我在开发Puntgun中学到的东西 &gt;</a>
+                    <a href="/blogs/train-a-lora-model-for-an-anime-character/" rel="next">为anime角色训练LoRA模型 &gt;</a>
                 </li>
             
         </ul>
