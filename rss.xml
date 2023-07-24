@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Tue, 20 Jun 2023 15:09:41 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 24 Jul 2023 09:11:24 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
@@ -321,52 +321,6 @@ nestmate互相能在编码时读private成员，像以前一样。
 &lt;/ul&gt;
 &lt;p&gt;Java17那个preview的switch pattern matching真香，能省掉不少if-else-大括号，可惜在preview。&lt;/p&gt;
 </description>
-                
-                
-                
-                
-                
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="https://boholder.github.io/categories/programming/">programming</category>
-                                
-                            
-                        
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="https://boholder.github.io/tags/programming/">programming</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
-                                
-                            
-                        
-                    
-                
-            </item>
-        
-            <item>
-                <title>记一次穷尽猜测的Debug过程</title>
-                <link>https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/</link>
-                <guid isPermaLink="true">https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/</guid>
-                <pubDate>Wed, 29 Mar 2023 00:00:00 &#43;0000</pubDate>
-                
-                    <author>bottleholder@anche.no (BoHolder)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
-                
-                    <description></description>
                 
                 
                 
@@ -2498,7 +2452,7 @@ app-1     app-2
                     <description>&lt;p&gt;这是一篇译制博客文章，原博客为
 &lt;a href=&#34;https://coderscat.com/learn-from-source-code/&#34;&gt;Learn from Source Code (an Effective Way to Grow for Beginners)&lt;/a&gt;
 ，原作者为&lt;a href=&#34;mailto:nickmose8@gmail.com&#34;&gt;Nick Mose&lt;/a&gt; 。
-&lt;a href=&#34;mailto:boholder@anche.no&#34;&gt;我&lt;/a&gt; 向Nick申请获得了此文的中文翻译权与中文翻译文章发布权。&lt;/p&gt;
+&lt;a href=&#34;mailto:bottleholder@anche.no&#34;&gt;我&lt;/a&gt; 向Nick申请获得了此文的中文翻译权与中文翻译文章发布权。&lt;/p&gt;
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;上周我在和一位年轻程序员聊天时，他问到我：“如何阅读源码？”，我们讨论了一段时间，我还列举了几种有效阅读源码的方式。
 然后他说：“你应该就这个话题写篇文章，这对初学者很有帮助，而且这种经验无法从书籍和教程中获得。”
@@ -4290,6 +4244,30 @@ Time: 2015-07&lt;/p&gt;
                 
                     <description>&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
 </description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+                
+                    <description></description>
                 
                 
                 

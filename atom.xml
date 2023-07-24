@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2023-06-20T15:09:41&#43;08:00</updated>
+    <updated>2023-07-24T09:11:24&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">Java9到17我关心的新特性</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/java-9-to-17/" />
             <id>https://boholder.github.io/blogs/java-9-to-17/</id>
-            <updated>2023-06-20T15:04:02&#43;08:00</updated>
+            <updated>2023-06-20T15:10:37&#43;08:00</updated>
             <published>2023-03-29T00:00:00&#43;00:00</published>
             <author>
                     <name>BoHolder</name>
@@ -312,55 +312,6 @@ nestmate互相能在编码时读private成员，像以前一样。
 &lt;/ul&gt;
 &lt;p&gt;Java17那个preview的switch pattern matching真香，能省掉不少if-else-大括号，可惜在preview。&lt;/p&gt;
 </content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://boholder.github.io/categories/programming/" term="programming" label="programming" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://boholder.github.io/tags/programming/" term="programming" label="programming" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://boholder.github.io/tags/blog/" term="blog" label="blog" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">记一次穷尽猜测的Debug过程</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/" />
-            <id>https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/</id>
-            <updated>2023-03-29T19:35:02&#43;08:00</updated>
-            <published>2023-03-29T00:00:00&#43;00:00</published>
-            <author>
-                    <name>BoHolder</name>
-                    <uri>https://boholder.github.io/</uri>
-                    <email>bottleholder@anche.no</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">又是一次“不可能”的行为最终被发现是存在视野之外的原因，但拓宽视野很难</summary>
-            
-                <content type="html"></content>
             
             
             
@@ -2524,7 +2475,7 @@ app-1     app-2
             <title type="text">译文：从源码中学习（阅读源码，初学者的有效成长方式）</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/learn-from-source-code/" />
             <id>https://boholder.github.io/blogs/learn-from-source-code/</id>
-            <updated>2021-05-28T11:14:36&#43;08:00</updated>
+            <updated>2023-07-24T09:10:00&#43;08:00</updated>
             <published>2021-05-25T00:00:00&#43;00:00</published>
             <author>
                     <name>Nick Mose</name>
@@ -2535,7 +2486,7 @@ app-1     app-2
                 <content type="html">&lt;p&gt;这是一篇译制博客文章，原博客为
 &lt;a href=&#34;https://coderscat.com/learn-from-source-code/&#34;&gt;Learn from Source Code (an Effective Way to Grow for Beginners)&lt;/a&gt;
 ，原作者为&lt;a href=&#34;mailto:nickmose8@gmail.com&#34;&gt;Nick Mose&lt;/a&gt; 。
-&lt;a href=&#34;mailto:boholder@anche.no&#34;&gt;我&lt;/a&gt; 向Nick申请获得了此文的中文翻译权与中文翻译文章发布权。&lt;/p&gt;
+&lt;a href=&#34;mailto:bottleholder@anche.no&#34;&gt;我&lt;/a&gt; 向Nick申请获得了此文的中文翻译权与中文翻译文章发布权。&lt;/p&gt;
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;上周我在和一位年轻程序员聊天时，他问到我：“如何阅读源码？”，我们讨论了一段时间，我还列举了几种有效阅读源码的方式。
 然后他说：“你应该就这个话题写篇文章，这对初学者很有帮助，而且这种经验无法从书籍和教程中获得。”
@@ -4348,6 +4299,33 @@ Time: 2015-07&lt;/p&gt;
             
                 <content type="html">&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
 </content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text"></title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/" />
+            <id>https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/</id>
+            <updated>2023-07-24T09:10:00&#43;08:00</updated>
+            <published>0001-01-01T00:00:00&#43;00:00</published>
+            <author>
+                    <name>BoHolder</name>
+                    <uri>https://boholder.github.io/</uri>
+                    <email>bottleholder@anche.no</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html"></summary>
+            
+                <content type="html"></content>
             
             
             
