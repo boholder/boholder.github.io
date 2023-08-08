@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2023-07-24T09:11:24&#43;08:00</updated>
+    <updated>2023-08-08T17:25:16&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -16,6 +16,92 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
     <generator uri="https://gohugo.io/" version="0.81.0">Hugo</generator>
+        <entry>
+            <title type="text">我找到了适合自己的开源项目</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/join-minecraft-access-devlopment/" />
+            <id>https://boholder.github.io/blogs/join-minecraft-access-devlopment/</id>
+            <updated>2023-08-08T17:23:47&#43;08:00</updated>
+            <published>2023-08-08T00:00:00&#43;00:00</published>
+            <author>
+                    <name>BoHolder</name>
+                    <uri>https://boholder.github.io/</uri>
+                    <email>bottleholder@anche.no</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">比较开心，分享一些相关的事</summary>
+            
+                <content type="html">&lt;p&gt;我正在帮忙做一个帮助视障玩家玩Minecraft的mod - &lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access&#34;&gt;minecraft-access&lt;/a&gt;，帮了大概两个多月了。这是我第一次深度参与一个开源项目。&lt;/p&gt;
+&lt;h2 id=&#34;我是如何找到的&#34;&gt;我是如何找到的&lt;/h2&gt;
+&lt;p&gt;得感谢Bilibili的大数据，给我推了一个盲人up主玩Minecraft的视频。我想为这方面贡献点力量，就顺藤摸瓜一通搜索，搜到了目前的项目。还好它是活跃的，我本来还担心如果没有任何相关项目是活跃的该怎么办。&lt;/p&gt;
+&lt;h2 id=&#34;关于这个mod的作者&#34;&gt;关于这个mod的作者&lt;/h2&gt;
+&lt;p&gt;这个mod的作者，Shoaib，挺厉害的，我在找项目的过程中发现，搜索结果中（过去的）的 Minecraft accessibility mod 大部分是他为主要开发者。目前这个mod算是把之前的各个小mod集成起来，方便下载和开发。他还在和其他人一起用C#语言开发了&lt;a href=&#34;https://github.com/khanshoaib3/stardew-access&#34;&gt;星露谷的 accessibility mod&lt;/a&gt;。他人也很好沟通，我向他介绍的一些改进建议，他大多也会接受。&lt;/p&gt;
+&lt;h2 id=&#34;关于这个项目&#34;&gt;关于这个项目&lt;/h2&gt;
+&lt;p&gt;这个项目很合我的口味，也正处于适合参与进去的时机：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是关于我（最）喜欢的游戏Minecraft，为Minecraft写个mod甚至是我当初选专业的一个动机。&lt;/li&gt;
+&lt;li&gt;终于找到一个“不庞大”的Java项目。众所周知Java适合开发企业级应用或框架，项目都很“庞大”，很难入门。但小项目用Java我又嫌弃JVM臃肿，和嫌弃Chromium一个原因。&lt;/li&gt;
+&lt;li&gt;已经落地，有现有的用户群，可以听到反馈，真的在帮助用户解决问题。软件活着要靠开发者和用户两类人同时存在。&lt;/li&gt;
+&lt;li&gt;Shoaib不太适应Minecraft这种持续更新的游戏（要跟着游戏更新被迫测试和修复失效的代码），他的兴趣更多在星露谷（和其他游戏）上。我的参与让他能放下大部分这边的担子，专心去做他感兴趣的事（这边的活跃开发者只有他一个人）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个mod基本是为游戏设计一套新的适合视障者的人机交互界面，用户输入是键盘按键，mod输出是借助读屏软件API念出各种文本信息。除了正常的编程挑战乐趣之外，设计功能时要换位思考，手动测试时要闭上眼。我没系统学过人机交互的知识，每次做功能时只有一个大概的原则：用户用起来方便（更少的按键），设计符合直觉，和已有的交互类似（降低学习和记忆负担）。&lt;/p&gt;
+&lt;h2 id=&#34;minecraft不适合做accessibility&#34;&gt;Minecraft不适合做accessibility&lt;/h2&gt;
+&lt;p&gt;这是我在参与过程中逐渐得到的结论。我认为包括Minecraft在内的所有3D游戏都不太适合做accessibility（除了为视障者而生的游戏，如&lt;a href=&#34;https://samtupy.com/blog/2023/04/stw-early-april-update/&#34;&gt;Survive the Wild&lt;/a&gt;，游戏设计之初就考虑到）。核心论据是人机交互方面的观察：视障者的人机交互大多不是平滑连续而随机的，而是离散的。比如“指定操作目标”，是在一个既有列表中逐个选择。3D游戏中的实体有长宽高体积，环境有xyz三个方向轴，这种复杂环境对视障者的想象力、注意力和记忆力负担比较大，也不方便设计交互。&lt;/p&gt;
+&lt;p&gt;Minecraft内置的accessibility功能中，针对视障者的只有对菜单的朗读（对听障者有音效方向指示的功能很好用的，我一直开着，看周围有没有岩浆和苦力怕）。我不知道Mojang有没有想过做针对视障者的accessibility，大概是太麻烦了所以没做吧。&lt;/p&gt;
+&lt;p&gt;针对Minecraft的“指定操作目标”交互，从开发角度看，并不是做不到把周围可选目标组转化成一个列表，而是每个方块和实体都是可交互目标，那么长的列表用户肯定不方便用。所以目前用户的视角移动交互，我们选择了通过按键模拟视角转动，或者用户也可以很勇敢地拿起鼠标自由转动（非常容易迷失方向）。&lt;/p&gt;
+&lt;p&gt;我认为目前本mod最大的交互方面的问题是——&lt;strong&gt;本mod可能会扭曲用户对Minecraft游戏的认知&lt;/strong&gt;。用户视角每指向一个方块或实体，mod就朗读出其名字和状态。实体还好，主要是方块。Minecraft最出色的设计就是通过放置一个个方块自由建造出结构。我相信人的认知是由输入构成的。在视障者尤其是没接触过Minecraft的新玩家“眼”中，Minecraft世界仅仅是由一个个方块构成的，这就是mod直接朗读出的世界。要想把多个方块“看作”结构，就需要依赖丰富的想象力，这样不仅视障者直接体验到的乐趣会大大减少，努力想象结构的过程也很费脑子。&lt;/p&gt;
+&lt;p&gt;我希望这个现状会因最近新提出的需求——&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/issues/109&#34;&gt;区域地图&lt;/a&gt;而改善，这个功能提供一个鸟瞰视角，类似回合制策略游戏中的战术视角，玩家站在原地不动，通过移动光标连续读出周围环境的方块。这样玩家就不需要爬上爬下转动视角去获取方块信息了。这个功能有潜在被用作作弊的可能，但是既然材质透视挖钻石这种常见作弊，服务器也是用监控异常的矿物破坏比例而不是直接知道用户用了透视材质包，这部分就留给用户自觉遵守吧（而且不打算实现可视化（技术上很难），正常视力玩家没法方便地利用它）。&lt;/p&gt;
+&lt;p&gt;我也希望有好人能针对Minecraft截图训练出一个专用的BLIP2模型之类，帮助视障者玩家“看”到身边几格之外更远更庞大的景色，比如自然生成的美景或人工建筑的结构。我不会炼丹，然后我看了下要想炼这么一个东西也挺费钱的，炼好了怎么部署保证可用性也是麻烦，鉴于现在这个mod的用户也不是很多，ROI（Return on investment）应该不好看。但是我还是希望AI能帮到视障者，不止玩游戏方面吧。&lt;/p&gt;
+&lt;h2 id=&#34;这些年这么多游戏没白玩&#34;&gt;这些年这么多游戏没白玩&lt;/h2&gt;
+&lt;p&gt;我惊奇的发现，在设计新功能或改善老功能时，我能从玩过的游戏中“借”来一些灵感。&lt;/p&gt;
+&lt;p&gt;有个用户说，Ta确定因为砍树遗留了一些浮在天空上的原木（经典Minecraft场景吧），但Ta无法定位确切位置。当时mod已经有对内置的特定方块或实体（比如矿物方块、红石部件和动物、怪物）的扫描锁定功能了，就是类似黑魂等那种锁定拉视角，按键切换锁定目标。我就想起《塞尔达：荒野之息》里有希卡之石选择物品图鉴并扫描的功能：不显示精确的位置，离目标越近，指示器强度越强叫得越响。我借鉴这个功能&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/pull/59&#34;&gt;实现了类似的功能&lt;/a&gt;，其实只是扩展了已有的扫描锁定功能，允许用户指定目标方块或实体，并同时排除对其他预置的方块和实体的扫描，更“专注”寻找目标。&lt;/p&gt;
+&lt;p&gt;上文提到的区域地图功能，我在设计功能时就联想到各种3A游戏漂亮的大地图，还有回合制策略游戏的战术视角了。我从其中借来了一些成熟的创意，比如“固定地图方向指北”，这是小地图设计的常见功能：地图随玩家视角旋转还是固定方位。&lt;/p&gt;
+&lt;h2 id=&#34;minecraft真难上手&#34;&gt;Minecraft真难上手&lt;/h2&gt;
+&lt;p&gt;读者们熟悉这个游戏吗？你们还记得是怎么学会这个游戏的吗？我想和我年龄相近的很多人大概是从贴吧的德芙的帖子中入门的。不聊回忆了，我的重点是，Minecraft它真难上手，我有时候教视力正常（智力也正常，甚至都比我聪明）的朋友玩Minecraft，他们也很学得为难，大概是我教得差。既然Minecraft对正常人都这么难了，想想我们的视障者用户吧。我观察到大多数熟练的用户在真正上手玩游戏之前，就已经听了很久别人玩Minecraft的视频了。比如听&lt;a href=&#34;https://www.youtube.com/watch?v=VfpHTJsn9I4&amp;amp;list=PLgENJ0iY3XBjmydGuzYTtDwfxuR6lN8KC&#34;&gt;Pixlriffs&lt;/a&gt;
+的视频，我猜他在国外Minecraft玩家中享有的声誉大概和德芙类似，他教得真的很基础且详细。&lt;/p&gt;
+&lt;p&gt;在玩上游戏之前，视障者用户还要安装这个mod和一些依赖mod，安装mod也不是一个简单的事，尤其是对没接触过的人来说。我写了一个&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/blob/default/doc/SET_UP_ON_WINDOWS.md&#34;&gt;啰嗦的教程&lt;/a&gt;来降低这个门槛，至少有人再问时我可以直接发链接而不是重复打字了，已经帮到了好几个人。啰嗦对视障者来说应该不是问题，他们有很高的文本理解速度。&lt;/p&gt;
+&lt;p&gt;然后视障者用户面临的最后一道难关就是微软写的那官方启动器。主要缺点是界面嵌套层次太多，无用按钮太多，设置位置混乱。这些对普通用户来说不过是多点点鼠标四处看看，对视障者来说这界面就是迷雾森林。不信？看看我教程里&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/blob/default/doc/SET_UP_ON_WINDOWS.md#start-the-game&#34;&gt;对这段的描述&lt;/a&gt;写得多繁琐（我承认我写得也啰嗦），或者去启动器里按按Tab和回车，目标只是简单地按下“启动游戏”按钮，数数要按几次。&lt;/p&gt;
+&lt;h2 id=&#34;关于视觉障碍&#34;&gt;关于视觉障碍&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;没依据但广泛流传的：在我们从外界获取的信息中，视觉输入占据90%。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;从正常视力到全盲，并不是0-1 boolean。比如极高度数的近视，也算视觉障碍。或者视野不完整，或者只能感到亮度等等，都是视觉障碍。色盲也算视觉障碍，只是对生活的影响比较小。我有个医生朋友对我说过，临床医学上哪个领域复杂，看哪个有专门的科室就是，比如牙科，儿科，还有眼科。所以眼的情况大概是比较复杂的。&lt;/p&gt;
+&lt;p&gt;刚开始我小心翼翼地用 visually impaired players 指代用户，但后来发现用户们也不介意，自称就是blind，那blind更方便敲，就blind吧。国内也是，我没有盲人朋友，但我搜到的盲人论坛之类，也不会用视障者这个词。我比较在意的是哪个词在与盲人口语交流时更亲近，叫视障者是不是显得很陌生？&lt;/p&gt;
+&lt;p&gt;平时用户们也不太聊生活，我很少知道一个用户是男是女（如果Ta是性少数，从profile和头像中能看出来）。但是我比较清楚哪个用户的视觉障碍类型是什么（活跃用户不多，记得住）。我没有主动询问过用户相关情况，答疑时如果不清楚，就按全盲对待。但即使是大面积的视野缺失，也比全盲等情况方便玩游戏一些，我知道有一对视野缺失的夫妻还会玩慢节奏的FPS。&lt;/p&gt;
+&lt;h2 id=&#34;关于星露谷-accessibility-mod&#34;&gt;关于星露谷 accessibility mod&lt;/h2&gt;
+&lt;p&gt;Shoaib认为星露谷是有潜力做到100% accessibility的，这的确很令人兴奋，我很高兴视障者可以完整体验这款优秀的游戏。星露谷也还在更新。我猜是因为没有大改原有的代码，所以跟进开发新版本mod更方便。或者是因为星露谷&lt;a href=&#34;https://www.stardewvalley.net/1-5-6-out-now-on-steam-gog/&#34;&gt;上次1.5.6更新是在2021年底&lt;/a&gt;，1.6更新风声不断但直到2023今日迟迟不推出，而Minecraft一年更新一个minor，一年内几次fix，后者的更新频率还是比较高的。在&lt;a href=&#34;https://discord.gg/yQjjsDqWQX&#34;&gt;我们的Discord服务器&lt;/a&gt;中，星露谷mod的频道也远比Minecraft
+mod频道热度高，大概是因为上文讨论过的星露谷比Minecraft更容易上手（而且那边活跃开发者也更多）。&lt;/p&gt;
+&lt;h2 id=&#34;尾&#34;&gt;尾&lt;/h2&gt;
+&lt;p&gt;总之各位如果有兴趣，也欢迎来参与这两个mod的开发。星露谷那边用户报issue挺多的，Minecraft这边目前是用户提一个需求&lt;del&gt;我&lt;/del&gt;慢慢实现一个，有&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/issues&#34;&gt;少数积压的issue&lt;/a&gt;，比如目前仍然&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/issues/22&#34;&gt;不适配macOS系统&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;希望各位也能遇到心仪的开源项目，关键是兴趣+技术栈匹配，其实看到项目。&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/categories/life/" term="life" label="life" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/tags/blog/" term="blog" label="blog" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Java9到17我关心的新特性</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/java-9-to-17/" />
