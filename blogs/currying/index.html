@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.81.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.111.3"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,11 +17,11 @@
 
     <title>柯里化及相关延伸思考 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.873d7a3b45cd7b8b23c3e6db490df7744be3beb789eb1b7339c568c93b913000.css"/>
+    <link rel="stylesheet" href="/css/meme.min.d6933b61e48687e05e79f76a96679e6686baf551f831383556fbace43cfaece0.css"/>
 
     
     
-        <script src="/js/meme.min.8e0f2fa693601eb1e65e59b72a205947ff07e9f707fe673ace2110af7f531d0d.js"></script>
+        <script src="/js/meme.min.88dcafd9937dec27b87f333937e9be42cdffb410dd0317d810f064321461f0ad.js"></script>
 
     
 
@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="BoHolder" /><meta name="description" content="怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种……" />
+    <meta name="author" content="BoHolder" /><meta name="description" content="怎么理解 看这篇文章的1.6.6 Currying 这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作 first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函……" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -57,13 +57,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2022-01-27T00:00:00+00:00",
-        "dateModified": "2023-03-25T14:23:00+08:00",
+        "dateModified": "2023-08-08T19:12:01+08:00",
         "url": "https://boholder.github.io/blogs/currying/",
         "headline": "柯里化及相关延伸思考",
-        "description": "怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种……",
+        "description": "怎么理解 看这篇文章的1.6.6 Currying 这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作 first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函……",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
-        "wordCount":  1492 ,
+        "wordCount":  1439 ,
         "image": "https://boholder.github.io/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
@@ -100,13 +100,13 @@
 
 
 <meta property="og:title" content="柯里化及相关延伸思考" />
-<meta property="og:description" content="怎么理解 看这篇文章的1.6.6 Currying这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种……" />
+<meta property="og:description" content="怎么理解 看这篇文章的1.6.6 Currying 这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作 first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函……" />
 <meta property="og:url" content="https://boholder.github.io/blogs/currying/" />
 <meta property="og:site_name" content="BoHolder的网站：博客，小玩意及其他" />
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2022-01-27T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2023-03-25T14:23:00&#43;08:00" />
+    <meta property="article:modified_time" content="2023-08-08T19:12:01&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -194,7 +194,7 @@
     
     
         
-        <time datetime="2023-03-25T14:23:00&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2023.3.25</time>
+        <time datetime="2023-08-08T19:12:01&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2023.8.8</time>
     
     
     
@@ -208,7 +208,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1492</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1439</span>
     
     
         
@@ -233,60 +233,60 @@
       <ol>
         <li><a id="contents:参数的位置亦代表了构造步骤先后" href="#参数的位置亦代表了构造步骤先后">参数的位置亦代表了构造步骤先后</a></li>
         <li><a id="contents:外部环境闭包在内部看来是不可变的" href="#外部环境闭包在内部看来是不可变的">外部环境（闭包）在内部看来是不可变的</a></li>
-        <li><a id="contents:通过self-reference来绕开这个限制" href="#通过self-reference来绕开这个限制">通过Self Reference来绕开这个限制</a></li>
+        <li><a id="contents:通过-self-reference-来绕开这个限制" href="#通过-self-reference-来绕开这个限制">通过 Self Reference 来绕开这个限制</a></li>
       </ol>
     </li>
   </ol>
 </nav><div class="post-body e-content">
                 <h2 id="怎么理解"><a href="#怎么理解" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:怎么理解" class="headings">怎么理解</a></h2>
-<p>看<a href="composingprograms.com/pages/16-higher-order-functions.html">这篇文章</a>的1.6.6 Currying这一节。</p>
+<p>看<a href="composingprograms.com/pages/16-higher-order-functions.html">这篇文章</a>的1.6.6 Currying 这一节。</p>
 <h3 id="前提编程语言得支持这个玩法"><a href="#前提编程语言得支持这个玩法" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:前提编程语言得支持这个玩法" class="headings">前提：编程语言得支持这个玩法</a></h3>
-<p>需要编程语言把函数当作first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函数，可以捕获它们<strong>被定义时</strong>（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。</p>
+<p>需要编程语言把函数当作 first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函数，可以捕获它们<strong>被定义时</strong>（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。</p>
 <h3 id="柯里化"><a href="#柯里化" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:柯里化" class="headings">柯里化</a></h3>
 <p>柯里化指，把接受多个参数的函数，变成一个连续的<strong>单个参数</strong>的函数。
 这样会弄出来一堆零碎的中间函数，不过中间函数都隐藏在最高阶（柯里化后只接第一个参数，返回接受其他参数的函数）的函数的内部了，外部只能看到这第一个函数的定义，所以从外部看起来不是很凌乱。</p>
-<p>有些语言（比如Haskell）的函数，只支持单个参数，于是只能用柯里化这种方式来积累参数，实现多个参数的函数定义。</p>
+<p>有些语言（比如 Haskell）的函数，只支持单个参数，于是只能用柯里化这种方式来积累参数，实现多个参数的函数定义。</p>
 <h3 id="例子幂乘power"><a href="#例子幂乘power" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:例子幂乘power" class="headings">例子：幂乘（power）</a></h3>
-<p>我直接用人家文章里的python代码吧。</p>
+<p>我直接用人家文章里的 python 代码吧。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">curried_pow</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">h</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">curried_pow</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">h</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>这是一个幂乘高阶（工厂）函数，你可以用这个函数生成计算特定幂乘数的函数（预先把第一个参数，即幂乘数，塞入生成后的函数的闭包）：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">square</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">cube</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">square</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">cube</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>这样第一个参数就保留在这两个生成的函数的闭包里了，然后再拿着返回的函数去应用到实际的（业务逻辑）计算：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># curried_pow(2)(4) = 4^2 = 16</span>
-<span class="n">sixteen</span> <span class="o">=</span> <span class="n">square</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="c1"># curried_pow(3)(2) = 2^3 = 8</span>
-<span class="n">eight</span> <span class="o">=</span> <span class="n">cube</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># curried_pow(2)(4) = 4^2 = 16</span>
+</span></span><span class="line"><span class="cl"><span class="n">sixteen</span> <span class="o">=</span> <span class="n">square</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># curried_pow(3)(2) = 2^3 = 8</span>
+</span></span><span class="line"><span class="cl"><span class="n">eight</span> <span class="o">=</span> <span class="n">cube</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="扩展思考"><a href="#扩展思考" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:扩展思考" class="headings">扩展思考</a></h2>
 <h3 id="参数的位置亦代表了构造步骤先后"><a href="#参数的位置亦代表了构造步骤先后" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:参数的位置亦代表了构造步骤先后" class="headings">参数的位置亦代表了构造步骤先后</a></h3>
@@ -294,7 +294,7 @@
 <p>那要是反过来呢，函数的意思会变：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -311,45 +311,45 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">curried_pow</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
-        <span class="c1"># x,y颠倒顺序</span>
-        <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">h</span>
-
-<span class="c1"># 对2做n次幂乘</span>
-<span class="n">pow_on_2_with</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="c1"># 对3做n次幂乘</span>
-<span class="n">pow_on_3_with</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-
-<span class="c1"># curried_pow(2)(4) = 2^4 = 16</span>
-<span class="n">sixteen</span> <span class="o">=</span> <span class="n">pow_on_2_with</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="c1"># curried_pow(3)(2) = 3^2 = 9</span>
-<span class="n">nine</span> <span class="o">=</span> <span class="n">pow_on_3_with</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">curried_pow</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># x,y颠倒顺序</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">h</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 对2做n次幂乘</span>
+</span></span><span class="line"><span class="cl"><span class="n">pow_on_2_with</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 对3做n次幂乘</span>
+</span></span><span class="line"><span class="cl"><span class="n">pow_on_3_with</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># curried_pow(2)(4) = 2^4 = 16</span>
+</span></span><span class="line"><span class="cl"><span class="n">sixteen</span> <span class="o">=</span> <span class="n">pow_on_2_with</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># curried_pow(3)(2) = 3^2 = 9</span>
+</span></span><span class="line"><span class="cl"><span class="n">nine</span> <span class="o">=</span> <span class="n">pow_on_3_with</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 id="外部环境闭包在内部看来是不可变的"><a href="#外部环境闭包在内部看来是不可变的" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:外部环境闭包在内部看来是不可变的" class="headings">外部环境（闭包）在内部看来是不可变的</a></h3>
 <p>之所以有上面的配置先后顺序的考虑，是因为本小节标题所示的特性。变量有不同范围的生命周期，内部环境能看到外部环境里的定义，想修改定义所绑定的值可以重新覆盖定义，但这个新定义的范围仅在本地环境，没法向上影响到外部环境。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># i还是0</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># i还是0</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>我倒觉得把环境看成热塑塑料（或者更熟悉的502胶水）比较好，还在当前环境时，随便改定义捏形状，一旦退出环境或者深入到下一层环境（联想盗梦空间），环境固定死改不了了。比如函数一旦被构造出来，函数内的环境也就固定下来了。在调用函数的外部环境看来，函数内部环境直接一个黑盒，读都不能读；函数自己也不能修改硬编码的定义（比如上面i=1，不能下次调用让i定义为其他的值）。</p>
-<h3 id="通过self-reference来绕开这个限制"><a href="#通过self-reference来绕开这个限制" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:通过self-reference来绕开这个限制" class="headings">通过Self Reference来绕开这个限制</a></h3>
-<p>这节思路来自<a href="https://inst.eecs.berkeley.edu/~cs61a/fa21/lab/lab03/#self-reference" target="_blank" rel="noopener">这道练习题</a>。举个更简单的例子，我想构造一个count_down()函数，每调用它一次，它会打印内部环境中保存的数字，并且返回一个保存数字减了一的函数：</p>
+<h3 id="通过-self-reference-来绕开这个限制"><a href="#通过-self-reference-来绕开这个限制" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:通过-self-reference-来绕开这个限制" class="headings">通过 Self Reference 来绕开这个限制</a></h3>
+<p>这节思路来自<a href="https://inst.eecs.berkeley.edu/~cs61a/fa21/lab/lab03/#self-reference" target="_blank" rel="noopener">这道练习题</a>。举个更简单的例子，我想构造一个 count_down()函数，每调用它一次，它会打印内部环境中保存的数字，并且返回一个保存数字减了一的函数：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -358,22 +358,22 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down_on</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down</span><span class="p">()</span>
-<span class="mi">3</span>
-<span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down</span><span class="p">()</span>
-<span class="mi">2</span>
-<span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down</span><span class="p">()</span>
-<span class="mi">1</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down_on</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
-</div><p>结合上一节的限制，这有点难，因为看起来count_down()函数的环境得自己处理每次调用把变量值减一的操作。其实还是有办法的，两种办法：</p>
+</div><p>结合上一节的限制，这有点难，因为看起来 <code>count_down()</code> 函数的环境得自己处理每次调用把变量值减一的操作。其实还是有办法的，两种办法：</p>
 <ol>
 <li>把函数使用变量的方式改为从外部（环境）获取定义，有点依赖反转的意思（但其实就是提前构造了下一轮的新的函数环境）：</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -381,20 +381,20 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">count_down_on</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">count_down</span><span class="p">():</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">count_down_on</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">count_down</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">count_down_on</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">count_down</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">count_down_on</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">count_down</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><ol start="2">
-<li>利用Python提供的nonlocal修饰符，允许在本地环境修改外部环境中的绑定（看<a href="https://www.python.org/dev/peps/pep-3104/" target="_blank" rel="noopener">官方文档</a>里这个操作的起源和其他语言中的应用能多学到一些知识）。</li>
+<li>利用 Python 提供的 <code>nonlocal</code> 修饰符，允许在本地环境修改外部环境中的绑定（看<a href="https://www.python.org/dev/peps/pep-3104/" target="_blank" rel="noopener">官方文档</a>里这个操作的起源和其他语言中的应用能多学到一些知识）。</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -404,15 +404,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">count_down_on</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">count_down</span><span class="p">():</span>
-        <span class="n">nonlocal</span> <span class="n">n</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># 不加nonlocal声明，这句赋值会报编译错误</span>
-        <span class="k">return</span>
-
-    <span class="k">return</span> <span class="n">count_down</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">count_down_on</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">count_down</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="k">nonlocal</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># 不加 nonlocal 声明，这句赋值会报编译错误</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">count_down</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div>
             </div>
@@ -442,9 +442,9 @@
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2023-03-25 14:23:00 CST" style="cursor:help">
+        <span title="Updated @ 2023-08-08 19:12:01 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-03-25</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-03-25</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-08-08</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-08-08</text></g></svg>
         </span></div>
 
 
@@ -544,11 +544,11 @@
                     </li>
                 
                     <li class="related-item">
-                        <a href="/blogs/what-i-learned-from-putgun/" class="related-link">我在开发Puntgun中学到的东西</a>
+                        <a href="/blogs/what-i-learned-from-putgun/" class="related-link">我在开发 Puntgun 中学到的东西</a>
                     </li>
                 
                     <li class="related-item">
-                        <a href="/blogs/maven-build-advance/" class="related-link">用Maven reactor命令行选项节约build时间</a>
+                        <a href="/blogs/maven-build-advance/" class="related-link">用 Maven reactor 命令行选项节约 build 时间</a>
                     </li>
                 
             </ul>
@@ -618,7 +618,7 @@
             
             
                 <li class="post-nav-next">
-                    <a href="/blogs/srp-against-dry/" rel="next">SRP提醒你不要盲目遵守DRY设计原则 &gt;</a>
+                    <a href="/blogs/srp-against-dry/" rel="next">SRP 提醒你不要盲目遵守 DRY 设计原则 &gt;</a>
                 </li>
             
         </ul>

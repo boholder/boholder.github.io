@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.81.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.111.3"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -15,13 +15,13 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>HTTP cookie的安全性、安全使用方法和攻击防御手段 | BoHolder的网站：博客，小玩意及其他</title>
+    <title>HTTP cookie 的安全性、安全使用方法和攻击防御手段 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.873d7a3b45cd7b8b23c3e6db490df7744be3beb789eb1b7339c568c93b913000.css"/>
+    <link rel="stylesheet" href="/css/meme.min.d6933b61e48687e05e79f76a96679e6686baf551f831383556fbace43cfaece0.css"/>
 
     
     
-        <script src="/js/meme.min.8e0f2fa693601eb1e65e59b72a205947ff07e9f707fe673ace2110af7f531d0d.js"></script>
+        <script src="/js/meme.min.88dcafd9937dec27b87f333937e9be42cdffb410dd0317d810f064321461f0ad.js"></script>
 
     
 
@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="BoHolder" /><meta name="description" content="工作需要，要上台讲讲cookie安全性，索性总结成博客，自认为蛮全的" />
+    <meta name="author" content="BoHolder" /><meta name="description" content="工作需要，要上台讲讲 cookie 安全性，索性总结成博客，自认为蛮全的" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -57,13 +57,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2019-05-18T00:00:00+00:00",
-        "dateModified": "2023-03-25T14:23:00+08:00",
+        "dateModified": "2023-08-08T19:12:01+08:00",
         "url": "https://boholder.github.io/blogs/cookie_security/",
-        "headline": "HTTP cookie的安全性、安全使用方法和攻击防御手段",
-        "description": "工作需要，要上台讲讲cookie安全性，索性总结成博客，自认为蛮全的",
+        "headline": "HTTP cookie 的安全性、安全使用方法和攻击防御手段",
+        "description": "工作需要，要上台讲讲 cookie 安全性，索性总结成博客，自认为蛮全的",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
-        "wordCount":  4884 ,
+        "wordCount":  4442 ,
         "image": "https://boholder.github.io/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
@@ -99,14 +99,14 @@
 
 
 
-<meta property="og:title" content="HTTP cookie的安全性、安全使用方法和攻击防御手段" />
-<meta property="og:description" content="工作需要，要上台讲讲cookie安全性，索性总结成博客，自认为蛮全的" />
+<meta property="og:title" content="HTTP cookie 的安全性、安全使用方法和攻击防御手段" />
+<meta property="og:description" content="工作需要，要上台讲讲 cookie 安全性，索性总结成博客，自认为蛮全的" />
 <meta property="og:url" content="https://boholder.github.io/blogs/cookie_security/" />
 <meta property="og:site_name" content="BoHolder的网站：博客，小玩意及其他" />
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2019-05-18T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2023-03-25T14:23:00&#43;08:00" />
+    <meta property="article:modified_time" content="2023-08-08T19:12:01&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -176,12 +176,12 @@
 
         <article class="content post h-entry" data-align="justify" data-type="blogs" data-toc-num="true">
 
-            <h1 class="post-title p-name">HTTP cookie的安全性、安全使用方法和攻击防御手段</h1>
+            <h1 class="post-title p-name">HTTP cookie 的安全性、安全使用方法和攻击防御手段</h1>
 
             
 
             
-                <div class="post-description p-summary">工作需要，要上台讲讲cookie安全性，索性总结成博客，自认为蛮全的</div>
+                <div class="post-description p-summary">工作需要，要上台讲讲 cookie 安全性，索性总结成博客，自认为蛮全的</div>
                 
             
 
@@ -195,7 +195,7 @@
     
     
         
-        <time datetime="2023-03-25T14:23:00&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2023.3.25</time>
+        <time datetime="2023-08-08T19:12:01&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2023.8.8</time>
     
     
     
@@ -209,11 +209,11 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;4884</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;4442</span>
     
     
         
-        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;10&nbsp;分钟</span>
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;9&nbsp;分钟</span>
     
     
     
@@ -233,14 +233,14 @@
     </li>
     <li><a id="contents:security-risk-in-design-and-use-and-solution" href="#security-risk-in-design-and-use-and-solution">Security risk in design and use and solution</a>
       <ol>
-        <li><a id="contents:1服务器只能读取cookie键值对读不到属性" href="#1服务器只能读取cookie键值对读不到属性">1.服务器只能读取cookie键值对，读不到属性</a>
+        <li><a id="contents:1服务器只能读取-cookie-键值对读不到属性" href="#1服务器只能读取-cookie-键值对读不到属性">1.服务器只能读取 cookie 键值对，读不到属性</a>
           <ol>
             <li><a id="contents:解决服务器容错与键名走私smuggle" href="#解决服务器容错与键名走私smuggle">解决：服务器容错与键名“走私（Smuggle）”</a></li>
           </ol>
         </li>
         <li><a id="contents:2-domainpath属性影响完整性" href="#2-domainpath属性影响完整性">2. “Domain”“Path”属性影响完整性</a>
           <ol>
-            <li><a id="contents:path-是指域名host下的路径归属" href="#path-是指域名host下的路径归属"><code>Path</code> 是指域名|Host下的路径归属。</a></li>
+            <li><a id="contents:path-是指域名host-下的路径归属" href="#path-是指域名host-下的路径归属"><code>Path</code> 是指域名|Host 下的路径归属。</a></li>
             <li><a id="contents:domain-是指域名归属" href="#domain-是指域名归属"><code>Domain</code> 是指域名归属。</a></li>
             <li><a id="contents:解决samesite-属性2016年不设置domain属性" href="#解决samesite-属性2016年不设置domain属性">解决：<code>SameSite</code> 属性(2016年)&amp;不设置<code>Domain</code>属性</a>
               <ol>
@@ -250,10 +250,10 @@
             </li>
           </ol>
         </li>
-        <li><a id="contents:3对cookie的误用" href="#3对cookie的误用">3.对cookie的误用</a>
+        <li><a id="contents:3对-cookie-的误用" href="#3对-cookie-的误用">3.对 cookie 的误用</a>
           <ol>
             <li><a id="contents:http-明文传递-cookie" href="#http-明文传递-cookie">①http 明文传递 cookie</a></li>
-            <li><a id="contents:cookie-默认可被客户端apijs-etc读取" href="#cookie-默认可被客户端apijs-etc读取">②cookie 默认可被客户端API(JS etc)读取</a></li>
+            <li><a id="contents:cookie-默认可被客户端-apijs-etc读取" href="#cookie-默认可被客户端-apijs-etc读取">②cookie 默认可被客户端 API(JS etc)读取</a></li>
             <li><a id="contents:错误规划max-ageexpires" href="#错误规划max-ageexpires">③错误规划<code>max-age</code>、<code>expires</code></a></li>
             <li><a id="contents:解决谨慎设计max-ageexpires的值" href="#解决谨慎设计max-ageexpires的值">解决：谨慎设计<code>max-age</code>、<code>expires</code>的值</a></li>
           </ol>
@@ -262,7 +262,7 @@
     </li>
     <li><a id="contents:attack-on-cookies-and-solution" href="#attack-on-cookies-and-solution">Attack on cookies and solution</a>
       <ol>
-        <li><a id="contents:为什么我们要攻击保护cookie" href="#为什么我们要攻击保护cookie">为什么我们要攻击|保护cookie？</a></li>
+        <li><a id="contents:为什么我们要攻击保护-cookie" href="#为什么我们要攻击保护-cookie">为什么我们要攻击|保护 cookie？</a></li>
         <li><a id="contents:常见攻击方式" href="#常见攻击方式">常见攻击方式</a></li>
         <li><a id="contents:非常见方式" href="#非常见方式">非常见方式</a>
           <ol>
@@ -282,8 +282,8 @@
 </nav><div class="post-body e-content">
                 <h2 id="前言"><a href="#前言" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:前言" class="headings">前言</a></h2>
 <p>本文将把，截至2019-05-18的，从互联网上搜集到</p>
-<p>（&ldquo;cookie+security&rdquo;-&gt;Google与StartPage前两页结果为源+相关学术文献）的,<br>
-有关Cookie标准与用法、cookie安全性的信息，汇总索引，以方便读者学习了解相关信息。</p>
+<p>（&ldquo;cookie+security&rdquo; -&gt; Google 与 StartPage 前两页结果为源+相关学术文献）的,<br>
+有关 Cookie 标准与用法、cookie 安全性的信息，汇总索引，以方便读者学习了解相关信息。</p>
 <p>本文需要读者对计算机网络有大致了解，<br>
 没有了解也可以，术语会挂上解释链接，但阅读体验就比较差了。</p>
 <p>小段英文的翻译交给谷歌处理。</p>
@@ -291,62 +291,62 @@
 <p>2部分与3部分的解决方案部分有重复，<br>
 但我认为还是把攻防和开发分开，缺陷与解决结合，比较方便阅读。</p>
 <ol>
-<li><a href="#what-is-cookie">Cookie是什么&amp;用法</a></li>
+<li><a href="#what-is-cookie">Cookie 是什么&amp;用法</a></li>
 <li><a href="#security-risk-in-design-and-use-and-solution">设计、使用中的安全隐患以及相应改进</a></li>
-<li><a href="#attack-on-cookies-and-solution">针对cookie窃取的攻击与相应防御</a></li>
-<li><a href="#academic-discussion-about-cookies">学术讨论涉及cookie的攻防</a></li>
+<li><a href="#attack-on-cookies-and-solution">针对 cookie 窃取的攻击与相应防御</a></li>
+<li><a href="#academic-discussion-about-cookies">学术讨论涉及 cookie 的攻防</a></li>
 <li><a href="#summary">总结</a></li>
 </ol>
 <h2 id="what-is-cookie"><a href="#what-is-cookie" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:what-is-cookie" class="headings">What is cookie</a></h2>
-<p><strong>1.Cookie是什么&amp;用法</strong></p>
+<p><strong>1.Cookie 是什么&amp;用法</strong></p>
 <h3 id="定义"><a href="#定义" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:定义" class="headings">定义</a></h3>
 <p>英文<a href="https://en.wikipedia.org/wiki/HTTP_cookie" target="_blank" rel="noopener">维基百科</a> 还是蛮丰富的，中文维基简单点，可以看<a href="https://baike.baidu.com/item/cookie/1119" target="_blank" rel="noopener">百度百科</a>。</p>
 <p>RFC：<a href="https://tools.ietf.org/html/rfc2109" target="_blank" rel="noopener">rfc2109-1997</a> -&gt; <a href="https://tools.ietf.org/html/rfc2965" target="_blank" rel="noopener">rfc2965-2000</a> -&gt; <a href="https://tools.ietf.org/html/rfc6265" target="_blank" rel="noopener">rfc6265-2011</a> -&gt; <a href="https://datatracker.ietf.org/doc/draft-ietf-httpbis-rfc6265bis/" target="_blank" rel="noopener">rfc6265bis</a></p>
 <p><a href="https://hc.apache.org/httpcomponents-client-ga/tutorial/html/statemgmt.html" target="_blank" rel="noopener">https://hc.apache.org/httpcomponents-client-ga/tutorial/html/statemgmt.html</a></p>
-<p>在最新的定义cookie的RFC2965上，是这么说的：</p>
+<p>在最新的定义 cookie 的 RFC2965 上，是这么说的：</p>
 <blockquote>
 <p>we will use the term cookie to refer to the state<br>
 information that passes between an origin server and user agent,<br>
 and that gets stored by the user agent.</p>
 </blockquote>
 <blockquote>
-<p>我们将使用术语cookie来指代在源服务器和用户代理之间传递的状态信息，<br>
+<p>我们将使用术语 cookie 来指代在源服务器和用户代理之间传递的状态信息，<br>
 以及由用户代理存储的状态信息。</p>
 </blockquote>
-<p>简单总结，cookie是：服务器与客户端间标识状态的信息，储存在客户端<br>
+<p>简单总结，cookie 是：服务器与客户端间标识状态的信息，储存在客户端<br>
 （硬盘或内存，视类型而定），由服务器增删改读。<br>
-用途：满足对无状态的HTTP协议，想让它<strong>有状态</strong>的需求，一种修补措施。</p>
+用途：满足对无状态的 HTTP 协议，想让它<strong>有状态</strong>的需求，一种修补措施。</p>
 <p>比如一个服务器，需要同时与多个客户端通信。</p>
 <ul>
-<li>因为HTTP协议@的无连接性，所以需要一个额外方法区分不同客户端。</li>
+<li>因为 HTTP 协议@的无连接性，所以需要一个额外方法区分不同客户端。</li>
 <li>然后因为计算机网络的网络层路由有<a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" target="_blank" rel="noopener">CIDR-无类域间路由</a>、<a href="https://en.wikipedia.org/wiki/Network_address_translation" target="_blank" rel="noopener">NAT-网络地址转换</a> 这类协议存在，<br>
-服务器不能单靠记录IP或者MAC这些HTTP包里的信息标识每一个客户端。</li>
+服务器不能单靠记录 IP 或者 MAC 这些 HTTP 包里的信息标识每一个客户端。</li>
 </ul>
-<p>因此Netscape Draft在1994年率先定义了cookie这一解决方案<br>
-（此处apache.org的原文链接好像失效了），之后被整理成rfc2109。</p>
-<p>cookie可以用来干什么？<a href="https://en.wikipedia.org/wiki/HTTP_cookie#Uses" target="_blank" rel="noopener">维基</a> 给了三个功能：</p>
+<p>因此 Netscape Draft 在1994年率先定义了 cookie 这一解决方案<br>
+（此处 apache.org 的原文链接好像失效了），之后被整理成 rfc2109。</p>
+<p>cookie 可以用来干什么？<a href="https://en.wikipedia.org/wiki/HTTP_cookie#Uses" target="_blank" rel="noopener">维基</a> 给了三个功能：</p>
 <ol>
 <li>会话管理</li>
 <li>个性化定制 <a href="https://en.wikipedia.org/wiki/Zombie_cookie" target="_blank" rel="noopener">wikipedia-Zombie cookie （有点意思）</a></li>
 <li>追踪</li>
 </ol>
 <h3 id="格式用法"><a href="#格式用法" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:格式用法" class="headings">格式&amp;用法</a></h3>
-<p>一个cookie由一个键值对（key=value）组成，同时在<em>被设置时</em> 会附加一些变量（attributes），<br>
-这些变量用来控制该cookie的使用方法。</p>
+<p>一个 cookie 由一个键值对（key=value）组成，同时在<em>被设置时</em> 会附加一些变量（attributes），<br>
+这些变量用来控制该 cookie 的使用方法。</p>
 <p>想了解详细属性，看<a href="https://tools.ietf.org/html/rfc6265#section-5.2" target="_blank" rel="noopener">rfc6265-The Set-Cookie Header</a> ，<br>
 找不到新鲜的全面的中文材料，有个不错的<a href="https://imququ.com/post/host-only-cookie.html#toc-3" target="_blank" rel="noopener">博客@Jerry Qu</a> ，但是是13年的。</p>
-<p>比如，我们时常听闻的第三方cookie，在设置时会标一个<code>Third-party</code>属性，<br>
-表明这是从非当前网站（URL框里的网站）设置的。</p>
+<p>比如，我们时常听闻的第三方 cookie，在设置时会标一个<code>Third-party</code>属性，<br>
+表明这是从非当前网站（URL 框里的网站）设置的。</p>
 <p>当一个网站有引用（&lt;img&gt;&hellip;）其他网站，比如广告网站的广告资源时，<br>
-浏览器加载该网站时，也会向广告网站发GET请求，<br>
-第三方cookie就随着资源一起来到了浏览器上。</p>
-<p>对cookie的操作不再赘述，有需请自取。</p>
+浏览器加载该网站时，也会向广告网站发 GET 请求，<br>
+第三方 cookie 就随着资源一起来到了浏览器上。</p>
+<p>对 cookie 的操作不再赘述，有需请自取。</p>
 <p><a href="https://en.wikipedia.org/wiki/HTTP_cookie#Implementation" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/HTTP_cookie#Implementation</a></p>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie</a></p>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-4.2" target="_blank" rel="noopener">https://tools.ietf.org/html/rfc6265#section-4.2</a></p>
 <h2 id="security-risk-in-design-and-use-and-solution"><a href="#security-risk-in-design-and-use-and-solution" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:security-risk-in-design-and-use-and-solution" class="headings">Security risk in design and use and solution</a></h2>
-<p><strong>2.Cookie设计与使用中的安全隐患，以及相应改进</strong></p>
-<p>Cookie安全性这点，<a href="https://tools.ietf.org/html/rfc6265#section-8" target="_blank" rel="noopener">rfc6265中有一整段(8. Security Considerations)</a> 去阐述，<br>
+<p><strong>2.Cookie 设计与使用中的安全隐患，以及相应改进</strong></p>
+<p>Cookie 安全性这点，<a href="https://tools.ietf.org/html/rfc6265#section-8" target="_blank" rel="noopener">rfc6265中有一整段(8. Security Considerations)</a> 去阐述，<br>
 务必读一下，总结的很好，我会跳过那些内容，只给出一个目录以供预览。</p>
 <div class="table-container"><table>
 <thead>
@@ -362,7 +362,7 @@ and that gets stored by the user agent.</p>
 </tr>
 <tr>
 <td>Ambient Authority</td>
-<td>cookie是一种权限凭证</td>
+<td>cookie 是一种权限凭证</td>
 </tr>
 <tr>
 <td>Clear Text</td>
@@ -374,63 +374,63 @@ and that gets stored by the user agent.</p>
 </tr>
 <tr>
 <td>Weak Confidentiality</td>
-<td>cookie在各种层面保密性都弱</td>
+<td>cookie 在各种层面保密性都弱</td>
 </tr>
 <tr>
 <td>Reliance on DNS</td>
-<td>cookie的安全性以DNS安全为前提</td>
+<td>cookie 的安全性以 DNS 安全为前提</td>
 </tr>
 </tbody>
 </table></div>
-<p>与其说其设计不周全，不如说cookie因本身位置的限制无法保证设计安全，<br>
-rfc还警告开发人员不要把cookie作为唯一的认证环节。</p>
+<p>与其说其设计不周全，不如说 cookie 因本身位置的限制无法保证设计安全，<br>
+rfc 还警告开发人员不要把 cookie 作为唯一的认证环节。</p>
 <blockquote>
 <p>rfc6265: In addition, by default, cookies do not provide confidentiality or integrity<br>
 from network attackers, even when used in conjunction with HTTPS.</p>
 </blockquote>
 <blockquote>
-<p>此外，默认情况下，cookie不会为网络攻击者提供机密性或完整性，<br>
-即使与HTTPS结合使用也是如此。</p>
+<p>此外，默认情况下，cookie 不会为网络攻击者提供机密性或完整性，<br>
+即使与 HTTPS 结合使用也是如此。</p>
 </blockquote>
-<h3 id="1服务器只能读取cookie键值对读不到属性"><a href="#1服务器只能读取cookie键值对读不到属性" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:1服务器只能读取cookie键值对读不到属性" class="headings">1.服务器只能读取cookie键值对，读不到属性</a></h3>
+<h3 id="1服务器只能读取-cookie-键值对读不到属性"><a href="#1服务器只能读取-cookie-键值对读不到属性" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:1服务器只能读取-cookie-键值对读不到属性" class="headings">1.服务器只能读取 cookie 键值对，读不到属性</a></h3>
 <blockquote>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-4.2.2" target="_blank" rel="noopener">rfc6265#section-4.2.2</a> :<br>
 Notice that the cookie attributes are not returned.<br>
 In particular,the server cannot determine from the Cookie header alone<br>
 when a cookie will expire, for which hosts the cookie is valid,<br>
-for which paths the cookie is valid, 
+for which paths the cookie is valid,
 or whether the cookie was set with the Secure or HttpOnly attributes.</p>
 </blockquote>
 <blockquote>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-4.2.2" target="_blank" rel="noopener">rfc6265#section-4.2.2</a> :<br>
-请注意，不返回cookie属性。特别是，当cookie过期时，<br>
-服务器无法单独从Cookie标头确定，cookie对哪些主机有效，cookie的路径有效，<br>
-或者cookie是否使用Secure或HttpOnly属性设置。</p>
+请注意，不返回 cookie 属性。特别是，当 cookie 过期时，<br>
+服务器无法单独从 Cookie 标头确定，cookie 对哪些主机有效，cookie 的路径有效，<br>
+或者 cookie 是否使用 Secure 或 HttpOnly 属性设置。</p>
 </blockquote>
-<p>同时在设置cookie时，客户端并不会发回结果反馈。这使得服务器不知道cookie是否被正确设置。<br>
+<p>同时在设置 cookie 时，客户端并不会发回结果反馈。这使得服务器不知道 cookie 是否被正确设置。<br>
 这等于要从数据库读一个不知道是否干净的数据，对数据完整性有影响。</p>
 <h4 id="解决服务器容错与键名走私smuggle"><a href="#解决服务器容错与键名走私smuggle" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:解决服务器容错与键名走私smuggle" class="headings">解决：服务器容错与键名“走私（Smuggle）”</a></h4>
 <p>大多数情况下，可以用服务器逻辑容错。<br>
 <a href="https://www.owasp.org/images/a/a0/OWASPLondon20171130_Cookie_Security_Myths_Misconceptions_David_Johansson.pdf" target="_blank" rel="noopener">OWASPLondon20171130_Cookie_Security_Myths_Misconceptions_David_Johansson</a><br>
-此报告提供了在cookie名里添加“私货”以标识属性的方法，<br>
-比如一个cookie设置了属性<code>http-only</code>，名字就加个前缀HTTP_ONLY_。</p>
+此报告提供了在 cookie 名里添加“私货”以标识属性的方法，<br>
+比如一个 cookie 设置了属性<code>http-only</code>，名字就加个前缀 HTTP_ONLY_。</p>
 <h3 id="2-domainpath属性影响完整性"><a href="#2-domainpath属性影响完整性" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:2-domainpath属性影响完整性" class="headings">2. “Domain”“Path”属性影响完整性</a></h3>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-5.2.3" target="_blank" rel="noopener">rfc6265-两个属性的设置</a></p>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-5.1.2" target="_blank" rel="noopener">rfc6265-两个属性在客户端的处理算法</a></p>
 <p>不贴原文了，简单地总结（参照维基）：</p>
-<h4 id="path-是指域名host下的路径归属"><a href="#path-是指域名host下的路径归属" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:path-是指域名host下的路径归属" class="headings"><code>Path</code> 是指域名|Host下的路径归属。</a></h4>
+<h4 id="path-是指域名host-下的路径归属"><a href="#path-是指域名host-下的路径归属" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:path-是指域名host-下的路径归属" class="headings"><code>Path</code> 是指域名|Host 下的路径归属。</a></h4>
 <ul>
 <li>比如两网站<code>example.com/site1/index.htm</code>,<code>example/com/site2/index.htm</code>，<br>
-设置Path属性为<code>/site1</code>,<code>/site2</code>两个值以分离两个目录中的页面的cookie。</li>
+设置 Path 属性为<code>/site1</code>,<code>/site2</code>两个值以分离两个目录中的页面的 cookie。</li>
 <li>有些网站的不同目录是运行不同功能的，比如两个朋友共租一个域名运营博客，用上述方式划分。<br>
-通过这种方式可以做到分离两个博客的cookie。</li>
+通过这种方式可以做到分离两个博客的 cookie。</li>
 </ul>
 <p>看起来很好，但稍有不慎（或故意为之），就可以用来绕过<a href="https://en.wikipedia.org/wiki/Same-origin_policy" target="_blank" rel="noopener">SOE-同源策略</a> 。<br>
-比如，设置path成<code>/</code>，好，域名下所有页面都能读该cookie了。</p>
-<p>这是一种减少网站开发人员工作量的窍门，也能被攻击者用来做窃取cookie的手段。</p>
+比如，设置 path 成<code>/</code>，好，域名下所有页面都能读该 cookie 了。</p>
+<p>这是一种减少网站开发人员工作量的窍门，也能被攻击者用来做窃取 cookie 的手段。</p>
 <h4 id="domain-是指域名归属"><a href="#domain-是指域名归属" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:domain-是指域名归属" class="headings"><code>Domain</code> 是指域名归属。</a></h4>
-<p>它和<code>Path</code>属性的缺点差不多类型，设置了<code>Domain</code>的cookie是<strong>默认暴露给所有子域名</strong>的。<br>
-我们都知道，同域名不一定等于同服务器IP，所以攻击者可以劫持域名解析偷cookie。 <br>
+<p>它和<code>Path</code>属性的缺点差不多类型，设置了<code>Domain</code>的 cookie 是<strong>默认暴露给所有子域名</strong>的。<br>
+我们都知道，同域名不一定等于同服务器 IP，所以攻击者可以劫持域名解析偷 cookie。 <br>
 因为这个原因，实际开发中一般不建议设置<code>Domain</code>属性。</p>
 <h4 id="解决samesite-属性2016年不设置domain属性"><a href="#解决samesite-属性2016年不设置domain属性" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:解决samesite-属性2016年不设置domain属性" class="headings">解决：<code>SameSite</code> 属性(2016年)&amp;不设置<code>Domain</code>属性</a></h4>
 <h5 id="samesite"><a href="#samesite" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:samesite" class="headings"><code>SameSite</code></a></h5>
@@ -443,31 +443,31 @@ A cookie is given this characteristic by setting the SameSite flag to Strict or 
 <a href="https://tools.ietf.org/html/draft-west-first-party-cookies-07" target="_blank" rel="noopener">google：draft-ietf-httpbis-cookie-same-site </a></p>
 </blockquote>
 <blockquote>
-<p>2016年，谷歌Chrome版本51引入了一种新型cookie，即同一站点的cookie，<br>
+<p>2016年，谷歌 Chrome 版本51引入了一种新型 cookie，即同一站点的 cookie，<br>
 只能在源自与目标域相同的源的请求中发送。此限制可缓解诸如跨站点请求伪造（XSRF）等攻击。<br>
-通过将SameSite标志设置为Strict或Lax，可以为cookie提供此特性。</p>
+通过将 SameSite 标志设置为 Strict 或 Lax，可以为 cookie 提供此特性。</p>
 </blockquote>
 <p>标准支持：截至撰文时间(2019-05)，</p>
 <ul>
-<li>开发支持：查到的是node.js的express、PHP7.3支持，应该还有没搜到的</li>
+<li>开发支持：查到的是 node.js 的 express、PHP7.3支持，应该还有没搜到的</li>
 <li>浏览器支持：几个主流浏览器，的新版本都已支持，不再列举名字。</li>
 </ul>
 <p><a href="https://www.lambdatest.com/SameSite-cookie-attribute" target="_blank" rel="noopener">Browser Compatibility Testing of &lsquo;SameSite&rsquo; cookie - LambdaTest</a></p>
 <h5 id="不设置domain属性"><a href="#不设置domain属性" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:不设置domain属性" class="headings">不设置<code>Domain</code>属性</a></h5>
 <p><a href="https://stackoverflow.com/questions/12387338/what-is-a-host-only-cookie" target="_blank" rel="noopener">Stack over flow-What is a host only cookie?</a></p>
 <p>之所以不设置<code>Domain</code>属性，其实是为了激活<code>host-only-flag</code>，<br>
-<strong>当host-only-flag被设置，子域名无法访问此cookie。</strong></p>
+<strong>当 host-only-flag 被设置，子域名无法访问此 cookie。</strong></p>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-5.3" target="_blank" rel="noopener">rfc6265-5.3.  Storage Model</a></p>
-<h3 id="3对cookie的误用"><a href="#3对cookie的误用" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3对cookie的误用" class="headings">3.对cookie的误用</a></h3>
-<p>上面算是设计问题，下面是多数文章主要讲的，开发者对cookie的误用。</p>
+<h3 id="3对-cookie-的误用"><a href="#3对-cookie-的误用" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3对-cookie-的误用" class="headings">3.对 cookie 的误用</a></h3>
+<p>上面算是设计问题，下面是多数文章主要讲的，开发者对 cookie 的误用。</p>
 <h4 id="http-明文传递-cookie"><a href="#http-明文传递-cookie" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:http-明文传递-cookie" class="headings">①http 明文传递 cookie</a></h4>
-<p>cookie默认不加密传输，可以在传输中被坏家伙窃听或修改。</p>
-<p><strong>解决：设置<code> Secure</code>属性&amp;cookie加密和签名</strong></p>
+<p>cookie 默认不加密传输，可以在传输中被坏家伙窃听或修改。</p>
+<p><strong>解决：设置<code> Secure</code>属性&amp;cookie 加密和签名</strong></p>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-5.2.5" target="_blank" rel="noopener">rfc6265-5.2.5.  The Secure Attribute</a><br>
-<code>Secure</code>属性保证cookie只在HTTPS环境下可被传输。</p>
+<code>Secure</code>属性保证 cookie 只在 HTTPS 环境下可被传输。</p>
 <p>和数据库设计一样，为了保险，应尽量减少数据中非必须的信息量。<br>
-cookie值可以是随机生成的字符串（会话凭证）而不是具体信息，<br>
-在下次登录时修改，以应对cookie窃取与重放攻击。</p>
+cookie 值可以是随机生成的字符串（会话凭证）而不是具体信息，<br>
+在下次登录时修改，以应对 cookie 窃取与重放攻击。</p>
 <blockquote>
 <p>rfc6265:<br>
 Servers SHOULD encrypt and sign the contents of cookies<br>
@@ -475,25 +475,25 @@ Servers SHOULD encrypt and sign the contents of cookies<br>
 user agent (even when sending the cookies over a secure channel).</p>
 </blockquote>
 <blockquote>
-<p>当将服务器传输给用户代理时，服务器应该对cookie的内容进行加密和签名<br>
-（使用服务器所需的任何格式）（即使通过安全通道发送cookie）。</p>
+<p>当将服务器传输给用户代理时，服务器应该对 cookie 的内容进行加密和签名<br>
+（使用服务器所需的任何格式）（即使通过安全通道发送 cookie）。</p>
 </blockquote>
-<h4 id="cookie-默认可被客户端apijs-etc读取"><a href="#cookie-默认可被客户端apijs-etc读取" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:cookie-默认可被客户端apijs-etc读取" class="headings">②cookie 默认可被客户端API(JS etc)读取</a></h4>
-<p><strong>解决：设置时加 <code>Http-only-flag</code> ，禁止客户端JS读取cookie。</strong></p>
+<h4 id="cookie-默认可被客户端-apijs-etc读取"><a href="#cookie-默认可被客户端-apijs-etc读取" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:cookie-默认可被客户端-apijs-etc读取" class="headings">②cookie 默认可被客户端 API(JS etc)读取</a></h4>
+<p><strong>解决：设置时加 <code>Http-only-flag</code> ，禁止客户端 JS 读取 cookie。</strong></p>
 <h4 id="错误规划max-ageexpires"><a href="#错误规划max-ageexpires" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:错误规划max-ageexpires" class="headings">③错误规划<code>max-age</code>、<code>expires</code></a></h4>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-5.2" target="_blank" rel="noopener">rfc6265-The Set-Cookie Header</a></p>
 <p>标准太长，简单总结：<br>
-<code>max-age</code>: 类似TTL，以秒计，到时删除。<br>
-<code>expires</code>: GMT时间字符串（Wed, 09 Jun 2021 10:18:14 GMT）,到时删除。<br>
-<code>max-age</code> 是 <code>expires</code> 的一个补充性属性。没有这两个属性，cookie被视为<a href="https://en.wikipedia.org/wiki/HTTP_cookie#Session_cookie" target="_blank" rel="noopener">session cookie</a> 。<br>
-cookie保留在客户端的时间越长，被攻击的可能性越高。</p>
+<code>max-age</code>: 类似 TTL，以秒计，到时删除。<br>
+<code>expires</code>: GMT 时间字符串（Wed, 09 Jun 2021 10:18:14 GMT）,到时删除。<br>
+<code>max-age</code> 是 <code>expires</code> 的一个补充性属性。没有这两个属性，cookie 被视为<a href="https://en.wikipedia.org/wiki/HTTP_cookie#Session_cookie" target="_blank" rel="noopener">session cookie</a> 。<br>
+cookie 保留在客户端的时间越长，被攻击的可能性越高。</p>
 <h4 id="解决谨慎设计max-ageexpires的值"><a href="#解决谨慎设计max-ageexpires的值" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:解决谨慎设计max-ageexpires的值" class="headings">解决：谨慎设计<code>max-age</code>、<code>expires</code>的值</a></h4>
 <p>越敏感的数据，越要设置时间短，保持用户频繁认证。</p>
 <h2 id="attack-on-cookies-and-solution"><a href="#attack-on-cookies-and-solution" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:attack-on-cookies-and-solution" class="headings">Attack on cookies and solution</a></h2>
-<p><strong>3.针对cookie窃取的攻击与相应防御</strong></p>
+<p><strong>3.针对 cookie 窃取的攻击与相应防御</strong></p>
 <p>以下所有攻击手段，都能单独拉出来写好多篇技术报告|分享，<br>
 很明显本文没有这个篇幅，因此本文征求做到全而不详，并附链接以供详求。</p>
-<h3 id="为什么我们要攻击保护cookie"><a href="#为什么我们要攻击保护cookie" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:为什么我们要攻击保护cookie" class="headings">为什么我们要攻击|保护cookie？</a></h3>
+<h3 id="为什么我们要攻击保护-cookie"><a href="#为什么我们要攻击保护-cookie" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:为什么我们要攻击保护-cookie" class="headings">为什么我们要攻击|保护 cookie？</a></h3>
 <p><a href="https://odino.org/security-hardening-http-cookies/" target="_blank" rel="noopener">这篇文章</a> 的一段话讲得不错：</p>
 <blockquote>
 <p>Because the data they contain is, more often than not, extremely sensitive<br>
@@ -503,7 +503,7 @@ Once they are exposed or compromised, attackers can impersonate users,<br>
 or escalate their privileges on your application.</p>
 </blockquote>
 <blockquote>
-<p>因为它们包含的数据通常非常敏感 - 通常用于存储会话ID或访问令牌，攻击者的圣杯。<br>
+<p>因为它们包含的数据通常非常敏感 - 通常用于存储会话 ID 或访问令牌，攻击者的圣杯。<br>
 一旦他们暴露或受到攻击，攻击者就可以冒充用户，或者升级他们对您的应用程序的权限。</p>
 </blockquote>
 <h3 id="常见攻击方式"><a href="#常见攻击方式" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:常见攻击方式" class="headings">常见攻击方式</a></h3>
@@ -529,7 +529,7 @@ or escalate their privileges on your application.</p>
 <td><code>http-only-flag</code>&amp;<code>SameSite</code>attr</td>
 </tr>
 <tr>
-<td>反射型XSS+恶意代理服务器</td>
+<td>反射型 XSS+恶意代理服务器</td>
 <td><code>secure</code>attr&amp;<code>SameSite</code>attr</td>
 </tr>
 <tr>
@@ -538,10 +538,10 @@ or escalate their privileges on your application.</p>
 </tr>
 </tbody>
 </table></div>
-<p>还有一类维基没提到的，针对<a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" target="_blank" rel="noopener">TLS协议</a> 的攻击。<br>
-TLS协议不是完全安全的，因为设计或实现的缺陷，<br>
-已有不少在特定情况下针对TLS的攻击出现，<br>
-主要目的是使HTTPS降为“等同于”HTTP的情况（即复原密文为明文），<br>
+<p>还有一类维基没提到的，针对<a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" target="_blank" rel="noopener">TLS 协议</a> 的攻击。<br>
+TLS 协议不是完全安全的，因为设计或实现的缺陷，<br>
+已有不少在特定情况下针对 TLS 的攻击出现，<br>
+主要目的是使 HTTPS 降为“等同于”HTTP 的情况（即复原密文为明文），<br>
 这不是一个新方向，列举几个比较有名的攻击方式：</p>
 <ul>
 <li><a href="https://www.contextis.com/en/blog/server-technologies-https-beast-attack" target="_blank" rel="noopener">BEAST</a></li>
@@ -550,18 +550,18 @@ TLS协议不是完全安全的，因为设计或实现的缺陷，<br>
 <li><a href="http://breachattack.com/" target="_blank" rel="noopener">BREACH</a></li>
 </ul>
 <h3 id="非常见方式"><a href="#非常见方式" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:非常见方式" class="headings">非常见方式</a></h3>
-<p>非单一的、利用知识组合各种部分的针对cookie的攻击方式，<br>
+<p>非单一的、利用知识组合各种部分的针对 cookie 的攻击方式，<br>
 可惜我只找到一个。</p>
 <h4 id="cookiejacking-rosario-valotta-2011-05linkhttpssitesgooglecomsitetentacoloviolacookiejacking"><a href="#cookiejacking-rosario-valotta-2011-05linkhttpssitesgooglecomsitetentacoloviolacookiejacking" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:cookiejacking-rosario-valotta-2011-05linkhttpssitesgooglecomsitetentacoloviolacookiejacking" class="headings">①cookiejacking-Rosario Valotta-2011-05<a href="https://sites.google.com/site/tentacoloviola/cookiejacking" target="_blank" rel="noopener">[link]</a></a></h4>
-<p>该方法利用了IE浏览器的“跨域交互策略”的一个漏洞，<br>
-外部HTML的&lt;iframe&gt;标签可以加载本地cookie文件（本应不能）。<br>
-恶意服务器通过一系列正常的手段获知用于构造cookie路径的信息，<br>
-然后通过此漏洞读取cookie，并利用<a href="https://www.securitysift.com/who-do-you-trust-cross-domain-content-extraction-with-clickjacking/" target="_blank" rel="noopener">Clickjacking</a> 手段传输cookie至服务器。<br>
-因为读的是文件，任何cookie都会被窃取。</p>
+<p>该方法利用了 IE 浏览器的“跨域交互策略”的一个漏洞，<br>
+外部 HTML 的&lt;iframe&gt;标签可以加载本地 cookie 文件（本应不能）。<br>
+恶意服务器通过一系列正常的手段获知用于构造 cookie 路径的信息，<br>
+然后通过此漏洞读取 cookie，并利用<a href="https://www.securitysift.com/who-do-you-trust-cross-domain-content-extraction-with-clickjacking/" target="_blank" rel="noopener">Clickjacking</a> 手段传输 cookie 至服务器。<br>
+因为读的是文件，任何 cookie 都会被窃取。</p>
 <p>微软<a href="https://digitizor.com/cookiejacking-patch/" target="_blank" rel="noopener">6月</a> 给这个漏洞打了补丁。<br>
-至于Clickjacking，<code>x-frame-options</code><a href="https://www.keycdn.com/blog/x-frame-options" target="_blank" rel="noopener">(XFO)</a> 可以防止。</p>
+至于 Clickjacking，<code>x-frame-options</code><a href="https://www.keycdn.com/blog/x-frame-options" target="_blank" rel="noopener">(XFO)</a> 可以防止。</p>
 <h2 id="academic-discussion-about-cookies"><a href="#academic-discussion-about-cookies" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:academic-discussion-about-cookies" class="headings">Academic discussion about cookies</a></h2>
-<p><strong>关于cookie的学术讨论</strong></p>
+<p><strong>关于 cookie 的学术讨论</strong></p>
 <p>本来想把理论方面作为2、3段的添头，没想到专家们已经在纸头上打过一两轮攻防了。<br>
 故单开此段，索引几个我觉得有意思的学术文献。</p>
 <h3 id="cookie-masking-cookie-掩盖"><a href="#cookie-masking-cookie-掩盖" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:cookie-masking-cookie-掩盖" class="headings">cookie masking-cookie 掩盖</a></h3>
@@ -571,9 +571,9 @@ Defense-in-depth Countermeasures for HTTPS</a><br>
 Author: Olivier Levillain etc<br>
 Time: 2015</p>
 </blockquote>
-<p>这个研究总结了针对TLS记录协议的5个攻击方式，并给出了两个cookie掩盖方式：<br>
-TLS Scramble &amp; MCookies，以保证在意外导致HTTP明文传输的情况下，<br>
-继续保持cookie等秘密信息机密性。</p>
+<p>这个研究总结了针对 TLS 记录协议的5个攻击方式，并给出了两个 cookie 掩盖方式：<br>
+TLS Scramble &amp; MCookies，以保证在意外导致 HTTP 明文传输的情况下，<br>
+继续保持 cookie 等秘密信息机密性。</p>
 <blockquote>
 <p><a href="https://link.springer.com/article/10.1007%2Fs12095-018-0280-y" target="_blank" rel="noopener">Statistical attacks on cookie masking for RC4</a><br>
 Author: Kenneth G. PatersonEmail author etc<br>
@@ -588,16 +588,16 @@ Author: Fuqing Chen etc<br>
 Time: 2018-04</p>
 </blockquote>
 <p>该文阐述了一种攻击方式和两种应用方面：<br>
-利用cookie的弱同源策略（上文有提），实施cookie注入，<br>
-用注入的cookie来推断敏感信息，进而复原一部分密文（比如请求的URL）。<br>
-没看完，大概是利用当时浏览器的cookie路径匹配的算法的一个缺陷。</p>
+利用 cookie 的弱同源策略（上文有提），实施 cookie 注入，<br>
+用注入的 cookie 来推断敏感信息，进而复原一部分密文（比如请求的 URL）。<br>
+没看完，大概是利用当时浏览器的 cookie 路径匹配的算法的一个缺陷。</p>
 <blockquote>
 <p><a href="https://link.springer.com/chapter/10.1007/978-3-662-47854-7_6" target="_blank" rel="noopener">Protecting Encrypted Cookies from<br>
 Compression Side-Channel Attacks</a><br>
 Author: Janaka Alawatugoda etc<br>
 Time: 2015-07</p>
 </blockquote>
-<p>有那么两种对TLS的攻击：<a href="https://blog.qualys.com/ssllabs/2012/09/14/crime-information-leakage-attack-against-ssltls" target="_blank" rel="noopener">CRIME</a> 和 <a href="http://breachattack.com/" target="_blank" rel="noopener">BREACH</a> （上文有提）,<br>
+<p>有那么两种对 TLS 的攻击：<a href="https://blog.qualys.com/ssllabs/2012/09/14/crime-information-leakage-attack-against-ssltls" target="_blank" rel="noopener">CRIME</a> 和 <a href="http://breachattack.com/" target="_blank" rel="noopener">BREACH</a> （上文有提）,<br>
 它们基于传输前压缩过程中产生的额外信息量，复现敏感信息，<br>
 针对它们的常规解决方法是禁止传输中压缩，<br>
 这意味着加大使用带宽资源。<br>
@@ -606,8 +606,8 @@ Time: 2015-07</p>
 <p><strong>总结</strong></p>
 <p>首先，关于此文，不包括素材阅读的，纯搜索时间，大概只有2小时多，<br>
 因此即使是截至2019-05，此文大概还是遗漏了许多值得一提的部分，请读者海涵。</p>
-<p>其次，经过编写此文，作者对cookie的认识有了很大变化，认清了cookie能力是很有限的，<br>
-以后编写web服务也会注意cookie的正确运用。希望各位读者也能从此文中学到知识。</p>
+<p>其次，经过编写此文，作者对 cookie 的认识有了很大变化，认清了 cookie 能力是很有限的，<br>
+以后编写 web 服务也会注意 cookie 的正确运用。希望各位读者也能从此文中学到知识。</p>
 
             </div>
 
@@ -636,9 +636,9 @@ Time: 2015-07</p>
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2023-03-25 14:23:00 CST" style="cursor:help">
+        <span title="Updated @ 2023-08-08 19:12:01 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-03-25</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-03-25</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-08-08</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-08-08</text></g></svg>
         </span></div>
 
 
@@ -673,7 +673,7 @@ Time: 2015-07</p>
             
                 <div class="share-item twitter">
                     
-                    <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/cookie_security/&amp;text=HTTP%20cookie%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7%e3%80%81%e5%ae%89%e5%85%a8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95%e5%92%8c%e6%94%bb%e5%87%bb%e9%98%b2%e5%be%a1%e6%89%8b%e6%ae%b5&amp;hashtags=web-security,cookie,blog,&amp;via=%25!s%28%3cnil%3e%29" title="Share on Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                    <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/cookie_security/&amp;text=HTTP%20cookie%20%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7%e3%80%81%e5%ae%89%e5%85%a8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95%e5%92%8c%e6%94%bb%e5%87%bb%e9%98%b2%e5%be%a1%e6%89%8b%e6%ae%b5&amp;hashtags=web-security,cookie,blog,&amp;via=%25!s%28%3cnil%3e%29" title="Share on Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                 </div>
             
 
@@ -689,7 +689,7 @@ Time: 2015-07</p>
             
                 <div class="share-item telegram">
                     
-                    <a href="https://t.me/share/url?url=https://boholder.github.io/blogs/cookie_security/&amp;text=HTTP%20cookie%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7%e3%80%81%e5%ae%89%e5%85%a8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95%e5%92%8c%e6%94%bb%e5%87%bb%e9%98%b2%e5%be%a1%e6%89%8b%e6%ae%b5" title="Share on Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                    <a href="https://t.me/share/url?url=https://boholder.github.io/blogs/cookie_security/&amp;text=HTTP%20cookie%20%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7%e3%80%81%e5%ae%89%e5%85%a8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95%e5%92%8c%e6%94%bb%e5%87%bb%e9%98%b2%e5%be%a1%e6%89%8b%e6%ae%b5" title="Share on Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
                 </div>
             
 
@@ -734,7 +734,7 @@ Time: 2015-07</p>
             <ul class="related-list">
                 
                     <li class="related-item">
-                        <a href="/blogs/java-arrangement-combination/" class="related-link">Java实现大整数排列组合，解决抽卡欧气计算问题</a>
+                        <a href="/blogs/java-arrangement-combination/" class="related-link">Java 实现大整数排列组合，解决抽卡欧气计算问题</a>
                     </li>
                 
                     <li class="related-item">
@@ -815,12 +815,12 @@ Time: 2015-07</p>
         <ul class="post-nav">
             
                 <li class="post-nav-prev">
-                    <a href="/blogs/markdown-obsidian-user-defined-language-for-notepadpp/" rel="prev">&lt; 自制notepad++，MarkDown(Obsidian配色)用户定义语言格式（自定义高亮）</a>
+                    <a href="/blogs/markdown-obsidian-user-defined-language-for-notepadpp/" rel="prev">&lt; 自制 notepad++，MarkDown(Obsidian 配色)用户定义语言格式（自定义高亮）</a>
                 </li>
             
             
                 <li class="post-nav-next">
-                    <a href="/blogs/dear-to-step-into-the-underneath/" rel="next"> &gt;</a>
+                    <a href="/blogs/one-record-about-debuging-unkown-unkown/" rel="next"> &gt;</a>
                 </li>
             
         </ul>

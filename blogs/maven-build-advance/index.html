@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.81.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.111.3"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -15,13 +15,13 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>用Maven reactor命令行选项节约build时间 | BoHolder的网站：博客，小玩意及其他</title>
+    <title>用 Maven reactor 命令行选项节约 build 时间 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.873d7a3b45cd7b8b23c3e6db490df7744be3beb789eb1b7339c568c93b913000.css"/>
+    <link rel="stylesheet" href="/css/meme.min.d6933b61e48687e05e79f76a96679e6686baf551f831383556fbace43cfaece0.css"/>
 
     
     
-        <script src="/js/meme.min.8e0f2fa693601eb1e65e59b72a205947ff07e9f707fe673ace2110af7f531d0d.js"></script>
+        <script src="/js/meme.min.88dcafd9937dec27b87f333937e9be42cdffb410dd0317d810f064321461f0ad.js"></script>
 
     
 
@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="BoHolder" /><meta name="description" content="微服务开发下的build困扰 前提：Java开发，Maven做依赖管理，JetBrains IntelliJ IDEA做IDE 在Java微服务开发下，项目开发结构(repo)可能有两种： 所有模块(maven module)……" />
+    <meta name="author" content="BoHolder" /><meta name="description" content="微服务开发下的 build 困扰 前提：Java 开发，Maven 做依赖管理，JetBrains IntelliJ IDEA 做 IDE 在 Java 微服务开发下，项目开发结构(repo)可能有两种： 所有模块(maven module)，包括服务（Spring……" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -57,13 +57,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2023-02-11T00:00:00+00:00",
-        "dateModified": "2023-03-25T18:45:58+08:00",
+        "dateModified": "2023-08-08T19:12:01+08:00",
         "url": "https://boholder.github.io/blogs/maven-build-advance/",
-        "headline": "用Maven reactor命令行选项节约build时间",
-        "description": "微服务开发下的build困扰 前提：Java开发，Maven做依赖管理，JetBrains IntelliJ IDEA做IDE 在Java微服务开发下，项目开发结构(repo)可能有两种： 所有模块(maven module)……",
+        "headline": "用 Maven reactor 命令行选项节约 build 时间",
+        "description": "微服务开发下的 build 困扰 前提：Java 开发，Maven 做依赖管理，JetBrains IntelliJ IDEA 做 IDE 在 Java 微服务开发下，项目开发结构(repo)可能有两种： 所有模块(maven module)，包括服务（Spring……",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
-        "wordCount":  2685 ,
+        "wordCount":  2430 ,
         "image": "https://boholder.github.io/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
@@ -99,14 +99,14 @@
 
 
 
-<meta property="og:title" content="用Maven reactor命令行选项节约build时间" />
-<meta property="og:description" content="微服务开发下的build困扰 前提：Java开发，Maven做依赖管理，JetBrains IntelliJ IDEA做IDE 在Java微服务开发下，项目开发结构(repo)可能有两种： 所有模块(maven module)……" />
+<meta property="og:title" content="用 Maven reactor 命令行选项节约 build 时间" />
+<meta property="og:description" content="微服务开发下的 build 困扰 前提：Java 开发，Maven 做依赖管理，JetBrains IntelliJ IDEA 做 IDE 在 Java 微服务开发下，项目开发结构(repo)可能有两种： 所有模块(maven module)，包括服务（Spring……" />
 <meta property="og:url" content="https://boholder.github.io/blogs/maven-build-advance/" />
 <meta property="og:site_name" content="BoHolder的网站：博客，小玩意及其他" />
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2023-02-11T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2023-03-25T18:45:58&#43;08:00" />
+    <meta property="article:modified_time" content="2023-08-08T19:12:01&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -176,7 +176,7 @@
 
         <article class="content post h-entry" data-align="justify" data-type="blogs" data-toc-num="true">
 
-            <h1 class="post-title p-name">用Maven reactor命令行选项节约build时间</h1>
+            <h1 class="post-title p-name">用 Maven reactor 命令行选项节约 build 时间</h1>
 
             
 
@@ -194,7 +194,7 @@
     
     
         
-        <time datetime="2023-03-25T18:45:58&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2023.3.25</time>
+        <time datetime="2023-08-08T19:12:01&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2023.8.8</time>
     
     
     
@@ -208,11 +208,11 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2685</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2430</span>
     
     
         
-        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;6&nbsp;分钟</span>
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;5&nbsp;分钟</span>
     
     
     
@@ -222,7 +222,7 @@
 
             <nav class="contents">
   <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
-    <li><a id="contents:微服务开发下的build困扰" href="#微服务开发下的build困扰">微服务开发下的build困扰</a></li>
+    <li><a id="contents:微服务开发下的-build-困扰" href="#微服务开发下的-build-困扰">微服务开发下的 build 困扰</a></li>
     <li><a id="contents:maven-reactor-cmd-options" href="#maven-reactor-cmd-options">Maven reactor cmd options</a>
       <ol>
         <li><a id="contents:projects" href="#projects">projects</a></li>
@@ -231,13 +231,13 @@
         <li><a id="contents:also-make-dependents" href="#also-make-dependents">also-make-dependents</a></li>
       </ol>
     </li>
-    <li><a id="contents:理解maven的artifact控制逻辑" href="#理解maven的artifact控制逻辑">理解Maven的artifact控制逻辑</a></li>
+    <li><a id="contents:理解-maven-的-artifact-控制逻辑" href="#理解-maven-的-artifact-控制逻辑">理解 Maven 的 artifact 控制逻辑</a></li>
     <li><a id="contents:常见错误操作" href="#常见错误操作">常见错误操作</a></li>
   </ol>
 </nav><div class="post-body e-content">
-                <h2 id="微服务开发下的build困扰"><a href="#微服务开发下的build困扰" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:微服务开发下的build困扰" class="headings">微服务开发下的build困扰</a></h2>
-<p>前提：Java开发，Maven做依赖管理，JetBrains IntelliJ IDEA做IDE</p>
-<p>在Java微服务开发下，项目开发结构(repo)可能有两种：</p>
+                <h2 id="微服务开发下的-build-困扰"><a href="#微服务开发下的-build-困扰" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:微服务开发下的-build-困扰" class="headings">微服务开发下的 build 困扰</a></h2>
+<p>前提：Java 开发，Maven 做依赖管理，JetBrains IntelliJ IDEA 做 IDE</p>
+<p>在 Java 微服务开发下，项目开发结构(repo)可能有两种：</p>
 <ol>
 <li>所有模块(maven module)，包括服务（Spring Application）和自己开发的依赖模块，都塞在一个项目里。
 <ul>
@@ -253,16 +253,16 @@
 </li>
 </ol>
 <p>（以我的工作经历来看，两种结构怎么选好像和开发组的人员结构有关：如果负责不同服务的小组紧密围绕在开发组长周围，选集中式的面儿大；如果小组间相互不太紧密，比如这个项目是不同部门联合开发之类，选分散式的面儿大。）</p>
-<p>现在假设：<code>服务A -依赖-&gt; 依赖B</code>。现在我想改依赖B的代码，启动服务A检查修改效果。（假如B不方便写单测，比如写了个自定义某框架相关的配置类，只能启动看看效果）正确的操作步骤为<strong>先build B，再debug run A</strong>，虽然JetBrains会监控服务A的代码变化并在run时rebuild A，但它不会（至少默认不会）监控A依赖的B的变化。这个算常识，对吧，但人总有大意的时候，我已经不止一次忘记先build B，然后debug A时B的行为就死活不变，直到花很长时间想起来这个原因。</p>
-<p>怎样实现启动A时让B自动build，或者简单点，让B的artifact能反映最新的代码修改？</p>
-<p>对分散式结构，我至今没什么好招，都跨文件目录了，感觉只有用外部工具才能实现，至今没找到此类工具或Maven plugin/ IDEA plugin。如果下个我参与的项目是分散式，我打算自己写一个工具。还好现在我所在的组采用集中式结构。</p>
-<p>首先想到的是Maven的<a href="https://maven.apache.org/guides/mini/guide-multiple-modules.html" target="_blank" rel="noopener">reactor</a>内部机制，如果在顶级（maven root）项目上build，reactor就能根据拓扑排序依次build所有模块。现在出现了另一个问题：浪费时间在build不需要的模块上。比如我组的项目里有个胖服务，整个build它和它的依赖链要十几分钟，这样会让开发体验变得不流畅（此处插一个程序员笑话<a href="https://xkcd.com/303/" target="_blank" rel="noopener">xkcd - Compiling</a>）。</p>
-<p>Maven提供了一些<a href="https://maven.apache.org/guides/mini/guide-multiple-modules.html#command-line-options" target="_blank" rel="noopener">命令行选项</a>实现这种需求。我没能找到一个讲得非常明白的博客，所以自己写一篇。注意这里只挑一般会用到的选项写，全部选项请看链接（没写的都是几乎不会用的选项），或者直接<code>mvn --help</code>参数比网站上的还全。</p>
+<p>现在假设：<code>服务A -依赖-&gt; 依赖B</code>。现在我想改依赖B的代码，启动服务A检查修改效果。（假如B不方便写单测，比如写了个自定义某框架相关的配置类，只能启动看看效果）正确的操作步骤为<strong>先 build B，再 debug run A</strong>，虽然 JetBrains 会监控服务A的代码变化并在 run 时 rebuild A，但它不会（至少默认不会）监控A依赖的B的变化。这个算常识，对吧，但人总有大意的时候，我已经不止一次忘记先 build B，然后 debug A时B的行为就死活不变，直到花很长时间想起来这个原因。</p>
+<p>怎样实现启动A时让B自动 build，或者简单点，让B的 artifact 能反映最新的代码修改？</p>
+<p>对分散式结构，我至今没什么好招，都跨文件目录了，感觉只有用外部工具才能实现，至今没找到此类工具或 Maven plugin/ IDEA plugin。如果下个我参与的项目是分散式，我打算自己写一个工具。还好现在我所在的组采用集中式结构。</p>
+<p>首先想到的是 Maven 的<a href="https://maven.apache.org/guides/mini/guide-multiple-modules.html" target="_blank" rel="noopener">reactor</a>内部机制，如果在顶级（maven root）项目上 build，reactor 就能根据拓扑排序依次 build 所有模块。现在出现了另一个问题：浪费时间在 build 不需要的模块上。比如我组的项目里有个胖服务，整个 build 它和它的依赖链要十几分钟，这样会让开发体验变得不流畅（此处插一个程序员笑话<a href="https://xkcd.com/303/" target="_blank" rel="noopener">xkcd - Compiling</a>）。</p>
+<p>Maven 提供了一些<a href="https://maven.apache.org/guides/mini/guide-multiple-modules.html#command-line-options" target="_blank" rel="noopener">命令行选项</a>实现这种需求。我没能找到一个讲得非常明白的博客，所以自己写一篇。注意这里只挑一般会用到的选项写，全部选项请看链接（没写的都是几乎不会用的选项），或者直接<code>mvn --help</code>参数比网站上的还全。</p>
 <h2 id="maven-reactor-cmd-options"><a href="#maven-reactor-cmd-options" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:maven-reactor-cmd-options" class="headings">Maven reactor cmd options</a></h2>
-<p>这里有一个<a href="https://github.com/boholder/sample-multiple-module-proj" target="_blank" rel="noopener">示例项目</a>，它的依赖结构和reactor给出的root build顺序是：</p>
+<p>这里有一个<a href="https://github.com/boholder/sample-multiple-module-proj" target="_blank" rel="noopener">示例项目</a>，它的依赖结构和 reactor 给出的 root build 顺序是：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -276,68 +276,68 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">dep-util
- |
-dep-service  dep-util2
- |      \      /
-app-1     app-2
-   
-[INFO] Archetype - sample-multiple-module-proj                            [pom]
-[INFO] dep-util                                                           [jar]
-[INFO] dep-service                                                        [jar]
-[INFO] app-1                                                              [jar]
-[INFO] dep-util2                                                          [jar]
-[INFO] app-2                                                              [jar]
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">dep-util
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl">dep-service  dep-util2
+</span></span><span class="line"><span class="cl"> |      \      /
+</span></span><span class="line"><span class="cl">app-1     app-2
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">[INFO] Archetype - sample-multiple-module-proj                            [pom]
+</span></span><span class="line"><span class="cl">[INFO] dep-util                                                           [jar]
+</span></span><span class="line"><span class="cl">[INFO] dep-service                                                        [jar]
+</span></span><span class="line"><span class="cl">[INFO] app-1                                                              [jar]
+</span></span><span class="line"><span class="cl">[INFO] dep-util2                                                          [jar]
+</span></span><span class="line"><span class="cl">[INFO] app-2                                                              [jar]
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 id="projects"><a href="#projects" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:projects" class="headings">projects</a></h3>
-<p>简写<code>-pl</code>，特别指定一个模块的子集去build，不build其他的。
+<p>简写<code>-pl</code>，特别指定一个模块的子集去 build，不 build 其他的。
 如：<code>mvn --projects &quot;dep-util, dep-util2&quot; clean install</code></p>
-<pre><code class="language-log" data-lang="log">[INFO] dep-util ........................................... SUCCESS [  0.995 s]
+<pre tabindex="0"><code class="language-log" data-lang="log">[INFO] dep-util ........................................... SUCCESS [  0.995 s]
 [INFO] dep-util2 .......................................... SUCCESS [  0.084 s]
-</code></pre><p>这个选项比较万能，不会沿依赖链传递build，指定什么build什么。
-比如我改了<code>dep-util2</code>，但没改接口，选这个命令是最适合的。回到开头的问题，如果我频繁改模块B，B直接被服务A依赖，那每次运行只需手动build模块B，再跑Run/Debug自动build服务A。</p>
-<p>我在SOF上<a href="https://stackoverflow.com/a/49979240/11397457" target="_blank" rel="noopener">找到</a>了一个自动化程度高一些的命令，根据git修改记录自动取需要build的模块名：</p>
+</code></pre><p>这个选项比较万能，不会沿依赖链传递 build，指定什么 build 什么。
+比如我改了<code>dep-util2</code>，但没改接口，选这个命令是最适合的。回到开头的问题，如果我频繁改模块B，B直接被服务A依赖，那每次运行只需手动 build 模块B，再跑 Run/Debug 自动 build 服务A。</p>
+<p>我在 SOF 上<a href="https://stackoverflow.com/a/49979240/11397457" target="_blank" rel="noopener">找到</a>了一个自动化程度高一些的命令，根据 git 修改记录自动取需要 build 的模块名：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cmd" data-lang="cmd">mvn install -pl $(git status <span class="p">|</span> grep -E <span class="s2">&#34;modified:|deleted:|added:&#34;</span> <span class="p">|</span> awk &#39;{print $2}&#39; <span class="p">|</span> cut -f1 -d<span class="s2">&#34;/&#34;</span>)
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">mvn install -pl $(git status <span class="p">|</span> grep -E <span class="s2">&#34;modified:|deleted:|added:&#34;</span> <span class="p">|</span> awk &#39;{print $2}&#39; <span class="p">|</span> cut -f1 -d<span class="s2">&#34;/&#34;</span>)
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 id="resume-from"><a href="#resume-from" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:resume-from" class="headings">resume-from</a></h3>
-<p>简写<code>-rf</code>（一阵恶寒），这个选项本意是指定一个build fail的callback，“如果主build命令失败，从root build顺序的中间指定模块开始重新尝试build”。
-但是它可以单独用，效果是直接从中间开始build。单独用到的机会很少，因为从指定的中间到底部可能包含我们不想build的模块。
-比如我们改了<code>dep-util</code>和<code>app-1</code>，<code>mvn --resume-from dep-util clean install</code>，等于从顶build到尾，把<code>dep-util2</code>和<code>app-2</code>也build了。</p>
+<p>简写<code>-rf</code>（一阵恶寒），这个选项本意是指定一个 build fail 的 callback，“如果主 build 命令失败，从 root build 顺序的中间指定模块开始重新尝试 build”。
+但是它可以单独用，效果是直接从中间开始 build。单独用到的机会很少，因为从指定的中间到底部可能包含我们不想 build 的模块。
+比如我们改了<code>dep-util</code>和<code>app-1</code>，<code>mvn --resume-from dep-util clean install</code>，等于从顶 build 到尾，把<code>dep-util2</code>和<code>app-2</code>也 build 了。</p>
 <h3 id="also-make"><a href="#also-make" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:also-make" class="headings">also-make</a></h3>
-<p>简写<code>-am</code>，这个选项用于想同时build依赖和服务，意为“也build主命令目标的依赖”，目标选服务，会向下递归传递。比如：改了<code>dep-util</code>和<code>app-1</code>，
+<p>简写<code>-am</code>，这个选项用于想同时 build 依赖和服务，意为“也 build 主命令目标的依赖”，目标选服务，会向下递归传递。比如：改了<code>dep-util</code>和<code>app-1</code>，
 <code>mvn --projects app-1 --also-make clean install</code></p>
-<pre><code class="language-log" data-lang="log">[INFO] dep-util ........................................... SUCCESS [  0.824 s]
+<pre tabindex="0"><code class="language-log" data-lang="log">[INFO] dep-util ........................................... SUCCESS [  0.824 s]
 [INFO] dep-service ........................................ SUCCESS [  0.106 s]
 [INFO] app-1 .............................................. SUCCESS [  0.109 s]
 </code></pre><h3 id="also-make-dependents"><a href="#also-make-dependents" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:also-make-dependents" class="headings">also-make-dependents</a></h3>
-<p>简写<code>-amd</code>，这个是<code>--also-make</code>的相反选项，“也build使用主命令目标的模块”，目标选依赖，会向上传递。
+<p>简写<code>-amd</code>，这个是<code>--also-make</code>的相反选项，“也 build 使用主命令目标的模块”，目标选依赖，会向上传递。
 如：<code>mvn --projects dep-util --also-make-dependents clean install</code></p>
-<pre><code class="language-log" data-lang="log">[INFO] dep-util ........................................... SUCCESS [  1.010 s]
+<pre tabindex="0"><code class="language-log" data-lang="log">[INFO] dep-util ........................................... SUCCESS [  1.010 s]
 [INFO] dep-service ........................................ SUCCESS [  0.105 s]
 [INFO] app-1 .............................................. SUCCESS [  0.109 s]
 [INFO] app-2 .............................................. SUCCESS [  0.097 s]
 </code></pre><p>用在接下来要在本地环境同时开多个依赖该模块的服务做测试的情况（微服务一个请求串多个服务常有的事）。</p>
-<h2 id="理解maven的artifact控制逻辑"><a href="#理解maven的artifact控制逻辑" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:理解maven的artifact控制逻辑" class="headings">理解Maven的artifact控制逻辑</a></h2>
-<p>理解Maven的控制逻辑，能让你更清楚的知道什么时候该build什么模块。总结下来就一点：<strong>改了哪个build哪个，其他不用动，从底向上build</strong>。但是如果你pull了代码，想跑一整个服务，不知道什么模块被同事改了，那就只能图省事用上面的<code>--also-make</code>build服务主模块，以更新整个依赖链了。</p>
-<p>（我的实践是每参加一个Java项目组，为其项目分配一个独立的Maven配置和仓库目录，防止依赖混淆。其实对Maven这种通过版本管理依赖的工具+Java语言的目标文件（库分发文件）即jar包中的字节码不会被轻松修改，所有项目用一个库也是可行的。你看Python、JS的工具，大部分不允许同一依赖的多个版本共存在一个环境中。）</p>
-<p>看这个SOF上的提问：<a href="https://stackoverflow.com/questions/40979487/target-folder-vs-local-repository" target="_blank" rel="noopener">target folder vs local repository</a> 我们得知：跑<code>mvn install</code>时，Maven会生成模块的artifact（jar包）放进本地仓库。使用的<a href="https://stackoverflow.com/questions/54616030/difference-between-jar-fat-jar-executable-jar" target="_blank" rel="noopener">打包方式</a>不同，服务“依赖”模块artifact的时机也不同，有的是打包有的是运行时，但都是从本地仓库取的artifact。总之我们通过更新模块的artifact，把模块的修改“带进了服务里”。</p>
+<h2 id="理解-maven-的-artifact-控制逻辑"><a href="#理解-maven-的-artifact-控制逻辑" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:理解-maven-的-artifact-控制逻辑" class="headings">理解 Maven 的 artifact 控制逻辑</a></h2>
+<p>理解 Maven 的控制逻辑，能让你更清楚的知道什么时候该 build 什么模块。总结下来就一点：<strong>改了哪个 build 哪个，其他不用动，从底向上 build</strong>。但是如果你 pull 了代码，想跑一整个服务，不知道什么模块被同事改了，那就只能图省事用上面的<code>--also-make</code>build 服务主模块，以更新整个依赖链了。</p>
+<p>（我的实践是每参加一个 Java 项目组，为其项目分配一个独立的 Maven 配置和仓库目录，防止依赖混淆。其实对 Maven 这种通过版本管理依赖的工具+Java 语言的目标文件（库分发文件）即 jar 包中的字节码不会被轻松修改，所有项目用一个库也是可行的。你看 Python、JS 的工具，大部分不允许同一依赖的多个版本共存在一个环境中。）</p>
+<p>看这个 SOF 上的提问：<a href="https://stackoverflow.com/questions/40979487/target-folder-vs-local-repository" target="_blank" rel="noopener">target folder vs local repository</a> 我们得知：跑<code>mvn install</code>时，Maven 会生成模块的 artifact（jar 包）放进本地仓库。使用的<a href="https://stackoverflow.com/questions/54616030/difference-between-jar-fat-jar-executable-jar" target="_blank" rel="noopener">打包方式</a>不同，服务“依赖”模块 artifact 的时机也不同，有的是打包有的是运行时，但都是从本地仓库取的 artifact。总之我们通过更新模块的 artifact，把模块的修改“带进了服务里”。</p>
 <h2 id="常见错误操作"><a href="#常见错误操作" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:常见错误操作" class="headings">常见错误操作</a></h2>
 <ul>
 <li>
-<p>我们有时会用鼠标在IDEA的Maven插件的界面中（在界面右侧边栏里），运行Maven命令弹窗-&gt;输入栏右边点击选择目标模块，这个操作不等于加<code>--projects</code>选项，即比如<code>mvn --also-make clean install</code>+<code>选中app-1</code>是无效的，只build <code>app-1</code>。</p>
+<p>我们有时会用鼠标在 IDEA 的 Maven 插件的界面中（在界面右侧边栏里），运行 Maven 命令弹窗-&gt;输入栏右边点击选择目标模块，这个操作不等于加<code>--projects</code>选项，即比如<code>mvn --also-make clean install</code>+<code>选中 app-1</code>是无效的，只 build <code>app-1</code>。</p>
 </li>
 <li>
-<p>IDEA有一个<a href="https://www.jetbrains.com/help/idea/delegate-build-and-run-actions-to-maven.html#delegate_to_maven" target="_blank" rel="noopener">Delegate build and run actions to Maven</a>设置，勾选后效果大概是Run/Debug时跑<code>--also-make</code>，即build整个依赖链。因为我们<strong>并不是每次都要build整个依赖链</strong>，这选项还是不打开比较好，浪费的时间更多。</p>
+<p>IDEA 有一个<a href="https://www.jetbrains.com/help/idea/delegate-build-and-run-actions-to-maven.html#delegate_to_maven" target="_blank" rel="noopener">Delegate build and run actions to Maven</a>设置，勾选后效果大概是 Run/Debug 时跑<code>--also-make</code>，即 build 整个依赖链。因为我们<strong>并不是每次都要 build 整个依赖链</strong>，这选项还是不打开比较好，浪费的时间更多。</p>
 </li>
 <li>
-<p>有时我们改了两个模块，先build上层的模块，会报“找不到（下层模块的）符号”，但是我们在编辑器里能看到代码没报红色错误。这就是因为我们忘了先build下层模块，而不该判断为IDEA的索引缓存又坏了，进而花大量时间重新缓存索引。</p>
+<p>有时我们改了两个模块，先 build 上层的模块，会报“找不到（下层模块的）符号”，但是我们在编辑器里能看到代码没报红色错误。这就是因为我们忘了先 build 下层模块，而不该判断为 IDEA 的索引缓存又坏了，进而花大量时间重新缓存索引。</p>
 </li>
 </ul>
 
@@ -368,9 +368,9 @@ app-1     app-2
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2023-03-25 18:45:58 CST" style="cursor:help">
+        <span title="Updated @ 2023-08-08 19:12:01 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-03-25</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-03-25</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-08-08</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-08-08</text></g></svg>
         </span></div>
 
 
@@ -405,7 +405,7 @@ app-1     app-2
             
                 <div class="share-item twitter">
                     
-                    <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/maven-build-advance/&amp;text=%e7%94%a8Maven%20reactor%e5%91%bd%e4%bb%a4%e8%a1%8c%e9%80%89%e9%a1%b9%e8%8a%82%e7%ba%a6build%e6%97%b6%e9%97%b4&amp;hashtags=programming,java,blog,&amp;via=%25!s%28%3cnil%3e%29" title="Share on Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                    <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/maven-build-advance/&amp;text=%e7%94%a8%20Maven%20reactor%20%e5%91%bd%e4%bb%a4%e8%a1%8c%e9%80%89%e9%a1%b9%e8%8a%82%e7%ba%a6%20build%20%e6%97%b6%e9%97%b4&amp;hashtags=programming,java,blog,&amp;via=%25!s%28%3cnil%3e%29" title="Share on Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                 </div>
             
 
@@ -421,7 +421,7 @@ app-1     app-2
             
                 <div class="share-item telegram">
                     
-                    <a href="https://t.me/share/url?url=https://boholder.github.io/blogs/maven-build-advance/&amp;text=%e7%94%a8Maven%20reactor%e5%91%bd%e4%bb%a4%e8%a1%8c%e9%80%89%e9%a1%b9%e8%8a%82%e7%ba%a6build%e6%97%b6%e9%97%b4" title="Share on Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                    <a href="https://t.me/share/url?url=https://boholder.github.io/blogs/maven-build-advance/&amp;text=%e7%94%a8%20Maven%20reactor%20%e5%91%bd%e4%bb%a4%e8%a1%8c%e9%80%89%e9%a1%b9%e8%8a%82%e7%ba%a6%20build%20%e6%97%b6%e9%97%b4" title="Share on Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
                 </div>
             
 
@@ -466,7 +466,7 @@ app-1     app-2
             <ul class="related-list">
                 
                     <li class="related-item">
-                        <a href="/blogs/java-arrangement-combination/" class="related-link">Java实现大整数排列组合，解决抽卡欧气计算问题</a>
+                        <a href="/blogs/java-arrangement-combination/" class="related-link">Java 实现大整数排列组合，解决抽卡欧气计算问题</a>
                     </li>
                 
                     <li class="related-item">
@@ -474,7 +474,7 @@ app-1     app-2
                     </li>
                 
                     <li class="related-item">
-                        <a href="/blogs/what-i-learned-from-putgun/" class="related-link">我在开发Puntgun中学到的东西</a>
+                        <a href="/blogs/what-i-learned-from-putgun/" class="related-link">我在开发 Puntgun 中学到的东西</a>
                     </li>
                 
             </ul>
@@ -547,7 +547,7 @@ app-1     app-2
         <ul class="post-nav">
             
                 <li class="post-nav-prev">
-                    <a href="/blogs/what-i-learned-from-putgun/" rel="prev">&lt; 我在开发Puntgun中学到的东西</a>
+                    <a href="/blogs/what-i-learned-from-putgun/" rel="prev">&lt; 我在开发 Puntgun 中学到的东西</a>
                 </li>
             
             
