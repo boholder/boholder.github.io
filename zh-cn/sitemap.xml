@@ -255,17 +255,17 @@
     <loc>https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/</loc>
     <lastmod>2023-08-08T19:12:01+08:00</lastmod>
   </url><url>
-    <loc>https://boholder.github.io/tags/</loc>
+    <loc>https://boholder.github.io/categories/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://boholder.github.io/en-us/tags/"
+                href="https://boholder.github.io/en-us/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://boholder.github.io/tags/"
+                href="https://boholder.github.io/categories/"
                 />
   </url><url>
     <loc>https://boholder.github.io/blogs/</loc>
@@ -279,19 +279,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://boholder.github.io/blogs/"
-                />
-  </url><url>
-    <loc>https://boholder.github.io/categories/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://boholder.github.io/en-us/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://boholder.github.io/categories/"
                 />
   </url><url>
     <loc>https://boholder.github.io/archive/</loc>
@@ -318,6 +305,19 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://boholder.github.io/crafts/"
+                />
+  </url><url>
+    <loc>https://boholder.github.io/tags/</loc>
+    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/en-us/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/tags/"
                 />
   </url><url>
     <loc>https://boholder.github.io/series/</loc>
