@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.81.0" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.111.3"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,11 +17,11 @@
 
     <title>单元测试的不同方式 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.873d7a3b45cd7b8b23c3e6db490df7744be3beb789eb1b7339c568c93b913000.css"/>
+    <link rel="stylesheet" href="/css/meme.min.d6933b61e48687e05e79f76a96679e6686baf551f831383556fbace43cfaece0.css"/>
 
     
     
-        <script src="/js/meme.min.8e0f2fa693601eb1e65e59b72a205947ff07e9f707fe673ace2110af7f531d0d.js"></script>
+        <script src="/js/meme.min.88dcafd9937dec27b87f333937e9be42cdffb410dd0317d810f064321461f0ad.js"></script>
 
     
 
@@ -398,7 +398,7 @@
 </table></div>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -447,54 +447,54 @@
 </span><span class="lnt">47
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// -------service.ServiceTest
-</span><span class="c1">// Given-When-Then - Behavior Driven Development (BDD)
-</span><span class="c1"></span><span class="nd">@Test</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">withNormalResponse</span><span class="o">(){</span>
-    <span class="n">String</span> <span class="n">index</span> <span class="o">=</span> <span class="s">&#34;normal&#34;</span><span class="o">;</span>
-    <span class="c1">// given, Mockito
-</span><span class="c1"></span>    <span class="n">given</span><span class="o">(</span><span class="n">mapper</span><span class="o">.</span><span class="na">getEntitiesBy</span><span class="o">(</span><span class="n">index</span><span class="o">))</span>
-        <span class="o">.</span><span class="na">willReturn</span><span class="o">(</span><span class="n">buildDummyMapperReturn</span><span class="o">());</span>
-    <span class="c1">// when
-</span><span class="c1"></span>    <span class="n">Response</span> <span class="n">actual</span><span class="o">=</span><span class="n">service</span><span class="o">.</span><span class="na">getEntitiesBy</span><span class="o">(</span><span class="n">buildRequest</span><span class="o">(</span><span class="n">index</span><span class="o">));</span>
-    <span class="c1">// then, Hamcrest, 对调用的返回值的期望
-</span><span class="c1"></span>    <span class="n">assertThat</span><span class="o">(</span><span class="n">actual</span><span class="o">.</span><span class="na">getMessage</span><span class="o">(),</span><span class="n">is</span><span class="o">(</span><span class="s">&#34;ok&#34;</span><span class="o">));</span>
-    <span class="n">assertThat</span><span class="o">(</span><span class="n">actual</span><span class="o">.</span><span class="na">getData</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="n">0</span><span class="o">).</span><span class="na">getCategory</span><span class="o">(),</span><span class="n">is</span><span class="o">(</span><span class="s">&#34;c&#34;</span><span class="o">));</span>
-    <span class="n">assertThat</span><span class="o">(</span><span class="n">actual</span><span class="o">.</span><span class="na">getData</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="n">0</span><span class="o">).</span><span class="na">getName</span><span class="o">(),</span><span class="n">is</span><span class="o">(</span><span class="s">&#34;n&#34;</span><span class="o">));</span>
-    <span class="c1">// Mockito, 对被测调用桩时传入的参数的期望
-</span><span class="c1"></span>    <span class="n">ArgumentCaptor</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">mapperArgCaptor</span><span class="o">=</span><span class="n">ArgumentCaptor</span><span class="o">.</span><span class="na">forClass</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-    <span class="n">verify</span><span class="o">(</span><span class="n">mapper</span><span class="o">,</span><span class="n">times</span><span class="o">(</span><span class="n">1</span><span class="o">)).</span><span class="na">getEntitiesBy</span><span class="o">(</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">capture</span><span class="o">());</span>
-    <span class="n">String</span> <span class="n">whatMapperGot</span><span class="o">=</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
-    <span class="n">assertThat</span><span class="o">(</span><span class="n">whatMapperGot</span><span class="o">,</span><span class="n">is</span><span class="o">(</span><span class="n">index</span><span class="o">));</span>
-<span class="o">}</span>
-
-<span class="c1">// 构造 Mapper 桩所返回的测试数据
-</span><span class="c1"></span><span class="kd">private</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Entity</span><span class="o">&gt;</span> <span class="nf">buildDummyMapperReturn</span><span class="o">(){</span>
-    <span class="k">return</span> <span class="n">Collections</span><span class="o">.</span><span class="na">singletonList</span><span class="o">(</span><span class="k">new</span> <span class="n">Entity</span><span class="o">().</span><span class="na">setCategory</span><span class="o">(</span><span class="s">&#34;c&#34;</span><span class="o">).</span><span class="na">setName</span><span class="o">(</span><span class="s">&#34;n&#34;</span><span class="o">));</span>
-<span class="o">}</span>
-
-<span class="c1">// -------dto.Response
-</span><span class="c1"></span><span class="nd">@Getter</span> <span class="c1">// Lombok
-</span><span class="c1"></span><span class="nd">@Setter</span>
-<span class="nd">@Accessors</span><span class="o">(</span><span class="n">chain</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Response</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">message</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Entity</span><span class="o">&gt;</span> <span class="n">data</span><span class="o">;</span>
-
-    <span class="kd">public</span> <span class="nf">Response</span><span class="o">(</span><span class="n">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">message</span> <span class="o">=</span> <span class="n">message</span><span class="o">;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-
-<span class="c1">// -------dao.entity.Entity
-</span><span class="c1"></span><span class="nd">@Getter</span>
-<span class="nd">@Setter</span>
-<span class="nd">@Accessors</span><span class="o">(</span><span class="n">chain</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span> 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Entity</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">category</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// -------service.ServiceTest
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Given-When-Then - Behavior Driven Development (BDD)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Test</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">withNormalResponse</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">String</span> <span class="n">index</span> <span class="o">=</span> <span class="s">&#34;normal&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// given, Mockito
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">given</span><span class="o">(</span><span class="n">mapper</span><span class="o">.</span><span class="na">getEntitiesBy</span><span class="o">(</span><span class="n">index</span><span class="o">))</span>
+</span></span><span class="line"><span class="cl">        <span class="o">.</span><span class="na">willReturn</span><span class="o">(</span><span class="n">buildDummyMapperReturn</span><span class="o">());</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// when
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">Response</span> <span class="n">actual</span><span class="o">=</span><span class="n">service</span><span class="o">.</span><span class="na">getEntitiesBy</span><span class="o">(</span><span class="n">buildRequest</span><span class="o">(</span><span class="n">index</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// then, Hamcrest, 对调用的返回值的期望
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">assertThat</span><span class="o">(</span><span class="n">actual</span><span class="o">.</span><span class="na">getMessage</span><span class="o">(),</span><span class="n">is</span><span class="o">(</span><span class="s">&#34;ok&#34;</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">assertThat</span><span class="o">(</span><span class="n">actual</span><span class="o">.</span><span class="na">getData</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getCategory</span><span class="o">(),</span><span class="n">is</span><span class="o">(</span><span class="s">&#34;c&#34;</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">assertThat</span><span class="o">(</span><span class="n">actual</span><span class="o">.</span><span class="na">getData</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getName</span><span class="o">(),</span><span class="n">is</span><span class="o">(</span><span class="s">&#34;n&#34;</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Mockito, 对被测调用桩时传入的参数的期望
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">ArgumentCaptor</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">mapperArgCaptor</span><span class="o">=</span><span class="n">ArgumentCaptor</span><span class="o">.</span><span class="na">forClass</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">verify</span><span class="o">(</span><span class="n">mapper</span><span class="o">,</span><span class="n">times</span><span class="o">(</span><span class="mi">1</span><span class="o">)).</span><span class="na">getEntitiesBy</span><span class="o">(</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">capture</span><span class="o">());</span>
+</span></span><span class="line"><span class="cl">    <span class="n">String</span> <span class="n">whatMapperGot</span><span class="o">=</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">assertThat</span><span class="o">(</span><span class="n">whatMapperGot</span><span class="o">,</span><span class="n">is</span><span class="o">(</span><span class="n">index</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 构造 Mapper 桩所返回的测试数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">private</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Entity</span><span class="o">&gt;</span> <span class="nf">buildDummyMapperReturn</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">Collections</span><span class="o">.</span><span class="na">singletonList</span><span class="o">(</span><span class="k">new</span> <span class="n">Entity</span><span class="o">().</span><span class="na">setCategory</span><span class="o">(</span><span class="s">&#34;c&#34;</span><span class="o">).</span><span class="na">setName</span><span class="o">(</span><span class="s">&#34;n&#34;</span><span class="o">));</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// -------dto.Response
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Getter</span> <span class="c1">// Lombok
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Setter</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@Accessors</span><span class="o">(</span><span class="n">chain</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Response</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">message</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Entity</span><span class="o">&gt;</span> <span class="n">data</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="nf">Response</span><span class="o">(</span><span class="n">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">message</span> <span class="o">=</span> <span class="n">message</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// -------dao.entity.Entity
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">@Getter</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@Setter</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@Accessors</span><span class="o">(</span><span class="n">chain</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span> 
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Entity</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">category</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="3-基于特性的测试property-based-testing-pbt"><a href="#3-基于特性的测试property-based-testing-pbt" class="anchor-link">#</a><a href="#contents:3-基于特性的测试property-based-testing-pbt" class="headings">3. 基于特性的测试(property-based testing, PBT)</a></h2>
 <h3 id="名词解释"><a href="#名词解释" class="anchor-link">#</a><a href="#contents:名词解释" class="headings">名词解释</a></h3>
@@ -592,7 +592,7 @@ PBT 可作为单元测试的一种方式，在单元测试层面，其最重要�
 <p>也有观点说 PBT 独立于单元测试、集成测试等测试层级概念，是“额外的一类测试”，我反对这个观点。
 首先，我了解到的几个现有的 PBT 库都兼容在了原先存在的为 EBT 编写的成熟测试框架下，
 或者应该说是测试框架逐渐变成了无关测试方式的抽象框架，这是事实依据。
-其次从定义上区分，测试层级描述的是项目活动，区别主要在参与该活动的<a href="https://en.wikipedia.org/wiki/Project_stakeholder" target="_blank" rel="noopener">项目干系人(stakeholder)</a> 
+其次从定义上区分，测试层级描述的是项目活动，区别主要在参与该活动的<a href="https://en.wikipedia.org/wiki/Project_stakeholder" target="_blank" rel="noopener">项目干系人(stakeholder)</a>
 的类别，和运行时对系统覆盖的范围，和 PBT 所定义的东西相差甚远。
 PBT 可以用在单元测试中，也可以用在集成测试中，它描述的仅仅是一种构造测试数据的思路。</p>
 <h3 id="我认为单元测试中可以使用-pbt"><a href="#我认为单元测试中可以使用-pbt" class="anchor-link">#</a><a href="#contents:我认为单元测试中可以使用-pbt" class="headings">我认为单元测试中可以使用 PBT</a></h3>
@@ -646,7 +646,7 @@ PBT 可以用在单元测试中，也可以用在集成测试中，它描述的�
 <p>基本<a href="https://hypothesis.works/articles/quickcheck-in-every-language/" target="_blank" rel="noopener">每个编程语言都有 PBT 库</a>
 （这篇2016年的文章信息稍有过时），
 这类 PBT 测试库通常会提供，对其服务的语言的原生库内的类的实例的随机构造方法。
-有点绕，用 Java 下的<a href="https://pholser.github.io/junit-quickcheck/site/1.0/usage/basic-types.html" target="_blank" rel="noopener">junit-quickcheck</a> 
+有点绕，用 Java 下的<a href="https://pholser.github.io/junit-quickcheck/site/1.0/usage/basic-types.html" target="_blank" rel="noopener">junit-quickcheck</a>
 库举例就是：该库会提供对 Java 基本类型、String、常用集合类、Date 等类的随机构造方法。
 这种构造方法因库而异，在提供给用户使用的方式上稍有不同，
 比如<a href="https://pholser.github.io/junit-quickcheck/site/1.0/usage/other-types.html" target="_blank" rel="noopener">junit-quickcheck</a> 使用参数上的注解，
@@ -658,14 +658,14 @@ Python 下的<a href="https://hypothesis.readthedocs.io/en/latest/quickstart.htm
 <h3 id="更多关于-pbt-的参考内容"><a href="#更多关于-pbt-的参考内容" class="anchor-link">#</a><a href="#contents:更多关于-pbt-的参考内容" class="headings">更多关于 PBT 的参考内容</a></h3>
 <ul>
 <li>一个叫 jqwik 的 Java PBT 库的<a href="https://jqwik.net/property-based-testing.html" target="_blank" rel="noopener">介绍页面</a> 给出了不少关于 PBT 的资料。</li>
-<li><a href="https://blog.ssanj.net/posts/2016-06-26-property-based-testing-patterns.html" target="_blank" rel="noopener">文章 Property-based Testing Patterns</a> 
+<li><a href="https://blog.ssanj.net/posts/2016-06-26-property-based-testing-patterns.html" target="_blank" rel="noopener">文章 Property-based Testing Patterns</a>
 易懂地说明了 PBT 中可遵守的一些模式，可根据这些模式来指导总结代码中的特性。</li>
 </ul>
 <h2 id="5-总结"><a href="#5-总结" class="anchor-link">#</a><a href="#contents:5-总结" class="headings">5. 总结</a></h2>
 <p>希望这篇文章给你讲明白了，或者至少你可以把所有参考资料读一遍，自己形成理解。
 试试在工作中把 PBT 用起来，如果害怕擅自导入 PBT 包被发现，不提交至 VCS 就行。
 顺带一提我还没实践过，打算下次迭代时试试。我预计即使是后端日常 CRUD 功能，
-根据那篇<a href="https://blog.ssanj.net/posts/2016-06-26-property-based-testing-patterns.html" target="_blank" rel="noopener">PBT Patterns 文章</a> 
+根据那篇<a href="https://blog.ssanj.net/posts/2016-06-26-property-based-testing-patterns.html" target="_blank" rel="noopener">PBT Patterns 文章</a>
 ，针对数据变换或判断的方法都可能能总结出特性。</p>
 <p>抛砖引玉，欢迎在评论中指点指正，或给出另一个角度的看法，好让我对这些概念了解更深。</p>
 

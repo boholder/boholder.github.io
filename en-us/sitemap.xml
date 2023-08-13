@@ -69,6 +69,16 @@
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/design/</loc>
     <lastmod>2023-03-24T21:56:27+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/tags/design/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/en-us/tags/design/"
+                />
   </url><url>
     <loc>https://boholder.github.io/en-us/categories/design/</loc>
     <lastmod>2023-03-24T21:56:27+08:00</lastmod>
