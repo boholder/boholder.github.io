@@ -2,8 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://boholder.github.io/en-us/tags/blog/</loc>
+    <lastmod>2023-12-08T19:57:11+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/tags/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/en-us/tags/blog/"
+                />
+  </url><url>
     <loc>https://boholder.github.io/en-us/</loc>
-    <lastmod>2023-03-25T14:23:00+08:00</lastmod>
+    <lastmod>2023-12-08T19:57:11+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -13,6 +26,32 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/"
+                />
+  </url><url>
+    <loc>https://boholder.github.io/en-us/blogs/execution_event/</loc>
+    <lastmod>2023-12-08T19:57:11+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/blogs/execution_event/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/en-us/blogs/execution_event/"
+                />
+  </url><url>
+    <loc>https://boholder.github.io/en-us/categories/programming/</loc>
+    <lastmod>2023-12-08T19:57:11+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/categories/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/en-us/categories/programming/"
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/categories/fun/</loc>
@@ -52,19 +91,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/"
-                />
-  </url><url>
-    <loc>https://boholder.github.io/en-us/tags/blog/</loc>
-    <lastmod>2023-03-25T14:23:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://boholder.github.io/tags/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://boholder.github.io/en-us/tags/blog/"
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/design/</loc>
@@ -110,19 +136,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://boholder.github.io/en-us/tags/programming/"
-                />
-  </url><url>
-    <loc>https://boholder.github.io/en-us/categories/programming/</loc>
-    <lastmod>2023-03-24T21:56:27+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://boholder.github.io/categories/programming/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://boholder.github.io/en-us/categories/programming/"
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/sre/</loc>

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.111.3"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.81.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,11 +17,11 @@
 
     <title>柯里化及相关延伸思考 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.d6933b61e48687e05e79f76a96679e6686baf551f831383556fbace43cfaece0.css"/>
+    <link rel="stylesheet" href="/css/meme.min.873d7a3b45cd7b8b23c3e6db490df7744be3beb789eb1b7339c568c93b913000.css"/>
 
     
     
-        <script src="/js/meme.min.88dcafd9937dec27b87f333937e9be42cdffb410dd0317d810f064321461f0ad.js"></script>
+        <script src="/js/meme.min.8e0f2fa693601eb1e65e59b72a205947ff07e9f707fe673ace2110af7f531d0d.js"></script>
 
     
 
@@ -250,43 +250,43 @@
 <p>我直接用人家文章里的 python 代码吧。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">curried_pow</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">h</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">curried_pow</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">h</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>这是一个幂乘高阶（工厂）函数，你可以用这个函数生成计算特定幂乘数的函数（预先把第一个参数，即幂乘数，塞入生成后的函数的闭包）：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">square</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cube</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">square</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">cube</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>这样第一个参数就保留在这两个生成的函数的闭包里了，然后再拿着返回的函数去应用到实际的（业务逻辑）计算：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># curried_pow(2)(4) = 4^2 = 16</span>
-</span></span><span class="line"><span class="cl"><span class="n">sixteen</span> <span class="o">=</span> <span class="n">square</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># curried_pow(3)(2) = 2^3 = 8</span>
-</span></span><span class="line"><span class="cl"><span class="n">eight</span> <span class="o">=</span> <span class="n">cube</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># curried_pow(2)(4) = 4^2 = 16</span>
+<span class="n">sixteen</span> <span class="o">=</span> <span class="n">square</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="c1"># curried_pow(3)(2) = 2^3 = 8</span>
+<span class="n">eight</span> <span class="o">=</span> <span class="n">cube</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><h2 id="扩展思考"><a href="#扩展思考" class="anchor-link">#</a><a href="#contents:扩展思考" class="headings">扩展思考</a></h2>
 <h3 id="参数的位置亦代表了构造步骤先后"><a href="#参数的位置亦代表了构造步骤先后" class="anchor-link">#</a><a href="#contents:参数的位置亦代表了构造步骤先后" class="headings">参数的位置亦代表了构造步骤先后</a></h3>
@@ -294,7 +294,7 @@
 <p>那要是反过来呢，函数的意思会变：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -311,45 +311,45 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">curried_pow</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># x,y颠倒顺序</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">h</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 对2做n次幂乘</span>
-</span></span><span class="line"><span class="cl"><span class="n">pow_on_2_with</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 对3做n次幂乘</span>
-</span></span><span class="line"><span class="cl"><span class="n">pow_on_3_with</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># curried_pow(2)(4) = 2^4 = 16</span>
-</span></span><span class="line"><span class="cl"><span class="n">sixteen</span> <span class="o">=</span> <span class="n">pow_on_2_with</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># curried_pow(3)(2) = 3^2 = 9</span>
-</span></span><span class="line"><span class="cl"><span class="n">nine</span> <span class="o">=</span> <span class="n">pow_on_3_with</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">curried_pow</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="c1"># x,y颠倒顺序</span>
+        <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">h</span>
+
+<span class="c1"># 对2做n次幂乘</span>
+<span class="n">pow_on_2_with</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># 对3做n次幂乘</span>
+<span class="n">pow_on_3_with</span> <span class="o">=</span> <span class="n">curried_pow</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># curried_pow(2)(4) = 2^4 = 16</span>
+<span class="n">sixteen</span> <span class="o">=</span> <span class="n">pow_on_2_with</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="c1"># curried_pow(3)(2) = 3^2 = 9</span>
+<span class="n">nine</span> <span class="o">=</span> <span class="n">pow_on_3_with</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><h3 id="外部环境闭包在内部看来是不可变的"><a href="#外部环境闭包在内部看来是不可变的" class="anchor-link">#</a><a href="#contents:外部环境闭包在内部看来是不可变的" class="headings">外部环境（闭包）在内部看来是不可变的</a></h3>
 <p>之所以有上面的配置先后顺序的考虑，是因为本小节标题所示的特性。变量有不同范围的生命周期，内部环境能看到外部环境里的定义，想修改定义所绑定的值可以重新覆盖定义，但这个新定义的范围仅在本地环境，没法向上影响到外部环境。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># i还是0</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1"># i还是0</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>我倒觉得把环境看成热塑塑料（或者更熟悉的502胶水）比较好，还在当前环境时，随便改定义捏形状，一旦退出环境或者深入到下一层环境（联想盗梦空间），环境固定死改不了了。比如函数一旦被构造出来，函数内的环境也就固定下来了。在调用函数的外部环境看来，函数内部环境直接一个黑盒，读都不能读；函数自己也不能修改硬编码的定义（比如上面i=1，不能下次调用让i定义为其他的值）。</p>
 <h3 id="通过-self-reference-来绕开这个限制"><a href="#通过-self-reference-来绕开这个限制" class="anchor-link">#</a><a href="#contents:通过-self-reference-来绕开这个限制" class="headings">通过 Self Reference 来绕开这个限制</a></h3>
 <p>这节思路来自<a href="https://inst.eecs.berkeley.edu/~cs61a/fa21/lab/lab03/#self-reference" target="_blank" rel="noopener">这道练习题</a>。举个更简单的例子，我想构造一个 count_down()函数，每调用它一次，它会打印内部环境中保存的数字，并且返回一个保存数字减了一的函数：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -358,14 +358,14 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down_on</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="mi">3</span>
-</span></span><span class="line"><span class="cl"><span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="mi">2</span>
-</span></span><span class="line"><span class="cl"><span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="mi">1</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down_on</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down</span><span class="p">()</span>
+<span class="mi">3</span>
+<span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down</span><span class="p">()</span>
+<span class="mi">2</span>
+<span class="n">count_down</span> <span class="o">=</span> <span class="n">count_down</span><span class="p">()</span>
+<span class="mi">1</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>结合上一节的限制，这有点难，因为看起来 <code>count_down()</code> 函数的环境得自己处理每次调用把变量值减一的操作。其实还是有办法的，两种办法：</p>
 <ol>
@@ -373,7 +373,7 @@
 </ol>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -381,20 +381,20 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">count_down_on</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">count_down</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">count_down_on</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">count_down</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">count_down_on</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">count_down</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">count_down_on</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">count_down</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><ol start="2">
 <li>利用 Python 提供的 <code>nonlocal</code> 修饰符，允许在本地环境修改外部环境中的绑定（看<a href="https://www.python.org/dev/peps/pep-3104/" target="_blank" rel="noopener">官方文档</a>里这个操作的起源和其他语言中的应用能多学到一些知识）。</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -404,15 +404,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">count_down_on</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">count_down</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">        <span class="k">nonlocal</span> <span class="n">n</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># 不加 nonlocal 声明，这句赋值会报编译错误</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">count_down</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">count_down_on</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">count_down</span><span class="p">():</span>
+        <span class="n">nonlocal</span> <span class="n">n</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># 不加 nonlocal 声明，这句赋值会报编译错误</span>
+        <span class="k">return</span>
+
+    <span class="k">return</span> <span class="n">count_down</span>
+</code></pre></td></tr></table></div>
 </div>
 </div>
             </div>

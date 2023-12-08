@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.111.3"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.81.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,11 +17,11 @@
 
     <title>白话解释单元测试中的 Mock 概念 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.d6933b61e48687e05e79f76a96679e6686baf551f831383556fbace43cfaece0.css"/>
+    <link rel="stylesheet" href="/css/meme.min.873d7a3b45cd7b8b23c3e6db490df7744be3beb789eb1b7339c568c93b913000.css"/>
 
     
     
-        <script src="/js/meme.min.88dcafd9937dec27b87f333937e9be42cdffb410dd0317d810f064321461f0ad.js"></script>
+        <script src="/js/meme.min.8e0f2fa693601eb1e65e59b72a205947ff07e9f707fe673ace2110af7f531d0d.js"></script>
 
     
 
@@ -255,7 +255,7 @@
 <p>我们可以直接用断言测试这两种值。很普通，大家都会，没什么好讲的，但是还是要写出来。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -280,30 +280,30 @@
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// 测返回值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testAdd</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">Test</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Test</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertEquals</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="n">t</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">changeName</span><span class="o">(</span><span class="n">User</span> <span class="n">user</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">user</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">&#34;Alice&#34;</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// 测输入值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testChangeName</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">Test</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Test</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertEquals</span><span class="o">(</span><span class="s">&#34;Alice&#34;</span><span class="o">,</span> <span class="n">t</span><span class="o">.</span><span class="na">changeName</span><span class="o">(</span><span class="n">User</span><span class="o">.</span><span class="na">builder</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">&#34;Bob&#34;</span><span class="o">).</span><span class="na">build</span><span class="o">()));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 测返回值
+</span><span class="c1"></span>    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testAdd</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Test</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Test</span><span class="o">();</span>
+        <span class="n">assertEquals</span><span class="o">(</span><span class="n">3</span><span class="o">,</span> <span class="n">t</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">changeName</span><span class="o">(</span><span class="n">User</span> <span class="n">user</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">&#34;Alice&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 测输入值
+</span><span class="c1"></span>    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testChangeName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Test</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Test</span><span class="o">();</span>
+        <span class="n">assertEquals</span><span class="o">(</span><span class="s">&#34;Alice&#34;</span><span class="o">,</span> <span class="n">t</span><span class="o">.</span><span class="na">changeName</span><span class="o">(</span><span class="n">User</span><span class="o">.</span><span class="na">builder</span><span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">&#34;Bob&#34;</span><span class="o">).</span><span class="na">build</span><span class="o">()));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><h2 id="用-mock-技巧获知被测组件对依赖的调用"><a href="#用-mock-技巧获知被测组件对依赖的调用" class="anchor-link">#</a><a href="#contents:用-mock-技巧获知被测组件对依赖的调用" class="headings">用 Mock 技巧获知被测组件对依赖的调用</a></h2>
 <p>返回值和输入值，我们能直接拿到，关键是怎么“看”到模块的依赖的改变，这就是 Mock 机制的意义所在。</p>
@@ -314,7 +314,7 @@
 方法。我们会配合使用 Mock 技巧来编写对删库操作的期望。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -374,65 +374,65 @@
 </span><span class="lnt">58
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">EvilCalculator</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 删库组件依赖。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">private</span> <span class="n">DbDeleter</span> <span class="n">deleter</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// 这是 Java 的类构造方法
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">public</span> <span class="nf">EvilCalculator</span><span class="o">(</span><span class="n">DbDeleter</span> <span class="n">deleter</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">deleter</span> <span class="o">=</span> <span class="n">deleter</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// 坏！
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="o">(</span><span class="s">&#34;删库成功！&#34;</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">deleter</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="s">&#34;生产环境数据库&#34;</span><span class="o">)))</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">// 开瓶香槟庆祝
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="o">}</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// 但仍然伪装自己是正常的 add 方法。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="cm">/**
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * 借助 Junit 框架让 Mockito 库可以自动扫描这个测试类中的注解，
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * 减轻编码工作量
-</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
-</span></span><span class="line"><span class="cl"><span class="nd">@RunWith</span><span class="o">(</span><span class="n">MockitoJUnitRunner</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">getEntitiesByCategoryTests</span> <span class="kd">extends</span> <span class="n">MethodTestsClass</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// 被测模块所需的依赖
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 一般都给 Mock 的实例名前面加上 Mock 前缀。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// @Mock 注解生成一个对应类型的 Mock 实例。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nd">@Mock</span>
-</span></span><span class="line"><span class="cl">    <span class="n">DbDeleter</span> <span class="n">mockDeleter</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// 被测模块
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// @InjectMocks 注解把生成的 Mock 删库实例（通过调用构造方法自动地）注入到坏计算模块中。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 即，让25仔打入坏蛋内部。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nd">@InjectMocks</span>
-</span></span><span class="line"><span class="cl">    <span class="n">EvilCalculator</span> <span class="n">calculator</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">withNormalResponse</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// 设置 Mock 删库实例被调用 doIt()方法时的返回值，让坏计算模块以为删库成功了。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// Mockito 的话，不设这个调用时会返回 null。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">given</span><span class="o">(</span><span class="n">mockDeleter</span><span class="o">.</span><span class="na">doIt</span><span class="o">())</span>
-</span></span><span class="line"><span class="cl">                <span class="o">.</span><span class="na">willReturn</span><span class="o">(</span><span class="s">&#34;删库成功！&#34;</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="c1">// 调用坏计算模块，同时也把返回值测了。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">assertThat</span><span class="o">(</span><span class="n">calculator</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="n">is</span><span class="o">(</span><span class="mi">3</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="c1">// 让我们看看坏计算模块对 Mock 删库模块说了什么
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">ArgumentCaptor</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">captor</span> <span class="o">=</span> <span class="n">ArgumentCaptor</span><span class="o">.</span><span class="na">forClass</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// 捕获（查看）坏计算模块传给 Mock 删库模块的 delete()方法的参数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 顺便期望坏计算模块只调用了一次删库模块的 delete()方法
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">verify</span><span class="o">(</span><span class="n">mockDeleter</span><span class="o">,</span> <span class="n">times</span><span class="o">(</span><span class="mi">1</span><span class="o">)).</span><span class="na">delete</span><span class="o">(</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">capture</span><span class="o">());</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// 早就料到（期望）
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">assertThat</span><span class="o">(</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">getValue</span><span class="o">(),</span> <span class="n">is</span><span class="o">(</span><span class="s">&#34;生产环境数据库&#34;</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java">
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EvilCalculator</span> <span class="o">{</span>
+    <span class="c1">// 删库组件依赖。
+</span><span class="c1"></span>    <span class="kd">private</span> <span class="n">DbDeleter</span> <span class="n">deleter</span><span class="o">;</span>
+
+    <span class="c1">// 这是 Java 的类构造方法
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="nf">EvilCalculator</span><span class="o">(</span><span class="n">DbDeleter</span> <span class="n">deleter</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">deleter</span> <span class="o">=</span> <span class="n">deleter</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// 坏！
+</span><span class="c1"></span>        <span class="k">if</span> <span class="o">(</span><span class="s">&#34;删库成功！&#34;</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">deleter</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="s">&#34;生产环境数据库&#34;</span><span class="o">)))</span> <span class="o">{</span>
+            <span class="c1">// 开瓶香槟庆祝
+</span><span class="c1"></span>        <span class="o">}</span>
+        <span class="c1">// 但仍然伪装自己是正常的 add 方法。
+</span><span class="c1"></span>        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="cm">/**
+</span><span class="cm"> * 借助 Junit 框架让 Mockito 库可以自动扫描这个测试类中的注解，
+</span><span class="cm"> * 减轻编码工作量
+</span><span class="cm"> */</span>
+<span class="nd">@RunWith</span><span class="o">(</span><span class="n">MockitoJUnitRunner</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">getEntitiesByCategoryTests</span> <span class="kd">extends</span> <span class="n">MethodTestsClass</span> <span class="o">{</span>
+
+    <span class="c1">// 被测模块所需的依赖
+</span><span class="c1"></span>    <span class="c1">// 一般都给 Mock 的实例名前面加上 Mock 前缀。
+</span><span class="c1"></span>    <span class="c1">// @Mock 注解生成一个对应类型的 Mock 实例。
+</span><span class="c1"></span>    <span class="nd">@Mock</span>
+    <span class="n">DbDeleter</span> <span class="n">mockDeleter</span><span class="o">;</span>
+
+    <span class="c1">// 被测模块
+</span><span class="c1"></span>    <span class="c1">// @InjectMocks 注解把生成的 Mock 删库实例（通过调用构造方法自动地）注入到坏计算模块中。
+</span><span class="c1"></span>    <span class="c1">// 即，让25仔打入坏蛋内部。
+</span><span class="c1"></span>    <span class="nd">@InjectMocks</span>
+    <span class="n">EvilCalculator</span> <span class="n">calculator</span><span class="o">;</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">withNormalResponse</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// 设置 Mock 删库实例被调用 doIt()方法时的返回值，让坏计算模块以为删库成功了。
+</span><span class="c1"></span>        <span class="c1">// Mockito 的话，不设这个调用时会返回 null。
+</span><span class="c1"></span>        <span class="n">given</span><span class="o">(</span><span class="n">mockDeleter</span><span class="o">.</span><span class="na">doIt</span><span class="o">())</span>
+                <span class="o">.</span><span class="na">willReturn</span><span class="o">(</span><span class="s">&#34;删库成功！&#34;</span><span class="o">);</span>
+
+        <span class="c1">// 调用坏计算模块，同时也把返回值测了。
+</span><span class="c1"></span>        <span class="n">assertThat</span><span class="o">(</span><span class="n">calculator</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">),</span> <span class="n">is</span><span class="o">(</span><span class="n">3</span><span class="o">));</span>
+
+        <span class="c1">// 让我们看看坏计算模块对 Mock 删库模块说了什么
+</span><span class="c1"></span>        <span class="n">ArgumentCaptor</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">captor</span> <span class="o">=</span> <span class="n">ArgumentCaptor</span><span class="o">.</span><span class="na">forClass</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="c1">// 捕获（查看）坏计算模块传给 Mock 删库模块的 delete()方法的参数
+</span><span class="c1"></span>        <span class="c1">// 顺便期望坏计算模块只调用了一次删库模块的 delete()方法
+</span><span class="c1"></span>        <span class="n">verify</span><span class="o">(</span><span class="n">mockDeleter</span><span class="o">,</span> <span class="n">times</span><span class="o">(</span><span class="n">1</span><span class="o">)).</span><span class="na">delete</span><span class="o">(</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">capture</span><span class="o">());</span>
+        <span class="c1">// 早就料到（期望）
+</span><span class="c1"></span>        <span class="n">assertThat</span><span class="o">(</span><span class="n">mapperArgCaptor</span><span class="o">.</span><span class="na">getValue</span><span class="o">(),</span> <span class="n">is</span><span class="o">(</span><span class="s">&#34;生产环境数据库&#34;</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p><img src="/img/postimg/2021/mock-1.svg" alt="一张展示用 Mock 技巧回避删库的图片"></p>
 <h2 id="延伸"><a href="#延伸" class="anchor-link">#</a><a href="#contents:延伸" class="headings">延伸</a></h2>

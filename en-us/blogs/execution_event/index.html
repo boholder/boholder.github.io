@@ -15,7 +15,7 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>DIY notepad&#43;&#43;，MarkDown(Obsidian) User-Defined-Language for Notepad&#43;&#43;2.1(syntax highlight) | BoHolder&#39;s site: crafts, blogs etc</title>
+    <title>Pay Attention to Program-triggering Events and Execution Order | BoHolder&#39;s site: crafts, blogs etc</title>
 
     <link rel="stylesheet" href="/en-us/css/meme.min.6c6664d8975ab3a278ffb399990a6870764f3ed06e14ff81625cdd849b2d6527.css"/>
 
@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="BoHolder" /><meta name="description" content="I found that Markdown is really suitable for me who won&#39;t open the ms word but open a text editor. But my favorite notepad&#43;&#43; does not have the markdown syntax highlighting for dark theme, and I have no search, what should I do? Just make one, and share it!" />
+    <meta name="author" content="BoHolder" /><meta name="description" content="This will help you better understand and write programs" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -49,22 +49,22 @@
     
 
     
-    <link rel="canonical" href="https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/" />
+    <link rel="canonical" href="https://boholder.github.io/en-us/blogs/execution_event/" />
     
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "datePublished": "2019-05-22T00:00:00+00:00",
-        "dateModified": "2023-03-24T21:56:27+08:00",
-        "url": "https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/",
-        "headline": "DIY notepad++，MarkDown(Obsidian) User-Defined-Language for Notepad++2.1(syntax highlight)",
-        "description": "I found that Markdown is really suitable for me who won't open the ms word but open a text editor. But my favorite notepad++ does not have the markdown syntax highlighting for dark theme, and I have no search, what should I do? Just make one, and share it!",
+        "datePublished": "2023-12-08T00:00:00+00:00",
+        "dateModified": "2023-12-08T19:57:11+08:00",
+        "url": "https://boholder.github.io/en-us/blogs/execution_event/",
+        "headline": "Pay Attention to Program-triggering Events and Execution Order",
+        "description": "This will help you better understand and write programs",
         "inLanguage" : "en-US",
         "articleSection": "blogs",
-        "wordCount":  123 ,
-        "image": ["https://boholder.github.io/img/postimg/2019/notepadpp-markdown-show.png"],
+        "wordCount":  839 ,
+        "image": "https://boholder.github.io/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
             "description": "Slow is smooth, smooth is fast.",
@@ -92,22 +92,23 @@
 
     
 
-<meta name="twitter:card" content="summary_large_image" />
-
+<meta name="twitter:card" content="summary" />
 
 
     
 
 
 
-<meta property="og:title" content="DIY notepad&#43;&#43;，MarkDown(Obsidian) User-Defined-Language for Notepad&#43;&#43;2.1(syntax highlight)" />
-<meta property="og:description" content="I found that Markdown is really suitable for me who won&#39;t open the ms word but open a text editor. But my favorite notepad&#43;&#43; does not have the markdown syntax highlighting for dark theme, and I have no search, what should I do? Just make one, and share it!" />
-<meta property="og:url" content="https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/" />
+<meta property="og:title" content="Pay Attention to Program-triggering Events and Execution Order" />
+<meta property="og:description" content="This will help you better understand and write programs" />
+<meta property="og:url" content="https://boholder.github.io/en-us/blogs/execution_event/" />
 <meta property="og:site_name" content="BoHolder&#39;s site: crafts, blogs etc" />
-<meta property="og:locale" content="en-us" /><meta property="og:image" content="https://boholder.github.io/img/postimg/2019/notepadpp-markdown-show.png" />
-<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2019-05-22T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2023-03-24T21:56:27&#43;08:00" />
+<meta property="og:locale" content="en-us" />
+            <meta property="og:locale:alternate" content="zh-cn" />
+        <meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2023-12-08T00:00:00&#43;00:00" />
+    <meta property="article:modified_time" content="2023-12-08T19:57:11&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -166,7 +167,16 @@
 </nav>
 
                 
-                
+                <div id="lang-switcher">
+            <span>English</span>
+            
+                <ul id="langs">
+                    
+                        <li><a rel="alternate" href="/blogs/execution_event/" hreflang="zh-cn" lang="zh-cn">中文</a></li>
+                    
+                </ul>
+            
+        </div>
                 <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
             
             
@@ -177,12 +187,12 @@
 
         <article class="content post h-entry" data-align="justify" data-type="blogs" data-toc-num="true">
 
-            <h1 class="post-title p-name">DIY notepad++，MarkDown(Obsidian) User-Defined-Language for Notepad++2.1(syntax highlight)</h1>
+            <h1 class="post-title p-name">Pay Attention to Program-triggering Events and Execution Order</h1>
 
             
 
             
-                <div class="post-description p-summary">I found that Markdown is really suitable for me who won&rsquo;t open the ms word but open a text editor. But my favorite notepad++ does not have the markdown syntax highlighting for dark theme, and I have no search, what should I do? Just make one, and share it!</div>
+                <div class="post-description p-summary">This will help you better understand and write programs</div>
                 
             
 
@@ -192,11 +202,11 @@
 <div class="post-meta">
     
         
-        <time datetime="2019-05-22T00:00:00&#43;00:00" class="post-meta-item published dt-published"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 40"><path d="M40 8H8c-2.21 0-3.98 1.79-3.98 4L4 36c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V12c0-2.21-1.79-4-4-4zM17 30h-2.4l-5.1-7v7H7V18h2.5l5 7v-7H17v12zm10-9.49h-5v2.24h5v2.51h-5v2.23h5V30h-8V18h8v2.51zM41 28c0 1.1-.9 2-2 2h-8c-1.1 0-2-.9-2-2V18h2.5v9.01h2.25v-7.02h2.5v7.02h2.25V18H41v10z"></path></svg>&nbsp;2019.5.22</time>
+        <time datetime="2023-12-08T00:00:00&#43;00:00" class="post-meta-item published dt-published"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 40"><path d="M40 8H8c-2.21 0-3.98 1.79-3.98 4L4 36c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V12c0-2.21-1.79-4-4-4zM17 30h-2.4l-5.1-7v7H7V18h2.5l5 7v-7H17v12zm10-9.49h-5v2.24h5v2.51h-5v2.23h5V30h-8V18h8v2.51zM41 28c0 1.1-.9 2-2 2h-8c-1.1 0-2-.9-2-2V18h2.5v9.01h2.25v-7.02h2.5v7.02h2.25V18H41v10z"></path></svg>&nbsp;2023.12.8</time>
     
     
         
-        <time datetime="2023-03-24T21:56:27&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2023.3.24</time>
+        <time datetime="2023-12-08T19:57:11&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2023.12.8</time>
     
     
     
@@ -210,11 +220,11 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;123</span>
+        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;839</span>
     
     
         
-        <span class="post-meta-item reading-time"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M19.99 0C8.94 0 0 8.95 0 20s8.94 20 19.99 20C31.04 40 40 31.05 40 20S31.04 0 19.99 0zM20 36c-8.84 0-16-7.16-16-16S11.16 4 20 4s16 7.16 16 16-7.16 16-16 16z"/><path d="M21 10h-3v12l10.49 6.3L30 25.84l-9-5.34z"></path></svg>&nbsp;1&nbsp;min</span>
+        <span class="post-meta-item reading-time"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M19.99 0C8.94 0 0 8.95 0 20s8.94 20 19.99 20C31.04 40 40 31.05 40 20S31.04 0 19.99 0zM20 36c-8.84 0-16-7.16-16-16S11.16 4 20 4s16 7.16 16 16-7.16 16-16 16z"/><path d="M21 10h-3v12l10.49 6.3L30 25.84l-9-5.34z"></path></svg>&nbsp;4&nbsp;mins</span>
     
     
     
@@ -224,29 +234,40 @@
 
             <nav class="contents">
   <h2 id="contents" class="contents-title">Contents</h2><ol class="toc">
-    <li><a id="contents:1-intro" href="#1-intro">1. Intro</a></li>
-    <li><a id="contents:2-function" href="#2-function">2. Function</a></li>
-    <li><a id="contents:3-importusage" href="#3-importusage">3. Import&amp;Usage</a></li>
+    <li><a id="contents:when-the-program-is-triggered" href="#when-the-program-is-triggered">When the program is triggered</a></li>
+    <li><a id="contents:program-triggering-events-and-execution-order" href="#program-triggering-events-and-execution-order">Program-triggering events and execution order</a></li>
+    <li><a id="contents:what-are-the-benefits" href="#what-are-the-benefits">What are the benefits?</a></li>
   </ol>
 </nav><div class="post-body e-content">
-                <h2 id="1-intro"><a href="#1-intro" class="anchor-link">#</a><a href="#contents:1-intro" class="headings">1. Intro</a></h2>
-<p>I started writing markdown documents with Notepad++ and awesome plugin <a href="https://github.com/nea/MarkdownViewerPlusPlus" target="_blank" rel="noopener">MarkdownViewerPlusPlus</a> .</p>
-<p>One of my installed plugin give me a markdown language format:&ldquo;Markdown(default)&rdquo; in  User Defined Languages.
-But it&rsquo;s designed for light backgroud so it&rsquo;s not suitable for me.So I made a dark view format, based on Obsidian-theme and that default markdown format.</p>
-<p><a href="http://docs.notepad-plus-plus.org/index.php/User_Defined_Languages" target="_blank" rel="noopener">Nppp Official doc: User Defined Languages</a></p>
-<p><a href="https://ivan-radic.github.io/udl-documentation/" target="_blank" rel="noopener">UDL documentation site</a></p>
-<h2 id="2-function"><a href="#2-function" class="anchor-link">#</a><a href="#contents:2-function" class="headings">2. Function</a></h2>
-<p>High light Markdown tags.</p>
-<p>&lt;!&mdash;-&gt; http comment, # headline can be fold.</p>
-<h2 id="3-importusage"><a href="#3-importusage" class="anchor-link">#</a><a href="#contents:3-importusage" class="headings">3. Import&amp;Usage</a></h2>
-<ol>
-<li><a href="/share/Markdown-Obsidian-theme-lan-format-for-notepadpp2.1.xml">download format xml file</a></li>
-<li>Open notepad++, select Menubar -&gt; Language -&gt; User Defined Languages</li>
-<li>Click on the top left corner &ldquo;import&rdquo; option, import it.
-If it&rsquo;s succeed, notepad++ will pop up a info window.</li>
-<li>Restart notepad++, open a markdown file(.md) and enjoy writing.</li>
-</ol>
-<p><img src="/img/postimg/2019/notepadpp-markdown-show.png" alt="example image"></p>
+                <p>I originally thought this is a kind of passive skill of the programmer profession, but I realized that many colleagues do not pay much attention to program-triggering events and execution order. In this article, I want to explain why we, as programmers, should pay attention to these things and what benefits it brings.</p>
+<h2 id="when-the-program-is-triggered"><a href="#when-the-program-is-triggered" class="anchor-link">#</a><a href="#contents:when-the-program-is-triggered" class="headings">When the program is triggered</a></h2>
+<p>If you accidentally download a virus from the internet, and it&rsquo;s now saved on your local disk. Is it game over? Not yet. It hasn&rsquo;t been executed. Just delete it (preferably using a file shredder tool). Our computers follow the <a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture" target="_blank" rel="noopener">Von Neumann architecture</a>, in which programs and data are treated equally when they are stored in the hard drive (as well as in memory). The program on the hard drive has not been executed. I guess people working in
+cybersecurity are familiar with this. A successful attack inevitably involves the successful execution of malicious instructions.</p>
+<p>You must have been scared by those <a href="https://www.google.com/search?q=classic+jump+scare+flash+game" target="_blank" rel="noopener">prank Flash games</a> ages ago, right? (No? Well, maybe this example is too old). If you close the game before the jump scare scene is triggered, you&rsquo;re safe, nothing happens. The Flash game is already running in your browser (meaning all the game&rsquo;s code is in memory), but that doesn&rsquo;t mean the jump scare scene (a specific piece of code) will necessarily be triggered by your operations.</p>
+<h2 id="program-triggering-events-and-execution-order"><a href="#program-triggering-events-and-execution-order" class="anchor-link">#</a><a href="#contents:program-triggering-events-and-execution-order" class="headings">Program-triggering events and execution order</a></h2>
+<p>The term &lsquo;program-triggering event&rsquo; is something I coined myself, referring to &ldquo;events that trigger the execution of instructions.&rdquo; It&rsquo;s a simple definition, but I couldn&rsquo;t find a ready-made term that precisely fits this definition. Perhaps in the right context (such as in <a href="(https://en.wikipedia.org/wiki/Event-driven_architecture)">event-driven architecture</a>), the term &ldquo;event&rdquo; alone embodies this meaning, and in the following text, we will use &ldquo;event&rdquo; instead of that term.</p>
+<p>In graphical user interface applications, user actions are events; in servers, external requests are events; in scheduled execution systems, the system serves as the event triggering timed tasks. Different program entities can trigger each other in a chained manner. For example the famous interview question - <a href="https://github.com/alex/what-happens-when" target="_blank" rel="noopener">What happens when you type google.com into your browser&rsquo;s address bar and press Enter?</a> Wow, it&rsquo;s really quite a chain. From this perspective, a program residing in memory is somewhat like nervous system: it is alive (part of the persistently running logic actively listens for events), but it is in a standby state. An event will activate its corresponding processing logic (a portion associated with the event), and after the logic execution, it returns to the standby state.</p>
+<p>Looking more abstractly, each node in a chain of calls is a part of the <a href="https://en.wikipedia.org/wiki/IPO_model" target="_blank" rel="noopener">input–process–output model</a>. Let&rsquo;s take a closer look at the hierarchical execution within the same process, for instance, from the perspective of functions. You must be familiar with the <a href="https://en.wikipedia.org/wiki/Call_stack" target="_blank" rel="noopener">Call Stack</a>, which records the order of function calls, making it clear who called whom. This represents the function-level program execution sequence. The interview question mentioned earlier involves multiple levels of execution sequence.</p>
+<h2 id="what-are-the-benefits"><a href="#what-are-the-benefits" class="anchor-link">#</a><a href="#contents:what-are-the-benefits" class="headings">What are the benefits?</a></h2>
+<p>When programming and designing programs, one should always keep in mind the events and execution order of the program. Here are a few examples:</p>
+<ul>
+<li>
+<p>When given a new requirement, the first thing to think about should not be how to implement the requirement, but what event can trigger this new logic. No matter how fancy the implementation is, without an event to trigger it, it&rsquo;s just a dead code sitting in memory.</p>
+</li>
+<li>
+<p>If you need to add new logic within existing logic, where is the most appropriate place to insert the call to the new logic? Draw a data flow diagram and check the execution order. Call the new logic as soon as the required data (function parameters) are ready.</p>
+</li>
+<li>
+<p>If the program doesn&rsquo;t crash, but some fields in the output result are incorrect, what tool can leverage the information that &ldquo;some output fields have incorrect values&rdquo;? <a href="https://en.wikipedia.org/wiki/Data-flow_analysis" target="_blank" rel="noopener">Data flow analysis</a> can trace backward from the output logic of those error fields until it reaches the point where they are declared; the error lies somewhere in between.</p>
+</li>
+<li>
+<p>If you want to write a cheat for a game, modifying the existing logic and data by altering the data received by the original logic, or canceling the invocation of the logic that should have been called, where is the ideal insertion point? Like a dam, your newly written code must be placed before the logic you want to modify, preferably right before the original logic, to avoid unintended consequences spreading to other parts you don&rsquo;t want to modify. (<a href="https://github.com/SpongePowered/Mixin/wiki/Advanced-Mixin-Usage---Callback-Injectors" target="_blank" rel="noopener">The principle behind some Minecraft mods</a> follows this approach, of course, they don&rsquo;t do anything malicious, well, perhaps.)</p>
+</li>
+</ul>
+<blockquote>
+<p>Advertisement time!</p>
+<p><a href="https://github.com/khanshoaib3/minecraft-access" target="_blank" rel="noopener">minecraft-access</a> is a mod designed to help visually impaired players play Minecraft. Currently, I am the only active developer, and <a href="https://github.com/khanshoaib3/minecraft-access/issues" target="_blank" rel="noopener">there are quite a few new requirements and bugs</a>. If you&rsquo;re interested in understanding the logic behind Minecraft through mod development, this mod is undoubtedly your best choice. If you&rsquo;re intrigued, we look forward to seeing you on the PR page and issue page.</p>
+</blockquote>
 
             </div>
 
@@ -260,7 +281,7 @@ If it&rsquo;s succeed, notepad++ will pop up a info window.</li>
                 
                 
                 
-                <li class="copyright-item link"><span class="copyright-item-text">Link: </span>: <a href="/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/" target="_blank" rel="noopener">https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/</a></li>
+                <li class="copyright-item link"><span class="copyright-item-text">Link: </span>: <a href="/en-us/blogs/execution_event/" target="_blank" rel="noopener">https://boholder.github.io/en-us/blogs/execution_event/</a></li>
             
             <li class="copyright-item license"><span class="copyright-item-text">License: </span>: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
             
@@ -275,9 +296,9 @@ If it&rsquo;s succeed, notepad++ will pop up a info window.</li>
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2023-03-24 21:56:27 CST" style="cursor:help">
+        <span title="Updated @ 2023-12-08 19:57:11 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-03-24</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-03-24</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-12-08</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-12-08</text></g></svg>
         </span></div>
 
 
@@ -312,14 +333,14 @@ If it&rsquo;s succeed, notepad++ will pop up a info window.</li>
             
                 <div class="share-item twitter">
                     
-                    <a href="https://twitter.com/share?url=https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/&amp;text=DIY%20notepad&#43;&#43;%ef%bc%8cMarkDown%28Obsidian%29%20User-Defined-Language%20for%20Notepad&#43;&#43;2.1%28syntax%20highlight%29&amp;hashtags=programming,IDE,&amp;via=%25!s%28%3cnil%3e%29" title="Share on Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                    <a href="https://twitter.com/share?url=https://boholder.github.io/en-us/blogs/execution_event/&amp;text=Pay%20Attention%20to%20Program-triggering%20Events%20and%20Execution%20Order&amp;hashtags=blog,&amp;via=%25!s%28%3cnil%3e%29" title="Share on Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item facebook">
                     
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/&amp;hashtag=%23programming" title="Share on Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/en-us/blogs/execution_event/&amp;hashtag=%23blog" title="Share on Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
                 </div>
             
 
@@ -328,7 +349,7 @@ If it&rsquo;s succeed, notepad++ will pop up a info window.</li>
             
                 <div class="share-item telegram">
                     
-                    <a href="https://t.me/share/url?url=https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/&amp;text=DIY%20notepad&#43;&#43;%ef%bc%8cMarkDown%28Obsidian%29%20User-Defined-Language%20for%20Notepad&#43;&#43;2.1%28syntax%20highlight%29" title="Share on Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                    <a href="https://t.me/share/url?url=https://boholder.github.io/en-us/blogs/execution_event/&amp;text=Pay%20Attention%20to%20Program-triggering%20Events%20and%20Execution%20Order" title="Share on Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
                 </div>
             
 
@@ -350,7 +371,7 @@ If it&rsquo;s succeed, notepad++ will pop up a info window.</li>
     const typeNumber = 0;
     const errorCorrectionLevel = 'L';
     const qr = qrcode(typeNumber, errorCorrectionLevel);
-    qr.addData('https:\/\/boholder.github.io\/en-us\/blogs\/markdown-obsidian-user-defined-language-for-notepadpp2.1\/');
+    qr.addData('https:\/\/boholder.github.io\/en-us\/blogs\/execution_event\/');
     qr.make();
     document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
 </script>
@@ -377,7 +398,11 @@ If it&rsquo;s succeed, notepad++ will pop up a info window.</li>
                     </li>
                 
                     <li class="related-item">
-                        <a href="/en-us/blogs/execution_event/" class="related-link">Pay Attention to Program-triggering Events and Execution Order</a>
+                        <a href="/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/" class="related-link">DIY notepad++，MarkDown(Obsidian) User-Defined-Language for Notepad++2.1(syntax highlight)</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/en-us/blogs/minecraft-tree-house/" class="related-link">Introducing a Minecraft treehouse I built (contains a total of 200MBsize images)</a>
                     </li>
                 
             </ul>
@@ -395,15 +420,7 @@ If it&rsquo;s succeed, notepad++ will pop up a info window.</li>
                 
                 
                     
-                    <a href="/en-us/tags/programming/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>programming</a>
-                
-            
-                
-                
-                
-                
-                    
-                    <a href="/en-us/tags/ide/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>IDE</a>
+                    <a href="/en-us/tags/blog/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>blog</a>
                 
             
         </div>
@@ -414,7 +431,7 @@ If it&rsquo;s succeed, notepad++ will pop up a info window.</li>
         
     <footer class="minimal-footer">
         
-            <div class="post-tag"><a href="/en-us/tags/programming/" rel="tag" class="post-tag-link">#programming</a> <a href="/en-us/tags/ide/" rel="tag" class="post-tag-link">#ide</a></div>
+            <div class="post-tag"><a href="/en-us/tags/blog/" rel="tag" class="post-tag-link">#blog</a></div>
         
         
         
@@ -441,10 +458,10 @@ If it&rsquo;s succeed, notepad++ will pop up a info window.</li>
     
         <ul class="post-nav">
             
-                <li class="post-nav-prev">
-                    <a href="/en-us/about/boholder/" rel="prev">&lt; About my virtual character: Boholder</a>
-                </li>
             
+                <li class="post-nav-next">
+                    <a href="/en-us/blogs/train-a-lora-model-for-an-anime-character/" rel="next">Train a LoRA model for an anime character &gt;</a>
+                </li>
             
         </ul>
     

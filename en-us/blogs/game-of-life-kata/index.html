@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.111.3"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.81.0" /><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,11 +17,11 @@
 
     <title>Process of practicing part of Conway’s Game of Life Kata in Java with IntelliJ IDEA | BoHolder&#39;s site: crafts, blogs etc</title>
 
-    <link rel="stylesheet" href="/en-us/css/meme.min.8463164c1364c4b1e727693b9d728e76cea236cbeb4d1e0a285a5b86ad8a5193.css"/>
+    <link rel="stylesheet" href="/en-us/css/meme.min.6c6664d8975ab3a278ffb399990a6870764f3ed06e14ff81625cdd849b2d6527.css"/>
 
     
     
-        <script src="/en-us/js/meme.min.88dcafd9937dec27b87f333937e9be42cdffb410dd0317d810f064321461f0ad.js"></script>
+        <script src="/en-us/js/meme.min.8e0f2fa693601eb1e65e59b72a205947ff07e9f707fe673ace2110af7f531d0d.js"></script>
 
     
 
@@ -301,7 +301,7 @@ classic <a href="https://codingdojo.org/kata/Bowling/" target="_blank" rel="noop
 <p>New package &ldquo;com.practice.daily.d20210606&rdquo;, new file &ldquo;Checker.java&rdquo;:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -310,14 +310,14 @@ classic <a href="https://codingdojo.org/kata/Bowling/" target="_blank" rel="noop
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nn">com.practice.daily.d20210606</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checkLiveCellNextState</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.practice.daily.d20210606</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checkLiveCellNextState</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Wait, what parameters should we type in? Lets <strong>think based on testing</strong> (you don&rsquo;t need to really write unit test
 first, just think test first will benefit your code):</p>
@@ -337,19 +337,19 @@ Java, this type method is a &ldquo;static method&rdquo;.</p>
 <p>So the method signature becomes:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">checkCellNextState</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">checkCellNextState</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><h3 id="write-test-code"><a href="#write-test-code" class="anchor-link">#</a><a href="#contents:write-test-code" class="headings">Write test code</a></h3>
 <p>Now Let&rsquo;s write unit tests. New file under &ldquo;src/test&rdquo; directory, &ldquo;CheckerTest.java&rdquo;. I installed a plugin
@@ -359,13 +359,13 @@ content (<code>Extend Selection</code>: <code>Shift</code> + <code>W</code> and 
 generate directories and files, it&rsquo;s enough:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span> 
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
+<span class="o">}</span> 
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Now add first test case (using JUnit to test). I had written an <code>Editor &gt; Live Templates</code>, set abbreviation &ldquo;tpv&rdquo; as &quot;
 @Test public void &ldquo;, so I type &ldquo;tpv&rdquo; and enter, add method name, brackets, use <code>Complete Current Statement</code>: <code>Shift</code></p>
@@ -374,19 +374,19 @@ generate directories and files, it&rsquo;s enough:</p>
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span> <span class="c1">// junit annotation
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveLessThanTwoDie</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span> 
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
+    <span class="nd">@Test</span> <span class="c1">// junit annotation
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveLessThanTwoDie</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+<span class="o">}</span> 
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Now&hellip; we have to decide how to construct test data, mainly means that grid. Let&rsquo;s shrink Checker&rsquo;s behavior without &quot;
 simply connected&rdquo; feature, so the ideal gird is 3 by 3 size, call Checker with central position (1,1). Based on SRP
@@ -395,7 +395,7 @@ case (
 it&rsquo;s a Simple Factory):</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -410,20 +410,20 @@ it&rsquo;s a Simple Factory):</p>
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveLessThanTwoDie</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kt">boolean</span><span class="o">[][]</span> <span class="nf">getTestGrid</span><span class="o">(</span><span class="kt">int</span><span class="o">...</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">gird</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">3</span><span class="o">];</span>
-</span></span><span class="line"><span class="cl">        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">3</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">3</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">j</span> <span class="o">-&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">gird</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">j</span><span class="o">]</span> <span class="o">==</span> <span class="mi">1</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">gird</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span> 
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveLessThanTwoDie</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">boolean</span><span class="o">[][]</span> <span class="nf">getTestGrid</span><span class="o">(</span><span class="kt">int</span><span class="o">...</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">gird</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="n">3</span><span class="o">][</span><span class="n">3</span><span class="o">];</span>
+        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">3</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span>
+                <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">3</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">j</span> <span class="o">-&gt;</span>
+                        <span class="n">gird</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">i</span> <span class="o">*</span> <span class="n">3</span> <span class="o">+</span> <span class="n">j</span><span class="o">]</span> <span class="o">==</span> <span class="n">1</span><span class="o">));</span>
+        <span class="k">return</span> <span class="n">gird</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span> 
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Replacing 2-level-repeat for-loop with Java 8 Stream API can reduce keyboard typing. If you use for-loop, you&rsquo;ll find
 that IDEA can&rsquo;t help you a lot on auto-completion. You need to write almost every part of condition, and for-loop
@@ -431,7 +431,7 @@ condition&rsquo;s characters are allover the keyboard. You can get IDEA auto-com
 <p>Now type <code>Previous Method</code>: <code>Alt</code> + <code>up arrow</code>, jump to upper test case method and finish it:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -442,16 +442,16 @@ condition&rsquo;s characters are allover the keyboard. You can get IDEA auto-com
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveLessThanTwoDie</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// only (0,0) is ture, target cell (1,1) is alive.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">gird</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span> <span class="n">state</span> <span class="o">=</span> <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">gird</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">state</span><span class="o">,</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveLessThanTwoDie</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// only (0,0) is ture, target cell (1,1) is alive.
+</span><span class="c1"></span>        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">gird</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">);</span>
+        <span class="kt">boolean</span> <span class="n">state</span> <span class="o">=</span> <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">gird</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">);</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">state</span><span class="o">,</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Type <code>Run</code>: <code>Shift</code> + <code>F10</code>, test failed, test turn over, now it&rsquo;s turn of function code.</p>
 <h3 id="complete-function-code"><a href="#complete-function-code" class="anchor-link">#</a><a href="#contents:complete-function-code" class="headings">Complete function code</a></h3>
@@ -459,7 +459,7 @@ condition&rsquo;s characters are allover the keyboard. You can get IDEA auto-com
 neighbors count of given cell (8 cells), judging it by rules, then return the judgment result, 3 steps. Implement it:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -474,20 +474,20 @@ neighbors count of given cell (8 cells), judging it by rules, then return the ju
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">checkCellNextState</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">m</span> <span class="o">-&gt;</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">n</span> <span class="o">-&gt;</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="o">(</span><span class="n">grid</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">m</span><span class="o">][</span><span class="n">j</span> <span class="o">+</span> <span class="n">n</span><span class="o">])</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">count</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">                <span class="o">}</span>
-</span></span><span class="line"><span class="cl">            <span class="o">});</span>
-</span></span><span class="line"><span class="cl">        <span class="o">});</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">checkCellNextState</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">();</span>
+        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">m</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">n</span> <span class="o">-&gt;</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">grid</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">m</span><span class="o">][</span><span class="n">j</span> <span class="o">+</span> <span class="n">n</span><span class="o">])</span> <span class="o">{</span>
+                    <span class="n">count</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">();</span>
+                <span class="o">}</span>
+            <span class="o">});</span>
+        <span class="o">});</span>
+        <span class="k">return</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">&gt;=</span> <span class="n">2</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>I use Stream API again, but what is
 the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html" target="_blank" rel="noopener">AtomicInteger</a>
@@ -511,15 +511,15 @@ Transform &lsquo;count&rsquo; into final one element array&quot;. You can try th
 <p>Ok&hellip; <code>Select Next Tab</code>: <code>Alt</code> + <code>right arrow</code>, <code>Run</code> the test case:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">java.lang.AssertionError: 
-</span></span><span class="line"><span class="cl">Expected: is &lt;false&gt;
-</span></span><span class="line"><span class="cl">     but: was &lt;true&gt;
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-text" data-lang="text">java.lang.AssertionError: 
+Expected: is &lt;false&gt;
+     but: was &lt;true&gt;
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Uh-oh, debug time. Now back to function code, then <code>Toggle Line Breakpoint</code>: <code>Ctrl</code> + <code>F8</code>
 on &ldquo;line 12: count.getAndIncrement();&rdquo;. Run <code>Debug</code>: <code>Shift</code> + <code>F9</code>.</p>
@@ -542,7 +542,7 @@ index, it&rsquo;s gird[1][1]. Oh, we find the bug, we mistakenly count the targe
 <p>There are only two &ldquo;true&rdquo; value we passed to the Checker, so we can assume that &quot;
 breakpoint line 12&quot;
 won&rsquo;t be hinted again. Let&rsquo;s type <code>Step Over</code>: <code>F8</code> until cursor moves to &ldquo;line 16:
-return count.get() &gt;= 2;&rdquo;: &ldquo;count&rdquo; value is 2, so that&rsquo;s why the Checker returned wrong answer.</p>
+return count.get() &gt;= 2;&quot;: &ldquo;count&rdquo; value is 2, so that&rsquo;s why the Checker returned wrong answer.</p>
 <h3 id="fix-that-mistake"><a href="#fix-that-mistake" class="anchor-link">#</a><a href="#contents:fix-that-mistake" class="headings">Fix that mistake</a></h3>
 <p>We can fix that bug by slightly change line 16 to &ldquo;return count.get() <strong>- 1</strong> &gt;= 2;&rdquo;, type <code>Esc</code>
 return to Editor window from Debug tab then change it. Though we have fixed it on source code, the debugger is still
@@ -561,7 +561,7 @@ the GUI button besides Quick Evaluate button), the top invoke frame is dropped, 
 <p>Add another test case:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -572,21 +572,21 @@ the GUI button besides Quick Evaluate button), the top invoke frame is dropped, 
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveMoreThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveMoreThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Run it with <code>Run</code>, fail as expected. Now change the function code:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -601,20 +601,20 @@ the GUI button besides Quick Evaluate button), the top invoke frame is dropped, 
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">checkCellNextState</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">m</span> <span class="o">-&gt;</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">n</span> <span class="o">-&gt;</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="o">(</span><span class="n">grid</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">m</span><span class="o">][</span><span class="n">j</span> <span class="o">+</span> <span class="n">n</span><span class="o">])</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">count</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">                <span class="o">}</span>
-</span></span><span class="line"><span class="cl">            <span class="o">});</span>
-</span></span><span class="line"><span class="cl">        <span class="o">});</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">3</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">checkCellNextState</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">();</span>
+        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">m</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">n</span> <span class="o">-&gt;</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">grid</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">m</span><span class="o">][</span><span class="n">j</span> <span class="o">+</span> <span class="n">n</span><span class="o">])</span> <span class="o">{</span>
+                    <span class="n">count</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">();</span>
+                <span class="o">}</span>
+            <span class="o">});</span>
+        <span class="o">});</span>
+        <span class="k">return</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">-</span> <span class="n">1</span> <span class="o">==</span> <span class="n">2</span> <span class="o">||</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">-</span> <span class="n">1</span> <span class="o">==</span> <span class="n">3</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Now we want to run both two test cases to check our change not break the first test.</p>
 <p>IDEA can store 5 temporary configurations, which are automatically generated when you run code from one different
@@ -635,7 +635,7 @@ neighbors count code into separate privat method by select lines and push
 <p>Whew, finally, we finished the rule 1, we&rsquo;ve finished about more than half of the total work. Now code looks like:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -688,58 +688,58 @@ neighbors count code into separate privat method by select lines and push
 </span><span class="lnt">51
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//import java.util.concurrent.atomic.AtomicInteger;
-</span></span></span><span class="line"><span class="cl"><span class="c1">//import java.util.stream.IntStream;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">checkCellNextState</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">countLiveCells</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">liveNeighborCount</span> <span class="o">=</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">liveNeighborCount</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">liveNeighborCount</span> <span class="o">==</span> <span class="mi">3</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">countLiveCells</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">m</span> <span class="o">-&gt;</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">n</span> <span class="o">-&gt;</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="o">(</span><span class="n">grid</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">m</span><span class="o">][</span><span class="n">j</span> <span class="o">+</span> <span class="n">n</span><span class="o">])</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">count</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">                <span class="o">}</span>
-</span></span><span class="line"><span class="cl">            <span class="o">});</span>
-</span></span><span class="line"><span class="cl">        <span class="o">});</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">//------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1">//import org.hamcrest.Matchers;
-</span></span></span><span class="line"><span class="cl"><span class="c1">//import org.junit.Test;
-</span></span></span><span class="line"><span class="cl"><span class="c1">//import java.util.stream.IntStream;
-</span></span></span><span class="line"><span class="cl"><span class="c1">//import static org.hamcrest.MatcherAssert.assertThat;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveLessThanTwoDie</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">gird</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span> <span class="n">state</span> <span class="o">=</span> <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">gird</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">state</span><span class="o">,</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveMoreThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kt">boolean</span><span class="o">[][]</span> <span class="nf">getTestGrid</span><span class="o">(</span><span class="kt">int</span><span class="o">...</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">gird</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">3</span><span class="o">];</span>
-</span></span><span class="line"><span class="cl">        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">3</span><span class="o">).</span><span class="na">forEachOrdered</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">3</span><span class="o">).</span><span class="na">forEachOrdered</span><span class="o">(</span><span class="n">j</span> <span class="o">-&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">gird</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">j</span><span class="o">]</span> <span class="o">==</span> <span class="mi">1</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">gird</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span> 
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//import java.util.concurrent.atomic.AtomicInteger;
+</span><span class="c1">//import java.util.stream.IntStream;
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">checkCellNextState</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">countLiveCells</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">liveNeighborCount</span> <span class="o">=</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">-</span> <span class="n">1</span><span class="o">;</span>
+        <span class="k">return</span> <span class="n">liveNeighborCount</span> <span class="o">==</span> <span class="n">2</span> <span class="o">||</span> <span class="n">liveNeighborCount</span> <span class="o">==</span> <span class="n">3</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">countLiveCells</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">();</span>
+        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">m</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">n</span> <span class="o">-&gt;</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">grid</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">m</span><span class="o">][</span><span class="n">j</span> <span class="o">+</span> <span class="n">n</span><span class="o">])</span> <span class="o">{</span>
+                    <span class="n">count</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">();</span>
+                <span class="o">}</span>
+            <span class="o">});</span>
+        <span class="o">});</span>
+        <span class="k">return</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//------------------------------
+</span><span class="c1">//import org.hamcrest.Matchers;
+</span><span class="c1">//import org.junit.Test;
+</span><span class="c1">//import java.util.stream.IntStream;
+</span><span class="c1">//import static org.hamcrest.MatcherAssert.assertThat;
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveLessThanTwoDie</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">gird</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">);</span>
+        <span class="kt">boolean</span> <span class="n">state</span> <span class="o">=</span> <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">gird</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">);</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">state</span><span class="o">,</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveMoreThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">boolean</span><span class="o">[][]</span> <span class="nf">getTestGrid</span><span class="o">(</span><span class="kt">int</span><span class="o">...</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">gird</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="n">3</span><span class="o">][</span><span class="n">3</span><span class="o">];</span>
+        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">3</span><span class="o">).</span><span class="na">forEachOrdered</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span>
+                <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">3</span><span class="o">).</span><span class="na">forEachOrdered</span><span class="o">(</span><span class="n">j</span> <span class="o">-&gt;</span>
+                        <span class="n">gird</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">i</span> <span class="o">*</span> <span class="n">3</span> <span class="o">+</span> <span class="n">j</span><span class="o">]</span> <span class="o">==</span> <span class="n">1</span><span class="o">));</span>
+        <span class="k">return</span> <span class="n">gird</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span> 
+</code></pre></td></tr></table></div>
 </div>
 </div><h2 id="make-the-234-rules-pass-test"><a href="#make-the-234-rules-pass-test" class="anchor-link">#</a><a href="#contents:make-the-234-rules-pass-test" class="headings">Make the 2,3,4 rules pass test</a></h2>
 <p>Let&rsquo;s move to the second rule:</p>
@@ -748,7 +748,7 @@ neighbors count code into separate privat method by select lines and push
 </ol>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -759,16 +759,16 @@ neighbors count code into separate privat method by select lines and push
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deadThreeLive</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deadThreeLive</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Run test, oh, test pass, don&rsquo;t worry about test not fail, it&rsquo;s ok for now. Next rule:</p>
 <ol start="3">
@@ -778,7 +778,7 @@ neighbors count code into separate privat method by select lines and push
 write them down as new tests to make the test suit stay completed:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -797,24 +797,24 @@ write them down as new tests to make the test suit stay completed:</p>
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveTwoLive</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveThreeLive</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveTwoLive</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveThreeLive</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>There&rsquo;s no doubt that these tests can pass. Work on the rule 4 now:</p>
 <ol start="4">
@@ -822,7 +822,7 @@ write them down as new tests to make the test suit stay completed:</p>
 </ol>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -841,31 +841,31 @@ write them down as new tests to make the test suit stay completed:</p>
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deadLessThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deadMoreThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deadLessThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deadMoreThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>&ldquo;deadTwoDie()&rdquo; passes and &ldquo;deadMoreThanThreeDie()&rdquo; fail&hellip;.. Time to change function code. We can easily
 figure out the difference between count live cell&rsquo;s live neighbors and count dead cell&rsquo;s: dead
 cell don&rsquo;t need to minus itself after count all live cells. So we can change code to this:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -879,19 +879,19 @@ cell don&rsquo;t need to minus itself after count all live cells. So we can chan
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">checkCellNextState</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="n">countLiveCells</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span> <span class="n">targetIsLive</span> <span class="o">=</span> <span class="n">grid</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">];</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">(</span><span class="n">targetIsLive</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">liveNeighborCount</span> <span class="o">=</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="c1">// move this line
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">return</span> <span class="n">liveNeighborCount</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">liveNeighborCount</span> <span class="o">==</span> <span class="mi">3</span><span class="o">;</span> <span class="c1">// move this line too
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">==</span> <span class="mi">3</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">checkCellNextState</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="n">countLiveCells</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">);</span>
+        <span class="kt">boolean</span> <span class="n">targetIsLive</span> <span class="o">=</span> <span class="n">grid</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">];</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">targetIsLive</span><span class="o">)</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">liveNeighborCount</span> <span class="o">=</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">-</span> <span class="n">1</span><span class="o">;</span> <span class="c1">// move this line
+</span><span class="c1"></span>            <span class="k">return</span> <span class="n">liveNeighborCount</span> <span class="o">==</span> <span class="n">2</span> <span class="o">||</span> <span class="n">liveNeighborCount</span> <span class="o">==</span> <span class="n">3</span><span class="o">;</span> <span class="c1">// move this line too
+</span><span class="c1"></span>        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">==</span> <span class="n">3</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Yep, all 7 test cases pass after change. By the way, you can move two exist lines by move cursor on first line, keep
 pushing <code>Shift</code> and type one <code>down arrow</code> to select two lines, and use
@@ -913,7 +913,7 @@ to 4 or more live neighbors.</p>
 to wrong judgment. The corresponding test code is:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -933,25 +933,25 @@ to wrong judgment. The corresponding test code is:</p>
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyConnectedThree</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simpleConnectedTwo</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyConnectedThree</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">);</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simpleConnectedTwo</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">);</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>None of them pass, how to make them pass? This feature is sort of like circular array, we want to
 know how to calculate real index from virtual index. I&rsquo;d prefer to scribble a draft in my notebook
@@ -960,7 +960,7 @@ assume that it&rsquo;s coordinate is (i,j).</p>
 <p>&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -976,26 +976,26 @@ assume that it&rsquo;s coordinate is (i,j).</p>
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">countLiveCells</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">rowSize</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="na">length</span><span class="o">,</span> <span class="n">colSize</span> <span class="o">=</span> <span class="n">grid</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">length</span><span class="o">;</span> <span class="c1">// get width and length of grid
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">m</span> <span class="o">-&gt;</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">n</span> <span class="o">-&gt;</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="o">(</span><span class="n">grid</span><span class="o">[(</span><span class="n">i</span> <span class="o">+</span> <span class="n">m</span> <span class="o">+</span> <span class="n">rowSize</span><span class="o">)</span> <span class="o">%</span> <span class="n">rowSize</span><span class="o">][(</span><span class="n">j</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="n">colSize</span><span class="o">)</span> <span class="o">%</span> <span class="n">colSize</span><span class="o">])</span> <span class="o">{</span> <span class="c1">// calculate remainders
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="n">count</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">                <span class="o">}</span>
-</span></span><span class="line"><span class="cl">            <span class="o">});</span>
-</span></span><span class="line"><span class="cl">        <span class="o">});</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">countLiveCells</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">rowSize</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="na">length</span><span class="o">,</span> <span class="n">colSize</span> <span class="o">=</span> <span class="n">grid</span><span class="o">[</span><span class="n">0</span><span class="o">].</span><span class="na">length</span><span class="o">;</span> <span class="c1">// get width and length of grid
+</span><span class="c1"></span>        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">();</span>
+        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">m</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">n</span> <span class="o">-&gt;</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">grid</span><span class="o">[(</span><span class="n">i</span> <span class="o">+</span> <span class="n">m</span> <span class="o">+</span> <span class="n">rowSize</span><span class="o">)</span> <span class="o">%</span> <span class="n">rowSize</span><span class="o">][(</span><span class="n">j</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="n">colSize</span><span class="o">)</span> <span class="o">%</span> <span class="n">colSize</span><span class="o">])</span> <span class="o">{</span> <span class="c1">// calculate remainders
+</span><span class="c1"></span>                    <span class="n">count</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">();</span>
+                <span class="o">}</span>
+            <span class="o">});</span>
+        <span class="o">});</span>
+        <span class="k">return</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>Tests pass, we finished the last requirement. After a little more refactors, now the whole code is:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+<pre class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -1121,131 +1121,131 @@ assume that it&rsquo;s coordinate is (i,j).</p>
 </span><span class="lnt">124
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//import java.util.concurrent.atomic.AtomicInteger;
-</span></span></span><span class="line"><span class="cl"><span class="c1">//import java.util.stream.IntStream;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">checkCellNextState</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">countLiveCells</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span> <span class="n">targetIsLive</span> <span class="o">=</span> <span class="n">grid</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">];</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">(</span><span class="n">targetIsLive</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">judgeLiveCell</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">judgeDeadCell</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">judgeLiveCell</span><span class="o">(</span><span class="kt">int</span> <span class="n">count</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">liveNeighborCount</span> <span class="o">=</span> <span class="n">count</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">liveNeighborCount</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">liveNeighborCount</span> <span class="o">==</span> <span class="mi">3</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">judgeDeadCell</span><span class="o">(</span><span class="kt">int</span> <span class="n">count</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">3</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">countLiveCells</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">rowSize</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="na">length</span><span class="o">,</span> <span class="n">colSize</span> <span class="o">=</span> <span class="n">grid</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">length</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">m</span> <span class="o">-&gt;</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">n</span> <span class="o">-&gt;</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="o">(</span><span class="n">grid</span><span class="o">[(</span><span class="n">i</span> <span class="o">+</span> <span class="n">m</span> <span class="o">+</span> <span class="n">rowSize</span><span class="o">)</span> <span class="o">%</span> <span class="n">rowSize</span><span class="o">][(</span><span class="n">j</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="n">colSize</span><span class="o">)</span> <span class="o">%</span> <span class="n">colSize</span><span class="o">])</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">count</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">                <span class="o">}</span>
-</span></span><span class="line"><span class="cl">            <span class="o">});</span>
-</span></span><span class="line"><span class="cl">        <span class="o">});</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">//import org.hamcrest.Matchers;
-</span></span></span><span class="line"><span class="cl"><span class="c1">//import org.junit.Test;
-</span></span></span><span class="line"><span class="cl"><span class="c1">//import java.util.stream.IntStream;
-</span></span></span><span class="line"><span class="cl"><span class="c1">//import static org.hamcrest.MatcherAssert.assertThat;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveLessThanTwoDie</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">gird</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span> <span class="n">state</span> <span class="o">=</span> <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">gird</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">state</span><span class="o">,</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveMoreThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deadThreeLive</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveTwoLive</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveThreeLive</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deadLessThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deadMoreThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),</span>
-</span></span><span class="line"><span class="cl">                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyConnectedThree</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nd">@Test</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simpleConnectedTwo</span><span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kt">boolean</span><span class="o">[][]</span> <span class="nf">getTestGrid</span><span class="o">(</span><span class="kt">int</span><span class="o">...</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">gird</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">3</span><span class="o">];</span>
-</span></span><span class="line"><span class="cl">        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">3</span><span class="o">).</span><span class="na">forEachOrdered</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">3</span><span class="o">).</span><span class="na">forEachOrdered</span><span class="o">(</span><span class="n">j</span> <span class="o">-&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">gird</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">j</span><span class="o">]</span> <span class="o">==</span> <span class="mi">1</span><span class="o">));</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">gird</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//import java.util.concurrent.atomic.AtomicInteger;
+</span><span class="c1">//import java.util.stream.IntStream;
+</span><span class="c1"></span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">checkCellNextState</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">countLiveCells</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">);</span>
+        <span class="kt">boolean</span> <span class="n">targetIsLive</span> <span class="o">=</span> <span class="n">grid</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">];</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">targetIsLive</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">judgeLiveCell</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">judgeDeadCell</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">judgeLiveCell</span><span class="o">(</span><span class="kt">int</span> <span class="n">count</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">liveNeighborCount</span> <span class="o">=</span> <span class="n">count</span> <span class="o">-</span> <span class="n">1</span><span class="o">;</span>
+        <span class="k">return</span> <span class="n">liveNeighborCount</span> <span class="o">==</span> <span class="n">2</span> <span class="o">||</span> <span class="n">liveNeighborCount</span> <span class="o">==</span> <span class="n">3</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">judgeDeadCell</span><span class="o">(</span><span class="kt">int</span> <span class="n">count</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">count</span> <span class="o">==</span> <span class="n">3</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">countLiveCells</span><span class="o">(</span><span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">rowSize</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="na">length</span><span class="o">,</span> <span class="n">colSize</span> <span class="o">=</span> <span class="n">grid</span><span class="o">[</span><span class="n">0</span><span class="o">].</span><span class="na">length</span><span class="o">;</span>
+        <span class="n">AtomicInteger</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">();</span>
+        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">m</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(-</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">n</span> <span class="o">-&gt;</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">grid</span><span class="o">[(</span><span class="n">i</span> <span class="o">+</span> <span class="n">m</span> <span class="o">+</span> <span class="n">rowSize</span><span class="o">)</span> <span class="o">%</span> <span class="n">rowSize</span><span class="o">][(</span><span class="n">j</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="n">colSize</span><span class="o">)</span> <span class="o">%</span> <span class="n">colSize</span><span class="o">])</span> <span class="o">{</span>
+                    <span class="n">count</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">();</span>
+                <span class="o">}</span>
+            <span class="o">});</span>
+        <span class="o">});</span>
+        <span class="k">return</span> <span class="n">count</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//import org.hamcrest.Matchers;
+</span><span class="c1">//import org.junit.Test;
+</span><span class="c1">//import java.util.stream.IntStream;
+</span><span class="c1">//import static org.hamcrest.MatcherAssert.assertThat;
+</span><span class="c1"></span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckerTest</span> <span class="o">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveLessThanTwoDie</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">gird</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">);</span>
+        <span class="kt">boolean</span> <span class="n">state</span> <span class="o">=</span> <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">gird</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">);</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">state</span><span class="o">,</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveMoreThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deadThreeLive</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveTwoLive</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">liveThreeLive</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deadLessThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deadMoreThanThreeDie</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertThat</span><span class="o">(</span>
+                <span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span>
+                        <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">1</span><span class="o">,</span> <span class="n">1</span><span class="o">),</span>
+                <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">false</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyConnectedThree</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">);</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simpleConnectedTwo</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">getTestGrid</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">1</span><span class="o">);</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">Checker</span><span class="o">.</span><span class="na">checkCellNextState</span><span class="o">(</span><span class="n">grid</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">2</span><span class="o">),</span> <span class="n">Matchers</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">boolean</span><span class="o">[][]</span> <span class="nf">getTestGrid</span><span class="o">(</span><span class="kt">int</span><span class="o">...</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">boolean</span><span class="o">[][]</span> <span class="n">gird</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[</span><span class="n">3</span><span class="o">][</span><span class="n">3</span><span class="o">];</span>
+        <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">3</span><span class="o">).</span><span class="na">forEachOrdered</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span>
+                <span class="n">IntStream</span><span class="o">.</span><span class="na">range</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">3</span><span class="o">).</span><span class="na">forEachOrdered</span><span class="o">(</span><span class="n">j</span> <span class="o">-&gt;</span>
+                        <span class="n">gird</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">i</span> <span class="o">*</span> <span class="n">3</span> <span class="o">+</span> <span class="n">j</span><span class="o">]</span> <span class="o">==</span> <span class="n">1</span><span class="o">));</span>
+        <span class="k">return</span> <span class="n">gird</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>I think that&rsquo;s about as &ldquo;clean&rdquo; a code as I can do.</p>
 <h2 id="whats-more"><a href="#whats-more" class="anchor-link">#</a><a href="#contents:whats-more" class="headings">What&rsquo;s more</a></h2>
@@ -1378,15 +1378,15 @@ to help you, and it was integrated right in the IDEA afterwards.</p>
             <ul class="related-list">
                 
                     <li class="related-item">
+                        <a href="/en-us/blogs/execution_event/" class="related-link">Pay Attention to Program-triggering Events and Execution Order</a>
+                    </li>
+                
+                    <li class="related-item">
                         <a href="/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/" class="related-link">DIY notepad++，MarkDown(Obsidian) User-Defined-Language for Notepad++2.1(syntax highlight)</a>
                     </li>
                 
                     <li class="related-item">
                         <a href="/en-us/blogs/minecraft-tree-house/" class="related-link">Introducing a Minecraft treehouse I built (contains a total of 200MBsize images)</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/en-us/blogs/individual-data-backup-summary/" class="related-link">Tips of the electronic data backup system applicable to individuals</a>
                     </li>
                 
             </ul>

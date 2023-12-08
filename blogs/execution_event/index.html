@@ -15,7 +15,7 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>大衍筮法脚本 | BoHolder的网站：博客，小玩意及其他</title>
+    <title>留意程序触发事件和执行时序 | BoHolder的网站：博客，小玩意及其他</title>
 
     <link rel="stylesheet" href="/css/meme.min.873d7a3b45cd7b8b23c3e6db490df7744be3beb789eb1b7339c568c93b913000.css"/>
 
@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="BoHolder" /><meta name="description" content="《易经》里用50根蓍草做数占的方法" />
+    <meta name="author" content="BoHolder" /><meta name="description" content="这会帮你更好地了解和编写程序" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -49,21 +49,21 @@
     
 
     
-    <link rel="canonical" href="https://boholder.github.io/blogs/yarrow-divination/" />
+    <link rel="canonical" href="https://boholder.github.io/blogs/execution_event/" />
     
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "datePublished": "2022-05-17T00:00:00+00:00",
-        "dateModified": "2023-08-08T19:12:01+08:00",
-        "url": "https://boholder.github.io/blogs/yarrow-divination/",
-        "headline": "大衍筮法脚本",
-        "description": "《易经》里用50根蓍草做数占的方法",
+        "datePublished": "2023-12-08T00:00:00+00:00",
+        "dateModified": "2023-12-08T19:33:39+08:00",
+        "url": "https://boholder.github.io/blogs/execution_event/",
+        "headline": "留意程序触发事件和执行时序",
+        "description": "这会帮你更好地了解和编写程序",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
-        "wordCount":  2216 ,
+        "wordCount":  1526 ,
         "image": "https://boholder.github.io/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
@@ -99,14 +99,16 @@
 
 
 
-<meta property="og:title" content="大衍筮法脚本" />
-<meta property="og:description" content="《易经》里用50根蓍草做数占的方法" />
-<meta property="og:url" content="https://boholder.github.io/blogs/yarrow-divination/" />
+<meta property="og:title" content="留意程序触发事件和执行时序" />
+<meta property="og:description" content="这会帮你更好地了解和编写程序" />
+<meta property="og:url" content="https://boholder.github.io/blogs/execution_event/" />
 <meta property="og:site_name" content="BoHolder的网站：博客，小玩意及其他" />
-<meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
+<meta property="og:locale" content="zh-cn" />
+            <meta property="og:locale:alternate" content="en-us" />
+        <meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-05-17T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2023-08-08T19:12:01&#43;08:00" />
+    <meta property="article:published_time" content="2023-12-08T00:00:00&#43;00:00" />
+    <meta property="article:modified_time" content="2023-12-08T19:33:39&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -165,7 +167,16 @@
 </nav>
 
                 
-                
+                <div id="lang-switcher">
+            <span>中文</span>
+            
+                <ul id="langs">
+                    
+                        <li><a rel="alternate" href="/en-us/blogs/execution_event/" hreflang="en-us" lang="en-us">English</a></li>
+                    
+                </ul>
+            
+        </div>
                 <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
             
             
@@ -176,12 +187,12 @@
 
         <article class="content post h-entry" data-align="justify" data-type="blogs" data-toc-num="true">
 
-            <h1 class="post-title p-name">大衍筮法脚本</h1>
+            <h1 class="post-title p-name">留意程序触发事件和执行时序</h1>
 
             
 
             
-                <div class="post-description p-summary">《易经》里用50根蓍草做数占的方法</div>
+                <div class="post-description p-summary">这会帮你更好地了解和编写程序</div>
                 
             
 
@@ -191,11 +202,11 @@
 <div class="post-meta">
     
         
-        <time datetime="2022-05-17T00:00:00&#43;00:00" class="post-meta-item published dt-published"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 40"><path d="M40 8H8c-2.21 0-3.98 1.79-3.98 4L4 36c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V12c0-2.21-1.79-4-4-4zM17 30h-2.4l-5.1-7v7H7V18h2.5l5 7v-7H17v12zm10-9.49h-5v2.24h5v2.51h-5v2.23h5V30h-8V18h8v2.51zM41 28c0 1.1-.9 2-2 2h-8c-1.1 0-2-.9-2-2V18h2.5v9.01h2.25v-7.02h2.5v7.02h2.25V18H41v10z"></path></svg>&nbsp;2022.5.17</time>
+        <time datetime="2023-12-08T00:00:00&#43;00:00" class="post-meta-item published dt-published"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 40"><path d="M40 8H8c-2.21 0-3.98 1.79-3.98 4L4 36c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V12c0-2.21-1.79-4-4-4zM17 30h-2.4l-5.1-7v7H7V18h2.5l5 7v-7H17v12zm10-9.49h-5v2.24h5v2.51h-5v2.23h5V30h-8V18h8v2.51zM41 28c0 1.1-.9 2-2 2h-8c-1.1 0-2-.9-2-2V18h2.5v9.01h2.25v-7.02h2.5v7.02h2.25V18H41v10z"></path></svg>&nbsp;2023.12.8</time>
     
     
         
-        <time datetime="2023-08-08T19:12:01&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2023.8.8</time>
+        <time datetime="2023-12-08T19:33:39&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2023.12.8</time>
     
     
     
@@ -209,11 +220,11 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;2216</span>
+        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;1526</span>
     
     
         
-        <span class="post-meta-item reading-time"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M19.99 0C8.94 0 0 8.95 0 20s8.94 20 19.99 20C31.04 40 40 31.05 40 20S31.04 0 19.99 0zM20 36c-8.84 0-16-7.16-16-16S11.16 4 20 4s16 7.16 16 16-7.16 16-16 16z"/><path d="M21 10h-3v12l10.49 6.3L30 25.84l-9-5.34z"></path></svg>&nbsp;5&nbsp;分钟</span>
+        <span class="post-meta-item reading-time"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M19.99 0C8.94 0 0 8.95 0 20s8.94 20 19.99 20C31.04 40 40 31.05 40 20S31.04 0 19.99 0zM20 36c-8.84 0-16-7.16-16-16S11.16 4 20 4s16 7.16 16 16-7.16 16-16 16z"/><path d="M21 10h-3v12l10.49 6.3L30 25.84l-9-5.34z"></path></svg>&nbsp;4&nbsp;分钟</span>
     
     
     
@@ -223,66 +234,31 @@
 
             <nav class="contents">
   <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
-    <li><a id="contents:前言" href="#前言">前言</a></li>
-    <li><a id="contents:相关知识" href="#相关知识">相关知识</a>
-      <ol>
-        <li><a id="contents:大衍之数" href="#大衍之数">大衍之数</a></li>
-      </ol>
-    </li>
-    <li><a id="contents:大衍筮法" href="#大衍筮法">大衍筮法</a></li>
-    <li><a id="contents:大衍筮法的结果概率" href="#大衍筮法的结果概率">大衍筮法的结果概率</a></li>
-    <li><a id="contents:程序" href="#程序">程序</a></li>
+    <li><a id="contents:程序何时被触发" href="#程序何时被触发">程序何时被触发</a></li>
+    <li><a id="contents:程序触发事件和执行时序" href="#程序触发事件和执行时序">程序触发事件和执行时序</a></li>
+    <li><a id="contents:好处都有啥" href="#好处都有啥">好处都有啥</a></li>
   </ol>
 </nav><div class="post-body e-content">
-                <h2 id="前言"><a href="#前言" class="anchor-link">#</a><a href="#contents:前言" class="headings">前言</a></h2>
-<p>读音：大衍（yan3）筮（shi4）法。</p>
-<p>好奇，多搜点知识总结一下，再写个脚本模拟。</p>
-<h2 id="相关知识"><a href="#相关知识" class="anchor-link">#</a><a href="#contents:相关知识" class="headings">相关知识</a></h2>
-<h3 id="大衍之数"><a href="#大衍之数" class="anchor-link">#</a><a href="#contents:大衍之数" class="headings">大衍之数</a></h3>
-<p>搜到<a href="https://www.zhihu.com/question/33646380" target="_blank" rel="noopener">这篇知乎文章里的答案</a>讲了大衍之数的各种来历。</p>
-<p>“大衍之数”定义在《易传·系辞》（儒家整理记录的易经思想书，易经分好多流派，类似武术流派）里记录大衍筮法的原话开头，这是完整方法的原话：</p>
+                <p>我本来以为这是程序员职业的某种被动特性，但我意识到很多同行对程序触发事件和执行时序并不太关注。在这篇文章中，我想解释为什么我们作为程序员要关注这些东西，这样做有什么好处。</p>
+<h2 id="程序何时被触发"><a href="#程序何时被触发" class="anchor-link">#</a><a href="#contents:程序何时被触发" class="headings">程序何时被触发</a></h2>
+<p>假如你不慎从网络上下载下来一个病毒，它现在已经被保存到你的本地磁盘上了。现在事情完蛋了吗？还没有，它还没被执行呢，把它删了就行（最好用那种文件粉碎工具）。我们的电脑是<a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture" target="_blank" rel="noopener">冯·诺伊曼结构</a>，在硬盘（与内存）中，程序与数据被同等看待并存储，存在于硬盘上的程序还没有被执行。我猜做网络安全的朋友们对这个比较熟悉，一次成功的攻击中必然包含恶意载荷的成功执行。</p>
+<p>你一定被那种<a href="https://www.google.com/search?q=classic+jump+scare+flash+game" target="_blank" rel="noopener">整蛊Flash游戏</a>吓到过吧（没有？好吧，可能这个例子太老了）。如果你在jump scare场景触发前关闭游戏，你就安全了，无事发生。Flash游戏已经运行在你的浏览器里了（即，这个游戏的所有代码已经存在于内存中），但这并不代表jump scare场景（一段特定的代码）一定会被你的操作触发。</p>
+<h2 id="程序触发事件和执行时序"><a href="#程序触发事件和执行时序" class="anchor-link">#</a><a href="#contents:程序触发事件和执行时序" class="headings">程序触发事件和执行时序</a></h2>
+<p>“程序触发事件”这个名词是我自己胡诌的，指“触发一段程序执行的事件”，很简单的定义，但我没找到现成的符合定义的术语。也许在合适的语境下（比如<a href="https://en.wikipedia.org/wiki/Event-driven_architecture" target="_blank" rel="noopener">“事件驱动框架”</a>），单“事件”一词便体现了这个含义，我们下文也用“事件”代替这个词。</p>
+<p>在图形用户界面应用中，用户操作是事件；在服务器中，外部请求是事件；在计划执行系统中，系统作为触发定时任务的事件。不同的程序主体可以链式地触发彼此，比如著名的面试问题——<a href="https://github.com/alex/what-happens-when" target="_blank" rel="noopener">“当你在浏览器的地址框中输入 google.com，然后按回车键时会发生什么？”</a>，哇，真的是好大一串。我觉得从这个角度看，待在内存里的程序有点像神经系统：它是活的（一部分持久运行的逻辑在主动地时刻监听着事件），但是处于一种待机状态。事件将激活它的（与事件所对应的一部分）处理逻辑，待逻辑执行完，它便又回到待机状态。</p>
+<p>抽象一点看，链式调用中的每个节点都是一个 <a href="https://en.wikipedia.org/wiki/IPO_model" target="_blank" rel="noopener">input–process–output 模型</a>。让我们以一个更细微的层级观察同一个进程中的链式调用，比如以函数的角度。你一定对<a href="https://en.wikipedia.org/wiki/Call_stack" target="_blank" rel="noopener">调用堆栈</a>不陌生，它记录了函数间相互调用的顺序，谁调用谁一清二楚，这就是函数层次的程序执行时序。上文的面试问题中包含了多个层级的执行时序。</p>
+<h2 id="好处都有啥"><a href="#好处都有啥" class="anchor-link">#</a><a href="#contents:好处都有啥" class="headings">好处都有啥</a></h2>
+<p>在编程和设计程序时，应该<strong>时刻惦记着</strong>程序的事件和执行时序，举几个例子：</p>
+<ul>
+<li>接到新需求，第一个想到的事不应该是如何实现需求，而是什么事件能触发这段新的逻辑。再花里胡哨的实现，没有事件触发，还是呆坐在内存里的一段死代码。</li>
+<li>你需要在已有逻辑中加入一段新逻辑，在哪里插入对新逻辑的调用最合适？画一下数据流图和执行时序，在新逻辑所需要的数据（函数参数）凑齐后的第一时间调用新逻辑。</li>
+<li>程序没有崩溃，但是输出结果中的一些字段的值不正确，你需要debug发现错误，什么工具能够利用“一些输出字段的值不正确”这个信息？<a href="https://en.wikipedia.org/wiki/Data-flow_analysis" target="_blank" rel="noopener">数据流分析</a>，从对那些错误字段的输出逻辑向上朔源，直到回到声明它们的时候，错误就在这之间。</li>
+<li>你想为一个游戏编写修改原有逻辑和数据的外挂，修改原有逻辑收到的数据，或取消调用本应调用的逻辑，哪里是理想的插入点？就像大坝一样，你新写的代码必须处于你想修改的逻辑之前，最好是正正好紧挨在原有逻辑之前，避免修改的副作用扩散到其他你不想修改的地方。（一些Minecraft mod的原理便是<a href="https://github.com/SpongePowered/Mixin/wiki/Advanced-Mixin-Usage---Callback-Injectors" target="_blank" rel="noopener">这种思路</a>，当然，它们不会做坏事。）</li>
+</ul>
 <blockquote>
-<p>大衍之數五十，其用四十有九。分而爲二以象兩，掛一以象三，揲之以四以象四時，歸奇於扐以象閏。五歲再閏，故再扐而後卦。乾之策二百一十有六，坤之策百四十有四，凡三百有六十，當期之日。二篇之策，萬有一千五百二十，當萬物之數也。是故四營而成易，十有八變而成卦，八卦而小成，引而伸之，觸類而長之，天下之能事畢矣。（PS：古文没标点每间隔，这些标点是现代人加的）</p>
+<p>广告环节！</p>
+<p><a href="https://github.com/khanshoaib3/minecraft-access" target="_blank" rel="noopener">minecraft-access</a>是一个帮助视障者游玩Minecraft的mod。目前它的活跃开发者只有我一个人，而<a href="https://github.com/khanshoaib3/minecraft-access/issues" target="_blank" rel="noopener">新的需求和bug</a>又是那么多。如果你想通过开发mod来了解Minecraft运行逻辑的话，这mod绝对是你最棒的选择。如果你感兴趣，期望我们在PR页面和issue页面再见。</p>
 </blockquote>
-<p>为什么大衍之数是五十，为什么用四十九？请读第二个知乎链接。没有统一定论，各种引经据典一通计算得出这两个数，据说争论两千年了。最科学的解释大概是：计算概率发现从四十九（也有答案说四十七、四十八也行）开始执行过程，最终得到的阴、阳两大类结果的概率相似，巧了。我觉得《易经》可能也是古人从天地之数（五十五）或者大衍之数（五十）或者其他什么和天地相关的神秘数字推演，发现数字四十九的奇妙之处，所以也没提怎么变到四十九，实用主义，或者内法奥秘，不传外不成文。</p>
-<h2 id="大衍筮法"><a href="#大衍筮法" class="anchor-link">#</a><a href="#contents:大衍筮法" class="headings">大衍筮法</a></h2>
-<p>知识1：中国古代说占、卜、筮是有区别的<a href="https://zhuanlan.zhihu.com/p/356420437" target="_blank" rel="noopener">[1]</a> <a href="https://new.qq.com/omn/20210117/20210117A0B15B00.html" target="_blank" rel="noopener">[2]</a>，“占”是指算命，统称；“卜”是烧龟壳看裂纹；“筮”就是特指用这个蓍（shi1）草。所以把这个大衍筮法说成“蓍草占<strong>卜</strong>”，严格意义上不对。</p>
-<p>知识2：龟壳比蓍草材料珍贵，所以“卜”比“筮”更严肃。有说法“卜、筮不相袭也。大事有时日，小事无时日，有筮。”——《礼记·表记》，白话解释是“大事有日程，用卜；小事随机突发，用筮”。（<a href="https://read01.com/RM7NjJe.html" target="_blank" rel="noopener">研究:《 刘彬：子思与《易》关系新证》</a>链接是谷歌搜到的内容农场网站上的复制，维普百科和知网的链接都不能直接下载 PDF，咱也不知道内容农场怎么弄到这种文本的）</p>
-<p>知识3：蓍草是什么植物？看<a href="https://zh.wikipedia.org/wiki/%E8%93%8D" target="_blank" rel="noopener">维基百科</a>，“菊科蓍属多年生草本植物”。多年生，我在搜索时看到说古人就是因为它多年生，生长周期长肯定吸收了天地灵气，所以用它做数占。口语英语翻译为<a href="https://en.wikipedia.org/wiki/Achillea_millefolium" target="_blank" rel="noopener">yarrow</a>。</p>
-<p>搜到<a href="https://www.zhihu.com/zvideo/1383722112176238593" target="_blank" rel="noopener">这个动画</a>讲了命令式的操作过程，7分钟建议一看。</p>
-<p>详细过程先不提，总之进行了复杂的过程（三变），最终得到6、7、8、9四个数字中的一个，称为爻（yao3）。爻有两种，八卦符号（例：坎 ☵）里的阴（中间断开的两短横）、阳（长横），但是在大衍筮法里分得更细：</p>
-<ul>
-<li>6 = 老阴 X</li>
-<li>7 = 少阳 —</li>
-<li>8 = 少阴 - -</li>
-<li>9 = 老阳 O</li>
-</ul>
-<p>老少啥意思，不知道，动画说6最小所以是老阴，9最大同理老阳，7、8次第。但是老阴、老阳这两个被称为“动爻”，可以变成相反的类别（阴变阳、阳变阴，体现天地变化的）。虽然动画里每个动爻都变了，但继续搜索发现不是每个动爻都要变爻，是由解读者根据自身门派对易经的解读和各种环境变量（天干地支季节人际关系生辰八字 balabala）决定变的子过程，有点抽象工厂模式的意思。原始卦象叫“本卦”，变之后叫“变卦”或“之卦”。这就是为什么说“起卦容易解卦难”，要我说就是故意往算法里加个专业知识黑盒，让普通人难以自行解卦，也增加了命运感神秘感随机性之类。我的脚本里打算让 Python 的<a href="https://crypto.stackexchange.com/questions/39186/what-does-it-mean-for-a-random-number-generator-to-be-cryptographically-secure/39188#39188" target="_blank" rel="noopener">RNG</a>API——<a href="https://docs.python.org/3/library/os.html#os.urandom" target="_blank" rel="noopener">os.urandom()</a>来帮我考虑是否变爻，扯远了说这 RNG 也是体现天地意志的，反正不受人意志影响。</p>
-<p>一个八卦是三个横杠，要三个爻组成。<a href="https://zh.wikipedia.org/wiki/%E5%85%AD%E5%8D%81%E5%9B%9B%E5%8D%A6" target="_blank" rel="noopener">六十四卦</a>中一个卦象含上下两个八卦图案。所以总共要进行 十八变-六爻-两八卦-一卦象，那个复杂操作要循环十八次。</p>
-<p>个人认为大衍筮法就是一个手动操作的随机性算法。</p>
-<h2 id="大衍筮法的结果概率"><a href="#大衍筮法的结果概率" class="anchor-link">#</a><a href="#contents:大衍筮法的结果概率" class="headings">大衍筮法的结果概率</a></h2>
-<p>资料 <a href="http://www.360doc.com/content/18/0228/11/36557188_733116745.shtml" target="_blank" rel="noopener">[1]</a> <a href="http://202.194.14.19/CN/Y2018/V0/I1/47" target="_blank" rel="noopener">[2]</a> <a href="https://www.eee-learning.com/article/3368" target="_blank" rel="noopener">[3]</a> <a href="https://webcache.googleusercontent.com/search?q=cache:6qTcK5_2RfcJ:blog.sina.com.cn/s/blog_bfc84c450101l3bk.html" target="_blank" rel="noopener">[4 三变中的概率传递链]</a></p>
-<p>我坦白，没看懂。但我似乎能总结：没有准确答案。这里要提到一个细节做前置知识：每一变中，都有一个“将整体的蓍草用左右手分成任意两堆”（“分而为二以象二”）的原子操作。理论计算概率时要用某种分布模型来代替这个操作的结果，用相等概率、二分、标准正态等不同模型代入概率传递链中计算出的概率是不同的。现实中这个操作由起卦执行者决定，其实是个真随机。所以结论是因为现实并不符合某种确定的分布模型，所以没有准确的理论答案。</p>
-<p>根据<a href="https://www.zhihu.com/question/33646380/answer/131429959" target="_blank" rel="noopener">知乎答案</a>，以等概率分布代入分两堆操作结果，爻的阴阳概率相同：</p>
-<ul>
-<li>6 老阴 1/16</li>
-<li>7 少阳 5/16</li>
-<li>8 少阴 7/16</li>
-<li>9 老阳 3/16</li>
-</ul>
-<p>但因为卦象自身有二项分布的特点，比如六爻全阴或全阳的概率本来就比其他混合的卦象概率低，然后最终结果其实是三变的随机和卦象分布的叠加（概率传播），所以无论三变用什么分布模型，最后六爻概率总是接近卦象的二项分布。</p>
-<p>有些简单的起卦模拟程序会简化求出每个爻的流程，比如：</p>
-<ul>
-<li>一枚硬币，正面是阳，反面是阴。扔六次。</li>
-<li>参照大衍筮法，三枚硬币，正面是2，反面是3，求和得到6、7、8、9，扔六次。</li>
-<li>参照大衍筮法，三颗骰子，奇数是2，偶数是3，求和得到6、7、8、9，掷六次。</li>
-</ul>
-<p>因为计算结果接近卦象分布，所以这爻用什么方法求，最终概率都差不太多。大衍筮法的优势在于：计算初始情况的结果基数多达四十九，我猜测这个基数越大，越计算随机。三变中的“随机分两堆”是大衍筮法的随机性的精髓，引入人工决策，即引入真随机。我的脚本也会碰到这个模拟问题，还是让 RNG 模拟人类执行者，情况基数沿用大衍筮法的四十九。</p>
-<h2 id="程序"><a href="#程序" class="anchor-link">#</a><a href="#contents:程序" class="headings">程序</a></h2>
-<p>了解完理论，失去了一半动力，本质是弄个随机性算法再映射到六十四卦象，而且我又没专业知识解卦。但还是写了，不写不完整：</p>
-<p><a href="https://gist.github.com/boholder/a5bb81e17df0a4854ac9c8c0a5abd16c" target="_blank" rel="noopener">https://gist.github.com/boholder/a5bb81e17df0a4854ac9c8c0a5abd16c</a></p>
-<p><a href="/share/yarrow_divination.py">下载（不更新补丁，请优先 gist）</a></p>
-<p>了个心思。</p>
 
             </div>
 
@@ -296,7 +272,7 @@
                 
                 
                 
-                <li class="copyright-item link"><span class="copyright-item-text">链接：</span>: <a href="/blogs/yarrow-divination/" target="_blank" rel="noopener">https://boholder.github.io/blogs/yarrow-divination/</a></li>
+                <li class="copyright-item link"><span class="copyright-item-text">链接：</span>: <a href="/blogs/execution_event/" target="_blank" rel="noopener">https://boholder.github.io/blogs/execution_event/</a></li>
             
             <li class="copyright-item license"><span class="copyright-item-text">版权：</span>: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
             
@@ -311,9 +287,9 @@
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2023-08-08 19:12:01 CST" style="cursor:help">
+        <span title="Updated @ 2023-12-08 19:33:39 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-08-08</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-08-08</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-12-08</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-12-08</text></g></svg>
         </span></div>
 
 
@@ -348,14 +324,14 @@
             
                 <div class="share-item twitter">
                     
-                    <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/yarrow-divination/&amp;text=%e5%a4%a7%e8%a1%8d%e7%ad%ae%e6%b3%95%e8%84%9a%e6%9c%ac&amp;hashtags=blog,&amp;via=%25!s%28%3cnil%3e%29" title="Share on Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                    <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/execution_event/&amp;text=%e7%95%99%e6%84%8f%e7%a8%8b%e5%ba%8f%e8%a7%a6%e5%8f%91%e4%ba%8b%e4%bb%b6%e5%92%8c%e6%89%a7%e8%a1%8c%e6%97%b6%e5%ba%8f&amp;hashtags=blog,&amp;via=%25!s%28%3cnil%3e%29" title="Share on Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item facebook">
                     
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/blogs/yarrow-divination/&amp;hashtag=%23blog" title="Share on Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/blogs/execution_event/&amp;hashtag=%23blog" title="Share on Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
                 </div>
             
 
@@ -364,7 +340,7 @@
             
                 <div class="share-item telegram">
                     
-                    <a href="https://t.me/share/url?url=https://boholder.github.io/blogs/yarrow-divination/&amp;text=%e5%a4%a7%e8%a1%8d%e7%ad%ae%e6%b3%95%e8%84%9a%e6%9c%ac" title="Share on Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                    <a href="https://t.me/share/url?url=https://boholder.github.io/blogs/execution_event/&amp;text=%e7%95%99%e6%84%8f%e7%a8%8b%e5%ba%8f%e8%a7%a6%e5%8f%91%e4%ba%8b%e4%bb%b6%e5%92%8c%e6%89%a7%e8%a1%8c%e6%97%b6%e5%ba%8f" title="Share on Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
                 </div>
             
 
@@ -386,7 +362,7 @@
     const typeNumber = 0;
     const errorCorrectionLevel = 'L';
     const qr = qrcode(typeNumber, errorCorrectionLevel);
-    qr.addData('https:\/\/boholder.github.io\/blogs\/yarrow-divination\/');
+    qr.addData('https:\/\/boholder.github.io\/blogs\/execution_event\/');
     qr.make();
     document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
 </script>
@@ -409,15 +385,15 @@
             <ul class="related-list">
                 
                     <li class="related-item">
-                        <a href="/blogs/currying/" class="related-link">柯里化及相关延伸思考</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/blogs/execution_event/" class="related-link">留意程序触发事件和执行时序</a>
-                    </li>
-                
-                    <li class="related-item">
                         <a href="/blogs/java-9-to-17/" class="related-link">Java9到17我关心的新特性</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/blogs/what-i-learned-from-putgun/" class="related-link">我在开发 Puntgun 中学到的东西</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/blogs/maven-build-advance/" class="related-link">用 Maven reactor 命令行选项节约 build 时间</a>
                     </li>
                 
             </ul>
@@ -473,13 +449,9 @@
     
         <ul class="post-nav">
             
-                <li class="post-nav-prev">
-                    <a href="/blogs/information-flies-in-the-wind-on-the-internet/" rel="prev">&lt; 信息在网上随风飘飞</a>
-                </li>
-            
             
                 <li class="post-nav-next">
-                    <a href="/blogs/lazy-cooking/" rel="next">懒人做饭 &gt;</a>
+                    <a href="/blogs/two-books-on-buddhism/" rel="next">《正见》与《佛陀传》书摘 &gt;</a>
                 </li>
             
         </ul>
