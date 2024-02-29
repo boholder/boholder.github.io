@@ -23,10 +23,174 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Fri, 08 Dec 2023 20:04:09 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 29 Feb 2024 19:07:40 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Python中的Event Loop和多线程</title>
+                <link>https://boholder.github.io/blogs/event-loop-and-multithread-in-python/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/event-loop-and-multithread-in-python/</guid>
+                <pubDate>Thu, 29 Feb 2024 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+                
+                    <description>&lt;p&gt;这篇文章作为我对Python并发编程方案相关知识的思考、总结和陈述，希望这篇文章能帮到苦于理解和选择并发方案的其他人。对Python语言来说，有三种并发方案：多线程（&lt;code&gt;threading&lt;/code&gt;）、多进程（&lt;code&gt;multiprocessing&lt;/code&gt;）、event loop（&lt;code&gt;asyncio&lt;/code&gt; etc.）。&lt;/p&gt;
+&lt;h2 id=&#34;都怪gilthreading不能加速cpu-bound任务&#34;&gt;都怪GIL，&lt;code&gt;threading&lt;/code&gt;不能加速CPU bound任务&lt;/h2&gt;
+&lt;p&gt;在Python语言中只有&lt;code&gt;multiprocessing&lt;/code&gt;库可以加速CPU bound任务。为什么&lt;code&gt;threading&lt;/code&gt;库不可以？因为有GIL的存在，同一时间只有一个线程在运行（Python字节码）&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;。即使&lt;code&gt;threading&lt;/code&gt;库（通过&lt;code&gt;_thread&lt;/code&gt;库&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;，进而通过诸如&lt;code&gt;pthread&lt;/code&gt;等底层库&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;）创建的是kernel-level thread（kernel-level thread可以被OS的scheduler调度在不同CPU core上执行&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;）。这一点可以用以下代码验证（感谢perker，kky两位，我都想不到这种验证方法，学习了）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;threading&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;time&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;os&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;worker&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        
+&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;threading&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;worker&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;daemon&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;{os.getpid()}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;运行上述代码获取pid，在另一个终端执行&lt;code&gt;ps -o thcount {pid}&lt;/code&gt;，会看到结果是&lt;code&gt;THCNT 2&lt;/code&gt;，一个守护线程一个worker线程。&lt;/p&gt;
+&lt;h2 id=&#34;对于io-bound任务选择在于io操作是否阻塞&#34;&gt;对于I/O bound任务，选择在于I/O操作是否阻塞&lt;/h2&gt;
+&lt;p&gt;本段落中所述也适用于其他编程语言。在event loop方案中，任务在遇到阻塞时马上交出执行权；而在多线程（kernel-level thread）方案中，OS的scheduler需要等待被I/O阻塞的线程跑完分配给该线程的时间片再调度运行其他线程。这样一想，似乎event loop方案在处理I/O bound任务时始终优于多线程方案。实际上选择哪个方案取决于你将要调用的I/O操作是否为阻塞，只要在计算流程上有一个调用是阻塞I/O，就只能选多线程方案了。&lt;/p&gt;
+&lt;p&gt;在event loop方案中，阻塞I/O会block住当前运行该逻辑的工作线程。我找到了一句对Python&lt;code&gt;asyncio&lt;/code&gt;库的辛辣评论：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Async is just a pretty face on single-threaded callback hell.
+&amp;ndash; Reddit user, Niicodemus &lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这位的观点在上下文语境中是正确的。&amp;ldquo;a pretty face on callback hell&amp;rdquo;（真怀念，这是我求职时被问到的问题，下次我会这样回答），即Python的&lt;code&gt;async&lt;/code&gt;、&lt;code&gt;await&lt;/code&gt;关键字的一个作用是作为callback的语法糖&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;。&lt;code&gt;asyncio&lt;/code&gt;库的event loop实现是单线程的&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;，所以如果在使用&lt;code&gt;asyncio&lt;/code&gt;库的同时调用阻塞I/O，整个都会卡住。最好调用&lt;a href=&#34;https://docs.python.org/3/library/asyncio-eventloop.html#executing-code-in-thread-or-process-pools&#34;&gt;&lt;code&gt;loop.run_in_executor(executor, func, *args)&lt;/code&gt;&lt;/a&gt;方法，在线程池中运行阻塞I/O（或在进程池中运行CPU
+bound任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
+&lt;h2 id=&#34;并非所有event-loop实现方案都是单线程实现&#34;&gt;并非所有event loop实现方案都是单线程实现&lt;/h2&gt;
+&lt;p&gt;另外，Event loop结构在不同实现方案中处于不同的位置。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(In Netty,) The event loop runs continuously in a single thread, although we can have &lt;strong&gt;as many event loops as the number of available cores&lt;/strong&gt;.&lt;sup id=&#34;fnref:8&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:8&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Java生态下的&lt;code&gt;Spring WebFlux&lt;/code&gt;作为一个web application框架，可使用多种web server作为底层依赖。其中&lt;code&gt;Netty&lt;/code&gt;是一种实现了非阻塞I/O的web client/server 框架，提供TCP、UDP、HTTP协议的非阻塞实现。使用&lt;code&gt;Netty&lt;/code&gt;编写web server时，需要声明两类线程，接收请求的线程（boss）和处理请求的线程（worker）。每一个线程中都存在一个event loop，被作为&lt;code&gt;EventLoopGroup&lt;/code&gt;统一管理（因而我们要&lt;a href=&#34;https://netty.io/wiki/user-guide-for-4.x.html#wiki-h3-5&#34;&gt;为一个web server声明&lt;/a&gt;&lt;code&gt;bossGroup&lt;/code&gt;和&lt;code&gt;workerGroup&lt;/code&gt;两个&lt;code&gt;EventLoopGroup&lt;/code&gt;&lt;sup id=&#34;fnref:9&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:9&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;9&lt;/a&gt;&lt;/sup&gt;）。&lt;code&gt;WebFlux&lt;/code&gt;库拥有类似&lt;code&gt;asyncio&lt;/code&gt;库&lt;code&gt;loop.run_in_executor()&lt;/code&gt;方法的&lt;a href=&#34;https://spring.io/blog/2019/12/13/flight-of-the-flux-3-hopping-threads-and-schedulers#the-publishonscheduler-s-operator&#34;&gt;publishOn(Scheduler s)&lt;/a&gt;方法，将当前调用链的后续步骤移到另一个&lt;code&gt;Scheduler&lt;/code&gt;（即另一个线程池）中运行。&lt;/p&gt;
+&lt;p&gt;JavaScript语言被定义为一个“单线程”语言&lt;sup id=&#34;fnref:10&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:10&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;10&lt;/a&gt;&lt;/sup&gt;，它&lt;em&gt;应当&lt;/em&gt;被执行在单线程环境中（但是书面约定并不阻止你多线程执行JavaScript代码）。JavaScript引擎是负责解释并执行JavaScript代码的程序，大多数引擎（比如Chrome V8）遵守了单线程执行的约定（除了Rhino引擎&lt;sup id=&#34;fnref:11&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:11&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;）。如果你在前端JavaScript代码中调用阻塞I/O，由JavaScript事件驱动的UI将无法响应用户操作&lt;sup id=&#34;fnref:12&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:12&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;12&lt;/a&gt;&lt;/sup&gt;，因为event loop始终无法空闲下来并处理下一个事件。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Node.js uses a small number of threads to handle many clients. In Node.js there are two types of threads: &lt;strong&gt;one Event Loop&lt;/strong&gt; (aka the main loop, main thread, event thread, etc.), and a pool of k Workers in a Worker Pool (aka the threadpool).&lt;sup id=&#34;fnref:13&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:13&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;13&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Node.js&lt;/code&gt;基于V8引擎和&lt;code&gt;libuv&lt;/code&gt;库，生成一个Worker Pool（基于一个kernel-level thread pool&lt;sup id=&#34;fnref:12&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:12&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;12&lt;/a&gt;&lt;/sup&gt;，这个线程池是由&lt;code&gt;libuv&lt;/code&gt;库调用系统调用申请创建的&lt;sup id=&#34;fnref:14&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:14&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;14&lt;/a&gt;&lt;/sup&gt;）来处理所有逻辑&lt;sup id=&#34;fnref:15&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:15&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;15&lt;/a&gt;&lt;/sup&gt;。因此在Node.js所运行的代码中调用阻塞I/O的行为将仅仅阻塞当前运行这段逻辑的worker，其他worker仍将正常运行。但&lt;code&gt;Node.js&lt;/code&gt;只有一个event loop调度全部worker。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;对三种并发方案的选择变得很简单，简单到不会忘记：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;CPU bound&lt;/strong&gt; -&amp;gt; 多进程&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;I/O bound&lt;/strong&gt; + &lt;strong&gt;Blocking I/O&lt;/strong&gt; -&amp;gt; 多线程&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;I/O bound&lt;/strong&gt; + &lt;strong&gt;Non-blocking I/O&lt;/strong&gt; -&amp;gt; Event Loop&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实施event loop方案后遇到Blocking I/O或CPU bound任务，可以通过将任务运行在额外线程池/进程池中，将阻塞形式的结果变为非阻塞形式的结果，并使用正常的异步方式消费结果，框架或语言会提供这类转换API（如上文提到的&lt;code&gt;asyncio&lt;/code&gt;库的&lt;code&gt;loop.run_in_executor()&lt;/code&gt;和&lt;code&gt;WebFlux&lt;/code&gt;库的&lt;code&gt;publishOn()&lt;/code&gt;）。&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;而GIL之所以存在，是因为Python的内存管理机制不是线程安全的。 &lt;a href=&#34;https://wiki.python.org/moin/GlobalInterpreterLock&#34;&gt;https://wiki.python.org/moin/GlobalInterpreterLock&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.python.org/3/library/_thread.html#module-_thread&#34;&gt;https://docs.python.org/3/library/_thread.html#module-_thread&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.python.org/3.6/library/_thread.html&#34;&gt;https://docs.python.org/3.6/library/_thread.html&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;A thread-aware operating system schedules threads, not processes. &lt;a href=&#34;https://people.cs.rutgers.edu/~pxk/416/notes/05-threads.html&#34;&gt;https://people.cs.rutgers.edu/~pxk/416/notes/05-threads.html&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://old.reddit.com/r/django/comments/12lw2w8/mixing_sync_and_async_views_in_the_same/jgamyb1/&#34;&gt;https://old.reddit.com/r/django/comments/12lw2w8/mixing_sync_and_async_views_in_the_same/jgamyb1/&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:6&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://iximiuz.com/en/posts/from-callback-hell-to-async-await-heaven/&#34;&gt;https://iximiuz.com/en/posts/from-callback-hell-to-async-await-heaven/&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:7&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.set_event_loop&#34;&gt;https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.set_event_loop&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:8&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.baeldung.com/spring-webflux-concurrency#event_loop&#34;&gt;https://www.baeldung.com/spring-webflux-concurrency#event_loop&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:9&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;The second one, often called &amp;lsquo;worker&amp;rsquo;, handles the traffic of the accepted connection once the boss accepts the connection and registers the accepted connection to the worker. &lt;a href=&#34;https://netty.io/wiki/user-guide-for-4.x.html#wiki-h3-5&#34;&gt;https://netty.io/wiki/user-guide-for-4.x.html#wiki-h3-5&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:9&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:10&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/a/63728272/11397457&#34;&gt;https://stackoverflow.com/a/63728272/11397457&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:10&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:11&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/a/41103250/11397457&#34;&gt;https://stackoverflow.com/a/41103250/11397457&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:11&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:12&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/a/2734311/11397457&#34;&gt;https://stackoverflow.com/a/2734311/11397457&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:12&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:13&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/56205620/why-is-libuv-needed-in-node-js&#34;&gt;https://stackoverflow.com/questions/56205620/why-is-libuv-needed-in-node-js&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:13&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:14&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/a/21488067/11397457&#34;&gt;https://stackoverflow.com/a/21488067/11397457&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:14&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:15&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop#why-should-i-avoid-blocking-the-event-loop-and-the-worker-pool&#34;&gt;https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop#why-should-i-avoid-blocking-the-event-loop-and-the-worker-pool&lt;/a&gt; &lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fnref:15&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/programming/">programming</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/programming/">programming</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">blog</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/python/">python</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>留意程序触发事件和执行时序</title>
@@ -4726,6 +4890,59 @@ Time: 2015-07&lt;/p&gt;
                                     <category domain="https://boholder.github.io/tags/blog/">blog</category>
                                 
                             
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://boholder.github.io/blogs/book-antifragile/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/book-antifragile/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>bottleholder@anche.no (BoHolder)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+                
+                    <description>&lt;h2 id=&#34;好学生不善处理混沌情况&#34;&gt;好学生不善处理混沌情况&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;足球妈妈们试图从孩子们的生活中消除试错和反脆弱性，使他们远离生态模式，而将他们改造成按照预设的现实模式（符合足球妈妈的想法）行事的书呆子。就这样，孩子们成为好学生，但也成为书呆子，也就是说，这些孩子就像是计算机，除了计算速度慢了一些。此外，他们完全没有受过任何关于处理模棱两可情况的训练。&lt;/p&gt;
+&lt;p&gt;我以人们的周旋能力为筛选标准进行选择，好学的人一般不善于与人周旋：他们需要有一个明确的任务。
+当我10岁的时候我就意识到，好成绩在校外不像在校内那么受欢迎，因为它们会带来一定的副作用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我知道有本书&lt;a href=&#34;https://book.douban.com/subject/36190074/&#34;&gt;《金榜题名之后：大学生出路分化之谜》&lt;/a&gt;，也是写（来自普通/贫穷家庭的）“书呆子”一旦离开校园，失去了以成绩作为评价标准（非常单一直接）的目标，就会变得迷茫，而富裕家庭的孩子会提前观察到社会多样性的评价标准，进而在校园中提前做准备。《反脆弱》作者说的“不善处理混沌情况”似乎和此书的论点有些重合的地方。&lt;/p&gt;
+&lt;h2 id=&#34;拖延来处理混沌情况&#34;&gt;拖延来处理混沌情况&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;事实上，人类是非常不擅长过滤信息的，特别是短期信息，而拖延则是帮助我们筛选信息的较好方式，它能避免我们由于冲动而轻信某个信息。
+你越频繁地寻找数据，你会发现，你找到的噪声（而非被称为信号的宝贵数据）的比例就越高，噪声–信号比就越高。噪声和信号的混淆并非心理问题，而是数据本身所固有的问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;拖延处理混沌情况的前提是，信噪比会随着时间的推移而增大，错误信息会被时间证伪。这个在投资上体现的最明显。一天看几次大盘，只能收获焦虑。我在推上看过一句批评“短期投资者看到波动就总是将同时发生的事情擅自联系起来，实际上两者无关”，作者在书里也写了“先发生事件，事后找个看起来合理的理论解释事件”（第四卷）的行为是很不明智的。&lt;/p&gt;
+&lt;p&gt;或者前提是，随着时间推移，可能的情况会越来越多，就像多重宇宙理论，从一个时间点开始宇宙因为选择分裂成无数时间线，提前计划大概率miss（缓存击穿），计划赶不上变化。这个前提在编程上体现的比较多：“不要过早优化”，“不要冲出前灯范围”，行业抛弃瀑布流程的原因。大概编程是讨厌信息熵大（可能性多）的东西的，我们讨厌公共耦合，因为公共值有更多可能被无意中修改为不合适的值。&lt;/p&gt;
+&lt;h2 id=&#34;减法性知识消除错误&#34;&gt;减法性知识消除错误&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;鉴于我们今天所知的知识可能被证实是错误的，但是我们今天认识到是错误的知识则不可能变得正确，至少不那么容易，因此，我们通过减法获得的知识远远比通过加法获得的知识多。如果我发现了一只黑天鹅（注意是真的天鹅），我就可以肯定地说“天鹅都是白色的”这一论断是错误的。但是，即使我从来没有见过一只黑天鹅，我也不可以认为上述论断就真的正确。再说一遍：由于一个小小的例外便可以推翻一个论断，因此，虽然我们不能确定某个事物就是什么，但证伪总是比证实更容易找到依据。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;作者提倡“不做优于多做”。我在FPS游戏里发现了对应，这里贴一下&lt;a href=&#34;https://twitter.com/NekoStranding/status/1753360752046735860&#34;&gt;推友相关的推&lt;/a&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;周末打 Apex 排位的时候突然有个感想
+低段位和高段位玩家之间有个明显区别：高段位玩家每个动作都有明确的意图，追求对自己有利；而低段位玩家经常做各种迷之操作，比如跑位路上突然开始 poke 别人，没有好处并且贻误战机。职业领域的多数事情都应该套用这种竞技玩家的心态，阻力小能才游得快。&lt;/p&gt;
+&lt;p&gt;（这是回复我的：）OODA 当然好，但一没有强调多余动作导致资源浪费，二没有强调有意识的规划要通过强化去改变无意识的习惯。光是别挨没必要的打，别跑没必要的路就能升段，很多人却一直在练枪刷级骂队友。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;OODA是指&lt;a href=&#34;https://en.wikipedia.org/wiki/OODA_loop&#34;&gt;OODA循环&lt;/a&gt;，你可以当作“提前规划+根据新输入快速调整规划”，我个人总是在军事领域听到OODA循环这个词。他说的是APEX，我不玩APEX，我玩战地，但我发现他说的是真的，“别挨没必要的打，别跑没必要的路”，比熟背地图、苦练技巧等方式又方便记忆又好用。我又联想到真实的战场，老兵交给新兵的生存技巧都是“不要做XX”，因为失误的惩罚很严重——死掉，而且也没有多少人会在现实里贪多杀人的机会吧。&lt;/p&gt;
+&lt;h2 id=&#34;重新引入波动性&#34;&gt;重新引入波动性&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;杠铃策略&#34;&gt;杠铃策略&lt;/h2&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
                         
                     
                 
