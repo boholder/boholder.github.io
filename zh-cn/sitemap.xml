@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://boholder.github.io/tags/blog/</loc>
-    <lastmod>2024-02-29T19:07:06+08:00</lastmod>
+    <lastmod>2024-07-07T20:31:17+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/</loc>
-    <lastmod>2024-02-29T19:07:06+08:00</lastmod>
+    <lastmod>2024-07-07T20:31:17+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/tags/programming/</loc>
-    <lastmod>2024-02-29T19:07:06+08:00</lastmod>
+    <lastmod>2024-07-07T20:31:17+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -42,7 +42,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/categories/programming/</loc>
-    <lastmod>2024-02-29T19:07:06+08:00</lastmod>
+    <lastmod>2024-07-07T20:31:17+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -54,14 +54,17 @@
                 href="https://boholder.github.io/categories/programming/"
                 />
   </url><url>
+    <loc>https://boholder.github.io/blogs/program_awareness/</loc>
+    <lastmod>2024-07-07T20:31:17+08:00</lastmod>
+  </url><url>
     <loc>https://boholder.github.io/tags/python/</loc>
-    <lastmod>2024-02-29T19:07:06+08:00</lastmod>
+    <lastmod>2024-03-10T13:35:49+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/event-loop-and-multithread-in-python/</loc>
-    <lastmod>2024-02-29T19:07:06+08:00</lastmod>
+    <lastmod>2024-03-10T13:35:49+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/execution_event/</loc>
-    <lastmod>2023-12-08T19:33:39+08:00</lastmod>
+    <lastmod>2024-07-07T20:31:17+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -72,6 +75,9 @@
                 hreflang="zh-cn"
                 href="https://boholder.github.io/blogs/execution_event/"
                 />
+  </url><url>
+    <loc>https://boholder.github.io/blogs/two-books-on-buddhism/</loc>
+    <lastmod>2023-09-16T13:44:46+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/categories/thought/</loc>
     <lastmod>2023-09-16T13:44:46+08:00</lastmod>
@@ -85,9 +91,6 @@
                 hreflang="zh-cn"
                 href="https://boholder.github.io/categories/thought/"
                 />
-  </url><url>
-    <loc>https://boholder.github.io/blogs/two-books-on-buddhism/</loc>
-    <lastmod>2023-09-16T13:44:46+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/design/</loc>
     <lastmod>2023-08-13T20:34:10+08:00</lastmod>
@@ -209,7 +212,7 @@
     <lastmod>2023-08-08T19:12:01+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/what-you-need-for-programming/</loc>
-    <lastmod>2023-08-08T19:12:01+08:00</lastmod>
+    <lastmod>2024-07-07T13:40:36+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/learn-from-source-code/</loc>
     <lastmod>2023-08-08T19:12:01+08:00</lastmod>
@@ -296,17 +299,20 @@
     <loc>https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/</loc>
     <lastmod>2023-08-08T19:12:01+08:00</lastmod>
   </url><url>
-    <loc>https://boholder.github.io/categories/</loc>
+    <loc>https://boholder.github.io/blogs/two-threads-for-async-and-sync-work-in-python/</loc>
+    <lastmod>2024-07-05T20:35:04+08:00</lastmod>
+  </url><url>
+    <loc>https://boholder.github.io/tags/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://boholder.github.io/en-us/categories/"
+                href="https://boholder.github.io/en-us/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://boholder.github.io/categories/"
+                href="https://boholder.github.io/tags/"
                 />
   </url><url>
     <loc>https://boholder.github.io/blogs/</loc>
@@ -320,6 +326,19 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://boholder.github.io/blogs/"
+                />
+  </url><url>
+    <loc>https://boholder.github.io/categories/</loc>
+    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://boholder.github.io/en-us/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://boholder.github.io/categories/"
                 />
   </url><url>
     <loc>https://boholder.github.io/archive/</loc>
@@ -346,19 +365,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://boholder.github.io/crafts/"
-                />
-  </url><url>
-    <loc>https://boholder.github.io/tags/</loc>
-    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://boholder.github.io/en-us/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://boholder.github.io/tags/"
                 />
   </url><url>
     <loc>https://boholder.github.io/series/</loc>
