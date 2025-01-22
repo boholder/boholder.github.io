@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title>SSH X11 Forwarding 远程开发方案 | BoHolder的网站：博客，小玩意及其他</title>
+
+    <link rel="stylesheet" href="/css/meme.min.9efed82b63fd668d7a97c6479cd4a3e39f674be783754af6b1ce95ebc29332fb.css"/>
+
+    
+    
+        
+            <script src="/js/meme.min.d8a113c9ce78010711be55ec6e3c4bab960dd298030050887d9bd88354c5aeb7.js"></script>
+
+        
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="" /><meta name="description" content="和一些刨根问底" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="BoHolder的网站：博客，小玩意及其他" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="BoHolder的网站：博客，小玩意及其他" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+        <link rel="canonical" href="https://boholder.github.io/blogs/x11fwd/" />
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2025-01-22T00:00:00+00:00",
+        "dateModified": "2025-01-22T19:39:55+08:00",
+        "url": "https://boholder.github.io/blogs/x11fwd/",
+        "headline": "SSH X11 Forwarding 远程开发方案",
+        "description": "和一些刨根问底",
+        "inLanguage" : "zh-CN",
+        "articleSection": "blogs",
+        "wordCount":  2940 ,
+        "image": "https://boholder.github.io/icons/apple-touch-icon.png",
+        "author": {
+            "@type": "Person",
+            "url": "https://boholder.github.io/",
+            
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "BoHolder的网站：博客，小玩意及其他",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://boholder.github.io/icons/apple-touch-icon.png"
+            },
+            "url": "https://boholder.github.io/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://boholder.github.io/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+
+    
+
+
+
+<meta property="og:title" content="SSH X11 Forwarding 远程开发方案" />
+<meta property="og:description" content="和一些刨根问底" />
+<meta property="og:url" content="https://boholder.github.io/blogs/x11fwd/" />
+<meta property="og:site_name" content="BoHolder的网站：博客，小玩意及其他" />
+<meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2025-01-22T00:00:00&#43;00:00" />
+    <meta property="article:modified_time" content="2025-01-22T19:39:55&#43;08:00" />
+    
+    <meta property="article:section" content="blogs" />
+
+
+
+    
+    
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        
+            
+    <div class="site-brand">
+        
+            <a href="/" class="brand">BoHolder的网站：博客，小玩意及其他</a>
+        
+    </div>
+
+        
+    </header>
+
+
+
+
+            
+                
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+
+        
+            
+                <li class="menu-item"><a href="/blogs/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon blogs"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg><span class="menu-item-name">博客</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon th"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="icon info"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+    </ul>
+</nav>
+
+                
+                
+                <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post h-entry" data-align="justify" data-type="blogs" data-toc-num="true">
+
+            <h1 class="post-title p-name">SSH X11 Forwarding 远程开发方案</h1>
+
+            
+
+            
+                <div class="post-description p-summary">和一些刨根问底</div>
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2025-01-22T00:00:00&#43;00:00" class="post-meta-item published dt-published"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 40"><path d="M40 8H8c-2.21 0-3.98 1.79-3.98 4L4 36c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V12c0-2.21-1.79-4-4-4zM17 30h-2.4l-5.1-7v7H7V18h2.5l5 7v-7H17v12zm10-9.49h-5v2.24h5v2.51h-5v2.23h5V30h-8V18h8v2.51zM41 28c0 1.1-.9 2-2 2h-8c-1.1 0-2-.9-2-2V18h2.5v9.01h2.25v-7.02h2.5v7.02h2.25V18H41v10z"></path></svg>&nbsp;2025.1.22</time>
+    
+    
+        
+        <time datetime="2025-01-22T19:39:55&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.1.22</time>
+    
+    
+    
+        
+        
+        
+            
+                <span class="post-meta-item category"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M16 0H4C1.79 0 .02 1.79.02 4L0 28c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4H20l-4-4z"></path></svg>&nbsp;<a href="/categories/programming/" class="category-link p-category">Programming</a>/<a href="/categories/blog/" class="category-link p-category">Blog</a></span>
+            
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;2940</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M19.99 0C8.94 0 0 8.95 0 20s8.94 20 19.99 20C31.04 40 40 31.05 40 20S31.04 0 19.99 0zM20 36c-8.84 0-16-7.16-16-16S11.16 4 20 4s16 7.16 16 16-7.16 16-16 16z"/><path d="M21 10h-3v12l10.49 6.3L30 25.84l-9-5.34z"></path></svg>&nbsp;6&nbsp;分钟</span>
+    
+    
+    
+</div>
+
+            
+
+            <nav class="contents">
+  <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
+    <li><a id="contents:tldr" href="#tldr">TLDR</a></li>
+    <li><a id="contents:服务器端" href="#服务器端">服务器端</a></li>
+    <li><a id="contents:笔记本端" href="#笔记本端">笔记本端</a>
+      <ol>
+        <li><a id="contents:cmd" href="#cmd">cmd</a></li>
+        <li><a id="contents:mobaxterm" href="#mobaxterm">MobaXterm</a></li>
+        <li><a id="contents:intellij-over-jb-gateway" href="#intellij-over-jb-gateway">IntelliJ (over JB Gateway)</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav><div class="post-body e-content">
+                <p>我有一个老旧的 Windows10 笔记本，它的性能不足以支持2025年的开发需要，但我偶尔需要在离开家里那台强力主机的情况下（比如在老家或办公室时）运行开发环境。于是我买了一台强力的无头主机（<a href="https://www.mechrevo.com/content/details171_5615.html" target="_blank" rel="noopener">mechrevo imini pro</a>, R78845H, 32G RAM）并安装了Debian（注意，安装包括Gnome图形界面，这可能无意间帮我节省了一些安装 X11 转发所必需的依赖库的步骤），用一根外置网卡（<a href="https://www.lulian.cn/product/673.html" target="_blank" rel="noopener">绿联USB3.0外置网卡2.5G网速</a>
+）把笔记本和无头主机连了起来，并建立了以笔记本为网关和DHCP服务器的局域网。关于如何折腾建立这网络，内容多到值得另写一篇博客，本文按下不表。这样一来，我便可以使用<a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">JetBrains IntelliJ</a>中自带的<a href="https://www.jetbrains.com/remote-development/gateway/" target="_blank" rel="noopener">JetBrains Gateway</a>（通过 ssh）连接到无头主机（下称服务器）的 IntelliJ 后端，进行 Java 开发。</p>
+<p>一切都很好，直到我编写 <a href="https://github.com/minecraft-access/minecraft-access" target="_blank" rel="noopener">minecraft-access</a> 这个 Minecraft mod。Minecraft 是个游戏，而且这个 mod 是客户端 mod，因此调试运行 mod 需要运行游戏，而这游戏需要&hellip;&hellip;打开一个窗口。服务器没有外接显示器，如果直接通过 JB Gateway 在服务器中调试运行程序，程序会抛出以下异常并退出：</p>
+<pre tabindex="0"><code class="language-log" data-lang="log">java.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x1000E]Failed to detect any supported platform
+    at knot//com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:78)
+    at knot//com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:460)
+    at knot//net.minecraft.client.MinecraftClient.&lt;init&gt;(MinecraftClient.java:501)
+    at knot//net.minecraft.client.main.Main.main(Main.java:250)
+</code></pre><p><a href="https://www.glfw.org/" target="_blank" rel="noopener">GLFW</a> 是一个 OpenGL 工具库，Minecarft 使用 <a href="https://www.lwjgl.org/" target="_blank" rel="noopener">LWJGL (Lightweight Java Game Library)</a> 处理其界面、音效、输入，而这个库的底层应用正是 GLFW。<a href="https://discourse.glfw.org/t/glfw-with-lwjgl-on-anbernic-rg351p-with-rk3326-on-batocera/2363/2" target="_blank" rel="noopener">搜索</a>后得知，该报错是指 GLFW 找不到一个可匹配的<a href="https://en.wikipedia.org/wiki/Windowing_system" target="_blank" rel="noopener">窗口系统</a>。</p>
+<p><a href="https://en.wikipedia.org/wiki/X_Window_System" target="_blank" rel="noopener">X11/X Window</a> 正是一个窗口系统，它能解决我的问题。经过搜索（<a href="https://medium.com/mindorks/x-server-client-what-the-hell-305bd0dc857f" target="_blank" rel="noopener">这篇文章</a>写得不错）我了解到 X11 协议的术语含义与我们所熟知的概念是相反的：<code>X client</code> 是渲染界面且支持与 <code>X server</code> 通信的程序。在这个场景中，<code>X client</code> 需要运行在服务器里。<code>X server</code> 是运行在连接了输入输出设备的电脑上，并向 <code>X client</code> 转发输入数据、接收界面数据的程序。在这个场景中，它需要运行在我的老笔记本上。虽然界面的渲染由 <code>X client</code> 承担，但渲染好的界面数据仍需要 <code>X server</code> 将其展示在显示器上。</p>
+<p>另外值得一提的是，X11 方案在设计之初没有充分考虑安全性，因此现有的安全方案便是通过万能的 ssh 转发 X11 流量。《UNIX and Linux System Administration Handbook, 4th Edition》书中提到：“通过 ssh 转发的 X11 界面并不流畅，即使在局域网中也是，如果存在网络延迟，情况会变得更糟”。它是<a href="https://superuser.com/questions/1217280/why-is-x11-forwarding-so-inefficient" target="_blank" rel="noopener">对的</a>，虽然我最终找到了成功方案，但游戏界面比较卡顿，我不得不缩小窗口来减少延迟，称得上“勉强能用”，组合按键和双击等复杂操作比较难触发。</p>
+<h2 id="tldr"><a href="#tldr" class="anchor-link">#</a><a href="#contents:tldr" class="headings">TLDR</a></h2>
+<p>考虑到最终效果并不好，我<strong>不建议</strong>你使用这套 X11 Forwarding 方案，按照<a href="https://news.ycombinator.com/item?id=8019346" target="_blank" rel="noopener">这个讨论</a>试试 VNC 或者老版本（未收费）的 Nomachine&rsquo;s NX 吧。不过如果你坚持，这是所有步骤：</p>
+<ol>
+<li>服务器 <code>/etc/ssh/sshd_config</code> 中配置 <code>X11Forwarding</code> 的值为 <code>yes</code>，<code>sudo systemctl restart ssh</code> 重启 <code>sshd</code> 进程。</li>
+<li>笔记本用户 <code>C:\Users\&lt;user&gt;\.ssh\config</code>（Windows）或 <code>~/.ssh/ssh_config</code>（Linux）中做以下配置并重启电脑或 ssh 服务。</li>
+<li>笔记本安装 MobaXterm，打开 MobaXterm 并连接到服务器，保持这个连接，检查该连接的 <code>DISPLAY</code> 环境变量的值，不出意外的话为 <code>localhost:10.0</code>。</li>
+<li>笔记本使用 JB Gateway 连接服务器上的 IntelliJ 后端，在项目的 <code>Run/Debug Configuration</code> 中增加环境变量 <code>DISPLAY=&lt;MobaXterm 连接的 DISPLAY 值&gt;</code>。</li>
+<li>使用 IntelliJ 调试运行程序，界面应显示在笔记本侧。</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># /etc/ssh/sshd_config in server
+</span></span><span class="line"><span class="cl">X11Forwarding yes
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># C:\Users\&lt;user&gt;\.ssh\config in laptop
+</span></span><span class="line"><span class="cl">Host &lt;remote domain/ip&gt;
+</span></span><span class="line"><span class="cl">    HostName &lt;remote domain/ip&gt;
+</span></span><span class="line"><span class="cl">    ForwardX11 yes
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><h2 id="服务器端"><a href="#服务器端" class="anchor-link">#</a><a href="#contents:服务器端" class="headings">服务器端</a></h2>
+<p>在 <code>/etc/ssh/sshd_config</code> 中配置 <code>X11Forwarding</code> 的值为 <code>yes</code>，同时保持 <code>X11UseLocalhost</code>、<code>X11DisplayOffset</code>为默认值，根据<a href="https://man.openbsd.org/OpenBSD-current/man5/sshd_config.5#X11Forwarding" target="_blank" rel="noopener">手册</a>了解到，以下配置的作用是：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">X11Forwarding yes # 允许 sshd 转发 X11 流量
+</span></span><span class="line"><span class="cl"># X11UseLocalhost yes # sshd 将把 X server 的流量出口绑定到 localhost
+</span></span><span class="line"><span class="cl"># X11DisplayOffset 10 # 设定 display number 为10
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>这些配置使得 <code>sshd</code> 进程会将通过 ssh 连接的远程 <code>X server</code> 的流量转发到 <code>localhost:10.0</code>。在服务器上运行的程序，若环境变量配置为 <code>DISPLAY=localhost:10.0</code>，则可以接收到 <code>sshd</code> 进程转发的 <code>X server</code> 的数据。关于什么是 <code>DISPLAY</code> 环境变量和 <code>display number</code>，见 <a href="https://askubuntu.com/a/432257" target="_blank" rel="noopener">https://askubuntu.com/a/432257</a>、<a href="https://linux.die.net/man/7/x" target="_blank" rel="noopener">https://linux.die.net/man/7/x</a>。配置完记得 <code>sudo systemctl restart ssh</code> 重启一下 <code>sshd</code> 进程。</p>
+<h2 id="笔记本端"><a href="#笔记本端" class="anchor-link">#</a><a href="#contents:笔记本端" class="headings">笔记本端</a></h2>
+<p>Windows系统没有自带的 <code>X server</code>，现有方案有 <code>Xming</code>、<code>VcXsrv</code>、<code>MobaXterm</code>，我选择了 <code>MobaXterm</code>。安装启动后，该程序将自动架设 <code>X server</code>，地址为 <code>&lt;每个网络适配器的IP&gt;:0.0</code>。</p>
+<h3 id="cmd"><a href="#cmd" class="anchor-link">#</a><a href="#contents:cmd" class="headings">cmd</a></h3>
+<p>先用 Windows cmd 试试，<code>-v</code> 打印 debug 日志，<a href="https://man7.org/linux/man-pages/man1/ssh.1.html" target="_blank" rel="noopener"><code>-X</code> 允许经过鉴权的 X11 转发</a>，<code>-b</code> 指定要连接的网卡：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">C:<span class="se">\&gt;</span>ssh -v -X -b &lt;外置网卡对应网络适配器的IP&gt; -p &lt;ssh port&gt; user@remote
+</span></span><span class="line"><span class="cl">OpenSSH_for_Windows_9.5p1, LibreSSL 3.8.2
+</span></span><span class="line"><span class="cl">debug1: ...
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">Enter passphrase <span class="k">for</span> key <span class="s1">&#39;C:\Users\winuser/.ssh/pri_key&#39;</span>:
+</span></span><span class="line"><span class="cl">Authenticated to remote <span class="o">([</span>服务器IP<span class="o">]</span>:port<span class="o">)</span> using <span class="s2">&#34;publickey&#34;</span>.
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">debug1: Remote: /home/user/.ssh/authorized_keys:2: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+</span></span><span class="line"><span class="cl">debug1: Remote: /home/user/.ssh/authorized_keys:2: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+</span></span><span class="line"><span class="cl">debug1: X11 forwarding requested but DISPLAY not <span class="nb">set</span>
+</span></span><span class="line"><span class="cl">Linux remote 6.1.0-30-amd64 <span class="c1">#1 SMP PREEMPT_DYNAMIC Debian 6.1.124-1 (2025-01-12) x86_64</span>
+</span></span><span class="line"><span class="cl">Last login: ...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">user in remote in ~
+</span></span><span class="line"><span class="cl">% xeyes
+</span></span><span class="line"><span class="cl">Error: Can<span class="err">&#39;</span>t open display:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">user in remote in ~
+</span></span><span class="line"><span class="cl"><span class="m">1</span> % <span class="nb">echo</span> <span class="nv">$DISPLAY</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">user in remote in ~
+</span></span><span class="line"><span class="cl">%
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>失败了，发现这个远程 shell 没有设置 <code>DISPLAY</code> 环境变量，那我们手动设置一下：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">user in remote in ~
+</span></span><span class="line"><span class="cl">% <span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>localhost:10.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">user in remote in ~
+</span></span><span class="line"><span class="cl">% <span class="nb">echo</span> <span class="nv">$DISPLAY</span>
+</span></span><span class="line"><span class="cl">localhost:10.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">user in remote in ~
+</span></span><span class="line"><span class="cl">% xeyes
+</span></span><span class="line"><span class="cl">Error: Can<span class="err">&#39;</span>t open display: localhost:10.0
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>还是不行，<a href="https://unix.stackexchange.com/a/744354" target="_blank" rel="noopener">搜索</a>后发现，是 <code>X server</code>，即笔记本这边的 cmd 没有配置 <code>DISPLAY</code> 环境变量：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">C<span class="p">:</span><span class="nl">\</span><span class="c1">&gt;set DISPLAY=localhost:0.0</span>
+</span></span><span class="line"><span class="cl">C<span class="p">:</span><span class="nl">\</span><span class="c1">&gt;echo %DISPLAY%</span>
+</span></span><span class="line"><span class="cl">localhost:0.0
+</span></span><span class="line"><span class="cl">C<span class="p">:</span><span class="nl">\</span><span class="c1">&gt;ssh ...</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">debug1: No xauth program.
+</span></span><span class="line"><span class="cl">Warning: untrusted X11 forwarding setup failed: xauth key data not generated
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="p">(</span>export DISPLAY=localhost:10.0<span class="p">)</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">user in remote in ~
+</span></span><span class="line"><span class="cl">% xeyes
+</span></span><span class="line"><span class="cl">Error: Can&#39;t open display: localhost:10.0
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>仍然不行，但是出现了 “debug1: No xauth program” 这行日志，说明我们至少向前一步了。搜索得知， <code>xauth</code> 程序需要存在于 <code>X server</code> 这一端， cmd 里没有也没办法自行安装该程序。还好 <code>ssh</code> 还提供了 <code>-Y</code> 参数，允许未经鉴权的 X11 转发（注意，这对笔记本侧来说有<a href="https://man7.org/linux/man-pages/man1/ssh.1.html" target="_blank" rel="noopener">安全风险</a>）：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">C:<span class="se">\&gt;</span>ssh -v -Y ...
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">debug1: No xauth program.
+</span></span><span class="line"><span class="cl">**Warning: No xauth data<span class="p">;</span> using fake authentication data <span class="k">for</span> X11 forwarding.**
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">user in remote in ~
+</span></span><span class="line"><span class="cl">% xeyes
+</span></span><span class="line"><span class="cl">debug1: client_input_channel_open: ctype x11 rchan <span class="m">2</span> win <span class="m">65536</span> max <span class="m">16384</span>
+</span></span><span class="line"><span class="cl">debug1: client_request_x11: request from 127.0.0.1 <span class="m">41424</span>
+</span></span><span class="line"><span class="cl">debug1: channel 1: new x11 <span class="o">[</span>x11<span class="o">]</span> <span class="o">(</span>inactive timeout: 0<span class="o">)</span>
+</span></span><span class="line"><span class="cl">debug1: confirm x11
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>成功了！</p>
+<p><img alt="A screenshot showing the xeyes window and the cmd window" src="/img/postimg/2025/xeyes_with_cmd.png"></p>
+<h3 id="mobaxterm"><a href="#mobaxterm" class="anchor-link">#</a><a href="#contents:mobaxterm" class="headings">MobaXterm</a></h3>
+<p>在 MobaXterm 的本地终端上检查 <code>DISPLAY</code> 环境变量，发现其值已经设置到正确的值：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/home/mobaxterm&gt; <span class="nb">echo</span> <span class="nv">$DISPLAY</span>
+</span></span><span class="line"><span class="cl">127.0.0.1:0.0
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>通过 MobaXterm ssh 连接到服务器，发现 <code>DISPLAY</code> 也已设置，<code>xeyes</code> 运行成功：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% <span class="nb">echo</span> <span class="nv">$DISPLAY</span>
+</span></span><span class="line"><span class="cl">localhost:11.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">user in remote in ~
+</span></span><span class="line"><span class="cl">% xeyes
+</span></span><span class="line"><span class="cl">（生成界面）
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>注意这里 shell 中的 <code>DISPLAY</code> 变量的 display number 被设置为<code>11</code>，这是因为我的 cmd 终端还没退出 ssh，退出后再重新通过 MobaXterm 连接服务器，<code>DISPLAY</code> 会变回 <code>localhost:10.0</code>，这就是 <code>sshd_config</code> 中 <code>X11DisplayOffset</code> 配置项的作用，偏移从10开始。不过 MobaXterm 的本地终端上并没有安装 <code>xauth</code> （xauth: command not found），不清楚其内部是如何实现 X11 认证的。</p>
+<h3 id="intellij-over-jb-gateway"><a href="#intellij-over-jb-gateway" class="anchor-link">#</a><a href="#contents:intellij-over-jb-gateway" class="headings">IntelliJ (over JB Gateway)</a></h3>
+<p>我找不到修改 JB Gateway 的 ssh 以传递 <code>-X</code> <code>-Y</code> 参数的方法，还好可以通过<a href="https://man.openbsd.org/ssh_config.5#ForwardX11" target="_blank" rel="noopener">修改 ssh 配置</a>的方式达到相同目的，修改 <code>C:\Users\&lt;user&gt;\.ssh\config</code> 文件如下，并重启电脑（重启 ssh 服务也可以）：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Host &lt;remote domain/ip&gt;
+</span></span><span class="line"><span class="cl">    HostName &lt;remote domain/ip&gt;
+</span></span><span class="line"><span class="cl">    ForwardX11 yes
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>使用 JB Gateway 连接服务器上的 IntelliJ 后端，在项目的 <code>Run/Debug Configuration</code> 中增加环境变量 <code>DISPLAY=localhost:10.0</code>（它将在服务器上生效），点击运行并忐忑等待——失败了，出现了和文章开头一样的 GLFW 错误。在 IntelliJ 内的终端（连接到服务器）配置 <code>DISPLAY=localhost:10.0</code> 并运行 <code>xeyes</code> 也失败了。</p>
+<p>根据上面的尝试，我们可以判断大概是 IntelliJ 这边没有配置 <code>DISPLAY</code> 环境变量，来试试：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">C<span class="p">:</span><span class="nl">\Program</span><span class="c1"> Files\JetBrains\IntelliJ IDEA 2024.2.3\bin&gt;set DISPLAY=localhost:0.0 &amp;&amp; idea64.exe</span>
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>不行，相同的错误。经过尝试，我发现了一个不知道是否算作 workaround 的方法——借助已证明成功转发 X11 的 MobaXterm ssh 连接展示界面。用 MobaXterm 打开并保持到服务器的连接，将其 <code>DISPLAY</code> 环境变量的值（如<code>localhost:10.0</code>）配置到 <code>Run/Debug Configuration</code> 上，调试运行&hellip;&hellip;成功了！</p>
+<p><img alt="A screenshot showing the MobaXterm, Minecraft game window and IntelliJ run/debug configuration" src="/img/postimg/2025/mc_with_intellij.png"></p>
+<p>就是这样，没什么要说的了，感谢阅读，希望这篇文章能帮到你。如果你知道更好的方案，请给我留言，如果我忍耐不了这方案的延迟，会尝试换方案。</p>
+
+            </div>
+
+            
+    
+    
+
+
+
+        </article>
+
+        
+
+        
+    <div class="updated-badge-container">
+        <span title="Updated @ 2025-01-22 19:39:55 CST" style="cursor:help">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-01-22</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-01-22</text></g></svg>
+        </span></div>
+
+
+
+        
+    
+        <div class="post-gitinfo">
+            
+            
+                <div class="post-gitinfo-right">
+                    
+                        
+                            <div class="gitinfo-item feedback">
+                                <a href="https://github.com/boholder/boholder.github.io/issues" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon feedback-icon"><path d="M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z"/></svg>Feedback</a>
+                            </div>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+
+
+
+        <div class="post-share">
+
+        
+
+        <div class="share-items">
+
+            
+            
+                
+                    <div class="share-item facebook">
+                        
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/blogs/x11fwd/&amp;hashtag=%23Blog" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                    </div>
+                
+            
+                
+                    <div class="share-item mastodon">
+                            <a href="/fedishare.html#title=SSH%20X11%20Forwarding%20%e8%bf%9c%e7%a8%8b%e5%bc%80%e5%8f%91%e6%96%b9%e6%a1%88&amp;description=%e5%92%8c%e4%b8%80%e4%ba%9b%e5%88%a8%e6%a0%b9%e9%97%ae%e5%ba%95&amp;url=https://boholder.github.io/blogs/x11fwd/" title="分享到「Mastodon」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon mastodon-icon"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg></a>
+                        </div>
+                    
+            
+                
+                    <div class="share-item fediverse">
+                            <a href="/fedishare.html#title=SSH%20X11%20Forwarding%20%e8%bf%9c%e7%a8%8b%e5%bc%80%e5%8f%91%e6%96%b9%e6%a1%88&amp;description=%e5%92%8c%e4%b8%80%e4%ba%9b%e5%88%a8%e6%a0%b9%e9%97%ae%e5%ba%95&amp;url=https://boholder.github.io/blogs/x11fwd/" title="分享到「Fediverse」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="64 163 873 873" class="icon fediverse-icon"><defs><linearGradient id="fediverse-gradient"><stop offset="0%" stop-color="#ff0101"/><stop offset="10%" stop-color="#9501ff"/><stop offset="50%" stop-color="#ffca01"/><stop offset="75%" stop-color="#01a3ff"/><stop offset="100%" stop-color="#65ff01"/></linearGradient></defs><path d="M539 176q-32 0 -55 22t-25 55t20.5 58t56 27t58.5 -20.5t27 -56t-20.5 -59t-56.5 -26.5h-5zM452 271l-232 118q20 20 25 48l231 -118q-19 -20 -24 -48zM619 298q-13 25 -38 38l183 184q13 -25 39 -38zM477 320l-135 265l40 40l143 -280q-28 -5 -48 -25zM581 336 q-22 11 -46 10l-8 -1l21 132l56 9zM155 370q-32 0 -55 22.5t-25 55t20.5 58t56.5 27t59 -21t26.5 -56t-21 -58.5t-55.5 -27h-6zM245 438q1 9 1 18q-1 19 -10 35l132 21l26 -50zM470 474l-26 51l311 49q-1 -8 -1 -17q1 -19 10 -36zM842 480q-32 1 -55 23t-24.5 55t21 58 t56 27t58.5 -20.5t27 -56.5t-20.5 -59t-56.5 -27h-6zM236 493q-13 25 -39 38l210 210l51 -25zM196 531q-21 11 -44 10l-9 -1l40 256q21 -10 45 -9l8 1zM560 553l48 311q21 -10 44 -9l10 1l-46 -294zM755 576l-118 60l8 56l135 -68q-20 -20 -25 -48zM781 625l-119 231 q28 5 48 25l119 -231q-28 -5 -48 -25zM306 654l-68 134q28 5 48 25l60 -119zM568 671l-281 143q19 20 24 48l265 -135zM513 771l-51 25l106 107q13 -25 39 -38zM222 795q-32 0 -55.5 22.5t-25 55t21 57.5t56 27t58.5 -20.5t27 -56t-20.5 -58.5t-56.5 -27h-5zM311 863 q2 9 1 18q-1 19 -9 35l256 41q-1 -9 -1 -18q1 -18 10 -35zM646 863q-32 0 -55 22.5t-24.5 55t20.5 58t56 27t59 -21t27 -56t-20.5 -58.5t-56.5 -27h-6z"/></svg></a>
+                        </div>
+                    
+            
+                
+                    <div class="share-item twitter">
+                        
+                        <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/x11fwd/&amp;text=SSH%20X11%20Forwarding%20%e8%bf%9c%e7%a8%8b%e5%bc%80%e5%8f%91%e6%96%b9%e6%a1%88&amp;hashtags=Blog,&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                    </div>
+                
+            
+        </div>
+
+    </div>
+
+
+
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/blogs/program_awareness/" class="related-link">信息利用意识</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/blogs/event-loop-and-multithread-in-python/" class="related-link">Python中的Event Loop和多线程</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/blogs/execution_event/" class="related-link">留意程序触发事件和执行时序</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/blog/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>Blog</a>
+                
+            
+        </div>
+    
+
+
+
+        
+    <footer class="minimal-footer">
+        
+            <div class="post-tag"><a href="/tags/blog/" rel="tag" class="post-tag-link">#blog</a></div>
+        
+        
+        
+            
+                <div class="post-category">
+                    <a href="/categories/programming/" class="post-category-link">programming</a>/<a href="/categories/blog/" class="post-category-link">blog</a>
+                </div>
+            
+        
+    </footer>
+
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+            
+                <li class="post-nav-next">
+                    <a href="/blogs/embrace-impermanence/" rel="next">助我脱困的佛，心理学和生物学 &gt;</a>
+                </li>
+            
+        </ul>
+    
+
+
+
+        
+    
+
+        
+
+        
+
+        
+
+        
+            <div id="utterances"></div>
+        
+
+        
+
+        
+
+        
+
+    
+
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2019–2025&nbsp;<svg  xmlns="http://www.w3.org/2000/svg" height="16" width="16" id="glider_svg" ><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="8.3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="3" cy="13.6" r="2"/></svg></div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+
+            
+    
+        <ul class="socials"><li class="socials-item">
+                    <a href="/rss.xml" target="_blank" rel="external noopener" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="mailto:bottleholder@anche.no" target="_blank" rel="external noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://github.com/boholder" target="_blank" rel="external noopener" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                </li></ul>
+    
+
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+
+        
+
+
+
+
+
+
+    
+
+        
+
+        
+
+        
+            <script>
+    function loadComments() {
+        (function() {
+            const utterances = document.getElementById("utterances");
+            if (!utterances) {
+                return;
+            }
+            const script = document.createElement('script');
+            script.src = 'https:\/\/utteranc.es\/client.js';
+            script.async = true;
+            script.crossOrigin = 'anonymous';
+            script.setAttribute('repo', 'boholder\/boholder.github.io');
+            script.setAttribute('issue-term', 'pathname');
+            const isDark = getCurrentTheme() === 'dark';
+        if (isDark) {
+            script.setAttribute('theme', 'photon-dark');
+        } else {
+            script.setAttribute('theme', 'github-light');
+        }
+            
+            utterances.appendChild(script);
+        })();
+    }
+</script>
+        
+
+        
+
+        
+
+        
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
+
+
+
+
+
+
+    </body>
+</html>

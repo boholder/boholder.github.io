@@ -19,10 +19,313 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Sat, 14 Sep 2024 09:09:47 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 22 Jan 2025 19:40:21 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
+        
+            <item>
+                <title>SSH X11 Forwarding 远程开发方案</title>
+                <link>https://boholder.github.io/blogs/x11fwd/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/x11fwd/</guid>
+                <pubDate>Wed, 22 Jan 2025 00:00:00 &#43;0000</pubDate>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+                
+                    <description>&lt;p&gt;我有一个老旧的 Windows10 笔记本，它的性能不足以支持2025年的开发需要，但我偶尔需要在离开家里那台强力主机的情况下（比如在老家或办公室时）运行开发环境。于是我买了一台强力的无头主机（&lt;a href=&#34;https://www.mechrevo.com/content/details171_5615.html&#34;&gt;mechrevo imini pro&lt;/a&gt;, R78845H, 32G RAM）并安装了Debian（注意，安装包括Gnome图形界面，这可能无意间帮我节省了一些安装 X11 转发所必需的依赖库的步骤），用一根外置网卡（&lt;a href=&#34;https://www.lulian.cn/product/673.html&#34;&gt;绿联USB3.0外置网卡2.5G网速&lt;/a&gt;
+）把笔记本和无头主机连了起来，并建立了以笔记本为网关和DHCP服务器的局域网。关于如何折腾建立这网络，内容多到值得另写一篇博客，本文按下不表。这样一来，我便可以使用&lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;JetBrains IntelliJ&lt;/a&gt;中自带的&lt;a href=&#34;https://www.jetbrains.com/remote-development/gateway/&#34;&gt;JetBrains Gateway&lt;/a&gt;（通过 ssh）连接到无头主机（下称服务器）的 IntelliJ 后端，进行 Java 开发。&lt;/p&gt;
+&lt;p&gt;一切都很好，直到我编写 &lt;a href=&#34;https://github.com/minecraft-access/minecraft-access&#34;&gt;minecraft-access&lt;/a&gt; 这个 Minecraft mod。Minecraft 是个游戏，而且这个 mod 是客户端 mod，因此调试运行 mod 需要运行游戏，而这游戏需要&amp;hellip;&amp;hellip;打开一个窗口。服务器没有外接显示器，如果直接通过 JB Gateway 在服务器中调试运行程序，程序会抛出以下异常并退出：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;java.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x1000E]Failed to detect any supported platform
+    at knot//com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:78)
+    at knot//com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:460)
+    at knot//net.minecraft.client.MinecraftClient.&amp;lt;init&amp;gt;(MinecraftClient.java:501)
+    at knot//net.minecraft.client.main.Main.main(Main.java:250)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://www.glfw.org/&#34;&gt;GLFW&lt;/a&gt; 是一个 OpenGL 工具库，Minecarft 使用 &lt;a href=&#34;https://www.lwjgl.org/&#34;&gt;LWJGL (Lightweight Java Game Library)&lt;/a&gt; 处理其界面、音效、输入，而这个库的底层应用正是 GLFW。&lt;a href=&#34;https://discourse.glfw.org/t/glfw-with-lwjgl-on-anbernic-rg351p-with-rk3326-on-batocera/2363/2&#34;&gt;搜索&lt;/a&gt;后得知，该报错是指 GLFW 找不到一个可匹配的&lt;a href=&#34;https://en.wikipedia.org/wiki/Windowing_system&#34;&gt;窗口系统&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/X_Window_System&#34;&gt;X11/X Window&lt;/a&gt; 正是一个窗口系统，它能解决我的问题。经过搜索（&lt;a href=&#34;https://medium.com/mindorks/x-server-client-what-the-hell-305bd0dc857f&#34;&gt;这篇文章&lt;/a&gt;写得不错）我了解到 X11 协议的术语含义与我们所熟知的概念是相反的：&lt;code&gt;X client&lt;/code&gt; 是渲染界面且支持与 &lt;code&gt;X server&lt;/code&gt; 通信的程序。在这个场景中，&lt;code&gt;X client&lt;/code&gt; 需要运行在服务器里。&lt;code&gt;X server&lt;/code&gt; 是运行在连接了输入输出设备的电脑上，并向 &lt;code&gt;X client&lt;/code&gt; 转发输入数据、接收界面数据的程序。在这个场景中，它需要运行在我的老笔记本上。虽然界面的渲染由 &lt;code&gt;X client&lt;/code&gt; 承担，但渲染好的界面数据仍需要 &lt;code&gt;X server&lt;/code&gt; 将其展示在显示器上。&lt;/p&gt;
+&lt;p&gt;另外值得一提的是，X11 方案在设计之初没有充分考虑安全性，因此现有的安全方案便是通过万能的 ssh 转发 X11 流量。《UNIX and Linux System Administration Handbook, 4th Edition》书中提到：“通过 ssh 转发的 X11 界面并不流畅，即使在局域网中也是，如果存在网络延迟，情况会变得更糟”。它是&lt;a href=&#34;https://superuser.com/questions/1217280/why-is-x11-forwarding-so-inefficient&#34;&gt;对的&lt;/a&gt;，虽然我最终找到了成功方案，但游戏界面比较卡顿，我不得不缩小窗口来减少延迟，称得上“勉强能用”，组合按键和双击等复杂操作比较难触发。&lt;/p&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;TLDR&lt;/h2&gt;
+&lt;p&gt;考虑到最终效果并不好，我&lt;strong&gt;不建议&lt;/strong&gt;你使用这套 X11 Forwarding 方案，按照&lt;a href=&#34;https://news.ycombinator.com/item?id=8019346&#34;&gt;这个讨论&lt;/a&gt;试试 VNC 或者老版本（未收费）的 Nomachine&amp;rsquo;s NX 吧。不过如果你坚持，这是所有步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;服务器 &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt; 中配置 &lt;code&gt;X11Forwarding&lt;/code&gt; 的值为 &lt;code&gt;yes&lt;/code&gt;，&lt;code&gt;sudo systemctl restart ssh&lt;/code&gt; 重启 &lt;code&gt;sshd&lt;/code&gt; 进程。&lt;/li&gt;
+&lt;li&gt;笔记本用户 &lt;code&gt;C:\Users\&amp;lt;user&amp;gt;\.ssh\config&lt;/code&gt;（Windows）或 &lt;code&gt;~/.ssh/ssh_config&lt;/code&gt;（Linux）中做以下配置并重启电脑或 ssh 服务。&lt;/li&gt;
+&lt;li&gt;笔记本安装 MobaXterm，打开 MobaXterm 并连接到服务器，保持这个连接，检查该连接的 &lt;code&gt;DISPLAY&lt;/code&gt; 环境变量的值，不出意外的话为 &lt;code&gt;localhost:10.0&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;笔记本使用 JB Gateway 连接服务器上的 IntelliJ 后端，在项目的 &lt;code&gt;Run/Debug Configuration&lt;/code&gt; 中增加环境变量 &lt;code&gt;DISPLAY=&amp;lt;MobaXterm 连接的 DISPLAY 值&amp;gt;&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;使用 IntelliJ 调试运行程序，界面应显示在笔记本侧。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# /etc/ssh/sshd_config in server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;X11Forwarding yes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# C:\Users\&amp;lt;user&amp;gt;\.ssh\config in laptop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Host &amp;lt;remote domain/ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    HostName &amp;lt;remote domain/ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ForwardX11 yes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;服务器端&#34;&gt;服务器端&lt;/h2&gt;
+&lt;p&gt;在 &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt; 中配置 &lt;code&gt;X11Forwarding&lt;/code&gt; 的值为 &lt;code&gt;yes&lt;/code&gt;，同时保持 &lt;code&gt;X11UseLocalhost&lt;/code&gt;、&lt;code&gt;X11DisplayOffset&lt;/code&gt;为默认值，根据&lt;a href=&#34;https://man.openbsd.org/OpenBSD-current/man5/sshd_config.5#X11Forwarding&#34;&gt;手册&lt;/a&gt;了解到，以下配置的作用是：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;X11Forwarding yes # 允许 sshd 转发 X11 流量
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# X11UseLocalhost yes # sshd 将把 X server 的流量出口绑定到 localhost
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# X11DisplayOffset 10 # 设定 display number 为10
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这些配置使得 &lt;code&gt;sshd&lt;/code&gt; 进程会将通过 ssh 连接的远程 &lt;code&gt;X server&lt;/code&gt; 的流量转发到 &lt;code&gt;localhost:10.0&lt;/code&gt;。在服务器上运行的程序，若环境变量配置为 &lt;code&gt;DISPLAY=localhost:10.0&lt;/code&gt;，则可以接收到 &lt;code&gt;sshd&lt;/code&gt; 进程转发的 &lt;code&gt;X server&lt;/code&gt; 的数据。关于什么是 &lt;code&gt;DISPLAY&lt;/code&gt; 环境变量和 &lt;code&gt;display number&lt;/code&gt;，见 &lt;a href=&#34;https://askubuntu.com/a/432257&#34;&gt;https://askubuntu.com/a/432257&lt;/a&gt;、&lt;a href=&#34;https://linux.die.net/man/7/x&#34;&gt;https://linux.die.net/man/7/x&lt;/a&gt;。配置完记得 &lt;code&gt;sudo systemctl restart ssh&lt;/code&gt; 重启一下 &lt;code&gt;sshd&lt;/code&gt; 进程。&lt;/p&gt;
+&lt;h2 id=&#34;笔记本端&#34;&gt;笔记本端&lt;/h2&gt;
+&lt;p&gt;Windows系统没有自带的 &lt;code&gt;X server&lt;/code&gt;，现有方案有 &lt;code&gt;Xming&lt;/code&gt;、&lt;code&gt;VcXsrv&lt;/code&gt;、&lt;code&gt;MobaXterm&lt;/code&gt;，我选择了 &lt;code&gt;MobaXterm&lt;/code&gt;。安装启动后，该程序将自动架设 &lt;code&gt;X server&lt;/code&gt;，地址为 &lt;code&gt;&amp;lt;每个网络适配器的IP&amp;gt;:0.0&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;cmd&#34;&gt;cmd&lt;/h3&gt;
+&lt;p&gt;先用 Windows cmd 试试，&lt;code&gt;-v&lt;/code&gt; 打印 debug 日志，&lt;a href=&#34;https://man7.org/linux/man-pages/man1/ssh.1.html&#34;&gt;&lt;code&gt;-X&lt;/code&gt; 允许经过鉴权的 X11 转发&lt;/a&gt;，&lt;code&gt;-b&lt;/code&gt; 指定要连接的网卡：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:&lt;span class=&#34;se&#34;&gt;\&amp;gt;&lt;/span&gt;ssh -v -X -b &amp;lt;外置网卡对应网络适配器的IP&amp;gt; -p &amp;lt;ssh port&amp;gt; user@remote
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OpenSSH_for_Windows_9.5p1, LibreSSL 3.8.2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;debug1: ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter passphrase &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; key &lt;span class=&#34;s1&#34;&gt;&amp;#39;C:\Users\winuser/.ssh/pri_key&amp;#39;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Authenticated to remote &lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;服务器IP&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:port&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; using &lt;span class=&#34;s2&#34;&gt;&amp;#34;publickey&amp;#34;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;debug1: Remote: /home/user/.ssh/authorized_keys:2: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;debug1: Remote: /home/user/.ssh/authorized_keys:2: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;debug1: X11 forwarding requested but DISPLAY not &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Linux remote 6.1.0-30-amd64 &lt;span class=&#34;c1&#34;&gt;#1 SMP PREEMPT_DYNAMIC Debian 6.1.124-1 (2025-01-12) x86_64&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Last login: ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user in remote in ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% xeyes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error: Can&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t open display:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user in remote in ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; % &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$DISPLAY&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user in remote in ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;%
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;失败了，发现这个远程 shell 没有设置 &lt;code&gt;DISPLAY&lt;/code&gt; 环境变量，那我们手动设置一下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user in remote in ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;DISPLAY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;localhost:10.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user in remote in ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$DISPLAY&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;localhost:10.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user in remote in ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% xeyes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error: Can&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t open display: localhost:10.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;还是不行，&lt;a href=&#34;https://unix.stackexchange.com/a/744354&#34;&gt;搜索&lt;/a&gt;后发现，是 &lt;code&gt;X server&lt;/code&gt;，即笔记本这边的 cmd 没有配置 &lt;code&gt;DISPLAY&lt;/code&gt; 环境变量：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&amp;gt;set DISPLAY=localhost:0.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&amp;gt;echo %DISPLAY%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;localhost:0.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&amp;gt;ssh ...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;debug1: No xauth program.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Warning: untrusted X11 forwarding setup failed: xauth key data not generated
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;export DISPLAY=localhost:10.0&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user in remote in ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% xeyes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error: Can&amp;#39;t open display: localhost:10.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;仍然不行，但是出现了 “debug1: No xauth program” 这行日志，说明我们至少向前一步了。搜索得知， &lt;code&gt;xauth&lt;/code&gt; 程序需要存在于 &lt;code&gt;X server&lt;/code&gt; 这一端， cmd 里没有也没办法自行安装该程序。还好 &lt;code&gt;ssh&lt;/code&gt; 还提供了 &lt;code&gt;-Y&lt;/code&gt; 参数，允许未经鉴权的 X11 转发（注意，这对笔记本侧来说有&lt;a href=&#34;https://man7.org/linux/man-pages/man1/ssh.1.html&#34;&gt;安全风险&lt;/a&gt;）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:&lt;span class=&#34;se&#34;&gt;\&amp;gt;&lt;/span&gt;ssh -v -Y ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;debug1: No xauth program.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;**Warning: No xauth data&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; using fake authentication data &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; X11 forwarding.**
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user in remote in ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% xeyes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;debug1: client_input_channel_open: ctype x11 rchan &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; win &lt;span class=&#34;m&#34;&gt;65536&lt;/span&gt; max &lt;span class=&#34;m&#34;&gt;16384&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;debug1: client_request_x11: request from 127.0.0.1 &lt;span class=&#34;m&#34;&gt;41424&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;debug1: channel 1: new x11 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;x11&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;inactive timeout: 0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;debug1: confirm x11
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;成功了！&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;A screenshot showing the xeyes window and the cmd window&#34; src=&#34;https://boholder.github.io/img/postimg/2025/xeyes_with_cmd.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;mobaxterm&#34;&gt;MobaXterm&lt;/h3&gt;
+&lt;p&gt;在 MobaXterm 的本地终端上检查 &lt;code&gt;DISPLAY&lt;/code&gt; 环境变量，发现其值已经设置到正确的值：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/home/mobaxterm&amp;gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$DISPLAY&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;127.0.0.1:0.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;通过 MobaXterm ssh 连接到服务器，发现 &lt;code&gt;DISPLAY&lt;/code&gt; 也已设置，&lt;code&gt;xeyes&lt;/code&gt; 运行成功：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$DISPLAY&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;localhost:11.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user in remote in ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% xeyes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;（生成界面）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注意这里 shell 中的 &lt;code&gt;DISPLAY&lt;/code&gt; 变量的 display number 被设置为&lt;code&gt;11&lt;/code&gt;，这是因为我的 cmd 终端还没退出 ssh，退出后再重新通过 MobaXterm 连接服务器，&lt;code&gt;DISPLAY&lt;/code&gt; 会变回 &lt;code&gt;localhost:10.0&lt;/code&gt;，这就是 &lt;code&gt;sshd_config&lt;/code&gt; 中 &lt;code&gt;X11DisplayOffset&lt;/code&gt; 配置项的作用，偏移从10开始。不过 MobaXterm 的本地终端上并没有安装 &lt;code&gt;xauth&lt;/code&gt; （xauth: command not found），不清楚其内部是如何实现 X11 认证的。&lt;/p&gt;
+&lt;h3 id=&#34;intellij-over-jb-gateway&#34;&gt;IntelliJ (over JB Gateway)&lt;/h3&gt;
+&lt;p&gt;我找不到修改 JB Gateway 的 ssh 以传递 &lt;code&gt;-X&lt;/code&gt; &lt;code&gt;-Y&lt;/code&gt; 参数的方法，还好可以通过&lt;a href=&#34;https://man.openbsd.org/ssh_config.5#ForwardX11&#34;&gt;修改 ssh 配置&lt;/a&gt;的方式达到相同目的，修改 &lt;code&gt;C:\Users\&amp;lt;user&amp;gt;\.ssh\config&lt;/code&gt; 文件如下，并重启电脑（重启 ssh 服务也可以）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Host &amp;lt;remote domain/ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    HostName &amp;lt;remote domain/ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ForwardX11 yes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;使用 JB Gateway 连接服务器上的 IntelliJ 后端，在项目的 &lt;code&gt;Run/Debug Configuration&lt;/code&gt; 中增加环境变量 &lt;code&gt;DISPLAY=localhost:10.0&lt;/code&gt;（它将在服务器上生效），点击运行并忐忑等待——失败了，出现了和文章开头一样的 GLFW 错误。在 IntelliJ 内的终端（连接到服务器）配置 &lt;code&gt;DISPLAY=localhost:10.0&lt;/code&gt; 并运行 &lt;code&gt;xeyes&lt;/code&gt; 也失败了。&lt;/p&gt;
+&lt;p&gt;根据上面的尝试，我们可以判断大概是 IntelliJ 这边没有配置 &lt;code&gt;DISPLAY&lt;/code&gt; 环境变量，来试试：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;\Program&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt; Files\JetBrains\IntelliJ IDEA 2024.2.3\bin&amp;gt;set DISPLAY=localhost:0.0 &amp;amp;&amp;amp; idea64.exe&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;不行，相同的错误。经过尝试，我发现了一个不知道是否算作 workaround 的方法——借助已证明成功转发 X11 的 MobaXterm ssh 连接展示界面。用 MobaXterm 打开并保持到服务器的连接，将其 &lt;code&gt;DISPLAY&lt;/code&gt; 环境变量的值（如&lt;code&gt;localhost:10.0&lt;/code&gt;）配置到 &lt;code&gt;Run/Debug Configuration&lt;/code&gt; 上，调试运行&amp;hellip;&amp;hellip;成功了！&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;A screenshot showing the MobaXterm, Minecraft game window and IntelliJ run/debug configuration&#34; src=&#34;https://boholder.github.io/img/postimg/2025/mc_with_intellij.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;就是这样，没什么要说的了，感谢阅读，希望这篇文章能帮到你。如果你知道更好的方案，请给我留言，如果我忍耐不了这方案的延迟，会尝试换方案。&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/programming/">Programming</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/blog/">Blog</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/blog/">Blog</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>助我脱困的佛，心理学和生物学</title>

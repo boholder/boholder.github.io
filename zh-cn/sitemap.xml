@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://boholder.github.io/tags/blog/</loc>
-    <lastmod>2024-09-14T09:09:39+08:00</lastmod>
+    <lastmod>2025-01-22T19:39:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -15,8 +15,11 @@
                 href="https://boholder.github.io/tags/blog/"
                 />
   </url><url>
+    <loc>https://boholder.github.io/categories/blog/</loc>
+    <lastmod>2025-01-22T19:39:55+08:00</lastmod>
+  </url><url>
     <loc>https://boholder.github.io/</loc>
-    <lastmod>2024-09-14T09:09:39+08:00</lastmod>
+    <lastmod>2025-01-22T19:39:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -27,6 +30,22 @@
                 hreflang="zh-CN"
                 href="https://boholder.github.io/"
                 />
+  </url><url>
+    <loc>https://boholder.github.io/categories/programming/</loc>
+    <lastmod>2025-01-22T19:39:55+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://boholder.github.io/en-us/categories/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://boholder.github.io/categories/programming/"
+                />
+  </url><url>
+    <loc>https://boholder.github.io/blogs/x11fwd/</loc>
+    <lastmod>2025-01-22T19:39:55+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/categories/life/</loc>
     <lastmod>2024-09-14T09:09:39+08:00</lastmod>
@@ -58,19 +77,6 @@
                 rel="alternate"
                 hreflang="zh-CN"
                 href="https://boholder.github.io/tags/programming/"
-                />
-  </url><url>
-    <loc>https://boholder.github.io/categories/programming/</loc>
-    <lastmod>2024-08-29T17:25:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://boholder.github.io/en-us/categories/programming/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://boholder.github.io/categories/programming/"
                 />
   </url><url>
     <loc>https://boholder.github.io/blogs/program_awareness/</loc>
