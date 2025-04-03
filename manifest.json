@@ -1,16 +1,23 @@
 {
-    "name": "BoHolder's_site",
-    "short_name": "BoHolder's_site",
-    "icons": [
-        {
-            "src": "./icons/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#fff",
-    "background_color": "#fff",
-    "display": "standalone",
-    "orientation": "portrait-primary",
-    "start_url": "./?utm_source=homescreen"
+  "name": "BoHolder's site",
+  "short_name": "BoHolder",
+  "icons": [
+    {
+      "src": "./icons/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "start_url": "./"
 }

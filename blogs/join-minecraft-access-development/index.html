@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,7 +17,7 @@
 
     <title>我找到了适合自己的开源项目 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.9efed82b63fd668d7a97c6479cd4a3e39f674be783754af6b1ce95ebc29332fb.css"/>
+    <link rel="stylesheet" href="/css/meme.min.b53218f81c9c711bbb3f9df2b462678547d5b3dba22f5a3aaacae86a6084bb04.css"/>
 
     
     
@@ -34,17 +34,15 @@
 
     <meta name="author" content="" /><meta name="description" content="比较开心，分享一些相关的事" />
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="BoHolder的网站：博客，小玩意及其他" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="BoHolder的网站：博客，小玩意及其他" />
-    <meta name="msapplication-starturl" content="../../" />
-    <meta name="msapplication-TileColor" content="#fff" />
-    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
     <link rel="manifest" href="/manifest.json" />
 
     
@@ -59,7 +57,7 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2023-08-08T00:00:00+00:00",
-        "dateModified": "2024-08-29T17:25:00+08:00",
+        "dateModified": "2025-04-03T09:40:39+08:00",
         "url": "https://boholder.github.io/blogs/join-minecraft-access-development/",
         "headline": "我找到了适合自己的开源项目",
         "description": "比较开心，分享一些相关的事",
@@ -105,7 +103,7 @@
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2023-08-08T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2024-08-29T17:25:00&#43;08:00" />
+    <meta property="article:modified_time" content="2025-04-03T09:40:39&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -191,7 +189,7 @@
     
     
         
-        <time datetime="2024-08-29T17:25:00&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2024.8.29</time>
+        <time datetime="2025-04-03T09:40:39&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.4.3</time>
     
     
     
@@ -256,14 +254,13 @@
 <p>有个用户说，Ta 确定因为砍树遗留了一些浮在天空上的原木（经典 Minecraft 场景吧），但 Ta 无法定位确切位置。当时 mod 已经有对内置的特定方块或实体（比如矿物方块、红石部件和动物、怪物）的扫描锁定功能了，就是类似黑魂等那种锁定拉视角，按键切换锁定目标。我就想起《塞尔达：荒野之息》里有希卡之石选择物品图鉴并扫描的功能：不显示精确的位置，离目标越近，指示器强度越强叫得越响。我借鉴这个功能<a href="https://github.com/khanshoaib3/minecraft-access/pull/59" target="_blank" rel="noopener">实现了类似的功能</a>，其实只是扩展了已有的扫描锁定功能，允许用户指定目标方块或实体，并同时排除对其他预置的方块和实体的扫描，更“专注”寻找目标。</p>
 <p>上文提到的区域地图功能，我在设计功能时就联想到各种3A游戏漂亮的大地图，还有回合制策略游戏的战术视角了。我从其中借来了一些成熟的创意，比如“固定地图方向指北”，这是小地图设计的常见功能：地图随玩家视角旋转还是固定方位。</p>
 <h2 id="minecraft-真难上手"><a href="#minecraft-真难上手" class="anchor-link">#</a><a href="#contents:minecraft-真难上手" class="headings">Minecraft 真难上手</a></h2>
-<p>读者们熟悉这个游戏吗？你们还记得是怎么学会这个游戏的吗？我想和我年龄相近的很多人大概是从贴吧的德芙的帖子中入门的。不聊回忆了，我的重点是，Minecraft 它真难上手，我有时候教视力正常（智力也正常，甚至都比我聪明）的朋友玩 Minecraft，他们也很学得为难，大概是我教得差。既然 Minecraft 对正常人都这么难了，想想我们的视障者用户吧。我观察到大多数熟练的用户在真正上手玩游戏之前，就已经听了很久别人玩 Minecraft 的视频了。比如听<a href="https://www.youtube.com/watch?v=VfpHTJsn9I4&list=PLgENJ0iY3XBjmydGuzYTtDwfxuR6lN8KC" target="_blank" rel="noopener">Pixlriffs</a>
+<p>读者们熟悉这个游戏吗？你们还记得是怎么学会这个游戏的吗？我想和我年龄相近的很多人大概是从贴吧的德芙的帖子中入门的。不聊回忆了，我的重点是，Minecraft 它真难上手，我有时候教视力正常（智力也正常，甚至都比我聪明）的朋友玩 Minecraft，他们也很学得为难，大概是我教得差。既然 Minecraft 对正常人都这么难了，想想我们的视障者用户吧。我观察到大多数熟练的用户在真正上手玩游戏之前，就已经听了很久别人玩 Minecraft 的视频了。比如听<a href="https://www.youtube.com/watch?v=VfpHTJsn9I4&amp;list=PLgENJ0iY3XBjmydGuzYTtDwfxuR6lN8KC" target="_blank" rel="noopener">Pixlriffs</a>
 的视频，我猜他在国外 Minecraft 玩家中享有的声誉大概和德芙类似，他教得真的很基础且详细。</p>
 <p>在玩上游戏之前，视障者用户还要安装这个 mod 和一些依赖 mod，安装 mod 也不是一个简单的事，尤其是对没接触过的人来说。我写了一个<a href="https://github.com/khanshoaib3/minecraft-access/blob/default/doc/SET_UP_ON_WINDOWS.md" target="_blank" rel="noopener">啰嗦的教程</a>来降低这个门槛，至少有人再问时我可以直接发链接而不是重复打字了，已经帮到了好几个人。啰嗦对视障者来说应该不是问题，他们有很高的文本理解速度。</p>
 <p>然后视障者用户面临的最后一道难关就是微软写的那官方启动器。主要缺点是界面嵌套层次太多，无用按钮太多，设置位置混乱。这些对普通用户来说不过是多点点鼠标四处看看，对视障者来说这界面就是迷雾森林。不信？看看我教程里<a href="https://github.com/khanshoaib3/minecraft-access/blob/default/doc/SET_UP_ON_WINDOWS.md#start-the-game" target="_blank" rel="noopener">对这段的描述</a>写得多繁琐（我承认我写得也啰嗦），或者去启动器里按按 Tab 和回车，目标只是简单地按下“启动游戏”按钮，数数要按几次。</p>
 <h2 id="关于视觉障碍"><a href="#关于视觉障碍" class="anchor-link">#</a><a href="#contents:关于视觉障碍" class="headings">关于视觉障碍</a></h2>
 <blockquote>
-<p>没依据但广泛流传的：在我们从外界获取的信息中，视觉输入占据90%。</p>
-</blockquote>
+<p>没依据但广泛流传的：在我们从外界获取的信息中，视觉输入占据90%。</p></blockquote>
 <p>从正常视力到全盲，并不是0-1 boolean。比如极高度数的近视，也算视觉障碍。或者视野不完整，或者只能感到亮度等等，都是视觉障碍。色盲也算视觉障碍，只是对生活的影响比较小。我有个医生朋友对我说过，临床医学上哪个领域复杂，看哪个有专门的科室就是，比如牙科，儿科，还有眼科。所以眼的情况大概是比较复杂的。</p>
 <p>刚开始我小心翼翼地用 visually impaired players 指代用户，但后来发现用户们也不介意，自称就是 blind，那 blind 更方便敲，就 blind 吧。国内也是，我没有盲人朋友，但我搜到的盲人论坛之类，也不会用视障者这个词。我比较在意的是哪个词在与盲人口语交流时更亲近，叫视障者是不是显得很陌生？</p>
 <p>平时用户们也不太聊生活，我很少知道一个用户是男是女（如果 Ta 是性少数，从 profile 和头像中能看出来）。但是我比较清楚哪个用户的视觉障碍类型是什么（活跃用户不多，记得住）。我没有主动询问过用户相关情况，答疑时如果不清楚，就按全盲对待。但即使是大面积的视野缺失，也比全盲等情况方便玩游戏一些，我知道有一对视野缺失的夫妻还会玩慢节奏的 FPS。</p>
@@ -288,9 +285,9 @@ mod 频道热度高，大概是因为上文讨论过的星露谷比 Minecraft �
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2024-08-29 17:25:00 CST" style="cursor:help">
+        <span title="Updated @ 2025-04-03 09:40:39 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2024-08-29</text><text x="915" y="140" textLength="650" transform="scale(.1)">2024-08-29</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-04-03</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-04-03</text></g></svg>
         </span></div>
 
 
@@ -327,7 +324,7 @@ mod 频道热度高，大概是因为上文讨论过的星露谷比 Minecraft �
                 
                     <div class="share-item facebook">
                         
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/blogs/join-minecraft-access-development/&amp;hashtag=%23Blog" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/blogs/join-minecraft-access-development/&amp;hashtag=%23Open-Source" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
                     </div>
                 
             
@@ -346,7 +343,7 @@ mod 频道热度高，大概是因为上文讨论过的星露谷比 Minecraft �
                 
                     <div class="share-item twitter">
                         
-                        <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/join-minecraft-access-development/&amp;text=%e6%88%91%e6%89%be%e5%88%b0%e4%ba%86%e9%80%82%e5%90%88%e8%87%aa%e5%b7%b1%e7%9a%84%e5%bc%80%e6%ba%90%e9%a1%b9%e7%9b%ae&amp;hashtags=Blog,&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                        <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/join-minecraft-access-development/&amp;text=%e6%88%91%e6%89%be%e5%88%b0%e4%ba%86%e9%80%82%e5%90%88%e8%87%aa%e5%b7%b1%e7%9a%84%e5%bc%80%e6%ba%90%e9%a1%b9%e7%9b%ae&amp;hashtags=Open-Source,&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                     </div>
                 
             
@@ -365,15 +362,15 @@ mod 频道热度高，大概是因为上文讨论过的星露谷比 Minecraft �
             <ul class="related-list">
                 
                     <li class="related-item">
+                        <a href="/blogs/talk-with-nishuang-about-minecraft-access/" class="related-link">与倪爽老师交流为Minecraft设计视障者界面</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/blogs/what-i-learned-from-putgun/" class="related-link">我在开发 Puntgun 中学到的东西</a>
+                    </li>
+                
+                    <li class="related-item">
                         <a href="/blogs/embrace-impermanence/" class="related-link">助我脱困的佛，心理学和生物学</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/blogs/lazy-cooking/" class="related-link">懒人做饭</a>
-                    </li>
-                
-                    <li class="related-item">
-                        <a href="/blogs/execution_event/" class="related-link">留意程序触发事件和执行时序</a>
                     </li>
                 
             </ul>
@@ -391,7 +388,7 @@ mod 频道热度高，大概是因为上文讨论过的星露谷比 Minecraft �
                 
                 
                     
-                    <a href="/tags/blog/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>Blog</a>
+                    <a href="/tags/open-source/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>Open-Source</a>
                 
             
         </div>
@@ -402,7 +399,7 @@ mod 频道热度高，大概是因为上文讨论过的星露谷比 Minecraft �
         
     <footer class="minimal-footer">
         
-            <div class="post-tag"><a href="/tags/blog/" rel="tag" class="post-tag-link">#blog</a></div>
+            <div class="post-tag"><a href="/tags/open-source/" rel="tag" class="post-tag-link">#open-source</a></div>
         
         
         

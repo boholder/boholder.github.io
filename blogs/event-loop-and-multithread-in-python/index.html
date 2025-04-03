@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,7 +17,7 @@
 
     <title>Python中的Event Loop和多线程 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.9efed82b63fd668d7a97c6479cd4a3e39f674be783754af6b1ce95ebc29332fb.css"/>
+    <link rel="stylesheet" href="/css/meme.min.b53218f81c9c711bbb3f9df2b462678547d5b3dba22f5a3aaacae86a6084bb04.css"/>
 
     
     
@@ -34,17 +34,15 @@
 
     <meta name="author" content="" /><meta name="description" content="因工作接触Python Web，又稍微往底层和延伸搜了搜" />
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="BoHolder的网站：博客，小玩意及其他" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="BoHolder的网站：博客，小玩意及其他" />
-    <meta name="msapplication-starturl" content="../../" />
-    <meta name="msapplication-TileColor" content="#fff" />
-    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
     <link rel="manifest" href="/manifest.json" />
 
     
@@ -59,7 +57,7 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2024-02-29T00:00:00+00:00",
-        "dateModified": "2024-03-10T13:35:49+08:00",
+        "dateModified": "2025-04-03T09:40:39+08:00",
         "url": "https://boholder.github.io/blogs/event-loop-and-multithread-in-python/",
         "headline": "Python中的Event Loop和多线程",
         "description": "因工作接触Python Web，又稍微往底层和延伸搜了搜",
@@ -105,7 +103,7 @@
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2024-02-29T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2024-03-10T13:35:49&#43;08:00" />
+    <meta property="article:modified_time" content="2025-04-03T09:40:39&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -191,7 +189,7 @@
     
     
         
-        <time datetime="2024-03-10T13:35:49&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2024.3.10</time>
+        <time datetime="2025-04-03T09:40:39&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.4.3</time>
     
     
     
@@ -264,20 +262,17 @@
 <p>在event loop方案中，阻塞I/O会block住当前运行该逻辑的工作线程。我找到了一句对Python<code>asyncio</code>库的辛辣评论：</p>
 <blockquote>
 <p>Async is just a pretty face on single-threaded callback hell.
-&ndash; Reddit user, Niicodemus <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">[5]</a></sup></p>
-</blockquote>
+&ndash; Reddit user, Niicodemus <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">[5]</a></sup></p></blockquote>
 <p>这位的观点在上下文语境中是正确的。&ldquo;a pretty face on callback hell&rdquo;（真怀念，这是我求职时被问到的问题，下次我会这样回答），即Python的<code>async</code>、<code>await</code>关键字的一个作用是作为callback的语法糖<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">[6]</a></sup>。<code>asyncio</code>库的event loop实现是单线程的<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">[7]</a></sup>，所以如果在使用<code>asyncio</code>库的同时调用阻塞I/O，整个都会卡住。最好调用<a href="https://docs.python.org/3/library/asyncio-eventloop.html#executing-code-in-thread-or-process-pools" target="_blank" rel="noopener"><code>loop.run_in_executor(executor, func, *args)</code></a>方法，在线程池中运行阻塞I/O（或在进程池中运行CPU
 bound任务），将阻塞等待转换为非阻塞等待。</p>
 <h2 id="并非所有event-loop实现方案都是单线程实现"><a href="#并非所有event-loop实现方案都是单线程实现" class="anchor-link">#</a><a href="#contents:并非所有event-loop实现方案都是单线程实现" class="headings">并非所有event loop实现方案都是单线程实现</a></h2>
 <p>另外，Event loop结构在不同实现方案中处于不同的位置。</p>
 <blockquote>
-<p>(In Netty,) The event loop runs continuously in a single thread, although we can have <strong>as many event loops as the number of available cores</strong>.<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">[8]</a></sup></p>
-</blockquote>
+<p>(In Netty,) The event loop runs continuously in a single thread, although we can have <strong>as many event loops as the number of available cores</strong>.<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">[8]</a></sup></p></blockquote>
 <p>Java生态下的<code>Spring WebFlux</code>作为一个web application框架，可使用多种web server作为底层依赖。其中<code>Netty</code>是一种实现了非阻塞I/O的web client/server 框架，提供TCP、UDP、HTTP协议的非阻塞实现。使用<code>Netty</code>编写web server时，需要声明两类线程，接收请求的线程（boss）和处理请求的线程（worker）。每一个线程中都存在一个event loop，被作为<code>EventLoopGroup</code>统一管理（因而我们要<a href="https://netty.io/wiki/user-guide-for-4.x.html#wiki-h3-5" target="_blank" rel="noopener">为一个web server声明</a><code>bossGroup</code>和<code>workerGroup</code>两个<code>EventLoopGroup</code><sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">[9]</a></sup>）。<code>WebFlux</code>库拥有类似<code>asyncio</code>库<code>loop.run_in_executor()</code>方法的<a href="https://spring.io/blog/2019/12/13/flight-of-the-flux-3-hopping-threads-and-schedulers#the-publishonscheduler-s-operator" target="_blank" rel="noopener">publishOn(Scheduler s)</a>方法，将当前调用链的后续步骤移到另一个<code>Scheduler</code>（即另一个线程池）中运行。</p>
 <p>JavaScript语言被定义为一个“单线程”语言<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">[10]</a></sup>，它<em>应当</em>被执行在单线程环境中（但是书面约定并不阻止你多线程执行JavaScript代码）。JavaScript引擎是负责解释并执行JavaScript代码的程序，大多数引擎（比如Chrome V8）遵守了单线程执行的约定（除了Rhino引擎<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">[11]</a></sup>）。如果你在前端JavaScript代码中调用阻塞I/O，由JavaScript事件驱动的UI将无法响应用户操作<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup>，因为event loop始终无法空闲下来并处理下一个事件。</p>
 <blockquote>
-<p>Node.js uses a small number of threads to handle many clients. In Node.js there are two types of threads: <strong>one Event Loop</strong> (aka the main loop, main thread, event thread, etc.), and a pool of k Workers in a Worker Pool (aka the threadpool).<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">[13]</a></sup></p>
-</blockquote>
+<p>Node.js uses a small number of threads to handle many clients. In Node.js there are two types of threads: <strong>one Event Loop</strong> (aka the main loop, main thread, event thread, etc.), and a pool of k Workers in a Worker Pool (aka the threadpool).<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">[13]</a></sup></p></blockquote>
 <p><code>Node.js</code>基于V8引擎和<code>libuv</code>库，生成一个Worker Pool（基于一个kernel-level thread pool<sup id="fnref1:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>，这个线程池是由<code>libuv</code>库调用系统调用申请创建的<sup id="fnref:14"><a href="#fn:14" class="footnote-ref" role="doc-noteref">[14]</a></sup>）来处理所有逻辑<sup id="fnref:15"><a href="#fn:15" class="footnote-ref" role="doc-noteref">[15]</a></sup>。因此在Node.js所运行的代码中调用阻塞I/O的行为将仅仅阻塞当前运行这段逻辑的worker，其他worker仍将正常运行。但<code>Node.js</code>只有一个event loop调度全部worker。</p>
 <h2 id="总结"><a href="#总结" class="anchor-link">#</a><a href="#contents:总结" class="headings">总结</a></h2>
 <p>对三种并发方案的选择变得很简单，简单到不会忘记：</p>
@@ -352,9 +347,9 @@ bound任务），将阻塞等待转换为非阻塞等待。</p>
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2024-03-10 13:35:49 CST" style="cursor:help">
+        <span title="Updated @ 2025-04-03 09:40:39 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2024-03-10</text><text x="915" y="140" textLength="650" transform="scale(.1)">2024-03-10</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-04-03</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-04-03</text></g></svg>
         </span></div>
 
 
@@ -391,7 +386,7 @@ bound任务），将阻塞等待转换为非阻塞等待。</p>
                 
                     <div class="share-item facebook">
                         
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/blogs/event-loop-and-multithread-in-python/&amp;hashtag=%23Programming" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/blogs/event-loop-and-multithread-in-python/&amp;hashtag=%23Python" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
                     </div>
                 
             
@@ -410,7 +405,7 @@ bound任务），将阻塞等待转换为非阻塞等待。</p>
                 
                     <div class="share-item twitter">
                         
-                        <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/event-loop-and-multithread-in-python/&amp;text=Python%e4%b8%ad%e7%9a%84Event%20Loop%e5%92%8c%e5%a4%9a%e7%ba%bf%e7%a8%8b&amp;hashtags=Programming,Blog,Python,&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                        <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/event-loop-and-multithread-in-python/&amp;text=Python%e4%b8%ad%e7%9a%84Event%20Loop%e5%92%8c%e5%a4%9a%e7%ba%bf%e7%a8%8b&amp;hashtags=Python,Concurrency,&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                     </div>
                 
             
@@ -429,15 +424,15 @@ bound任务），将阻塞等待转换为非阻塞等待。</p>
             <ul class="related-list">
                 
                     <li class="related-item">
-                        <a href="/blogs/program_awareness/" class="related-link">信息利用意识</a>
+                        <a href="/blogs/yarrow-divination/" class="related-link">大衍筮法脚本</a>
                     </li>
                 
                     <li class="related-item">
-                        <a href="/blogs/java-9-to-17/" class="related-link">Java9到17我关心的新特性</a>
+                        <a href="/blogs/x11fwd/" class="related-link">SSH X11 Forwarding 远程开发方案</a>
                     </li>
                 
                     <li class="related-item">
-                        <a href="/blogs/what-i-learned-from-putgun/" class="related-link">我在开发 Puntgun 中学到的东西</a>
+                        <a href="/blogs/execution_event/" class="related-link">留意程序触发事件和执行时序</a>
                     </li>
                 
             </ul>
@@ -455,23 +450,15 @@ bound任务），将阻塞等待转换为非阻塞等待。</p>
                 
                 
                     
-                    <a href="/tags/programming/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>Programming</a>
-                
-            
-                
-                
-                
-                
-                    
-                    <a href="/tags/blog/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>Blog</a>
-                
-            
-                
-                
-                
-                
-                    
                     <a href="/tags/python/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>Python</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/concurrency/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>Concurrency</a>
                 
             
         </div>
@@ -482,7 +469,7 @@ bound任务），将阻塞等待转换为非阻塞等待。</p>
         
     <footer class="minimal-footer">
         
-            <div class="post-tag"><a href="/tags/programming/" rel="tag" class="post-tag-link">#programming</a> <a href="/tags/blog/" rel="tag" class="post-tag-link">#blog</a> <a href="/tags/python/" rel="tag" class="post-tag-link">#python</a></div>
+            <div class="post-tag"><a href="/tags/python/" rel="tag" class="post-tag-link">#python</a> <a href="/tags/concurrency/" rel="tag" class="post-tag-link">#concurrency</a></div>
         
         
         

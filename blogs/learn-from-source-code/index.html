@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,7 +17,7 @@
 
     <title>译文：从源码中学习（阅读源码，初学者的有效成长方式） | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.9efed82b63fd668d7a97c6479cd4a3e39f674be783754af6b1ce95ebc29332fb.css"/>
+    <link rel="stylesheet" href="/css/meme.min.b53218f81c9c711bbb3f9df2b462678547d5b3dba22f5a3aaacae86a6084bb04.css"/>
 
     
     
@@ -34,17 +34,15 @@
 
     <meta name="author" content="Nick Mose" /><meta name="description" content="为什么我们需要阅读源代码；如何阅读代码，并尽可能从源代码中学到更多" />
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="BoHolder的网站：博客，小玩意及其他" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="BoHolder的网站：博客，小玩意及其他" />
-    <meta name="msapplication-starturl" content="../../" />
-    <meta name="msapplication-TileColor" content="#fff" />
-    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
     <link rel="manifest" href="/manifest.json" />
 
     
@@ -59,7 +57,7 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-05-25T00:00:00+00:00",
-        "dateModified": "2023-08-08T19:12:01+08:00",
+        "dateModified": "2025-04-03T09:40:39+08:00",
         "url": "https://boholder.github.io/blogs/learn-from-source-code/",
         "headline": "译文：从源码中学习（阅读源码，初学者的有效成长方式）",
         "description": "为什么我们需要阅读源代码；如何阅读代码，并尽可能从源代码中学到更多",
@@ -105,7 +103,7 @@
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-05-25T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2023-08-08T19:12:01&#43;08:00" />
+    <meta property="article:modified_time" content="2025-04-03T09:40:39&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -191,7 +189,7 @@
     
     
         
-        <time datetime="2023-08-08T19:12:01&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2023.8.8</time>
+        <time datetime="2025-04-03T09:40:39&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.4.3</time>
     
     
     
@@ -199,7 +197,7 @@
         
         
             
-                <span class="post-meta-item category"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M16 0H4C1.79 0 .02 1.79.02 4L0 28c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4H20l-4-4z"></path></svg>&nbsp;<a href="/categories/programming/" class="category-link p-category">Programming</a></span>
+                <span class="post-meta-item category"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M16 0H4C1.79 0 .02 1.79.02 4L0 28c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4H20l-4-4z"></path></svg>&nbsp;<a href="/categories/programming/" class="category-link p-category">Programming</a>/<a href="/categories/tips/" class="category-link p-category">Tips</a></span>
             
         
     
@@ -266,8 +264,7 @@
 多年以来，我们阅读了不同难度的伟大作家的作品，并练习了多种写作技巧。</p>
 <blockquote>
 <p>“如果你没时间读，你就没时间（或工具）写，就这么简单。”
-—— 斯蒂芬·金，<a href="https://book.douban.com/subject/3888123/" target="_blank" rel="noopener">《写作这回事：创作生涯回忆录》</a></p>
-</blockquote>
+—— 斯蒂芬·金，<a href="https://book.douban.com/subject/3888123/" target="_blank" rel="noopener">《写作这回事：创作生涯回忆录》</a></p></blockquote>
 <p>正如斯蒂芬·金所观察到的那样，一个作家必须广泛而频繁地阅读，才能形成自己的声音，
 并学会写出促使读者拿起书并痴读的句式和故事结构。
 <strong>和读书一样，有意地阅读代码可以帮助程序员加速成长，尤其是对中级(intermediate)程序员而言。</strong>
@@ -375,8 +372,7 @@
 <h4 id="了解数据结构间的关系"><a href="#了解数据结构间的关系" class="anchor-link">#</a><a href="#contents:了解数据结构间的关系" class="headings">了解数据结构间的关系</a></h4>
 <blockquote>
 <p>“糟糕的程序员担心代码，优秀的程序员担心数据结构和它们的关系。”
--Linus Torvalds</p>
-</blockquote>
+-Linus Torvalds</p></blockquote>
 <p>数据结构是一个程序中最重要的元素。用笔或者你喜欢的其他工具画出数据结构间的关系。
 这个图就是源码的映射。你会在阅读过程中时常参考这个图。一些工具比如<a href="https://scitools.com/" target="_blank" rel="noopener">scitools</a>
 可以用来生成 UML 类图。
@@ -449,9 +445,9 @@
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2023-08-08 19:12:01 CST" style="cursor:help">
+        <span title="Updated @ 2025-04-03 09:40:39 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-08-08</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-08-08</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-04-03</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-04-03</text></g></svg>
         </span></div>
 
 
@@ -507,7 +503,7 @@
                 
                     <div class="share-item twitter">
                         
-                        <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/learn-from-source-code/&amp;text=%e8%af%91%e6%96%87%ef%bc%9a%e4%bb%8e%e6%ba%90%e7%a0%81%e4%b8%ad%e5%ad%a6%e4%b9%a0%ef%bc%88%e9%98%85%e8%af%bb%e6%ba%90%e7%a0%81%ef%bc%8c%e5%88%9d%e5%ad%a6%e8%80%85%e7%9a%84%e6%9c%89%e6%95%88%e6%88%90%e9%95%bf%e6%96%b9%e5%bc%8f%ef%bc%89&amp;hashtags=Programming,Blog,&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                        <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/learn-from-source-code/&amp;text=%e8%af%91%e6%96%87%ef%bc%9a%e4%bb%8e%e6%ba%90%e7%a0%81%e4%b8%ad%e5%ad%a6%e4%b9%a0%ef%bc%88%e9%98%85%e8%af%bb%e6%ba%90%e7%a0%81%ef%bc%8c%e5%88%9d%e5%ad%a6%e8%80%85%e7%9a%84%e6%9c%89%e6%95%88%e6%88%90%e9%95%bf%e6%96%b9%e5%bc%8f%ef%bc%89&amp;hashtags=Programming,&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                     </div>
                 
             
@@ -555,14 +551,6 @@
                     <a href="/tags/programming/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>Programming</a>
                 
             
-                
-                
-                
-                
-                    
-                    <a href="/tags/blog/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>Blog</a>
-                
-            
         </div>
     
 
@@ -571,13 +559,13 @@
         
     <footer class="minimal-footer">
         
-            <div class="post-tag"><a href="/tags/programming/" rel="tag" class="post-tag-link">#programming</a> <a href="/tags/blog/" rel="tag" class="post-tag-link">#blog</a></div>
+            <div class="post-tag"><a href="/tags/programming/" rel="tag" class="post-tag-link">#programming</a></div>
         
         
         
             
                 <div class="post-category">
-                    <a href="/categories/programming/" class="post-category-link">programming</a>
+                    <a href="/categories/programming/" class="post-category-link">programming</a>/<a href="/categories/tips/" class="post-category-link">tips</a>
                 </div>
             
         

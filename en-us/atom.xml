@@ -4,18 +4,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
     <title type="text">BoHolder&#39;s site: crafts, blogs etc</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2025-01-22T19:40:22&#43;08:00</updated>
+    <updated>2025-04-03T16:42:51&#43;08:00</updated>
     <id>https://boholder.github.io/en-us/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/en-us/atom.xml" />
     
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-    <generator uri="https://gohugo.io/" version="0.133.1">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.145.0">Hugo</generator>
         <entry>
             <title type="text">Pay Attention to Program-triggering Events and Execution Order</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/execution_event/" />
             <id>https://boholder.github.io/en-us/blogs/execution_event/</id>
-            <updated>2024-08-29T14:24:58&#43;08:00</updated>
+            <updated>2025-04-03T09:40:39&#43;08:00</updated>
             <published>2023-12-08T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://boholder.github.io/en-us/</uri>
@@ -23,15 +23,15 @@
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">This will help you better understand and write programs</summary>
             
                 <content type="html">&lt;p&gt;I originally thought this is a kind of passive skill of the programmer profession, but I realized that many colleagues do not pay much attention to program-triggering events and execution order. In this article, I want to explain why we, as programmers, should pay attention to these things and what benefits it brings.&lt;/p&gt;
-&lt;h2 id=&#34;when-the-program-is-triggered&#34;&gt;When the program is triggered&lt;/h2&gt;
-&lt;p&gt;If you accidentally download a virus from the internet, and it&amp;rsquo;s now saved on your local disk. Is it game over? Not yet. It hasn&amp;rsquo;t been executed. Just delete it (preferably using a file shredder tool). Our computers follow the &lt;a href=&#34;https://en.wikipedia.org/wiki/Von_Neumann_architecture&#34;&gt;Von Neumann architecture&lt;/a&gt;, in which programs and data are treated equally when they are stored in the hard drive (as well as in memory). The program on the hard drive has not been executed. I guess people working in
+&lt;h2 id=&#34;when-the-program-is-triggered&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/execution_event/#when-the-program-is-triggered&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/execution_event/#contents:when-the-program-is-triggered&#34; class=&#34;headings&#34;&gt;When the program is triggered&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;If you accidentally download a virus from the internet, and it&amp;rsquo;s now saved on your local disk. Is it game over? Not yet. It hasn&amp;rsquo;t been executed. Just delete it (preferably using a file shredder tool). Our computers follow the &lt;a href=&#34;https://en.wikipedia.org/wiki/Von_Neumann_architecture&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Von Neumann architecture&lt;/a&gt;, in which programs and data are treated equally when they are stored in the hard drive (as well as in memory). The program on the hard drive has not been executed. I guess people working in
 cybersecurity are familiar with this. A successful attack inevitably involves the successful execution of malicious instructions.&lt;/p&gt;
-&lt;p&gt;You must have been scared by those &lt;a href=&#34;https://www.google.com/search?q=classic+jump+scare+flash+game&#34;&gt;prank Flash games&lt;/a&gt; ages ago, right? (No? Well, maybe this example is too old). If you close the game before the jump scare scene is triggered, you&amp;rsquo;re safe, nothing happens. The Flash game is already running in your browser (meaning all the game&amp;rsquo;s code is in memory), but that doesn&amp;rsquo;t mean the jump scare scene (a specific piece of code) will necessarily be triggered by your operations.&lt;/p&gt;
-&lt;h2 id=&#34;program-triggering-events-and-execution-order&#34;&gt;Program-triggering events and execution order&lt;/h2&gt;
-&lt;p&gt;The term &amp;lsquo;program-triggering event&amp;rsquo; is something I coined myself, referring to &amp;ldquo;events that trigger the execution of instructions.&amp;rdquo; It&amp;rsquo;s a simple definition, but I couldn&amp;rsquo;t find a ready-made term that precisely fits this definition. Perhaps in the right context (such as in &lt;a href=&#34;https://en.wikipedia.org/wiki/Event-driven_architecture&#34;&gt;event-driven architecture&lt;/a&gt;), the term &amp;ldquo;event&amp;rdquo; alone embodies this meaning, and in the following text, we will use &amp;ldquo;event&amp;rdquo; instead of that term.&lt;/p&gt;
-&lt;p&gt;In graphical user interface applications, user actions are events; in servers, external requests are events; in scheduled execution systems, the system serves as the event triggering timed tasks. Different program entities can trigger each other in a chained manner. For example the famous interview question - &lt;a href=&#34;https://github.com/alex/what-happens-when&#34;&gt;What happens when you type google.com into your browser&amp;rsquo;s address bar and press Enter?&lt;/a&gt; Wow, it&amp;rsquo;s really quite a chain. From this perspective, a program residing in memory is somewhat like nervous system: it is alive (part of the persistently running logic actively listens for events), but it is in a standby state. An event will activate its corresponding processing logic (a portion associated with the event), and after the logic execution, it returns to the standby state.&lt;/p&gt;
-&lt;p&gt;Looking more abstractly, each node in a chain of calls is a part of the &lt;a href=&#34;https://en.wikipedia.org/wiki/IPO_model&#34;&gt;input–process–output model&lt;/a&gt;. Let&amp;rsquo;s take a closer look at the hierarchical execution within the same process, for instance, from the perspective of functions. You must be familiar with the &lt;a href=&#34;https://en.wikipedia.org/wiki/Call_stack&#34;&gt;Call Stack&lt;/a&gt;, which records the order of function calls, making it clear who called whom. This represents the function-level program execution sequence. The interview question mentioned earlier involves multiple levels of execution sequence.&lt;/p&gt;
-&lt;h2 id=&#34;what-are-the-benefits&#34;&gt;What are the benefits?&lt;/h2&gt;
+&lt;p&gt;You must have been scared by those &lt;a href=&#34;https://www.google.com/search?q=classic&amp;#43;jump&amp;#43;scare&amp;#43;flash&amp;#43;game&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;prank Flash games&lt;/a&gt; ages ago, right? (No? Well, maybe this example is too old). If you close the game before the jump scare scene is triggered, you&amp;rsquo;re safe, nothing happens. The Flash game is already running in your browser (meaning all the game&amp;rsquo;s code is in memory), but that doesn&amp;rsquo;t mean the jump scare scene (a specific piece of code) will necessarily be triggered by your operations.&lt;/p&gt;
+&lt;h2 id=&#34;program-triggering-events-and-execution-order&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/execution_event/#program-triggering-events-and-execution-order&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/execution_event/#contents:program-triggering-events-and-execution-order&#34; class=&#34;headings&#34;&gt;Program-triggering events and execution order&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The term &amp;lsquo;program-triggering event&amp;rsquo; is something I coined myself, referring to &amp;ldquo;events that trigger the execution of instructions.&amp;rdquo; It&amp;rsquo;s a simple definition, but I couldn&amp;rsquo;t find a ready-made term that precisely fits this definition. Perhaps in the right context (such as in &lt;a href=&#34;https://en.wikipedia.org/wiki/Event-driven_architecture&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;event-driven architecture&lt;/a&gt;), the term &amp;ldquo;event&amp;rdquo; alone embodies this meaning, and in the following text, we will use &amp;ldquo;event&amp;rdquo; instead of that term.&lt;/p&gt;
+&lt;p&gt;In graphical user interface applications, user actions are events; in servers, external requests are events; in scheduled execution systems, the system serves as the event triggering timed tasks. Different program entities can trigger each other in a chained manner. For example the famous interview question - &lt;a href=&#34;https://github.com/alex/what-happens-when&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;What happens when you type google.com into your browser&amp;rsquo;s address bar and press Enter?&lt;/a&gt; Wow, it&amp;rsquo;s really quite a chain. From this perspective, a program residing in memory is somewhat like nervous system: it is alive (part of the persistently running logic actively listens for events), but it is in a standby state. An event will activate its corresponding processing logic (a portion associated with the event), and after the logic execution, it returns to the standby state.&lt;/p&gt;
+&lt;p&gt;Looking more abstractly, each node in a chain of calls is a part of the &lt;a href=&#34;https://en.wikipedia.org/wiki/IPO_model&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;input–process–output model&lt;/a&gt;. Let&amp;rsquo;s take a closer look at the hierarchical execution within the same process, for instance, from the perspective of functions. You must be familiar with the &lt;a href=&#34;https://en.wikipedia.org/wiki/Call_stack&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Call Stack&lt;/a&gt;, which records the order of function calls, making it clear who called whom. This represents the function-level program execution sequence. The interview question mentioned earlier involves multiple levels of execution sequence.&lt;/p&gt;
+&lt;h2 id=&#34;what-are-the-benefits&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/execution_event/#what-are-the-benefits&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/execution_event/#contents:what-are-the-benefits&#34; class=&#34;headings&#34;&gt;What are the benefits?&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;When programming and designing programs, one should always keep in mind the events and execution order of the program. Here are a few examples:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -41,16 +41,15 @@ cybersecurity are familiar with this. A successful attack inevitably involves th
 &lt;p&gt;If you need to add new logic within existing logic, where is the most appropriate place to insert the call to the new logic? Draw a data flow diagram and check the execution order. Call the new logic as soon as the required data (function parameters) are ready.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;If the program doesn&amp;rsquo;t crash, but some fields in the output result are incorrect, what tool can leverage the information that &amp;ldquo;some output fields have incorrect values&amp;rdquo;? &lt;a href=&#34;https://en.wikipedia.org/wiki/Data-flow_analysis&#34;&gt;Data flow analysis&lt;/a&gt; can trace backward from the output logic of those error fields until it reaches the point where they are declared; the error lies somewhere in between.&lt;/p&gt;
+&lt;p&gt;If the program doesn&amp;rsquo;t crash, but some fields in the output result are incorrect, what tool can leverage the information that &amp;ldquo;some output fields have incorrect values&amp;rdquo;? &lt;a href=&#34;https://en.wikipedia.org/wiki/Data-flow_analysis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data flow analysis&lt;/a&gt; can trace backward from the output logic of those error fields until it reaches the point where they are declared; the error lies somewhere in between.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;If you want to write a cheat for a game, modifying the existing logic and data by altering the data received by the original logic, or canceling the invocation of the logic that should have been called, where is the ideal insertion point? Like a dam, your newly written code must be placed before the logic you want to modify, preferably right before the original logic, to avoid unintended consequences spreading to other parts you don&amp;rsquo;t want to modify. (&lt;a href=&#34;https://github.com/SpongePowered/Mixin/wiki/Advanced-Mixin-Usage---Callback-Injectors&#34;&gt;The principle behind some Minecraft mods&lt;/a&gt; follows this approach, of course, they don&amp;rsquo;t do anything malicious, well, perhaps.)&lt;/p&gt;
+&lt;p&gt;If you want to write a cheat for a game, modifying the existing logic and data by altering the data received by the original logic, or canceling the invocation of the logic that should have been called, where is the ideal insertion point? Like a dam, your newly written code must be placed before the logic you want to modify, preferably right before the original logic, to avoid unintended consequences spreading to other parts you don&amp;rsquo;t want to modify. (&lt;a href=&#34;https://github.com/SpongePowered/Mixin/wiki/Advanced-Mixin-Usage---Callback-Injectors&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The principle behind some Minecraft mods&lt;/a&gt; follows this approach, of course, they don&amp;rsquo;t do anything malicious, well, perhaps.)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Advertisement time!&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access&#34;&gt;minecraft-access&lt;/a&gt; is a mod designed to help visually impaired players play Minecraft. Currently, I am the only active developer, and &lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/issues&#34;&gt;there are quite a few new requirements and bugs&lt;/a&gt;. If you&amp;rsquo;re interested in understanding the logic behind Minecraft through mod development, this mod is undoubtedly your best choice. If you&amp;rsquo;re intrigued, we look forward to seeing you on the PR page and issue page.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;minecraft-access&lt;/a&gt; is a mod designed to help visually impaired players play Minecraft. Currently, I am the only active developer, and &lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there are quite a few new requirements and bugs&lt;/a&gt;. If you&amp;rsquo;re interested in understanding the logic behind Minecraft through mod development, this mod is undoubtedly your best choice. If you&amp;rsquo;re intrigued, we look forward to seeing you on the PR page and issue page.&lt;/p&gt;&lt;/blockquote&gt;
 </content>
             
             
@@ -66,6 +65,12 @@ cybersecurity are familiar with this. A successful attack inevitably involves th
                                 <category scheme="https://boholder.github.io/en-us/categories/programming/" term="Programming" label="Programming" />
                             
                         
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/en-us/categories/tips/" term="Tips" label="Tips" />
+                            
+                        
                     
                 
                     
@@ -73,7 +78,7 @@ cybersecurity are familiar with this. A successful attack inevitably involves th
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/tags/blog/" term="Blog" label="Blog" />
+                                <category scheme="https://boholder.github.io/en-us/tags/programming/" term="Programming" label="Programming" />
                             
                         
                     
@@ -85,25 +90,25 @@ cybersecurity are familiar with this. A successful attack inevitably involves th
             <title type="text">Train a LoRA model for an anime character</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/" />
             <id>https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/</id>
-            <updated>2023-03-25T14:23:00&#43;08:00</updated>
+            <updated>2025-04-03T09:40:39&#43;08:00</updated>
             <published>2023-03-14T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://boholder.github.io/en-us/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">From data collecting to training</summary>
             
-                <content type="html">&lt;p&gt;&lt;em&gt;This article was completed with the help of &lt;a href=&#34;https://www.DeepL.com/Translator&#34;&gt;www.DeepL.com/Translator&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;I saw the &lt;a href=&#34;https://civitai.com/models/16104/holo-spice-and-wolf&#34;&gt;LoRA model&lt;/a&gt; of Hero from &amp;ldquo;Wolf and Spice&amp;rdquo; posted by &lt;a href=&#34;https://twitter.com/fuyufjh&#34;&gt;Eric Fu&lt;/a&gt; earlier. My heart ignited an impulse, who does not want to refine a model for waifu? So&amp;hellip; I tried to make it done. The process was recorded for your reference.&lt;/p&gt;
+                <content type="html">&lt;p&gt;&lt;em&gt;This article was completed with the help of &lt;a href=&#34;https://www.DeepL.com/Translator&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;www.DeepL.com/Translator&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I saw the &lt;a href=&#34;https://civitai.com/models/16104/holo-spice-and-wolf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LoRA model&lt;/a&gt; of Hero from &amp;ldquo;Wolf and Spice&amp;rdquo; posted by &lt;a href=&#34;https://twitter.com/fuyufjh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Eric Fu&lt;/a&gt; earlier. My heart ignited an impulse, who does not want to refine a model for waifu? So&amp;hellip; I tried to make it done. The process was recorded for your reference.&lt;/p&gt;
 &lt;p&gt;To complete this thing requires you have:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;A certain understanding of Python coding and Python environment building, ML projects or old projects inevitably have a bit of dependency conflicts. In order to avoid dependency confusion, I have prepared a separate venv for each tool.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;If your computer&amp;rsquo;s GPU is Nvidia supported CUDA GPU, remember to install pytorch-cuda before installing dependencies for each project, this package uses GPU while pytorch will drive your CPU crying. Installation reference &lt;a href=&#34;https://github.com/openai/whisper/discussions/47&#34;&gt;this discussion&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If your computer&amp;rsquo;s GPU is Nvidia supported CUDA GPU, remember to install pytorch-cuda before installing dependencies for each project, this package uses GPU while pytorch will drive your CPU crying. Installation reference &lt;a href=&#34;https://github.com/openai/whisper/discussions/47&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this discussion&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;A nice computer, even if your hardware is not enough for the final fine-tuning, and you have to run it on the cloud with &lt;a href=&#34;https://colab.research.google.com/&#34;&gt;Colab&lt;/a&gt; or something similar, it&amp;rsquo;s more convenient if you can run the dataset preprocessing locally.&lt;/p&gt;
+&lt;p&gt;A nice computer, even if your hardware is not enough for the final fine-tuning, and you have to run it on the cloud with &lt;a href=&#34;https://colab.research.google.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Colab&lt;/a&gt; or something similar, it&amp;rsquo;s more convenient if you can run the dataset preprocessing locally.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;BTW I ended up refining the model locally, with pytorch-cuda installed, the torch still choose to run with the CPU, not sure what is going on but there are benefits: slow but no need to worry about memory overflow.&lt;/li&gt;
 &lt;li&gt;For your Reference: I got an AMD 3700X CPU with 3600 Mhz, the fine-tuning takes about 40% load of it. I&amp;rsquo;ve forgotten the memory consumption but it definitely less than 10GB.&lt;/li&gt;
@@ -112,36 +117,36 @@ cybersecurity are familiar with this. A successful attack inevitably involves th
 &lt;/ul&gt;
 &lt;p&gt;Tools/projects used:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The famous &lt;a href=&#34;https://github.com/AUTOMATIC1111/stable-diffusion-webui&#34;&gt;stable-diffusion-webui&lt;/a&gt; for resizing and auto-tagging the dataset.&lt;/li&gt;
-&lt;li&gt;Model：&lt;a href=&#34;https://github.com/SkyTNT/anime-segmentation&#34;&gt;anime-segmentation - SkyTNT&lt;/a&gt; for removing background of character.&lt;/li&gt;
-&lt;li&gt;Model：&lt;a href=&#34;https://github.com/qhgz2013/anime-face-detector&#34;&gt;anime-face-detector - qhgz2013&lt;/a&gt; for face recognizing and cropping to create some face-focused training picture.&lt;/li&gt;
-&lt;li&gt;Use the &lt;a href=&#34;https://github.com/Akegarasu/lora-scripts&#34;&gt;lora-scripts - Akegarasu&lt;/a&gt;to control the &lt;a href=&#34;https://github.com/kohya-ss/sd-scripts&#34;&gt;sd-scripts - kohya-ss&lt;/a&gt;to train the &lt;a href=&#34;https://github.com/KohakuBlueleaf/LyCORIS&#34;&gt;LyCORIS (LoCon-improvement?)&lt;/a&gt; Model (the author of the model is a really fun).&lt;/li&gt;
+&lt;li&gt;The famous &lt;a href=&#34;https://github.com/AUTOMATIC1111/stable-diffusion-webui&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;stable-diffusion-webui&lt;/a&gt; for resizing and auto-tagging the dataset.&lt;/li&gt;
+&lt;li&gt;Model：&lt;a href=&#34;https://github.com/SkyTNT/anime-segmentation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;anime-segmentation - SkyTNT&lt;/a&gt; for removing background of character.&lt;/li&gt;
+&lt;li&gt;Model：&lt;a href=&#34;https://github.com/qhgz2013/anime-face-detector&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;anime-face-detector - qhgz2013&lt;/a&gt; for face recognizing and cropping to create some face-focused training picture.&lt;/li&gt;
+&lt;li&gt;Use the &lt;a href=&#34;https://github.com/Akegarasu/lora-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;lora-scripts - Akegarasu&lt;/a&gt;to control the &lt;a href=&#34;https://github.com/kohya-ss/sd-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;sd-scripts - kohya-ss&lt;/a&gt;to train the &lt;a href=&#34;https://github.com/KohakuBlueleaf/LyCORIS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LyCORIS (LoCon-improvement?)&lt;/a&gt; Model (the author of the model is a really fun).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Also note that models have their own specialties, the tools I use in this process are for anime characters, if you refine real people (for example, &lt;a href=&#34;https://huggingface.co/swl-models/chilloutmix&#34;&gt;Chilloutmax&lt;/a&gt; as the base model), you should find other tools for the same purpose. If we want to train an embedding (textual inversion) instead of a LoRA model, the form of the required dataset will be different from this article.&lt;/p&gt;
-&lt;h2 id=&#34;some-pre-knowledge-for-better-understanding&#34;&gt;Some pre-knowledge for better understanding&lt;/h2&gt;
+&lt;p&gt;Also note that models have their own specialties, the tools I use in this process are for anime characters, if you refine real people (for example, &lt;a href=&#34;https://huggingface.co/swl-models/chilloutmix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chilloutmax&lt;/a&gt; as the base model), you should find other tools for the same purpose. If we want to train an embedding (textual inversion) instead of a LoRA model, the form of the required dataset will be different from this article.&lt;/p&gt;
+&lt;h2 id=&#34;some-pre-knowledge-for-better-understanding&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#some-pre-knowledge-for-better-understanding&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#contents:some-pre-knowledge-for-better-understanding&#34; class=&#34;headings&#34;&gt;Some pre-knowledge for better understanding&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Stable Diffusion is a text-img model that learns how to denoise noisy images in reverse by observing the gradual addition of noise to the images.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;article: &lt;a href=&#34;https://www.paepper.com/blog/posts/how-and-why-stable-diffusion-works-for-text-to-image-generation/&#34;&gt;How and why stable diffusion works for text to image generation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;video: &lt;a href=&#34;https://www.youtube.com/watch?v=-lz30by8-sU&#34;&gt;Stable Diffusion in Code (AI Image Generation) - Computerphile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;article: &lt;a href=&#34;https://www.paepper.com/blog/posts/how-and-why-stable-diffusion-works-for-text-to-image-generation/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How and why stable diffusion works for text to image generation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;video: &lt;a href=&#34;https://www.youtube.com/watch?v=-lz30by8-sU&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stable Diffusion in Code (AI Image Generation) - Computerphile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;LoRA is a model fine-tune technique.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;article: &lt;a href=&#34;https://huggingface.co/blog/lora&#34;&gt;Hugging face: Using LoRA for Efficient Stable Diffusion Fine-Tuning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Comparison of several fine-tuning techniques: video: &lt;a href=&#34;https://www.youtube.com/watch?v=dVjMiJsuR5o&#34;&gt;LoRA vs Dreambooth vs Textual Inversion vs Hypernetworks&lt;/a&gt;, don&amp;rsquo;t want to see the video? here is &lt;a href=&#34;https://www.reddit.com/r/StableDiffusion/comments/10cgxrx/wellresearched_comparison_of_training_techniques/&#34;&gt;a visual comparison chart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;article: &lt;a href=&#34;https://huggingface.co/blog/lora&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugging face: Using LoRA for Efficient Stable Diffusion Fine-Tuning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comparison of several fine-tuning techniques: video: &lt;a href=&#34;https://www.youtube.com/watch?v=dVjMiJsuR5o&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LoRA vs Dreambooth vs Textual Inversion vs Hypernetworks&lt;/a&gt;, don&amp;rsquo;t want to see the video? here is &lt;a href=&#34;https://www.reddit.com/r/StableDiffusion/comments/10cgxrx/wellresearched_comparison_of_training_techniques/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a visual comparison chart&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kohya-ss/sd-scripts/blob/main/train_README-ja.md#%E5%AD%A6%E7%BF%92%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%82%8B%E7%94%A8%E8%AA%9E%E3%81%AE%E3%81%94%E3%81%8F%E7%B0%A1%E5%8D%98%E3%81%AA%E8%A7%A3%E8%AA%AC&#34;&gt;学習で使われる用語のごく簡単な解説&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kohya-ss/sd-scripts/blob/main/train_README-ja.md#%E5%AD%A6%E7%BF%92%E3%81%A7%E4%BD%BF%E3%82%8F%E3%82%8C%E3%82%8B%E7%94%A8%E8%AA%9E%E3%81%AE%E3%81%94%E3%81%8F%E7%B0%A1%E5%8D%98%E3%81%AA%E8%A7%A3%E8%AA%AC&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;学習で使われる用語のごく簡単な解説&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In addition to these &amp;ldquo;basic knowledge&amp;rdquo;, when you see terms that you do not understand, just search for concepts for about five minutes, and these terms will gradually become a system of knowledge. For now most of the parameters for controlling AI-generation are jargon, so in order to figure out what values are appropriate to set, we have to learn their meanings and operate on the basis of understanding. I found that &lt;code&gt;&amp;quot;&amp;lt;noun you don&#39;t know&amp;gt;&amp;quot; [ML|stable diffusion|fine-tune|lora]&lt;/code&gt; keyword search works well (only search nouns are easily confused by the more general meaning of the search results, adding a domain word is much better).&lt;/p&gt;
-&lt;h2 id=&#34;prepare-the-dataset&#34;&gt;Prepare the dataset&lt;/h2&gt;
-&lt;h3 id=&#34;collecting-pictures&#34;&gt;Collecting pictures&lt;/h3&gt;
-&lt;p&gt;First I found the article &lt;a href=&#34;https://bennycheung.github.io/stable-diffusion-training-for-embeddings&#34;&gt;Stable Diffusion Training for Personal Embedding&lt;/a&gt;, which mentioned &lt;a href=&#34;https://www.youtube.com/watch?v=P1dfwViVOIU&#34;&gt;this video&lt;/a&gt; about training a personal portrait model requires:&lt;/p&gt;
+&lt;h2 id=&#34;prepare-the-dataset&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#prepare-the-dataset&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#contents:prepare-the-dataset&#34; class=&#34;headings&#34;&gt;Prepare the dataset&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;collecting-pictures&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#collecting-pictures&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#contents:collecting-pictures&#34; class=&#34;headings&#34;&gt;Collecting pictures&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;First I found the article &lt;a href=&#34;https://bennycheung.github.io/stable-diffusion-training-for-embeddings&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stable Diffusion Training for Personal Embedding&lt;/a&gt;, which mentioned &lt;a href=&#34;https://www.youtube.com/watch?v=P1dfwViVOIU&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this video&lt;/a&gt; about training a personal portrait model requires:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;three different angled full body pictures&lt;/li&gt;
 &lt;li&gt;five different angled half body pictures&lt;/li&gt;
@@ -159,19 +164,19 @@ cybersecurity are familiar with this. A successful attack inevitably involves th
 &lt;li&gt;❌ The artist&amp;rsquo;s drawing style is unique, or too good to be used.&lt;/li&gt;
 &lt;li&gt;❌ Non-color images.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;remove-pictures-background&#34;&gt;Remove pictures background&lt;/h3&gt;
-&lt;p&gt;First I observed the portraits of the two who training for personal portrait Embedding, and it seems that the white background was purposely selected for the selfies. Then I watched the video &lt;a href=&#34;https://www.youtube.com/watch?v=WO2X3oZEJOA&#34;&gt;Glitch Tokens - Computerphile&lt;/a&gt;, which mentions that researchers found that the feature learned by a certain model for dumbbell text was an upper arm with muscles. These made me speculate that &lt;strong&gt;image backgrounds are a noise to character feature learning&lt;/strong&gt;, so I
-decided to remove the backgrounds. (Lately I learned that we can use &lt;a href=&#34;https://github.com/rinongal/textual_inversion/issues/131&#34;&gt;caption&lt;/a&gt; to subtract certain features from the image so that the model doesn&amp;rsquo;t learn them, but I don&amp;rsquo;t think that work as well as just removing the background.)&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s hard to find an automatic background removal tool with ordinary internet users of the keyword &lt;code&gt;photo remove background&lt;/code&gt;, the vast number of sites want to earn your money. I found a Photoshop script, but the effect is not satisfactory. A friend recommended this project &lt;a href=&#34;https://github.com/SkyTNT/anime-segmentation&#34;&gt;anime-segmentation - SkyTNT&lt;/a&gt;, which led me to &lt;a href=&#34;https://www.tensorflow.org/tutorials/images/segmentation&#34;&gt;image segmentation&lt;/a&gt; as an ML field, and the results of this project given by my friend have been very good. Thank you, my friend!&lt;/p&gt;
+&lt;h3 id=&#34;remove-pictures-background&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#remove-pictures-background&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#contents:remove-pictures-background&#34; class=&#34;headings&#34;&gt;Remove pictures background&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;First I observed the portraits of the two who training for personal portrait Embedding, and it seems that the white background was purposely selected for the selfies. Then I watched the video &lt;a href=&#34;https://www.youtube.com/watch?v=WO2X3oZEJOA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Glitch Tokens - Computerphile&lt;/a&gt;, which mentions that researchers found that the feature learned by a certain model for dumbbell text was an upper arm with muscles. These made me speculate that &lt;strong&gt;image backgrounds are a noise to character feature learning&lt;/strong&gt;, so I
+decided to remove the backgrounds. (Lately I learned that we can use &lt;a href=&#34;https://github.com/rinongal/textual_inversion/issues/131&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;caption&lt;/a&gt; to subtract certain features from the image so that the model doesn&amp;rsquo;t learn them, but I don&amp;rsquo;t think that work as well as just removing the background.)&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s hard to find an automatic background removal tool with ordinary internet users of the keyword &lt;code&gt;photo remove background&lt;/code&gt;, the vast number of sites want to earn your money. I found a Photoshop script, but the effect is not satisfactory. A friend recommended this project &lt;a href=&#34;https://github.com/SkyTNT/anime-segmentation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;anime-segmentation - SkyTNT&lt;/a&gt;, which led me to &lt;a href=&#34;https://www.tensorflow.org/tutorials/images/segmentation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;image segmentation&lt;/a&gt; as an ML field, and the results of this project given by my friend have been very good. Thank you, my friend!&lt;/p&gt;
 &lt;p&gt;Built it successfully with Python 3.9, be aware that it only seems to support png and jpg format input. This converted our original image to a transparent background image of just the people in png format. Some of the output may not have been removed cleanly, and I didn&amp;rsquo;t bother to remove it manually again myself.&lt;/p&gt;
-&lt;h3 id=&#34;anti-pattern-enlarge-the-image-size-to-square&#34;&gt;Anti-pattern: Enlarge the image size to square&lt;/h3&gt;
-&lt;p&gt;First I experimented the resize operation and found that this would truncate the corner parts of the picture. But I didn&amp;rsquo;t want to lose any features (especially the rare official-setting shoes), so I found a &lt;a href=&#34;https://community.adobe.com/t5/photoshop-ecosystem-discussions/canvas-resize-to-square-for-a-large-number-of-images-using-script/td-p/6148635&#34;&gt;Photoshop script&lt;/a&gt; on the internet, and expanded all the images into squares according to the larger one in length and width, so that resizing result would remain the whole image. This step proves to be &lt;strong&gt;useless&lt;/strong&gt; and makes the features smaller and fuzzier, which is not conducive to training.&lt;/p&gt;
-&lt;h3 id=&#34;crop-the-face-out&#34;&gt;Crop the face out&lt;/h3&gt;
-&lt;p&gt;According to the portrait dataset, the face (up to the shoulder) picture accounts for quite a bit. But the fan artists will certainly not just draw an ID photo, it seems that we need the face pictures out from the fan arts (transparent background). After having tasted the sweetness of dealing things in ML, I directly searched &lt;code&gt;anime face detect ML&lt;/code&gt;, and Github &lt;a href=&#34;https://github.com/search?q=anime+face+detect&#34;&gt;gives out some projects&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Picking a project, especially a Python ML project (to write some code based on the project to crop out the image and save it), I care more about the development time than the star count, afraid of the age of the project dependencies may have problems. &lt;a href=&#34;https://github.com/hysts/anime-face-detector&#34;&gt;anime-face-detector - hysts&lt;/a&gt;, it&amp;rsquo;s the newest one, developed two years ago, but it took me a long time to solve the versioning problem about &lt;code&gt;mmcv&lt;/code&gt; dependencies, finally I failed to run it up. Moved to the second newest (developed three years ago) project &lt;a href=&#34;https://github.com/qhgz2013/anime-face-detector&#34;&gt;anime-face-detector - qhgz2013&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Wow, it works on Python 3.9, so I forked the project and &lt;a href=&#34;https://github.com/boholder/anime-face-detector/commit/afc906d49fe03aeaea457ae4d0f0523d09b62a57&#34;&gt;changed a couple of lines&lt;/a&gt; to make cropped out picture larger than the facial recognition results, including the hair and shoulders and animal ears (animal ears up the long). Thanks qhgz2013 has developed the crop function, save me the trouble. By this way the face is cut out from each picture and the training set size is doubled.&lt;/p&gt;
-&lt;h3 id=&#34;resize-and-caption&#34;&gt;Resize and Caption&lt;/h3&gt;
-&lt;p&gt;Now that the dataset is prepared, open the web-ui -&amp;gt; Train -&amp;gt; Preprocess images, and follow the steps in &lt;a href=&#34;https://dfldata.xyz/forum.php?mod=viewthread&amp;tid=12796&#34;&gt;this tutorial&lt;/a&gt; to:&lt;/p&gt;
+&lt;h3 id=&#34;anti-pattern-enlarge-the-image-size-to-square&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#anti-pattern-enlarge-the-image-size-to-square&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#contents:anti-pattern-enlarge-the-image-size-to-square&#34; class=&#34;headings&#34;&gt;Anti-pattern: Enlarge the image size to square&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;First I experimented the resize operation and found that this would truncate the corner parts of the picture. But I didn&amp;rsquo;t want to lose any features (especially the rare official-setting shoes), so I found a &lt;a href=&#34;https://community.adobe.com/t5/photoshop-ecosystem-discussions/canvas-resize-to-square-for-a-large-number-of-images-using-script/td-p/6148635&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Photoshop script&lt;/a&gt; on the internet, and expanded all the images into squares according to the larger one in length and width, so that resizing result would remain the whole image. This step proves to be &lt;strong&gt;useless&lt;/strong&gt; and makes the features smaller and fuzzier, which is not conducive to training.&lt;/p&gt;
+&lt;h3 id=&#34;crop-the-face-out&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#crop-the-face-out&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#contents:crop-the-face-out&#34; class=&#34;headings&#34;&gt;Crop the face out&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;According to the portrait dataset, the face (up to the shoulder) picture accounts for quite a bit. But the fan artists will certainly not just draw an ID photo, it seems that we need the face pictures out from the fan arts (transparent background). After having tasted the sweetness of dealing things in ML, I directly searched &lt;code&gt;anime face detect ML&lt;/code&gt;, and Github &lt;a href=&#34;https://github.com/search?q=anime&amp;#43;face&amp;#43;detect&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gives out some projects&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Picking a project, especially a Python ML project (to write some code based on the project to crop out the image and save it), I care more about the development time than the star count, afraid of the age of the project dependencies may have problems. &lt;a href=&#34;https://github.com/hysts/anime-face-detector&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;anime-face-detector - hysts&lt;/a&gt;, it&amp;rsquo;s the newest one, developed two years ago, but it took me a long time to solve the versioning problem about &lt;code&gt;mmcv&lt;/code&gt; dependencies, finally I failed to run it up. Moved to the second newest (developed three years ago) project &lt;a href=&#34;https://github.com/qhgz2013/anime-face-detector&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;anime-face-detector - qhgz2013&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Wow, it works on Python 3.9, so I forked the project and &lt;a href=&#34;https://github.com/boholder/anime-face-detector/commit/afc906d49fe03aeaea457ae4d0f0523d09b62a57&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;changed a couple of lines&lt;/a&gt; to make cropped out picture larger than the facial recognition results, including the hair and shoulders and animal ears (animal ears up the long). Thanks qhgz2013 has developed the crop function, save me the trouble. By this way the face is cut out from each picture and the training set size is doubled.&lt;/p&gt;
+&lt;h3 id=&#34;resize-and-caption&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#resize-and-caption&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#contents:resize-and-caption&#34; class=&#34;headings&#34;&gt;Resize and Caption&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Now that the dataset is prepared, open the web-ui -&amp;gt; Train -&amp;gt; Preprocess images, and follow the steps in &lt;a href=&#34;https://dfldata.xyz/forum.php?mod=viewthread&amp;amp;tid=12796&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this tutorial&lt;/a&gt; to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Resize the images to 512*512 (although LoRA is supporting non-512 size, I didn&amp;rsquo;t quite understand LoRA&amp;rsquo;s requirements for training set images, so for insurance just follow the classic 512 (the input image size for stable diffusion v1.* version)).&lt;/p&gt;
@@ -180,16 +185,16 @@ decided to remove the backgrounds. (Lately I learned that we can use &lt;a href=
 &lt;p&gt;Check the &lt;code&gt;Auto focal point crop&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Check the &lt;code&gt;Use Deepbooru for caption&lt;/code&gt; to use &lt;a href=&#34;https://github.com/KichangKim/DeepDanbooru&#34;&gt;DeepDanbooru - KichangKim&lt;/a&gt; - the image tag extraction model trained with anime characters. It automatically labels the training set, the set of these is called a caption, and as mentioned above, the purpose is to keep the model from learning (=reinforcing the weight of these tags) these annotated features and focus on learning the &amp;ldquo;new&amp;rdquo; (character) features.&lt;/p&gt;
+&lt;p&gt;Check the &lt;code&gt;Use Deepbooru for caption&lt;/code&gt; to use &lt;a href=&#34;https://github.com/KichangKim/DeepDanbooru&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DeepDanbooru - KichangKim&lt;/a&gt; - the image tag extraction model trained with anime characters. It automatically labels the training set, the set of these is called a caption, and as mentioned above, the purpose is to keep the model from learning (=reinforcing the weight of these tags) these annotated features and focus on learning the &amp;ldquo;new&amp;rdquo; (character) features.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Now we finally have the training set ready, a bunch of 512*512 images with corresponding caption files. According to the results, the images generated by face-detect-model and web-ui both replace the transparent background with a pure black background, and the training set with black background does affect the generation of the resulting model (intend to generate pure black background). But if we give the background prompt, the generation backs to normal, so no need to worry about it.&lt;/p&gt;
-&lt;h3 id=&#34;check-and-modify-the-captions&#34;&gt;Check and modify the captions&lt;/h3&gt;
-&lt;p&gt;FYI: &lt;a href=&#34;https://github.com/rinongal/textual_inversion/issues/131&#34;&gt;Do image captions have any effect during training?&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;After further search and experimentation, I found caption to be of great use for training and using the model. I &lt;a href=&#34;https://github.com/boholder/tools_for_training_sd_model&#34;&gt;wrote a few simple scripts&lt;/a&gt; to do the related automation work. The character I trained is &lt;a href=&#34;https://gamewith.jp/pricone-re/article/show/92907&#34;&gt;姫宮真歩 Himemiya Maho&lt;/a&gt; from the mobile game &amp;ldquo;Princess Connect! Re: Dive&amp;rdquo;, using her as an example.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;an anime girl picture generated by AI&#34; src=&#34;https://boholder.github.io/en-us/img/postimg/maho_by_ai.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;check-and-modify-the-captions&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#check-and-modify-the-captions&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#contents:check-and-modify-the-captions&#34; class=&#34;headings&#34;&gt;Check and modify the captions&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;FYI: &lt;a href=&#34;https://github.com/rinongal/textual_inversion/issues/131&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Do image captions have any effect during training?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After further search and experimentation, I found caption to be of great use for training and using the model. I &lt;a href=&#34;https://github.com/boholder/tools_for_training_sd_model&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wrote a few simple scripts&lt;/a&gt; to do the related automation work. The character I trained is &lt;a href=&#34;https://gamewith.jp/pricone-re/article/show/92907&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;姫宮真歩 Himemiya Maho&lt;/a&gt; from the mobile game &amp;ldquo;Princess Connect! Re: Dive&amp;rdquo;, using her as an example.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/en-us/img/postimg/maho_by_ai.png&#34; alt=&#34;an anime girl picture generated by AI&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
@@ -220,32 +225,32 @@ decided to remove the backgrounds. (Lately I learned that we can use &lt;a href=
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nature,
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;looking_at_viewer,
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;lora:himemiyamaho:0.7&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;for-training&#34;&gt;For training&lt;/h4&gt;
+&lt;/div&gt;&lt;h4 id=&#34;for-training&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#for-training&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#contents:for-training&#34; class=&#34;headings&#34;&gt;For training&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;By removing the character feature tags from the caption, the model can be reinforced to learn those features.&lt;/strong&gt; Those features should be the ones that the character has in &lt;strong&gt;all&lt;/strong&gt; scenes you want to generate in the future (e.g., Shinpachi Shimura&amp;rsquo;s glasses). For example, costumes should not be removed because character costumes change from scene to scene. For Maho, I removed the following tags:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;blunt_bangs&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;eyebrows_visible_through_hair&lt;/code&gt;: the so-called wrong-layer eyebrows, not obvious on Maho, other characters such as &lt;a href=&#34;https://disp.cc/b/ACG/ftGJ&#34;&gt;Inuyama Aoi&lt;/a&gt; is more obvious.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eyebrows_visible_through_hair&lt;/code&gt;: the so-called wrong-layer eyebrows, not obvious on Maho, other characters such as &lt;a href=&#34;https://disp.cc/b/ACG/ftGJ&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Inuyama Aoi&lt;/a&gt; is more obvious.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;low_twintails&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;*_breasts&lt;/code&gt;: Why remove the breasts tag? The initial version of the model trained without removing these tags generates 100% huge breasts without specifying the size of the breasts. Therefore, the tags is deleted to let the model learn the real size of Maho.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I didn&amp;rsquo;t remove very basic features such as &lt;code&gt;fox_ear, fox_tail, (brown|gold) hair, long_hair, green_eyes,&lt;/code&gt; which, judging by my current knowledge base, are fine to be removed.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;If you have features you want to avoid the model to learn, add the corresponding tag in the caption of each image&lt;/strong&gt;. For Maho, I deleted &lt;code&gt;bare_shoulders&lt;/code&gt;. Why? I used two sets of clothes for training, the usual clothes (kimono as shown in the picture) and the swimsuit. In the initial version of the training model, I observed that the vast majority of the usual clothes generated pictures, are like the flower leader to show the shoulders, not in line with the impression of the role of Maho. At first, I thought the model had mixed it up with the swimsuit (with bare shoulders), but later I checked the training set and found that many of the usual clothes pictures I used were also strapless. I can not collect other enough qualified pictures for training, so how to solve this problem? Finally, I decide to use the caption to control the model learning, and experiment result shows that it worked well, and finally Maho would no longer showed her shoulders.&lt;/p&gt;
-&lt;h4 id=&#34;for-usage&#34;&gt;For usage&lt;/h4&gt;
+&lt;h4 id=&#34;for-usage&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#for-usage&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#contents:for-usage&#34; class=&#34;headings&#34;&gt;For usage&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;The caption helps the model understand the images in the training set as it learns. It is also very eye-opening for me, who has a poor English vocabulary, to learn a lot of new words that will help me communicate more accurately with the model.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;prompt for training pictures&lt;/strong&gt; = &lt;strong&gt;caption&lt;/strong&gt; (what the model doesn&amp;rsquo;t learn) + &lt;strong&gt;what the model learns&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;When it comes time to use it we can reverse this formula: tags in caption + model = what looks like the result of the training images! If you want to generate results similar to a certain image in the training set, look at its caption.&lt;/p&gt;
-&lt;h2 id=&#34;training&#34;&gt;Training&lt;/h2&gt;
-&lt;p&gt;First of all, my fine-tune technology is to follow Eric Fu selected LoRA, because I heard that LoRA technology is not only fresher in the timeline, and seems to have low memory requirements. Then LoRA also divided into several algorithms, I chose the &lt;a href=&#34;https://github.com/KohakuBlueleaf/LyCORIS&#34;&gt;LyCORIS&lt;/a&gt; model as same as Eric Fu, take the road that others have verified, while I do not have enough ML knowledge to do the selection myself. The &lt;code&gt;LyCORIS&lt;/code&gt;&amp;rsquo;s README and The README of &lt;a href=&#34;https://github.com/Akegarasu/lora-scripts&#34;&gt;lora-scripts - Akegarasu&lt;/a&gt; project found in &lt;a href=&#34;https://dfldata.xyz/forum.php?mod=viewthread&amp;tid=12796&#34;&gt;a tutorial in forum&lt;/a&gt; both point to this project: &lt;a href=&#34;https://github.com/kohya-ss/sd-scripts&#34;&gt;sd-scripts - kohya-ss&lt;/a&gt;. The relationship between the three of them is:&lt;/p&gt;
+&lt;h2 id=&#34;training&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#training&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#contents:training&#34; class=&#34;headings&#34;&gt;Training&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;First of all, my fine-tune technology is to follow Eric Fu selected LoRA, because I heard that LoRA technology is not only fresher in the timeline, and seems to have low memory requirements. Then LoRA also divided into several algorithms, I chose the &lt;a href=&#34;https://github.com/KohakuBlueleaf/LyCORIS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LyCORIS&lt;/a&gt; model as same as Eric Fu, take the road that others have verified, while I do not have enough ML knowledge to do the selection myself. The &lt;code&gt;LyCORIS&lt;/code&gt;&amp;rsquo;s README and The README of &lt;a href=&#34;https://github.com/Akegarasu/lora-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;lora-scripts - Akegarasu&lt;/a&gt; project found in &lt;a href=&#34;https://dfldata.xyz/forum.php?mod=viewthread&amp;amp;tid=12796&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a tutorial in forum&lt;/a&gt; both point to this project: &lt;a href=&#34;https://github.com/kohya-ss/sd-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;sd-scripts - kohya-ss&lt;/a&gt;. The relationship between the three of them is:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;sd-scripts&lt;/code&gt; integrates fine-tune scripts that are easy to use directly and can perform training with all four fine-tune methods.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;lora-scripts&lt;/code&gt; further simplifies the use of &lt;code&gt;sd-scripts&lt;/code&gt; for LoRA training, and each parameter has a recommended value, which is a big help.&lt;/li&gt;
 &lt;li&gt;Run &lt;code&gt;sd-scripts&lt;/code&gt; with parameters specifying &lt;code&gt;LyCORIS&lt;/code&gt; as the training algorithm.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;With Python 3.10, first install &lt;code&gt;lora-scripts&lt;/code&gt; (which will also install the &lt;code&gt;sd-scripts&lt;/code&gt; dependency), then install &lt;code&gt;LyCORIS&lt;/code&gt; library, which the venv is shared by all three projects. The base model I used is [anything-v4.5](&lt;a href=&#34;https://huggingface.co/&#34;&gt;https://huggingface.co/&lt;/a&gt; andite/anything-v4.0). I &lt;a href=&#34;https://github.com/boholder/lora-scripts/commit/0780625ad726a0a03f9f3cb2b3ec19131e5ce582&#34;&gt;changed&lt;/a&gt; &lt;code&gt;lora-scripts&lt;/code&gt; to add new parameters about &lt;code&gt;LyCORIS&lt;/code&gt;. Note here that &lt;code&gt;sd-scripts&lt;/code&gt; is in the &lt;code&gt;lora-scripts&lt;/code&gt; directory, but the dataset directory in the run configuration seems need to add &lt;code&gt;..&lt;/code&gt; (parent directory) (is the work directory of &lt;code&gt;sd-scripts&lt;/code&gt; runtime its own home directory?) .&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;It would be nice if I could use techniques like &lt;a href=&#34;https://distill.pub/2017/feature-visualization/&#34;&gt;Feature Visualization&lt;/a&gt; (for image task models) or token clustering (for text task models) to visually study the inside of my LoRA model, I&amp;rsquo;m curious about which features it learns from Maho. It seems that there is no ready-made tools based on the stable diffusion model, so I gave up. And I&amp;rsquo;m still not quite sure how caption works, but I can&amp;rsquo;t find any more explanation online. If you know the relevant material, please do not hesitate to give advice.&lt;/p&gt;
+&lt;p&gt;With Python 3.10, first install &lt;code&gt;lora-scripts&lt;/code&gt; (which will also install the &lt;code&gt;sd-scripts&lt;/code&gt; dependency), then install &lt;code&gt;LyCORIS&lt;/code&gt; library, which the venv is shared by all three projects. The base model I used is [anything-v4.5](&lt;a href=&#34;https://huggingface.co/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://huggingface.co/&lt;/a&gt; andite/anything-v4.0). I &lt;a href=&#34;https://github.com/boholder/lora-scripts/commit/0780625ad726a0a03f9f3cb2b3ec19131e5ce582&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;changed&lt;/a&gt; &lt;code&gt;lora-scripts&lt;/code&gt; to add new parameters about &lt;code&gt;LyCORIS&lt;/code&gt;. Note here that &lt;code&gt;sd-scripts&lt;/code&gt; is in the &lt;code&gt;lora-scripts&lt;/code&gt; directory, but the dataset directory in the run configuration seems need to add &lt;code&gt;..&lt;/code&gt; (parent directory) (is the work directory of &lt;code&gt;sd-scripts&lt;/code&gt; runtime its own home directory?) .&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#conclusion&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/#contents:conclusion&#34; class=&#34;headings&#34;&gt;Conclusion&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;It would be nice if I could use techniques like &lt;a href=&#34;https://distill.pub/2017/feature-visualization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Feature Visualization&lt;/a&gt; (for image task models) or token clustering (for text task models) to visually study the inside of my LoRA model, I&amp;rsquo;m curious about which features it learns from Maho. It seems that there is no ready-made tools based on the stable diffusion model, so I gave up. And I&amp;rsquo;m still not quite sure how caption works, but I can&amp;rsquo;t find any more explanation online. If you know the relevant material, please do not hesitate to give advice.&lt;/p&gt;
 &lt;p&gt;I wish everyone can fine-tune their waifus successfully, set our hopes(or delusions?) free.&lt;/p&gt;
 </content>
             
@@ -259,7 +264,7 @@ decided to remove the backgrounds. (Lately I learned that we can use &lt;a href=
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/categories/fun/" term="Fun" label="Fun" />
+                                <category scheme="https://boholder.github.io/en-us/categories/craft/" term="Craft" label="Craft" />
                             
                         
                     
@@ -269,7 +274,19 @@ decided to remove the backgrounds. (Lately I learned that we can use &lt;a href=
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/tags/stablediffusion/" term="StableDiffusion" label="StableDiffusion" />
+                                <category scheme="https://boholder.github.io/en-us/tags/stable-diffusion/" term="Stable-Diffusion" label="Stable-Diffusion" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/en-us/tags/lora/" term="Lora" label="Lora" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/en-us/tags/otaku/" term="Otaku" label="Otaku" />
                             
                         
                     
@@ -281,7 +298,7 @@ decided to remove the backgrounds. (Lately I learned that we can use &lt;a href=
             <title type="text">Introducing a Minecraft treehouse I built (contains a total of 200MBsize images)</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/minecraft-tree-house/" />
             <id>https://boholder.github.io/en-us/blogs/minecraft-tree-house/</id>
-            <updated>2023-03-24T21:56:27&#43;08:00</updated>
+            <updated>2025-04-03T10:08:29&#43;08:00</updated>
             <published>2022-05-27T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://boholder.github.io/en-us/</uri>
@@ -289,71 +306,71 @@ decided to remove the backgrounds. (Lately I learned that we can use &lt;a href=
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">I am happy as a young girl taking a bunch of screenshots and want more people to see it.</summary>
             
                 <content type="html">&lt;p&gt;Warning again, &lt;strong&gt;this blog contains a total of 200MBsize images&lt;/strong&gt;, you may want to wait until you are connected to a no-traffic-limit network before reading.&lt;/p&gt;
-&lt;h2 id=&#34;location&#34;&gt;Location&lt;/h2&gt;
+&lt;h2 id=&#34;location&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#location&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#contents:location&#34; class=&#34;headings&#34;&gt;Location&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;One of the Minecraft servers that I&amp;rsquo;m playing just cleaned its old savings and upgraded to version 1.18.2, just in time for my periodic rekindling of the passion to play Minecraft. When I was traveling through the main world, looking for an ideal place for building house, at the end of the endless jungle, the mouth of the river, two trees from the forest close to each other caught my attention.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Whole-building-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-00.png?raw=true&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-00.png?raw=true&#34; alt=&#34;Whole-building-image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This location is not far from the server&amp;rsquo;s spawn point, about three fireworks elytra flying distance, easily to accessible. Surrounded by the river, the sea, and other players&amp;rsquo; buildings not far away, the scenery is pleasant. &amp;ldquo;That&amp;rsquo;s it&amp;rdquo;, I thought.&lt;/p&gt;
-&lt;p&gt;(This server has a p2p economic system, which allows players to easily but the best equipment, making it optional to skip the initial development phase and focus on other creative activities. Usually we use nether world&amp;rsquo;s transportation system built by respected hardworking altruists for long distance traveling, and &lt;a href=&#34;https://minecraft.fandom.com/wiki/Elytra&#34;&gt;elytra&lt;/a&gt; as short distance moving method.)&lt;/p&gt;
+&lt;p&gt;(This server has a p2p economic system, which allows players to easily but the best equipment, making it optional to skip the initial development phase and focus on other creative activities. Usually we use nether world&amp;rsquo;s transportation system built by respected hardworking altruists for long distance traveling, and &lt;a href=&#34;https://minecraft.fandom.com/wiki/Elytra&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;elytra&lt;/a&gt; as short distance moving method.)&lt;/p&gt;
 &lt;p&gt;Jungle trees are the tallest trees you can find in Minecraft, which is suitable for building treehouse. But building a treehouse on a single jungle tree, naturally has a 2*2 width trunk, the horizontal space will be limited by the thin (comparing to the width of floor) trunk, which in turn will limit the freedom of interior design and the expandability of the main part in all directions. Thankfully the two trees are just the right distance apart from each other, allowing me to build a cascading structure between the two trees like a woolen thread, which can challenges my imagination.&lt;/p&gt;
-&lt;h2 id=&#34;main-design-idea&#34;&gt;Main design idea&lt;/h2&gt;
+&lt;h2 id=&#34;main-design-idea&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#main-design-idea&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#contents:main-design-idea&#34; class=&#34;headings&#34;&gt;Main design idea&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;My preferred architectural style is to blend the building with the natural environment, and I am not good at building exterior parts such as roofs and walls, so I used to hollow out mountains or drilled into the ground in my previous houses, focusing only on the design of ant-hole-like interior spaces. The treehouse won&amp;rsquo;t allow me to hide everything ugly behind the wall, both interior and exterior should be elegant at the same level, which is a new learning opportunity for me.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m&amp;hellip; sort of dislike buildings that overhanging from the ground (unless you build an entire floating island, that&amp;rsquo;s coll) or exaggeratedly shaped. Although the unreal physical characteristics of Minecraft are mocked by players with meme, and I haven&amp;rsquo;t actually systemically learned architecture. I wanted my building to have elements reflect that it gets some supporting structure inside and alongside. That&amp;rsquo;s why I artificially built &amp;ldquo;branches&amp;rdquo; or support structures like grid arranged logs to give the impression that this treehouse is sturdy and solid.&lt;/p&gt;
-&lt;p&gt;Except for the living room and bedroom on top, I chose to keep the building open to the outside space by just enclose the edges with fences without walls and build small roofs only on areas need rain proofing (imaginary functions, you know what I mean). (Luckily this server has set up to ban the spawning of annoying &lt;a href=&#34;https://minecraft.fandom.com/wiki/Phantom&#34;&gt;phantoms&lt;/a&gt;.) These open areas serve as public areas where the interior design can be seen at a glance, and provide a large enough area for elytra takeoff and landing.&lt;/p&gt;
-&lt;h2 id=&#34;a-visit&#34;&gt;A visit&lt;/h2&gt;
-&lt;h3 id=&#34;the-hall---public-space&#34;&gt;The Hall - public space&lt;/h3&gt;
+&lt;p&gt;Except for the living room and bedroom on top, I chose to keep the building open to the outside space by just enclose the edges with fences without walls and build small roofs only on areas need rain proofing (imaginary functions, you know what I mean). (Luckily this server has set up to ban the spawning of annoying &lt;a href=&#34;https://minecraft.fandom.com/wiki/Phantom&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;phantoms&lt;/a&gt;.) These open areas serve as public areas where the interior design can be seen at a glance, and provide a large enough area for elytra takeoff and landing.&lt;/p&gt;
+&lt;h2 id=&#34;a-visit&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#a-visit&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#contents:a-visit&#34; class=&#34;headings&#34;&gt;A visit&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;the-hall---public-space&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#the-hall---public-space&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#contents:the-hall---public-space&#34; class=&#34;headings&#34;&gt;The Hall - public space&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Start to feel bored listening to me? Come on, let me show you around. First we need to landing exactly at the &amp;ldquo;entrance&amp;rdquo; area.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Entering-entrance-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-01.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Entering-entrance-image-2&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-02.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Entrance-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-03.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The left barrel stands for the mailbox, and there is a shelf for containing all the odds and ends on the right. The yellow carpet, is &lt;a href=&#34;https://minecraft.fandom.com/wiki/Hay_Bale&#34;&gt;hay bales&lt;/a&gt; in fact, can reduce the fall damage by 80%. (Well, usually I won&amp;rsquo;t try to land on this small entrance.) Not far from a swing hanging on a branch, covered by the trunk from the direction of the hall, providing a secluded place where private chats can take place. (Only when no guest visiting I guess.)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-01.png?raw=true&#34; alt=&#34;Entering-entrance-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-02.png?raw=true&#34; alt=&#34;Entering-entrance-image-2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-03.png?raw=true&#34; alt=&#34;Entrance-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The left barrel stands for the mailbox, and there is a shelf for containing all the odds and ends on the right. The yellow carpet, is &lt;a href=&#34;https://minecraft.fandom.com/wiki/Hay_Bale&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hay bales&lt;/a&gt; in fact, can reduce the fall damage by 80%. (Well, usually I won&amp;rsquo;t try to land on this small entrance.) Not far from a swing hanging on a branch, covered by the trunk from the direction of the hall, providing a secluded place where private chats can take place. (Only when no guest visiting I guess.)&lt;/p&gt;
 &lt;p&gt;Then we enter the hall.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Entering-hall-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-04.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Hall-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-06.png?raw=true&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-04.png?raw=true&#34; alt=&#34;Entering-hall-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-06.png?raw=true&#34; alt=&#34;Hall-image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Pay attention to the left, a bird feeder and a bird bath. The birds may come here when no human stay in the hall. The two bird caring furniture are attached to a flower shelf, which adds more nature element on the hall. Room a little far away is the chess room, we&amp;rsquo;ll check it later.&lt;/p&gt;
 &lt;p&gt;The truck is surrounded by steps for going to upper layers. Take a look at that trunk, I expanded it to 3*3 width for fitting a ladder entrance down to the ground. But after creepers chasing me and &lt;strong&gt;CLIMBED&lt;/strong&gt; up to the hall and blow everything up two times, and exploded another one time on the ground when I was not able to grab the ladder fast enough after I placed a trapdoor to prevent mobs climbing, I sadly decided to seal that entrance permanently.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Hall-image-2&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-05.png?raw=true&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-05.png?raw=true&#34; alt=&#34;Hall-image-2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In the center of the hall stands a billiard table, adding some liveliness for the hall. Beside is the workshop, that area&amp;rsquo;s wooden slab floor was replaced with stone slab, I won&amp;rsquo;t want the (imaginary) sparks from the furnaces set the fire. And the storage area, a Minecraft player always need more chests. You can see in this screenshot that we are standing on the multiple usage table at right in the previous screenshot, below the table I embed a barrel for storing snacks for coming guests. Sitting on the benches, eating snacks and chatting with friends, oh&amp;hellip; there is no more enjoyable time than this.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Chess-room-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-07.png?raw=true&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-07.png?raw=true&#34; alt=&#34;Chess-room-image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Here is the chess room, if you want to stay a little far away from noisy guys on the benches, come here and relax your heart with nice landscape, chess and books. Now Lets turn around and step on the steps.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Chess-room-image-2&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-08.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Chess-room-image-3&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-09.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Hall-overlook-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-10.png?raw=true&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-08.png?raw=true&#34; alt=&#34;Chess-room-image-2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-09.png?raw=true&#34; alt=&#34;Chess-room-image-3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-10.png?raw=true&#34; alt=&#34;Hall-overlook-image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;You can&amp;rsquo;t believe it, just when I&amp;rsquo;m climbing steps, the heavy rain falls, too mach rains in the jungle (in fact the entire main world), but guess I need to adapt it since I&amp;rsquo;ve settled down here. And the billiard table gets another real useful function. You see, I remained gaps between fences at this plane in the middle of the steps, so I can quickly jump down to the hall, but the problem is this plane is four blocks higher than the hall floor, which is enough for causing one drop damage. After I build the billiard table, I can jump onto the table and avoid drop damage.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Flower-shelf-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-11.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;the-meditation-room---semi-public-space&#34;&gt;The meditation room - semi-public space&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-11.png?raw=true&#34; alt=&#34;Flower-shelf-image&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-meditation-room---semi-public-space&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#the-meditation-room---semi-public-space&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#contents:the-meditation-room---semi-public-space&#34; class=&#34;headings&#34;&gt;The meditation room - semi-public space&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Keep climbing, then we reach the meditation room.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Meditation-room-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-12.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Meditation-room-image-2&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-13.png?raw=true&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-12.png?raw=true&#34; alt=&#34;Meditation-room-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-13.png?raw=true&#34; alt=&#34;Meditation-room-image-2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This is the most remote area from hustle and bustle and close to the nature. The bookshelves also act as walls, blocking the view from outside. You can sit on the low bench, lie on the carpet, read, do yoga, meditate, or just think quietly. If you want more sensory stimulation, you can use the campfire next to the cabinet to smoke some spices.&lt;/p&gt;
-&lt;h3 id=&#34;the-enclosed-top-area---private-space&#34;&gt;The enclosed top area - private space&lt;/h3&gt;
+&lt;h3 id=&#34;the-enclosed-top-area---private-space&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#the-enclosed-top-area---private-space&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#contents:the-enclosed-top-area---private-space&#34; class=&#34;headings&#34;&gt;The enclosed top area - private space&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Although I would like to close to the nature, but somehow I can&amp;rsquo;t let go of my dependence on a warm, safe and modernized home. This motivation drives me to build a solid living area, on the top of one of two trees, only can be reached by climbing a long ladder, which let a person quickly away from the dangerous ground, increase the physical height as well as sense of security.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;The-ladder-to-the-top-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-14.png?raw=true&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-14.png?raw=true&#34; alt=&#34;The-ladder-to-the-top-image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This area is made of thick logs for the walls, and the interior is decorated with modern furniture and appliances, and of course, the indispensable - a big soft bed! (this is a logic flaw on my part, I wasn&amp;rsquo;t thinking about how to get enough power to keep appliances working!)&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Balcony-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-15.png?raw=true&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-15.png?raw=true&#34; alt=&#34;Balcony-image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Climbing up and we reach the balcony first. I wasn&amp;rsquo;t expecting so much rain, and I&amp;rsquo;m afraid the cloths I hang out here will never dry. Maybe I should consider ordering a dryer.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Kitchen-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-16.png?raw=true&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-16.png?raw=true&#34; alt=&#34;Kitchen-image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Look inside though the glass, we can see the whole open kitchen with two stoves, oven, sink, and sideboard above. There is not much space available inside, so I used light-transmitting materials as much as possible to expand the space perceived by a person. As you can see in the screenshot, a black glass wall, a transparent skylight, a white glass dining table, and I even managed to open a small window behind the stoves. The combination of these methods is quite effective I think.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Living-room-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-17.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Considering that the view outside the room is jungle and the walls are logs, the interior design of living room should also close to the natural style. I chose the unobtrusive &lt;a href=&#34;https://minecraft.fandom.com/wiki/Deepslate&#34;&gt;deep slate&lt;/a&gt; for the kitchen, and covered the eye-catching white quartz sofa with dark green to integrating into the overall interior style.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Living-room-image-2&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-18.png?raw=true&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-17.png?raw=true&#34; alt=&#34;Living-room-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Considering that the view outside the room is jungle and the walls are logs, the interior design of living room should also close to the natural style. I chose the unobtrusive &lt;a href=&#34;https://minecraft.fandom.com/wiki/Deepslate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;deep slate&lt;/a&gt; for the kitchen, and covered the eye-catching white quartz sofa with dark green to integrating into the overall interior style.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-18.png?raw=true&#34; alt=&#34;Living-room-image-2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Using the trapdoors to build the wall between the living room and bedroom, to reduce the isolation feeling of this inadequate space. I replaced the space where truck used to be with a brown-cased vending machine, stocked with cold beer.&lt;/p&gt;
 &lt;p&gt;The last stop, the deepest part of the private space, the bedroom. With a bed and a computer, I can spend whole day in these few square meters&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Bedroom-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-19.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Bedroom-image-2&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-20.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;lighting-design&#34;&gt;Lighting design&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-19.png?raw=true&#34; alt=&#34;Bedroom-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-20.png?raw=true&#34; alt=&#34;Bedroom-image-2&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;lighting-design&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#lighting-design&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/minecraft-tree-house/#contents:lighting-design&#34; class=&#34;headings&#34;&gt;Lighting design&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Because of the openness I chose, I carefully designed the positions of artificial light sources. I placed as few as possible without creating monster spawn-able surface, to prevent the treehouse from appearing to bright at night. And this design give the public area a natural, somber, harmonious atmosphere after the sunset.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Whole-building-at-night-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-29.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Entrance-at-night-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-21.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Hall-at-night-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-22.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Chess-room-at-night-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-23.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Hall-overlook-at-night-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-24.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Meditation-room-at-night-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-25.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Balcony-at-night-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-26.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Living-room-at-night-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-27.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Bedroom-at-night-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-28.png?raw=true&#34;&gt;&lt;/p&gt;
-&lt;p&gt;In addition, as you can imagine, the shade of all the platforms creates a great monster-spawning area on the ground, and the monsters seem to be partying underneath day and night. But I didn&amp;rsquo;t want to place light sources on the ground around, because it would spoil the &amp;ldquo;only treehouse emitting light at night&amp;rdquo; visual effect, the &amp;ldquo;someone living here along with endless jungle&amp;rdquo; atmosphere. I finally came up with a solution - leaving the necessary road for passing, planting &lt;a href=&#34;https://minecraft-archive.fandom.com/wiki/Wither_Rose&#34;&gt;wither rose&lt;/a&gt; beside the trunks.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-29.png?raw=true&#34; alt=&#34;Whole-building-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-21.png?raw=true&#34; alt=&#34;Entrance-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-22.png?raw=true&#34; alt=&#34;Hall-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-23.png?raw=true&#34; alt=&#34;Chess-room-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-24.png?raw=true&#34; alt=&#34;Hall-overlook-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-25.png?raw=true&#34; alt=&#34;Meditation-room-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-26.png?raw=true&#34; alt=&#34;Balcony-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-27.png?raw=true&#34; alt=&#34;Living-room-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-28.png?raw=true&#34; alt=&#34;Bedroom-at-night-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In addition, as you can imagine, the shade of all the platforms creates a great monster-spawning area on the ground, and the monsters seem to be partying underneath day and night. But I didn&amp;rsquo;t want to place light sources on the ground around, because it would spoil the &amp;ldquo;only treehouse emitting light at night&amp;rdquo; visual effect, the &amp;ldquo;someone living here along with endless jungle&amp;rdquo; atmosphere. I finally came up with a solution - leaving the necessary road for passing, planting &lt;a href=&#34;https://minecraft-archive.fandom.com/wiki/Wither_Rose&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wither rose&lt;/a&gt; beside the trunks.&lt;/p&gt;
 &lt;p&gt;During the night, along with periodical seconds of monsters hurting sound, the tree house silent in tranquility.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Wither-rose-surrounding-the-trunks-image&#34; src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-30.png?raw=true&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/boholder/boholder.github.io/blob/mcth-20220529/mcth-pic/mcth-30.png?raw=true&#34; alt=&#34;Wither-rose-surrounding-the-trunks-image&#34;&gt;&lt;/p&gt;
 </content>
             
             
@@ -366,7 +383,7 @@ decided to remove the backgrounds. (Lately I learned that we can use &lt;a href=
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/categories/design/" term="Design" label="Design" />
+                                <category scheme="https://boholder.github.io/en-us/categories/craft/" term="Craft" label="Craft" />
                             
                         
                     
@@ -376,13 +393,7 @@ decided to remove the backgrounds. (Lately I learned that we can use &lt;a href=
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/tags/design/" term="Design" label="Design" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://boholder.github.io/en-us/tags/blog/" term="Blog" label="Blog" />
+                                <category scheme="https://boholder.github.io/en-us/tags/minecraft/" term="Minecraft" label="Minecraft" />
                             
                         
                     
@@ -394,27 +405,28 @@ decided to remove the backgrounds. (Lately I learned that we can use &lt;a href=
             <title type="text">Process of practicing part of Conway’s Game of Life Kata in Java with IntelliJ IDEA</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/game-of-life-kata/" />
             <id>https://boholder.github.io/en-us/blogs/game-of-life-kata/</id>
-            <updated>2022-05-28T16:22:37&#43;08:00</updated>
+            <updated>2025-04-03T09:40:39&#43;08:00</updated>
             <published>2021-06-12T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://boholder.github.io/en-us/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">Writing a checker for checking single cell&#39;s next generation state.</summary>
             
-                <content type="html">&lt;h2 id=&#34;forward&#34;&gt;Forward&lt;/h2&gt;
-&lt;h3 id=&#34;what-is-kata&#34;&gt;What is &amp;ldquo;Kata&amp;rdquo;&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Kata_(programming)&#34;&gt;Kata&lt;/a&gt;
+                <content type="html">&lt;h2 id=&#34;forward&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#forward&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:forward&#34; class=&#34;headings&#34;&gt;Forward&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;what-is-kata&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#what-is-kata&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:what-is-kata&#34; class=&#34;headings&#34;&gt;What is &amp;ldquo;Kata&amp;rdquo;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Kata_%28programming%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kata&lt;/a&gt;
 is example code or question for practicing coding, that is repeatedly written to hone the proficiency of various
 programming skills
 (such as using IDE shortcut keys, using design patterns to refactor code&amp;hellip;)
 to achieve the state of subconsciously completing hand actions.&lt;/p&gt;
 &lt;p&gt;This noun is from some sort of martial arts, means &amp;ldquo;type&amp;rdquo;, &amp;ldquo;form&amp;rdquo; or &amp;ldquo;move&amp;rdquo; etc, single part of whole. It&amp;rsquo;s written
-as &lt;a href=&#34;https://en.wiktionary.org/wiki/%E3%81%8B%E3%81%9F&#34;&gt;かた&lt;/a&gt; in Japanese, pronounced as &amp;ldquo;ka ta&amp;rdquo;, same as the English word.&lt;/p&gt;
-&lt;h3 id=&#34;what-is-conways-game-of-life-kata&#34;&gt;What is &amp;ldquo;Conway&amp;rsquo;s Game of Life Kata&amp;rdquo;&lt;/h3&gt;
-&lt;p&gt;You can read &lt;a href=&#34;https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life&#34;&gt;this Wikipedia page&lt;/a&gt;
+as &lt;a href=&#34;https://en.wiktionary.org/wiki/%E3%81%8B%E3%81%9F&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;かた&lt;/a&gt; in Japanese, pronounced as &amp;ldquo;ka ta&amp;rdquo;, same as the English
+word.&lt;/p&gt;
+&lt;h3 id=&#34;what-is-conways-game-of-life-kata&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#what-is-conways-game-of-life-kata&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:what-is-conways-game-of-life-kata&#34; class=&#34;headings&#34;&gt;What is &amp;ldquo;Conway&amp;rsquo;s Game of Life Kata&amp;rdquo;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;You can read &lt;a href=&#34;https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this Wikipedia page&lt;/a&gt;
 for information about &amp;ldquo;Conway&amp;rsquo;s Game of Life&amp;rdquo;, but I think most of us have already known it.&lt;/p&gt;
-&lt;p&gt;This kata is &lt;a href=&#34;https://codingdojo.org/kata/GameOfLife/&#34;&gt;a question on Coding Dojo website&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;what-will-we-do-in-this-blog&#34;&gt;What will we do in this blog&lt;/h3&gt;
+&lt;p&gt;This kata is &lt;a href=&#34;https://codingdojo.org/kata/GameOfLife/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a question on Coding Dojo website&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;what-will-we-do-in-this-blog&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#what-will-we-do-in-this-blog&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:what-will-we-do-in-this-blog&#34; class=&#34;headings&#34;&gt;What will we do in this blog&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;In this article I&amp;rsquo;ll only cover the core function about cell&amp;rsquo;s next generation state checker, without any UI for playing
 it (it&amp;rsquo;s not easy to write an elegant UI for it with barely own code). I&amp;rsquo;ll use text-first (not strictly base on TDD
 practice I think) method to write it.&lt;/p&gt;
@@ -426,7 +438,7 @@ practice I think) method to write it.&lt;/p&gt;
 &lt;li&gt;All other dead cell without three live neighbours stay dead.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;What&amp;rsquo;s more, the grid where cells set in here is considered
-as &lt;a href=&#34;https://en.wikipedia.org/wiki/Simply_connected_space&#34;&gt;simply connected&lt;/a&gt;, which means that:&lt;/p&gt;
+as &lt;a href=&#34;https://en.wikipedia.org/wiki/Simply_connected_space&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;simply connected&lt;/a&gt;, which means that:&lt;/p&gt;
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;the grid has no edge, neighbors of one cell just beyond array edge is cells on the opposite side (e.g., cell (1,0) 3
 left neighbors is (0,n-1),(1,n-1),(2,n-1) ).&lt;/li&gt;
@@ -441,22 +453,22 @@ use this Kata to practice IntelliJ IDEA shortcuts
 (Settings &amp;gt; Keymap). In this kata we can practise refactor, run &amp;amp; debug, navigating&amp;hellip; plenty of common shortcuts used
 in daily work.&lt;/p&gt;
 &lt;p&gt;By the way, you can get the code
-in &lt;a href=&#34;https://github.com/boholder/JavaKatas/tree/master/src/main/java/com/practice/game_of_life&#34;&gt;this Github repo&lt;/a&gt;
+in &lt;a href=&#34;https://github.com/boholder/JavaKatas/tree/master/src/main/java/com/practice/game_of_life&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this Github repo&lt;/a&gt;
 , it&amp;rsquo;s build with Maven, so I guess you can save some time of preparing environment by just downloading this repo if
 you&amp;rsquo;ve got Maven on you device.&lt;/p&gt;
 &lt;p&gt;And&amp;hellip; if you think this post is too simple now, I recommend you to try the
-classic &lt;a href=&#34;https://codingdojo.org/kata/Bowling/&#34;&gt;The Bowling Game Kata&lt;/a&gt;, and here is a solution:
-&lt;a href=&#34;https://sites.google.com/site/unclebobconsultingllc/home/articles/the-bowling-game-an-example-of-test-first-pair-programming&#34;&gt;The Bowling Game: An example of test-first pair programming by Robert C. Martin and Robert S. Koss&lt;/a&gt;
+classic &lt;a href=&#34;https://codingdojo.org/kata/Bowling/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Bowling Game Kata&lt;/a&gt;, and here is a solution:
+&lt;a href=&#34;https://sites.google.com/site/unclebobconsultingllc/home/articles/the-bowling-game-an-example-of-test-first-pair-programming&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Bowling Game: An example of test-first pair programming by Robert C. Martin and Robert S. Koss&lt;/a&gt;
 (this site seems to be a mirror and maybe can&amp;rsquo;t respond, but the original url Uncle Bob quoted on the book had down).&lt;/p&gt;
-&lt;h2 id=&#34;make-the-first-rule-passes-test&#34;&gt;Make the first rule passes test&lt;/h2&gt;
-&lt;h3 id=&#34;init-function-code&#34;&gt;Init function code&lt;/h3&gt;
+&lt;h2 id=&#34;make-the-first-rule-passes-test&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#make-the-first-rule-passes-test&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:make-the-first-rule-passes-test&#34; class=&#34;headings&#34;&gt;Make the first rule passes test&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;init-function-code&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#init-function-code&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:init-function-code&#34; class=&#34;headings&#34;&gt;Init function code&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Now lets implement the rule 1:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Any live cell with less than two or more than three live neighbours dead.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;New package &amp;ldquo;com.practice.daily.d20210606&amp;rdquo;, new file &amp;ldquo;Checker.java&amp;rdquo;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
@@ -473,7 +485,7 @@ classic &lt;a href=&#34;https://codingdojo.org/kata/Bowling/&#34;&gt;The Bowling
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Wait, what parameters should we type in? Lets &lt;strong&gt;think based on testing&lt;/strong&gt; (you don&amp;rsquo;t need to really write unit test
 first, just think test first will benefit your code):&lt;/p&gt;
@@ -492,7 +504,7 @@ Java, this type method is a &amp;ldquo;static method&amp;rdquo;.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;So the method signature becomes:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
@@ -505,23 +517,23 @@ Java, this type method is a &amp;ldquo;static method&amp;rdquo;.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;write-test-code&#34;&gt;Write test code&lt;/h3&gt;
+&lt;/div&gt;&lt;h3 id=&#34;write-test-code&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#write-test-code&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:write-test-code&#34; class=&#34;headings&#34;&gt;Write test code&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Now Let&amp;rsquo;s write unit tests. New file under &amp;ldquo;src/test&amp;rdquo; directory, &amp;ldquo;CheckerTest.java&amp;rdquo;. I installed a plugin
-called &lt;a href=&#34;https://plugins.jetbrains.com/plugin/3064-junitgenerator-v2-0/reviews&#34;&gt;JUnitGenerator V2.0&lt;/a&gt;
+called &lt;a href=&#34;https://plugins.jetbrains.com/plugin/3064-junitgenerator-v2-0/reviews&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JUnitGenerator V2.0&lt;/a&gt;
 , so I&amp;rsquo;ll use &lt;code&gt;Generate...&lt;/code&gt;: &lt;code&gt;Alt&lt;/code&gt; + &lt;code&gt;Insert&lt;/code&gt; then select &amp;ldquo;Junit test&amp;rdquo; to generate and removing all
 content (&lt;code&gt;Extend Selection&lt;/code&gt;: &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;W&lt;/code&gt; and &lt;code&gt;Backspace&lt;/code&gt;). Although I don&amp;rsquo;t need the code, this plugin can help me
 generate directories and files, it&amp;rsquo;s enough:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;CheckerTest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Now add first test case (using JUnit to test). I had written an &lt;code&gt;Editor &amp;gt; Live Templates&lt;/code&gt;, set abbreviation &amp;ldquo;tpv&amp;rdquo; as &amp;quot;
 @Test public void &amp;ldquo;, so I type &amp;ldquo;tpv&amp;rdquo; and enter, add method name, brackets, use &lt;code&gt;Complete Current Statement&lt;/code&gt;: &lt;code&gt;Shift&lt;/code&gt;&lt;/p&gt;
@@ -529,7 +541,7 @@ generate directories and files, it&amp;rsquo;s enough:&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;Enter&lt;/code&gt; add braces.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
@@ -542,7 +554,7 @@ generate directories and files, it&amp;rsquo;s enough:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;liveLessThanTwoDie&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Now&amp;hellip; we have to decide how to construct test data, mainly means that grid. Let&amp;rsquo;s shrink Checker&amp;rsquo;s behavior without &amp;quot;
 simply connected&amp;rdquo; feature, so the ideal gird is 3 by 3 size, call Checker with central position (1,1). Based on SRP
@@ -550,7 +562,7 @@ principle, I write an independent method about this test data generator, to sepa
 case (
 it&amp;rsquo;s a Simple Factory):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
@@ -579,14 +591,14 @@ it&amp;rsquo;s a Simple Factory):&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gird&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Replacing 2-level-repeat for-loop with Java 8 Stream API can reduce keyboard typing. If you use for-loop, you&amp;rsquo;ll find
 that IDEA can&amp;rsquo;t help you a lot on auto-completion. You need to write almost every part of condition, and for-loop
 condition&amp;rsquo;s characters are allover the keyboard. You can get IDEA auto-completion to help you by using Stream API.&lt;/p&gt;
 &lt;p&gt;Now type &lt;code&gt;Previous Method&lt;/code&gt;: &lt;code&gt;Alt&lt;/code&gt; + &lt;code&gt;up arrow&lt;/code&gt;, jump to upper test case method and finish it:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
@@ -607,14 +619,14 @@ condition&amp;rsquo;s characters are allover the keyboard. You can get IDEA auto
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assertThat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Matchers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;is&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Type &lt;code&gt;Run&lt;/code&gt;: &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;F10&lt;/code&gt;, test failed, test turn over, now it&amp;rsquo;s turn of function code.&lt;/p&gt;
-&lt;h3 id=&#34;complete-function-code&#34;&gt;Complete function code&lt;/h3&gt;
+&lt;h3 id=&#34;complete-function-code&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#complete-function-code&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:complete-function-code&#34; class=&#34;headings&#34;&gt;Complete function code&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Type &lt;code&gt;Select Previous Tab&lt;/code&gt;: &lt;code&gt;Alt&lt;/code&gt; + &lt;code&gt;left arrow&lt;/code&gt;, go back. How the Checker works? Straightly think, it counts live
 neighbors count of given cell (8 cells), judging it by rules, then return the judgment result, 3 steps. Implement it:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
@@ -643,12 +655,12 @@ neighbors count of given cell (8 cells), judging it by rules, then return the ju
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;I use Stream API again, but what is
-the &lt;a href=&#34;https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html&#34;&gt;AtomicInteger&lt;/a&gt;
+the &lt;a href=&#34;https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AtomicInteger&lt;/a&gt;
 ?
-Check &lt;a href=&#34;https://stackoverflow.com/questions/4732544/why-are-only-final-variables-accessible-in-anonymous-class&#34;&gt;this StackOverflow question&lt;/a&gt;
+Check &lt;a href=&#34;https://stackoverflow.com/questions/4732544/why-are-only-final-variables-accessible-in-anonymous-class&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this StackOverflow question&lt;/a&gt;
 . In brief, Java lambda expression will be converted to an anonymous inner class, and in this type of class you can&amp;rsquo;t
 use mutable local variables. So we need to change the &amp;ldquo;count&amp;rdquo;
 variable type from int to some sort of wrapper type, so we can change the value while remain object reference not
@@ -663,10 +675,10 @@ lambda expression, IDEA will point it out with an error sign. Type &lt;code&gt;E
 information, IDEA says that &lt;strong&gt;&amp;ldquo;Variable used in lambda expression should be final or effectively final&amp;rdquo;&lt;/strong&gt;. Then you can
 fix it simply with familiar &lt;code&gt;Alt&lt;/code&gt; + &lt;code&gt;Enter&lt;/code&gt;, IDEA gives you two option: &amp;ldquo;Convert to atomic&amp;rdquo;, or &amp;quot;
 Transform &amp;lsquo;count&amp;rsquo; into final one element array&amp;quot;. You can try the second choice, it also works.&lt;/p&gt;
-&lt;h3 id=&#34;find-the-mistake-with-debug&#34;&gt;Find the mistake with debug&lt;/h3&gt;
+&lt;h3 id=&#34;find-the-mistake-with-debug&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#find-the-mistake-with-debug&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:find-the-mistake-with-debug&#34; class=&#34;headings&#34;&gt;Find the mistake with debug&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Ok&amp;hellip; &lt;code&gt;Select Next Tab&lt;/code&gt;: &lt;code&gt;Alt&lt;/code&gt; + &lt;code&gt;right arrow&lt;/code&gt;, &lt;code&gt;Run&lt;/code&gt; the test case:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
@@ -675,7 +687,7 @@ Transform &amp;lsquo;count&amp;rsquo; into final one element array&amp;quot;. Yo
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;java.lang.AssertionError: 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Expected: is &amp;lt;false&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     but: was &amp;lt;true&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Uh-oh, debug time. Now back to function code, then &lt;code&gt;Toggle Line Breakpoint&lt;/code&gt;: &lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;F8&lt;/code&gt;
 on &amp;ldquo;line 12: count.getAndIncrement();&amp;rdquo;. Run &lt;code&gt;Debug&lt;/code&gt;: &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;F9&lt;/code&gt;.&lt;/p&gt;
@@ -686,7 +698,7 @@ down &lt;code&gt;Alt&lt;/code&gt;, and take the mouse (first time picking up mou
 click the left mouse button, then IDEA shows this expression&amp;rsquo;s calculating result: &amp;quot;
 0&amp;quot;.&lt;/p&gt;
 &lt;p&gt;This is IDEA debugger
-&lt;a href=&#34;https://www.jetbrains.com/help/idea/examining-suspended-program.html#quick-evaluate&#34;&gt;Quick Evaluate&lt;/a&gt;
+&lt;a href=&#34;https://www.jetbrains.com/help/idea/examining-suspended-program.html#quick-evaluate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Quick Evaluate&lt;/a&gt;
 function. You can trigger it with &lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;Alt&lt;/code&gt; + &lt;code&gt;F8&lt;/code&gt; on the keyboard, so you can still put your hands on the
 keyboard. To do so, first you need to navigate your cursor on target text
 (use &lt;code&gt;Go to Line:Column...&lt;/code&gt;: &lt;code&gt;Ctrl&lt;/code&gt; + &lt;code&gt;G&lt;/code&gt;), then select them, then trigger evaluation. Sorry, pure keyboard programming
@@ -699,7 +711,7 @@ index, it&amp;rsquo;s gird[1][1]. Oh, we find the bug, we mistakenly count the t
 breakpoint line 12&amp;quot;
 won&amp;rsquo;t be hinted again. Let&amp;rsquo;s type &lt;code&gt;Step Over&lt;/code&gt;: &lt;code&gt;F8&lt;/code&gt; until cursor moves to &amp;ldquo;line 16:
 return count.get() &amp;gt;= 2;&amp;rdquo;: &amp;ldquo;count&amp;rdquo; value is 2, so that&amp;rsquo;s why the Checker returned wrong answer.&lt;/p&gt;
-&lt;h3 id=&#34;fix-that-mistake&#34;&gt;Fix that mistake&lt;/h3&gt;
+&lt;h3 id=&#34;fix-that-mistake&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#fix-that-mistake&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:fix-that-mistake&#34; class=&#34;headings&#34;&gt;Fix that mistake&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;We can fix that bug by slightly change line 16 to &amp;ldquo;return count.get() &lt;strong&gt;- 1&lt;/strong&gt; &amp;gt;= 2;&amp;rdquo;, type &lt;code&gt;Esc&lt;/code&gt;
 return to Editor window from Debug tab then change it. Though we have fixed it on source code, the debugger is still
 running with old code, we need to reload it. IDEA gives us an approach to reload code without rerunning the test case (
@@ -713,10 +725,10 @@ the GUI button besides Quick Evaluate button), the top invoke frame is dropped, 
 (line 14: boolean state = Checker.checkCellNextState(gird, 1, 1);) in test case!&lt;/p&gt;
 &lt;p&gt;Type &lt;code&gt;Resume Program&lt;/code&gt; and go into the Checker again, resume, check, resume&amp;hellip;&amp;hellip; confirmed,
 &lt;code&gt;Step Out&lt;/code&gt;: &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;F8&lt;/code&gt; to test case, &lt;code&gt;Resume&lt;/code&gt;, test pass.&lt;/p&gt;
-&lt;h3 id=&#34;add-code-to-finish-the-rule-1&#34;&gt;Add code to finish the rule 1&lt;/h3&gt;
+&lt;h3 id=&#34;add-code-to-finish-the-rule-1&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#add-code-to-finish-the-rule-1&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:add-code-to-finish-the-rule-1&#34; class=&#34;headings&#34;&gt;Add code to finish the rule 1&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Add another test case:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
@@ -737,11 +749,11 @@ the GUI button besides Quick Evaluate button), the top invoke frame is dropped, 
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Matchers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;is&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Run it with &lt;code&gt;Run&lt;/code&gt;, fail as expected. Now change the function code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
@@ -770,7 +782,7 @@ the GUI button besides Quick Evaluate button), the top invoke frame is dropped, 
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;||&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Now we want to run both two test cases to check our change not break the first test.&lt;/p&gt;
 &lt;p&gt;IDEA can store 5 temporary configurations, which are automatically generated when you run code from one different
@@ -790,7 +802,7 @@ neighbors count code into separate privat method by select lines and push
 &lt;code&gt;Extract Method...&lt;/code&gt;: &lt;code&gt;Ctrl&lt;/code&gt;+ &lt;code&gt;Alt&lt;/code&gt; + &lt;code&gt;M&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Whew, finally, we finished the rule 1, we&amp;rsquo;ve finished about more than half of the total work. Now code looks like:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
@@ -895,15 +907,15 @@ neighbors count code into separate privat method by select lines and push
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gird&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;make-the-234-rules-pass-test&#34;&gt;Make the 2,3,4 rules pass test&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;make-the-234-rules-pass-test&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#make-the-234-rules-pass-test&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:make-the-234-rules-pass-test&#34; class=&#34;headings&#34;&gt;Make the 2,3,4 rules pass test&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s move to the second rule:&lt;/p&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;Any dead cell with three live neighbours becomes a live cell.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
@@ -924,7 +936,7 @@ neighbors count code into separate privat method by select lines and push
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Matchers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;is&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Run test, oh, test pass, don&amp;rsquo;t worry about test not fail, it&amp;rsquo;s ok for now. Next rule:&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
@@ -933,7 +945,7 @@ neighbors count code into separate privat method by select lines and push
 &lt;p&gt;Uh-huh, we can confirm this behavior works because we just write the code as this description but&amp;hellip;&amp;hellip; we&amp;rsquo;d better
 write them down as new tests to make the test suit stay completed:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
@@ -970,14 +982,14 @@ write them down as new tests to make the test suit stay completed:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Matchers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;is&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;There&amp;rsquo;s no doubt that these tests can pass. Work on the rule 4 now:&lt;/p&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;All other dead cell without three live neighbours stay dead.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
@@ -1014,13 +1026,13 @@ write them down as new tests to make the test suit stay completed:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Matchers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;is&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&amp;ldquo;deadTwoDie()&amp;rdquo; passes and &amp;ldquo;deadMoreThanThreeDie()&amp;rdquo; fail&amp;hellip;.. Time to change function code. We can easily
 figure out the difference between count live cell&amp;rsquo;s live neighbors and count dead cell&amp;rsquo;s: dead
 cell don&amp;rsquo;t need to minus itself after count all live cells. So we can change code to this:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
@@ -1047,13 +1059,13 @@ cell don&amp;rsquo;t need to minus itself after count all live cells. So we can 
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Yep, all 7 test cases pass after change. By the way, you can move two exist lines by move cursor on first line, keep
 pushing &lt;code&gt;Shift&lt;/code&gt; and type one &lt;code&gt;down arrow&lt;/code&gt; to select two lines, and use
 &lt;code&gt;Move Line Up|Down&lt;/code&gt;: &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;Alt&lt;/code&gt; + &lt;code&gt;up|down Arrow&lt;/code&gt;. When one part of line has being selected, and you use commands
 like &amp;ldquo;Copy&amp;rdquo;, &amp;ldquo;Move&amp;rdquo; etc, IDEA will adjust the target to whole line, it&amp;rsquo;s a little tip.&lt;/p&gt;
-&lt;h2 id=&#34;make-the-simply-connected-feature-works&#34;&gt;Make the &amp;ldquo;simply connected&amp;rdquo; feature works&lt;/h2&gt;
+&lt;h2 id=&#34;make-the-simply-connected-feature-works&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#make-the-simply-connected-feature-works&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:make-the-simply-connected-feature-works&#34; class=&#34;headings&#34;&gt;Make the &amp;ldquo;simply connected&amp;rdquo; feature works&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;With normal rules already been implemented, we can consider that weird &amp;ldquo;simply connected&amp;rdquo; feature. I can figure out two
 test case for it:&lt;/p&gt;
 &lt;ul&gt;
@@ -1068,7 +1080,7 @@ to 4 or more live neighbors.&lt;/p&gt;
 &lt;p&gt;For the second case, Checker should count exactly two live neighbors or goes wrong with missed count, which also leads
 to wrong judgment. The corresponding test code is:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
@@ -1107,7 +1119,7 @@ to wrong judgment. The corresponding test code is:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assertThat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Checker&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;checkCellNextState&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Matchers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;is&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;None of them pass, how to make them pass? This feature is sort of like circular array, we want to
 know how to calculate real index from virtual index. I&amp;rsquo;d prefer to scribble a draft in my notebook
@@ -1115,7 +1127,7 @@ when question related to graph. First we draw a 3 by 3 grid. Center element is o
 assume that it&amp;rsquo;s coordinate is (i,j).&lt;/p&gt;
 &lt;p&gt;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
@@ -1146,11 +1158,11 @@ assume that it&amp;rsquo;s coordinate is (i,j).&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Tests pass, we finished the last requirement. After a little more refactors, now the whole code is:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  3
@@ -1401,12 +1413,12 @@ assume that it&amp;rsquo;s coordinate is (i,j).&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gird&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;I think that&amp;rsquo;s about as &amp;ldquo;clean&amp;rdquo; a code as I can do.&lt;/p&gt;
-&lt;h2 id=&#34;whats-more&#34;&gt;What&amp;rsquo;s more&lt;/h2&gt;
+&lt;h2 id=&#34;whats-more&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#whats-more&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/game-of-life-kata/#contents:whats-more&#34; class=&#34;headings&#34;&gt;What&amp;rsquo;s more&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;If you want to learn IDEA shortcuts, In late 2016, IDEA made
-&lt;a href=&#34;https://blog.jetbrains.com/idea/2016/12/ide-features-trainer/&#34;&gt;an interactive tool&lt;/a&gt;
+&lt;a href=&#34;https://blog.jetbrains.com/idea/2016/12/ide-features-trainer/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;an interactive tool&lt;/a&gt;
 to help you, and it was integrated right in the IDEA afterwards.&lt;/p&gt;
 </content>
             
@@ -1423,6 +1435,12 @@ to help you, and it was integrated right in the IDEA afterwards.&lt;/p&gt;
                                 <category scheme="https://boholder.github.io/en-us/categories/programming/" term="Programming" label="Programming" />
                             
                         
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/en-us/categories/practice/" term="Practice" label="Practice" />
+                            
+                        
                     
                 
                     
@@ -1430,13 +1448,7 @@ to help you, and it was integrated right in the IDEA afterwards.&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/tags/programming/" term="Programming" label="Programming" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://boholder.github.io/en-us/tags/blog/" term="Blog" label="Blog" />
+                                <category scheme="https://boholder.github.io/en-us/tags/kata/" term="Kata" label="Kata" />
                             
                         
                     
@@ -1448,20 +1460,20 @@ to help you, and it was integrated right in the IDEA afterwards.&lt;/p&gt;
             <title type="text">Tips of the electronic data backup system applicable to individuals</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/individual-data-backup-summary/" />
             <id>https://boholder.github.io/en-us/blogs/individual-data-backup-summary/</id>
-            <updated>2023-03-25T14:23:00&#43;08:00</updated>
+            <updated>2025-04-03T09:40:39&#43;08:00</updated>
             <published>2020-12-07T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://boholder.github.io/en-us/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">Personal insights into the practicalities of personal data backup</summary>
             
-                <content type="html">&lt;p&gt;&lt;em&gt;This article was completed with the help of &lt;a href=&#34;https://www.DeepL.com/Translator&#34;&gt;www.DeepL.com/Translator&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+                <content type="html">&lt;p&gt;&lt;em&gt;This article was completed with the help of &lt;a href=&#34;https://www.DeepL.com/Translator&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;www.DeepL.com/Translator&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Electronic data (hereinafter referred to as &amp;ldquo;Data&amp;rdquo;) is stored on electronic media and can only be read and written by electronic devices, which means that additional equipment may need to be purchased to meet the need for its storage and processing.&lt;/p&gt;
 &lt;p&gt;In this paper, all self-created terms that do not have a corresponding term-level definition will be cited using brackets to highlight the term to prevent confusion to the reader (example: [self-created term]). Also, this article uses backquotes to quote terms that have been mentioned above (e.g., &lt;code&gt;terminology&lt;/code&gt;). This article is a summary of my reflections on the loss of four and a half months of work data due to stupidity and accidents. The content of this article is only personal
 opinion, discusses welcome.&lt;/p&gt;
-&lt;h2 id=&#34;data-classification-bases-on-importance&#34;&gt;Data classification bases on importance&lt;/h2&gt;
+&lt;h2 id=&#34;data-classification-bases-on-importance&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#data-classification-bases-on-importance&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#contents:data-classification-bases-on-importance&#34; class=&#34;headings&#34;&gt;Data classification bases on importance&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Data is classified into several levels of importance (severity of loss).&lt;/p&gt;
-&lt;h3 id=&#34;level-1&#34;&gt;Level 1&lt;/h3&gt;
+&lt;h3 id=&#34;level-1&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#level-1&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#contents:level-1&#34; class=&#34;headings&#34;&gt;Level 1&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Examples:&lt;/p&gt;
@@ -1502,7 +1514,7 @@ opinion, discusses welcome.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;level-2&#34;&gt;Level 2&lt;/h3&gt;
+&lt;h3 id=&#34;level-2&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#level-2&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#contents:level-2&#34; class=&#34;headings&#34;&gt;Level 2&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Examples:&lt;/p&gt;
@@ -1546,7 +1558,7 @@ As for what is uploaded externally or generated on external platforms, it is bes
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;level-3&#34;&gt;Level 3&lt;/h3&gt;
+&lt;h3 id=&#34;level-3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#level-3&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#contents:level-3&#34; class=&#34;headings&#34;&gt;Level 3&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Examples:&lt;/p&gt;
@@ -1569,33 +1581,32 @@ As for what is uploaded externally or generated on external platforms, it is bes
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;other-personal-insights-related-to-encryption-and-backup&#34;&gt;Other personal insights related to encryption and backup&lt;/h2&gt;
-&lt;h3 id=&#34;encryption&#34;&gt;Encryption&lt;/h3&gt;
-&lt;p&gt;Let me recommend tools for you! The author has been using &lt;a href=&#34;https://www.veracrypt.fr/en/Home.html&#34;&gt;VeraCrypt&lt;/a&gt; for several years for all encryption-related operations. It is open-source, multi-platform, and fully functional, and it has recently become active again after a few years of stagnation!&lt;/p&gt;
+&lt;h2 id=&#34;other-personal-insights-related-to-encryption-and-backup&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#other-personal-insights-related-to-encryption-and-backup&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#contents:other-personal-insights-related-to-encryption-and-backup&#34; class=&#34;headings&#34;&gt;Other personal insights related to encryption and backup&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;encryption&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#encryption&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#contents:encryption&#34; class=&#34;headings&#34;&gt;Encryption&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Let me recommend tools for you! The author has been using &lt;a href=&#34;https://www.veracrypt.fr/en/Home.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VeraCrypt&lt;/a&gt; for several years for all encryption-related operations. It is open-source, multi-platform, and fully functional, and it has recently become active again after a few years of stagnation!&lt;/p&gt;
 &lt;p&gt;What could be better than a long-lasting and still active open-source software project? VeraCrypt can encrypt the entire drive or create a strongly encrypted &amp;ldquo;file-type driver&amp;rdquo;. When decrypted and mounted, it becomes an accessible disk, and when unmounted, it becomes a portable file that can be backed up like a normal single file. Perfect!&lt;/p&gt;
 &lt;p&gt;Note here, don&amp;rsquo;t be confused by VeraCrypt&amp;rsquo;s File Driver feature, I just tried Bitlocker recklessly because he didn&amp;rsquo;t read the document without making a backup, and stored the backup key in the File Driver, forgetting that the file itself is stored in the Driver set up with Bitlocker, lock the key inside the chest and&amp;hellip;&amp;hellip; can not open the chest forever.&lt;/p&gt;
-&lt;p&gt;For Windows Professional users, &lt;a href=&#34;https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview&#34;&gt;Microsoft Windows BitLocker&lt;/a&gt; is also a handy tool, being commercial grade software, it is easy to use and has Microsoft&amp;rsquo;s continuous quality support. However, it can only encrypt Driver, so it is not very convenient when combined with cloud backup operations. For Driver encrypted with BitLocker software, you need to decrypt it manually before backup, or set it to decrypt automatically after boot (login). As a side effect, this will expose the encrypted files to be readable in an unencrypted state during backup, so the security requirement of the environment at the time of backing up the data is a bit stricter.&lt;/p&gt;
+&lt;p&gt;For Windows Professional users, &lt;a href=&#34;https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Microsoft Windows BitLocker&lt;/a&gt; is also a handy tool, being commercial grade software, it is easy to use and has Microsoft&amp;rsquo;s continuous quality support. However, it can only encrypt Driver, so it is not very convenient when combined with cloud backup operations. For Driver encrypted with BitLocker software, you need to decrypt it manually before backup, or set it to decrypt automatically after boot (login). As a side effect, this will expose the encrypted files to be readable in an unencrypted state during backup, so the security requirement of the environment at the time of backing up the data is a bit stricter.&lt;/p&gt;
 &lt;p&gt;Sorry, I don&amp;rsquo;t know much about the common software collections for Mac and Linux, and cannot introduce the platform-exclusive software corresponding to them. The VeraCrypt is multi-platform, so maybe you can try it first.&lt;/p&gt;
-&lt;p&gt;In particular, for [Level 1 data], encrypted storage means encrypting a separate driver containing [Level 1 data] with another human-readable passphrase (password). This requires that you remember at least one &amp;ldquo;master key&amp;rdquo;, which is used to decrypt the data that contains other keys. I use the file Driver provided by VeraCrypt to store such information, which is primitive, but I stubbornly believe it is &amp;ldquo;more secure&amp;rdquo;. There are many other programs on the market that provide direct encryption and backup services for such keys, such as &lt;a href=&#34;https://1password.com/zh-cn/&#34;&gt;1Password&lt;/a&gt;. Even modern browsers such as Firefox and Chrome have built-in services for managing web passwords. And you can purchase a little hardware like the &lt;a href=&#34;https://www.yubico.com/&#34;&gt;Yubikey&lt;/a&gt; to carry your keys be your side just like a key ring. You will find one that suits your taste.&lt;/p&gt;
-&lt;h3 id=&#34;backup&#34;&gt;Backup&lt;/h3&gt;
+&lt;p&gt;In particular, for [Level 1 data], encrypted storage means encrypting a separate driver containing [Level 1 data] with another human-readable passphrase (password). This requires that you remember at least one &amp;ldquo;master key&amp;rdquo;, which is used to decrypt the data that contains other keys. I use the file Driver provided by VeraCrypt to store such information, which is primitive, but I stubbornly believe it is &amp;ldquo;more secure&amp;rdquo;. There are many other programs on the market that provide direct encryption and backup services for such keys, such as &lt;a href=&#34;https://1password.com/zh-cn/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1Password&lt;/a&gt;. Even modern browsers such as Firefox and Chrome have built-in services for managing web passwords. And you can purchase a little hardware like the &lt;a href=&#34;https://www.yubico.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yubikey&lt;/a&gt; to carry your keys be your side just like a key ring. You will find one that suits your taste.&lt;/p&gt;
+&lt;h3 id=&#34;backup&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#backup&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#contents:backup&#34; class=&#34;headings&#34;&gt;Backup&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;First identifying the data that needs to be backed up. For example, for me, there is one [Level 1 data], two [Level 2 data] (personal confidential documents and work confidential documents), and five [Level 3 data] (home desktop, home laptop, work laptop, cell phone, tablet). The cell phone and tablet are actually backed up in the [Level 3 data] section of the computer&amp;rsquo;s hard drive, which themselves are mix of Level 1~3 and my solution is to encrypt their backups (treated as [Level 2 data]), but storing these backups within the computer&amp;rsquo;s [Level 3 data] backups.&lt;/p&gt;
-&lt;h4 id=&#34;backup-storage-location&#34;&gt;Backup storage location&lt;/h4&gt;
+&lt;h4 id=&#34;backup-storage-location&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#backup-storage-location&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#contents:backup-storage-location&#34; class=&#34;headings&#34;&gt;Backup storage location&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Because the data is saved on electronic media, based on the physical presence of storage devices, for the choice of backup location, I have not considered redundant backups within the same storage location, but to achieve hardware-level isolation, regardless of geographic location, at least at the hard drive level. In a mobile hard drive in a desk drawer OR a NAS on the floor OR in a cluster of servers of a cloud storage service, the difference between these methods is the geographical location where the data is stored.&lt;/p&gt;
 &lt;p&gt;For example, I sort of dislike the cloud storage services and don&amp;rsquo;t have the need to transfer data in large quantities to multiple devices (subjective + objective reasons), so I don&amp;rsquo;t use a cloud storage service that is objectively really affordable and convenient. I also did not set up a home NAS, but only purchased two large-capacity mobile hard drives, regular backup of [Level 2 data] and [Level 3 data] on two hard drives, one in the company cabinet, one at home, rounded up also considered off-site disaster recovery, to allow a fire and man-made disasters. As for the [Level 1 data], it is saved on the desktop at home, the laptop at home, two mobile hard drives, and the company laptop, for a total of five backups.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;After this accident, I decided to &lt;strong&gt;upload [Level 1 data] and [Level 2 data] to Microsoft OneDrive&lt;/strong&gt;. Anyway, more backups are better, since it is encrypted and the size is not very big, so I can upload the backup quickly.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;After this accident, I decided to &lt;strong&gt;upload [Level 1 data] and [Level 2 data] to Microsoft OneDrive&lt;/strong&gt;. Anyway, more backups are better, since it is encrypted and the size is not very big, so I can upload the backup quickly.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;PS: It is better to have [Level 1 data] in each backup location where [Level 2 data] is located, because the two are interdependent, which can be understood as the key is more than the number of treasure chests, and the key is placed next to each treasure chest, and there is a &amp;ldquo;master key&amp;rdquo; as a protection mechanism for the key. (For people like me who use standalone encryption software, I need to put the portable version of the encryption software together with [Level 1 data] and [Level 2 data]&lt;/p&gt;
-&lt;h4 id=&#34;backup-frequency&#34;&gt;Backup frequency&lt;/h4&gt;
+&lt;h4 id=&#34;backup-frequency&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#backup-frequency&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#contents:backup-frequency&#34; class=&#34;headings&#34;&gt;Backup frequency&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;This was the biggest problem in the backup system exposed by the man-made disaster I experienced this time &amp;mdash; &lt;strong&gt;not frequent enough to do backup&lt;/strong&gt;, to be precise for the company laptop backups. I decided to set the backup frequency to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Biweekly backups on local mobile hard drives at home and at work (and incidentally on cell phones and tablets).&lt;/li&gt;
 &lt;li&gt;Two mobile hard drives at home and at work are crossed monthly to form two full backups.&lt;/li&gt;
 &lt;li&gt;[Level 1 data] and [Level 2 data] are set up on the computers for automatic Windows OneDrive updating, and uploaded after each change.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;problems-with-automated-synchronization-between-backups&#34;&gt;Problems with (automated) synchronization between backups&lt;/h4&gt;
+&lt;h4 id=&#34;problems-with-automated-synchronization-between-backups&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#problems-with-automated-synchronization-between-backups&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#contents:problems-with-automated-synchronization-between-backups&#34; class=&#34;headings&#34;&gt;Problems with (automated) synchronization between backups&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;This issue is again to reflect the advantages of network drives, after experience, OneDrive on Windows can do real-time backup, you can use this feature to ensure consistency between backups on networked devices. If you don&amp;rsquo;t want to use a network drive service, you can also build your own home NAS. As long as you can ensure that the storage devices are connected to the Internet, there are always ready-made solutions to set up an automated data synchronization system. For example, Windows 10 comes with a &amp;ldquo;backup&amp;rdquo; feature that can synchronize at directory-level granularity as short as once every 10 minutes. But devices that can&amp;rsquo;t be networked, like my two mobile HDDs, I think of as the &amp;ldquo;tape warehouse&amp;rdquo; of commercial solutions - large and inexpensive, stable storage media (comparing to SSD), but can not read/write over the network. They can only be updated manually, but at best, they can be plugged into a computer on time, and the rest should be left to a backup tool that only needs to be manually configured once.&lt;/p&gt;
-&lt;h2 id=&#34;postscript&#34;&gt;Postscript&lt;/h2&gt;
+&lt;h2 id=&#34;postscript&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#postscript&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/individual-data-backup-summary/#contents:postscript&#34; class=&#34;headings&#34;&gt;Postscript&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Originally, my backup frequency is once a month. A busy work schedule has caused me to go months without a backup for my work laptop. I&amp;rsquo;m still thankful for the accident, because false security is more dangerous than not having insurance. Another insight based on SRE theory is to back up before important operations, but don&amp;rsquo;t forget that if you can&amp;rsquo;t do the backup first, you should stop continuing important operations, so &lt;strong&gt;&amp;ldquo;the process fall in safe&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
 </content>
             
@@ -1609,7 +1620,13 @@ As for what is uploaded externally or generated on external platforms, it is bes
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/categories/thought/" term="Thought" label="Thought" />
+                                <category scheme="https://boholder.github.io/en-us/categories/life/" term="Life" label="Life" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/en-us/categories/tips/" term="Tips" label="Tips" />
                             
                         
                     
@@ -1619,13 +1636,13 @@ As for what is uploaded externally or generated on external platforms, it is bes
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/tags/sre/" term="SRE" label="SRE" />
+                                <category scheme="https://boholder.github.io/en-us/tags/sre/" term="Sre" label="Sre" />
                             
                         
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/tags/blog/" term="Blog" label="Blog" />
+                                <category scheme="https://boholder.github.io/en-us/tags/backup/" term="Backup" label="Backup" />
                             
                         
                     
@@ -1637,56 +1654,56 @@ As for what is uploaded externally or generated on external platforms, it is bes
             <title type="text">Safety signs for programming</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/program-safety-sign/" />
             <id>https://boholder.github.io/en-us/blogs/program-safety-sign/</id>
-            <updated>2023-03-24T21:56:27&#43;08:00</updated>
+            <updated>2025-04-03T10:08:29&#43;08:00</updated>
             <published>2019-09-22T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://boholder.github.io/en-us/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">I maked up some safety signs for software development department based on the content of ISO 7010 (graphic hazard symbols). Take it easy, they are only for entertainment purposes. BTW, the size of these images is 3000-1000, and you can use them as Twitter header pictures.</summary>
             
-                <content type="html">&lt;h2 id=&#34;show-them&#34;&gt;Show them!&lt;/h2&gt;
-&lt;h3 id=&#34;wash-your-hands-before-debugging&#34;&gt;Wash your hands before debugging&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;wash-hands-before-debugging.png&#34; src=&#34;https://boholder.github.io/en-us/img/other/2019/wash-hands-before-debugging.png&#34;&gt;&lt;/p&gt;
+                <content type="html">&lt;h2 id=&#34;show-them&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#show-them&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#contents:show-them&#34; class=&#34;headings&#34;&gt;Show them!&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;wash-your-hands-before-debugging&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#wash-your-hands-before-debugging&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#contents:wash-your-hands-before-debugging&#34; class=&#34;headings&#34;&gt;Wash your hands before debugging&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/en-us/img/other/2019/wash-hands-before-debugging.png&#34; alt=&#34;wash-hands-before-debugging.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Origin: ISO7010-M011 - Wash your hands&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;Origin symbol: same as origin&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This one is related to a habit in our country. In ancient times, when doing sacred things, in order to ensure success and prove their sincerity, people would bathe and put on clean clothes.
 Even now, some young people wash their hands and faces before play the paid lottery of the game to ensure that they can get good rewards. Sounds funny, right? In fact, I am also doing it.&lt;/p&gt;
 &lt;p&gt;Therefore, before doing the sacred debug, you should wash your hands with sincerity to ensure bugs discovery. Try it before the next debug work.&lt;/p&gt;
-&lt;h3 id=&#34;refer-to-offical-manual-to-avoid-potential-errors&#34;&gt;Refer to offical manual to avoid potential errors&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;Refer-to-official-manual-to-avoid-potential-errors.png&#34; src=&#34;https://boholder.github.io/en-us/img/other/2019/Refer-to-official-manual-to-avoid-potential-errors.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;refer-to-offical-manual-to-avoid-potential-errors&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#refer-to-offical-manual-to-avoid-potential-errors&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#contents:refer-to-offical-manual-to-avoid-potential-errors&#34; class=&#34;headings&#34;&gt;Refer to offical manual to avoid potential errors&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/en-us/img/other/2019/Refer-to-official-manual-to-avoid-potential-errors.png&#34; alt=&#34;Refer-to-official-manual-to-avoid-potential-errors.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Origin: ISO7010-M002 – Refer to instruction manual/booklet&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;Origin symbol: same as origin&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I believe that every software developer has this experience: tring a new framework or tool, through Stack Overflow or a personal blog, or a third-party website that provides a simple series of tutorials. Yes, this is tempting, because the official documentation is always hard to be read through because of its length.&lt;/p&gt;
 &lt;p&gt;But this obviously increases a variety of potential risks: incorrectly initializing operations, incomplete API lists, and so on, which can ultimately delay development plans. The first time I used MongoDB was to read the W3C API documentation, because it wasn&amp;rsquo;t complete, it took me a long time to look for a working API, until I realized that I wasn&amp;rsquo;t looking at the official documentation.&lt;/p&gt;
 &lt;p&gt;So I think it is necessary to make a notice to tell every programmer, even I believe that most of us already know it.&lt;/p&gt;
-&lt;h3 id=&#34;no-pushing-unfinished-code-into-master-branch&#34;&gt;No pushing unfinished code into master branch&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;no-pushing-unfinished-code-into-master-branch.png&#34; src=&#34;https://boholder.github.io/en-us/img/other/2019/no-pushing-unfinished-code-into-master-branch.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;no-pushing-unfinished-code-into-master-branch&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#no-pushing-unfinished-code-into-master-branch&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#contents:no-pushing-unfinished-code-into-master-branch&#34; class=&#34;headings&#34;&gt;No pushing unfinished code into master branch&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/en-us/img/other/2019/no-pushing-unfinished-code-into-master-branch.png&#34; alt=&#34;no-pushing-unfinished-code-into-master-branch.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Origin: ISO7010-P017 – No pushing&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;Origin symbol: see below&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;200px-ISO_7010_P017.svg.png&#34; src=&#34;https://boholder.github.io/en-us/img/postimg/2019/200px-ISO_7010_P017.svg.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/en-us/img/postimg/2019/200px-ISO_7010_P017.svg.png&#34; alt=&#34;200px-ISO_7010_P017.svg.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;I even think that the code should not to be pushed to the remote until the code passes the developer&amp;rsquo;s own unit test. This may be a bit too undue? I&amp;rsquo;m not sure.&lt;/p&gt;
 &lt;p&gt;This sign comes from my true experience. When an untested code is uploaded to the remote git repository on Friday night, and is automatically published to the test environment, our poor test environment down. I won&amp;rsquo;t talk about the technical details (in fact, I am not very sure about the reason). Our code configuration administrator spent a day positioning the problem next Monday, and forced to rebase git back to Friday morning.&lt;/p&gt;
 &lt;p&gt;Anyway, it is worthwhile to promote the development operation, that code should be tested locally before being pushed to the remote.&lt;/p&gt;
-&lt;h3 id=&#34;no-pushing-server-hard-for-passing-stress-test&#34;&gt;No pushing server hard for passing stress test&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;no-pushing-server-hard-for-passing-stress-test.png&#34; src=&#34;https://boholder.github.io/en-us/img/other/2019/no-pushing-server-hard-for-passing-stress-test.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;no-pushing-server-hard-for-passing-stress-test&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#no-pushing-server-hard-for-passing-stress-test&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#contents:no-pushing-server-hard-for-passing-stress-test&#34; class=&#34;headings&#34;&gt;No pushing server hard for passing stress test&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/en-us/img/other/2019/no-pushing-server-hard-for-passing-stress-test.png&#34; alt=&#34;no-pushing-server-hard-for-passing-stress-test.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Origin: ISO7010-P017 – No pushing&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;Origin symbol: see above&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;push someone hard, push server hard(ware), that&amp;rsquo;s all. I am not a native English speaker, I think this is a pun, um.&lt;/p&gt;
 &lt;p&gt;If this is not a pun, then treat it as a sick joke.&lt;/p&gt;
-&lt;h3 id=&#34;break-it-to-obtain-access&#34;&gt;Break it to obtain access&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;beak-to-obtain-access-sign.png&#34; src=&#34;https://boholder.github.io/en-us/img/other/2019/beak-to-obtain-access-sign.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;break-it-to-obtain-access&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#break-it-to-obtain-access&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#contents:break-it-to-obtain-access&#34; class=&#34;headings&#34;&gt;Break it to obtain access&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/en-us/img/other/2019/beak-to-obtain-access-sign.png&#34; alt=&#34;beak-to-obtain-access-sign.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Origin: ISO7010-E008 – Break to obtain access&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;Origin symbol: see below&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;200px-ISO_7010_E008.svg.png&#34; src=&#34;https://boholder.github.io/en-us/img/postimg/2019/200px-ISO_7010_E008.svg.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/en-us/img/postimg/2019/200px-ISO_7010_E008.svg.png&#34; alt=&#34;200px-ISO_7010_E008.svg.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The purpose of this symbol in ISO 7010 is to break the protective glass, to obtain emergency equipment such as a fire alarm button or fire extinguisher.&lt;/p&gt;
 &lt;p&gt;The meaning of my sign has a bit of cracker&amp;rsquo;s thought: Break (the security system of) this device to gain its access. One thing you must understand is that have access of a device does not have to break it, or its security system. It&amp;rsquo;s because the original text of ISO 7010 is so, I just want to keep the text same.&lt;/p&gt;
-&lt;h2 id=&#34;source-of-inspiration&#34;&gt;Source of inspiration&lt;/h2&gt;
-&lt;p&gt;Here is &lt;a href=&#34;https://en.wikipedia.org/wiki/ISO_7010&#34;&gt;wikipedia ISO 7010 link&lt;/a&gt; , and here is &lt;a href=&#34;https://www.iso.org/obp/ui/#iso:std:iso:7010:ed-3:v1:en&#34;&gt;origin iso.org link about ISO 7010&lt;/a&gt; .&lt;/p&gt;
-&lt;p&gt;When I saw the head picture of a security researcher, &lt;a href=&#34;https://twitter.com/thegrugq&#34;&gt;&lt;strong&gt;thaddeus e. grugq&lt;/strong&gt;&amp;rsquo;s Twitter&lt;/a&gt; , I was amused by the idea of it. The source of this sign seems to be &lt;a href=&#34;https://duo.com/&#34;&gt;Duo Security&lt;/a&gt; , according to text in this image, but I can&amp;rsquo;t search for it to prove my guess.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Return-to-libc_attack&#34;&gt;&amp;ldquo;return-to-libc&amp;rdquo;&lt;/a&gt; is a computer security attack method, &amp;ldquo;libc&amp;rdquo; is not a real department or laboratory#C&amp;rsquo;s abbreviation. As Duo Security is a computer security business, who designed it must did this by purpose.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;wash-hands-before-return-to-libc.jpg&#34; src=&#34;https://boholder.github.io/en-us/img/postimg/2019/wash-hands-before-return-to-libc.jpg&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;source-of-inspiration&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#source-of-inspiration&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#contents:source-of-inspiration&#34; class=&#34;headings&#34;&gt;Source of inspiration&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Here is &lt;a href=&#34;https://en.wikipedia.org/wiki/ISO_7010&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wikipedia ISO 7010 link&lt;/a&gt; , and here is &lt;a href=&#34;https://www.iso.org/obp/ui/#iso:std:iso:7010:ed-3:v1:en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;origin iso.org link about ISO 7010&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;When I saw the head picture of a security researcher, &lt;a href=&#34;https://twitter.com/thegrugq&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;thaddeus e. grugq&lt;/strong&gt;&amp;rsquo;s Twitter&lt;/a&gt; , I was amused by the idea of it. The source of this sign seems to be &lt;a href=&#34;https://duo.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Duo Security&lt;/a&gt; , according to text in this image, but I can&amp;rsquo;t search for it to prove my guess.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Return-to-libc_attack&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;return-to-libc&amp;rdquo;&lt;/a&gt; is a computer security attack method, &amp;ldquo;libc&amp;rdquo; is not a real department or laboratory#C&amp;rsquo;s abbreviation. As Duo Security is a computer security business, who designed it must did this by purpose.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/en-us/img/postimg/2019/wash-hands-before-return-to-libc.jpg&#34; alt=&#34;wash-hands-before-return-to-libc.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;In particular, I declare that &lt;em&gt;&lt;strong&gt;I don&amp;rsquo;t have any rights to the image above&lt;/strong&gt;&lt;/em&gt;. I made it a static image just because the Tracking Protection feature of a browser like Firefox prevents getting a Twitter image from my website.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;follow-up-plan&#34;&gt;Follow-up plan&lt;/h2&gt;
+&lt;h2 id=&#34;follow-up-plan&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#follow-up-plan&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/program-safety-sign/#contents:follow-up-plan&#34; class=&#34;headings&#34;&gt;Follow-up plan&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Um&amp;hellip; Actually it is the reason why I am anxious to build a website.
 I need a fully controllable image sharing interface to host this idea.&lt;/p&gt;
 &lt;p&gt;I originally wanted to make up about 10 or so. I didn&amp;rsquo;t expect the inspiration to be exhausted after 5 pictures.
@@ -1706,7 +1723,7 @@ But I hope you can be amused by my images.&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/categories/design/" term="Design" label="Design" />
+                                <category scheme="https://boholder.github.io/en-us/categories/craft/" term="Craft" label="Craft" />
                             
                         
                     
@@ -1716,13 +1733,7 @@ But I hope you can be amused by my images.&lt;/p&gt;
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/tags/design/" term="Design" label="Design" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://boholder.github.io/en-us/tags/blog/" term="Blog" label="Blog" />
+                                <category scheme="https://boholder.github.io/en-us/tags/graphic-design/" term="Graphic-Design" label="Graphic-Design" />
                             
                         
                     
@@ -1734,23 +1745,23 @@ But I hope you can be amused by my images.&lt;/p&gt;
             <title type="text">DIY notepad&#43;&#43;，MarkDown(Obsidian) User-Defined-Language for Notepad&#43;&#43;2.1(syntax highlight)</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/" />
             <id>https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/</id>
-            <updated>2023-03-24T21:56:27&#43;08:00</updated>
+            <updated>2025-04-03T10:08:29&#43;08:00</updated>
             <published>2019-05-22T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://boholder.github.io/en-us/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">I found that Markdown is really suitable for me who won&#39;t open the ms word but open a text editor. But my favorite notepad++ does not have the markdown syntax highlighting for dark theme, and I have no search, what should I do? Just make one, and share it!</summary>
             
-                <content type="html">&lt;h2 id=&#34;1-intro&#34;&gt;1. Intro&lt;/h2&gt;
-&lt;p&gt;I started writing markdown documents with Notepad++ and awesome plugin &lt;a href=&#34;https://github.com/nea/MarkdownViewerPlusPlus&#34;&gt;MarkdownViewerPlusPlus&lt;/a&gt; .&lt;/p&gt;
+                <content type="html">&lt;h2 id=&#34;1-intro&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/#1-intro&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/#contents:1-intro&#34; class=&#34;headings&#34;&gt;1. Intro&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I started writing markdown documents with Notepad++ and awesome plugin &lt;a href=&#34;https://github.com/nea/MarkdownViewerPlusPlus&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MarkdownViewerPlusPlus&lt;/a&gt; .&lt;/p&gt;
 &lt;p&gt;One of my installed plugin give me a markdown language format:&amp;ldquo;Markdown(default)&amp;rdquo; in  User Defined Languages.
 But it&amp;rsquo;s designed for light backgroud so it&amp;rsquo;s not suitable for me.So I made a dark view format, based on Obsidian-theme and that default markdown format.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://docs.notepad-plus-plus.org/index.php/User_Defined_Languages&#34;&gt;Nppp Official doc: User Defined Languages&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://ivan-radic.github.io/udl-documentation/&#34;&gt;UDL documentation site&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;2-function&#34;&gt;2. Function&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://docs.notepad-plus-plus.org/index.php/User_Defined_Languages&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nppp Official doc: User Defined Languages&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ivan-radic.github.io/udl-documentation/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UDL documentation site&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-function&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/#2-function&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/#contents:2-function&#34; class=&#34;headings&#34;&gt;2. Function&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;High light Markdown tags.&lt;/p&gt;
 &lt;p&gt;&amp;lt;!&amp;mdash;-&amp;gt; http comment, # headline can be fold.&lt;/p&gt;
-&lt;h2 id=&#34;3-importusage&#34;&gt;3. Import&amp;amp;Usage&lt;/h2&gt;
+&lt;h2 id=&#34;3-importusage&#34;&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/#3-importusage&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/#contents:3-importusage&#34; class=&#34;headings&#34;&gt;3. Import&amp;amp;Usage&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://boholder.github.io/en-us/share/Markdown-Obsidian-theme-lan-format-for-notepadpp2.1.xml&#34;&gt;download format xml file&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open notepad++, select Menubar -&amp;gt; Language -&amp;gt; User Defined Languages&lt;/li&gt;
@@ -1758,7 +1769,7 @@ But it&amp;rsquo;s designed for light backgroud so it&amp;rsquo;s not suitable f
 If it&amp;rsquo;s succeed, notepad++ will pop up a info window.&lt;/li&gt;
 &lt;li&gt;Restart notepad++, open a markdown file(.md) and enjoy writing.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt=&#34;example image&#34; src=&#34;https://boholder.github.io/en-us/img/postimg/2019/notepadpp-markdown-show.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/en-us/img/postimg/2019/notepadpp-markdown-show.png&#34; alt=&#34;example image&#34;&gt;&lt;/p&gt;
 </content>
             
             
@@ -1771,7 +1782,7 @@ If it&amp;rsquo;s succeed, notepad++ will pop up a info window.&lt;/li&gt;
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/categories/programming/" term="Programming" label="Programming" />
+                                <category scheme="https://boholder.github.io/en-us/categories/craft/" term="Craft" label="Craft" />
                             
                         
                     
@@ -1781,13 +1792,7 @@ If it&amp;rsquo;s succeed, notepad++ will pop up a info window.&lt;/li&gt;
                             
                             
                             
-                                <category scheme="https://boholder.github.io/en-us/tags/programming/" term="Programming" label="Programming" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://boholder.github.io/en-us/tags/ide/" term="IDE" label="IDE" />
+                                <category scheme="https://boholder.github.io/en-us/tags/ide/" term="Ide" label="Ide" />
                             
                         
                     

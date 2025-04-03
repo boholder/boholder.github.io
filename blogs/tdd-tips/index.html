@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,7 +17,7 @@
 
     <title>TDD 实践经验分享与对 TDD 实践程度的讨论 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.9efed82b63fd668d7a97c6479cd4a3e39f674be783754af6b1ce95ebc29332fb.css"/>
+    <link rel="stylesheet" href="/css/meme.min.b53218f81c9c711bbb3f9df2b462678547d5b3dba22f5a3aaacae86a6084bb04.css"/>
 
     
     
@@ -34,17 +34,15 @@
 
     <meta name="author" content="" /><meta name="description" content="TDD 是好的，但要求对测试库很熟悉才能实践；但这不妨碍我们按照 TDD 的思路来指导代码编写" />
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="BoHolder的网站：博客，小玩意及其他" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="BoHolder的网站：博客，小玩意及其他" />
-    <meta name="msapplication-starturl" content="../../" />
-    <meta name="msapplication-TileColor" content="#fff" />
-    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
     <link rel="manifest" href="/manifest.json" />
 
     
@@ -59,7 +57,7 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2020-07-17T00:00:00+00:00",
-        "dateModified": "2023-08-08T19:12:01+08:00",
+        "dateModified": "2025-04-03T10:08:29+08:00",
         "url": "https://boholder.github.io/blogs/tdd-tips/",
         "headline": "TDD 实践经验分享与对 TDD 实践程度的讨论",
         "description": "TDD 是好的，但要求对测试库很熟悉才能实践；但这不妨碍我们按照 TDD 的思路来指导代码编写",
@@ -105,7 +103,7 @@
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2020-07-17T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2023-08-08T19:12:01&#43;08:00" />
+    <meta property="article:modified_time" content="2025-04-03T10:08:29&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -191,7 +189,7 @@
     
     
         
-        <time datetime="2023-08-08T19:12:01&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2023.8.8</time>
+        <time datetime="2025-04-03T10:08:29&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.4.3</time>
     
     
     
@@ -199,7 +197,7 @@
         
         
             
-                <span class="post-meta-item category"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M16 0H4C1.79 0 .02 1.79.02 4L0 28c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4H20l-4-4z"></path></svg>&nbsp;<a href="/categories/programming/" class="category-link p-category">Programming</a></span>
+                <span class="post-meta-item category"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M16 0H4C1.79 0 .02 1.79.02 4L0 28c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4H20l-4-4z"></path></svg>&nbsp;<a href="/categories/programming/" class="category-link p-category">Programming</a>/<a href="/categories/practice/" class="category-link p-category">Practice</a></span>
             
         
     
@@ -283,12 +281,10 @@
 <p>&hellip;首先，他写了一个单元测试的一小部分，没几行代码。然后，他写了刚好能使那个测试通过的代码。
 接着，他又写了些测试，然后再写一些代码&hellip;从编码到运行的周期如此之短&hellip;Kent 居然每30秒运行一次（测试）程序&hellip;
 忽然，我发现这种周期似曾相识！许多年前，当我还是孩子的时候&hellip;解释型语言,无需编译构建，你要做的只是添加一行代码，
-然后执行，再添加，再执行&hellip;使用这些语言的编程效率极高。</p>
-</blockquote>
+然后执行，再添加，再执行&hellip;使用这些语言的编程效率极高。</p></blockquote>
 <p>（我看到“30秒”那里，就对 TDD 感兴趣了。）Bob 大叔说得对，我们在刚开始编程时都有一个时期，小心翼翼，一次只加一行代码， 然后运行看看 print 出的变量值发生了什么变化。</p>
 <blockquote>
-<p>符合预期的变化会给我们信心，而且直白的目标使下一行要加的代码“呼之欲出”。</p>
-</blockquote>
+<p>符合预期的变化会给我们信心，而且直白的目标使下一行要加的代码“呼之欲出”。</p></blockquote>
 <p>这就是 TDD 的魔力所在。它鼓励你拿出勇气去重构（烂）代码，因为你不再害怕重构它有破坏功能的风险， 快速方便的回归测试集的 re-run 报告帮你撑腰。</p>
 <p>TDD 还有如下优势：</p>
 <ul>
@@ -307,19 +303,19 @@
 <p>TDD 理论说来容易，但如果自身技能不够扎实，只是从头疼怎么写业务代码转到头疼怎么写测试而已。 测试先行意味着，测试写得不够“好”，则直接影响开发人员进一步的思考方向，严重时会把开发人员带进思考泥潭。</p>
 <h3 id="41不需要在编写测试时编写非法输入测试"><a href="#41不需要在编写测试时编写非法输入测试" class="anchor-link">#</a><a href="#contents:41不需要在编写测试时编写非法输入测试" class="headings">4.1.不需要在编写测试时编写非法输入测试</a></h3>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>问：如何在使用 TDD 时保证代码的健壮性？是否需要考虑非法输入？</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>答：TDD 时不需要。TDD 之后，部分代码会需要，再加上就是。</td>
-</tr>
-<tr>
-<td>资料：<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup>的第二个回答，<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup>1.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>问：如何在使用 TDD 时保证代码的健壮性？是否需要考虑非法输入？</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>答：TDD 时不需要。TDD 之后，部分代码会需要，再加上就是。</td>
+      </tr>
+      <tr>
+          <td>资料：<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup>的第二个回答，<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup>1.</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>编写非法输入测试(比如输入 NULL，空对象指针 etc，这不是一个正规名词但涵盖范围正确）是 QA（测试人员）的任务， 当他们测试时，会在至少是单元测试的层面的封装（或者调用链）上测试非法输入，这意味着 <strong>不是每个方法都要考虑非法输入</strong> ，
 而 TDD 的测试会覆盖到每个方法。 另外，在 TDD 之后而不是 TDD 时考虑这个部分，修改代码会更头脑清晰更方便（回归测试给的信心）。</p>
@@ -327,59 +323,55 @@
 （这是一个优雅如禅宗公案的“kata”）最后，为了考虑逻辑的“周全性”而添加的两个测试。（一个输入情况对应一个测试）</p>
 <h3 id="42避免错误的步子大的测试"><a href="#42避免错误的步子大的测试" class="anchor-link">#</a><a href="#contents:42避免错误的步子大的测试" class="headings">4.2.避免错误的步子大的测试</a></h3>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>问：我写出了下一个测试，但在编业务代码时卡壳了</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>答：先排除自身编码不熟练的因素，然后检查这个测试，</td>
-</tr>
-<tr>
-<td>是不是覆盖的逻辑太大了，重新写一个小一些的测试（4.3详解）</td>
-</tr>
-<tr>
-<td>资料：<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>3.，<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>问：我写出了下一个测试，但在编业务代码时卡壳了</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>答：先排除自身编码不熟练的因素，然后检查这个测试，</td>
+      </tr>
+      <tr>
+          <td>是不是覆盖的逻辑太大了，重新写一个小一些的测试（4.3详解）</td>
+      </tr>
+      <tr>
+          <td>资料：<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>3.，<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
+      </tr>
+  </tbody>
 </table></div>
 <blockquote>
-<p>酒要一口一口地喝，路要一步一步走，步子迈大了，容易_ _ _。————《让子弹飞》</p>
-</blockquote>
+<p>酒要一口一口地喝，路要一步一步走，步子迈大了，容易_ _ _。————《让子弹飞》</p></blockquote>
 <p>在 TDD 过程中，业务逻辑编码只需要恰好满足使测试通过， 如果坚持住这个原则，那么唯一使编程步骤卡壳的原因就在于： 开发人员不能快速想出通过测试的方案，又陷入了使用 TDD 前的窘境————没有短又直白的编码目标，头疼怎么一步到位。
 这个测试不能驱动编码思路<em>呼之欲出</em>，说明这个测试有问题，需要重新换一个。 两个资料里都提到了这样含义的话：</p>
 <blockquote>
-<p>避免一个测试覆盖太大的逻辑范围，这违反了 TDD 单个测试对应小目标的原则。</p>
-</blockquote>
+<p>避免一个测试覆盖太大的逻辑范围，这违反了 TDD 单个测试对应小目标的原则。</p></blockquote>
 <p>错误实例：就像文章<sup id="fnref2:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>中“我”在第一次分析需求时，选择了不明朗的测试“演化”方向， 导致最后一步测试，实质上对应的是一步到位处理超过一种的新加入的情况，无法延续现有的代码继续修改以通过测试。</p>
 <p>现在的问题转换为“如何写出下一个测试”，请接着读4.3。</p>
 <h3 id="43简化问题场景-逐步添加限制条件"><a href="#43简化问题场景-逐步添加限制条件" class="anchor-link">#</a><a href="#contents:43简化问题场景-逐步添加限制条件" class="headings">4.3.简化问题场景-&gt;逐步添加限制|条件</a></h3>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>问：我无法写出下一个测试，卡壳了</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>答：接着上一步测试的目的，继续分析需求，我们走到哪了？或者我们应该换个思路重新分析需求？</td>
-</tr>
-<tr>
-<td>资料：<sup id="fnref2:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>2.，<sup id="fnref3:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>问：我无法写出下一个测试，卡壳了</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>答：接着上一步测试的目的，继续分析需求，我们走到哪了？或者我们应该换个思路重新分析需求？</td>
+      </tr>
+      <tr>
+          <td>资料：<sup id="fnref2:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>2.，<sup id="fnref3:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
+      </tr>
+  </tbody>
 </table></div>
 <blockquote>
 <p>&ldquo;When faced with a problem you do not understand, do any part of it you do understand,
-then look at it again.&rdquo;</p>
-</blockquote>
+then look at it again.&rdquo;</p></blockquote>
 <p>这是文章<sup id="fnref4:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>给出的引用，来自一部科幻小说。下面我要写的是我根据文章<sup id="fnref5:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>和其他 kata 解决需求的思路悟出的门路， 总结来说：</p>
 <blockquote>
 <p>不要按步骤1-2-3线性流程切分需求，而是按套娃，
 从理想的简单状态机（简单输入简单处理输出|复杂输入简化处理输出）到有条件|限制的复杂状态机（复杂处理+复杂输入|输出），
-一步步完善处理逻辑。</p>
-</blockquote>
+一步步完善处理逻辑。</p></blockquote>
 <p>如果你手边有《计算机网络》这类书，看看每个层的第一个教学使用的理论协议的假设条件有多理想，以数据链路层的协议为例： 单工，发送方和接收方的网络层总是准备就绪，数据处理不计时间， 可用缓存无限大，信道不会在物理层损坏|丢失。
 这种理想协议只会在教科书上存在，但它形象地描述了该层协议 <em>可能的风险|考量</em> 。 之后的篇幅逐渐引入各种机制来解决理想协议中忽略的考量，最终一个能在现实场景中使用的协议完成了。</p>
 <p>咱们的测试也应该像设计协议一样，每次只测试一个考量|一种情况， 修改少量代码通过这个测试，接着向下走，直到考虑了所有情况。</p>
@@ -509,8 +501,7 @@ then look at it again.&rdquo;</p>
 在长时间坚持这么做后，我写不写测试都会这样思考。代码仍是可测试的，只是无须真的写出来测试。</p>
 <p>&hellip;测试也是与其他开发人员交流的一种方式，所以我开始会在与他人共享代码时为其编写测试，或给有外部依赖的事情写测试。</p>
 <p>Andy 说我不应该加上这个知识栏，他担心这会诱使缺乏经验的开发人员不写测试。下面是我的折衷方案：</p>
-<p>应该编写测试吗？要，但等你写了30年后，不妨从容地做些实验，看看它究竟给你带来的什么好处。</p>
-</blockquote>
+<p>应该编写测试吗？要，但等你写了30年后，不妨从容地做些实验，看看它究竟给你带来的什么好处。</p></blockquote>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -543,9 +534,9 @@ then look at it again.&rdquo;</p>
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2023-08-08 19:12:01 CST" style="cursor:help">
+        <span title="Updated @ 2025-04-03 10:08:29 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2023-08-08</text><text x="915" y="140" textLength="650" transform="scale(.1)">2023-08-08</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-04-03</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-04-03</text></g></svg>
         </span></div>
 
 
@@ -601,7 +592,7 @@ then look at it again.&rdquo;</p>
                 
                     <div class="share-item twitter">
                         
-                        <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/tdd-tips/&amp;text=TDD%20%e5%ae%9e%e8%b7%b5%e7%bb%8f%e9%aa%8c%e5%88%86%e4%ba%ab%e4%b8%8e%e5%af%b9%20TDD%20%e5%ae%9e%e8%b7%b5%e7%a8%8b%e5%ba%a6%e7%9a%84%e8%ae%a8%e8%ae%ba&amp;hashtags=Unit-Test,Programming,Blog,&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                        <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/tdd-tips/&amp;text=TDD%20%e5%ae%9e%e8%b7%b5%e7%bb%8f%e9%aa%8c%e5%88%86%e4%ba%ab%e4%b8%8e%e5%af%b9%20TDD%20%e5%ae%9e%e8%b7%b5%e7%a8%8b%e5%ba%a6%e7%9a%84%e8%ae%a8%e8%ae%ba&amp;hashtags=Unit-Test,Programming,&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                     </div>
                 
             
@@ -620,15 +611,15 @@ then look at it again.&rdquo;</p>
             <ul class="related-list">
                 
                     <li class="related-item">
-                        <a href="/blogs/mock-in-nutshell/" class="related-link">白话解释单元测试中的 Mock 概念</a>
+                        <a href="/blogs/x11fwd/" class="related-link">SSH X11 Forwarding 远程开发方案</a>
                     </li>
                 
                     <li class="related-item">
-                        <a href="/blogs/unit-test-methods/" class="related-link">单元测试的不同方式</a>
+                        <a href="/blogs/maven-build-advance/" class="related-link">用 Maven reactor 命令行选项节约 build 时间</a>
                     </li>
                 
                     <li class="related-item">
-                        <a href="/blogs/program_awareness/" class="related-link">信息利用意识</a>
+                        <a href="/blogs/currying/" class="related-link">柯里化及相关延伸思考</a>
                     </li>
                 
             </ul>
@@ -657,14 +648,6 @@ then look at it again.&rdquo;</p>
                     <a href="/tags/programming/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>Programming</a>
                 
             
-                
-                
-                
-                
-                    
-                    <a href="/tags/blog/" rel="tag" class="post-tags-link"><svg class="icon tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36"><path d="M24 0H4C1.79 0 .02 1.79.02 4L0 36l14-6 14 6V4c0-2.21-1.79-4-4-4z"></path></svg>Blog</a>
-                
-            
         </div>
     
 
@@ -673,13 +656,13 @@ then look at it again.&rdquo;</p>
         
     <footer class="minimal-footer">
         
-            <div class="post-tag"><a href="/tags/unit-test/" rel="tag" class="post-tag-link">#unit-test</a> <a href="/tags/programming/" rel="tag" class="post-tag-link">#programming</a> <a href="/tags/blog/" rel="tag" class="post-tag-link">#blog</a></div>
+            <div class="post-tag"><a href="/tags/unit-test/" rel="tag" class="post-tag-link">#unit-test</a> <a href="/tags/programming/" rel="tag" class="post-tag-link">#programming</a></div>
         
         
         
             
                 <div class="post-category">
-                    <a href="/categories/programming/" class="post-category-link">programming</a>
+                    <a href="/categories/programming/" class="post-category-link">programming</a>/<a href="/categories/practice/" class="post-category-link">practice</a>
                 </div>
             
         
