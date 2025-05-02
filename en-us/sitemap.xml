@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://boholder.github.io/en-us/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -28,19 +28,6 @@
                 href="https://boholder.github.io/en-us/blogs/execution_event/"
                 />
   </url><url>
-    <loc>https://boholder.github.io/en-us/categories/programming/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://boholder.github.io/categories/programming/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://boholder.github.io/en-us/categories/programming/"
-                />
-  </url><url>
     <loc>https://boholder.github.io/en-us/tags/programming/</loc>
     <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
@@ -52,6 +39,19 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://boholder.github.io/en-us/tags/programming/"
+                />
+  </url><url>
+    <loc>https://boholder.github.io/en-us/categories/programming/</loc>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://boholder.github.io/categories/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://boholder.github.io/en-us/categories/programming/"
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/categories/tips/</loc>
@@ -68,7 +68,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/categories/craft/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -232,10 +232,10 @@
     <lastmod>2022-05-28T16:22:37+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/ide/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"

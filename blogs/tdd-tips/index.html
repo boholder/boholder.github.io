@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -57,13 +57,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2020-07-17T00:00:00+00:00",
-        "dateModified": "2025-04-03T10:08:29+08:00",
+        "dateModified": "2025-05-02T18:34:35+08:00",
         "url": "https://boholder.github.io/blogs/tdd-tips/",
         "headline": "TDD 实践经验分享与对 TDD 实践程度的讨论",
         "description": "TDD 是好的，但要求对测试库很熟悉才能实践；但这不妨碍我们按照 TDD 的思路来指导代码编写",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
-        "wordCount":  6763 ,
+        "wordCount":  6703 ,
         "image": "https://boholder.github.io/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
@@ -103,7 +103,7 @@
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2020-07-17T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2025-04-03T10:08:29&#43;08:00" />
+    <meta property="article:modified_time" content="2025-05-02T18:34:35&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -189,7 +189,7 @@
     
     
         
-        <time datetime="2025-04-03T10:08:29&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.4.3</time>
+        <time datetime="2025-05-02T18:34:35&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.5.2</time>
     
     
     
@@ -203,7 +203,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;6763</span>
+        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;6703</span>
     
     
         
@@ -225,27 +225,27 @@
       <ol>
         <li><a id="contents:41不需要在编写测试时编写非法输入测试" href="#41不需要在编写测试时编写非法输入测试">4.1.不需要在编写测试时编写非法输入测试</a></li>
         <li><a id="contents:42避免错误的步子大的测试" href="#42避免错误的步子大的测试">4.2.避免错误的步子大的测试</a></li>
-        <li><a id="contents:43简化问题场景-逐步添加限制条件" href="#43简化问题场景-逐步添加限制条件">4.3.简化问题场景-&gt;逐步添加限制|条件</a></li>
+        <li><a id="contents:43简化问题场景-逐步添加限制--条件" href="#43简化问题场景-逐步添加限制--条件">4.3.简化问题场景-&gt;逐步添加限制 | 条件</a></li>
       </ol>
     </li>
-    <li><a id="contents:2021-03-11更新" href="#2021-03-11更新">2021-03-11更新</a></li>
-    <li><a id="contents:2021-04-30更新" href="#2021-04-30更新">2021-04-30更新</a>
+    <li><a id="contents:2021-03-11-更新" href="#2021-03-11-更新">2021-03-11 更新</a></li>
+    <li><a id="contents:2021-04-30-更新" href="#2021-04-30-更新">2021-04-30 更新</a>
       <ol>
         <li><a id="contents:41-为编码测试" href="#41-为编码测试">41 为编码测试</a>
           <ol>
-            <li><a id="contents:提示66-测试与找-bug-无关" href="#提示66-测试与找-bug-无关">提示66 测试与找 bug 无关</a></li>
-            <li><a id="contents:提示67-测试是代码的第一个用户" href="#提示67-测试是代码的第一个用户">提示67 测试是代码的第一个用户</a>
+            <li><a id="contents:提示-66-测试与找-bug-无关" href="#提示-66-测试与找-bug-无关">提示 66 测试与找 bug 无关</a></li>
+            <li><a id="contents:提示-67-测试是代码的第一个用户" href="#提示-67-测试是代码的第一个用户">提示 67 测试是代码的第一个用户</a>
               <ol>
                 <li><a id="contents:测试驱动开发" href="#测试驱动开发">测试驱动开发</a></li>
                 <li><a id="contents:tdd你需要知道该去何方" href="#tdd你需要知道该去何方">TDD：你需要知道该去何方。</a></li>
               </ol>
             </li>
-            <li><a id="contents:提示68-既非自上而下也非自下而上基于端对端构建程序" href="#提示68-既非自上而下也非自下而上基于端对端构建程序">提示68 既非自上而下，也非自下而上，基于端对端构建程序</a>
+            <li><a id="contents:提示-68-既非自上而下也非自下而上基于端对端构建程序" href="#提示-68-既非自上而下也非自下而上基于端对端构建程序">提示 68 既非自上而下，也非自下而上，基于端对端构建程序</a>
               <ol>
                 <li><a id="contents:自上而下与自下而上之争以你该用的方式去做" href="#自上而下与自下而上之争以你该用的方式去做">自上而下与自下而上之争，以你该用的方式去做</a></li>
               </ol>
             </li>
-            <li><a id="contents:提示70-要对软件做测试否则只能留给用户去做" href="#提示70-要对软件做测试否则只能留给用户去做">提示70 要对软件做测试，否则只能留给用户去做</a></li>
+            <li><a id="contents:提示-70-要对软件做测试否则只能留给用户去做" href="#提示-70-要对软件做测试否则只能留给用户去做">提示 70 要对软件做测试，否则只能留给用户去做</a></li>
           </ol>
         </li>
       </ol>
@@ -259,36 +259,38 @@
 今年我读了更多的书，感觉对 TDD 的理论与实践多了解了一些，更新打的“补丁”字数也不少，
 于是把标题改成更宽泛的“对 TDD 的实践的讨论”。</p>
 <p>本文分成几大部分：
-第一部分，对 TDD 的实践技巧分享，我建议跳过第4小部分的经验细节，先把后面更新的观点类的文字读一读。
+第一部分，对 TDD 的实践技巧分享，我建议跳过第 4 小部分的经验细节，先把后面更新的观点类的文字读一读。
 第二部分，给出“严格遵守 TDD 在实践上很困难”、“TDD 部分流程不太‘务实’”的观点以及理由；
-第三部分，摘录大量书籍《程序员修炼之道(第2版)》中的文字，给出可利用 TDD 优势而不会陷入教条的折中实践方案，
+第三部分，摘录大量书籍《程序员修炼之道 (第 2 版)》中的文字，给出可利用 TDD 优势而不会陷入教条的折中实践方案，
 与对于“测试”概念的新颖理解方式。</p>
 <p>希望本文能消除你对于 TDD 概念与实践的疑惑，让你在平时编码时能够从 TDD 的思维方式中获得好处，而不必苦苦承受遵守 TDD 流程实践中的重复与艰难。</p>
 <h2 id="1什么是-tdd"><a href="#1什么是-tdd" class="anchor-link">#</a><a href="#contents:1什么是-tdd" class="headings">1.什么是 TDD</a></h2>
-<p>TDD 的全称是 “测试驱动开发（Test-driven development）”<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">[1]</a></sup>
+<p>TDD 的全称是“测试驱动开发（Test-driven development）”<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">[1]</a></sup>
 ，“是一种软件开发过程中的应用方法，由极限编程中倡导，以其倡导先写测试程序，然后编码实现其功能得名”。</p>
 <p>一个 TDD 循环的简单流程是：</p>
 <ol>
 <li>编写一个需求对应的测试，该测试以一个功能方法的 <strong>一部分逻辑</strong> 为目标。</li>
 <li>编写简洁的业务逻辑代码，以通过测试。</li>
 <li>回归测试，运行和这部分逻辑相关的所有测试（或者简单的把整个测试类 run 一下），确认全通过。</li>
-<li>重构代码，修正步骤2中因思考逻辑而忽略的设计原则|设计模式（比如 if-else 中重复的代码可以提取成一个方法）。</li>
-<li>重新执行步骤3，确保重构没破坏功能。回到步骤1。</li>
+<li>重构代码，修正步骤 2 中因思考逻辑而忽略的设计原则 | 设计模式（比如 if-else 中重复的代码可以提取成一个方法）。</li>
+<li>重新执行步骤 3，确保重构没破坏功能。回到步骤 1。</li>
 </ol>
 <h2 id="2tdd-的好处"><a href="#2tdd-的好处" class="anchor-link">#</a><a href="#contents:2tdd-的好处" class="headings">2.TDD 的好处</a></h2>
-<p>在此引用 Uncle Bob 的《代码整洁之道-程序员的职业素养》（另，推荐阅读此系列书）一书中他第一次看到 TDD 的回忆：</p>
+<p>在此引用 Uncle Bob 的《代码整洁之道 - 程序员的职业素养》（另，推荐阅读此系列书）一书中他第一次看到 TDD 的回忆：</p>
 <blockquote>
 <p>&hellip;首先，他写了一个单元测试的一小部分，没几行代码。然后，他写了刚好能使那个测试通过的代码。
-接着，他又写了些测试，然后再写一些代码&hellip;从编码到运行的周期如此之短&hellip;Kent 居然每30秒运行一次（测试）程序&hellip;
-忽然，我发现这种周期似曾相识！许多年前，当我还是孩子的时候&hellip;解释型语言,无需编译构建，你要做的只是添加一行代码，
-然后执行，再添加，再执行&hellip;使用这些语言的编程效率极高。</p></blockquote>
-<p>（我看到“30秒”那里，就对 TDD 感兴趣了。）Bob 大叔说得对，我们在刚开始编程时都有一个时期，小心翼翼，一次只加一行代码， 然后运行看看 print 出的变量值发生了什么变化。</p>
+接着，他又写了些测试，然后再写一些代码&hellip;从编码到运行的周期如此之短&hellip;Kent 居然每 30 秒运行一次（测试）程序&hellip;
+忽然，我发现这种周期似曾相识！许多年前，当我还是孩子的时候&hellip;解释型语言，无需编译构建，你要做的只是添加一行代码，
+然后执行，再添加，再执行&hellip;使用这些语言的编程效率极高。</p>
+</blockquote>
+<p>（我看到“30 秒”那里，就对 TDD 感兴趣了。）Bob 大叔说得对，我们在刚开始编程时都有一个时期，小心翼翼，一次只加一行代码，然后运行看看 print 出的变量值发生了什么变化。</p>
 <blockquote>
-<p>符合预期的变化会给我们信心，而且直白的目标使下一行要加的代码“呼之欲出”。</p></blockquote>
-<p>这就是 TDD 的魔力所在。它鼓励你拿出勇气去重构（烂）代码，因为你不再害怕重构它有破坏功能的风险， 快速方便的回归测试集的 re-run 报告帮你撑腰。</p>
+<p>符合预期的变化会给我们信心，而且直白的目标使下一行要加的代码“呼之欲出”。</p>
+</blockquote>
+<p>这就是 TDD 的魔力所在。它鼓励你拿出勇气去重构（烂）代码，因为你不再害怕重构它有破坏功能的风险，快速方便的回归测试集的 re-run 报告帮你撑腰。</p>
 <p>TDD 还有如下优势：</p>
 <ul>
-<li>测试的代码覆盖率接近100%。</li>
+<li>测试的代码覆盖率接近 100%。</li>
 <li>这些测试不仅是单元测试的一部分，也是代码形式的用例和文档。</li>
 <li>便于执行自动化回归测试（单元测试层面）。</li>
 <li>测试间相互隔离，鼓励每次循环时编写的新逻辑间保持松耦合。</li>
@@ -296,100 +298,104 @@
 </ul>
 <h2 id="3我认为的实施-tdd-的知识要求"><a href="#3我认为的实施-tdd-的知识要求" class="anchor-link">#</a><a href="#contents:3我认为的实施-tdd-的知识要求" class="headings">3.（我认为的）实施 TDD 的知识要求</a></h2>
 <ul>
-<li>熟练使用当前项目所用语言的特性与类库，和单元测试工具。 前者减少因为不熟悉语言而卡壳愣住的概率，后者是使用 TDD 的硬性要求。</li>
-<li>会拆解需求，从理想情况到需求所定义的限制性条件，一步步增加条件。（第4部分中详细解释）</li>
+<li>熟练使用当前项目所用语言的特性与类库，和单元测试工具。前者减少因为不熟悉语言而卡壳愣住的概率，后者是使用 TDD 的硬性要求。</li>
+<li>会拆解需求，从理想情况到需求所定义的限制性条件，一步步增加条件。（第 4 部分中详细解释）</li>
 </ul>
 <h2 id="4实施-tdd-过程中的困惑和解决方案"><a href="#4实施-tdd-过程中的困惑和解决方案" class="anchor-link">#</a><a href="#contents:4实施-tdd-过程中的困惑和解决方案" class="headings">4.实施 TDD 过程中的困惑和解决方案</a></h2>
-<p>TDD 理论说来容易，但如果自身技能不够扎实，只是从头疼怎么写业务代码转到头疼怎么写测试而已。 测试先行意味着，测试写得不够“好”，则直接影响开发人员进一步的思考方向，严重时会把开发人员带进思考泥潭。</p>
+<p>TDD 理论说来容易，但如果自身技能不够扎实，只是从头疼怎么写业务代码转到头疼怎么写测试而已。测试先行意味着，测试写得不够“好”，则直接影响开发人员进一步的思考方向，严重时会把开发人员带进思考泥潭。</p>
 <h3 id="41不需要在编写测试时编写非法输入测试"><a href="#41不需要在编写测试时编写非法输入测试" class="anchor-link">#</a><a href="#contents:41不需要在编写测试时编写非法输入测试" class="headings">4.1.不需要在编写测试时编写非法输入测试</a></h3>
 <div class="table-container"><table>
-  <thead>
-      <tr>
-          <th>问：如何在使用 TDD 时保证代码的健壮性？是否需要考虑非法输入？</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>答：TDD 时不需要。TDD 之后，部分代码会需要，再加上就是。</td>
-      </tr>
-      <tr>
-          <td>资料：<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup>的第二个回答，<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup>1.</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>问：如何在使用 TDD 时保证代码的健壮性？是否需要考虑非法输入？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>答：TDD 时不需要。TDD 之后，部分代码会需要，再加上就是。</td>
+</tr>
+<tr>
+<td>资料：<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup>的第二个回答，<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup>1.</td>
+</tr>
+</tbody>
 </table></div>
-<p>编写非法输入测试(比如输入 NULL，空对象指针 etc，这不是一个正规名词但涵盖范围正确）是 QA（测试人员）的任务， 当他们测试时，会在至少是单元测试的层面的封装（或者调用链）上测试非法输入，这意味着 <strong>不是每个方法都要考虑非法输入</strong> ，
-而 TDD 的测试会覆盖到每个方法。 另外，在 TDD 之后而不是 TDD 时考虑这个部分，修改代码会更头脑清晰更方便（回归测试给的信心）。</p>
-<p>同时应该注意的是，如果业务逻辑本身要求“分情况考虑”， 那么像是数组长度=0，以及由“情况”的排列组合得出的对应的“合法的”边界测试（edge cases），就要在 TDD 时覆盖到。 正确实例：<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup>
+<p>编写非法输入测试 (比如输入 NULL，空对象指针 etc，这不是一个正规名词但涵盖范围正确）是 QA（测试人员）的任务，当他们测试时，会在至少是单元测试的层面的封装（或者调用链）上测试非法输入，这意味着 <strong>不是每个方法都要考虑非法输入</strong> ，
+而 TDD 的测试会覆盖到每个方法。另外，在 TDD 之后而不是 TDD 时考虑这个部分，修改代码会更头脑清晰更方便（回归测试给的信心）。</p>
+<p>同时应该注意的是，如果业务逻辑本身要求“分情况考虑”，那么像是数组长度=0，以及由“情况”的排列组合得出的对应的“合法的”边界测试（edge cases），就要在 TDD 时覆盖到。正确实例：<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup>
 （这是一个优雅如禅宗公案的“kata”）最后，为了考虑逻辑的“周全性”而添加的两个测试。（一个输入情况对应一个测试）</p>
 <h3 id="42避免错误的步子大的测试"><a href="#42避免错误的步子大的测试" class="anchor-link">#</a><a href="#contents:42避免错误的步子大的测试" class="headings">4.2.避免错误的步子大的测试</a></h3>
 <div class="table-container"><table>
-  <thead>
-      <tr>
-          <th>问：我写出了下一个测试，但在编业务代码时卡壳了</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>答：先排除自身编码不熟练的因素，然后检查这个测试，</td>
-      </tr>
-      <tr>
-          <td>是不是覆盖的逻辑太大了，重新写一个小一些的测试（4.3详解）</td>
-      </tr>
-      <tr>
-          <td>资料：<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>3.，<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>问：我写出了下一个测试，但在编业务代码时卡壳了</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>答：先排除自身编码不熟练的因素，然后检查这个测试，</td>
+</tr>
+<tr>
+<td>是不是覆盖的逻辑太大了，重新写一个小一些的测试（4.3 详解）</td>
+</tr>
+<tr>
+<td>资料：<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>3.，<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
+</tr>
+</tbody>
 </table></div>
 <blockquote>
-<p>酒要一口一口地喝，路要一步一步走，步子迈大了，容易_ _ _。————《让子弹飞》</p></blockquote>
-<p>在 TDD 过程中，业务逻辑编码只需要恰好满足使测试通过， 如果坚持住这个原则，那么唯一使编程步骤卡壳的原因就在于： 开发人员不能快速想出通过测试的方案，又陷入了使用 TDD 前的窘境————没有短又直白的编码目标，头疼怎么一步到位。
-这个测试不能驱动编码思路<em>呼之欲出</em>，说明这个测试有问题，需要重新换一个。 两个资料里都提到了这样含义的话：</p>
+<p>酒要一口一口地喝，路要一步一步走，步子迈大了，容易_ _ _。————《让子弹飞》</p>
+</blockquote>
+<p>在 TDD 过程中，业务逻辑编码只需要恰好满足使测试通过，如果坚持住这个原则，那么唯一使编程步骤卡壳的原因就在于：开发人员不能快速想出通过测试的方案，又陷入了使用 TDD 前的窘境————没有短又直白的编码目标，头疼怎么一步到位。
+这个测试不能驱动编码思路<em>呼之欲出</em>，说明这个测试有问题，需要重新换一个。两个资料里都提到了这样含义的话：</p>
 <blockquote>
-<p>避免一个测试覆盖太大的逻辑范围，这违反了 TDD 单个测试对应小目标的原则。</p></blockquote>
-<p>错误实例：就像文章<sup id="fnref2:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>中“我”在第一次分析需求时，选择了不明朗的测试“演化”方向， 导致最后一步测试，实质上对应的是一步到位处理超过一种的新加入的情况，无法延续现有的代码继续修改以通过测试。</p>
-<p>现在的问题转换为“如何写出下一个测试”，请接着读4.3。</p>
-<h3 id="43简化问题场景-逐步添加限制条件"><a href="#43简化问题场景-逐步添加限制条件" class="anchor-link">#</a><a href="#contents:43简化问题场景-逐步添加限制条件" class="headings">4.3.简化问题场景-&gt;逐步添加限制|条件</a></h3>
+<p>避免一个测试覆盖太大的逻辑范围，这违反了 TDD 单个测试对应小目标的原则。</p>
+</blockquote>
+<p>错误实例：就像文章<sup id="fnref2:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>中“我”在第一次分析需求时，选择了不明朗的测试“演化”方向，导致最后一步测试，实质上对应的是一步到位处理超过一种的新加入的情况，无法延续现有的代码继续修改以通过测试。</p>
+<p>现在的问题转换为“如何写出下一个测试”，请接着读 4.3。</p>
+<h3 id="43简化问题场景-逐步添加限制--条件"><a href="#43简化问题场景-逐步添加限制--条件" class="anchor-link">#</a><a href="#contents:43简化问题场景-逐步添加限制--条件" class="headings">4.3.简化问题场景-&gt;逐步添加限制 | 条件</a></h3>
 <div class="table-container"><table>
-  <thead>
-      <tr>
-          <th>问：我无法写出下一个测试，卡壳了</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>答：接着上一步测试的目的，继续分析需求，我们走到哪了？或者我们应该换个思路重新分析需求？</td>
-      </tr>
-      <tr>
-          <td>资料：<sup id="fnref2:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>2.，<sup id="fnref3:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>问：我无法写出下一个测试，卡壳了</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>答：接着上一步测试的目的，继续分析需求，我们走到哪了？或者我们应该换个思路重新分析需求？</td>
+</tr>
+<tr>
+<td>资料：<sup id="fnref2:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>2.，<sup id="fnref3:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
+</tr>
+</tbody>
 </table></div>
 <blockquote>
 <p>&ldquo;When faced with a problem you do not understand, do any part of it you do understand,
-then look at it again.&rdquo;</p></blockquote>
-<p>这是文章<sup id="fnref4:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>给出的引用，来自一部科幻小说。下面我要写的是我根据文章<sup id="fnref5:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>和其他 kata 解决需求的思路悟出的门路， 总结来说：</p>
+then look at it again.&rdquo;</p>
+</blockquote>
+<p>这是文章<sup id="fnref4:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>给出的引用，来自一部科幻小说。下面我要写的是我根据文章<sup id="fnref5:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>和其他 kata 解决需求的思路悟出的门路，总结来说：</p>
 <blockquote>
-<p>不要按步骤1-2-3线性流程切分需求，而是按套娃，
-从理想的简单状态机（简单输入简单处理输出|复杂输入简化处理输出）到有条件|限制的复杂状态机（复杂处理+复杂输入|输出），
-一步步完善处理逻辑。</p></blockquote>
-<p>如果你手边有《计算机网络》这类书，看看每个层的第一个教学使用的理论协议的假设条件有多理想，以数据链路层的协议为例： 单工，发送方和接收方的网络层总是准备就绪，数据处理不计时间， 可用缓存无限大，信道不会在物理层损坏|丢失。
-这种理想协议只会在教科书上存在，但它形象地描述了该层协议 <em>可能的风险|考量</em> 。 之后的篇幅逐渐引入各种机制来解决理想协议中忽略的考量，最终一个能在现实场景中使用的协议完成了。</p>
-<p>咱们的测试也应该像设计协议一样，每次只测试一个考量|一种情况， 修改少量代码通过这个测试，接着向下走，直到考虑了所有情况。</p>
-<p>正确实例：文章<sup id="fnref6:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>后半段，“我”针对“字符串按位换行”需求，先考虑了没有空白符的“纯”字符串简单情况，然后因为引入空白符， 多增加了三种情况（分割点在空白符左、相同、右），多写三个测试并修改代码通过它们，最终完成了逻辑。</p>
-<h2 id="2021-03-11更新"><a href="#2021-03-11更新" class="anchor-link">#</a><a href="#contents:2021-03-11更新" class="headings">2021-03-11更新</a></h2>
+<p>不要按步骤 1-2-3 线性流程切分需求，而是按套娃，
+从理想的简单状态机（简单输入简单处理输出 | 复杂输入简化处理输出）到有条件 | 限制的复杂状态机（复杂处理 + 复杂输入 | 输出），
+一步步完善处理逻辑。</p>
+</blockquote>
+<p>如果你手边有《计算机网络》这类书，看看每个层的第一个教学使用的理论协议的假设条件有多理想，以数据链路层的协议为例：单工，发送方和接收方的网络层总是准备就绪，数据处理不计时间，可用缓存无限大，信道不会在物理层损坏 | 丢失。
+这种理想协议只会在教科书上存在，但它形象地描述了该层协议 <em>可能的风险 | 考量</em> 。之后的篇幅逐渐引入各种机制来解决理想协议中忽略的考量，最终一个能在现实场景中使用的协议完成了。</p>
+<p>咱们的测试也应该像设计协议一样，每次只测试一个考量 | 一种情况，修改少量代码通过这个测试，接着向下走，直到考虑了所有情况。</p>
+<p>正确实例：文章<sup id="fnref6:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>后半段，“我”针对“字符串按位换行”需求，先考虑了没有空白符的“纯”字符串简单情况，然后因为引入空白符，多增加了三种情况（分割点在空白符左、相同、右），多写三个测试并修改代码通过它们，最终完成了逻辑。</p>
+<h2 id="2021-03-11-更新"><a href="#2021-03-11-更新" class="anchor-link">#</a><a href="#contents:2021-03-11-更新" class="headings">2021-03-11 更新</a></h2>
 <p>我对 TDD 有了新的理解：TDD 对新手来说比较难以实践，不建议新手去用。有以下几点理由：</p>
 <ol>
 <li>
 <p>写测试速度很难跟上思考速度。</p>
 <ul>
-<li>TDD 本质上是把对方法|函数的功能的要求编进测试用例，要求是思考形成的，
+<li>TDD 本质上是把对方法 | 函数的功能的要求编进测试用例，要求是思考形成的，
 如果对编程语言（＆第三方测试框架）不是如母语一样熟悉，
 写测试的速度跟不上思考的速度，就需要阻塞思考，慢慢写出一个个测试用例。</li>
-<li>就像阻塞快速的 CPU 去做慢速的I/O一样，更惨的是不是人人都是周伯通，
-手脑协调同时只能做一件事， 所以不能引入一个终端机制去并行思考&amp;写测试）。</li>
+<li>就像阻塞快速的 CPU 去做慢速的 I/O 一样，更惨的是不是人人都是周伯通，
+手脑协调同时只能做一件事，所以不能引入一个终端机制去并行思考&amp;写测试）。</li>
 <li>阻塞思考不仅痛苦还会打断思路，而且编程速度很慢，不利于完成工作。</li>
-<li>解决这个问题，或者提高写测试速度（I/O速度）；或者科幻一些，
-借助机器（引入数据通道辅助I/O），比如哪天出现一个自然语言的测试框架，
+<li>解决这个问题，或者提高写测试速度（I/O 速度）；或者科幻一些，
+借助机器（引入数据通道辅助 I/O），比如哪天出现一个自然语言的测试框架，
 写英文就能生成对应测试用例，或者脑机接口之类。唉，暂时不可求。</li>
 </ul>
 </li>
@@ -406,7 +412,7 @@ then look at it again.&rdquo;</p></blockquote>
 <li>
 <p>如果有专业全面的测试环节，单元测试的价值会打个折扣。</p>
 <ul>
-<li>这不是我的见解，我认为<a href="https://twitter.com/iamshaynez/status/1357606576396275713" target="_blank" rel="noopener">他说得有些道理(推特 thread)</a></li>
+<li>这不是我的见解，我认为<a href="https://twitter.com/iamshaynez/status/1357606576396275713" target="_blank" rel="noopener">他说得有些道理 (推特 thread)</a></li>
 <li>但我认为对复杂逻辑的测试该写还是写，因为单元测试就是为开发时即时测试而存在的，和 QA 两码事。
 即使 QA 发现 bug 提出工单，你改好了，但下次重构时又 不能&amp;没权限&amp;不方便 即时地把历史工单的测试用例全跑一遍，不踏实。</li>
 </ul>
@@ -414,7 +420,7 @@ then look at it again.&rdquo;</p></blockquote>
 <li>
 <p>简单逻辑犯错概率很小，没有写测试的必要。</p>
 <ul>
-<li>举个例子，为了打 log 而写的 try-catch(-catch&hellip;)逻辑，
+<li>举个例子，为了打 log 而写的 try-catch(-catch&hellip;) 逻辑，
 我会把 try 中的逻辑单独重构成方法，
 那么专门对该单纯的 try-catch 包装方法写测试就比较鸡肋，
 如果写测试速度不够快，认真读两遍代码看看异常类的名是否写对更快些。</li>
@@ -426,26 +432,26 @@ then look at it again.&rdquo;</p></blockquote>
 </li>
 </ol>
 <p>需要承认，如果真的能同时：1.测试质量高 2.测试覆盖率高，那么这种单元测试的价值非常大。
-可惜现实情况往往是没经验满足1，没时间满足2，而且不满足1还反而有害。</p>
-<p>我现在的实践是（我们团队对单元测试没要求），要写用例就用多种 assert 努力体现完备的功能要求，写不出|懒不想写就干脆不写。
-编写完功能代码，针对其中我认为的“复杂(变成自动机它中间状态比较多)”方法
+可惜现实情况往往是没经验满足 1，没时间满足 2，而且不满足 1 还反而有害。</p>
+<p>我现在的实践是（我们团队对单元测试没要求），要写用例就用多种 assert 努力体现完备的功能要求，写不出 | 懒不想写就干脆不写。
+编写完功能代码，针对其中我认为的“复杂 (变成自动机它中间状态比较多)”方法
 （相对的是“惰性”的一目了然的方法：简单的异常处理，类似构造器的接参数 builder 方法&hellip;）
 写单元测试（简单的边界，null，正常），不在意覆盖率，单纯地“为了当前开发而测试”，如果能方便到以后的重构就更好啦。
 （不要和“编程为了长远，只是运行刚好满足于现在的需求”准则弄混，那是描述功能设计而不是单元测试的准则。）</p>
-<h2 id="2021-04-30更新"><a href="#2021-04-30更新" class="anchor-link">#</a><a href="#contents:2021-04-30更新" class="headings">2021-04-30更新</a></h2>
-<p>说实话，3月时我写下上面的补丁的内容，以提供反面的观点，但心中仍留有疑惑：
+<h2 id="2021-04-30-更新"><a href="#2021-04-30-更新" class="anchor-link">#</a><a href="#contents:2021-04-30-更新" class="headings">2021-04-30 更新</a></h2>
+<p>说实话，3 月时我写下上面的补丁的内容，以提供反面的观点，但心中仍留有疑惑：
 我到底该对 TDD 持有怎样的态度？我该如何使用其中好的思想并避开麻烦的实践过程？
-《程序员修炼之道(第2版)》中谈到的关于测试的观点让我倍受启发，
+《程序员修炼之道 (第 2 版)》中谈到的关于测试的观点让我倍受启发，
 我忍不住大段大段地把内容抄写在这里，以弥补与融合上面两部分中对 TDD 的支持与反对的观点，使之形成整体的观点。
 因抄写字数太多，我不会使用格式标记抄写的段落，反过来，下面我说的话会使用<em>斜体</em>标记。
 有时会抄写原文，有时会把原本不同位置的表达同概念的单句组合在一起，有时改写难以理解的表达，
 省略描述书中举例，我尽量将书中的想表达的观点呈现出来。
-当然，推荐你找到本书并从“<strong>第7章-41节-为编码测试</strong>”开始阅读原文，这书没阅读门槛，很值得一读。
+当然，推荐你找到本书并从“<strong>第 7 章 -41 节 - 为编码测试</strong>”开始阅读原文，这书没阅读门槛，很值得一读。
 嗯，版权问题&hellip;&hellip;我想两位作者不会因为这个来找我的，我们都想让更多人了解到更务实的工作方式。</p>
 <hr>
 <h3 id="41-为编码测试"><a href="#41-为编码测试" class="anchor-link">#</a><a href="#contents:41-为编码测试" class="headings">41 为编码测试</a></h3>
 <p>我们认为“为了找 bug|确保代码工作正常而编写测试”是错误的观点。</p>
-<h4 id="提示66-测试与找-bug-无关"><a href="#提示66-测试与找-bug-无关" class="anchor-link">#</a><a href="#contents:提示66-测试与找-bug-无关" class="headings">提示66 测试与找 bug 无关</a></h4>
+<h4 id="提示-66-测试与找-bug-无关"><a href="#提示-66-测试与找-bug-无关" class="anchor-link">#</a><a href="#contents:提示-66-测试与找-bug-无关" class="headings">提示 66 测试与找 bug 无关</a></h4>
 <p>我们相信，测试获得的主要好处发生在你考虑测试及编写测试的时候，而不是运行它的时候。
 当你开始编写新功能，你不知道怎么去写业务逻辑，这时可以提前考虑一下测试：
 假设你已经写完了业务逻辑，准备补单元测试了。
@@ -454,8 +460,8 @@ then look at it again.&rdquo;</p></blockquote>
 考虑测试使我们减少了代码中的耦合
 （与其他代码紧耦合的函数或方法很难进行测试，因为你必须在运行方法之前设置（<em>mock</em>）好所有环境，让你的东西可测试也减少了它的耦合），
 并增加了灵活性（<em>我们想在测试时自由地控制依赖模块来模拟不同情况，这要求业务逻辑的 API 所接受的参数范围要广</em>）。
-为公开方法写测试的考虑过程， 使我们得以从外部看待这个方法，这让我们看起来是方法的客户（<em>调用者</em>）而不是作者。</p>
-<h4 id="提示67-测试是代码的第一个用户"><a href="#提示67-测试是代码的第一个用户" class="anchor-link">#</a><a href="#contents:提示67-测试是代码的第一个用户" class="headings">提示67 测试是代码的第一个用户</a></h4>
+为公开方法写测试的考虑过程，使我们得以从外部看待这个方法，这让我们看起来是方法的客户（<em>调用者</em>）而不是作者。</p>
+<h4 id="提示-67-测试是代码的第一个用户"><a href="#提示-67-测试是代码的第一个用户" class="anchor-link">#</a><a href="#contents:提示-67-测试是代码的第一个用户" class="headings">提示 67 测试是代码的第一个用户</a></h4>
 <p>我们认为，“<strong>测试所提供的反馈至关重要，可以指导编码过程</strong>”，这是测试的最大好处。
 在你对一个东西做测试前，必须先理解它在干嘛。
 现实中我们刚开始编写代码时，只能基于对必须要做的事的模糊理解，<em>边写边理解边解决新出现的要求（错误处理，边界，isNull etc）</em>，
@@ -466,16 +472,16 @@ then look at it again.&rdquo;</p></blockquote>
 <p>我们看到 TDD 的好处，只要遵守流程，代码始终都有测试，你也将一直处于思考测试的状态。
 我们也看到人们成为 TDD 的奴隶：</p>
 <ol>
-<li>花费过多时间确保100%测试覆盖率</li>
+<li>花费过多时间确保 100% 测试覆盖率</li>
 <li>做了很多冗余（<em>无用</em>）的测试
-（<em>书中举例：刚开始编写方法时，对一个特定测试值（这是从特例到公式的必要一步 TDD 步骤）， 编写之后显著会重复|重写的 AD-HOC 逻辑</em>）</li>
+（<em>书中举例：刚开始编写方法时，对一个特定测试值（这是从特例到公式的必要一步 TDD 步骤），编写之后显著会重复 | 重写的 AD-HOC 逻辑</em>）</li>
 <li>TDD 的设计从底层开始，然后逐步上升。</li>
 </ol>
 <h5 id="tdd你需要知道该去何方"><a href="#tdd你需要知道该去何方" class="anchor-link">#</a><a href="#contents:tdd你需要知道该去何方" class="headings">TDD：你需要知道该去何方。</a></h5>
 <p>“小步前行”被吹捧为 TDD 的一个优点，但这可能会误导你，它鼓励人们专注于不断优化简单的问题，而忽略编码的真正动因（<em>解决需求！</em>）。
 <em>书中案例：罗恩·杰弗里斯的数独程序系列博客，进行多次重构后满意，最终放弃了项目。</em>
 按顺序阅读博客很有趣，可以看到一个聪明人是如何被通过测试的喜悦套牢，开始为琐事（<em>不断想着重构</em>）而分心。</p>
-<h4 id="提示68-既非自上而下也非自下而上基于端对端构建程序"><a href="#提示68-既非自上而下也非自下而上基于端对端构建程序" class="anchor-link">#</a><a href="#contents:提示68-既非自上而下也非自下而上基于端对端构建程序" class="headings">提示68 既非自上而下，也非自下而上，基于端对端构建程序</a></h4>
+<h4 id="提示-68-既非自上而下也非自下而上基于端对端构建程序"><a href="#提示-68-既非自上而下也非自下而上基于端对端构建程序" class="anchor-link">#</a><a href="#contents:提示-68-既非自上而下也非自下而上基于端对端构建程序" class="headings">提示 68 既非自上而下，也非自下而上，基于端对端构建程序</a></h4>
 <h5 id="自上而下与自下而上之争以你该用的方式去做"><a href="#自上而下与自下而上之争以你该用的方式去做" class="anchor-link">#</a><a href="#contents:自上而下与自下而上之争以你该用的方式去做" class="headings">自上而下与自下而上之争，以你该用的方式去做</a></h5>
 <p>计算机领域初期有两种程序设计学派：自上而下与自下而上。
 但两个学派都没成功，因为它们都忽略了：刚开始（<em>即设计阶段</em>）没人知道要做什么。
@@ -485,7 +491,7 @@ then look at it again.&rdquo;</p></blockquote>
 应用学到的知识充实代码，让客户参与每一步并让他们指导这个过程。
 测试对开发的驱动绝对有帮助，但是，就像每次开车一样，除非心里有一个目的地，
 否则就可能到处兜圈子。</p>
-<h4 id="提示70-要对软件做测试否则只能留给用户去做"><a href="#提示70-要对软件做测试否则只能留给用户去做" class="anchor-link">#</a><a href="#contents:提示70-要对软件做测试否则只能留给用户去做" class="headings">提示70 要对软件做测试，否则只能留给用户去做</a></h4>
+<h4 id="提示-70-要对软件做测试否则只能留给用户去做"><a href="#提示-70-要对软件做测试否则只能留给用户去做" class="anchor-link">#</a><a href="#contents:提示-70-要对软件做测试否则只能留给用户去做" class="headings">提示 70 要对软件做测试，否则只能留给用户去做</a></h4>
 <p>毫无疑问测试是编程的一部分，不该留给其他部门的人去做（<em>测试部门算其他部门吗？</em>）。
 测试、设计、编码————都是在编程。</p>
 <hr>
@@ -495,13 +501,14 @@ then look at it again.&rdquo;</p></blockquote>
 <p>忏悔</p>
 <p>我，Dave，因告诉别人自己不再编写测试，而大出风头。这样做的部分原因是想动摇那些把测试变成宗教的人的信仰。
 这样说的部分原因是，这（某种程度上）是真的。</p>
-<p>我已经编写了45年的代码，30多年中我都写了自动化测试。构思写测试，已经成了我编码方式的一部分&hellip;
+<p>我已经编写了 45 年的代码，30 多年中我都写了自动化测试。构思写测试，已经成了我编码方式的一部分&hellip;
 我决定停止编写测试几个月，看看代码会出什么事。令人惊讶的是，影响“不是很大”，我花了一些时间来找出原因。</p>
 <p>我相信这个原因是，（对我来说）测试的好处更主要来自思考测试，以及思考测试对对代码造成的影响。
 在长时间坚持这么做后，我写不写测试都会这样思考。代码仍是可测试的，只是无须真的写出来测试。</p>
 <p>&hellip;测试也是与其他开发人员交流的一种方式，所以我开始会在与他人共享代码时为其编写测试，或给有外部依赖的事情写测试。</p>
 <p>Andy 说我不应该加上这个知识栏，他担心这会诱使缺乏经验的开发人员不写测试。下面是我的折衷方案：</p>
-<p>应该编写测试吗？要，但等你写了30年后，不妨从容地做些实验，看看它究竟给你带来的什么好处。</p></blockquote>
+<p>应该编写测试吗？要，但等你写了 30 年后，不妨从容地做些实验，看看它究竟给你带来的什么好处。</p>
+</blockquote>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -534,9 +541,9 @@ then look at it again.&rdquo;</p></blockquote>
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2025-04-03 10:08:29 CST" style="cursor:help">
+        <span title="Updated @ 2025-05-02 18:34:35 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-04-03</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-04-03</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-05-02</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-05-02</text></g></svg>
         </span></div>
 
 

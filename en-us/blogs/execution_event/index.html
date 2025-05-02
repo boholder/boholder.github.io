@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -237,7 +237,7 @@
 <h2 id="when-the-program-is-triggered"><a href="#when-the-program-is-triggered" class="anchor-link">#</a><a href="#contents:when-the-program-is-triggered" class="headings">When the program is triggered</a></h2>
 <p>If you accidentally download a virus from the internet, and it&rsquo;s now saved on your local disk. Is it game over? Not yet. It hasn&rsquo;t been executed. Just delete it (preferably using a file shredder tool). Our computers follow the <a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture" target="_blank" rel="noopener">Von Neumann architecture</a>, in which programs and data are treated equally when they are stored in the hard drive (as well as in memory). The program on the hard drive has not been executed. I guess people working in
 cybersecurity are familiar with this. A successful attack inevitably involves the successful execution of malicious instructions.</p>
-<p>You must have been scared by those <a href="https://www.google.com/search?q=classic&#43;jump&#43;scare&#43;flash&#43;game" target="_blank" rel="noopener">prank Flash games</a> ages ago, right? (No? Well, maybe this example is too old). If you close the game before the jump scare scene is triggered, you&rsquo;re safe, nothing happens. The Flash game is already running in your browser (meaning all the game&rsquo;s code is in memory), but that doesn&rsquo;t mean the jump scare scene (a specific piece of code) will necessarily be triggered by your operations.</p>
+<p>You must have been scared by those <a href="https://www.google.com/search?q=classic+jump+scare+flash+game" target="_blank" rel="noopener">prank Flash games</a> ages ago, right? (No? Well, maybe this example is too old). If you close the game before the jump scare scene is triggered, you&rsquo;re safe, nothing happens. The Flash game is already running in your browser (meaning all the game&rsquo;s code is in memory), but that doesn&rsquo;t mean the jump scare scene (a specific piece of code) will necessarily be triggered by your operations.</p>
 <h2 id="program-triggering-events-and-execution-order"><a href="#program-triggering-events-and-execution-order" class="anchor-link">#</a><a href="#contents:program-triggering-events-and-execution-order" class="headings">Program-triggering events and execution order</a></h2>
 <p>The term &lsquo;program-triggering event&rsquo; is something I coined myself, referring to &ldquo;events that trigger the execution of instructions.&rdquo; It&rsquo;s a simple definition, but I couldn&rsquo;t find a ready-made term that precisely fits this definition. Perhaps in the right context (such as in <a href="https://en.wikipedia.org/wiki/Event-driven_architecture" target="_blank" rel="noopener">event-driven architecture</a>), the term &ldquo;event&rdquo; alone embodies this meaning, and in the following text, we will use &ldquo;event&rdquo; instead of that term.</p>
 <p>In graphical user interface applications, user actions are events; in servers, external requests are events; in scheduled execution systems, the system serves as the event triggering timed tasks. Different program entities can trigger each other in a chained manner. For example the famous interview question - <a href="https://github.com/alex/what-happens-when" target="_blank" rel="noopener">What happens when you type google.com into your browser&rsquo;s address bar and press Enter?</a> Wow, it&rsquo;s really quite a chain. From this perspective, a program residing in memory is somewhat like nervous system: it is alive (part of the persistently running logic actively listens for events), but it is in a standby state. An event will activate its corresponding processing logic (a portion associated with the event), and after the logic execution, it returns to the standby state.</p>
@@ -260,7 +260,8 @@ cybersecurity are familiar with this. A successful attack inevitably involves th
 </ul>
 <blockquote>
 <p>Advertisement time!</p>
-<p><a href="https://github.com/khanshoaib3/minecraft-access" target="_blank" rel="noopener">minecraft-access</a> is a mod designed to help visually impaired players play Minecraft. Currently, I am the only active developer, and <a href="https://github.com/khanshoaib3/minecraft-access/issues" target="_blank" rel="noopener">there are quite a few new requirements and bugs</a>. If you&rsquo;re interested in understanding the logic behind Minecraft through mod development, this mod is undoubtedly your best choice. If you&rsquo;re intrigued, we look forward to seeing you on the PR page and issue page.</p></blockquote>
+<p><a href="https://github.com/khanshoaib3/minecraft-access" target="_blank" rel="noopener">minecraft-access</a> is a mod designed to help visually impaired players play Minecraft. Currently, I am the only active developer, and <a href="https://github.com/khanshoaib3/minecraft-access/issues" target="_blank" rel="noopener">there are quite a few new requirements and bugs</a>. If you&rsquo;re interested in understanding the logic behind Minecraft through mod development, this mod is undoubtedly your best choice. If you&rsquo;re intrigued, we look forward to seeing you on the PR page and issue page.</p>
+</blockquote>
 
             </div>
 

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -57,13 +57,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2025-01-22T00:00:00+00:00",
-        "dateModified": "2025-04-03T09:40:39+08:00",
+        "dateModified": "2025-05-02T18:34:35+08:00",
         "url": "https://boholder.github.io/blogs/x11fwd/",
         "headline": "SSH X11 Forwarding 远程开发方案",
         "description": "和一些刨根问底",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
-        "wordCount":  2940 ,
+        "wordCount":  2916 ,
         "image": ["https://boholder.github.io/img/postimg/2025/xeyes_with_cmd.png","https://boholder.github.io/img/postimg/2025/mc_with_intellij.png"],
         "author": {
             "@type": "Person",
@@ -104,7 +104,7 @@
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/img/postimg/2025/xeyes_with_cmd.png" />
 <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2025-01-22T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2025-04-03T09:40:39&#43;08:00" />
+    <meta property="article:modified_time" content="2025-05-02T18:34:35&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -190,7 +190,7 @@
     
     
         
-        <time datetime="2025-04-03T09:40:39&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.4.3</time>
+        <time datetime="2025-05-02T18:34:35&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.5.2</time>
     
     
     
@@ -204,7 +204,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;2940</span>
+        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;2916</span>
     
     
         
@@ -229,8 +229,8 @@
     </li>
   </ol>
 </nav><div class="post-body e-content">
-                <p>我有一个老旧的 Windows10 笔记本，它的性能不足以支持2025年的开发需要，但我偶尔需要在离开家里那台强力主机的情况下（比如在老家或办公室时）运行开发环境。于是我买了一台强力的无头主机（<a href="https://www.mechrevo.com/content/details171_5615.html" target="_blank" rel="noopener">mechrevo imini pro</a>, R78845H, 32G RAM）并安装了Debian（注意，安装包括Gnome图形界面，这可能无意间帮我节省了一些安装 X11 转发所必需的依赖库的步骤），用一根外置网卡（<a href="https://www.lulian.cn/product/673.html" target="_blank" rel="noopener">绿联USB3.0外置网卡2.5G网速</a>
-）把笔记本和无头主机连了起来，并建立了以笔记本为网关和DHCP服务器的局域网。关于如何折腾建立这网络，内容多到值得另写一篇博客，本文按下不表。这样一来，我便可以使用<a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">JetBrains IntelliJ</a>中自带的<a href="https://www.jetbrains.com/remote-development/gateway/" target="_blank" rel="noopener">JetBrains Gateway</a>（通过 ssh）连接到无头主机（下称服务器）的 IntelliJ 后端，进行 Java 开发。</p>
+                <p>我有一个老旧的 Windows10 笔记本，它的性能不足以支持 2025 年的开发需要，但我偶尔需要在离开家里那台强力主机的情况下（比如在老家或办公室时）运行开发环境。于是我买了一台强力的无头主机（<a href="https://www.mechrevo.com/content/details171_5615.html" target="_blank" rel="noopener">mechrevo imini pro</a>, R78845H, 32G RAM）并安装了 Debian（注意，安装包括 Gnome 图形界面，这可能无意间帮我节省了一些安装 X11 转发所必需的依赖库的步骤），用一根外置网卡（<a href="https://www.lulian.cn/product/673.html" target="_blank" rel="noopener">绿联 USB3.0 外置网卡 2.5G 网速</a>
+）把笔记本和无头主机连了起来，并建立了以笔记本为网关和 DHCP 服务器的局域网。关于如何折腾建立这网络，内容多到值得另写一篇博客，本文按下不表。这样一来，我便可以使用<a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">JetBrains IntelliJ</a>中自带的<a href="https://www.jetbrains.com/remote-development/gateway/" target="_blank" rel="noopener">JetBrains Gateway</a>（通过 ssh）连接到无头主机（下称服务器）的 IntelliJ 后端，进行 Java 开发。</p>
 <p>一切都很好，直到我编写 <a href="https://github.com/minecraft-access/minecraft-access" target="_blank" rel="noopener">minecraft-access</a> 这个 Minecraft mod。Minecraft 是个游戏，而且这个 mod 是客户端 mod，因此调试运行 mod 需要运行游戏，而这游戏需要&hellip;&hellip;打开一个窗口。服务器没有外接显示器，如果直接通过 JB Gateway 在服务器中调试运行程序，程序会抛出以下异常并退出：</p>
 <pre tabindex="0"><code class="language-log" data-lang="log">java.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x1000E]Failed to detect any supported platform
     at knot//com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:78)
@@ -280,12 +280,12 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">X11Forwarding yes # 允许 sshd 转发 X11 流量
 </span></span><span class="line"><span class="cl"># X11UseLocalhost yes # sshd 将把 X server 的流量出口绑定到 localhost
-</span></span><span class="line"><span class="cl"># X11DisplayOffset 10 # 设定 display number 为10
+</span></span><span class="line"><span class="cl"># X11DisplayOffset 10 # 设定 display number 为 10
 </span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>这些配置使得 <code>sshd</code> 进程会将通过 ssh 连接的远程 <code>X server</code> 的流量转发到 <code>localhost:10.0</code>。在服务器上运行的程序，若环境变量配置为 <code>DISPLAY=localhost:10.0</code>，则可以接收到 <code>sshd</code> 进程转发的 <code>X server</code> 的数据。关于什么是 <code>DISPLAY</code> 环境变量和 <code>display number</code>，见 <a href="https://askubuntu.com/a/432257" target="_blank" rel="noopener">https://askubuntu.com/a/432257</a>、<a href="https://linux.die.net/man/7/x" target="_blank" rel="noopener">https://linux.die.net/man/7/x</a>。配置完记得 <code>sudo systemctl restart ssh</code> 重启一下 <code>sshd</code> 进程。</p>
 <h2 id="笔记本端"><a href="#笔记本端" class="anchor-link">#</a><a href="#contents:笔记本端" class="headings">笔记本端</a></h2>
-<p>Windows系统没有自带的 <code>X server</code>，现有方案有 <code>Xming</code>、<code>VcXsrv</code>、<code>MobaXterm</code>，我选择了 <code>MobaXterm</code>。安装启动后，该程序将自动架设 <code>X server</code>，地址为 <code>&lt;每个网络适配器的IP&gt;:0.0</code>。</p>
+<p>Windows 系统没有自带的 <code>X server</code>，现有方案有 <code>Xming</code>、<code>VcXsrv</code>、<code>MobaXterm</code>，我选择了 <code>MobaXterm</code>。安装启动后，该程序将自动架设 <code>X server</code>，地址为 <code>&lt;每个网络适配器的IP&gt;:0.0</code>。</p>
 <h3 id="cmd"><a href="#cmd" class="anchor-link">#</a><a href="#contents:cmd" class="headings">cmd</a></h3>
 <p>先用 Windows cmd 试试，<code>-v</code> 打印 debug 日志，<a href="https://man7.org/linux/man-pages/man1/ssh.1.html" target="_blank" rel="noopener"><code>-X</code> 允许经过鉴权的 X11 转发</a>，<code>-b</code> 指定要连接的网卡：</p>
 <div class="highlight"><div class="chroma">
@@ -398,7 +398,7 @@
 </span></span><span class="line"><span class="cl">Error: Can&#39;t open display: localhost:10.0
 </span></span></code></pre></td></tr></table></div>
 </div>
-</div><p>仍然不行，但是出现了 “debug1: No xauth program” 这行日志，说明我们至少向前一步了。搜索得知， <code>xauth</code> 程序需要存在于 <code>X server</code> 这一端， cmd 里没有也没办法自行安装该程序。还好 <code>ssh</code> 还提供了 <code>-Y</code> 参数，允许未经鉴权的 X11 转发（注意，这对笔记本侧来说有<a href="https://man7.org/linux/man-pages/man1/ssh.1.html" target="_blank" rel="noopener">安全风险</a>）：</p>
+</div><p>仍然不行，但是出现了“debug1: No xauth program”这行日志，说明我们至少向前一步了。搜索得知， <code>xauth</code> 程序需要存在于 <code>X server</code> 这一端，cmd 里没有也没办法自行安装该程序。还好 <code>ssh</code> 还提供了 <code>-Y</code> 参数，允许未经鉴权的 X11 转发（注意，这对笔记本侧来说有<a href="https://man7.org/linux/man-pages/man1/ssh.1.html" target="_blank" rel="noopener">安全风险</a>）：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -428,7 +428,7 @@
 </span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>成功了！</p>
-<p><img src="/img/postimg/2025/xeyes_with_cmd.png" alt="A screenshot showing the xeyes window and the cmd window"></p>
+<p><img alt="A screenshot showing the xeyes window and the cmd window" src="/img/postimg/2025/xeyes_with_cmd.png"></p>
 <h3 id="mobaxterm"><a href="#mobaxterm" class="anchor-link">#</a><a href="#contents:mobaxterm" class="headings">MobaXterm</a></h3>
 <p>在 MobaXterm 的本地终端上检查 <code>DISPLAY</code> 环境变量，发现其值已经设置到正确的值：</p>
 <div class="highlight"><div class="chroma">
@@ -460,7 +460,7 @@
 </span></span><span class="line"><span class="cl">（生成界面）
 </span></span></code></pre></td></tr></table></div>
 </div>
-</div><p>注意这里 shell 中的 <code>DISPLAY</code> 变量的 display number 被设置为<code>11</code>，这是因为我的 cmd 终端还没退出 ssh，退出后再重新通过 MobaXterm 连接服务器，<code>DISPLAY</code> 会变回 <code>localhost:10.0</code>，这就是 <code>sshd_config</code> 中 <code>X11DisplayOffset</code> 配置项的作用，偏移从10开始。不过 MobaXterm 的本地终端上并没有安装 <code>xauth</code> （xauth: command not found），不清楚其内部是如何实现 X11 认证的。</p>
+</div><p>注意这里 shell 中的 <code>DISPLAY</code> 变量的 display number 被设置为<code>11</code>，这是因为我的 cmd 终端还没退出 ssh，退出后再重新通过 MobaXterm 连接服务器，<code>DISPLAY</code> 会变回 <code>localhost:10.0</code>，这就是 <code>sshd_config</code> 中 <code>X11DisplayOffset</code> 配置项的作用，偏移从 10 开始。不过 MobaXterm 的本地终端上并没有安装 <code>xauth</code> （xauth: command not found），不清楚其内部是如何实现 X11 认证的。</p>
 <h3 id="intellij-over-jb-gateway"><a href="#intellij-over-jb-gateway" class="anchor-link">#</a><a href="#contents:intellij-over-jb-gateway" class="headings">IntelliJ (over JB Gateway)</a></h3>
 <p>我找不到修改 JB Gateway 的 ssh 以传递 <code>-X</code> <code>-Y</code> 参数的方法，还好可以通过<a href="https://man.openbsd.org/ssh_config.5#ForwardX11" target="_blank" rel="noopener">修改 ssh 配置</a>的方式达到相同目的，修改 <code>C:\Users\&lt;user&gt;\.ssh\config</code> 文件如下，并重启电脑（重启 ssh 服务也可以）：</p>
 <div class="highlight"><div class="chroma">
@@ -486,7 +486,7 @@
 </span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>不行，相同的错误。经过尝试，我发现了一个不知道是否算作 workaround 的方法——借助已证明成功转发 X11 的 MobaXterm ssh 连接展示界面。用 MobaXterm 打开并保持到服务器的连接，将其 <code>DISPLAY</code> 环境变量的值（如<code>localhost:10.0</code>）配置到 <code>Run/Debug Configuration</code> 上，调试运行&hellip;&hellip;成功了！</p>
-<p><img src="/img/postimg/2025/mc_with_intellij.png" alt="A screenshot showing the MobaXterm, Minecraft game window and IntelliJ run/debug configuration"></p>
+<p><img alt="A screenshot showing the MobaXterm, Minecraft game window and IntelliJ run/debug configuration" src="/img/postimg/2025/mc_with_intellij.png"></p>
 <p>就是这样，没什么要说的了，感谢阅读，希望这篇文章能帮到你。如果你知道更好的方案，请给我留言，如果我忍耐不了这方案的延迟，会尝试换方案。</p>
 
             </div>
@@ -503,9 +503,9 @@
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2025-04-03 09:40:39 CST" style="cursor:help">
+        <span title="Updated @ 2025-05-02 18:34:35 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-04-03</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-04-03</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-05-02</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-05-02</text></g></svg>
         </span></div>
 
 

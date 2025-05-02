@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://boholder.github.io/</loc>
-    <lastmod>2025-04-03T16:42:06+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -16,16 +16,16 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/categories/knowledge/</loc>
-    <lastmod>2025-04-03T16:42:06+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/psychology/</loc>
-    <lastmod>2025-04-03T16:42:06+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/--transmarginal-inhibition/</loc>
-    <lastmod>2025-04-03T16:42:06+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/categories/practice/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -37,21 +37,8 @@
                 href="https://boholder.github.io/categories/practice/"
                 />
   </url><url>
-    <loc>https://boholder.github.io/categories/programming/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://boholder.github.io/en-us/categories/programming/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://boholder.github.io/categories/programming/"
-                />
-  </url><url>
     <loc>https://boholder.github.io/tags/programming/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -63,23 +50,36 @@
                 href="https://boholder.github.io/tags/programming/"
                 />
   </url><url>
+    <loc>https://boholder.github.io/categories/programming/</loc>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://boholder.github.io/en-us/categories/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://boholder.github.io/categories/programming/"
+                />
+  </url><url>
     <loc>https://boholder.github.io/tags/ssh/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/x11fwd/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/x11/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/biology/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/buddism/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/categories/life/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -92,7 +92,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/categories/tips/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -105,25 +105,25 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/blogs/embrace-impermanence/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/information/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/program_awareness/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/concurrency/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/python/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/event-loop-and-multithread-in-python/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/execution_event/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -136,31 +136,31 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/blogs/two-books-on-buddhism/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/buddhism/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/design/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/talk-with-nishuang-about-minecraft-access/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/open-source/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/join-minecraft-access-development/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/java/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/java-9-to-17/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/categories/craft/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -173,7 +173,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/tags/lora/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -186,7 +186,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/tags/otaku/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -199,7 +199,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/tags/stable-diffusion/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -212,7 +212,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -225,73 +225,73 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/tags/sstv/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/sstv-intro/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/maven/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/what-i-learned-from-putgun/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/maven-build-advance/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/blog/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/favor/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/information-flies-in-the-wind-on-the-internet/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/prgramming/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/yarrow-divination/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/cooking/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/lazy-cooking/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/currying/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/currying/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/srp-against-dry/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/diy/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/introspection-of-pc-diy/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/unit-test/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/mock-in-nutshell/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/what-you-need-for-programming/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/learn-from-source-code/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/unit-test-methods/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/backup/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -304,7 +304,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/tags/sre/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -317,7 +317,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/blogs/individual-data-backup-summary/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -330,7 +330,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/blogs/tdd-tips/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/about/</loc>
     <lastmod>2023-08-08T19:12:01+08:00</lastmod>
@@ -346,10 +346,10 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/blogs/java-arrangement-combination/</loc>
-    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/ide/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -362,31 +362,31 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/blogs/markdown-obsidian-user-defined-language-for-notepadpp/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/cookie/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/cookie_security/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/categories/information-security/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/web-security/</loc>
-    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/book-antifragile/</loc>
-    <lastmod>2024-02-29T09:24:25+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/minecraft-screen-navigation/</loc>
     <lastmod>2025-04-03T09:40:39+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/</loc>
-    <lastmod>2023-08-08T19:12:01+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/two-threads-for-async-and-sync-work-in-python/</loc>
-    <lastmod>2024-07-05T20:35:04+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/</loc>
     <lastmod>2020-12-24T23:32:42+08:00</lastmod>

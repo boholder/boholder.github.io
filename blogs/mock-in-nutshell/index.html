@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -57,13 +57,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-11-25T00:00:00+00:00",
-        "dateModified": "2025-04-03T09:40:39+08:00",
+        "dateModified": "2025-05-02T18:34:35+08:00",
         "url": "https://boholder.github.io/blogs/mock-in-nutshell/",
         "headline": "白话解释单元测试中的 Mock 概念",
         "description": "使用 Mock 技巧测试模块对依赖的调用",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
-        "wordCount":  1881 ,
+        "wordCount":  1850 ,
         "image": ["https://boholder.github.io/img/postimg/2021/mock-0.svg","https://boholder.github.io/img/postimg/2021/mock-1.svg","https://boholder.github.io/img/postimg/2021/mock-2.svg"],
         "author": {
             "@type": "Person",
@@ -104,7 +104,7 @@
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/img/postimg/2021/mock-0.svg" />
 <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-11-25T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2025-04-03T09:40:39&#43;08:00" />
+    <meta property="article:modified_time" content="2025-05-02T18:34:35&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -190,7 +190,7 @@
     
     
         
-        <time datetime="2025-04-03T09:40:39&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.4.3</time>
+        <time datetime="2025-05-02T18:34:35&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.5.2</time>
     
     
     
@@ -204,7 +204,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;1881</span>
+        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;1850</span>
     
     
         
@@ -230,21 +230,21 @@
 <ul>
 <li>测试对象通常是（单个模块的）单个方法。</li>
 <li>目标是用代码把对方法的行为的期望固定成能重复执行的脚本，以实现自动化测试。</li>
-<li>通过预先定义输入值与对应的<a href="https://en.wikipedia.org/wiki/Test_assertion" target="_blank" rel="noopener">断言(assertion)</a>
-这种二元组，来检查某个状态值是否符合预期。（语义即：我期望给方法传值A时，返回值|输入值变成|实例的某个依赖收到值B）</li>
+<li>通过预先定义输入值与对应的<a href="https://en.wikipedia.org/wiki/Test_assertion" target="_blank" rel="noopener">断言 (assertion)</a>
+这种二元组，来检查某个状态值是否符合预期。（语义即：我期望给方法传值 A 时，返回值 | 输入值变成 | 实例的某个依赖收到值 B）</li>
 <li>断言是另一个二元组，即<strong>期望值</strong>和<strong>实际值</strong>，常用<code>except</code>和<code>actual</code>两个变量名。</li>
 </ul>
 <p>调用方法会产生两种行为，两种行为可同时发生，但至少发生一种，要不它就失去了作为方法的方生意义：</p>
 <ol>
 <li>
-<p>方法根据输入值“只读”地返回对应输出值，非常直白，没有改变包括输入值在内的其他数据。通常把这种方法称为“无副作用(side-effect)”的方法。</p>
+<p>方法根据输入值“只读”地返回对应输出值，非常直白，没有改变包括输入值在内的其他数据。通常把这种方法称为“无副作用 (side-effect)”的方法。</p>
 </li>
 <li>
 <p>方法根据输入值，<strong>改变了</strong>输入值本身，或者方法所属的模块实例（this,self），或者模块实例所包含（has-a）的依赖的状态（，并返回结果）。通常称为“有副作用”的方法。</p>
 </li>
 </ol>
 <p>我们的测试要覆盖这两种行为，尤其要注意不太直观的第二种行为。（但是说测第二种行为，也会忽略方法对模块实例本身状态的改动，毕竟这个算模块自己的私事，我们强行去测就破坏封装性了（比如在 Java 里用反射去看类私有字段的值，也不是不能做到）。）</p>
-<p><img src="/img/postimg/2021/mock-0.svg" alt="一张展示一个看起来人畜无害的 add 方法可以背地里偷偷删库的图片"></p>
+<p><img alt="一张展示一个看起来人畜无害的 add 方法可以背地里偷偷删库的图片" src="/img/postimg/2021/mock-0.svg"></p>
 <h2 id="不用-mock-技巧直接测试方法的返回值或输入值的改变"><a href="#不用-mock-技巧直接测试方法的返回值或输入值的改变" class="anchor-link">#</a><a href="#contents:不用-mock-技巧直接测试方法的返回值或输入值的改变" class="headings">不用 Mock 技巧，直接测试方法的返回值或输入值的改变</a></h2>
 <p>我们可以直接用断言测试这两种值。很普通，大家都会，没什么好讲的，但是还是要写出来。</p>
 <div class="highlight"><div class="chroma">
@@ -302,7 +302,7 @@
 </div><h2 id="用-mock-技巧获知被测组件对依赖的调用"><a href="#用-mock-技巧获知被测组件对依赖的调用" class="anchor-link">#</a><a href="#contents:用-mock-技巧获知被测组件对依赖的调用" class="headings">用 Mock 技巧获知被测组件对依赖的调用</a></h2>
 <p>返回值和输入值，我们能直接拿到，关键是怎么“看”到模块的依赖的改变，这就是 Mock 机制的意义所在。</p>
 <p>关于 Mock 概念本身什么意思，<a href="https://stackoverflow.com/questions/2665812/what-is-mocking" target="_blank" rel="noopener">这个 Stackoverflow 的问题</a>
-被回答得很好，建议一读。简单总结，就是给被测模块注入一个模拟的依赖，一个25仔，让它给我们通风报信被测模块对它做了什么。谁让方法自己不给我们说的。</p>
+被回答得很好，建议一读。简单总结，就是给被测模块注入一个模拟的依赖，一个 25 仔，让它给我们通风报信被测模块对它做了什么。谁让方法自己不给我们说的。</p>
 <p>这里使用 Java 语言中的<a href="https://site.mockito.org/" target="_blank" rel="noopener">Mockito</a> 库 演示 Mock 机制，这个技巧不容易徒手实现，需要借用现成的库。</p>
 <p>一个坏坏的计算模块要在 add 方法中加入删库的逻辑，但它的返回值表现得就像普通的 add 方法一样。可惜根据单一职责原则，它不能独立执行删库这个操作，要调用另一个删库组件 DbDeleter 的 delete()
 方法。我们会配合使用 Mock 技巧来编写对删库操作的期望。</p>
@@ -403,13 +403,13 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 被测模块</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// @InjectMocks 注解把生成的 Mock 删库实例（通过调用构造方法自动地）注入到坏计算模块中。</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 即，让25仔打入坏蛋内部。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 即，让 25 仔打入坏蛋内部。</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@InjectMocks</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">EvilCalculator</span><span class="w"> </span><span class="n">calculator</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Test</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">withNormalResponse</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 设置 Mock 删库实例被调用 doIt()方法时的返回值，让坏计算模块以为删库成功了。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 设置 Mock 删库实例被调用 doIt() 方法时的返回值，让坏计算模块以为删库成功了。</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Mockito 的话，不设这个调用时会返回 null。</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">given</span><span class="p">(</span><span class="n">mockDeleter</span><span class="p">.</span><span class="na">doIt</span><span class="p">())</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">willReturn</span><span class="p">(</span><span class="s">&#34;删库成功！&#34;</span><span class="p">);</span><span class="w">
@@ -419,8 +419,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 让我们看看坏计算模块对 Mock 删库模块说了什么</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">ArgumentCaptor</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">captor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ArgumentCaptor</span><span class="p">.</span><span class="na">forClass</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 捕获（查看）坏计算模块传给 Mock 删库模块的 delete()方法的参数</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 顺便期望坏计算模块只调用了一次删库模块的 delete()方法</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 捕获（查看）坏计算模块传给 Mock 删库模块的 delete() 方法的参数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 顺便期望坏计算模块只调用了一次删库模块的 delete() 方法</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">verify</span><span class="p">(</span><span class="n">mockDeleter</span><span class="p">,</span><span class="w"> </span><span class="n">times</span><span class="p">(</span><span class="n">1</span><span class="p">)).</span><span class="na">delete</span><span class="p">(</span><span class="n">mapperArgCaptor</span><span class="p">.</span><span class="na">capture</span><span class="p">());</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 早就料到（期望）</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">assertThat</span><span class="p">(</span><span class="n">mapperArgCaptor</span><span class="p">.</span><span class="na">getValue</span><span class="p">(),</span><span class="w"> </span><span class="n">is</span><span class="p">(</span><span class="s">&#34;生产环境数据库&#34;</span><span class="p">));</span><span class="w">
@@ -428,11 +428,11 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
-</div><p><img src="/img/postimg/2021/mock-1.svg" alt="一张展示用 Mock 技巧回避删库的图片"></p>
+</div><p><img alt="一张展示用 Mock 技巧回避删库的图片" src="/img/postimg/2021/mock-1.svg"></p>
 <h2 id="延伸"><a href="#延伸" class="anchor-link">#</a><a href="#contents:延伸" class="headings">延伸</a></h2>
 <p>特别的，Mockito 含有断言 Mock 组件行为的 API，比如上面示例中断言方法调用次数。一般单独的 Mock 技巧只能用来取值，还要结合其他断言库去验证值的正确性。Mock 不仅可以让我们取得被测模块传给依赖的值，还能让我们设定依赖对被测模块调用的返回值，我称之为“第二种输入”，比如让依赖抛异常，看被测模块能否妥善处理。</p>
 <p>Mock 技巧不止局限于单元测试层面，这是一个通用概念。假如上面的坏计算模块不再依赖删库模块，而是自己实现了删库操作&hellip;&hellip;没事，我们还能往数据库里导<a href="https://mockaroo.com/" target="_blank" rel="noopener">假数据</a> 或者一整个的<a href="https://springtestdbunit.github.io/spring-test-dbunit/" target="_blank" rel="noopener">数据库实例</a> 都是假的，这是在集成测试中应用 Mock 概念的一个例子。</p>
-<p><img src="/img/postimg/2021/mock-2.svg" alt="展示单元测试需要设置输入值和依赖的返回值，而要断言输入值、输出值和被测对依赖的调用值的图片"></p>
+<p><img alt="展示单元测试需要设置输入值和依赖的返回值，而要断言输入值、输出值和被测对依赖的调用值的图片" src="/img/postimg/2021/mock-2.svg"></p>
 
             </div>
 
@@ -448,9 +448,9 @@
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2025-04-03 09:40:39 CST" style="cursor:help">
+        <span title="Updated @ 2025-05-02 18:34:35 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-04-03</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-04-03</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-05-02</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-05-02</text></g></svg>
         </span></div>
 
 
