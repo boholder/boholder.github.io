@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -260,7 +260,7 @@
         <li><a id="contents:常见攻击方式" href="#常见攻击方式">常见攻击方式</a></li>
         <li><a id="contents:非常见方式" href="#非常见方式">非常见方式</a>
           <ol>
-            <li><a id="contents:cookiejacking-rosario-valotta-2011-05linkhttpssitesgooglecomsitetentacoloviolacookiejacking" href="#cookiejacking-rosario-valotta-2011-05linkhttpssitesgooglecomsitetentacoloviolacookiejacking">①cookiejacking-Rosario Valotta-2011-05<a href="https://sites.google.com/site/tentacoloviola/cookiejacking">[link]</a></a></li>
+            <li><a id="contents:cookiejacking-rosario-valotta-2011-05link" href="#cookiejacking-rosario-valotta-2011-05link">①cookiejacking-Rosario Valotta-2011-05<a href="https://sites.google.com/site/tentacoloviola/cookiejacking">[link]</a></a></li>
           </ol>
         </li>
       </ol>
@@ -301,12 +301,10 @@
 <blockquote>
 <p>we will use the term cookie to refer to the state<br>
 information that passes between an origin server and user agent,<br>
-and that gets stored by the user agent.</p>
-</blockquote>
+and that gets stored by the user agent.</p></blockquote>
 <blockquote>
 <p>我们将使用术语 cookie 来指代在源服务器和用户代理之间传递的状态信息，<br>
-以及由用户代理存储的状态信息。</p>
-</blockquote>
+以及由用户代理存储的状态信息。</p></blockquote>
 <p>简单总结，cookie 是：服务器与客户端间标识状态的信息，储存在客户端<br>
 （硬盘或内存，视类型而定），由服务器增删改读。<br>
 用途：满足对无状态的 HTTP 协议，想让它<strong>有状态</strong>的需求，一种修补措施。</p>
@@ -343,49 +341,47 @@ and that gets stored by the user agent.</p>
 <p>Cookie 安全性这点，<a href="https://tools.ietf.org/html/rfc6265#section-8" target="_blank" rel="noopener">rfc6265 中有一整段 (8. Security Considerations)</a> 去阐述，<br>
 务必读一下，总结的很好，我会跳过那些内容，只给出一个目录以供预览。</p>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>分标题</th>
-<th>简述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Overview</td>
-<td>总览</td>
-</tr>
-<tr>
-<td>Ambient Authority</td>
-<td>cookie 是一种权限凭证</td>
-</tr>
-<tr>
-<td>Clear Text</td>
-<td>明文传输问题</td>
-</tr>
-<tr>
-<td>Session Identifiers</td>
-<td>非可读的会话标识符</td>
-</tr>
-<tr>
-<td>Weak Confidentiality</td>
-<td>cookie 在各种层面保密性都弱</td>
-</tr>
-<tr>
-<td>Reliance on DNS</td>
-<td>cookie 的安全性以 DNS 安全为前提</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>分标题</th>
+          <th>简述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Overview</td>
+          <td>总览</td>
+      </tr>
+      <tr>
+          <td>Ambient Authority</td>
+          <td>cookie 是一种权限凭证</td>
+      </tr>
+      <tr>
+          <td>Clear Text</td>
+          <td>明文传输问题</td>
+      </tr>
+      <tr>
+          <td>Session Identifiers</td>
+          <td>非可读的会话标识符</td>
+      </tr>
+      <tr>
+          <td>Weak Confidentiality</td>
+          <td>cookie 在各种层面保密性都弱</td>
+      </tr>
+      <tr>
+          <td>Reliance on DNS</td>
+          <td>cookie 的安全性以 DNS 安全为前提</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>与其说其设计不周全，不如说 cookie 因本身位置的限制无法保证设计安全，<br>
 rfc 还警告开发人员不要把 cookie 作为唯一的认证环节。</p>
 <blockquote>
 <p>rfc6265: In addition, by default, cookies do not provide confidentiality or integrity<br>
-from network attackers, even when used in conjunction with HTTPS.</p>
-</blockquote>
+from network attackers, even when used in conjunction with HTTPS.</p></blockquote>
 <blockquote>
 <p>此外，默认情况下，cookie 不会为网络攻击者提供机密性或完整性，<br>
-即使与 HTTPS 结合使用也是如此。</p>
-</blockquote>
+即使与 HTTPS 结合使用也是如此。</p></blockquote>
 <h3 id="1服务器只能读取-cookie-键值对读不到属性"><a href="#1服务器只能读取-cookie-键值对读不到属性" class="anchor-link">#</a><a href="#contents:1服务器只能读取-cookie-键值对读不到属性" class="headings">1.服务器只能读取 cookie 键值对，读不到属性</a></h3>
 <blockquote>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-4.2.2" target="_blank" rel="noopener">rfc6265#section-4.2.2</a> :<br>
@@ -393,14 +389,12 @@ Notice that the cookie attributes are not returned.<br>
 In particular,the server cannot determine from the Cookie header alone<br>
 when a cookie will expire, for which hosts the cookie is valid,<br>
 for which paths the cookie is valid,
-or whether the cookie was set with the Secure or HttpOnly attributes.</p>
-</blockquote>
+or whether the cookie was set with the Secure or HttpOnly attributes.</p></blockquote>
 <blockquote>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-4.2.2" target="_blank" rel="noopener">rfc6265#section-4.2.2</a> :<br>
 请注意，不返回 cookie 属性。特别是，当 cookie 过期时，<br>
 服务器无法单独从 Cookie 标头确定，cookie 对哪些主机有效，cookie 的路径有效，<br>
-或者 cookie 是否使用 Secure 或 HttpOnly 属性设置。</p>
-</blockquote>
+或者 cookie 是否使用 Secure 或 HttpOnly 属性设置。</p></blockquote>
 <p>同时在设置 cookie 时，客户端并不会发回结果反馈。这使得服务器不知道 cookie 是否被正确设置。<br>
 这等于要从数据库读一个不知道是否干净的数据，对数据完整性有影响。</p>
 <h4 id="解决服务器容错与键名走私smuggle"><a href="#解决服务器容错与键名走私smuggle" class="anchor-link">#</a><a href="#contents:解决服务器容错与键名走私smuggle" class="headings">解决：服务器容错与键名“走私（Smuggle）”</a></h4>
@@ -434,13 +428,11 @@ In 2016 Google Chrome version 51 introduced a new kind of cookie, the same-site 
 which can only be sent in requests originating from the same origin as the target domain.<br>
 This restriction mitigates attacks such as cross-site request forgery (XSRF).<br>
 A cookie is given this characteristic by setting the SameSite flag to Strict or Lax.<br>
-<a href="https://tools.ietf.org/html/draft-west-first-party-cookies-07" target="_blank" rel="noopener">google：draft-ietf-httpbis-cookie-same-site </a></p>
-</blockquote>
+<a href="https://tools.ietf.org/html/draft-west-first-party-cookies-07" target="_blank" rel="noopener">google：draft-ietf-httpbis-cookie-same-site </a></p></blockquote>
 <blockquote>
 <p>2016 年，谷歌 Chrome 版本 51 引入了一种新型 cookie，即同一站点的 cookie，<br>
 只能在源自与目标域相同的源的请求中发送。此限制可缓解诸如跨站点请求伪造（XSRF）等攻击。<br>
-通过将 SameSite 标志设置为 Strict 或 Lax，可以为 cookie 提供此特性。</p>
-</blockquote>
+通过将 SameSite 标志设置为 Strict 或 Lax，可以为 cookie 提供此特性。</p></blockquote>
 <p>标准支持：截至撰文时间 (2019-05)，</p>
 <ul>
 <li>开发支持：查到的是 node.js 的 express、PHP7.3 支持，应该还有没搜到的</li>
@@ -466,12 +458,10 @@ cookie 值可以是随机生成的字符串（会话凭证）而不是具体信�
 <p>rfc6265:<br>
 Servers SHOULD encrypt and sign the contents of cookies<br>
 (using whatever format the server desires) when transmitting them to the<br>
-user agent (even when sending the cookies over a secure channel).</p>
-</blockquote>
+user agent (even when sending the cookies over a secure channel).</p></blockquote>
 <blockquote>
 <p>当将服务器传输给用户代理时，服务器应该对 cookie 的内容进行加密和签名<br>
-（使用服务器所需的任何格式）（即使通过安全通道发送 cookie）。</p>
-</blockquote>
+（使用服务器所需的任何格式）（即使通过安全通道发送 cookie）。</p></blockquote>
 <h4 id="cookie-默认可被客户端-apijs-etc-读取"><a href="#cookie-默认可被客户端-apijs-etc-读取" class="anchor-link">#</a><a href="#contents:cookie-默认可被客户端-apijs-etc-读取" class="headings">②cookie 默认可被客户端 API(JS etc) 读取</a></h4>
 <p><strong>解决：设置时加 <code>Http-only-flag</code> ，禁止客户端 JS 读取 cookie。</strong></p>
 <h4 id="错误规划max-ageexpires"><a href="#错误规划max-ageexpires" class="anchor-link">#</a><a href="#contents:错误规划max-ageexpires" class="headings">③错误规划<code>max-age</code>、<code>expires</code></a></h4>
@@ -494,43 +484,41 @@ cookie 保留在客户端的时间越长，被攻击的可能性越高。</p>
 — cookies are generally used to store session IDs or access tokens,<br>
 an attacker’s holy grail.<br>
 Once they are exposed or compromised, attackers can impersonate users,<br>
-or escalate their privileges on your application.</p>
-</blockquote>
+or escalate their privileges on your application.</p></blockquote>
 <blockquote>
 <p>因为它们包含的数据通常非常敏感 - 通常用于存储会话 ID 或访问令牌，攻击者的圣杯。<br>
-一旦他们暴露或受到攻击，攻击者就可以冒充用户，或者升级他们对您的应用程序的权限。</p>
-</blockquote>
+一旦他们暴露或受到攻击，攻击者就可以冒充用户，或者升级他们对您的应用程序的权限。</p></blockquote>
 <h3 id="常见攻击方式"><a href="#常见攻击方式" class="anchor-link">#</a><a href="#contents:常见攻击方式" class="headings">常见攻击方式</a></h3>
 <p><a href="https://en.wikipedia.org/wiki/HTTP_cookie#Cookie_theft_and_session_hijacking" target="_blank" rel="noopener">维基百科</a>总结了几种常见的攻击方式，包括攻击过程简介与防御手段，在此不复述，只提供目录。</p>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>攻击</th>
-<th>防御</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>MITM</td>
-<td>TLS&amp;<code>secure</code>attr</td>
-</tr>
-<tr>
-<td>DNS Poisoning</td>
-<td>TLS&amp;<code>secure</code>attr</td>
-</tr>
-<tr>
-<td>DOM-Based-XSS</td>
-<td><code>http-only-flag</code>&amp;<code>SameSite</code>attr</td>
-</tr>
-<tr>
-<td>反射型 XSS+ 恶意代理服务器</td>
-<td><code>secure</code>attr&amp;<code>SameSite</code>attr</td>
-</tr>
-<tr>
-<td>CSRF</td>
-<td><code>SameSite</code>attr</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>攻击</th>
+          <th>防御</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>MITM</td>
+          <td>TLS&amp;<code>secure</code>attr</td>
+      </tr>
+      <tr>
+          <td>DNS Poisoning</td>
+          <td>TLS&amp;<code>secure</code>attr</td>
+      </tr>
+      <tr>
+          <td>DOM-Based-XSS</td>
+          <td><code>http-only-flag</code>&amp;<code>SameSite</code>attr</td>
+      </tr>
+      <tr>
+          <td>反射型 XSS+ 恶意代理服务器</td>
+          <td><code>secure</code>attr&amp;<code>SameSite</code>attr</td>
+      </tr>
+      <tr>
+          <td>CSRF</td>
+          <td><code>SameSite</code>attr</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>还有一类维基没提到的，针对<a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" target="_blank" rel="noopener">TLS 协议</a> 的攻击。<br>
 TLS 协议不是完全安全的，因为设计或实现的缺陷，<br>
@@ -546,7 +534,7 @@ TLS 协议不是完全安全的，因为设计或实现的缺陷，<br>
 <h3 id="非常见方式"><a href="#非常见方式" class="anchor-link">#</a><a href="#contents:非常见方式" class="headings">非常见方式</a></h3>
 <p>非单一的、利用知识组合各种部分的针对 cookie 的攻击方式，<br>
 可惜我只找到一个。</p>
-<h4 id="cookiejacking-rosario-valotta-2011-05linkhttpssitesgooglecomsitetentacoloviolacookiejacking"><a href="#cookiejacking-rosario-valotta-2011-05linkhttpssitesgooglecomsitetentacoloviolacookiejacking" class="anchor-link">#</a><a href="#contents:cookiejacking-rosario-valotta-2011-05linkhttpssitesgooglecomsitetentacoloviolacookiejacking" class="headings">①cookiejacking-Rosario Valotta-2011-05<a href="https://sites.google.com/site/tentacoloviola/cookiejacking" target="_blank" rel="noopener">[link]</a></a></h4>
+<h4 id="cookiejacking-rosario-valotta-2011-05link"><a href="#cookiejacking-rosario-valotta-2011-05link" class="anchor-link">#</a><a href="#contents:cookiejacking-rosario-valotta-2011-05link" class="headings">①cookiejacking-Rosario Valotta-2011-05<a href="https://sites.google.com/site/tentacoloviola/cookiejacking" target="_blank" rel="noopener">[link]</a></a></h4>
 <p>该方法利用了 IE 浏览器的“跨域交互策略”的一个漏洞，<br>
 外部 HTML 的&lt;iframe&gt;标签可以加载本地 cookie 文件（本应不能）。<br>
 恶意服务器通过一系列正常的手段获知用于构造 cookie 路径的信息，<br>
@@ -563,24 +551,21 @@ TLS 协议不是完全安全的，因为设计或实现的缺陷，<br>
 <p><a href="https://dl.acm.org/citation.cfm?id=2714592" target="_blank" rel="noopener">TLS Record Protocol: Security Analysis and<br>
 Defense-in-depth Countermeasures for HTTPS</a><br>
 Author: Olivier Levillain etc<br>
-Time: 2015</p>
-</blockquote>
+Time: 2015</p></blockquote>
 <p>这个研究总结了针对 TLS 记录协议的 5 个攻击方式，并给出了两个 cookie 掩盖方式：<br>
 TLS Scramble &amp; MCookies，以保证在意外导致 HTTP 明文传输的情况下，<br>
 继续保持 cookie 等秘密信息机密性。</p>
 <blockquote>
 <p><a href="https://link.springer.com/article/10.1007%2Fs12095-018-0280-y" target="_blank" rel="noopener">Statistical attacks on cookie masking for RC4</a><br>
 Author: Kenneth G. PatersonEmail author etc<br>
-Time: 2018-02</p>
-</blockquote>
+Time: 2018-02</p></blockquote>
 <p>该文验证了上篇文章两种掩盖方式理论上可被加大提供算力后破解，<br>
 因此该掩盖方式只能提供不强的机密性。</p>
 <h3 id="测信道攻击"><a href="#测信道攻击" class="anchor-link">#</a><a href="#contents:测信道攻击" class="headings">测信道攻击</a></h3>
 <blockquote>
 <p><a href="https://link.springer.com/chapter/10.1007/978-3-319-89641-0_11" target="_blank" rel="noopener">Path Leaks of HTTPS Side-Channel by Cookie Injection</a><br>
 Author: Fuqing Chen etc<br>
-Time: 2018-04</p>
-</blockquote>
+Time: 2018-04</p></blockquote>
 <p>该文阐述了一种攻击方式和两种应用方面：<br>
 利用 cookie 的弱同源策略（上文有提），实施 cookie 注入，<br>
 用注入的 cookie 来推断敏感信息，进而复原一部分密文（比如请求的 URL）。<br>
@@ -589,8 +574,7 @@ Time: 2018-04</p>
 <p><a href="https://link.springer.com/chapter/10.1007/978-3-662-47854-7_6" target="_blank" rel="noopener">Protecting Encrypted Cookies from<br>
 Compression Side-Channel Attacks</a><br>
 Author: Janaka Alawatugoda etc<br>
-Time: 2015-07</p>
-</blockquote>
+Time: 2015-07</p></blockquote>
 <p>有那么两种对 TLS 的攻击：<a href="https://blog.qualys.com/ssllabs/2012/09/14/crime-information-leakage-attack-against-ssltls" target="_blank" rel="noopener">CRIME</a> 和 <a href="http://breachattack.com/" target="_blank" rel="noopener">BREACH</a> （上文有提）,<br>
 它们基于传输前压缩过程中产生的额外信息量，复现敏感信息，<br>
 针对它们的常规解决方法是禁止传输中压缩，<br>
@@ -753,7 +737,7 @@ Time: 2015-07</p>
             
             
                 <li class="post-nav-next">
-                    <a href="/blogs/book-antifragile/" rel="next"> &gt;</a>
+                    <a href="/blogs/minecraft-screen-navigation/" rel="next"> &gt;</a>
                 </li>
             
         </ul>

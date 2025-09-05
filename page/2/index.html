@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,8 +58,8 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2025-04-03T00:00:00+00:00",
-        "dateModified": "2025-05-02T18:34:35+08:00",
+        "datePublished": "2025-09-05T00:00:00+00:00",
+        "dateModified": "2025-09-05T14:29:23+08:00",
         "url": "https://boholder.github.io/",
         "description": "BoHolder's site: crafts, blogs etc",
         "image": "https://boholder.github.io/icons/apple-touch-icon.png",
@@ -170,6 +170,55 @@
         
             <article class="content post home h-entry">
                 <h2 class="post-title p-name">
+                    <a href="/blogs/event-loop-and-multithread-in-python/" class="summary-title-link u-url">Python 中的 Event Loop 和多线程</a>
+                </h2>
+                
+                    
+
+<div class="post-meta">
+    
+        
+        <time datetime="2024-02-29T00:00:00&#43;00:00" class="post-meta-item published dt-published"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 40"><path d="M40 8H8c-2.21 0-3.98 1.79-3.98 4L4 36c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V12c0-2.21-1.79-4-4-4zM17 30h-2.4l-5.1-7v7H7V18h2.5l5 7v-7H17v12zm10-9.49h-5v2.24h5v2.51h-5v2.23h5V30h-8V18h8v2.51zM41 28c0 1.1-.9 2-2 2h-8c-1.1 0-2-.9-2-2V18h2.5v9.01h2.25v-7.02h2.5v7.02h2.25V18H41v10z"></path></svg>&nbsp;2024.2.29</time>
+    
+    
+        
+        <time datetime="2025-05-02T18:34:35&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.5.2</time>
+    
+    
+    
+        
+        
+        
+            
+                <span class="post-meta-item category"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M16 0H4C1.79 0 .02 1.79.02 4L0 28c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4H20l-4-4z"></path></svg>&nbsp;<a href="/categories/programming/" class="category-link p-category">Programming</a></span>
+            
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;2090</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M19.99 0C8.94 0 0 8.95 0 20s8.94 20 19.99 20C31.04 40 40 31.05 40 20S31.04 0 19.99 0zM20 36c-8.84 0-16-7.16-16-16S11.16 4 20 4s16 7.16 16 16-7.16 16-16 16z"/><path d="M21 10h-3v12l10.49 6.3L30 25.84l-9-5.34z"></path></svg>&nbsp;5&nbsp;分钟</span>
+    
+    
+    
+</div>
+
+                
+                <summary class="summary p-summary">
+                    <p>这篇文章作为我对 Python 并发编程方案相关知识的思考、总结和陈述，希望这篇文章能帮到苦于理解和选择并发方案的其他人。对 Python 语言来说，有三种并发方案：多线程（<code>threading</code>）、多进程（<code>multiprocessing</code>）、event loop（<code>asyncio</code> etc.）。</p>
+                </summary>
+                
+                    <div class="read-more-container">
+                        <a href="/blogs/event-loop-and-multithread-in-python/" class="read-more-link">阅读全文 »</a>
+                    </div>
+                
+            </article>
+        
+            <article class="content post home h-entry">
+                <h2 class="post-title p-name">
                     <a href="/blogs/execution_event/" class="summary-title-link u-url">留意程序触发事件和执行时序</a>
                 </h2>
                 
@@ -208,7 +257,9 @@
 
                 
                 <summary class="summary p-summary">
-                    我本来以为这是程序员职业的某种被动特性，但我意识到很多同行对程序触发事件和执行时序并不太关注。在这篇文章中，我想解释为什么我们作为程序员要关注这些东西，这样做有什么好处。 程序何时被触发 假如你不慎从网络
+                    <p>我本来以为这是程序员职业的某种被动特性，但我意识到很多同行对程序触发事件和执行时序并不太关注。在这篇文章中，我想解释为什么我们作为程序员要关注这些东西，这样做有什么好处。</p>
+<h2 id="程序何时被触发">程序何时被触发</h2>
+<p>假如你不慎从网络上下载下来一个病毒，它现在已经被保存到你的本地磁盘上了。现在事情完蛋了吗？还没有，它还没被执行呢，把它删了就行（最好用那种文件粉碎工具）。我们的电脑是<a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture">冯·诺伊曼结构</a>，在硬盘（与内存）中，程序与数据被同等看待并存储，存在于硬盘上的程序还没有被执行。我猜做网络安全的朋友们对这个比较熟悉，一次成功的代码执行漏洞攻击中必然包含恶意载荷的成功执行。</p>
                 </summary>
                 
                     <div class="read-more-container">
@@ -257,7 +308,8 @@
 
                 
                 <summary class="summary p-summary">
-                    缘起 之前拜读了枫影 Justin Yan写的博客《每个人每天都只有 24 小时，希望我的选择真的是我的选择》，里面提到了一本讲佛教核心理念的书：《正见》。之前上学遇到心理困难时，是佛教把我从边缘拉回来嘱咐我好好生活的。最
+                    <h2 id="缘起">缘起</h2>
+<p>之前拜读了<a href="https://justinyan.me/">枫影 Justin Yan</a>写的博客<a href="https://justinyan.me/post/5790">《每个人每天都只有 24 小时，希望我的选择真的是我的选择》</a>，里面提到了一本讲佛教核心理念的书：《正见》。之前上学遇到心理困难时，是佛教把我从边缘拉回来嘱咐我好好生活的。最近工作生活碰到了一些事实困难，找不到务实的解决方案，我心想是时候认真读读佛了，不说求得多大效用，至少自我开导落个心理安慰。</p>
                 </summary>
                 
                     <div class="read-more-container">
@@ -306,7 +358,7 @@
 
                 
                 <summary class="summary p-summary">
-                    最近我开始帮忙做一个帮助视障玩家玩 Minecraft 的 mod - minecraft-access。这个 mod 基本是为游戏设计一套新的适合视障者的人机交互界面。我没系统学过人机交互的知识，在构想新功能时逐渐感到力不从心。这时我想
+                    <p><a href="/blogs/join-minecraft-access-development/">最近我开始帮忙做</a>一个帮助视障玩家玩 Minecraft 的 mod - <a href="https://github.com/khanshoaib3/minecraft-access">minecraft-access</a>。这个 mod 基本是为游戏设计一套新的适合视障者的人机交互界面。我没系统学过人机交互的知识，在构想新功能时逐渐感到力不从心。这时我想起设计顾问<a href="https://twitter.com/nishuang">倪爽老师</a>有在提供[免费咨询服务](<a href="https://nishuang.net/%22">https://nishuang.net/"</a> &gt;}})。我心想请倪爽老师帮我指条明路，就预约了一次免费咨询。</p>
                 </summary>
                 
                     <div class="read-more-container">
@@ -355,60 +407,13 @@
 
                 
                 <summary class="summary p-summary">
-                    我正在帮忙做一个帮助视障玩家玩 Minecraft 的 mod - minecraft-access，帮了大概两个多月了。这是我第一次深度参与一个开源项目。 我是如何找到的 得感谢 Bilibili 的大数据，给我推了一个盲人 up 主玩 Minecraft 的视频。我想为这方
+                    <p>我正在帮忙做一个帮助视障玩家玩 Minecraft 的 mod - <a href="https://github.com/khanshoaib3/minecraft-access">minecraft-access</a>，帮了大概两个多月了。这是我第一次深度参与一个开源项目。</p>
+<h2 id="我是如何找到的">我是如何找到的</h2>
+<p>得感谢 Bilibili 的大数据，给我推了一个盲人 up 主玩 Minecraft 的视频。我想为这方面贡献点力量，就顺藤摸瓜一通搜索，搜到了目前的项目。还好它是活跃的，我本来还担心如果没有任何相关项目是活跃的该怎么办。</p>
                 </summary>
                 
                     <div class="read-more-container">
                         <a href="/blogs/join-minecraft-access-development/" class="read-more-link">阅读全文 »</a>
-                    </div>
-                
-            </article>
-        
-            <article class="content post home h-entry">
-                <h2 class="post-title p-name">
-                    <a href="/blogs/java-9-to-17/" class="summary-title-link u-url">Java9 到 17 我关心的新特性</a>
-                </h2>
-                
-                    
-
-<div class="post-meta">
-    
-        
-        <time datetime="2023-03-29T00:00:00&#43;00:00" class="post-meta-item published dt-published"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 40"><path d="M40 8H8c-2.21 0-3.98 1.79-3.98 4L4 36c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V12c0-2.21-1.79-4-4-4zM17 30h-2.4l-5.1-7v7H7V18h2.5l5 7v-7H17v12zm10-9.49h-5v2.24h5v2.51h-5v2.23h5V30h-8V18h8v2.51zM41 28c0 1.1-.9 2-2 2h-8c-1.1 0-2-.9-2-2V18h2.5v9.01h2.25v-7.02h2.5v7.02h2.25V18H41v10z"></path></svg>&nbsp;2023.3.29</time>
-    
-    
-        
-        <time datetime="2025-05-02T18:34:35&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.5.2</time>
-    
-    
-    
-        
-        
-        
-            
-                <span class="post-meta-item category"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M16 0H4C1.79 0 .02 1.79.02 4L0 28c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4H20l-4-4z"></path></svg>&nbsp;<a href="/categories/programming/" class="category-link p-category">Programming</a></span>
-            
-        
-    
-    
-        
-        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;1226</span>
-    
-    
-        
-        <span class="post-meta-item reading-time"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M19.99 0C8.94 0 0 8.95 0 20s8.94 20 19.99 20C31.04 40 40 31.05 40 20S31.04 0 19.99 0zM20 36c-8.84 0-16-7.16-16-16S11.16 4 20 4s16 7.16 16 16-7.16 16-16 16z"/><path d="M21 10h-3v12l10.49 6.3L30 25.84l-9-5.34z"></path></svg>&nbsp;3&nbsp;分钟</span>
-    
-    
-    
-</div>
-
-                
-                <summary class="summary p-summary">
-                    只记录未来开发时可能用到的特性。 都 2023 年了，真正可能用的版本只有 11 和 17，不关心特性到底在哪个中间版本脱离 preview 了。 Java9 https://www.baeldung.com/new-java-9 新的 HTTP client HttpClient HttpRequest HttpResponse builder 构造 HTTP 请求 Try-With-Resources 能 close 掉在 try 之前定义的 auto-closable 资源， 只要资源是 final or effectively final。 Effectively
-                </summary>
-                
-                    <div class="read-more-container">
-                        <a href="/blogs/java-9-to-17/" class="read-more-link">阅读全文 »</a>
                     </div>
                 
             </article>

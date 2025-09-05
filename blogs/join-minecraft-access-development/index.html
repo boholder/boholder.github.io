@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -254,14 +254,13 @@
 <p>有个用户说，Ta 确定因为砍树遗留了一些浮在天空上的原木（经典 Minecraft 场景吧），但 Ta 无法定位确切位置。当时 mod 已经有对内置的特定方块或实体（比如矿物方块、红石部件和动物、怪物）的扫描锁定功能了，就是类似黑魂等那种锁定拉视角，按键切换锁定目标。我就想起《塞尔达：荒野之息》里有希卡之石选择物品图鉴并扫描的功能：不显示精确的位置，离目标越近，指示器强度越强叫得越响。我借鉴这个功能<a href="https://github.com/khanshoaib3/minecraft-access/pull/59" target="_blank" rel="noopener">实现了类似的功能</a>，其实只是扩展了已有的扫描锁定功能，允许用户指定目标方块或实体，并同时排除对其他预置的方块和实体的扫描，更“专注”寻找目标。</p>
 <p>上文提到的区域地图功能，我在设计功能时就联想到各种 3A 游戏漂亮的大地图，还有回合制策略游戏的战术视角了。我从其中借来了一些成熟的创意，比如“固定地图方向指北”，这是小地图设计的常见功能：地图随玩家视角旋转还是固定方位。</p>
 <h2 id="minecraft-真难上手"><a href="#minecraft-真难上手" class="anchor-link">#</a><a href="#contents:minecraft-真难上手" class="headings">Minecraft 真难上手</a></h2>
-<p>读者们熟悉这个游戏吗？你们还记得是怎么学会这个游戏的吗？我想和我年龄相近的很多人大概是从贴吧的德芙的帖子中入门的。不聊回忆了，我的重点是，Minecraft 它真难上手，我有时候教视力正常（智力也正常，甚至都比我聪明）的朋友玩 Minecraft，他们也很学得为难，大概是我教得差。既然 Minecraft 对正常人都这么难了，想想我们的视障者用户吧。我观察到大多数熟练的用户在真正上手玩游戏之前，就已经听了很久别人玩 Minecraft 的视频了。比如听<a href="https://www.youtube.com/watch?v=VfpHTJsn9I4&list=PLgENJ0iY3XBjmydGuzYTtDwfxuR6lN8KC" target="_blank" rel="noopener">Pixlriffs</a>
+<p>读者们熟悉这个游戏吗？你们还记得是怎么学会这个游戏的吗？我想和我年龄相近的很多人大概是从贴吧的德芙的帖子中入门的。不聊回忆了，我的重点是，Minecraft 它真难上手，我有时候教视力正常（智力也正常，甚至都比我聪明）的朋友玩 Minecraft，他们也很学得为难，大概是我教得差。既然 Minecraft 对正常人都这么难了，想想我们的视障者用户吧。我观察到大多数熟练的用户在真正上手玩游戏之前，就已经听了很久别人玩 Minecraft 的视频了。比如听<a href="https://www.youtube.com/watch?v=VfpHTJsn9I4&amp;list=PLgENJ0iY3XBjmydGuzYTtDwfxuR6lN8KC" target="_blank" rel="noopener">Pixlriffs</a>
 的视频，我猜他在国外 Minecraft 玩家中享有的声誉大概和德芙类似，他教得真的很基础且详细。</p>
 <p>在玩上游戏之前，视障者用户还要安装这个 mod 和一些依赖 mod，安装 mod 也不是一个简单的事，尤其是对没接触过的人来说。我写了一个<a href="https://github.com/khanshoaib3/minecraft-access/blob/default/doc/SET_UP_ON_WINDOWS.md" target="_blank" rel="noopener">啰嗦的教程</a>来降低这个门槛，至少有人再问时我可以直接发链接而不是重复打字了，已经帮到了好几个人。啰嗦对视障者来说应该不是问题，他们有很高的文本理解速度。</p>
 <p>然后视障者用户面临的最后一道难关就是微软写的那官方启动器。主要缺点是界面嵌套层次太多，无用按钮太多，设置位置混乱。这些对普通用户来说不过是多点点鼠标四处看看，对视障者来说这界面就是迷雾森林。不信？看看我教程里<a href="https://github.com/khanshoaib3/minecraft-access/blob/default/doc/SET_UP_ON_WINDOWS.md#start-the-game" target="_blank" rel="noopener">对这段的描述</a>写得多繁琐（我承认我写得也啰嗦），或者去启动器里按按 Tab 和回车，目标只是简单地按下“启动游戏”按钮，数数要按几次。</p>
 <h2 id="关于视觉障碍"><a href="#关于视觉障碍" class="anchor-link">#</a><a href="#contents:关于视觉障碍" class="headings">关于视觉障碍</a></h2>
 <blockquote>
-<p>没依据但广泛流传的：在我们从外界获取的信息中，视觉输入占据 90%。</p>
-</blockquote>
+<p>没依据但广泛流传的：在我们从外界获取的信息中，视觉输入占据 90%。</p></blockquote>
 <p>从正常视力到全盲，并不是 0-1 boolean。比如极高度数的近视，也算视觉障碍。或者视野不完整，或者只能感到亮度等等，都是视觉障碍。色盲也算视觉障碍，只是对生活的影响比较小。我有个医生朋友对我说过，临床医学上哪个领域复杂，看哪个有专门的科室就是，比如牙科，儿科，还有眼科。所以眼的情况大概是比较复杂的。</p>
 <p>刚开始我小心翼翼地用 visually impaired players 指代用户，但后来发现用户们也不介意，自称就是 blind，那 blind 更方便敲，就 blind 吧。国内也是，我没有盲人朋友，但我搜到的盲人论坛之类，也不会用视障者这个词。我比较在意的是哪个词在与盲人口语交流时更亲近，叫视障者是不是显得很陌生？</p>
 <p>平时用户们也不太聊生活，我很少知道一个用户是男是女（如果 Ta 是性少数，从 profile 和头像中能看出来）。但是我比较清楚哪个用户的视觉障碍类型是什么（活跃用户不多，记得住）。我没有主动询问过用户相关情况，答疑时如果不清楚，就按全盲对待。但即使是大面积的视野缺失，也比全盲等情况方便玩游戏一些，我知道有一对视野缺失的夫妻还会玩慢节奏的 FPS。</p>
@@ -371,7 +370,7 @@ mod 频道热度高，大概是因为上文讨论过的星露谷比 Minecraft �
                     </li>
                 
                     <li class="related-item">
-                        <a href="/blogs/embrace-impermanence/" class="related-link">助我脱困的佛，心理学和生物学</a>
+                        <a href="/blogs/chunks-about-socialization/" class="related-link">关于社交，几段想分享的话</a>
                     </li>
                 
             </ul>

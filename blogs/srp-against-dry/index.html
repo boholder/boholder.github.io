@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -219,12 +219,10 @@
                 <p>首先提醒一下记得<a href="https://en.wikipedia.org/wiki/Single-responsibility_principle" target="_blank" rel="noopener">单一职责原则（SRP）</a>是面向对象实践下的设计原则，也是<a href="https://en.wikipedia.org/wiki/SOLID" target="_blank" rel="noopener">SOLID</a>五大面向对象设计原则之一。然后<a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank" rel="noopener">不要重复自己（DRY）</a>原则则是更泛化的编程原则，也可以用在编程工作以外。这个短文讲两个原则的关系，总归还是把前提限定在了面向对象编程之内。</p>
 <p>我记得这是哪本书上的例子，大概是<a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882" target="_blank" rel="noopener">Clean Code</a>，它是用这个例子来解释 SRP 的含义的，我稍微改一下，不翻原书了：</p>
 <blockquote>
-<p>需求 1：有三种员工，经理和普通员工和临时工，计算他们薪资的算法是相同的。</p>
-</blockquote>
+<p>需求 1：有三种员工，经理和普通员工和临时工，计算他们薪资的算法是相同的。</p></blockquote>
 <p>需求 1 映射到代码里就是，三个分开的员工类，然后三个类计算薪资的方法内部会调用同一个工具函数，DRY，对吧。</p>
 <blockquote>
-<p>需求 2：计算经理薪资的算法变了。</p>
-</blockquote>
+<p>需求 2：计算经理薪资的算法变了。</p></blockquote>
 <p>简单嘛，我们会动手把经理类的薪资计算逻辑内化到经理类的薪资计算方法里，因为现在经理的薪资计算逻辑是“特例”的；然后员工和临时工维持不变，继续使用公共的工具函数，因为计算他们的薪资逻辑是“通用”的，完事。</p>
 <p>但实际上，实现需求 1 时就已经违反了 SRP 了。这个“薪资计算”是一个<strong>具体的业务逻辑</strong>，即使三种员工是相同的算法，也应该把这个算法复制三份，粘贴到三个类的薪资计算方法里，抽成公共函数是个错误的选择。公共函数应该是与业务逻辑无关的。这就是 SRP 的含义，一段和业务相关的代码应该独一份存在，修改它不会影响到其他组件，或者说，<strong>这段代码只对一个修改理由负责</strong>。</p>
 <p>“与业务逻辑有关”的，为了 DRY 原则而抽取的函数也有，比如一个组件里被多次调用的私有函数，该函数只为该组件的修改而负责，因此没有违反 SRP。</p>

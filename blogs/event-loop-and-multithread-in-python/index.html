@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -262,20 +262,17 @@
 <p>在 event loop 方案中，阻塞 I/O 会 block 住当前运行该逻辑的工作线程。我找到了一句对 Python<code>asyncio</code>库的辛辣评论：</p>
 <blockquote>
 <p>Async is just a pretty face on single-threaded callback hell.
-&ndash; Reddit user, Niicodemus <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">[5]</a></sup></p>
-</blockquote>
+&ndash; Reddit user, Niicodemus <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">[5]</a></sup></p></blockquote>
 <p>这位的观点在上下文语境中是正确的。&ldquo;a pretty face on callback hell&rdquo;（真怀念，这是我求职时被问到的问题，下次我会这样回答），即 Python 的<code>async</code>、<code>await</code>关键字的一个作用是作为 callback 的语法糖<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">[6]</a></sup>。<code>asyncio</code>库的 event loop 实现是单线程的<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">[7]</a></sup>，所以如果在使用<code>asyncio</code>库的同时调用阻塞 I/O，整个都会卡住。最好调用<a href="https://docs.python.org/3/library/asyncio-eventloop.html#executing-code-in-thread-or-process-pools" target="_blank" rel="noopener"><code>loop.run_in_executor(executor, func, *args)</code></a>方法，在线程池中运行阻塞 I/O（或在进程池中运行 CPU
 bound 任务），将阻塞等待转换为非阻塞等待。</p>
 <h2 id="并非所有-event-loop-实现方案都是单线程实现"><a href="#并非所有-event-loop-实现方案都是单线程实现" class="anchor-link">#</a><a href="#contents:并非所有-event-loop-实现方案都是单线程实现" class="headings">并非所有 event loop 实现方案都是单线程实现</a></h2>
 <p>另外，Event loop 结构在不同实现方案中处于不同的位置。</p>
 <blockquote>
-<p>(In Netty,) The event loop runs continuously in a single thread, although we can have <strong>as many event loops as the number of available cores</strong>.<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">[8]</a></sup></p>
-</blockquote>
+<p>(In Netty,) The event loop runs continuously in a single thread, although we can have <strong>as many event loops as the number of available cores</strong>.<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">[8]</a></sup></p></blockquote>
 <p>Java 生态下的<code>Spring WebFlux</code>作为一个 web application 框架，可使用多种 web server 作为底层依赖。其中<code>Netty</code>是一种实现了非阻塞 I/O 的 web client/server 框架，提供 TCP、UDP、HTTP 协议的非阻塞实现。使用<code>Netty</code>编写 web server 时，需要声明两类线程，接收请求的线程（boss）和处理请求的线程（worker）。每一个线程中都存在一个 event loop，被作为<code>EventLoopGroup</code>统一管理（因而我们要<a href="https://netty.io/wiki/user-guide-for-4.x.html#wiki-h3-5" target="_blank" rel="noopener">为一个 web server 声明</a><code>bossGroup</code>和<code>workerGroup</code>两个<code>EventLoopGroup</code><sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">[9]</a></sup>）。<code>WebFlux</code>库拥有类似<code>asyncio</code>库<code>loop.run_in_executor()</code>方法的<a href="https://spring.io/blog/2019/12/13/flight-of-the-flux-3-hopping-threads-and-schedulers#the-publishonscheduler-s-operator" target="_blank" rel="noopener">publishOn(Scheduler s)</a>方法，将当前调用链的后续步骤移到另一个<code>Scheduler</code>（即另一个线程池）中运行。</p>
 <p>JavaScript 语言被定义为一个“单线程”语言<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">[10]</a></sup>，它<em>应当</em>被执行在单线程环境中（但是书面约定并不阻止你多线程执行 JavaScript 代码）。JavaScript 引擎是负责解释并执行 JavaScript 代码的程序，大多数引擎（比如 Chrome V8）遵守了单线程执行的约定（除了 Rhino 引擎<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">[11]</a></sup>）。如果你在前端 JavaScript 代码中调用阻塞 I/O，由 JavaScript 事件驱动的 UI 将无法响应用户操作<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup>，因为 event loop 始终无法空闲下来并处理下一个事件。</p>
 <blockquote>
-<p>Node.js uses a small number of threads to handle many clients. In Node.js there are two types of threads: <strong>one Event Loop</strong> (aka the main loop, main thread, event thread, etc.), and a pool of k Workers in a Worker Pool (aka the threadpool).<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">[13]</a></sup></p>
-</blockquote>
+<p>Node.js uses a small number of threads to handle many clients. In Node.js there are two types of threads: <strong>one Event Loop</strong> (aka the main loop, main thread, event thread, etc.), and a pool of k Workers in a Worker Pool (aka the threadpool).<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">[13]</a></sup></p></blockquote>
 <p><code>Node.js</code>基于 V8 引擎和<code>libuv</code>库，生成一个 Worker Pool（基于一个 kernel-level thread pool<sup id="fnref1:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>，这个线程池是由<code>libuv</code>库调用系统调用申请创建的<sup id="fnref:14"><a href="#fn:14" class="footnote-ref" role="doc-noteref">[14]</a></sup>）来处理所有逻辑<sup id="fnref:15"><a href="#fn:15" class="footnote-ref" role="doc-noteref">[15]</a></sup>。因此在 Node.js 所运行的代码中调用阻塞 I/O 的行为将仅仅阻塞当前运行这段逻辑的 worker，其他 worker 仍将正常运行。但<code>Node.js</code>只有一个 event loop 调度全部 worker。</p>
 <h2 id="总结"><a href="#总结" class="anchor-link">#</a><a href="#contents:总结" class="headings">总结</a></h2>
 <p>对三种并发方案的选择变得很简单，简单到不会忘记：</p>

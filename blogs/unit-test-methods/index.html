@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -364,31 +364,31 @@
 <a href="https://site.mockito.org/" target="_blank" rel="noopener">Mockito</a> 。
 目的是测试 MVC 模型中一个 Service 的 getEntitiesBy() 方法的正常逻辑 (略去部分代码)：</p>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>设定环境</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>假设 DB 中存在（对 Mapper 进行 mock）与输入 Request 内容对应的记录。</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>设定环境</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>假设 DB 中存在（对 Mapper 进行 mock）与输入 Request 内容对应的记录。</td>
+      </tr>
+  </tbody>
 </table></div>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>期望</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1. 桩：该方法会使用输入的 Request 中的索引值&quot;normal&quot;调用 Mapper 查询数据库，获取对应记录包装成的 Entity Model。</td>
-</tr>
-<tr>
-<td>2. 返回值：该方法应返回一个消息代码为&quot;ok&quot;的 Response 对象，其数据应为一个 Entity 对象的列表，首个元素的状态应与 Mapper 返回的对象相同。</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>期望</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1. 桩：该方法会使用输入的 Request 中的索引值&quot;normal&quot;调用 Mapper 查询数据库，获取对应记录包装成的 Entity Model。</td>
+      </tr>
+      <tr>
+          <td>2. 返回值：该方法应返回一个消息代码为&quot;ok&quot;的 Response 对象，其数据应为一个 Entity 对象的列表，首个元素的状态应与 Mapper 返回的对象相同。</td>
+      </tr>
+  </tbody>
 </table></div>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -236,7 +236,7 @@
                 <p>我本来以为这是程序员职业的某种被动特性，但我意识到很多同行对程序触发事件和执行时序并不太关注。在这篇文章中，我想解释为什么我们作为程序员要关注这些东西，这样做有什么好处。</p>
 <h2 id="程序何时被触发"><a href="#程序何时被触发" class="anchor-link">#</a><a href="#contents:程序何时被触发" class="headings">程序何时被触发</a></h2>
 <p>假如你不慎从网络上下载下来一个病毒，它现在已经被保存到你的本地磁盘上了。现在事情完蛋了吗？还没有，它还没被执行呢，把它删了就行（最好用那种文件粉碎工具）。我们的电脑是<a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture" target="_blank" rel="noopener">冯·诺伊曼结构</a>，在硬盘（与内存）中，程序与数据被同等看待并存储，存在于硬盘上的程序还没有被执行。我猜做网络安全的朋友们对这个比较熟悉，一次成功的代码执行漏洞攻击中必然包含恶意载荷的成功执行。</p>
-<p>你一定被那种<a href="https://www.google.com/search?q=classic+jump+scare+flash+game" target="_blank" rel="noopener">整蛊 Flash 游戏</a>吓到过吧（没有？好吧，可能这个例子太老了）。如果你在 jump scare 场景触发前关闭游戏，你就安全了，无事发生。Flash 游戏已经运行在你的浏览器里了（即，这个游戏的所有代码已经存在于内存中），但这并不代表 jump scare 场景（一段特定的代码）一定会被你的操作触发。</p>
+<p>你一定被那种<a href="https://www.google.com/search?q=classic&#43;jump&#43;scare&#43;flash&#43;game" target="_blank" rel="noopener">整蛊 Flash 游戏</a>吓到过吧（没有？好吧，可能这个例子太老了）。如果你在 jump scare 场景触发前关闭游戏，你就安全了，无事发生。Flash 游戏已经运行在你的浏览器里了（即，这个游戏的所有代码已经存在于内存中），但这并不代表 jump scare 场景（一段特定的代码）一定会被你的操作触发。</p>
 <h2 id="程序触发事件和执行时序"><a href="#程序触发事件和执行时序" class="anchor-link">#</a><a href="#contents:程序触发事件和执行时序" class="headings">程序触发事件和执行时序</a></h2>
 <p>“程序触发事件”这个名词是我自己胡诌的，指“触发一段程序执行的事件”，很简单的定义，但我没找到现成的符合定义的术语。也许在合适的语境下（比如<a href="https://en.wikipedia.org/wiki/Event-driven_architecture" target="_blank" rel="noopener">“事件驱动框架”</a>），单“事件”一词便体现了这个含义，我们下文也用“事件”代替这个词。</p>
 <p>在图形用户界面应用中，用户操作是事件；在服务器中，外部请求是事件；在计划执行系统中，系统作为触发定时任务的事件。不同的程序主体可以链式地触发彼此，比如著名的面试问题——<a href="https://github.com/alex/what-happens-when" target="_blank" rel="noopener">“当你在浏览器的地址框中输入 google.com，然后按回车键时会发生什么？”</a>，哇，真的是好大一串。我觉得从这个角度看，待在内存里的程序有点像神经系统：它是活的（一部分持久运行的逻辑在主动地时刻监听着事件），但是处于一种待机状态。事件将激活它的（与事件所对应的一部分）处理逻辑，待逻辑执行完，它便又回到待机状态。</p>
@@ -251,8 +251,7 @@
 </ul>
 <blockquote>
 <p>广告环节！</p>
-<p><a href="https://github.com/khanshoaib3/minecraft-access" target="_blank" rel="noopener">minecraft-access</a>是一个帮助视障者游玩 Minecraft 的 mod。目前它的活跃开发者只有我一个人，而<a href="https://github.com/khanshoaib3/minecraft-access/issues" target="_blank" rel="noopener">新的需求和 bug</a>又是那么多。如果你想通过开发 mod 来了解 Minecraft 运行逻辑的话，这 mod 绝对是你最棒的选择。如果你感兴趣，期望我们在 PR 页面和 issue 页面再见。</p>
-</blockquote>
+<p><a href="https://github.com/khanshoaib3/minecraft-access" target="_blank" rel="noopener">minecraft-access</a>是一个帮助视障者游玩 Minecraft 的 mod。目前它的活跃开发者只有我一个人，而<a href="https://github.com/khanshoaib3/minecraft-access/issues" target="_blank" rel="noopener">新的需求和 bug</a>又是那么多。如果你想通过开发 mod 来了解 Minecraft 运行逻辑的话，这 mod 绝对是你最棒的选择。如果你感兴趣，期望我们在 PR 页面和 issue 页面再见。</p></blockquote>
 
             </div>
 
