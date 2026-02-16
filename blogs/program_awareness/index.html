@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -240,7 +240,8 @@
 我有个游戏群，群友们很善良，愿意带我玩风暴英雄（一款 MOBA 游戏），我专职打野，他们团战 4v5，因为我凑团战只会第一个暴毙。
 打野会被对方抓，而我往往都跑不掉，当我问群友怎么办，群友说：</p>
 <blockquote>
-<p>意识。你练练意识。</p></blockquote>
+<p>意识。你练练意识。</p>
+</blockquote>
 <p>意识，查了下对应英文是 awareness 这个词，比如养成关注小地图的习惯，英文叫 Map Awareness。
 意识也可以叫大局观，就是对（一场对局的）整体环境有意识地持续关注，接收游戏提供的多维度的信息，利用信息取得优势。
 竞技游戏大多都有这种概念。</p>
@@ -254,7 +255,8 @@
 <h2 id="以程序的视角看设计"><a href="#以程序的视角看设计" class="anchor-link">#</a><a href="#contents:以程序的视角看设计" class="headings">以程序的视角看设计</a></h2>
 <blockquote>
 <p>共情，同理心，empathy，是从他人的参照系统中理解或感受他人正在经历的事情的能力，也就是运用理解力与想像力等，尝试（在想像中）将自身置于他人处境或所在“位置”的能力。
-&ndash; <a href="https://zh.wikipedia.org/wiki/%E5%90%8C%E7%90%86%E5%BF%83" target="_blank" rel="noopener">维基百科：同理心</a></p></blockquote>
+&ndash; <a href="https://zh.wikipedia.org/wiki/%E5%90%8C%E7%90%86%E5%BF%83" target="_blank" rel="noopener">维基百科：同理心</a></p>
+</blockquote>
 <p>我能轻易地共情程序，共情到和同事商量接口时用“我”指代我负责的部分，“你”指代同事负责的部分。
 如果我发现需要把程序和人分开说时也会以模块名代指程序，不过目前为止这种说法即使是第一次沟通，也很容易就被同事理解接受。
 在本文中我会同时使用“程序”和“我”代表程序，让读者感受一下这种表达方式。</p>
@@ -281,7 +283,8 @@
 <blockquote>
 <p>Any problem in computer science can be solved by another layer of indirection.
 （计算机科学领域的任何问题，都可以通过增加一个间接的中间层来解决。）
-&ndash; David Wheeler (computer scientist)</p></blockquote>
+&ndash; David Wheeler (computer scientist)</p>
+</blockquote>
 <p>一句实在的真理。</p>
 <p>大致流程通不通，是我设计程序流程的出发点，这是对可行性的判断，流程得先通了，再去想实现细节。
 顺着程序的生命周期一步步想，带着动机想：</p>
@@ -397,7 +400,8 @@
 <h3 id="不可能收回发布出去的信息"><a href="#不可能收回发布出去的信息" class="anchor-link">#</a><a href="#contents:不可能收回发布出去的信息" class="headings">不可能收回发布出去的信息</a></h3>
 <blockquote>
 <p>你看，就像风吹散了羽毛就不可能再捡起来一样，流言蜚语和诽谤一旦从我们嘴里说出来，就不可能再收集起来。
-&ndash; <a href="/blogs/information-flies-in-the-wind-on-the-internet/">预言故事《捡起鸡毛》</a></p></blockquote>
+&ndash; <a href="/blogs/information-flies-in-the-wind-on-the-internet/">预言故事《捡起鸡毛》</a></p>
+</blockquote>
 <p>不能频繁破坏性变更 API，原因是你不知道 API 的消费方利用了你 API 响应中的哪些信息。
 我搜不到了，记得 Python 还是哪个语言，有个版本改变了标准库一个集合中排列元素顺序的算法（显然这个集合的功能本身是不保证顺序的），但是有公司提了 issue，说他们利用了该集合的内部元素顺序，现在逻辑一团乱。
 最近我参加了一个在线会议，组织会议的是我司的一个基础系统，它想改造内部保存数据的几张表结构，会对相关 API 返回数据的序列号的含义产生影响，拉个会通知各系统配合改造，我一看参会人数好几十，心想基础系统想做变更真是不容易&hellip;&hellip;</p>
@@ -412,7 +416,8 @@
 但是我有点担心下一代不会操作电脑，没有主动搜索思维，毫不在意地提供个人信息给平台，即，不了解信息的价值、不了解真正持有信息（保存到本地）的重要性。</p>
 <blockquote>
 <p>广告环节！</p>
-<p><a href="https://github.com/khanshoaib3/minecraft-access" target="_blank" rel="noopener">minecraft-access</a> 是一个帮助视障者玩 Minecraft 的 mod。目前它的活跃开发者只有我和另一个人，而<a href="https://github.com/khanshoaib3/minecraft-access/issues" target="_blank" rel="noopener">新的需求和 bug</a>又是那么多。如果你想通过开发 mod 来了解 Minecraft 运行逻辑的话，这 mod 绝对是你最棒的选择，因为要大量读并改游戏源码。如果你感兴趣，<a href="/blogs/join-minecraft-access-development/">这篇文章</a>多介绍了些项目情况，期望我们在 PR 页面和 issue 页面再见。</p></blockquote>
+<p><a href="https://github.com/khanshoaib3/minecraft-access" target="_blank" rel="noopener">minecraft-access</a> 是一个帮助视障者玩 Minecraft 的 mod。目前它的活跃开发者只有我和另一个人，而<a href="https://github.com/khanshoaib3/minecraft-access/issues" target="_blank" rel="noopener">新的需求和 bug</a>又是那么多。如果你想通过开发 mod 来了解 Minecraft 运行逻辑的话，这 mod 绝对是你最棒的选择，因为要大量读并改游戏源码。如果你感兴趣，<a href="/blogs/join-minecraft-access-development/">这篇文章</a>多介绍了些项目情况，期望我们在 PR 页面和 issue 页面再见。</p>
+</blockquote>
 
             </div>
 
@@ -619,7 +624,7 @@
             
     <footer id="footer" class="footer">
         <div class="footer-inner">
-            <div class="site-info">©&nbsp;2019–2025&nbsp;<svg  xmlns="http://www.w3.org/2000/svg" height="16" width="16" id="glider_svg" ><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="8.3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="3" cy="13.6" r="2"/></svg></div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+            <div class="site-info">©&nbsp;2019–2026&nbsp;<svg  xmlns="http://www.w3.org/2000/svg" height="16" width="16" id="glider_svg" ><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="8.3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="3" cy="13.6" r="2"/></svg></div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
 
             
     

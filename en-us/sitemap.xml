@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://boholder.github.io/en-us/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/blogs/execution_event/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -28,21 +28,8 @@
                 href="https://boholder.github.io/en-us/blogs/execution_event/"
                 />
   </url><url>
-    <loc>https://boholder.github.io/en-us/categories/programming/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://boholder.github.io/categories/programming/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://boholder.github.io/en-us/categories/programming/"
-                />
-  </url><url>
     <loc>https://boholder.github.io/en-us/tags/programming/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -54,8 +41,21 @@
                 href="https://boholder.github.io/en-us/tags/programming/"
                 />
   </url><url>
+    <loc>https://boholder.github.io/en-us/categories/programming/</loc>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://boholder.github.io/categories/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://boholder.github.io/en-us/categories/programming/"
+                />
+  </url><url>
     <loc>https://boholder.github.io/en-us/categories/tips/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -68,7 +68,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/categories/craft/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -81,7 +81,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/lora/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -94,7 +94,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/otaku/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -107,7 +107,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/stable-diffusion/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -120,7 +120,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -133,16 +133,16 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/blogs/minecraft-tree-house/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/minecraft/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/kata/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/en-us/categories/practice/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -155,10 +155,10 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/blogs/game-of-life-kata/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/backup/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -171,7 +171,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/categories/life/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -184,7 +184,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/sre/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -197,7 +197,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/blogs/individual-data-backup-summary/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T09:40:39+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -210,13 +210,13 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/graphic-design/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/en-us/blogs/program-safety-sign/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2025-04-03T10:08:29+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/en-us/about/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2023-03-18T15:45:44+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -229,7 +229,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/about/boholder/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2022-05-28T16:22:37+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/en-us/blogs/markdown-obsidian-user-defined-language-for-notepadpp2.1/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
@@ -248,7 +248,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/archive/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -261,7 +261,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/blogs/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -274,7 +274,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/categories/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -287,7 +287,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/crafts/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -300,7 +300,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/series/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -313,7 +313,7 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/tags/</loc>
-    <lastmod>2025-09-05T14:29:23+08:00</lastmod>
+    <lastmod>2020-12-24T23:32:42+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"

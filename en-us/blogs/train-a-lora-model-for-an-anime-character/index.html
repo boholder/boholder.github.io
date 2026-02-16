@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -57,7 +57,7 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2023-03-14T00:00:00+00:00",
-        "dateModified": "2025-09-05T14:29:23+08:00",
+        "dateModified": "2025-04-03T09:40:39+08:00",
         "url": "https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/",
         "headline": "Train a LoRA model for an anime character",
         "description": "From data collecting to training",
@@ -106,7 +106,7 @@
         <meta property="og:image" content="https://boholder.github.io/img/postimg/maho_by_ai.png" />
 <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2023-03-14T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2025-09-05T14:29:23&#43;08:00" />
+    <meta property="article:modified_time" content="2025-04-03T09:40:39&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -201,7 +201,7 @@
     
     
         
-        <time datetime="2025-09-05T14:29:23&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.9.5</time>
+        <time datetime="2025-04-03T09:40:39&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2025.4.3</time>
     
     
     
@@ -324,11 +324,11 @@ decided to remove the backgrounds. (Lately I learned that we can use <a href="ht
 <h3 id="anti-pattern-enlarge-the-image-size-to-square"><a href="#anti-pattern-enlarge-the-image-size-to-square" class="anchor-link">#</a><a href="#contents:anti-pattern-enlarge-the-image-size-to-square" class="headings">Anti-pattern: Enlarge the image size to square</a></h3>
 <p>First I experimented the resize operation and found that this would truncate the corner parts of the picture. But I didn&rsquo;t want to lose any features (especially the rare official-setting shoes), so I found a <a href="https://community.adobe.com/t5/photoshop-ecosystem-discussions/canvas-resize-to-square-for-a-large-number-of-images-using-script/td-p/6148635" target="_blank" rel="noopener">Photoshop script</a> on the internet, and expanded all the images into squares according to the larger one in length and width, so that resizing result would remain the whole image. This step proves to be <strong>useless</strong> and makes the features smaller and fuzzier, which is not conducive to training.</p>
 <h3 id="crop-the-face-out"><a href="#crop-the-face-out" class="anchor-link">#</a><a href="#contents:crop-the-face-out" class="headings">Crop the face out</a></h3>
-<p>According to the portrait dataset, the face (up to the shoulder) picture accounts for quite a bit. But the fan artists will certainly not just draw an ID photo, it seems that we need the face pictures out from the fan arts (transparent background). After having tasted the sweetness of dealing things in ML, I directly searched <code>anime face detect ML</code>, and Github <a href="https://github.com/search?q=anime&#43;face&#43;detect" target="_blank" rel="noopener">gives out some projects</a>.</p>
+<p>According to the portrait dataset, the face (up to the shoulder) picture accounts for quite a bit. But the fan artists will certainly not just draw an ID photo, it seems that we need the face pictures out from the fan arts (transparent background). After having tasted the sweetness of dealing things in ML, I directly searched <code>anime face detect ML</code>, and Github <a href="https://github.com/search?q=anime+face+detect" target="_blank" rel="noopener">gives out some projects</a>.</p>
 <p>Picking a project, especially a Python ML project (to write some code based on the project to crop out the image and save it), I care more about the development time than the star count, afraid of the age of the project dependencies may have problems. <a href="https://github.com/hysts/anime-face-detector" target="_blank" rel="noopener">anime-face-detector - hysts</a>, it&rsquo;s the newest one, developed two years ago, but it took me a long time to solve the versioning problem about <code>mmcv</code> dependencies, finally I failed to run it up. Moved to the second newest (developed three years ago) project <a href="https://github.com/qhgz2013/anime-face-detector" target="_blank" rel="noopener">anime-face-detector - qhgz2013</a>.</p>
 <p>Wow, it works on Python 3.9, so I forked the project and <a href="https://github.com/boholder/anime-face-detector/commit/afc906d49fe03aeaea457ae4d0f0523d09b62a57" target="_blank" rel="noopener">changed a couple of lines</a> to make cropped out picture larger than the facial recognition results, including the hair and shoulders and animal ears (animal ears up the long). Thanks qhgz2013 has developed the crop function, save me the trouble. By this way the face is cut out from each picture and the training set size is doubled.</p>
 <h3 id="resize-and-caption"><a href="#resize-and-caption" class="anchor-link">#</a><a href="#contents:resize-and-caption" class="headings">Resize and Caption</a></h3>
-<p>Now that the dataset is prepared, open the web-ui -&gt; Train -&gt; Preprocess images, and follow the steps in <a href="https://dfldata.xyz/forum.php?mod=viewthread&amp;tid=12796" target="_blank" rel="noopener">this tutorial</a> to:</p>
+<p>Now that the dataset is prepared, open the web-ui -&gt; Train -&gt; Preprocess images, and follow the steps in <a href="https://dfldata.xyz/forum.php?mod=viewthread&tid=12796" target="_blank" rel="noopener">this tutorial</a> to:</p>
 <ul>
 <li>
 <p>Resize the images to 512*512 (although LoRA is supporting non-512 size, I didn&rsquo;t quite understand LoRA&rsquo;s requirements for training set images, so for insurance just follow the classic 512 (the input image size for stable diffusion v1.* version)).</p>
@@ -344,7 +344,7 @@ decided to remove the backgrounds. (Lately I learned that we can use <a href="ht
 <h3 id="check-and-modify-the-captions"><a href="#check-and-modify-the-captions" class="anchor-link">#</a><a href="#contents:check-and-modify-the-captions" class="headings">Check and modify the captions</a></h3>
 <p>FYI: <a href="https://github.com/rinongal/textual_inversion/issues/131" target="_blank" rel="noopener">Do image captions have any effect during training?</a></p>
 <p>After further search and experimentation, I found caption to be of great use for training and using the model. I <a href="https://github.com/boholder/tools_for_training_sd_model" target="_blank" rel="noopener">wrote a few simple scripts</a> to do the related automation work. The character I trained is <a href="https://gamewith.jp/pricone-re/article/show/92907" target="_blank" rel="noopener">姫宮真歩 Himemiya Maho</a> from the mobile game &ldquo;Princess Connect! Re: Dive&rdquo;, using her as an example.</p>
-<p><img src="/img/postimg/maho_by_ai.png" alt="an anime girl picture generated by AI"></p>
+<p><img alt="an anime girl picture generated by AI" src="/img/postimg/maho_by_ai.png"></p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -394,7 +394,7 @@ decided to remove the backgrounds. (Lately I learned that we can use <a href="ht
 <p><strong>prompt for training pictures</strong> = <strong>caption</strong> (what the model doesn&rsquo;t learn) + <strong>what the model learns</strong></p>
 <p>When it comes time to use it we can reverse this formula: tags in caption + model = what looks like the result of the training images! If you want to generate results similar to a certain image in the training set, look at its caption.</p>
 <h2 id="training"><a href="#training" class="anchor-link">#</a><a href="#contents:training" class="headings">Training</a></h2>
-<p>First of all, my fine-tune technology is to follow Eric Fu selected LoRA, because I heard that LoRA technology is not only fresher in the timeline, and seems to have low memory requirements. Then LoRA also divided into several algorithms, I chose the <a href="https://github.com/KohakuBlueleaf/LyCORIS" target="_blank" rel="noopener">LyCORIS</a> model as same as Eric Fu, take the road that others have verified, while I do not have enough ML knowledge to do the selection myself. The <code>LyCORIS</code>&rsquo;s README and The README of <a href="https://github.com/Akegarasu/lora-scripts" target="_blank" rel="noopener">lora-scripts - Akegarasu</a> project found in <a href="https://dfldata.xyz/forum.php?mod=viewthread&amp;tid=12796" target="_blank" rel="noopener">a tutorial in forum</a> both point to this project: <a href="https://github.com/kohya-ss/sd-scripts" target="_blank" rel="noopener">sd-scripts - kohya-ss</a>. The relationship between the three of them is:</p>
+<p>First of all, my fine-tune technology is to follow Eric Fu selected LoRA, because I heard that LoRA technology is not only fresher in the timeline, and seems to have low memory requirements. Then LoRA also divided into several algorithms, I chose the <a href="https://github.com/KohakuBlueleaf/LyCORIS" target="_blank" rel="noopener">LyCORIS</a> model as same as Eric Fu, take the road that others have verified, while I do not have enough ML knowledge to do the selection myself. The <code>LyCORIS</code>&rsquo;s README and The README of <a href="https://github.com/Akegarasu/lora-scripts" target="_blank" rel="noopener">lora-scripts - Akegarasu</a> project found in <a href="https://dfldata.xyz/forum.php?mod=viewthread&tid=12796" target="_blank" rel="noopener">a tutorial in forum</a> both point to this project: <a href="https://github.com/kohya-ss/sd-scripts" target="_blank" rel="noopener">sd-scripts - kohya-ss</a>. The relationship between the three of them is:</p>
 <ul>
 <li><code>sd-scripts</code> integrates fine-tune scripts that are easy to use directly and can perform training with all four fine-tune methods.</li>
 <li><code>lora-scripts</code> further simplifies the use of <code>sd-scripts</code> for LoRA training, and each parameter has a recommended value, which is a big help.</li>
@@ -419,9 +419,9 @@ decided to remove the backgrounds. (Lately I learned that we can use <a href="ht
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2025-09-05 14:29:23 CST" style="cursor:help">
+        <span title="Updated @ 2025-04-03 09:40:39 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-09-05</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-09-05</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2025-04-03</text><text x="915" y="140" textLength="650" transform="scale(.1)">2025-04-03</text></g></svg>
         </span></div>
 
 
@@ -626,7 +626,7 @@ decided to remove the backgrounds. (Lately I learned that we can use <a href="ht
             
     <footer id="footer" class="footer">
         <div class="footer-inner">
-            <div class="site-info">©&nbsp;2019–2025&nbsp;<svg  xmlns="http://www.w3.org/2000/svg" height="16" width="16" id="glider_svg" ><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="8.3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="3" cy="13.6" r="2"/></svg></div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+            <div class="site-info">©&nbsp;2019–2026&nbsp;<svg  xmlns="http://www.w3.org/2000/svg" height="16" width="16" id="glider_svg" ><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="8.3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="3" cy="13.6" r="2"/></svg></div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
 
             
     

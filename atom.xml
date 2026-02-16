@@ -4,44 +4,78 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2025-09-05T14:30:37&#43;08:00</updated>
+    <updated>2026-02-16T16:37:48&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
     
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights>
-    <generator uri="https://gohugo.io/" version="0.145.0">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.133.1">Hugo</generator>
         <entry>
-            <title type="text">关于社交，几段想分享的话</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/chunks-about-socialization/" />
-            <id>https://boholder.github.io/blogs/chunks-about-socialization/</id>
-            <updated>2025-09-05T14:29:23&#43;08:00</updated>
-            <published>2025-09-05T00:00:00&#43;00:00</published>
+            <title type="text">RimWorld 技巧</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/rim-world-note/" />
+            <id>https://boholder.github.io/blogs/rim-world-note/</id>
+            <updated>2026-02-16T16:34:56&#43;08:00</updated>
+            <published>2026-02-16T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://boholder.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">随便写写</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">为未来忘记的自己记录</summary>
             
-                <content type="html">&lt;p&gt;点进这篇文章的人，首先会和我这个作者建立所谓社会联系，所以我先厚着脸皮报告一下近况：吃得不错、睡得还行&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/chunks-about-socialization/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[1]&lt;/a&gt;&lt;/sup&gt;、工作平稳、业余轻松、减药成功。夏天快过去了，即使&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/chunks-about-socialization/#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[2]&lt;/a&gt;&lt;/sup&gt;增加了锻炼&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/chunks-about-socialization/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[3]&lt;/a&gt;&lt;/sup&gt;频率，每天一根冰棒雪糕还是让我胖了好几斤，哈哈。&lt;/p&gt;
-&lt;p&gt;7 月本来打算写一篇博客论证“如果想社交，必须要接受交际间的摩擦”。写大纲时发现很难把片段的论据按条理深浅排列清楚，作罢。我在这里简单呼吁一下：&lt;a href=&#34;https://boholder.github.io/blogs/embrace-impermanence/#%e5%a4%a7%e8%84%91%e5%af%b9%e7%a4%be%e4%ba%a4%e7%9a%84%e5%a5%96%e6%83%a9%e5%8f%8d%e5%ba%94&#34;&gt;感到孤独是大脑进化出的本能&lt;/a&gt;，不要觉得羞耻，多主动去社交。为了达到加深关系、交到新朋友的目的，一些摩擦（话不投机、出门麻烦&amp;hellip;）是必须接受的，一味坚持“不麻烦别人，但也不希望别人麻烦我”这种过分强调主体性的观念，会陷入搭子文化那种萍水相逢的&amp;hellip;&amp;hellip;可以用“代餐”这个词吗？代餐不能当饭吃哈。&lt;/p&gt;
-&lt;p&gt;我身体力行这个结论：当有机会聊天时，我会选择主动开启话题而不是沉默度过，哪怕不说话，至少脸上要淡淡微笑，别人的大脑会从微笑中识别到善意的；当看到朋友感兴趣的东西时，我会主动转发给朋友，顺便开启一段兴许是几年一次的闲聊；当有人约我出门时，我会尽量响应。有道是&lt;a href=&#34;https://zh.wikipedia.org/zh-hk/%E4%B8%80%E6%9C%9F%E4%B8%80%E6%9C%83&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;一期一会&lt;/a&gt;，珍惜和人产生联系的机会吧。&lt;/p&gt;
-&lt;p&gt;希望和点头之交、陌生人聊几分钟的天，如何开启话题（这个在英语里叫&lt;a href=&#34;https://www.google.com/search?q=small&amp;#43;talk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;small talk&lt;/a&gt;）？我了解并实践过一个好技巧：寻找对方外显的特点，并（运用语调和表情）表现自己对这个特点很感兴趣。举例：看到同事不舒服，关心地问一句；看到衣服、包上的装饰、图案，好奇地询问出处。&lt;/p&gt;
-&lt;p&gt;记性不好是影响我社交的一个因素。如果你能记住别人在交流时有意无意透露出的个人信息，你就能组织更针对性、更容易提升好感度的发言，毕竟（在大脑本能驱使下）每个人都希望得到他人关心。解决方案是记笔记，商业上有 CRM（客户关系管理）系统、社交游戏 VRChat 有第三方爱好者开源的&lt;a href=&#34;https://github.com/vrcx-team/VRCX&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VRCX&lt;/a&gt;好友管理工具。使用这些工具的益处远大于淡淡的负罪感。&lt;/p&gt;
-&lt;p&gt;想说的暂时就这些，愿你在最近出门时用心感受夏末初秋之时的凉风和暖阳。&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;我睡觉打呼，用呼吸机加闭口贴，较明显地提高了睡眠质量，真的有用呀。国产瑞迈特 G3B20A 换鼻枕，加国补到手 2600。&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/chunks-about-socialization/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 320 512&#34; class=&#34;icon footnote-icon&#34;&gt;&lt;path d=&#34;M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+                <content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;开局：选温带森林，不要在其他势力四格范围内。围一个宿舍，桌子椅子吃饭，三张床，物资放进室内否则掉耐久。开局一个风力发电机 + 三四个蓄电池可以用两个季节。先种水稻，成熟快。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;但人体进化使得&lt;a href=&#34;https://www.youtube.com/watch?v=vSSkDos2hzo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;锻炼并不能显著提高能量消耗&lt;/a&gt;，最佳减重方式还是管住嘴。&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/chunks-about-socialization/#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 320 512&#34; class=&#34;icon footnote-icon&#34;&gt;&lt;path d=&#34;M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;秋天最后两天的夜间，（温带森林）室外气温会降到零下，种植植物会大批量死去。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;运动方针：&lt;a href=&#34;https://www.google.com/search?q=%e4%ba%8c%e5%8c%ba%e8%ae%ad%e7%bb%83&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;二区训练、Zone 2&lt;/a&gt;，不累地运动。推荐大家了解，AppleWatch 有对应功能。我实践是跑步机爬坡，速度慢（少费膝盖）坡度高（把心率提上去）。&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/chunks-about-socialization/#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 320 512&#34; class=&#34;icon footnote-icon&#34;&gt;&lt;path d=&#34;M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;俘虏：默认选择维持生命，点俘虏改变选项（劝诱、释放），不想劝记得养好伤就放人不然白吃白住。俘虏房装桌子和椅子。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
+&lt;li&gt;
+&lt;p&gt;钢铁、零部件：易得的材料消耗差不多后，&lt;code&gt;Ctrl+Z&lt;/code&gt; 寻找地图里岩石区寻找压埋的钢材、压埋的机械、钢铁制遗迹结构。这样会把遗迹划成居住区，记得手动删除居住区。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不需要的工作台、电器（如医疗房、俘虏房）关掉，省电。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;死敌人做杂项 - 坟墓埋掉、死友军做棺材放独立房间里。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;做风雪大衣，手工要 4 级。做栓动步枪、反曲弓，手工要至少 5 级。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;泛光灯照植物，晚上也能生长。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不要狩猎成群雪牛，狩猎单只雪牛也要考虑一下火力。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;结构&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/rim-world-note/#结构&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/rim-world-note/#contents:结构&#34; class=&#34;headings&#34;&gt;结构&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;几个独立房间：储藏室、宿舍、厨房、研究室、工作间、电池室、畜栏、食堂 + 娱乐室。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;门口那一块可不铺地板。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;厨房在室内、屠宰台在厨房外面，在一起会污染出食物中毒。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;研究台（研究室）和工作台需分开两房间，否则有效率惩罚。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;储藏室：温度保持 -1 度，冷冻食物材料不会腐烂。装了&lt;a href=&#34;https://steamcommunity.com/sharedfiles/filedetails/?id=3050506223&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adaptive Storage&lt;/a&gt;后不需太大空间，5*5 配合地窖、货箱能用很久。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;畜牧：畜栏标牌、卵箱、草料槽（后两者加屋顶）。畜牧冬天之外可以敞开畜栏、不消耗草料，也可在畜栏内种干草。一对鸡几天就能孵出五六只小鸡，小鸡再几天就成年。动物睡眠箱只能睡小鸡，成年鸡、拉布拉多都睡不下。提前计算冬天需要多少干草。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;工作间：最少 11*11 大小，最好再大一些。两个 200 钢铁工具柜，给工作台加 12% 效率&lt;a href=&#34;https://forum.gamer.com.tw/C.php?bsn=27313&amp;snA=986&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;【心得】10X10 格裡，12 張生產台＋2 個工具櫃的擺法分享&lt;/a&gt;。工作台尽可能电动，速度快。蓝图带着椅子的工作台、研究台等，无椅子效率 75%，有椅子效率 100%。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;宿舍：6*5 大小（配合&lt;a href=&#34;https://steamcommunity.com/sharedfiles/filedetails/?id=2558042766&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Realistic Rooms Rewritten&lt;/a&gt;），中间一个三格宽的通道放电线、制冷和制热。花盆、床头柜、壁挂通风孔、壁灯、木地板。温度保持 16°C~26°C。同配置医疗房、俘虏房。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </content>
             
             
@@ -54,7 +88,7 @@
                             
                             
                             
-                                <category scheme="https://boholder.github.io/categories/life/" term="Life" label="Life" />
+                                <category scheme="https://boholder.github.io/categories/game/" term="Game" label="Game" />
                             
                         
                     
@@ -64,7 +98,7 @@
                             
                             
                             
-                                <category scheme="https://boholder.github.io/tags/" term="标签" label="标签" />
+                                <category scheme="https://boholder.github.io/tags/blog/" term="Blog" label="Blog" />
                             
                         
                     
@@ -74,23 +108,24 @@
     
         <entry>
             <title type="text">巴普洛夫“折磨”狗发现的现象应让更多人知道</title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/transmarginal-inhibition/" />
-            <id>https://boholder.github.io/blogs/transmarginal-inhibition/</id>
-            <updated>2025-07-16T13:34:45&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/--transmarginal-inhibition/" />
+            <id>https://boholder.github.io/blogs/--transmarginal-inhibition/</id>
+            <updated>2025-05-02T18:34:35&#43;08:00</updated>
             <published>2025-04-03T00:00:00&#43;00:00</published>
             
             <summary type="html">Transmarginal Inhibition，超限抑制，当身体遇到压倒性刺激时会停止反应</summary>
             
                 <content type="html">&lt;p&gt;这篇文章的大部分原文来自 Bilibili 用户进击的忍人的&lt;a href=&#34;https://www.bilibili.com/opus/681444922953302024&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;巴浦洛夫的超限抑制试验&lt;/a&gt;文章
 ，是对&lt;a href=&#34;https://www.sott.net/article/136090-Transmarginal-Inhibition&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;英文原文&lt;/a&gt;
-的中文翻译，不过好像这篇英文文章是洗稿的&lt;a href=&#34;https://publish.obsidian.md/cassquotes/Casswiki/Ponerology&amp;#43;and&amp;#43;psychopathy/Transmarginal&amp;#43;inhibition&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;另一篇英文文章&lt;/a&gt;
+的中文翻译，不过好像这篇英文文章是洗稿的&lt;a href=&#34;https://publish.obsidian.md/cassquotes/Casswiki/Ponerology+and+psychopathy/Transmarginal+inhibition&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;另一篇英文文章&lt;/a&gt;
 ，因为它没洗全，引用链接失效了。无所谓，信息就是这样的，零成本分发。我顺手把链接修了，也修改了机翻不到位的地方，不用谢。&lt;/p&gt;
-&lt;h2 id=&#34;为什么想知道&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#为什么想知道&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#contents:为什么想知道&#34; class=&#34;headings&#34;&gt;为什么想知道&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;为什么想知道&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#为什么想知道&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#contents:为什么想知道&#34; class=&#34;headings&#34;&gt;为什么想知道&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;我了解这个知识的动机是，读&lt;a href=&#34;https://book.douban.com/subject/35557542/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《穷查理宝典》&lt;/a&gt;得知查理在一次演讲提到如下内容：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;有史以来最著名的心理学实验是米尔格拉姆实验——他们要求人们清醒地对一些无辜的人进行电刑。在他们的操控之下，这些正派的志愿者大多数执行了酷刑。米尔格拉姆开展这个实验，是在希特勒命令许多虔诚的路德教徒、天主教徒去做他们明知道不对的事情之后不久。他想要发现权威在多大程度上可以被用来操控品德高尚的人，迫使人们去做一些明显错得很离谱的事情。他得到了非常具有戏剧性的实验效果。他设法让那些品德高尚的人做了许多可怕的事情。但是许多年来，心理学教材把这个实验当做是对权威的作用的证明——权威如何被用来说服人们去做可怕的事情。&lt;/p&gt;
 &lt;p&gt;当然，这是个似是而非的结论。这不是一种完整和正确的解释。权威发挥了一定作用。然而，还有其他几种朝同一个方向发挥作用的心理因素，它们造成了那种 lollapalooza 效应，原因恰恰在于它们发挥了组合作用。心理学教授回避心理否认问题的原因之一在于，如果要做有关心理否认的实验，他们肯定会违反道德规范，尽管做实验是展示痛苦如何导致人类头脑失常的最佳方法。总之，由于某些疯狂的原因，心理学教材对痛苦引起的精神失常着墨甚少。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;巴甫洛夫本人在他生命的最后十年里一直在做对狗的酷刑实验。他发表了论文。因而，我们拥有了翔实的资料，知道痛苦如何导致狗的精神失常。&lt;/strong&gt; 然而，你在任何心理学教材中都看不到巴甫洛夫这次研究的成果。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;巴甫洛夫本人在他生命的最后十年里一直在做对狗的酷刑实验。他发表了论文。因而，我们拥有了翔实的资料，知道痛苦如何导致狗的精神失常。&lt;/strong&gt; 然而，你在任何心理学教材中都看不到巴甫洛夫这次研究的成果。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;不，我当然不是为了看小动物受罪来满足猎奇心，我在去年 5 月&lt;a href=&#34;https://boholder.github.io/blogs/embrace-impermanence/&#34;&gt;经历过一段压力非常大的时间&lt;/a&gt;
 ，那时我对周围事物的反应确实称得上是不寻常，所以我想更加了解那时发生在我身上的变化。巴普洛夫的&lt;a href=&#34;https://en.wikipedia.org/wiki/Ivan_Pavlov&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;维基百科词条&lt;/a&gt;
 里提到了：&lt;/p&gt;
@@ -98,29 +133,30 @@
 &lt;p&gt;Pavlov was always interested in biomarkers of temperament types described by Hippocrates and Galen. He called these
 biomarkers &amp;ldquo;properties of nervous systems&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;Pavlov and his researchers observed and began the study of transmarginal inhibition (TMI), the body&amp;rsquo;s natural response
-of shutting down when exposed to overwhelming stress or pain by electric shock.&lt;/p&gt;&lt;/blockquote&gt;
+of shutting down when exposed to overwhelming stress or pain by electric shock.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这样我便找到了本文的主角——TMI（Transmarginal Inhibition，超限抑制）。&lt;/p&gt;
-&lt;h2 id=&#34;超限抑制理论过时了吗&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#超限抑制理论过时了吗&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#contents:超限抑制理论过时了吗&#34; class=&#34;headings&#34;&gt;超限抑制理论过时了吗？&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;超限抑制理论过时了吗&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#超限抑制理论过时了吗&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#contents:超限抑制理论过时了吗&#34; class=&#34;headings&#34;&gt;超限抑制理论过时了吗？&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;当我们回头看一个历史上的学术概念时，需要验证一下这个概念和后续研究的关系，避免我们记住一个已经被证伪的过时概念。值得一提的是，谷歌搜索“Transmarginal Inhibition”和“超限抑制”，结果确实很少。我不是专业的心理学家，所以我通过 perplexity&lt;a href=&#34;https://www.perplexity.ai/search/has-the-psychology-concept-tra-ssnpmgCqR0KusrXxNLaEEA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;深度搜索&lt;/a&gt;并人工检查了几个引用链接的内容，结论是这个概念没有被证伪（可能是因为没办法再进行这种违背现代实验道德的实验了），不怎么提了（我看很少有论文提到这个术语），融合到了后续研究中（见深度搜索结果中引用链接）。同时也欢迎专业人士校验、纠正我的判断。&lt;/p&gt;
-&lt;h2 id=&#34;转载内容&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#转载内容&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#contents:转载内容&#34; class=&#34;headings&#34;&gt;转载内容&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;研究&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#研究&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#contents:研究&#34; class=&#34;headings&#34;&gt;研究&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;转载内容&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#转载内容&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#contents:转载内容&#34; class=&#34;headings&#34;&gt;转载内容&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;研究&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#研究&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#contents:研究&#34; class=&#34;headings&#34;&gt;研究&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;伊万 - 巴甫洛夫列举了 TMI 的细节，他通过各种刺激对动物建立条件反射，包括疼痛（但并非像人们经常报道的那样，巴甫洛夫的所有工作都是通过疼痛来诱导反应）。&lt;/p&gt;
-&lt;p&gt;巴甫洛夫发现，一个有机体对各种刺激的耐受程度因性格（temperament）的基本差异而有很大不同。他评论说“人与人之间（among people，对，原文是说人不是说狗）最基本的遗传差异是他们在遭受刺激时，到达自我封闭的临界点有多快，而会快速自我封闭的人有一个完全不同类型的神经系统”。[&lt;a href=&#34;&#34; title=&#34;Pavlov, I.P/ (1955) Selected Works (English translation) Foreign Languages Publishing House, Moscow.&#34;&gt;1&lt;/a&gt;]这使他越来越注意到，在进行条件反射实验之前，需要根据受试犬的遗传体质进行分类。不同性格的狗不仅对条件反射有不同的反应，当一只其在压力下崩溃时，如何治疗也取决于它的性格类型。例如，巴甫洛夫证实，镇静剂对恢复崩溃的狗的神经稳定很有帮助，但在体重完全相同的前提下，一个性格的狗可能需要 5 至 8 倍于另一性格的狗的药物。&lt;/p&gt;
-&lt;h3 id=&#34;四种性格&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#四种性格&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#contents:四种性格&#34; class=&#34;headings&#34;&gt;四种性格&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;巴甫洛夫发现，一个有机体对各种刺激的耐受程度因性格（temperament）的基本差异而有很大不同。他评论说“人与人之间（among people，对，原文是说人不是说狗）最基本的遗传差异是他们在遭受刺激时，到达自我封闭的临界点有多快，而会快速自我封闭的人有一个完全不同类型的神经系统”。[&lt;a href=&#34;https://boholder.github.io/&#34; title=&#34;Pavlov, I.P/ (1955) Selected Works (English translation) Foreign Languages Publishing House, Moscow.&#34;&gt;1&lt;/a&gt;]这使他越来越注意到，在进行条件反射实验之前，需要根据受试犬的遗传体质进行分类。不同性格的狗不仅对条件反射有不同的反应，当一只其在压力下崩溃时，如何治疗也取决于它的性格类型。例如，巴甫洛夫证实，镇静剂对恢复崩溃的狗的神经稳定很有帮助，但在体重完全相同的前提下，一个性格的狗可能需要 5 至 8 倍于另一性格的狗的药物。&lt;/p&gt;
+&lt;h3 id=&#34;四种性格&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#四种性格&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#contents:四种性格&#34; class=&#34;headings&#34;&gt;四种性格&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;基于 30 年来研究中所积累的经验证据，巴甫洛夫确信了四种基本性格的想法。他指出，这些性格与希波克拉底在人身上区分的性格非常接近。尽管在巴甫洛夫的狗身上发现了各种基本性格的混合体，但仍可以被归于这四种基本性格。&lt;/p&gt;
 &lt;p&gt;第一种类型与希波克拉底的“胆汁质（choleric，易怒的，暴躁的）”类型相对应，巴甫洛夫称之为“强兴奋型（strong excitatory）”。第二种类型“多血质（sanguine，乐观的，满怀希望的）”巴甫洛夫称之为“活泼型（lively）”，适用于性格比较平衡的狗。这两种类型的狗对强加的压力或冲突情况的正常反应都是变得更加兴奋和攻击行为增加，但他们的反应存在很多的不同。“强兴奋型”会变得非常狂野，以至于完全失去控制，而“活泼型”则继续表现出有目的的、有控制的反应。&lt;/p&gt;
 &lt;p&gt;巴甫洛夫把“粘液质（phlegmatic，冷淡的，迟钝的，冷漠的）”描述为“平静的、不受干扰的（calm, imperturbable）”，而“抑郁质（melancholic，忧郁的，抑郁的）”被称为“弱抑制型（weak inhibitory）”。这两种类型中以更多的被动性或“抑制”而不是攻击性来应对强加的压力和冲突情况。“弱抑制型”通常倾向于以被动和回避的方式来应对焦虑和冲突，任何强加在这种狗的神经系统上的实验性压力都会迅速导致狗进入到大脑抑制和“恐惧麻痹（fear paralysis）”的状态。&lt;/p&gt;
 &lt;p&gt;巴甫洛夫发现，其他三种类型的狗，当面临的压力超过常规手段所能应付的程度时，也会最终进入一种类似于弱抑制型很快就会进入的大脑抑制状态。他认为这是一种保护机制，通常由大脑在承受不了压力时作为最后的手段使用。弱抑制型是其他三种类型的一个例外：这种类型的狗在面对相对较轻的压力时会更快地进入大脑保护性抑制状态。当然，重要的发现是，四种基本性质在实验前、实验中和实验后对不同程度的压力有不同的反应，而且弱抑制型特别容易受到影响。&lt;/p&gt;
-&lt;p&gt;关于弱抑制型，巴甫洛夫观察到，虽然基本的性格模式是遗传的，但每只狗从出生起就会受到各种环境因素的制约，在一定的后天因素压力下也会产生长期的抑制型行为模式。因此，任何一只狗的最终行为模式将取决于其自身的体质以及先前环境压力的共同作用。[&lt;a href=&#34;&#34; title=&#34;Y. P. Frolov; Pavlov and His School, Trans. by C.P. Dutt; Kegan, Paul, Trench, Trubner, London; 1938&#34;&gt;2&lt;/a&gt;]&lt;/p&gt;
-&lt;h3 id=&#34;超限反应&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#超限反应&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#contents:超限反应&#34; class=&#34;headings&#34;&gt;超限反应&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;关于弱抑制型，巴甫洛夫观察到，虽然基本的性格模式是遗传的，但每只狗从出生起就会受到各种环境因素的制约，在一定的后天因素压力下也会产生长期的抑制型行为模式。因此，任何一只狗的最终行为模式将取决于其自身的体质以及先前环境压力的共同作用。[&lt;a href=&#34;https://boholder.github.io/&#34; title=&#34;Y. P. Frolov; Pavlov and His School, Trans. by C.P. Dutt; Kegan, Paul, Trench, Trubner, London; 1938&#34;&gt;2&lt;/a&gt;]&lt;/p&gt;
+&lt;h3 id=&#34;超限反应&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#超限反应&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#contents:超限反应&#34; class=&#34;headings&#34;&gt;超限反应&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;后来，当巴甫洛夫把他关于狗的发现应用于人类心理学的实验中时，他仔细地记录了当狗的高级神经系统所承受的压力超过正常反应的极限时会发生什么，并把这些状态与人类各种精神崩溃的临床报告相比较。（原文逻辑有误，这一句好像要开始结合人类研究了，但下一句又回到狗了）他发现，面对更严重、更长时间的压力时，“活泼型”或“平静型
 ”的狗不易崩溃，而那些“强兴奋型”和“弱抑制型”的狗则不然。&lt;/p&gt;
 &lt;p&gt;巴甫洛夫确信这种超限反应（ultraboundary response），他称之为“超限抑制”，是大脑的一种保护机制。它的发生意味着大脑没有其他手段来避免因疲劳和神经紧张而造成的身体损伤（physical damage）。他发现他可以通过唾液反射实验在任何时候确定任何狗的保护性抑制的程度。即使狗看起来很正常，但其分泌的唾液量可以告诉他狗的大脑正在发生什么，即抑制性反应是否已经开始，以及它已经发展到了什么阶段。&lt;/p&gt;
-&lt;h3 id=&#34;洪水和洗脑&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#洪水和洗脑&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#contents:洪水和洗脑&#34; class=&#34;headings&#34;&gt;洪水和“洗脑”&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;洪水和洗脑&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#洪水和洗脑&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#contents:洪水和洗脑&#34; class=&#34;headings&#34;&gt;洪水和“洗脑”&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;显然，一个意外的事件导致了巴甫洛夫在诱导 TMI 方面的一些更激进的实验。1924 年，列宁格勒发生了一场洪水。巴甫洛夫在这次洪水前对一整群狗进行了条件反射训练。在这期间，由于实验室里的水不断上涨，它们被困在笼子里，这些狗惊恐地游来游去，拼命把头伸出水面。在最后一刻，一个实验室的工作人员赶来，把它们拉进水里以穿过笼子门，并把它们救到了安全地带。&lt;/p&gt;
 &lt;p&gt;这一事件对狗来说显然是极其可怕的，它们中的一些狗从急性兴奋状态转为严重的超限保护性抑制状态。不久后，当巴甫洛夫测试其中一些狗时，他发现最近植入的条件反射全部消失了。而其他经历了相同磨难的狗却没有受到影响。巴甫洛夫意识到，对于那些条件反射被恐怖抹去了的狗来说，更深度的抑制性活动能够将记忆抹去（there was a further degree of inhibitory activity that was capable of wiping the mental slate clean）。大多数进入这个“洗脑”状态的狗后来都能恢复它们以前的条件反射行为，但这需要几个月的耐心工作。它们某种程度上变成了“新生儿”。如果巴甫洛夫允许从实验室的门下流进一股水，所有的狗都会对这种景象感到敏感并受到影响，其中那些被洪水“洗脑”的狗反应最大。&lt;/p&gt;
-&lt;p&gt;尽管有些狗没有完全崩溃，但巴甫洛夫相信，“适当地应用”合适的压力，可以诱使它们中的每一只都崩溃。在他生命的最后，巴甫洛夫告诉一位美国生理学家，这次与洪水相关的观察使他相信每只狗都有它的“崩溃点”。[&lt;a href=&#34;&#34; title=&#34;Sargant, William, (1957) Battle For the Mind; Wm. Heinemann Ltd, London&#34;&gt;3&lt;/a&gt;]&lt;/p&gt;
-&lt;h3 id=&#34;压力的四个主要类型&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#压力的四个主要类型&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#contents:压力的四个主要类型&#34; class=&#34;headings&#34;&gt;压力的四个主要类型&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;尽管有些狗没有完全崩溃，但巴甫洛夫相信，“适当地应用”合适的压力，可以诱使它们中的每一只都崩溃。在他生命的最后，巴甫洛夫告诉一位美国生理学家，这次与洪水相关的观察使他相信每只狗都有它的“崩溃点”。[&lt;a href=&#34;https://boholder.github.io/&#34; title=&#34;Sargant, William, (1957) Battle For the Mind; Wm. Heinemann Ltd, London&#34;&gt;3&lt;/a&gt;]&lt;/p&gt;
+&lt;h3 id=&#34;压力的四个主要类型&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#压力的四个主要类型&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#contents:压力的四个主要类型&#34; class=&#34;headings&#34;&gt;压力的四个主要类型&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;巴甫洛夫最重要的发现之一是，当狗的大脑被压力和冲突推到超出其习惯反应能力的“极限”时，它的条件反射行为会发生什么变化。他能够通过利用四种类型的压力来实现他所说的“高级神经活动的断裂（rupture in higher nervous activity）”。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -139,7 +175,7 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 &lt;p&gt;如果在任何情况下，前三种方法都不能诱发某只狗的崩溃，那么只需要在运用第四种方法：使狗的身体状态失衡后，再继续以相同条件施加前三种方法就可以实现。巴甫洛夫还发现，在身体状态不稳定之后，即使是性情稳定（temperamentally stable）的狗也可能发生崩溃，而且（崩溃中发生的）任何新的行为模式都可能成为狗性格的固定元素（any new behavior pattern occurring afterward might become a fixed element of the dog&amp;rsquo;s personality），即使它从衰弱（debilitating）经历中恢复过来很久之后也是如此。&lt;/p&gt;
 &lt;p&gt;对于弱抑制型的狗来说，在这种条件下植入的新的神经质行为模式（new neurotic patterns）经常可以通过一定剂量的镇静剂轻易消除。但在“平静型”或“活泼型”的狗中（这些狗通常需要通过手术使它们的身体衰弱到足以导致崩溃），巴甫洛夫发现，在狗恢复健康后，新植入的模式往往是不可逆转的。巴甫洛夫认为这是由于这种类型的狗的神经系统的自然韧性。在狗的身体状况正常时，新的行为很难被植入，而一旦被植入似乎就会和旧的模式一样成为狗的“顽固天性”的一部分。&lt;/p&gt;
 &lt;p&gt;正如巴甫洛夫所观察到的，刺激的耐受性在个体之间差异很大。高度敏感的人可能会被电影院里的大音量或大型社交聚会而强烈刺激。其他的人则会发现这些同样的刺激是理想的刺激水平，甚至是刺激不足。&lt;/p&gt;
-&lt;h3 id=&#34;tmi-的三个阶段&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#tmi-的三个阶段&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#contents:tmi-的三个阶段&#34; class=&#34;headings&#34;&gt;TMI 的三个阶段&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;tmi-的三个阶段&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#tmi-的三个阶段&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#contents:tmi-的三个阶段&#34; class=&#34;headings&#34;&gt;TMI 的三个阶段&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;巴甫洛夫确定，狗抵抗重压的能力不仅取决于它的性格类型，还取决于它的身体状况。一旦达到极限并诱发了大脑抑制，狗的大脑中就开始发生非常奇怪的事情。这些变化可以被精确地测量出来（通过分泌的唾液量）。而且，与人类不同的是，这种变化不会被（受试者）主观的扭曲所改变，也就是说，狗不会像人类那样试图解释或合理化它们的奇怪行为。巴甫洛夫描述了超限抑制的三个不同和渐进的阶段。&lt;/p&gt;
 &lt;p&gt;威廉 - 萨根汀（William Sargantin）在他对患有弹震症（shell-shocked）的军人的研究中对这些阶段进行了补充研究。&lt;/p&gt;
 &lt;ol&gt;
@@ -153,18 +189,19 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 &lt;p&gt;超悖论阶段。第三阶段是积极的条件性反应突然逆转为消极的反应，消极的反应逆转为积极的反应。狗（或人）可能突然发现他们喜欢他们以前厌恶的东西，厌恶他们以前喜欢的东西。在这个阶段，生物体的反应（the organism&amp;rsquo;s response）变得与以前的所有条件反射相反。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;对人类心理学的意义&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#对人类心理学的意义&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#contents:对人类心理学的意义&#34; class=&#34;headings&#34;&gt;对人类心理学的意义&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;对人类心理学的意义&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#对人类心理学的意义&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#contents:对人类心理学的意义&#34; class=&#34;headings&#34;&gt;对人类心理学的意义&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;最后一个发现对于理解人类行为中的类似变化有很大的意义。在某种长时间的衰弱期结束时，众所周知，性格非常坚强的人在他们的信仰和/或信念上会发生巨大的变化。当他们康复后，他们会在余生中一直坚持自己的新信仰。有许多案例记录了人们在战争时期、在监狱里、或在经历了一些长期的恐怖经历（如沉船、飞机失事等）后，在各种方面发生了改变，包括宗教、政治等。&lt;/p&gt;
 &lt;p&gt;人类的许多行为是在婴儿期和儿童期开始形成的条件反射的结果。这些对现实的反应模式几乎可以保持不变，但一般来说，健康的成年人类能够学会根据环境的变化来调整他们的行为模式。人类的其他反应是通过研究和学习产生的，例如驾驶汽车。在开始的时候，学习开车和导航需要大量的注意力。后来，这个行为变得更加自动，司机可以在繁忙的城市交通中驾驶，同时说话、吃饭或做任何其他活动。“驾驶”已经成为一个自动程序。如果司机随后进入交通不发达的乡村，他也能适应不断变化的条件，并自动做到这一点。&lt;/p&gt;
 &lt;p&gt;因此，一个生物体的大脑需要建立越来越复杂的结构，包括积极和消极的条件反应&amp;ndash;行为模式&amp;ndash;以适应环境的变化。巴甫洛夫表明，狗的神经系统可以自动发展出非凡的分辨能力。一只狗可以精确地对每分钟振动 500 次而不是 490 次或 510 次的音调做出流涎反应。&lt;/p&gt;
 &lt;p&gt;虽然大多数人不愿意承认，但人类的情绪态度和反应模式也会受到环境影响。我们在孩童时期就学会了对某些事物、人物、事件等感到吸引或厌恶。诸如“天主教徒”或“共产主义者”这样的词语能够引起即时的情绪反应，这些情绪反应与任何事实或数据都没有关系，而仅仅是通过在家庭和社会中的条件作用获得的程序性态度。&lt;/p&gt;
 &lt;p&gt;巴甫洛夫证明，当超限抑制开始控制一只狗时，一种类似于人类歇斯底里（hysteria，癔症，超越理性的感情表露）的状态出现了。将这些发现应用到人类心理学上表明，为了使“转换”有效，有必要对受试者的情绪进行处理，直到他/她达到一种恐惧、愤怒或兴奋的不正常状态。如果这种状态通过各种手段得以维持或加剧，就会导致歇斯底里。在歇斯底里的状态下，一个人会异常容易受到暗示，环境中的影响会导致一套行为模式被另一套所取代，而不需要任何说服性的灌输。在恐惧和兴奋的状态下，通常理智的人类会接受最不可思议的建议。&lt;/p&gt;
-&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#总结&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/transmarginal-inhibition/#contents:总结&#34; class=&#34;headings&#34;&gt;总结&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#总结&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/--transmarginal-inhibition/#contents:总结&#34; class=&#34;headings&#34;&gt;总结&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;忍人没把文章翻译完，剩下的几段内容是对关于继承巴普洛夫的后续研究、苏联和中国的政治洗脑、引诱认罪之类的介绍，对于后者文章还幽默地评论了一句“显然，这些研究是由美国的特工机构进行的，他们对‘揭穿’这类信息并将其边缘化有着既得利益”。文章还提到了 911 事件也导致了很多美国人出现超限抑制的情况。出于各种原因，我也不翻译了，有兴趣请看原文，哈哈。也许这就是超限抑制发现淡出于历史中的原因——某种意义上它是危险又黑暗的知识，可能被用于做坏事，所以人们倾向于避而不谈。&lt;/p&gt;
 &lt;p&gt;希望你从巴普洛夫的实验结果中悟到了什么。我突然想到一句合适的话，作为结尾的祝福送给你：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Oh, God, give us courage to change what must be altered, serenity to accept what can not be helped, and insight to know the one from the other.
-&amp;ndash; &lt;a href=&#34;https://en.wikipedia.org/wiki/Serenity_Prayer&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Serenity Prayer&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&amp;ndash; &lt;a href=&#34;https://en.wikipedia.org/wiki/Serenity_Prayer&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Serenity Prayer&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
             
             
@@ -405,7 +442,7 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;成功了！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/postimg/2025/xeyes_with_cmd.png&#34; alt=&#34;A screenshot showing the xeyes window and the cmd window&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;A screenshot showing the xeyes window and the cmd window&#34; src=&#34;https://boholder.github.io/img/postimg/2025/xeyes_with_cmd.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;mobaxterm&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/x11fwd/#mobaxterm&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/x11fwd/#contents:mobaxterm&#34; class=&#34;headings&#34;&gt;MobaXterm&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;在 MobaXterm 的本地终端上检查 &lt;code&gt;DISPLAY&lt;/code&gt; 环境变量，发现其值已经设置到正确的值：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -463,7 +500,7 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;不行，相同的错误。经过尝试，我发现了一个不知道是否算作 workaround 的方法——借助已证明成功转发 X11 的 MobaXterm ssh 连接展示界面。用 MobaXterm 打开并保持到服务器的连接，将其 &lt;code&gt;DISPLAY&lt;/code&gt; 环境变量的值（如&lt;code&gt;localhost:10.0&lt;/code&gt;）配置到 &lt;code&gt;Run/Debug Configuration&lt;/code&gt; 上，调试运行&amp;hellip;&amp;hellip;成功了！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/postimg/2025/mc_with_intellij.png&#34; alt=&#34;A screenshot showing the MobaXterm, Minecraft game window and IntelliJ run/debug configuration&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;A screenshot showing the MobaXterm, Minecraft game window and IntelliJ run/debug configuration&#34; src=&#34;https://boholder.github.io/img/postimg/2025/mc_with_intellij.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;就是这样，没什么要说的了，感谢阅读，希望这篇文章能帮到你。如果你知道更好的方案，请给我留言，如果我忍耐不了这方案的延迟，会尝试换方案。&lt;/p&gt;
 </content>
             
@@ -536,19 +573,22 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 &lt;details&gt;
     &lt;summary&gt;&lt;i&gt;ref: 《正见》，宗萨蒋扬钦哲波切，佛教徒，导演&lt;/i&gt;&lt;/summary&gt;
     &lt;div&gt;&lt;blockquote&gt;
-&lt;p&gt;一切和合事物皆无常（诸行无常）。当无数的因缘和合在一起，而且没有障碍与干扰，结果是必然的。许多人误以为这是注定的或是运气所致，但事实上我们是有能力对条件产生影响力的，至少在起始的时候。然而，到了一个程度以后，即使我们祈求蛋不要煮熟，它还是会熟。就像蛋一样，所有的现象都是由无数的成分所组成，因此它们是可变的。这些成分几乎都不是我们所能控制的，所以会让我们的期待落空。恐惧和焦虑是人类心智中主要的心理状态。&lt;strong&gt;恐惧的背后是对确定性不断的渴求。我们对未知感到恐惧。人心对肯定的渴望，是根植于我们对无常的恐惧。&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
+&lt;p&gt;一切和合事物皆无常（诸行无常）。当无数的因缘和合在一起，而且没有障碍与干扰，结果是必然的。许多人误以为这是注定的或是运气所致，但事实上我们是有能力对条件产生影响力的，至少在起始的时候。然而，到了一个程度以后，即使我们祈求蛋不要煮熟，它还是会熟。就像蛋一样，所有的现象都是由无数的成分所组成，因此它们是可变的。这些成分几乎都不是我们所能控制的，所以会让我们的期待落空。恐惧和焦虑是人类心智中主要的心理状态。&lt;strong&gt;恐惧的背后是对确定性不断的渴求。我们对未知感到恐惧。人心对肯定的渴望，是根植于我们对无常的恐惧。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;
 &lt;/details&gt;
 &lt;p&gt;《正见》中又将看电影比作看破无明，明知电影是假，但仍可享受。这里我可补充：明知二次元是假，但作为宅仍热爱剧情和角色；明知游戏是假，但作为玩家仍可体验第二人生。&lt;/p&gt;
 &lt;p&gt;佛教说，打心底认同这两句，便是了解&lt;strong&gt;空性&lt;/strong&gt;，不再无明。乐观看是，谋事在人成事在天，但行好事莫问前程。佛教不认可虚无主义，因为“盲信和盲目不信无常皆是无明”。&lt;/p&gt;
 &lt;details&gt;
     &lt;summary&gt;&lt;i&gt;ref: 《正见》，宗萨蒋扬钦哲波切&lt;/i&gt;&lt;/summary&gt;
     &lt;div&gt;&lt;blockquote&gt;
-&lt;p&gt;当你能够觉察不确定性，当你确信这些相关联的成分不可能保持恒常与不变时，就能生起&lt;strong&gt;无畏之心&lt;/strong&gt;。你会发现，自己真正可以准备好面对最坏的状况，同时又能容许最好的状况发生。知道下个转弯处就有某件事等着你，接受从此刻起有无限的可能存在，你将学会运用遍在的觉性和预见的能力，如同英明的将军一般，胸有成竹，毫不惊慌。如果你想活久一点，可以选择不抽烟和多运动。合理的希望是存在的。而绝望，和它的反面——盲信一样，都是相信恒常的结果。&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
+&lt;p&gt;当你能够觉察不确定性，当你确信这些相关联的成分不可能保持恒常与不变时，就能生起&lt;strong&gt;无畏之心&lt;/strong&gt;。你会发现，自己真正可以准备好面对最坏的状况，同时又能容许最好的状况发生。知道下个转弯处就有某件事等着你，接受从此刻起有无限的可能存在，你将学会运用遍在的觉性和预见的能力，如同英明的将军一般，胸有成竹，毫不惊慌。如果你想活久一点，可以选择不抽烟和多运动。合理的希望是存在的。而绝望，和它的反面——盲信一样，都是相信恒常的结果。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;
 &lt;/details&gt;
 &lt;details&gt;
     &lt;summary&gt;&lt;i&gt;ref: 《冥想》，克里斯托夫·安德烈，正念学派心理学家&lt;/i&gt;&lt;/summary&gt;
     &lt;div&gt;&lt;blockquote&gt;
-&lt;p&gt;“空性”是佛教的一个伟大洞见，但它可能也导致了很多误解。“万物皆空”并不意味着一切都真的不存在，而是说我们的目之所见并非具体可靠的存在。这有点像天上的彩虹：它的存在取决于我们的观察位置、太阳的位置以及飘过天空的云彩的“好意”…… 某个现象或某个事物的虚空，并非意味着它不存在，而是说它具有流动的、不稳定的、主观的复杂性质。&lt;strong&gt;空，就是对万物复杂性的意识。而空的结果，就是不致执迷于“现实的浮光”的明智。&lt;/strong&gt; 空的观念一开始并不让人安心，但它随着理解逐渐变得明晰，几乎令人愉悦。&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
+&lt;p&gt;“空性”是佛教的一个伟大洞见，但它可能也导致了很多误解。“万物皆空”并不意味着一切都真的不存在，而是说我们的目之所见并非具体可靠的存在。这有点像天上的彩虹：它的存在取决于我们的观察位置、太阳的位置以及飘过天空的云彩的“好意”…… 某个现象或某个事物的虚空，并非意味着它不存在，而是说它具有流动的、不稳定的、主观的复杂性质。&lt;strong&gt;空，就是对万物复杂性的意识。而空的结果，就是不致执迷于“现实的浮光”的明智。&lt;/strong&gt; 空的观念一开始并不让人安心，但它随着理解逐渐变得明晰，几乎令人愉悦。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;
 &lt;/details&gt;
 &lt;p&gt;凭着对这真理的信心，我们便能试着做到：&lt;/p&gt;
 &lt;ul&gt;
@@ -563,7 +603,8 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
     &lt;summary&gt;&lt;i&gt;ref: 《冥想》，克里斯托夫·安德烈&lt;/i&gt;&lt;/summary&gt;
     &lt;div&gt;&lt;blockquote&gt;
 &lt;p&gt;要想不成为咀嚼痛苦的牺牲品，首先应该承认痛苦的存在，接下来不要让它占据你的整个头脑。接纳其他“客人”进入我们的心灵（它已经被痛苦的回味占据了）：对呼吸、声音、质感的意识，还有对一切发生过的、消失了的、再现的其他想法的意识。不要抵制对痛苦的回味，不要排斥它，&lt;strong&gt;要允许它存在，但不能让它成为唯一的存在。要让它在一个更广阔的容器中稀释&lt;/strong&gt;，以便能相对减轻它的分量。&lt;/p&gt;
-&lt;p&gt;当我们停下来吐纳，即便被苦恼笼罩，也能感觉处于避难所之中。仿佛一艘在风暴之中栖身于港湾的小船一样：&lt;strong&gt;一切都在继续，而我们安然无恙&lt;/strong&gt;。难题仍然存在，但我们已经找到一个安全的去处，在这里可以观察问题，同时又不必因为担心溺亡而与它搏斗。所谓放松控制不是以转移注意力（快，改变你的看法）或自我安慰（放松，一切会好的）来逃避现实，就像一个游泳者停止了手脚的划动，让水流托载着自己前行。这不关乎消极，而是关乎存在。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;当我们停下来吐纳，即便被苦恼笼罩，也能感觉处于避难所之中。仿佛一艘在风暴之中栖身于港湾的小船一样：&lt;strong&gt;一切都在继续，而我们安然无恙&lt;/strong&gt;。难题仍然存在，但我们已经找到一个安全的去处，在这里可以观察问题，同时又不必因为担心溺亡而与它搏斗。所谓放松控制不是以转移注意力（快，改变你的看法）或自我安慰（放松，一切会好的）来逃避现实，就像一个游泳者停止了手脚的划动，让水流托载着自己前行。这不关乎消极，而是关乎存在。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;/details&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -592,7 +633,8 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 &lt;details&gt;
     &lt;summary&gt;&lt;i&gt;ref: （剧透警告）游戏中最后一个时间胶囊录音&lt;/i&gt;&lt;/summary&gt;
     &lt;div&gt;&lt;blockquote&gt;
-&lt;p&gt;I can&amp;rsquo;t keep my eyes open anymore. I&amp;hellip; think this is&amp;hellip; This is it. The end of&amp;hellip; me. I don&amp;rsquo;t believe that I will continue to exist. I would like to think that there is a&amp;hellip; a soul or spirit. Some part of my consciousness that will persist. All the evidence says that when my brain dies, I will be gone. I&amp;rsquo;ve lived my life, never turning away from the truth even if it scares me and&amp;hellip; I can face this. Face my own end, and&amp;hellip; and say with absolute conviction&amp;hellip; that it was good to be human.&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
+&lt;p&gt;I can&amp;rsquo;t keep my eyes open anymore. I&amp;hellip; think this is&amp;hellip; This is it. The end of&amp;hellip; me. I don&amp;rsquo;t believe that I will continue to exist. I would like to think that there is a&amp;hellip; a soul or spirit. Some part of my consciousness that will persist. All the evidence says that when my brain dies, I will be gone. I&amp;rsquo;ve lived my life, never turning away from the truth even if it scares me and&amp;hellip; I can face this. Face my own end, and&amp;hellip; and say with absolute conviction&amp;hellip; that it was good to be human.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;
 &lt;/details&gt;
 &lt;h3 id=&#34;冥想&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/embrace-impermanence/#冥想&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/embrace-impermanence/#contents:冥想&#34; class=&#34;headings&#34;&gt;冥想&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;正念心理学、佛教各教派对于冥想的定义不同，但有共同之处，我总结为：&lt;strong&gt;停下来&lt;/strong&gt;，&lt;strong&gt;全部注意力&lt;/strong&gt;专注于一个&lt;strong&gt;持续的事物&lt;/strong&gt;：&lt;/p&gt;
@@ -606,12 +648,14 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 &lt;details&gt;
     &lt;summary&gt;&lt;i&gt;ref: 《佛教的见地与修道》，宗萨蒋扬钦哲波切&lt;/i&gt;&lt;/summary&gt;
     &lt;div&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;止观&lt;/strong&gt;是一切其他禅修技巧的基础，它能产生宁静、专注与清明。根据（佛教）经典，止观包含了最初到最高所有禅定的精华。把心比做小湖，“止”的状态就好比水面一片平静。由平静产生清晰，使你能够看到湖底的景象、鱼以及其他栖息的动、植物。“观”就是使湖能显示它美丽本性的清明，因此“观”就是洞彻现象本质的智慧。不过要&lt;strong&gt;产生“观”之前，心必须先用“止”调柔才行。&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;止观&lt;/strong&gt;是一切其他禅修技巧的基础，它能产生宁静、专注与清明。根据（佛教）经典，止观包含了最初到最高所有禅定的精华。把心比做小湖，“止”的状态就好比水面一片平静。由平静产生清晰，使你能够看到湖底的景象、鱼以及其他栖息的动、植物。“观”就是使湖能显示它美丽本性的清明，因此“观”就是洞彻现象本质的智慧。不过要&lt;strong&gt;产生“观”之前，心必须先用“止”调柔才行。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;
 &lt;/details&gt;
 &lt;details&gt;
     &lt;summary&gt;&lt;i&gt;ref: 《冥想》，克里斯托夫·安德烈&lt;/i&gt;&lt;/summary&gt;
     &lt;div&gt;&lt;blockquote&gt;
-&lt;p&gt;冥想，就是停下手中的一切事情，坐下来，闭上眼睛。退后一步，让自己与世界保持一定的距离。冥想是需要时间的。甚至有人经过数日也一无所获。一则禅宗故事，反映了这种&lt;strong&gt;欲速则不达&lt;/strong&gt;：一天，弟子问大师：“师父啊，我到底要多久才能达到心灵的宁静？”片刻沉默后，大师回答说：“三十年。”吃惊的弟子抱道：“三十年未免太长，倘若我每日加倍努力，昼夜不息，勤修苦练，是否无须如此长时间？”沉默良久后，大师惋惜道：“若其如此，你需要五十年……”&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
+&lt;p&gt;冥想，就是停下手中的一切事情，坐下来，闭上眼睛。退后一步，让自己与世界保持一定的距离。冥想是需要时间的。甚至有人经过数日也一无所获。一则禅宗故事，反映了这种&lt;strong&gt;欲速则不达&lt;/strong&gt;：一天，弟子问大师：“师父啊，我到底要多久才能达到心灵的宁静？”片刻沉默后，大师回答说：“三十年。”吃惊的弟子抱道：“三十年未免太长，倘若我每日加倍努力，昼夜不息，勤修苦练，是否无须如此长时间？”沉默良久后，大师惋惜道：“若其如此，你需要五十年……”&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;
 &lt;/details&gt;
 &lt;p&gt;除了正念的想象练习外，大脑应在冥想放空，什么都不想，只感受，不评价。我总结为：&lt;strong&gt;感受和接受&lt;/strong&gt;。比如现在我停止打字，做正念学派中的听觉练习。闭上眼睛，深、慢呼吸，听到房间内空调、机箱的声音，门外有电视声、家人做饭的声音。试着仅仅关注声音本身的特征，而不：联想声源（风扇呼呼转-&amp;gt;机箱），调动感情（家人做饭的声音-&amp;gt;安心）。&lt;/p&gt;
 &lt;p&gt;冥想不是心理活动，而是近乎纯粹的身体活动，需要彻底放松却又全神贯注，所以&lt;strong&gt;一定要实践才有效果&lt;/strong&gt;。另外仁波切提醒我们不要冥想结束后立刻想接下来要做什么，要把冥想的平静心态带到平常生活中去。冥想的好处，下文会提。&lt;/p&gt;
@@ -665,7 +709,7 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 &lt;p&gt;ref: &lt;a href=&#34;https://rs.yiigle.com/CN112147201203/857491.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;文章：正确使用迷走神经，副交感神经和胆碱能神经三个名词&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;修行者的神经变化&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/embrace-impermanence/#修行者的神经变化&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/embrace-impermanence/#contents:修行者的神经变化&#34; class=&#34;headings&#34;&gt;修行者的神经变化&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;我看过 Headspace 的宣传片，公司请来宣传的佛教徒（搜了不是 Andy Puddicombe，是东方人面孔）提到，研究表明修行者的针刺反射（非条件反射）信号到达大脑的速度比普通人延迟了些，即横坐标时间纵坐标信号强度的图表中峰整个向右移动，忘了峰值是否有变。搜了下出处搜不到，放个谷歌学术的链接：&lt;a href=&#34;https://scholar.google.com/scholar?hl=en&amp;amp;as_sdt=0,5&amp;amp;q=Buddhist&amp;#43;neuro&amp;#43;pain&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Buddhist+neuro+pain&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;我看过 Headspace 的宣传片，公司请来宣传的佛教徒（搜了不是 Andy Puddicombe，是东方人面孔）提到，研究表明修行者的针刺反射（非条件反射）信号到达大脑的速度比普通人延迟了些，即横坐标时间纵坐标信号强度的图表中峰整个向右移动，忘了峰值是否有变。搜了下出处搜不到，放个谷歌学术的链接：&lt;a href=&#34;https://scholar.google.com/scholar?hl=en&amp;as_sdt=0,5&amp;q=Buddhist+neuro+pain&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Buddhist+neuro+pain&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;我还看过一个清北数学天才（男，清北出家太多搜不到是谁）出家又还俗后做直播，视频中他旁边的大台灯倒了，摔地上很响一声，但他头不动眼不抬，这也属于非条件反射。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;我没搜着看过论文，仅根据这两个事例猜测，长期进行冥想训练之类的实践会钝化神经对刺激的反应。至于这是好事坏事就看人了。&lt;/p&gt;
@@ -786,7 +830,8 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 我有个游戏群，群友们很善良，愿意带我玩风暴英雄（一款 MOBA 游戏），我专职打野，他们团战 4v5，因为我凑团战只会第一个暴毙。
 打野会被对方抓，而我往往都跑不掉，当我问群友怎么办，群友说：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;意识。你练练意识。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;意识。你练练意识。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;意识，查了下对应英文是 awareness 这个词，比如养成关注小地图的习惯，英文叫 Map Awareness。
 意识也可以叫大局观，就是对（一场对局的）整体环境有意识地持续关注，接收游戏提供的多维度的信息，利用信息取得优势。
 竞技游戏大多都有这种概念。&lt;/p&gt;
@@ -800,7 +845,8 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 &lt;h2 id=&#34;以程序的视角看设计&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/program_awareness/#以程序的视角看设计&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/program_awareness/#contents:以程序的视角看设计&#34; class=&#34;headings&#34;&gt;以程序的视角看设计&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;共情，同理心，empathy，是从他人的参照系统中理解或感受他人正在经历的事情的能力，也就是运用理解力与想像力等，尝试（在想像中）将自身置于他人处境或所在“位置”的能力。
-&amp;ndash; &lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%90%8C%E7%90%86%E5%BF%83&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;维基百科：同理心&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&amp;ndash; &lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%90%8C%E7%90%86%E5%BF%83&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;维基百科：同理心&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;我能轻易地共情程序，共情到和同事商量接口时用“我”指代我负责的部分，“你”指代同事负责的部分。
 如果我发现需要把程序和人分开说时也会以模块名代指程序，不过目前为止这种说法即使是第一次沟通，也很容易就被同事理解接受。
 在本文中我会同时使用“程序”和“我”代表程序，让读者感受一下这种表达方式。&lt;/p&gt;
@@ -827,7 +873,8 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 &lt;blockquote&gt;
 &lt;p&gt;Any problem in computer science can be solved by another layer of indirection.
 （计算机科学领域的任何问题，都可以通过增加一个间接的中间层来解决。）
-&amp;ndash; David Wheeler (computer scientist)&lt;/p&gt;&lt;/blockquote&gt;
+&amp;ndash; David Wheeler (computer scientist)&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;一句实在的真理。&lt;/p&gt;
 &lt;p&gt;大致流程通不通，是我设计程序流程的出发点，这是对可行性的判断，流程得先通了，再去想实现细节。
 顺着程序的生命周期一步步想，带着动机想：&lt;/p&gt;
@@ -943,7 +990,8 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 &lt;h3 id=&#34;不可能收回发布出去的信息&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/program_awareness/#不可能收回发布出去的信息&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/program_awareness/#contents:不可能收回发布出去的信息&#34; class=&#34;headings&#34;&gt;不可能收回发布出去的信息&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;你看，就像风吹散了羽毛就不可能再捡起来一样，流言蜚语和诽谤一旦从我们嘴里说出来，就不可能再收集起来。
-&amp;ndash; &lt;a href=&#34;https://boholder.github.io/blogs/information-flies-in-the-wind-on-the-internet/&#34;&gt;预言故事《捡起鸡毛》&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&amp;ndash; &lt;a href=&#34;https://boholder.github.io/blogs/information-flies-in-the-wind-on-the-internet/&#34;&gt;预言故事《捡起鸡毛》&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;不能频繁破坏性变更 API，原因是你不知道 API 的消费方利用了你 API 响应中的哪些信息。
 我搜不到了，记得 Python 还是哪个语言，有个版本改变了标准库一个集合中排列元素顺序的算法（显然这个集合的功能本身是不保证顺序的），但是有公司提了 issue，说他们利用了该集合的内部元素顺序，现在逻辑一团乱。
 最近我参加了一个在线会议，组织会议的是我司的一个基础系统，它想改造内部保存数据的几张表结构，会对相关 API 返回数据的序列号的含义产生影响，拉个会通知各系统配合改造，我一看参会人数好几十，心想基础系统想做变更真是不容易&amp;hellip;&amp;hellip;&lt;/p&gt;
@@ -958,7 +1006,8 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 但是我有点担心下一代不会操作电脑，没有主动搜索思维，毫不在意地提供个人信息给平台，即，不了解信息的价值、不了解真正持有信息（保存到本地）的重要性。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;广告环节！&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;minecraft-access&lt;/a&gt; 是一个帮助视障者玩 Minecraft 的 mod。目前它的活跃开发者只有我和另一个人，而&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;新的需求和 bug&lt;/a&gt;又是那么多。如果你想通过开发 mod 来了解 Minecraft 运行逻辑的话，这 mod 绝对是你最棒的选择，因为要大量读并改游戏源码。如果你感兴趣，&lt;a href=&#34;https://boholder.github.io/blogs/join-minecraft-access-development/&#34;&gt;这篇文章&lt;/a&gt;多介绍了些项目情况，期望我们在 PR 页面和 issue 页面再见。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;minecraft-access&lt;/a&gt; 是一个帮助视障者玩 Minecraft 的 mod。目前它的活跃开发者只有我和另一个人，而&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;新的需求和 bug&lt;/a&gt;又是那么多。如果你想通过开发 mod 来了解 Minecraft 运行逻辑的话，这 mod 绝对是你最棒的选择，因为要大量读并改游戏源码。如果你感兴趣，&lt;a href=&#34;https://boholder.github.io/blogs/join-minecraft-access-development/&#34;&gt;这篇文章&lt;/a&gt;多介绍了些项目情况，期望我们在 PR 页面和 issue 页面再见。&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
             
             
@@ -1045,17 +1094,20 @@ of shutting down when exposed to overwhelming stress or pain by electric shock.&
 &lt;p&gt;在 event loop 方案中，阻塞 I/O 会 block 住当前运行该逻辑的工作线程。我找到了一句对 Python&lt;code&gt;asyncio&lt;/code&gt;库的辛辣评论：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Async is just a pretty face on single-threaded callback hell.
-&amp;ndash; Reddit user, Niicodemus &lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[5]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&amp;ndash; Reddit user, Niicodemus &lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[5]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这位的观点在上下文语境中是正确的。&amp;ldquo;a pretty face on callback hell&amp;rdquo;（真怀念，这是我求职时被问到的问题，下次我会这样回答），即 Python 的&lt;code&gt;async&lt;/code&gt;、&lt;code&gt;await&lt;/code&gt;关键字的一个作用是作为 callback 的语法糖&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[6]&lt;/a&gt;&lt;/sup&gt;。&lt;code&gt;asyncio&lt;/code&gt;库的 event loop 实现是单线程的&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[7]&lt;/a&gt;&lt;/sup&gt;，所以如果在使用&lt;code&gt;asyncio&lt;/code&gt;库的同时调用阻塞 I/O，整个都会卡住。最好调用&lt;a href=&#34;https://docs.python.org/3/library/asyncio-eventloop.html#executing-code-in-thread-or-process-pools&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;loop.run_in_executor(executor, func, *args)&lt;/code&gt;&lt;/a&gt;方法，在线程池中运行阻塞 I/O（或在进程池中运行 CPU
 bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
 &lt;h2 id=&#34;并非所有-event-loop-实现方案都是单线程实现&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#并非所有-event-loop-实现方案都是单线程实现&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#contents:并非所有-event-loop-实现方案都是单线程实现&#34; class=&#34;headings&#34;&gt;并非所有 event loop 实现方案都是单线程实现&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;另外，Event loop 结构在不同实现方案中处于不同的位置。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;(In Netty,) The event loop runs continuously in a single thread, although we can have &lt;strong&gt;as many event loops as the number of available cores&lt;/strong&gt;.&lt;sup id=&#34;fnref:8&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:8&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[8]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;(In Netty,) The event loop runs continuously in a single thread, although we can have &lt;strong&gt;as many event loops as the number of available cores&lt;/strong&gt;.&lt;sup id=&#34;fnref:8&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:8&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[8]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Java 生态下的&lt;code&gt;Spring WebFlux&lt;/code&gt;作为一个 web application 框架，可使用多种 web server 作为底层依赖。其中&lt;code&gt;Netty&lt;/code&gt;是一种实现了非阻塞 I/O 的 web client/server 框架，提供 TCP、UDP、HTTP 协议的非阻塞实现。使用&lt;code&gt;Netty&lt;/code&gt;编写 web server 时，需要声明两类线程，接收请求的线程（boss）和处理请求的线程（worker）。每一个线程中都存在一个 event loop，被作为&lt;code&gt;EventLoopGroup&lt;/code&gt;统一管理（因而我们要&lt;a href=&#34;https://netty.io/wiki/user-guide-for-4.x.html#wiki-h3-5&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;为一个 web server 声明&lt;/a&gt;&lt;code&gt;bossGroup&lt;/code&gt;和&lt;code&gt;workerGroup&lt;/code&gt;两个&lt;code&gt;EventLoopGroup&lt;/code&gt;&lt;sup id=&#34;fnref:9&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:9&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[9]&lt;/a&gt;&lt;/sup&gt;）。&lt;code&gt;WebFlux&lt;/code&gt;库拥有类似&lt;code&gt;asyncio&lt;/code&gt;库&lt;code&gt;loop.run_in_executor()&lt;/code&gt;方法的&lt;a href=&#34;https://spring.io/blog/2019/12/13/flight-of-the-flux-3-hopping-threads-and-schedulers#the-publishonscheduler-s-operator&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;publishOn(Scheduler s)&lt;/a&gt;方法，将当前调用链的后续步骤移到另一个&lt;code&gt;Scheduler&lt;/code&gt;（即另一个线程池）中运行。&lt;/p&gt;
 &lt;p&gt;JavaScript 语言被定义为一个“单线程”语言&lt;sup id=&#34;fnref:10&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:10&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[10]&lt;/a&gt;&lt;/sup&gt;，它&lt;em&gt;应当&lt;/em&gt;被执行在单线程环境中（但是书面约定并不阻止你多线程执行 JavaScript 代码）。JavaScript 引擎是负责解释并执行 JavaScript 代码的程序，大多数引擎（比如 Chrome V8）遵守了单线程执行的约定（除了 Rhino 引擎&lt;sup id=&#34;fnref:11&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:11&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[11]&lt;/a&gt;&lt;/sup&gt;）。如果你在前端 JavaScript 代码中调用阻塞 I/O，由 JavaScript 事件驱动的 UI 将无法响应用户操作&lt;sup id=&#34;fnref:12&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:12&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[12]&lt;/a&gt;&lt;/sup&gt;，因为 event loop 始终无法空闲下来并处理下一个事件。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Node.js uses a small number of threads to handle many clients. In Node.js there are two types of threads: &lt;strong&gt;one Event Loop&lt;/strong&gt; (aka the main loop, main thread, event thread, etc.), and a pool of k Workers in a Worker Pool (aka the threadpool).&lt;sup id=&#34;fnref:13&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:13&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[13]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Node.js uses a small number of threads to handle many clients. In Node.js there are two types of threads: &lt;strong&gt;one Event Loop&lt;/strong&gt; (aka the main loop, main thread, event thread, etc.), and a pool of k Workers in a Worker Pool (aka the threadpool).&lt;sup id=&#34;fnref:13&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:13&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[13]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;Node.js&lt;/code&gt;基于 V8 引擎和&lt;code&gt;libuv&lt;/code&gt;库，生成一个 Worker Pool（基于一个 kernel-level thread pool&lt;sup id=&#34;fnref1:12&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:12&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;12&lt;/a&gt;&lt;/sup&gt;，这个线程池是由&lt;code&gt;libuv&lt;/code&gt;库调用系统调用申请创建的&lt;sup id=&#34;fnref:14&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:14&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[14]&lt;/a&gt;&lt;/sup&gt;）来处理所有逻辑&lt;sup id=&#34;fnref:15&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#fn:15&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[15]&lt;/a&gt;&lt;/sup&gt;。因此在 Node.js 所运行的代码中调用阻塞 I/O 的行为将仅仅阻塞当前运行这段逻辑的 worker，其他 worker 仍将正常运行。但&lt;code&gt;Node.js&lt;/code&gt;只有一个 event loop 调度全部 worker。&lt;/p&gt;
 &lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#总结&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/event-loop-and-multithread-in-python/#contents:总结&#34; class=&#34;headings&#34;&gt;总结&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;对三种并发方案的选择变得很简单，简单到不会忘记：&lt;/p&gt;
@@ -1165,7 +1217,7 @@ bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
                 <content type="html">&lt;p&gt;我本来以为这是程序员职业的某种被动特性，但我意识到很多同行对程序触发事件和执行时序并不太关注。在这篇文章中，我想解释为什么我们作为程序员要关注这些东西，这样做有什么好处。&lt;/p&gt;
 &lt;h2 id=&#34;程序何时被触发&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/execution_event/#程序何时被触发&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/execution_event/#contents:程序何时被触发&#34; class=&#34;headings&#34;&gt;程序何时被触发&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;假如你不慎从网络上下载下来一个病毒，它现在已经被保存到你的本地磁盘上了。现在事情完蛋了吗？还没有，它还没被执行呢，把它删了就行（最好用那种文件粉碎工具）。我们的电脑是&lt;a href=&#34;https://en.wikipedia.org/wiki/Von_Neumann_architecture&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;冯·诺伊曼结构&lt;/a&gt;，在硬盘（与内存）中，程序与数据被同等看待并存储，存在于硬盘上的程序还没有被执行。我猜做网络安全的朋友们对这个比较熟悉，一次成功的代码执行漏洞攻击中必然包含恶意载荷的成功执行。&lt;/p&gt;
-&lt;p&gt;你一定被那种&lt;a href=&#34;https://www.google.com/search?q=classic&amp;#43;jump&amp;#43;scare&amp;#43;flash&amp;#43;game&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;整蛊 Flash 游戏&lt;/a&gt;吓到过吧（没有？好吧，可能这个例子太老了）。如果你在 jump scare 场景触发前关闭游戏，你就安全了，无事发生。Flash 游戏已经运行在你的浏览器里了（即，这个游戏的所有代码已经存在于内存中），但这并不代表 jump scare 场景（一段特定的代码）一定会被你的操作触发。&lt;/p&gt;
+&lt;p&gt;你一定被那种&lt;a href=&#34;https://www.google.com/search?q=classic+jump+scare+flash+game&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;整蛊 Flash 游戏&lt;/a&gt;吓到过吧（没有？好吧，可能这个例子太老了）。如果你在 jump scare 场景触发前关闭游戏，你就安全了，无事发生。Flash 游戏已经运行在你的浏览器里了（即，这个游戏的所有代码已经存在于内存中），但这并不代表 jump scare 场景（一段特定的代码）一定会被你的操作触发。&lt;/p&gt;
 &lt;h2 id=&#34;程序触发事件和执行时序&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/execution_event/#程序触发事件和执行时序&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/execution_event/#contents:程序触发事件和执行时序&#34; class=&#34;headings&#34;&gt;程序触发事件和执行时序&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;“程序触发事件”这个名词是我自己胡诌的，指“触发一段程序执行的事件”，很简单的定义，但我没找到现成的符合定义的术语。也许在合适的语境下（比如&lt;a href=&#34;https://en.wikipedia.org/wiki/Event-driven_architecture&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;“事件驱动框架”&lt;/a&gt;），单“事件”一词便体现了这个含义，我们下文也用“事件”代替这个词。&lt;/p&gt;
 &lt;p&gt;在图形用户界面应用中，用户操作是事件；在服务器中，外部请求是事件；在计划执行系统中，系统作为触发定时任务的事件。不同的程序主体可以链式地触发彼此，比如著名的面试问题——&lt;a href=&#34;https://github.com/alex/what-happens-when&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;“当你在浏览器的地址框中输入 google.com，然后按回车键时会发生什么？”&lt;/a&gt;，哇，真的是好大一串。我觉得从这个角度看，待在内存里的程序有点像神经系统：它是活的（一部分持久运行的逻辑在主动地时刻监听着事件），但是处于一种待机状态。事件将激活它的（与事件所对应的一部分）处理逻辑，待逻辑执行完，它便又回到待机状态。&lt;/p&gt;
@@ -1180,7 +1232,8 @@ bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;广告环节！&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;minecraft-access&lt;/a&gt;是一个帮助视障者游玩 Minecraft 的 mod。目前它的活跃开发者只有我一个人，而&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;新的需求和 bug&lt;/a&gt;又是那么多。如果你想通过开发 mod 来了解 Minecraft 运行逻辑的话，这 mod 绝对是你最棒的选择。如果你感兴趣，期望我们在 PR 页面和 issue 页面再见。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;minecraft-access&lt;/a&gt;是一个帮助视障者游玩 Minecraft 的 mod。目前它的活跃开发者只有我一个人，而&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;新的需求和 bug&lt;/a&gt;又是那么多。如果你想通过开发 mod 来了解 Minecraft 运行逻辑的话，这 mod 绝对是你最棒的选择。如果你感兴趣，期望我们在 PR 页面和 issue 页面再见。&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
             
             
@@ -1230,7 +1283,7 @@ bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
             
                 <content type="html">&lt;h2 id=&#34;缘起&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#缘起&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:缘起&#34; class=&#34;headings&#34;&gt;缘起&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;之前拜读了&lt;a href=&#34;https://justinyan.me/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;枫影 Justin Yan&lt;/a&gt;写的博客&lt;a href=&#34;https://justinyan.me/post/5790&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《每个人每天都只有 24 小时，希望我的选择真的是我的选择》&lt;/a&gt;，里面提到了一本讲佛教核心理念的书：《正见》。之前上学遇到心理困难时，是佛教把我从边缘拉回来嘱咐我好好生活的。最近工作生活碰到了一些事实困难，找不到务实的解决方案，我心想是时候认真读读佛了，不说求得多大效用，至少自我开导落个心理安慰。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://book.douban.com/subject/27136747&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《正见》&lt;/a&gt;，英文书名 What Makes You Not a Buddhist，2007 年出版，作者：&lt;a href=&#34;https://www.google.com/search?q=%E5%AE%97%E8%90%A8%E8%92%8B%E6%89%AC%E9%92%A6%E5%93%B2%E4%BB%81%E6%B3%A2%E5%88%87&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;宗萨蒋扬钦哲仁波切&lt;/a&gt;。摘自译者序：“以最简单的语言，来说明佛教最核心的四法印见地，因此，中文的翻译也尽量采取日常而单纯的词汇。”这本书指出佛教的核心理念非常简单，就是四法印（从&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BD%9B%E6%95%99&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;维基百科&lt;/a&gt;可知，这四条是大乘佛教&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%B8%89%E6%B3%95%E5%8D%B0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;三法印&lt;/a&gt;和上座部佛教&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%B8%89%E7%9B%B8_%28%E4%BD%9B%E6%95%99%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;三相&lt;/a&gt;的并集），其他的各种经典或教派都是为了达成证悟正果的不同方法。然后针对每一条引经据典解释给读者。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://book.douban.com/subject/27136747&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《正见》&lt;/a&gt;，英文书名 What Makes You Not a Buddhist，2007 年出版，作者：&lt;a href=&#34;https://www.google.com/search?q=%E5%AE%97%E8%90%A8%E8%92%8B%E6%89%AC%E9%92%A6%E5%93%B2%E4%BB%81%E6%B3%A2%E5%88%87&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;宗萨蒋扬钦哲仁波切&lt;/a&gt;。摘自译者序：“以最简单的语言，来说明佛教最核心的四法印见地，因此，中文的翻译也尽量采取日常而单纯的词汇。”这本书指出佛教的核心理念非常简单，就是四法印（从&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%BD%9B%E6%95%99&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;维基百科&lt;/a&gt;可知，这四条是大乘佛教&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%B8%89%E6%B3%95%E5%8D%B0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;三法印&lt;/a&gt;和上座部佛教&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%B8%89%E7%9B%B8_(%E4%BD%9B%E6%95%99)&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;三相&lt;/a&gt;的并集），其他的各种经典或教派都是为了达成证悟正果的不同方法。然后针对每一条引经据典解释给读者。&lt;/p&gt;
 &lt;p&gt;《正见》读完，我似懂非懂，还想再读一些。那么我怎样才能继续获取悉达多（佛陀、如来，下文沿用此称呼）的“第一手”教诲，又避开根本看不下去的佛经呢？我决定了解悉达多的生平，从侧面角度看看他是在什么环境下悟出这些道理的，输入决定输出嘛。&lt;/p&gt;
 &lt;p&gt;之后我便找到了&lt;a href=&#34;https://m.douban.com/book/subject/25819842/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《佛陀传》（直译《故道白云》）&lt;/a&gt;，英文名 Old Path White Clouds，1987 年出版，作者：&lt;a href=&#34;https://www.google.com/search?q=%E4%B8%80%E8%A1%8C%E7%A6%AA%E5%B8%AB&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;一行禅师&lt;/a&gt;。译者序：“直接取材自二十四本巴利文、梵文以及中文的佛典。作者把佛陀一生的主要事迹和言教，透过佛陀八十年不平凡的经历，从一个看牛童缚悉底与佛陀的一段因缘，一一引述出来。”。这本书也写得很白话易读，而且确实解答了我不少的疑惑，比如刚提到的“悉达多在什么环境下开悟的”，还有读《正见》时想到的“佛教是怎么从一个人的简单理念演化到繁多的经典和规矩的”。&lt;/p&gt;
 &lt;p&gt;两本书读完，我确实从中找到了应对现在遇到的困难的心理解决方案，拿着“诸事无常”、“诸漏皆苦”等去“解释”碰到的困难，很万能很方便。不知道是否是个例，我接受佛教观念的阻力很小，大概和我的兴趣、职业、经历都有关，我能轻易从切身经历中找到佐证书中观念的例子。我只怕这种近乎盲信的态度会让我浮于表面，阻碍我真正深入地理解其精髓。目前我也无法身体力行地遵守其观念，知道和做到是两码事。下一步我打算接着读枫影在博客中提到的&lt;a href=&#34;https://book.douban.com/subject/3910883/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《观呼吸》&lt;/a&gt;并尝试一下冥想，希望真正将观念应用到行动上，这对我和我身边的人都有益处。&lt;/p&gt;
@@ -1241,7 +1294,8 @@ bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
 &lt;p&gt;悉达多的重点是要直探问题的根源。佛教是不受文化所限制的，它的利益不局限于某个特定的社会。悉达多对学术论述和科学论证没有兴趣，地球到底是圆的还是扁的，他也不关心。他关切的是另一种实际性，他想直探痛苦之源。我希望可以让大家了解，他的教法不是让你读完后放回书架上的哲学巨著，而是每一个人都能修持的、既可行又合理的见地。
 —— 《正见》&lt;/p&gt;
 &lt;p&gt;佛陀答道：“阿难陀，我所教的空无自性，是用来引导禅修的，它并不可以当作一种学说教论。如果把它这样看待，便很容易纠缠其中。我常说教理只是用来渡河到对岸的木筏，又或指向月光的手指，我们是不应该被教理缚住的。瓦卡瞿他头陀想把我说的当作学说看待，但无论是关于‘我’或‘无我’，我都不想见他被困于其中。如果我告诉他有个‘我体’，那便与我所教的互相违背；如果我告诉他‘没有我体’，而他却执著此说，这也对他无益。因此，我认为不答他比答他要适当。人们以为我不懂答这些问题，总比他们被困于边见狭见为好。”
-—— 《佛陀传》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《佛陀传》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;佛教的核心理念很简单&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#佛教的核心理念很简单&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:佛教的核心理念很简单&#34; class=&#34;headings&#34;&gt;佛教的核心理念很简单&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;《正见》里是这样总结核心理念（四法印）的：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1255,13 +1309,15 @@ bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
 &lt;p&gt;如果你认为，并非一切和合或造作的事物都是无常，你认为有某些基本的元素或概念是恒常的，那么你就不是佛教徒。&lt;/p&gt;
 &lt;p&gt;如果你不能接受一切情绪都是痛苦的，如果你相信实在有某些情绪是纯然愉悦的，那么你就不是佛教徒。&lt;/p&gt;
 &lt;p&gt;如果你不能接受一切现象都是如幻而性空的，如果你相信有某些事物确实本具自性而存在，那么你就不是佛教徒。&lt;/p&gt;
-&lt;p&gt;如果你认为证悟存在于时间、空间及能力的场域之内，那么你就不是佛教徒。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;如果你认为证悟存在于时间、空间及能力的场域之内，那么你就不是佛教徒。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;我试着把四圣印连起来解释一下，但非常建议读两书原文去理解，我的解释和原文的信息量和文笔差别太大了。&lt;/p&gt;
 &lt;h3 id=&#34;诸法无我&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#诸法无我&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:诸法无我&#34; class=&#34;headings&#34;&gt;诸法无我&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;一切事物都不能独立从无中显现，而是由其他事物结合出现，也不能在消亡时归于无，而是衍生到其他事物上。可以类比&lt;a href=&#34;https://zh.wikipedia.org/zh-cn/%E9%81%93%E5%AE%B6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;道家&lt;/a&gt;或者&lt;a href=&#34;https://zh.wikipedia.org/zh-cn/%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;唯物主义&lt;/a&gt;，讲究一个你中有我我中有你，万事万物都联系在一起。大概也可以把物质守恒也作为论据，从基本粒子层面上讲没有事物是独自产生或湮灭的。心灵上的事物更是因“触景生情”而起。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;组成玩家的原子散布在草中，河流中，在那空气中，也在那大地中。一个女性收集了那些原子；她饮用、进食、吸入；而后那女性在她的身体中，孕育了玩家。&lt;/p&gt;
-&lt;p&gt;—— &lt;a href=&#34;https://zh.wikisource.org/wiki/%E7%B5%82%E6%9C%AB%E4%B9%8B%E8%A9%A9&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;终末之诗&lt;/a&gt; from Minecraft&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;—— &lt;a href=&#34;https://zh.wikisource.org/wiki/%E7%B5%82%E6%9C%AB%E4%B9%8B%E8%A9%A9&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;终末之诗&lt;/a&gt; from Minecraft&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;诸行无常&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#诸行无常&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:诸行无常&#34; class=&#34;headings&#34;&gt;诸行无常&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;认可“诸法无我”，“诸行无常”就很容易认可：没有事物会恒常存在或恒常不存在。比如那句“唯一不变的是永远在变”，搜不到出处，但是我肯定《周易》和&lt;a href=&#34;https://zh.wikipedia.org/zh-cn/%E8%BE%A9%E8%AF%81%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;辩证唯物主义&lt;/a&gt;都有类似的论调。或者&lt;a href=&#34;https://en.wikipedia.org/wiki/Murphy%27s_law&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;墨菲定律&lt;/a&gt;、&lt;a href=&#34;https://zh.wikipedia.org/zh-cn/%E7%84%A1%E9%99%90%E7%8C%B4%E5%AD%90%E5%AE%9A%E7%90%86&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;猴子用打字机打出《哈默雷特》&lt;/a&gt;
 基于概率学，无限时间尺度下小概率事件也会发生，这些也支持“没有事物恒常不存在”的观点。比较有意思的是我最近了解到投资界的人比较信佛，大概是大盘这种混沌的东西实在太符合“无常”的特征了。&lt;/p&gt;
@@ -1269,31 +1325,37 @@ bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
 &lt;p&gt;“诸漏皆苦”就是&lt;strong&gt;仍然&lt;/strong&gt;不了解“诸法无我”、“诸行无常”的道理的人，因事物的变化而自顾自地产生各种情绪，或者期望通过主观能动性能够&lt;strong&gt;确定性地&lt;/strong&gt;保证一些结果。而且这个道理还比较难承认，它暗含了放弃对“自我确实存在”的认可：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;悉达多了悟到，不论是在身体里或外，都找不到一个独立存在的实体，足以被称为自我。如同火圈的视觉错幻一般，自我也是虚幻的。它是谬误的，基本上错误，而究竟上不存在。但是如同我们会被火圈所迷惑一般，我们也全都被自我所迷惑了。执着于谬误的自我，是无明的荒谬行为。它不断地制造更多的无明，导致了各种痛苦和失望。&amp;hellip;当悉达多发现没有自我，他也发现没有根本存在的邪恶，而只有无明。他特别地深思无明如何创造出自我的标签，将它附着于完全没有根基的和合现象上，加以重要性，然后拼命地去保护它。他发现，这个无明直接导致痛苦和伤害。&lt;/p&gt;
-&lt;p&gt;我们自以为可以爬到阶梯的顶端，或自以为搭乘的飞机即将顺利起飞而且会平安抵达，唯一理由是我们在享受着无明的喜乐。但是这不会长久，因为无明的喜乐只不过是不断高估对自己有利的可能性，以及低估障碍而已。当然，因缘会和合，事情会如愿发生，但是我们却把这种成功视为理所当然。我们把它当作证据，认为事情就该如此，认为我们的假设是有根据的。然而，这样的假设只不过是喂养误解的食物。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;我们自以为可以爬到阶梯的顶端，或自以为搭乘的飞机即将顺利起飞而且会平安抵达，唯一理由是我们在享受着无明的喜乐。但是这不会长久，因为无明的喜乐只不过是不断高估对自己有利的可能性，以及低估障碍而已。当然，因缘会和合，事情会如愿发生，但是我们却把这种成功视为理所当然。我们把它当作证据，认为事情就该如此，认为我们的假设是有根据的。然而，这样的假设只不过是喂养误解的食物。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这个佛教有个专用名词叫“无明”，仍然没明白（道理）。上文提到的哲学家对于“本质”的执着，悉达多也归类为“无明”：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;所有这些不同的情绪及其结果，都来自于错误的理解，而这个误解来自一个源头，也就是所有无明的根源——执着于自我。&amp;hellip;无明单纯的就是不了解事实，或对事实了解不正确，或认识得不完整。所有这些形式的无明，都导致误解和误判，高估和低估。
-—— 《正见》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《正见》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;如果你说爱是纯粹的快乐，那么所爱之物受损时便因爱生苦。证悟后的慈悲之爱和慈悲之苦的情绪也在苦的范围内，苦不一定是坏事：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;过了一会儿，他（波斯匿王）抬头对佛陀说：“我很感激你赠给我多方面的至理名言。但仍有一件事困扰着我。你说基于执欲之爱会带来痛苦烦恼，而基于慈悲之爱可带来平和幸福。我虽然看到慈悲之爱的无私和不自利，但我仍认为它会有痛苦烦恼。我爱我的人民。当他们受到如风灾水患等天然灾害的摧残时，他们的痛苦我也感同身受。我相信你也会这样反应。你看到别人生病或死亡时，你一定也感到痛苦。”&lt;/p&gt;
 &lt;p&gt;“又是一个很好的问题。你将会更深入地了解慈悲的体性。首先，你应该知道因执欲之爱所带来的痛苦，要比因慈悲带来的痛苦多上千倍。有两种痛苦需要辨别——一种是完全没用并且纷扰身心的，而另一种则是滋长关怀和责任感的。在面对别人受苦的情形时，基于慈悲的爱，可以供给我们做出正面反应的能量；而基于执欲之爱，则只会制造多一些焦虑和痛苦。慈悲实在是最有效救援行动的能源。大王！慈悲是必要的。慈悲心所产生的苦痛，是一种有能力帮助别人的痛苦。任何不能体会他人痛苦的人，根本不屑为人。&lt;/p&gt;
 &lt;p&gt;“慈悲是了解的果实。修习觉察之道就是要体证生命的实相。这实相就是无常。一切都没有永恒和个别的自体。一切总有一天会成为过去。当一个人看清事物的无常之性，他的视线便会变得平静和谐。无常的存在不会为他的身心带来困扰。因此，慈悲所引致的痛苦感觉，没有其他痛苦来得沉重苦涩。慈悲之苦，只会增加一个人的力量。大王！你今天已闻得解脱之道的基本纲领。另一天，我会再和你分享更多的法要。”
-—— 《佛陀传》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《佛陀传》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;涅槃寂静&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#涅槃寂静&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:涅槃寂静&#34; class=&#34;headings&#34;&gt;涅槃寂静&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;最后总结，“涅槃寂静”，看开了这一切就好啦。从&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%B6%85%E6%A7%83&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;维基百科&lt;/a&gt;发现，现今各教派对此句的解释是指：带着已证悟的观念入灭（去世），就能进入一种很厉害的终极状态。冒昧地说，这种解释非常不接地气，宗教味很浓，希望这只是表明对死者的尊敬。而且根据读的两本书，涅槃是描述已证悟的状态，证悟的当时既入“涅槃”：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;涅槃就是去除贪、嗔、痴。它是平和、喜悦和自由的出现。&lt;/p&gt;
 &lt;p&gt;许多人都想逃离贫困，追逐富贵。修道者则会抗拒生死，以能获得解脱。但既然一切法都是相间存在着，相互而通，那我们又怎可能舍此逐彼？生死之内有涅槃，涅槃之内有生死，生死与涅槃不是个别的实体。如果你们排斥生死以逐涅槃，你们便没有掌握到万法互依互缘之性体了，你们便还未有掌握到一切法的‘无相’与‘空’性。
-—— 《佛陀传》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《佛陀传》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;姬儿沉稳、正常，而且知道杰克以为自己看到了一条蛇。她可以开灯，跟他解释这儿并没有蛇，事实上只是一条领带。当杰克知道自己是安全的，这种解放就是佛教徒所说的涅槃（nirvana）——解脱与自由。但杰克的解放是根基于一个虚假的威胁的消除。本来就没有蛇，本来就没有任何会造成他受苦的东西。&lt;/p&gt;
 &lt;p&gt;根据佛教徒的说法，在悉达多证悟成佛的这一世之前，他曾有无数世投生为鸟、猴子、大象、国王、王后，而且其中有许多世身为菩萨，其唯一的目标就是征服无明因而得以利益一切众生。而最终，在他生为印度太子悉达多的这一世，终于在菩提树下击败了魔王魔罗，抵达彼岸，轮回的对岸。这个状态称作涅槃。证得涅槃后，他在靠近瓦拉纳西的鹿野苑初转法轮，而且终其一生在北印度地区持续教法。
-—— 《正见》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《正见》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;或者带着证悟死亡是指更厉害的“究竟涅槃”境界：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;然而他并没有变为长生不老。经过了长期的教法，他在拘尸那城圆寂了。此时，他更超越了涅槃，而到达称为究竟涅槃（胜涅槃，parinirvana）的境界。
-—— 《正见》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《正见》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这里只是忠实地记录我发现的解释偏差，但是如上文所说，悉达多本人大概是不会理会这种概念争论的。这一大节提供的各种论据都是为了帮助理解道理而列举的，尊重悉达多不愿使他的道理被看作有理论支持的学说。&lt;/p&gt;
 &lt;h2 id=&#34;佛教有什么用&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#佛教有什么用&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:佛教有什么用&#34; class=&#34;headings&#34;&gt;佛教有什么用&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;那如果证悟了“诸事无常”等的道理，我们是不是就感觉一切都无所谓了？功利地来看，相信佛法（对个人）有什么用？这大概是一个常见的疑问，也是我在读两本书之前期望被解答的一个问题。很高兴我在书中从很多角度找到了答案。我嘴笨，所以这一大节我会借用书中的连珠妙语阐释观点。&lt;/p&gt;
@@ -1305,29 +1367,34 @@ bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
 &lt;p&gt;这并不是说你必须远离社会。了解空性并非表示你变得漠不关心；事实上，相反的，你生起了一种责任感和慈悲心。如果杰克在那儿吼叫、失态，叫骂每个人不要将蛇放在屋子里，而你知道这是来自他的迷惑，就会对他产生同情心。其他人可能不会这么容易原谅他，那么你就可以试着开一点灯。在粗略的层次上而言，你还是会争取你个人的权益，继续上班，在体制内活跃于政治领域，但当情况改变时，不论是对你有利还是不利，你会有备而来。你不会盲目地相信所有的希望和期待会实现，你也就不会被结果所束缚。
 —— 《正见》&lt;/p&gt;
 &lt;p&gt;一直以来，这全部的目标都是为了逃避世间的感觉和念头，逃避感受和思想的世界。他现在问自己：“为何总是被经典上的传统牵着走？为何要惧怕禅定带来的自在？这种喜悦与障敝觉知的五欲是迥然不同的。相反，这种喜悦会滋养身心和增强达至开悟的原动力。”
-—— 《佛陀传》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《佛陀传》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;善待身体&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#善待身体&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:善待身体&#34; class=&#34;headings&#34;&gt;善待身体&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;佛教徒不是苦修士，而且悉达多也反对苦修，甚至有个接受羊奶供养并且被同行的苦修士朋友们排斥的典故。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;许多对佛陀的教法不甚了解的人，认为佛教是病态的，他们认为佛教徒否定快乐，只想到痛苦。他们设想佛教徒排斥美丽及身体的享受，因为这些是诱惑；佛教徒应该是纯净而节制的。事实上，在悉达多的教法中，并不特别反对美丽和享乐甚于其他的任何概念——只要我们不认为它们是真实存在的，而迷失其中。
 —— 《正见》&lt;/p&gt;
 &lt;p&gt;终于有一天，悉达多在坟场禅坐时，突然醒觉到这条苦行之道是绝对错误的。太阳落山了，一阵清风轻抚他的体肤。在烈日之下坐了一整天，这阵微风来得特别清新舒畅。悉达多体验到他心内一种整天都未感受过的怡然自在。他体会到身和心组合成一个不可分割的实体。身体的平静和舒适与自心的安住是息息相关的。虐待自己的身体就是虐待自己的心智。
-—— 《佛陀传》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《佛陀传》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;但是书中还提到了悉达多认可苦修作为一种达成证悟的方法：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;虽然悉达多不能以挥挥魔杖或某种神力来抹去痛苦，但在开灯这件事情上，他是非常善巧的。他提供了许多道路和方法来发现真相。事实上，在佛教中有成千上万的道路可循。为何不把它们简化成一种方法呢？正如不同的疾病需要不同的药方一样，对不同的习气、文化及态度，不同的方法是必要的。走哪一条路，需要看弟子的心态以及上师所具有的善巧而定。悉达多没有一开始就用空性来惊吓大家，反而以一般的方式，诸如禅定以及行为规范——做正确的事、勿盗窃、勿妄言等来教导众多的弟子。根据弟子的本性，他定下了不同程度的出离及苦行，从削发到不食肉等。对一开始无法听闻或了解空性的人，以及天性适合苦修的人而言，这些状似宗教性的严格道路很有效。
-—— 《正见》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《正见》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;但是这只是方法，不是目的：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;你也许会认为这是矛盾的。佛陀自我矛盾，说他不存在，一切皆是空性，然后他又教导了道德和救赎。然而这些方法是必要的，以免吓走那些尚未准备好，还不能被引介空性的人。他们用了这些方法，因而变得祥和，易于接受真正的教法。这就如同说那里是有一条蛇，然后把领带丢到窗外一般。这些无限的方法就是道路。然而，道路本身终究也需要被抛弃，如同你抵达河岸时，就得抛弃舟一般。你抵达时必须要下船。在完全证悟的那一刻，你必须抛弃佛教。精神之路是一个暂时的解答，它是在空性被了悟之前所使用的安慰剂（placebo）。
-—— 《正见》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《正见》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;获得平静&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#获得平静&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:获得平静&#34; class=&#34;headings&#34;&gt;获得平静&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;你可能还会想，了解空性的益处是什么？借由了解空性，你可以继续欣赏一切看似存在的事物，却不会把这些幻象当作真实而产生执着，不会有孩童追逐彩虹时一再的失望。你看穿这些幻象，因而能提醒自己从一开始这就是自我创造出来的。也许你还是会被刺激或变得情绪化、悲伤、气愤或热情，但是你会有信心，如同一个看电影的人，可以放下剧情走出戏院，因为他充分了解这只不过是一场电影。你的期待和恐惧至少会稍许淡化，就好像了解那条蛇只不过是条领带而已。&lt;/p&gt;
 &lt;p&gt;当我们尚未证得空性，当我们不完全领悟一切事物都是幻象时，这世界会看起来非常真切、实在而坚固。我们的期待与恐惧也会变得坚实而无法控制。举例来说，如果你对自己的家庭有坚实的信念，就会对双亲会照顾你这件事有深切的期待。对街上的陌生人你不会有这种想法，他没有这种义务。了解和合现象以及了解空性，能在亲情关系当中容下一些空间。当你开始了解塑造了你双亲的各种经验、压力及情况，你对他们的期待会改变，失望也会减少。当我们自己成为父母，只要稍微了解相互依存的道理，都会有效地软化我们对儿女的期待，也可能因而让他们视为爱。没有这种了解，我们可能有良善的动机去爱护和照顾儿女，但是我们的期待和要求可能会令他们难以忍受。&lt;/p&gt;
 &lt;p&gt;相同的，了解空性，你会对社会当中忽而建构、忽而解构的一切装饰和信仰失去兴趣——诸如政治系统、科技、世界经济、自由社会、联合国等。你就会像一个成年人，不再对孩童的游戏有多大的兴趣。这么多年来，你曾信赖这些机构，而且相信它们能成就过去制度之所不能。然而这世界并未变得更安全、更愉快或更安定。&lt;/p&gt;
 &lt;p&gt;我们像是沙滩上的儿童，忙着堆造沙堡，而圣者恰如在阳伞下望着我们的成年人。儿童们为自己所创造的东西着迷，为了贝壳和铲子争吵，被拍上岸的浪头惊吓。他们经历各种各样的情绪。但成年人躺在附近，啜饮着椰子鸡尾酒，只是观看着，没有批判，不因为沙堡建得好而得意，也不因为有人意外踩到烽火塔而生气或悲伤。他们不像儿童一般地纠缠在戏剧之中。我们还想要求什么更好的证悟呢？
-—— 《正见》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《正见》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;尽人事听天命&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#尽人事听天命&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:尽人事听天命&#34; class=&#34;headings&#34;&gt;尽人事听天命&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;认同不确定性的必然性后，我们便可放弃对确定性结果的执着。同时如果知道的因缘信息足够多，时机又还来得及，我们便可发挥主观能动性调整因缘，进而影响结果。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1337,11 +1404,13 @@ bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
 &lt;p&gt;当你能够觉察不确定性，当你确信这些相关联的成分不可能保持恒常与不变时，就能生起无畏之心。你会发现，自己真正可以准备好面对最坏的状况，同时又能容许最好的状况发生。你会变得高贵而庄严。这种特质能增强你的能力，不论是在工作、作战、谈和、组织家庭中，或是在享受爱和情感关系中。知道下个转弯处就有某件事等着你，接受从此刻起有无限的可能存在，你将学会运用遍在的觉性和预见的能力，如同英明的将军一般，胸有成竹，毫不惊慌。&lt;/p&gt;
 &lt;p&gt;我们能认清因缘的不稳定，就会了解自己有力量转化障碍，并且完成不可能的任务。生活中的各个层面都是如此。如果你现在没有一辆法拉利，你完全有可能创造出因缘而拥有一辆。只要世上有法拉利，你就有机会去拥有它。同样的，如果你想活久一点，可以选择不抽烟和多运动。合理的希望是存在的。而绝望，和它的反面——盲信一样，都是相信恒常的结果。&lt;/p&gt;
 &lt;p&gt;你不只可以改变外在的物质世界，也能改变内在的情绪世界。例如，经由放下野心，将焦躁的心转化，让它趋于平静；或者为人和蔼，乐善好施，以便营造好名声。如果我们都能训练自己去设身处地为他人着想，就能在家庭、邻里、国际间增长和平。
-—— 《正见》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《正见》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;活在当下&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#活在当下&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:活在当下&#34; class=&#34;headings&#34;&gt;活在当下&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;大部分的时间，我们都在想延续好的东西，或者想在未来用更好的来取代它；或者我们沉溺于过去，忆念着曾经快乐的时光。讽刺的是，我们事实上并未曾真正珍惜过我们所怀旧的那个经验，因为我们正于恐惧中忙着攀执于期望。
-—— 《正见》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《正见》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;《佛陀传》中写，“下午和晚上，都是用来禅修的”。每天这么长时间内省，都思考的什么？那根据“输入决定输出”的道理，结合我了解的现代冥想的方法，大概就是不断反刍自己过去的经历（输入）并留心观察分析反刍时的思绪。还好他们不用担心经历会用光或训练过拟合，就像&lt;a href=&#34;https://en.wikipedia.org/wiki/Generative_adversarial_network&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;生成对抗网络&lt;/a&gt;一样，本性的思绪和禅修得到的觉察心不断对抗，使得觉察心越来越强，思绪越来越清明。若分不出专门用来冥想的时间，认真生活也有一样的效果。参考《佛陀传》中提到一个悉达多用吃橘子为例子教导儿童的故事：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“孩子们，留心吃橘子的意思，就是要吃它时真正地与橘子接触和沟通，你的心没有思念着昨天或明天，只是全神贯注地投入这一刻。这时那橘子才真正存在。生活得念念留心专注，就是要活在当下，身心都投进此时此处。&lt;/p&gt;
@@ -1349,7 +1418,8 @@ bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
 &lt;p&gt;乔达摩望着善生，叫她的名字。“导师，有什么事吗？”善生合上掌来。“你认为一个生活得留心专注的人，会犯多或少的错误？” “尊敬的导师，这个人一定很少犯错。我母亲常告诉我，一个女孩要留意她怎样走路、站立、说话、欢笑和工作，以免在思想、言语和行动各方面令别人或自己伤心。” “正是这样，善生。一个留心专注生活的人，永远知道自己在想什么、说什么和做什么。这样的人可以防止自己的思想、说话和行为令自己或别人受到伤害。&lt;/p&gt;
 &lt;p&gt;“孩子们，生活得专注留心是要活在当下的一刻。你需要知道自己的身心有什么在发生着，又要同时察觉到自己环境中所发生的一切。你应该直接与生活接触。如果你继续这样生活下去，你对你自己和你的环境就都会很了解明白。了解与明白会引致容忍和爱心产生。当每个人都了解别人时，所有的人便都会互相包容，互相爱护。那时候，这个世界就再不会有那么多的痛苦了。缚悉底，你认为怎样？如果没有了解，人们可以有爱吗？”&lt;/p&gt;
 &lt;p&gt;“尊敬的导师，没有了解是很难有爱的。这提醒了我曾经发生在媲摩身上的事。一晚，她哭个不停，直至芭娜再忍不住了，便打了媲摩几下屁股。哪知媲摩哭得更厉害。我抱起媲摩，发觉她有点热。我非常肯定她因发热而头痛，于是便叫芭娜把手放到媲摩的额上。她这样做之后，便明白媲摩为什么这样闹了。她目光放柔，把媲摩抱了起来，充满爱心地唱着儿歌逗她。媲摩虽然仍是发热，却不再哭了。尊敬的导师，我想这就是因为芭娜了解了媲摩不安的原因，而改变了态度。所以，我相信没有了解就不可能有爱。”&lt;/p&gt;
-&lt;p&gt;“就是如此，缚悉底！有了解才可以有爱。而有了爱，就可以有接受和包容。孩子们，修习生活上的留心专注吧，它会令你们加深对一切的了解。这样，你们便会明白自己、其他人和一切的事物了。那时，你们便会更有爱心。这就是我所找到的美好之道。”缚悉底合起掌来，“尊敬的导师，我们可以叫它‘觉察之道’吗？”悉达多笑笑，“当然可以。我们可以叫它‘觉察之道’。我很喜欢这叫法。‘觉察之道’可导致完满的醒觉。”&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;“就是如此，缚悉底！有了解才可以有爱。而有了爱，就可以有接受和包容。孩子们，修习生活上的留心专注吧，它会令你们加深对一切的了解。这样，你们便会明白自己、其他人和一切的事物了。那时，你们便会更有爱心。这就是我所找到的美好之道。”缚悉底合起掌来，“尊敬的导师，我们可以叫它‘觉察之道’吗？”悉达多笑笑，“当然可以。我们可以叫它‘觉察之道’。我很喜欢这叫法。‘觉察之道’可导致完满的醒觉。”&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;想试试&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#想试试&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:想试试&#34; class=&#34;headings&#34;&gt;想试试？&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;有不少从实用角度阐明佛教概念的书籍，也可以读一下：&lt;/p&gt;
 &lt;ul&gt;
@@ -1357,22 +1427,25 @@ bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://book.douban.com/subject/35706913/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《“活在当下”指南》&lt;/a&gt;，英文名 Waking Up，2014 年出版，作者是 UCLA 认知神经科学博士 Sam Harris (萨姆·哈里斯)，从科学方面论证冥想的好处。（抄自枫影博客）&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://book.douban.com/subject/34930721/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Headspace 冥想正念手册&lt;/a&gt;，英文名 The Headspace Guide to Meditation and Mindfulness，2016 年出版，Headspace 创始人写的书，他曾经是个僧侣。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;感觉在比较火的活动是正念（Mindfulness）冥想（Meditation），也有好多相关的辅助 APP，也可以看视频材料，比如 Headspace 和 Netflix 合作制作的&lt;a href=&#34;https://www.bilibili.com/video/BV1vA411W7fY?p=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;冥想正念指南 Headspace Guide To Meditation&lt;/a&gt;。反正只要想接触一抓一大把。搜了下，&lt;a href=&#34;https://scholar.google.com/scholar?q=meditation&amp;#43;industry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;这个产业挺大的&lt;/a&gt;，似乎大家都在焦虑，想想也是，唉。&lt;/p&gt;
+&lt;p&gt;感觉在比较火的活动是正念（Mindfulness）冥想（Meditation），也有好多相关的辅助 APP，也可以看视频材料，比如 Headspace 和 Netflix 合作制作的&lt;a href=&#34;https://www.bilibili.com/video/BV1vA411W7fY?p=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;冥想正念指南 Headspace Guide To Meditation&lt;/a&gt;。反正只要想接触一抓一大把。搜了下，&lt;a href=&#34;https://scholar.google.com/scholar?q=meditation+industry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;这个产业挺大的&lt;/a&gt;，似乎大家都在焦虑，想想也是，唉。&lt;/p&gt;
 &lt;h2 id=&#34;其他有趣的发现&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#其他有趣的发现&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:其他有趣的发现&#34; class=&#34;headings&#34;&gt;其他有趣的发现&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;随时间衍生出庞然三藏&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#随时间衍生出庞然三藏&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:随时间衍生出庞然三藏&#34; class=&#34;headings&#34;&gt;随时间衍生出庞然三藏&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/%E4%B8%89%E8%97%8F&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;三藏&lt;/a&gt;，指经、律、论。经，指&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/%E4%BD%9B%E7%BB%8F&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;佛经&lt;/a&gt;，记录悉达多亲口讲的法，悉达多和很多大师一样，喜欢通过举例子或借助时事讲解观念，每次新的举例就都成了一部经。律，指&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/%E4%BD%9B%E6%95%99%E6%88%92%E5%BE%8B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;佛教戒律&lt;/a&gt;，根据《佛陀传》，基本是悉达多还健在时，僧团里有人犯了事，开会检讨，之后便补上一条或多条新的戒律。论，指&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/%E8%AB%96%E8%97%8F&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;论藏&lt;/a&gt;，我没在两本书中看到这个名词，根据维基百科&amp;hellip;就是指对经的注释本？《佛陀传》中只提到了经戒两分离：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;一些比丘被委任背诵佛陀的言教。他们被称为经师，因佛陀所说的都称为经。其中佛陀在鹿野苑给最初五位弟子所说的开示，就是《初转法轮经》。另有几部经，如《无自性经》《缘起经》《八正道经》等，都是全体比丘每月诵念两次的经课。除了经师，也有戒师，他们精通比丘和初学僧的戒律。罗睺罗和其他未满二十岁的学僧，都是守着一种叫沙弥戒的戒律。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;一些比丘被委任背诵佛陀的言教。他们被称为经师，因佛陀所说的都称为经。其中佛陀在鹿野苑给最初五位弟子所说的开示，就是《初转法轮经》。另有几部经，如《无自性经》《缘起经》《八正道经》等，都是全体比丘每月诵念两次的经课。除了经师，也有戒师，他们精通比丘和初学僧的戒律。罗睺罗和其他未满二十岁的学僧，都是守着一种叫沙弥戒的戒律。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;而且悉达多在世时，比丘要遵守的戒律就多达一百多条：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;一个比丘要守一百二十条戒律，当中包括了四十五行门。罗睺罗告诉缚悉底将会有更多的戒律附加，他听说数目将会超过二百之多。&amp;hellip;罗睺罗对缚悉底解释，僧团最初的几年是没有正式戒律的。比丘的受戒非常简单。那人只需跪在佛陀或一位比丘脚下，念诵《三皈依文》三遍。但僧团日益扩大，人数渐多之后，便有必要制定规条做指引，以使比丘们更有自律。
-—— 《佛陀传》&lt;/p&gt;&lt;/blockquote&gt;
+—— 《佛陀传》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;回到问题：佛教是怎么从一个人的简单理念演化到繁多的经典和规矩的？答案是：时间积累。而且不光是指后世一代代对经典的扩充，你看悉达多从证悟后到入灭，短短几十年的时间，他和不同的人接触交流，这些缘分也给了他说法时举例子的灵感。随着越来越多的人加入僧团，或如悉达多的心意或不如，人们的思想分歧或修行的侧重点不同，产生了茫茫多的戒律和教派。这种像&lt;a href=&#34;https://zh.wikipedia.org/zh-cn/%E7%B3%BB%E7%B5%B1%E7%99%BC%E7%94%9F%E6%A8%B9&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;系统发生树&lt;/a&gt;一样树形结构本身也是对某些妙法的体现，我说不上来。&lt;/p&gt;
 &lt;h3 id=&#34;比丘尼要守的额外戒律&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#比丘尼要守的额外戒律&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/two-books-on-buddhism/#contents:比丘尼要守的额外戒律&#34; class=&#34;headings&#34;&gt;比丘尼要守的额外戒律&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;《佛陀传》里讲了允许“不可接触者”（印度种姓最下层）和女性加入僧团的经过，这两个行动与当时的社会观念是有很大冲突的。女性为了加入僧团，更要接受额外的戒律，而这戒律的目的恰恰是缓冲与社会观念的冲突。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;阿难陀追问：“世尊，一个女人可否成就入流、一返、不还和阿罗汉等果位呢？”佛陀回答：“绝无疑问。” “那你为何不接纳她们加入僧团？乔答弥夫人自你孩提时便把你抚育关怀，她爱你如亲生儿子。她现在已抛弃一切财物地位，且已剃头。她千里迢迢从迦毗罗卫国步行而来，都是为了证明女子也如男子一样，可以经得起万难。求你大发慈悲，准许她们受戒为尼。”佛陀沉默了好一阵子。跟着，他嘱罗祗多去召请舍利弗、目犍连、阿耨楼陀、跋提、金毗罗和摩诃迦叶等尊者前来。他们齐集之后，便一起详细商讨这个情形。佛陀解释他并不是因为歧视女性而不许她们受戒为尼，他只是未能确定，在让她们加入僧团的同时，是否可以避免产生僧团内部和与外间的负面冲突。经过详细的磋商之后，舍利弗说：“制定一些规条以道明僧尼的角色，才是明智之举。此等规条应该可以减低外界对僧尼的反对。由于女人几千年来都被歧视，外界的反对是必然的。请你们参考一下以下的八规条：&amp;hellip;目犍连大笑起来，“这八规条很明显是歧视了。你还不承认吗？”舍利弗回答道：“这八规条的目的，旨在开启女性加入僧团的大门。它们不是旨在歧视女性，反而是终止对她们的歧视。你体会吗？”目犍连随即点头，以示认同舍利弗的高明见地。跋提说：“这八规条是必需的。乔答弥夫人拥有如此权力，她又是世尊的母亲，没有这些规条，除了佛陀之外，便没有其他人可指导她修行了。”佛陀转过来对阿难陀说：“阿难陀，请去告诉摩诃波阇波提夫人，如果她们愿意遵守这八规条，她和与她同行的女伴便可以受戒为尼。”&lt;/p&gt;
-&lt;p&gt;摩诃波阇波提比丘尼希望在毗舍离建一所寺院给女尼居住，以能方便亲近佛陀和众大弟子。她又希望迟些可以在家乡迦毗罗卫国开设一所女尼修道院。她派了使者给耶输陀罗报传喜讯，告诉她女尼受戒的消息。乔答弥比丘尼知道女子加入僧团的消息，一定会引起轰动。很多人都会激烈地反对和斥责佛陀和僧伽。她知道佛陀将会面对很多的难题。她感恩，而且明白八规条只是暂时用来保障僧团，以免令它蒙受这次冲击的伤害。她有信心日后女子可受戒为尼已成定局时，八规条便再没有需要。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;摩诃波阇波提比丘尼希望在毗舍离建一所寺院给女尼居住，以能方便亲近佛陀和众大弟子。她又希望迟些可以在家乡迦毗罗卫国开设一所女尼修道院。她派了使者给耶输陀罗报传喜讯，告诉她女尼受戒的消息。乔答弥比丘尼知道女子加入僧团的消息，一定会引起轰动。很多人都会激烈地反对和斥责佛陀和僧伽。她知道佛陀将会面对很多的难题。她感恩，而且明白八规条只是暂时用来保障僧团，以免令它蒙受这次冲击的伤害。她有信心日后女子可受戒为尼已成定局时，八规条便再没有需要。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;现代毫无疑问是男女平等的时代了，那么佛教如同摩诃波阇波提比丘尼所期望的那样把这八条戒律删去了吗？搜了下，这八条被称为八敬法（&lt;a href=&#34;https://zh.wikipedia.org/zh-cn/%E5%85%AB%E6%95%AC%E6%B3%95&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;维基中文&lt;/a&gt;，&lt;a href=&#34;https://en.wikipedia.org/wiki/Eight_Garudhammas#See_also&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;维基英语&lt;/a&gt;），根据维基，这曾经的保护伞似乎成为了现代比丘尼的束缚，只有少数地区愿意公开废除。平权任重而道远啊。&lt;/p&gt;
 </content>
             
@@ -1442,7 +1515,7 @@ bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
 &lt;p&gt;倪老师能提供这么多有实践价值的建议，我是震惊的。我猜对了，倪老师之前没玩过 Minecraft，也没了解过视障游戏这一领域。但我又猜错了，倪老师仅通过几小时的调研（视障游戏的历史发展、现有产品甚至读了几篇论文），就能给出好多有实践价值的建议，每一个建议都是他依据已经掌握的设计原则结合调研得到的案例知识迁移应用得出的。我震惊于倪老师的专业性，和其他专业人士一样，他的专业性源于完整的理论框架和对设计原则的娴熟运用，这样才能在未接触过的子领域上快速找到解决方案。&lt;/p&gt;
 &lt;h3 id=&#34;audio-orientation&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/talk-with-nishuang-about-minecraft-access/#audio-orientation&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/talk-with-nishuang-about-minecraft-access/#contents:audio-orientation&#34; class=&#34;headings&#34;&gt;Audio Orientation&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;这类建议的目标是：&lt;strong&gt;通过环境音效让视障玩家获知自己的方位&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;经过倪老师调研，大多 3D 视障游戏都&lt;a href=&#34;https://www.youtube.com/watch?v=oKgN4va-gas&amp;amp;t=178&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;通过声音&lt;/a&gt;来作为（唯一的）输出方式。我因为太熟悉 Minecraft 而忘记了这一点，本来一个视障游戏就不该依赖任何视觉，就算我测试功能时暂时闭着眼，也无法在认知层面和视障玩家达成对 Minecraft 的理解一致。&lt;/p&gt;
+&lt;p&gt;经过倪老师调研，大多 3D 视障游戏都&lt;a href=&#34;https://www.youtube.com/watch?v=oKgN4va-gas&amp;t=178&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;通过声音&lt;/a&gt;来作为（唯一的）输出方式。我因为太熟悉 Minecraft 而忘记了这一点，本来一个视障游戏就不该依赖任何视觉，就算我测试功能时暂时闭着眼，也无法在认知层面和视障玩家达成对 Minecraft 的理解一致。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;主动探测。玩家主动按键，环境发出声音回应玩家，类似潜艇中的主动声纳、蝙蝠的回声。让周围方块播放音效的性能压力较大，但可以一试。&lt;/li&gt;
 &lt;li&gt;被动监听。部分环境中元素主动发出声音，玩家被动监听。目前已经实现了类似的功能，需要考虑如何复用放大效果。&lt;/li&gt;
@@ -1580,13 +1653,14 @@ bound 任务），将阻塞等待转换为非阻塞等待。&lt;/p&gt;
 &lt;p&gt;有个用户说，Ta 确定因为砍树遗留了一些浮在天空上的原木（经典 Minecraft 场景吧），但 Ta 无法定位确切位置。当时 mod 已经有对内置的特定方块或实体（比如矿物方块、红石部件和动物、怪物）的扫描锁定功能了，就是类似黑魂等那种锁定拉视角，按键切换锁定目标。我就想起《塞尔达：荒野之息》里有希卡之石选择物品图鉴并扫描的功能：不显示精确的位置，离目标越近，指示器强度越强叫得越响。我借鉴这个功能&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/pull/59&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;实现了类似的功能&lt;/a&gt;，其实只是扩展了已有的扫描锁定功能，允许用户指定目标方块或实体，并同时排除对其他预置的方块和实体的扫描，更“专注”寻找目标。&lt;/p&gt;
 &lt;p&gt;上文提到的区域地图功能，我在设计功能时就联想到各种 3A 游戏漂亮的大地图，还有回合制策略游戏的战术视角了。我从其中借来了一些成熟的创意，比如“固定地图方向指北”，这是小地图设计的常见功能：地图随玩家视角旋转还是固定方位。&lt;/p&gt;
 &lt;h2 id=&#34;minecraft-真难上手&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/join-minecraft-access-development/#minecraft-真难上手&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/join-minecraft-access-development/#contents:minecraft-真难上手&#34; class=&#34;headings&#34;&gt;Minecraft 真难上手&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;读者们熟悉这个游戏吗？你们还记得是怎么学会这个游戏的吗？我想和我年龄相近的很多人大概是从贴吧的德芙的帖子中入门的。不聊回忆了，我的重点是，Minecraft 它真难上手，我有时候教视力正常（智力也正常，甚至都比我聪明）的朋友玩 Minecraft，他们也很学得为难，大概是我教得差。既然 Minecraft 对正常人都这么难了，想想我们的视障者用户吧。我观察到大多数熟练的用户在真正上手玩游戏之前，就已经听了很久别人玩 Minecraft 的视频了。比如听&lt;a href=&#34;https://www.youtube.com/watch?v=VfpHTJsn9I4&amp;amp;list=PLgENJ0iY3XBjmydGuzYTtDwfxuR6lN8KC&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pixlriffs&lt;/a&gt;
+&lt;p&gt;读者们熟悉这个游戏吗？你们还记得是怎么学会这个游戏的吗？我想和我年龄相近的很多人大概是从贴吧的德芙的帖子中入门的。不聊回忆了，我的重点是，Minecraft 它真难上手，我有时候教视力正常（智力也正常，甚至都比我聪明）的朋友玩 Minecraft，他们也很学得为难，大概是我教得差。既然 Minecraft 对正常人都这么难了，想想我们的视障者用户吧。我观察到大多数熟练的用户在真正上手玩游戏之前，就已经听了很久别人玩 Minecraft 的视频了。比如听&lt;a href=&#34;https://www.youtube.com/watch?v=VfpHTJsn9I4&amp;list=PLgENJ0iY3XBjmydGuzYTtDwfxuR6lN8KC&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pixlriffs&lt;/a&gt;
 的视频，我猜他在国外 Minecraft 玩家中享有的声誉大概和德芙类似，他教得真的很基础且详细。&lt;/p&gt;
 &lt;p&gt;在玩上游戏之前，视障者用户还要安装这个 mod 和一些依赖 mod，安装 mod 也不是一个简单的事，尤其是对没接触过的人来说。我写了一个&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/blob/default/doc/SET_UP_ON_WINDOWS.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;啰嗦的教程&lt;/a&gt;来降低这个门槛，至少有人再问时我可以直接发链接而不是重复打字了，已经帮到了好几个人。啰嗦对视障者来说应该不是问题，他们有很高的文本理解速度。&lt;/p&gt;
 &lt;p&gt;然后视障者用户面临的最后一道难关就是微软写的那官方启动器。主要缺点是界面嵌套层次太多，无用按钮太多，设置位置混乱。这些对普通用户来说不过是多点点鼠标四处看看，对视障者来说这界面就是迷雾森林。不信？看看我教程里&lt;a href=&#34;https://github.com/khanshoaib3/minecraft-access/blob/default/doc/SET_UP_ON_WINDOWS.md#start-the-game&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;对这段的描述&lt;/a&gt;写得多繁琐（我承认我写得也啰嗦），或者去启动器里按按 Tab 和回车，目标只是简单地按下“启动游戏”按钮，数数要按几次。&lt;/p&gt;
 &lt;h2 id=&#34;关于视觉障碍&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/join-minecraft-access-development/#关于视觉障碍&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/join-minecraft-access-development/#contents:关于视觉障碍&#34; class=&#34;headings&#34;&gt;关于视觉障碍&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;没依据但广泛流传的：在我们从外界获取的信息中，视觉输入占据 90%。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;没依据但广泛流传的：在我们从外界获取的信息中，视觉输入占据 90%。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;从正常视力到全盲，并不是 0-1 boolean。比如极高度数的近视，也算视觉障碍。或者视野不完整，或者只能感到亮度等等，都是视觉障碍。色盲也算视觉障碍，只是对生活的影响比较小。我有个医生朋友对我说过，临床医学上哪个领域复杂，看哪个有专门的科室就是，比如牙科，儿科，还有眼科。所以眼的情况大概是比较复杂的。&lt;/p&gt;
 &lt;p&gt;刚开始我小心翼翼地用 visually impaired players 指代用户，但后来发现用户们也不介意，自称就是 blind，那 blind 更方便敲，就 blind 吧。国内也是，我没有盲人朋友，但我搜到的盲人论坛之类，也不会用视障者这个词。我比较在意的是哪个词在与盲人口语交流时更亲近，叫视障者是不是显得很陌生？&lt;/p&gt;
 &lt;p&gt;平时用户们也不太聊生活，我很少知道一个用户是男是女（如果 Ta 是性少数，从 profile 和头像中能看出来）。但是我比较清楚哪个用户的视觉障碍类型是什么（活跃用户不多，记得住）。我没有主动询问过用户相关情况，答疑时如果不清楚，就按全盲对待。但即使是大面积的视野缺失，也比全盲等情况方便玩游戏一些，我知道有一对视野缺失的夫妻还会玩慢节奏的 FPS。&lt;/p&gt;
@@ -2023,11 +2097,11 @@ nestmate 互相能在编码时读 private 成员，像以前一样。
 &lt;h3 id=&#34;无效操作扩大图片尺寸到正方形&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/#无效操作扩大图片尺寸到正方形&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/#contents:无效操作扩大图片尺寸到正方形&#34; class=&#34;headings&#34;&gt;无效操作：扩大图片尺寸到正方形&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;我先实验了一次 resize，发现这样会截掉图片的边角部分。但是我不想丢掉任何特征（尤其是稀少的官方设定服饰的鞋子），于是在网上找了个&lt;a href=&#34;https://community.adobe.com/t5/photoshop-ecosystem-discussions/canvas-resize-to-square-for-a-large-number-of-images-using-script/td-p/6148635&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Photoshop 脚本&lt;/a&gt;，把所有图片按照长和宽中大的那个把图片扩展成正方形了，这样 resize 时会把整个图片 resize。事后证明这个步骤&lt;strong&gt;毫无作用&lt;/strong&gt;，把特征变得更小更模糊了，反而不利于训练。&lt;/p&gt;
 &lt;h3 id=&#34;裁剪面部&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/#裁剪面部&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/#contents:裁剪面部&#34; class=&#34;headings&#34;&gt;裁剪面部&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;根据肖像数据集的说法，面部（到肩部）图片的占比不少。但是同人图画肯定不会只画个证件照，看来面部图片要从同人图（透明背景）里截出来。这回尝到 ML 的甜头了，直接搜&lt;code&gt;anime face detect ML&lt;/code&gt;，Github&lt;a href=&#34;https://github.com/search?q=anime&amp;#43;face&amp;#43;detect&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;给出了一些项目&lt;/a&gt;。挑项目，尤其挑 Python ML 项目（要基于项目写两行代码把图片裁出来保存），比起 star 我更在意开发时间，生怕年代久远的项目依赖有问题。&lt;a href=&#34;https://github.com/hysts/anime-face-detector&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;anime-face-detector - hysts&lt;/a&gt;
+&lt;p&gt;根据肖像数据集的说法，面部（到肩部）图片的占比不少。但是同人图画肯定不会只画个证件照，看来面部图片要从同人图（透明背景）里截出来。这回尝到 ML 的甜头了，直接搜&lt;code&gt;anime face detect ML&lt;/code&gt;，Github&lt;a href=&#34;https://github.com/search?q=anime+face+detect&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;给出了一些项目&lt;/a&gt;。挑项目，尤其挑 Python ML 项目（要基于项目写两行代码把图片裁出来保存），比起 star 我更在意开发时间，生怕年代久远的项目依赖有问题。&lt;a href=&#34;https://github.com/hysts/anime-face-detector&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;anime-face-detector - hysts&lt;/a&gt;
 是最新的，两年前开发，但是折腾了很久也没解决关于 mmcv 的依赖的版本问题。转向第二新（三年前开发）的项目&lt;a href=&#34;https://github.com/qhgz2013/anime-face-detector&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;anime-face-detector - qhgz2013&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;哎，Python3.9 成了，于是我 fork 了项目&lt;a href=&#34;https://github.com/boholder/anime-face-detector/commit/afc906d49fe03aeaea457ae4d0f0523d09b62a57&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;改了两行&lt;/a&gt;，让裁剪出的图片大于面部识别结果，把发型和肩部和兽耳（兽耳往上长的）也截下来（谢谢 qhgz2013 已经开发了 crop 功能，省事了）。这样从每张图截取出面部，训练集大小翻个倍。&lt;/p&gt;
 &lt;h3 id=&#34;resize--caption&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/#resize--caption&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/#contents:resize--caption&#34; class=&#34;headings&#34;&gt;resize + caption&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;现在算是收集好了原始数据集，打开 web-ui -&amp;gt; Train -&amp;gt; Preprocess images，按照&lt;a href=&#34;https://dfldata.xyz/forum.php?mod=viewthread&amp;amp;tid=12796&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;这个教程&lt;/a&gt;中的步骤来：&lt;/p&gt;
+&lt;p&gt;现在算是收集好了原始数据集，打开 web-ui -&amp;gt; Train -&amp;gt; Preprocess images，按照&lt;a href=&#34;https://dfldata.xyz/forum.php?mod=viewthread&amp;tid=12796&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;这个教程&lt;/a&gt;中的步骤来：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;把图片 resize 到 512*512（虽然 LoRA 是支持非该大小的，但我没太明白 LoRA 对训练集图片的要求，为了保险还是经典 512（stable diffusion v1.*版本的输入图片大小）吧）。&lt;/li&gt;
 &lt;li&gt;勾上&lt;code&gt;Auto focal point crop&lt;/code&gt;焦点聚集&lt;/li&gt;
@@ -2037,7 +2111,7 @@ nestmate 互相能在编码时读 private 成员，像以前一样。
 &lt;h3 id=&#34;检查与修改-caption&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/#检查与修改-caption&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/#contents:检查与修改-caption&#34; class=&#34;headings&#34;&gt;检查与修改 caption&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;资料：&lt;a href=&#34;https://github.com/rinongal/textual_inversion/issues/131&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Do image captions have any effect during training?&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;经过进一步搜索与实验，我发现 caption 对模型的训练和使用有很大用途。我&lt;a href=&#34;https://github.com/boholder/tools_for_training_sd_model&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;写了几个简单脚本&lt;/a&gt;做相关的自动化工作。我训练的角色是手机游戏公主连结里的&lt;a href=&#34;https://gamewith.jp/pricone-re/article/show/92907&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;姫宮真歩&lt;/a&gt;，以她作为示例。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/postimg/maho_by_ai.png&#34; alt=&#34;an anime girl picture generated by AI&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;an anime girl picture generated by AI&#34; src=&#34;https://boholder.github.io/img/postimg/maho_by_ai.png&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -2088,7 +2162,7 @@ nestmate 互相能在编码时读 private 成员，像以前一样。
 &lt;p&gt;&lt;strong&gt;训练图片的 prompt&lt;/strong&gt; = &lt;strong&gt;caption&lt;/strong&gt;（模型不学的）+ &lt;strong&gt;模型学到的&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;等到使用时我们就可以把这个公式倒过来：通过查看 caption 得知的 tags + 模型 = 看起来像训练图片的结果！如果你想生成和训练集中某图片相似的结果，看一下它的 caption 吧。&lt;/p&gt;
 &lt;h2 id=&#34;开炼&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/#开炼&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/#contents:开炼&#34; class=&#34;headings&#34;&gt;开炼&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;首先我的 fine-tune 技术就是跟着 Eric Fu 选的 LoRA，因为我听说 LoRA 技术不仅在时间线上更新鲜，而且似乎对内存需求低。然后 LoRA 也分几个算法，跟着选的&lt;a href=&#34;https://github.com/KohakuBlueleaf/LyCORIS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LyCORIS&lt;/a&gt;模型，走别人已经验证过可行性的路准没错，而且自己也没有足够 ML 知识做选型。LyCORIS 的 README 和顺着&lt;a href=&#34;https://dfldata.xyz/forum.php?mod=viewthread&amp;amp;tid=12796&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;论坛教程&lt;/a&gt;找到的&lt;a href=&#34;https://github.com/Akegarasu/lora-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;lora-scripts - Akegarasu&lt;/a&gt;
+&lt;p&gt;首先我的 fine-tune 技术就是跟着 Eric Fu 选的 LoRA，因为我听说 LoRA 技术不仅在时间线上更新鲜，而且似乎对内存需求低。然后 LoRA 也分几个算法，跟着选的&lt;a href=&#34;https://github.com/KohakuBlueleaf/LyCORIS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LyCORIS&lt;/a&gt;模型，走别人已经验证过可行性的路准没错，而且自己也没有足够 ML 知识做选型。LyCORIS 的 README 和顺着&lt;a href=&#34;https://dfldata.xyz/forum.php?mod=viewthread&amp;tid=12796&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;论坛教程&lt;/a&gt;找到的&lt;a href=&#34;https://github.com/Akegarasu/lora-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;lora-scripts - Akegarasu&lt;/a&gt;
 项目的 README 都指向这个项目：&lt;a href=&#34;https://github.com/kohya-ss/sd-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;sd-scripts - kohya-ss&lt;/a&gt;。他们三者的关系是：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;sd-scripts 集成了方便直接使用的 fine-tune 脚本，可以炼所有四种 fine-tune 方式。&lt;/li&gt;
@@ -2232,13 +2306,7 @@ nestmate 互相能在编码时读 private 成员，像以前一样。
             <author>
                     <uri>https://boholder.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/boholder/puntgun&#34;&gt;Puntgun&lt;/a&gt;是我写的一个命令行工具，Python 语言，帮助推特账号管理自动化。
-从 2022 年二月底开始写，到 2022 年十一月底碰到一个&lt;a href=&#34;https://github.com/boholder/puntgun/issues/17&#34;&gt;对我来说很难实现的编程问题&lt;/a&gt;，
-加上当时马斯克成功收购推特，之后心思就不再它上面了。2023 年 2 月 9 日，推特不再提供免费 API，算是帮我下手了结了这个项目。
-（从十一月的新闻我就判断马斯克不倾向于开放生态，不利好我这项目，你看果然吧，但确实没想到能做这么绝。）
-这是我第一个尝试运营社区的项目，然后事情还没开始就结束啦。😂
-项目框架已经写好了，可以自定义规则，示范用的规则没写几条就碰到了那个难题，算是基本实现目标吧。&lt;/p&gt;</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">前言 Puntgun是我写的一个命令行工具，Python 语言，帮助推特账号管理自动化。 从 2022 年二月底开始写，到 2022 年十一月底碰到一个对我来说很难实现的编程问题， 加上当时马斯克成功收购推特，之后心思就不再它上</summary>
             
                 <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/what-i-learned-from-putgun/#前言&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/what-i-learned-from-putgun/#contents:前言&#34; class=&#34;headings&#34;&gt;前言&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/boholder/puntgun&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Puntgun&lt;/a&gt;是我写的一个命令行工具，Python 语言，帮助推特账号管理自动化。
@@ -2394,24 +2462,7 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
             <author>
                     <uri>https://boholder.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">&lt;h2 id=&#34;微服务开发下的-build-困扰&#34;&gt;微服务开发下的 build 困扰&lt;/h2&gt;
-&lt;p&gt;前提：Java 开发，Maven 做依赖管理，JetBrains IntelliJ IDEA 做 IDE&lt;/p&gt;
-&lt;p&gt;在 Java 微服务开发下，项目开发结构 (repo) 可能有两种：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;所有模块 (maven module)，包括服务（Spring Application）和自己开发的依赖模块，都塞在一个项目里。
-&lt;ul&gt;
-&lt;li&gt;方便管理各模块间的关系，方便写代码&lt;/li&gt;
-&lt;li&gt;git log 很乱很多，但也方便集中检查&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;服务和自己开发的依赖模块独立在不同项目里
-&lt;ul&gt;
-&lt;li&gt;不方便管理模块关系&lt;/li&gt;
-&lt;li&gt;git log 少又清晰，只有该组件相关的提交&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;（以我的工作经历来看，两种结构怎么选好像和开发组的人员结构有关：如果负责不同服务的小组紧密围绕在开发组长周围，选集中式的面儿大；如果小组间相互不太紧密，比如这个项目是不同部门联合开发之类，选分散式的面儿大。）&lt;/p&gt;</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">微服务开发下的 build 困扰 前提：Java 开发，Maven 做依赖管理，JetBrains IntelliJ IDEA 做 IDE 在 Java 微服务开发下，项目开发结构 (repo) 可能有两种： 所有模块 (maven module)，包括服务（Spring Applicatio</summary>
             
                 <content type="html">&lt;h2 id=&#34;微服务开发下的-build-困扰&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/maven-build-advance/#微服务开发下的-build-困扰&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/maven-build-advance/#contents:微服务开发下的-build-困扰&#34; class=&#34;headings&#34;&gt;微服务开发下的 build 困扰&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;前提：Java 开发，Maven 做依赖管理，JetBrains IntelliJ IDEA 做 IDE&lt;/p&gt;
@@ -2619,70 +2670,70 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 &lt;strong&gt;B 账：B 的实际信用 * B 认为“A 帮过 B 的忙的总价值”&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;对于 A、B 两人，有两个方向*两个账本（信用评价，帮忙价值）=四个值（打星为主观判断）：&lt;/p&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;编号&lt;/th&gt;
-          &lt;th&gt;记账主体&lt;/th&gt;
-          &lt;th&gt;给予者&lt;/th&gt;
-          &lt;th&gt;接受者&lt;/th&gt;
-          &lt;th&gt;帮忙价值*&lt;/th&gt;
-          &lt;th&gt;接受者信用*&lt;/th&gt;
-          &lt;th&gt;最终人情值&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;1&lt;/td&gt;
-          &lt;td&gt;A&lt;/td&gt;
-          &lt;td&gt;A&lt;/td&gt;
-          &lt;td&gt;B&lt;/td&gt;
-          &lt;td&gt;Ab 价&lt;/td&gt;
-          &lt;td&gt;Ab 信&lt;/td&gt;
-          &lt;td&gt;Ab 价*Ab 信&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;2&lt;/td&gt;
-          &lt;td&gt;A 欠 B&lt;/td&gt;
-          &lt;td&gt;B&lt;/td&gt;
-          &lt;td&gt;A&lt;/td&gt;
-          &lt;td&gt;Aa 价&lt;/td&gt;
-          &lt;td&gt;Aa 信&lt;/td&gt;
-          &lt;td&gt;Aa 价*Aa 信&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;编号&lt;/th&gt;
+&lt;th&gt;记账主体&lt;/th&gt;
+&lt;th&gt;给予者&lt;/th&gt;
+&lt;th&gt;接受者&lt;/th&gt;
+&lt;th&gt;帮忙价值*&lt;/th&gt;
+&lt;th&gt;接受者信用*&lt;/th&gt;
+&lt;th&gt;最终人情值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;Ab 价&lt;/td&gt;
+&lt;td&gt;Ab 信&lt;/td&gt;
+&lt;td&gt;Ab 价*Ab 信&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;A 欠 B&lt;/td&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;Aa 价&lt;/td&gt;
+&lt;td&gt;Aa 信&lt;/td&gt;
+&lt;td&gt;Aa 价*Aa 信&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;&lt;/div&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;编号&lt;/th&gt;
-          &lt;th&gt;记账主体&lt;/th&gt;
-          &lt;th&gt;给予者&lt;/th&gt;
-          &lt;th&gt;接受者&lt;/th&gt;
-          &lt;th&gt;帮忙价值*&lt;/th&gt;
-          &lt;th&gt;接受者信用*&lt;/th&gt;
-          &lt;th&gt;最终人情值&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;3&lt;/td&gt;
-          &lt;td&gt;B&lt;/td&gt;
-          &lt;td&gt;B&lt;/td&gt;
-          &lt;td&gt;A&lt;/td&gt;
-          &lt;td&gt;Bb 价&lt;/td&gt;
-          &lt;td&gt;Ba 信&lt;/td&gt;
-          &lt;td&gt;Bb 价*Ba 信&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;4&lt;/td&gt;
-          &lt;td&gt;B 欠 A&lt;/td&gt;
-          &lt;td&gt;A&lt;/td&gt;
-          &lt;td&gt;B&lt;/td&gt;
-          &lt;td&gt;Ba 价&lt;/td&gt;
-          &lt;td&gt;Bb 信&lt;/td&gt;
-          &lt;td&gt;Ba 价*Bb 信&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;编号&lt;/th&gt;
+&lt;th&gt;记账主体&lt;/th&gt;
+&lt;th&gt;给予者&lt;/th&gt;
+&lt;th&gt;接受者&lt;/th&gt;
+&lt;th&gt;帮忙价值*&lt;/th&gt;
+&lt;th&gt;接受者信用*&lt;/th&gt;
+&lt;th&gt;最终人情值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;Bb 价&lt;/td&gt;
+&lt;td&gt;Ba 信&lt;/td&gt;
+&lt;td&gt;Bb 价*Ba 信&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;B 欠 A&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;Ba 价&lt;/td&gt;
+&lt;td&gt;Bb 信&lt;/td&gt;
+&lt;td&gt;Ba 价*Bb 信&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;&lt;/div&gt;
 &lt;h3 id=&#34;分析给予和接受的决策&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/favor/#分析给予和接受的决策&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/favor/#contents:分析给予和接受的决策&#34; class=&#34;headings&#34;&gt;分析给予和接受的决策&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;人情的积累是个相互给予的过程，每次给予成立，是双向正反馈，路越走越宽，两人间关系纽带越来越紧密。&lt;/p&gt;
@@ -2711,7 +2762,7 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 &lt;p&gt;刚开始写大纲时，我把人情和社交混为一谈，现在我认为积累人情的互惠只是各类社交行动中的一种，是集合包含关系。如果把人情和社交混起来，则“鼓励积累人情”变成了“鼓励不要自我封闭，去社交”，我也被误导着收集了一些资料。这些资料质量还挺高，我要把它们贴在这里，也不枉收集了。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;弱链接 weak ties&lt;a href=&#34;https://scholar.google.com/scholar?q=&amp;#43;weak&amp;#43;ties&amp;#43;benefit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;好处多多&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;弱链接 weak ties&lt;a href=&#34;https://scholar.google.com/scholar?q=+weak+ties+benefit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;好处多多&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;统计表明大部分求职者的工作由“非亲密关系”，即弱链接推荐提供。&lt;/li&gt;
 &lt;li&gt;将社会关系绘制为无向图，关系紧密的群体间的关系多由群体中个人的弱链接提供。而这些人因占据两群体间的“关口”位置，（在模拟资源分配中）比其他节点有优势。&lt;/li&gt;
@@ -2729,8 +2780,8 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 &lt;p&gt;我们的身体将社交视为必需品而非嗜好品。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;著名的科普视频系列 Kurzgesagt 中有两集谈到相关内容：&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=n3Xv_g3g-mA&amp;amp;t=85s&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Loneliness&lt;/a&gt;：孤独如同饥饿，是自然生理需求，驱使我们为了社交而行动，这个演化可能是由远古时期“不合作就会死”的恶劣环境选择出来的。比较要命的是，研究表明社交不足会让大脑产生压力，而压力会损害健康。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=WPPPFqsECz0&amp;amp;t=120s&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;An Antidote to Dissatisfaction&lt;/a&gt;：感激是治愈不满的良药，而感激或许源于社交行为中的互惠。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=n3Xv_g3g-mA&amp;t=85s&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Loneliness&lt;/a&gt;：孤独如同饥饿，是自然生理需求，驱使我们为了社交而行动，这个演化可能是由远古时期“不合作就会死”的恶劣环境选择出来的。比较要命的是，研究表明社交不足会让大脑产生压力，而压力会损害健康。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=WPPPFqsECz0&amp;t=120s&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;An Antidote to Dissatisfaction&lt;/a&gt;：感激是治愈不满的良药，而感激或许源于社交行为中的互惠。&lt;/li&gt;
 &lt;li&gt;不过我发现，每个人的社交需求槽长度是不一样的，想办法满足自己的槽就行了。现在我们利用网络可以轻松找到符合自己兴趣的话题并参与进去，现实里不见人也可以。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -2907,7 +2958,8 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 &lt;p&gt;搜到&lt;a href=&#34;https://www.zhihu.com/question/33646380&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;这篇知乎文章里的答案&lt;/a&gt;讲了大衍之数的各种来历。&lt;/p&gt;
 &lt;p&gt;“大衍之数”定义在《易传·系辞》（儒家整理记录的易经思想书，易经分好多流派，类似武术流派）里记录大衍筮法的原话开头，这是完整方法的原话：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;大衍之數五十，其用四十有九。分而爲二以象兩，掛一以象三，揲之以四以象四時，歸奇於扐以象閏。五歲再閏，故再扐而後卦。乾之策二百一十有六，坤之策百四十有四，凡三百有六十，當期之日。二篇之策，萬有一千五百二十，當萬物之數也。是故四營而成易，十有八變而成卦，八卦而小成，引而伸之，觸類而長之，天下之能事畢矣。（PS：古文没标点每间隔，这些标点是现代人加的）&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;大衍之數五十，其用四十有九。分而爲二以象兩，掛一以象三，揲之以四以象四時，歸奇於扐以象閏。五歲再閏，故再扐而後卦。乾之策二百一十有六，坤之策百四十有四，凡三百有六十，當期之日。二篇之策，萬有一千五百二十，當萬物之數也。是故四營而成易，十有八變而成卦，八卦而小成，引而伸之，觸類而長之，天下之能事畢矣。（PS：古文没标点每间隔，这些标点是现代人加的）&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;为什么大衍之数是五十，为什么用四十九？请读第二个知乎链接。没有统一定论，各种引经据典一通计算得出这两个数，据说争论两千年了。最科学的解释大概是：计算概率发现从四十九（也有答案说四十七、四十八也行）开始执行过程，最终得到的阴、阳两大类结果的概率相似，巧了。我觉得《易经》可能也是古人从天地之数（五十五）或者大衍之数（五十）或者其他什么和天地相关的神秘数字推演，发现数字四十九的奇妙之处，所以也没提怎么变到四十九，实用主义，或者内法奥秘，不传外不成文。&lt;/p&gt;
 &lt;h2 id=&#34;大衍筮法&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/yarrow-divination/#大衍筮法&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/yarrow-divination/#contents:大衍筮法&#34; class=&#34;headings&#34;&gt;大衍筮法&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;知识 1：中国古代说占、卜、筮是有区别的&lt;a href=&#34;https://zhuanlan.zhihu.com/p/356420437&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt; &lt;a href=&#34;https://new.qq.com/omn/20210117/20210117A0B15B00.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;，“占”是指算命，统称；“卜”是烧龟壳看裂纹；“筮”就是特指用这个蓍（shi1）草。所以把这个大衍筮法说成“蓍草占&lt;strong&gt;卜&lt;/strong&gt;”，严格意义上不对。&lt;/p&gt;
@@ -3086,10 +3138,7 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
             <author>
                     <uri>https://boholder.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">&lt;h2 id=&#34;怎么理解&#34;&gt;怎么理解&lt;/h2&gt;
-&lt;p&gt;看&lt;a href=&#34;composingprograms.com/pages/16-higher-order-functions.html&#34;&gt;这篇文章&lt;/a&gt;的 1.6.6 Currying 这一节。&lt;/p&gt;
-&lt;h3 id=&#34;前提编程语言得支持这个玩法&#34;&gt;前提：编程语言得支持这个玩法&lt;/h3&gt;
-&lt;p&gt;需要编程语言把函数当作 first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函数，可以捕获它们&lt;strong&gt;被定义时&lt;/strong&gt;（注意不是被调用时，记住这点就能弄明白）环境的变量定义，而且还能在被返回时保留这些定义（闭包）。于是我们可以用工厂模式一样的高级函数，输入一些配置参数，返回的是一个配置好的函数，然后我们再用这个参数去实际地用。&lt;/p&gt;</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">怎么理解 看这篇文章的 1.6.6 Currying 这一节。 前提：编程语言得支持这个玩法 需要编程语言把函数当作 first-class，一等成员，即允许函数被：用参数传递给函数、被函数返回、被赋值给变量。这种函数内定义的函数，可以</summary>
             
                 <content type="html">&lt;h2 id=&#34;怎么理解&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/currying/#怎么理解&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/currying/#contents:怎么理解&#34; class=&#34;headings&#34;&gt;怎么理解&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;看&lt;a href=&#34;composingprograms.com/pages/16-higher-order-functions.html&#34;&gt;这篇文章&lt;/a&gt;的 1.6.6 Currying 这一节。&lt;/p&gt;
@@ -3323,10 +3372,12 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
                 <content type="html">&lt;p&gt;首先提醒一下记得&lt;a href=&#34;https://en.wikipedia.org/wiki/Single-responsibility_principle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;单一职责原则（SRP）&lt;/a&gt;是面向对象实践下的设计原则，也是&lt;a href=&#34;https://en.wikipedia.org/wiki/SOLID&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SOLID&lt;/a&gt;五大面向对象设计原则之一。然后&lt;a href=&#34;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;不要重复自己（DRY）&lt;/a&gt;原则则是更泛化的编程原则，也可以用在编程工作以外。这个短文讲两个原则的关系，总归还是把前提限定在了面向对象编程之内。&lt;/p&gt;
 &lt;p&gt;我记得这是哪本书上的例子，大概是&lt;a href=&#34;https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Clean Code&lt;/a&gt;，它是用这个例子来解释 SRP 的含义的，我稍微改一下，不翻原书了：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;需求 1：有三种员工，经理和普通员工和临时工，计算他们薪资的算法是相同的。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;需求 1：有三种员工，经理和普通员工和临时工，计算他们薪资的算法是相同的。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;需求 1 映射到代码里就是，三个分开的员工类，然后三个类计算薪资的方法内部会调用同一个工具函数，DRY，对吧。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;需求 2：计算经理薪资的算法变了。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;需求 2：计算经理薪资的算法变了。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;简单嘛，我们会动手把经理类的薪资计算逻辑内化到经理类的薪资计算方法里，因为现在经理的薪资计算逻辑是“特例”的；然后员工和临时工维持不变，继续使用公共的工具函数，因为计算他们的薪资逻辑是“通用”的，完事。&lt;/p&gt;
 &lt;p&gt;但实际上，实现需求 1 时就已经违反了 SRP 了。这个“薪资计算”是一个&lt;strong&gt;具体的业务逻辑&lt;/strong&gt;，即使三种员工是相同的算法，也应该把这个算法复制三份，粘贴到三个类的薪资计算方法里，抽成公共函数是个错误的选择。公共函数应该是与业务逻辑无关的。这就是 SRP 的含义，一段和业务相关的代码应该独一份存在，修改它不会影响到其他组件，或者说，&lt;strong&gt;这段代码只对一个修改理由负责&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;“与业务逻辑有关”的，为了 DRY 原则而抽取的函数也有，比如一个组件里被多次调用的私有函数，该函数只为该组件的修改而负责，因此没有违反 SRP。&lt;/p&gt;
@@ -3463,7 +3514,7 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 &lt;p&gt;&lt;strong&gt;7. 耗电的配件选好了，计算功耗选电源。&lt;/strong&gt; 电源技术门槛不高，竞争厂家很多，注意别翻车。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;在搜索引擎上搜&lt;a href=&#34;https://www.google.com/search?q=Power&amp;#43;Supply&amp;#43;Calculator&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;“Power Supply Calculator”&lt;/a&gt;有很多功耗计算器。也可以对用电大户比如独立显卡专门搜索一下功耗。&lt;/p&gt;
+&lt;p&gt;在搜索引擎上搜&lt;a href=&#34;https://www.google.com/search?q=Power+Supply+Calculator&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;“Power Supply Calculator”&lt;/a&gt;有很多功耗计算器。也可以对用电大户比如独立显卡专门搜索一下功耗。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;电源的品质有一些层级，从铜牌、银牌到金牌、钛金&amp;hellip;&amp;hellip;整的跟 MMORPG 的装备品质一样。这个指的是转换效率的高低，直观体现就是高负载时发热少、耗电少。&lt;/p&gt;
@@ -3478,7 +3529,8 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 &lt;p&gt;终于选完了，现在看一眼候选表的总价，叹一口气，并开始攒钱。顺便时不时地关注一下配件的市场价格变动和新的黑料。有个好的时机就出钱买下来吧，可以独立地购买并更换不同配件。但是因为我是第一次装机，手边没有现成的机器，无法独立验证各配件的可用性，所以我只能一次全部买下来然后火急火燎地测试，争取在商家保证期内申请退换货。还好后来有惊无险，没有发生问题。&lt;/p&gt;
 &lt;h2 id=&#34;走一步看一步的装机&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/introspection-of-pc-diy/#走一步看一步的装机&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/introspection-of-pc-diy/#contents:走一步看一步的装机&#34; class=&#34;headings&#34;&gt;走一步看一步的装机&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;防呆不防傻，大力出奇迹。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;防呆不防傻，大力出奇迹。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这句话是个梗，现在的配件间的接口都有防呆设计，比如换一个方向就插不上扣不上之类（不会出现 USB 接口的需要试插三回的量子态设计），但是不能避免装不上硬装，一使劲把脆弱的插口搞报废的情况，所以应该对自己的配件温柔点，想想它值多少钱。&lt;/p&gt;
 &lt;p&gt;现在的配件都标准化了，简化了装机所需的必备知识量，不是专业人士也可以按着指导自己动手组装。其实装机就两种步骤交替做，把两个配件的接口插好，用螺丝把配件固定位置。&lt;/p&gt;
 &lt;ul&gt;
@@ -3580,7 +3632,7 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;我们的测试要覆盖这两种行为，尤其要注意不太直观的第二种行为。（但是说测第二种行为，也会忽略方法对模块实例本身状态的改动，毕竟这个算模块自己的私事，我们强行去测就破坏封装性了（比如在 Java 里用反射去看类私有字段的值，也不是不能做到）。）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/postimg/2021/mock-0.svg&#34; alt=&#34;一张展示一个看起来人畜无害的 add 方法可以背地里偷偷删库的图片&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;一张展示一个看起来人畜无害的 add 方法可以背地里偷偷删库的图片&#34; src=&#34;https://boholder.github.io/img/postimg/2021/mock-0.svg&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;不用-mock-技巧直接测试方法的返回值或输入值的改变&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/mock-in-nutshell/#不用-mock-技巧直接测试方法的返回值或输入值的改变&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/mock-in-nutshell/#contents:不用-mock-技巧直接测试方法的返回值或输入值的改变&#34; class=&#34;headings&#34;&gt;不用 Mock 技巧，直接测试方法的返回值或输入值的改变&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;我们可以直接用断言测试这两种值。很普通，大家都会，没什么好讲的，但是还是要写出来。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -3764,11 +3816,11 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/postimg/2021/mock-1.svg&#34; alt=&#34;一张展示用 Mock 技巧回避删库的图片&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img alt=&#34;一张展示用 Mock 技巧回避删库的图片&#34; src=&#34;https://boholder.github.io/img/postimg/2021/mock-1.svg&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;延伸&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/mock-in-nutshell/#延伸&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/mock-in-nutshell/#contents:延伸&#34; class=&#34;headings&#34;&gt;延伸&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;特别的，Mockito 含有断言 Mock 组件行为的 API，比如上面示例中断言方法调用次数。一般单独的 Mock 技巧只能用来取值，还要结合其他断言库去验证值的正确性。Mock 不仅可以让我们取得被测模块传给依赖的值，还能让我们设定依赖对被测模块调用的返回值，我称之为“第二种输入”，比如让依赖抛异常，看被测模块能否妥善处理。&lt;/p&gt;
 &lt;p&gt;Mock 技巧不止局限于单元测试层面，这是一个通用概念。假如上面的坏计算模块不再依赖删库模块，而是自己实现了删库操作&amp;hellip;&amp;hellip;没事，我们还能往数据库里导&lt;a href=&#34;https://mockaroo.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;假数据&lt;/a&gt; 或者一整个的&lt;a href=&#34;https://springtestdbunit.github.io/spring-test-dbunit/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;数据库实例&lt;/a&gt; 都是假的，这是在集成测试中应用 Mock 概念的一个例子。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/postimg/2021/mock-2.svg&#34; alt=&#34;展示单元测试需要设置输入值和依赖的返回值，而要断言输入值、输出值和被测对依赖的调用值的图片&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;展示单元测试需要设置输入值和依赖的返回值，而要断言输入值、输出值和被测对依赖的调用值的图片&#34; src=&#34;https://boholder.github.io/img/postimg/2021/mock-2.svg&#34;&gt;&lt;/p&gt;
 </content>
             
             
@@ -3920,7 +3972,8 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 &lt;p&gt;搜索的最大目的始终不变：节约寻找答案的时间，因为寻找答案过程本身没有产出。&lt;/p&gt;
 &lt;h2 id=&#34;编程语言&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/what-you-need-for-programming/#编程语言&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/what-you-need-for-programming/#contents:编程语言&#34; class=&#34;headings&#34;&gt;编程语言&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;文本命令：&amp;ldquo;老王 吃 苹果&amp;rdquo; -&amp;gt; 执行动作：老王在客厅桌子上找到一个苹果，吃掉。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;文本命令：&amp;ldquo;老王 吃 苹果&amp;rdquo; -&amp;gt; 执行动作：老王在客厅桌子上找到一个苹果，吃掉。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;编程分为两个部分，人编写文本格式的&lt;a href=&#34;https://baike.baidu.com/item/%E6%BA%90%E4%BB%A3%E7%A0%81/3969&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;源代码&lt;/a&gt;，编译器 | 解释器（下面统一使用编译器做指代，即使实际上是解释器）负责将源码编译成机器能看懂的&lt;a href=&#34;https://baike.baidu.com/item/%E6%8C%87%E4%BB%A4%E9%9B%86/238130&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;指令&lt;/a&gt;。你可以为任何有结构的文本编写一个编译器，文本就是命令的内容，简单说明了要做什么事，编译器按着文本写出详细指令，计算机按着详细指令做事。举个例子：打仗，司令部传达过来的命令很简单，然后战场上的指挥官会以一两行命令为大纲来拟定详细的计划，士兵们可以按照详细计划行动。&lt;/p&gt;
 &lt;p&gt;编译器和战场指挥官一样，帮你补足你在源码中没有提到的细节。注意看上文那句老王吃苹果，源码里没有提到老王在吃苹果前需要找到苹果，也没提到如何找苹果，但最后执行的动作中是存在找苹果的步骤的。这引出了目前主流的两类&lt;a href=&#34;https://baike.baidu.com/item/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%9E%8B/1475451&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;编程范式&lt;/a&gt;：命令式（imperative）和声明式（declarative），按命令式编程设计的编程语言需要指明执行的细节，比较唠叨，而声明式只需要指定要做什么事，细节由编译器补足。事实上现代语言都混合了不同的编程范式，更加灵活。上面老王吃苹果的例子是偏向于声明式的。&lt;/p&gt;
 &lt;p&gt;依我看，编译器越“聪明”，越懂得从寥寥数行源代码里猜测程序员的意图并产生出程序（如 JavaScript，尽一切努力不报编译错误，即使会输出很离谱的结果）；反之，编译器越“木头脑袋”，越要求源代码“符合语法语义规则”，源代码越冗长（Java，说的就是你）。要么人写源码多费功夫，要么编译器编译源码多费功夫，仅此而已。编译这门手艺的术语叫&lt;a href=&#34;https://baike.baidu.com/item/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/4194&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;编译原理&lt;/a&gt;。如果你有一个无限智能的编译器，就可以用自然语言即中文英文等，去指挥计算机做事。可惜，编译器是有极限的，语言越复杂，编译器所要做的工作越多，人就越难去编写这个编译器（编译器是个特殊的程序，终究还是要人来写），最后我们折衷得到了目前这些编程语言和对应的编译器。&lt;/p&gt;
@@ -4013,7 +4066,8 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 &lt;h2 id=&#34;完成编程工作所需的外围技能&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/what-you-need-for-programming/#完成编程工作所需的外围技能&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/what-you-need-for-programming/#contents:完成编程工作所需的外围技能&#34; class=&#34;headings&#34;&gt;完成编程工作所需的外围技能&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;你可以在网络上搜索什么&amp;quot;Xxx 职业技能树 | 知识图谱 | 技术栈&amp;quot;，有许多人试图总结出这么一个东西，但是要我说，看看&lt;a href=&#34;https://www.ruanyifeng.com/blog/2021/06/drunk-post-of-a-programmer.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;这位有 10 年间有多岗位经验的 reddit 老哥&lt;/a&gt;是怎么描述这个行业的技术栈的：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;技术栈不重要。技术领域有大约 10-20 条核心原则，重要的是这些原则，技术栈只是落实它们的方法。你如果不熟悉某个技术栈，不需要过度担心。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;技术栈不重要。技术领域有大约 10-20 条核心原则，重要的是这些原则，技术栈只是落实它们的方法。你如果不熟悉某个技术栈，不需要过度担心。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;英语&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/what-you-need-for-programming/#英语&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/what-you-need-for-programming/#contents:英语&#34; class=&#34;headings&#34;&gt;英语&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;四级，英语四级水平的英语读写绝对够用了，只要日常工作没有听说英语的需求。除开每次写方法名都要愣一下单词怎么拼（记得在 IDE 上安装拼写纠正插件，别闹了笑话）以外，编程工作不是太要求英语水平。编程相关的问答、教程、官网、文档&amp;hellip;都不会用很生僻的单词，大家都倾向于用最简单的单词表达意图。唯二的例外是博客和论文。博客是口语化的文章，我碰到过不少次作者想举个例子或者玩笑幽默一下，但把我卡住用字典查里面的生词，继续读下去明白了只是一个例子 | 玩笑的无奈情况。论文&amp;hellip;论文的生词主要是术语，数学术语、机器学习术语、数据分析术语等。&lt;/p&gt;
 &lt;p&gt;有些中文程序员不喜欢英语材料，可能是因为不习惯或者读得慢浪费时间。其实我读得也不快，有时候也因为怕浪费时间选择找中文材料去读。但是如果你去读，你会发现英语材料是可以读懂的，读懂就足够了，多读一些就能克服不习惯的心理障碍，也能慢慢提高阅读速度。&lt;/p&gt;
@@ -4154,7 +4208,8 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 多年以来，我们阅读了不同难度的伟大作家的作品，并练习了多种写作技巧。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“如果你没时间读，你就没时间（或工具）写，就这么简单。”
-—— 斯蒂芬·金，&lt;a href=&#34;https://book.douban.com/subject/3888123/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《写作这回事：创作生涯回忆录》&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+—— 斯蒂芬·金，&lt;a href=&#34;https://book.douban.com/subject/3888123/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《写作这回事：创作生涯回忆录》&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;正如斯蒂芬·金所观察到的那样，一个作家必须广泛而频繁地阅读，才能形成自己的声音，
 并学会写出促使读者拿起书并痴读的句式和故事结构。
 &lt;strong&gt;和读书一样，有意地阅读代码可以帮助程序员加速成长，尤其是对中级 (intermediate) 程序员而言。&lt;/strong&gt;
@@ -4262,7 +4317,8 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 &lt;h4 id=&#34;了解数据结构间的关系&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/learn-from-source-code/#了解数据结构间的关系&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/learn-from-source-code/#contents:了解数据结构间的关系&#34; class=&#34;headings&#34;&gt;了解数据结构间的关系&lt;/a&gt;&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“糟糕的程序员担心代码，优秀的程序员担心数据结构和它们的关系。”
--Linus Torvalds&lt;/p&gt;&lt;/blockquote&gt;
+-Linus Torvalds&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;数据结构是一个程序中最重要的元素。用笔或者你喜欢的其他工具画出数据结构间的关系。
 这个图就是源码的映射。你会在阅读过程中时常参考这个图。一些工具比如&lt;a href=&#34;https://scitools.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;scitools&lt;/a&gt;
 可以用来生成 UML 类图。
@@ -4467,31 +4523,31 @@ Python 生态里有对标&lt;a href=&#34;https://reactivex.io/&#34; target=&#34;
 &lt;a href=&#34;https://site.mockito.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mockito&lt;/a&gt; 。
 目的是测试 MVC 模型中一个 Service 的 getEntitiesBy() 方法的正常逻辑 (略去部分代码)：&lt;/p&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;设定环境&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;假设 DB 中存在（对 Mapper 进行 mock）与输入 Request 内容对应的记录。&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;设定环境&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;假设 DB 中存在（对 Mapper 进行 mock）与输入 Request 内容对应的记录。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;&lt;/div&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;期望&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;1. 桩：该方法会使用输入的 Request 中的索引值&amp;quot;normal&amp;quot;调用 Mapper 查询数据库，获取对应记录包装成的 Entity Model。&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;2. 返回值：该方法应返回一个消息代码为&amp;quot;ok&amp;quot;的 Response 对象，其数据应为一个 Entity 对象的列表，首个元素的状态应与 Mapper 返回的对象相同。&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;期望&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1. 桩：该方法会使用输入的 Request 中的索引值&amp;quot;normal&amp;quot;调用 Mapper 查询数据库，获取对应记录包装成的 Entity Model。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2. 返回值：该方法应返回一个消息代码为&amp;quot;ok&amp;quot;的 Response 对象，其数据应为一个 Entity 对象的列表，首个元素的状态应与 Mapper 返回的对象相同。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;&lt;/div&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -4943,7 +4999,8 @@ Python 下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quickst
 &lt;p&gt;我本人讨厌网络存储服务且没有多设备大量转移数据的需求（主观 + 客观原因），因此没有使用客观来讲确实经济实惠又方便的网盘服务。我也没有设置家庭 NAS，只是购买了两块大容量移动硬盘，定期把【二级数据】和【三级数据】备份在两块硬盘上，一块在公司柜子里，一块在家里，四舍五入也算异地容灾了，容个火灾和人祸。至于【一级数据】，保存在家里台式机、家里笔记本电脑、两块移动硬盘、公司笔记本电脑，共五个备份。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;经过这次意外后我决定将【一级数据】和【二级数据】额外上传到 Microsoft OneDrive 上，
-反正加密了，备份数量多多益善，而且大小不是很大，能快速完成备份。&lt;/p&gt;&lt;/blockquote&gt;
+反正加密了，备份数量多多益善，而且大小不是很大，能快速完成备份。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;PS：【一级数据】最好存在于每个【二级数据】所在的备份位置中，因为两者相互依赖，可以理解为钥匙配得比宝箱数量多，钥匙放在每一个宝箱旁，还有“主密钥”做为钥匙的保护机制。（像我这种使用独立加解密软件的人，还需要额外将加解密软件的免安装便携版与【一级数据】和【二级数据】放在一起。&lt;/p&gt;
 &lt;h4 id=&#34;备份频率&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/individual-data-backup-summary/#备份频率&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/individual-data-backup-summary/#contents:备份频率&#34; class=&#34;headings&#34;&gt;备份频率？&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;这是我本次经历的人祸所暴露出的备份体系中的最大问题&lt;strong&gt;备份不够频繁&lt;/strong&gt;，准确的说是对于公司笔记本电脑备份不频繁。我决定将之后的备份频率设置到：&lt;/p&gt;
@@ -5038,10 +5095,12 @@ Python 下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quickst
 &lt;p&gt;&amp;hellip;首先，他写了一个单元测试的一小部分，没几行代码。然后，他写了刚好能使那个测试通过的代码。
 接着，他又写了些测试，然后再写一些代码&amp;hellip;从编码到运行的周期如此之短&amp;hellip;Kent 居然每 30 秒运行一次（测试）程序&amp;hellip;
 忽然，我发现这种周期似曾相识！许多年前，当我还是孩子的时候&amp;hellip;解释型语言，无需编译构建，你要做的只是添加一行代码，
-然后执行，再添加，再执行&amp;hellip;使用这些语言的编程效率极高。&lt;/p&gt;&lt;/blockquote&gt;
+然后执行，再添加，再执行&amp;hellip;使用这些语言的编程效率极高。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;（我看到“30 秒”那里，就对 TDD 感兴趣了。）Bob 大叔说得对，我们在刚开始编程时都有一个时期，小心翼翼，一次只加一行代码，然后运行看看 print 出的变量值发生了什么变化。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;符合预期的变化会给我们信心，而且直白的目标使下一行要加的代码“呼之欲出”。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;符合预期的变化会给我们信心，而且直白的目标使下一行要加的代码“呼之欲出”。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这就是 TDD 的魔力所在。它鼓励你拿出勇气去重构（烂）代码，因为你不再害怕重构它有破坏功能的风险，快速方便的回归测试集的 re-run 报告帮你撑腰。&lt;/p&gt;
 &lt;p&gt;TDD 还有如下优势：&lt;/p&gt;
 &lt;ul&gt;
@@ -5060,19 +5119,19 @@ Python 下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quickst
 &lt;p&gt;TDD 理论说来容易，但如果自身技能不够扎实，只是从头疼怎么写业务代码转到头疼怎么写测试而已。测试先行意味着，测试写得不够“好”，则直接影响开发人员进一步的思考方向，严重时会把开发人员带进思考泥潭。&lt;/p&gt;
 &lt;h3 id=&#34;41不需要在编写测试时编写非法输入测试&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#41不需要在编写测试时编写非法输入测试&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#contents:41不需要在编写测试时编写非法输入测试&#34; class=&#34;headings&#34;&gt;4.1.不需要在编写测试时编写非法输入测试&lt;/a&gt;&lt;/h3&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;问：如何在使用 TDD 时保证代码的健壮性？是否需要考虑非法输入？&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;答：TDD 时不需要。TDD 之后，部分代码会需要，再加上就是。&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;资料：&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[2]&lt;/a&gt;&lt;/sup&gt;的第二个回答，&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[3]&lt;/a&gt;&lt;/sup&gt;1.&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;问：如何在使用 TDD 时保证代码的健壮性？是否需要考虑非法输入？&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;答：TDD 时不需要。TDD 之后，部分代码会需要，再加上就是。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;资料：&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[2]&lt;/a&gt;&lt;/sup&gt;的第二个回答，&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[3]&lt;/a&gt;&lt;/sup&gt;1.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;&lt;/div&gt;
 &lt;p&gt;编写非法输入测试 (比如输入 NULL，空对象指针 etc，这不是一个正规名词但涵盖范围正确）是 QA（测试人员）的任务，当他们测试时，会在至少是单元测试的层面的封装（或者调用链）上测试非法输入，这意味着 &lt;strong&gt;不是每个方法都要考虑非法输入&lt;/strong&gt; ，
 而 TDD 的测试会覆盖到每个方法。另外，在 TDD 之后而不是 TDD 时考虑这个部分，修改代码会更头脑清晰更方便（回归测试给的信心）。&lt;/p&gt;
@@ -5080,55 +5139,59 @@ Python 下的&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quickst
 （这是一个优雅如禅宗公案的“kata”）最后，为了考虑逻辑的“周全性”而添加的两个测试。（一个输入情况对应一个测试）&lt;/p&gt;
 &lt;h3 id=&#34;42避免错误的步子大的测试&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#42避免错误的步子大的测试&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#contents:42避免错误的步子大的测试&#34; class=&#34;headings&#34;&gt;4.2.避免错误的步子大的测试&lt;/a&gt;&lt;/h3&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;问：我写出了下一个测试，但在编业务代码时卡壳了&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;答：先排除自身编码不熟练的因素，然后检查这个测试，&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;是不是覆盖的逻辑太大了，重新写一个小一些的测试（4.3 详解）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;资料：&lt;sup id=&#34;fnref1:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;3.，&lt;sup id=&#34;fnref1:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;文章中间&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;问：我写出了下一个测试，但在编业务代码时卡壳了&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;答：先排除自身编码不熟练的因素，然后检查这个测试，&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;是不是覆盖的逻辑太大了，重新写一个小一些的测试（4.3 详解）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;资料：&lt;sup id=&#34;fnref1:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;3.，&lt;sup id=&#34;fnref1:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;文章中间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;&lt;/div&gt;
 &lt;blockquote&gt;
-&lt;p&gt;酒要一口一口地喝，路要一步一步走，步子迈大了，容易_ _ _。————《让子弹飞》&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;酒要一口一口地喝，路要一步一步走，步子迈大了，容易_ _ _。————《让子弹飞》&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;在 TDD 过程中，业务逻辑编码只需要恰好满足使测试通过，如果坚持住这个原则，那么唯一使编程步骤卡壳的原因就在于：开发人员不能快速想出通过测试的方案，又陷入了使用 TDD 前的窘境————没有短又直白的编码目标，头疼怎么一步到位。
 这个测试不能驱动编码思路&lt;em&gt;呼之欲出&lt;/em&gt;，说明这个测试有问题，需要重新换一个。两个资料里都提到了这样含义的话：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;避免一个测试覆盖太大的逻辑范围，这违反了 TDD 单个测试对应小目标的原则。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;避免一个测试覆盖太大的逻辑范围，这违反了 TDD 单个测试对应小目标的原则。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;错误实例：就像文章&lt;sup id=&#34;fnref2:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;中“我”在第一次分析需求时，选择了不明朗的测试“演化”方向，导致最后一步测试，实质上对应的是一步到位处理超过一种的新加入的情况，无法延续现有的代码继续修改以通过测试。&lt;/p&gt;
 &lt;p&gt;现在的问题转换为“如何写出下一个测试”，请接着读 4.3。&lt;/p&gt;
 &lt;h3 id=&#34;43简化问题场景-逐步添加限制--条件&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#43简化问题场景-逐步添加限制--条件&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#contents:43简化问题场景-逐步添加限制--条件&#34; class=&#34;headings&#34;&gt;4.3.简化问题场景-&amp;gt;逐步添加限制 | 条件&lt;/a&gt;&lt;/h3&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;问：我无法写出下一个测试，卡壳了&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;答：接着上一步测试的目的，继续分析需求，我们走到哪了？或者我们应该换个思路重新分析需求？&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;资料：&lt;sup id=&#34;fnref2:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;2.，&lt;sup id=&#34;fnref3:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;文章中间&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;问：我无法写出下一个测试，卡壳了&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;答：接着上一步测试的目的，继续分析需求，我们走到哪了？或者我们应该换个思路重新分析需求？&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;资料：&lt;sup id=&#34;fnref2:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;2.，&lt;sup id=&#34;fnref3:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;文章中间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;When faced with a problem you do not understand, do any part of it you do understand,
-then look at it again.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+then look at it again.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这是文章&lt;sup id=&#34;fnref4:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;给出的引用，来自一部科幻小说。下面我要写的是我根据文章&lt;sup id=&#34;fnref5:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/tdd-tips/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;和其他 kata 解决需求的思路悟出的门路，总结来说：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;不要按步骤 1-2-3 线性流程切分需求，而是按套娃，
 从理想的简单状态机（简单输入简单处理输出 | 复杂输入简化处理输出）到有条件 | 限制的复杂状态机（复杂处理 + 复杂输入 | 输出），
-一步步完善处理逻辑。&lt;/p&gt;&lt;/blockquote&gt;
+一步步完善处理逻辑。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;如果你手边有《计算机网络》这类书，看看每个层的第一个教学使用的理论协议的假设条件有多理想，以数据链路层的协议为例：单工，发送方和接收方的网络层总是准备就绪，数据处理不计时间，可用缓存无限大，信道不会在物理层损坏 | 丢失。
 这种理想协议只会在教科书上存在，但它形象地描述了该层协议 &lt;em&gt;可能的风险 | 考量&lt;/em&gt; 。之后的篇幅逐渐引入各种机制来解决理想协议中忽略的考量，最终一个能在现实场景中使用的协议完成了。&lt;/p&gt;
 &lt;p&gt;咱们的测试也应该像设计协议一样，每次只测试一个考量 | 一种情况，修改少量代码通过这个测试，接着向下走，直到考虑了所有情况。&lt;/p&gt;
@@ -5258,7 +5321,8 @@ then look at it again.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 在长时间坚持这么做后，我写不写测试都会这样思考。代码仍是可测试的，只是无须真的写出来测试。&lt;/p&gt;
 &lt;p&gt;&amp;hellip;测试也是与其他开发人员交流的一种方式，所以我开始会在与他人共享代码时为其编写测试，或给有外部依赖的事情写测试。&lt;/p&gt;
 &lt;p&gt;Andy 说我不应该加上这个知识栏，他担心这会诱使缺乏经验的开发人员不写测试。下面是我的折衷方案：&lt;/p&gt;
-&lt;p&gt;应该编写测试吗？要，但等你写了 30 年后，不妨从容地做些实验，看看它究竟给你带来的什么好处。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;应该编写测试吗？要，但等你写了 30 年后，不妨从容地做些实验，看看它究竟给你带来的什么好处。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -5329,7 +5393,7 @@ then look at it again.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">白送的 10 连，抽爆，抽完攀比思想冒头，循环乘嘛，实现一个！（其实是不想在 WolframAlpha（一个付费在线数学计算应用）里输长长一串）</summary>
             
-                <content type="html">&lt;h1&gt;&lt;/h1&gt;
+                <content type="html">&lt;h1 id=&#34;heading&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/java-arrangement-combination/#heading&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/java-arrangement-combination/#contents:heading&#34; class=&#34;headings&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;背景&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/java-arrangement-combination/#背景&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/java-arrangement-combination/#contents:背景&#34; class=&#34;headings&#34;&gt;背景&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;最近玩的某游戏开了新卡池，抽了 8 个 10 连共计 80 次，&lt;br&gt;
 出了 4 个稀有度最高的角色，&lt;br&gt;
@@ -5501,7 +5565,7 @@ public class factorial {
 如果导入成功，notepad++ 会弹出提示框。&lt;/li&gt;
 &lt;li&gt;重启 notepad++, 打开一个 markdown 文件 (.md) 并享受。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://boholder.github.io/img/postimg/2019/notepadpp-markdown-show.png&#34; alt=&#34;example image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;example image&#34; src=&#34;https://boholder.github.io/img/postimg/2019/notepadpp-markdown-show.png&#34;&gt;&lt;/p&gt;
 </content>
             
             
@@ -5570,10 +5634,12 @@ public class factorial {
 &lt;blockquote&gt;
 &lt;p&gt;we will use the term cookie to refer to the state&lt;br&gt;
 information that passes between an origin server and user agent,&lt;br&gt;
-and that gets stored by the user agent.&lt;/p&gt;&lt;/blockquote&gt;
+and that gets stored by the user agent.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我们将使用术语 cookie 来指代在源服务器和用户代理之间传递的状态信息，&lt;br&gt;
-以及由用户代理存储的状态信息。&lt;/p&gt;&lt;/blockquote&gt;
+以及由用户代理存储的状态信息。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;简单总结，cookie 是：服务器与客户端间标识状态的信息，储存在客户端&lt;br&gt;
 （硬盘或内存，视类型而定），由服务器增删改读。&lt;br&gt;
 用途：满足对无状态的 HTTP 协议，想让它&lt;strong&gt;有状态&lt;/strong&gt;的需求，一种修补措施。&lt;/p&gt;
@@ -5610,47 +5676,49 @@ and that gets stored by the user agent.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Cookie 安全性这点，&lt;a href=&#34;https://tools.ietf.org/html/rfc6265#section-8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rfc6265 中有一整段 (8. Security Considerations)&lt;/a&gt; 去阐述，&lt;br&gt;
 务必读一下，总结的很好，我会跳过那些内容，只给出一个目录以供预览。&lt;/p&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;分标题&lt;/th&gt;
-          &lt;th&gt;简述&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Overview&lt;/td&gt;
-          &lt;td&gt;总览&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Ambient Authority&lt;/td&gt;
-          &lt;td&gt;cookie 是一种权限凭证&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Clear Text&lt;/td&gt;
-          &lt;td&gt;明文传输问题&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Session Identifiers&lt;/td&gt;
-          &lt;td&gt;非可读的会话标识符&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Weak Confidentiality&lt;/td&gt;
-          &lt;td&gt;cookie 在各种层面保密性都弱&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Reliance on DNS&lt;/td&gt;
-          &lt;td&gt;cookie 的安全性以 DNS 安全为前提&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;分标题&lt;/th&gt;
+&lt;th&gt;简述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Overview&lt;/td&gt;
+&lt;td&gt;总览&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ambient Authority&lt;/td&gt;
+&lt;td&gt;cookie 是一种权限凭证&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Clear Text&lt;/td&gt;
+&lt;td&gt;明文传输问题&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Session Identifiers&lt;/td&gt;
+&lt;td&gt;非可读的会话标识符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Weak Confidentiality&lt;/td&gt;
+&lt;td&gt;cookie 在各种层面保密性都弱&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Reliance on DNS&lt;/td&gt;
+&lt;td&gt;cookie 的安全性以 DNS 安全为前提&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;&lt;/div&gt;
 &lt;p&gt;与其说其设计不周全，不如说 cookie 因本身位置的限制无法保证设计安全，&lt;br&gt;
 rfc 还警告开发人员不要把 cookie 作为唯一的认证环节。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;rfc6265: In addition, by default, cookies do not provide confidentiality or integrity&lt;br&gt;
-from network attackers, even when used in conjunction with HTTPS.&lt;/p&gt;&lt;/blockquote&gt;
+from network attackers, even when used in conjunction with HTTPS.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;此外，默认情况下，cookie 不会为网络攻击者提供机密性或完整性，&lt;br&gt;
-即使与 HTTPS 结合使用也是如此。&lt;/p&gt;&lt;/blockquote&gt;
+即使与 HTTPS 结合使用也是如此。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;1服务器只能读取-cookie-键值对读不到属性&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#1服务器只能读取-cookie-键值对读不到属性&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#contents:1服务器只能读取-cookie-键值对读不到属性&#34; class=&#34;headings&#34;&gt;1.服务器只能读取 cookie 键值对，读不到属性&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://tools.ietf.org/html/rfc6265#section-4.2.2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rfc6265#section-4.2.2&lt;/a&gt; :&lt;br&gt;
@@ -5658,12 +5726,14 @@ Notice that the cookie attributes are not returned.&lt;br&gt;
 In particular,the server cannot determine from the Cookie header alone&lt;br&gt;
 when a cookie will expire, for which hosts the cookie is valid,&lt;br&gt;
 for which paths the cookie is valid,
-or whether the cookie was set with the Secure or HttpOnly attributes.&lt;/p&gt;&lt;/blockquote&gt;
+or whether the cookie was set with the Secure or HttpOnly attributes.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://tools.ietf.org/html/rfc6265#section-4.2.2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rfc6265#section-4.2.2&lt;/a&gt; :&lt;br&gt;
 请注意，不返回 cookie 属性。特别是，当 cookie 过期时，&lt;br&gt;
 服务器无法单独从 Cookie 标头确定，cookie 对哪些主机有效，cookie 的路径有效，&lt;br&gt;
-或者 cookie 是否使用 Secure 或 HttpOnly 属性设置。&lt;/p&gt;&lt;/blockquote&gt;
+或者 cookie 是否使用 Secure 或 HttpOnly 属性设置。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;同时在设置 cookie 时，客户端并不会发回结果反馈。这使得服务器不知道 cookie 是否被正确设置。&lt;br&gt;
 这等于要从数据库读一个不知道是否干净的数据，对数据完整性有影响。&lt;/p&gt;
 &lt;h4 id=&#34;解决服务器容错与键名走私smuggle&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#解决服务器容错与键名走私smuggle&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#contents:解决服务器容错与键名走私smuggle&#34; class=&#34;headings&#34;&gt;解决：服务器容错与键名“走私（Smuggle）”&lt;/a&gt;&lt;/h4&gt;
@@ -5697,11 +5767,13 @@ In 2016 Google Chrome version 51 introduced a new kind of cookie, the same-site 
 which can only be sent in requests originating from the same origin as the target domain.&lt;br&gt;
 This restriction mitigates attacks such as cross-site request forgery (XSRF).&lt;br&gt;
 A cookie is given this characteristic by setting the SameSite flag to Strict or Lax.&lt;br&gt;
-&lt;a href=&#34;https://tools.ietf.org/html/draft-west-first-party-cookies-07&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;google：draft-ietf-httpbis-cookie-same-site &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;a href=&#34;https://tools.ietf.org/html/draft-west-first-party-cookies-07&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;google：draft-ietf-httpbis-cookie-same-site &lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;2016 年，谷歌 Chrome 版本 51 引入了一种新型 cookie，即同一站点的 cookie，&lt;br&gt;
 只能在源自与目标域相同的源的请求中发送。此限制可缓解诸如跨站点请求伪造（XSRF）等攻击。&lt;br&gt;
-通过将 SameSite 标志设置为 Strict 或 Lax，可以为 cookie 提供此特性。&lt;/p&gt;&lt;/blockquote&gt;
+通过将 SameSite 标志设置为 Strict 或 Lax，可以为 cookie 提供此特性。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;标准支持：截至撰文时间 (2019-05)，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;开发支持：查到的是 node.js 的 express、PHP7.3 支持，应该还有没搜到的&lt;/li&gt;
@@ -5727,10 +5799,12 @@ cookie 值可以是随机生成的字符串（会话凭证）而不是具体信�
 &lt;p&gt;rfc6265:&lt;br&gt;
 Servers SHOULD encrypt and sign the contents of cookies&lt;br&gt;
 (using whatever format the server desires) when transmitting them to the&lt;br&gt;
-user agent (even when sending the cookies over a secure channel).&lt;/p&gt;&lt;/blockquote&gt;
+user agent (even when sending the cookies over a secure channel).&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;当将服务器传输给用户代理时，服务器应该对 cookie 的内容进行加密和签名&lt;br&gt;
-（使用服务器所需的任何格式）（即使通过安全通道发送 cookie）。&lt;/p&gt;&lt;/blockquote&gt;
+（使用服务器所需的任何格式）（即使通过安全通道发送 cookie）。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;cookie-默认可被客户端-apijs-etc-读取&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#cookie-默认可被客户端-apijs-etc-读取&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#contents:cookie-默认可被客户端-apijs-etc-读取&#34; class=&#34;headings&#34;&gt;②cookie 默认可被客户端 API(JS etc) 读取&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;解决：设置时加 &lt;code&gt;Http-only-flag&lt;/code&gt; ，禁止客户端 JS 读取 cookie。&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;错误规划max-ageexpires&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#错误规划max-ageexpires&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#contents:错误规划max-ageexpires&#34; class=&#34;headings&#34;&gt;③错误规划&lt;code&gt;max-age&lt;/code&gt;、&lt;code&gt;expires&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
@@ -5753,41 +5827,43 @@ cookie 保留在客户端的时间越长，被攻击的可能性越高。&lt;/p&
 — cookies are generally used to store session IDs or access tokens,&lt;br&gt;
 an attacker’s holy grail.&lt;br&gt;
 Once they are exposed or compromised, attackers can impersonate users,&lt;br&gt;
-or escalate their privileges on your application.&lt;/p&gt;&lt;/blockquote&gt;
+or escalate their privileges on your application.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;因为它们包含的数据通常非常敏感 - 通常用于存储会话 ID 或访问令牌，攻击者的圣杯。&lt;br&gt;
-一旦他们暴露或受到攻击，攻击者就可以冒充用户，或者升级他们对您的应用程序的权限。&lt;/p&gt;&lt;/blockquote&gt;
+一旦他们暴露或受到攻击，攻击者就可以冒充用户，或者升级他们对您的应用程序的权限。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;常见攻击方式&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#常见攻击方式&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#contents:常见攻击方式&#34; class=&#34;headings&#34;&gt;常见攻击方式&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_cookie#Cookie_theft_and_session_hijacking&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;维基百科&lt;/a&gt;总结了几种常见的攻击方式，包括攻击过程简介与防御手段，在此不复述，只提供目录。&lt;/p&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;攻击&lt;/th&gt;
-          &lt;th&gt;防御&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;MITM&lt;/td&gt;
-          &lt;td&gt;TLS&amp;amp;&lt;code&gt;secure&lt;/code&gt;attr&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;DNS Poisoning&lt;/td&gt;
-          &lt;td&gt;TLS&amp;amp;&lt;code&gt;secure&lt;/code&gt;attr&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;DOM-Based-XSS&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;http-only-flag&lt;/code&gt;&amp;amp;&lt;code&gt;SameSite&lt;/code&gt;attr&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;反射型 XSS+ 恶意代理服务器&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;secure&lt;/code&gt;attr&amp;amp;&lt;code&gt;SameSite&lt;/code&gt;attr&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;CSRF&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;SameSite&lt;/code&gt;attr&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;攻击&lt;/th&gt;
+&lt;th&gt;防御&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;MITM&lt;/td&gt;
+&lt;td&gt;TLS&amp;amp;&lt;code&gt;secure&lt;/code&gt;attr&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DNS Poisoning&lt;/td&gt;
+&lt;td&gt;TLS&amp;amp;&lt;code&gt;secure&lt;/code&gt;attr&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DOM-Based-XSS&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http-only-flag&lt;/code&gt;&amp;amp;&lt;code&gt;SameSite&lt;/code&gt;attr&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;反射型 XSS+ 恶意代理服务器&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;secure&lt;/code&gt;attr&amp;amp;&lt;code&gt;SameSite&lt;/code&gt;attr&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CSRF&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;SameSite&lt;/code&gt;attr&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;&lt;/div&gt;
 &lt;p&gt;还有一类维基没提到的，针对&lt;a href=&#34;https://en.wikipedia.org/wiki/Transport_Layer_Security&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TLS 协议&lt;/a&gt; 的攻击。&lt;br&gt;
 TLS 协议不是完全安全的，因为设计或实现的缺陷，&lt;br&gt;
@@ -5803,7 +5879,7 @@ TLS 协议不是完全安全的，因为设计或实现的缺陷，&lt;br&gt;
 &lt;h3 id=&#34;非常见方式&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#非常见方式&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#contents:非常见方式&#34; class=&#34;headings&#34;&gt;非常见方式&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;非单一的、利用知识组合各种部分的针对 cookie 的攻击方式，&lt;br&gt;
 可惜我只找到一个。&lt;/p&gt;
-&lt;h4 id=&#34;cookiejacking-rosario-valotta-2011-05link&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#cookiejacking-rosario-valotta-2011-05link&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#contents:cookiejacking-rosario-valotta-2011-05link&#34; class=&#34;headings&#34;&gt;①cookiejacking-Rosario Valotta-2011-05&lt;a href=&#34;https://sites.google.com/site/tentacoloviola/cookiejacking&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[link]&lt;/a&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;cookiejacking-rosario-valotta-2011-05linkhttpssitesgooglecomsitetentacoloviolacookiejacking&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#cookiejacking-rosario-valotta-2011-05linkhttpssitesgooglecomsitetentacoloviolacookiejacking&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#contents:cookiejacking-rosario-valotta-2011-05linkhttpssitesgooglecomsitetentacoloviolacookiejacking&#34; class=&#34;headings&#34;&gt;①cookiejacking-Rosario Valotta-2011-05&lt;a href=&#34;https://sites.google.com/site/tentacoloviola/cookiejacking&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[link]&lt;/a&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;该方法利用了 IE 浏览器的“跨域交互策略”的一个漏洞，&lt;br&gt;
 外部 HTML 的&amp;lt;iframe&amp;gt;标签可以加载本地 cookie 文件（本应不能）。&lt;br&gt;
 恶意服务器通过一系列正常的手段获知用于构造 cookie 路径的信息，&lt;br&gt;
@@ -5820,21 +5896,24 @@ TLS 协议不是完全安全的，因为设计或实现的缺陷，&lt;br&gt;
 &lt;p&gt;&lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2714592&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TLS Record Protocol: Security Analysis and&lt;br&gt;
 Defense-in-depth Countermeasures for HTTPS&lt;/a&gt;&lt;br&gt;
 Author: Olivier Levillain etc&lt;br&gt;
-Time: 2015&lt;/p&gt;&lt;/blockquote&gt;
+Time: 2015&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这个研究总结了针对 TLS 记录协议的 5 个攻击方式，并给出了两个 cookie 掩盖方式：&lt;br&gt;
 TLS Scramble &amp;amp; MCookies，以保证在意外导致 HTTP 明文传输的情况下，&lt;br&gt;
 继续保持 cookie 等秘密信息机密性。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://link.springer.com/article/10.1007%2Fs12095-018-0280-y&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Statistical attacks on cookie masking for RC4&lt;/a&gt;&lt;br&gt;
 Author: Kenneth G. PatersonEmail author etc&lt;br&gt;
-Time: 2018-02&lt;/p&gt;&lt;/blockquote&gt;
+Time: 2018-02&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;该文验证了上篇文章两种掩盖方式理论上可被加大提供算力后破解，&lt;br&gt;
 因此该掩盖方式只能提供不强的机密性。&lt;/p&gt;
 &lt;h3 id=&#34;测信道攻击&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#测信道攻击&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/cookie_security/#contents:测信道攻击&#34; class=&#34;headings&#34;&gt;测信道攻击&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://link.springer.com/chapter/10.1007/978-3-319-89641-0_11&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Path Leaks of HTTPS Side-Channel by Cookie Injection&lt;/a&gt;&lt;br&gt;
 Author: Fuqing Chen etc&lt;br&gt;
-Time: 2018-04&lt;/p&gt;&lt;/blockquote&gt;
+Time: 2018-04&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;该文阐述了一种攻击方式和两种应用方面：&lt;br&gt;
 利用 cookie 的弱同源策略（上文有提），实施 cookie 注入，&lt;br&gt;
 用注入的 cookie 来推断敏感信息，进而复原一部分密文（比如请求的 URL）。&lt;br&gt;
@@ -5843,7 +5922,8 @@ Time: 2018-04&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://link.springer.com/chapter/10.1007/978-3-662-47854-7_6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Protecting Encrypted Cookies from&lt;br&gt;
 Compression Side-Channel Attacks&lt;/a&gt;&lt;br&gt;
 Author: Janaka Alawatugoda etc&lt;br&gt;
-Time: 2015-07&lt;/p&gt;&lt;/blockquote&gt;
+Time: 2015-07&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;有那么两种对 TLS 的攻击：&lt;a href=&#34;https://blog.qualys.com/ssllabs/2012/09/14/crime-information-leakage-attack-against-ssltls&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CRIME&lt;/a&gt; 和 &lt;a href=&#34;http://breachattack.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BREACH&lt;/a&gt; （上文有提）,&lt;br&gt;
 它们基于传输前压缩过程中产生的额外信息量，复现敏感信息，&lt;br&gt;
 针对它们的常规解决方法是禁止传输中压缩，&lt;br&gt;
@@ -5893,18 +5973,71 @@ Time: 2015-07&lt;/p&gt;&lt;/blockquote&gt;
     
         <entry>
             <title type="text"></title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/minecraft-screen-navigation/" />
-            <id>https://boholder.github.io/blogs/minecraft-screen-navigation/</id>
-            <updated>2025-09-05T14:29:23&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/book-antifragile/" />
+            <id>https://boholder.github.io/blogs/book-antifragile/</id>
+            <updated>2025-05-02T18:34:35&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://boholder.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">&lt;p&gt;我需要通过&lt;a href=&#34;https://github.com/minecraft-access/minecraft-access/pull/347&#34;&gt;修改 cloth-config 库逻辑&lt;/a&gt;，为所有使用了 cloth-config 库的 mod 增加配置界面的视觉无障碍支持。&lt;/p&gt;
-&lt;p&gt;其中一个目标是让 cloth-config 的界面组件支持通过键盘在组件间导航，因此我需要阅读、理解并复用 Minecraft 源码中的相关逻辑。具体来说，包 &lt;a href=&#34;https://maven.fabricmc.net/docs/yarn-1.21.4&amp;#43;build.1/net/minecraft/client/gui/navigation/package-summary.html&#34;&gt;&lt;code&gt;net.minecraft.client.gui.navigation&lt;/code&gt;&lt;/a&gt; 负责通过键盘导航并选中组件，包 &lt;a href=&#34;https://maven.fabricmc.net/docs/yarn-1.21.4&amp;#43;build.1/net/minecraft/client/gui/screen/narration/package-summary.html&#34;&gt;&lt;code&gt;net.minecraft.client.gui.screen.narration&lt;/code&gt;&lt;/a&gt; 负责组织并读出所选中组件的文字描述。我没能搜索到现有的代码讲解或教程，所以打算自己写一篇。&lt;/p&gt;</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">好学生不善处理混沌情况 足球妈妈们试图从孩子们的生活中消除试错和反脆弱性，使他们远离生态模式，而将他们改造成按照预设的现实模式（符合足球妈妈的想法）行事的书呆子。就这样，孩子们成为好学生，但也成为书呆子</summary>
+            
+                <content type="html">&lt;h2 id=&#34;好学生不善处理混沌情况&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/book-antifragile/#好学生不善处理混沌情况&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/book-antifragile/#contents:好学生不善处理混沌情况&#34; class=&#34;headings&#34;&gt;好学生不善处理混沌情况&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;足球妈妈们试图从孩子们的生活中消除试错和反脆弱性，使他们远离生态模式，而将他们改造成按照预设的现实模式（符合足球妈妈的想法）行事的书呆子。就这样，孩子们成为好学生，但也成为书呆子，也就是说，这些孩子就像是计算机，除了计算速度慢了一些。此外，他们完全没有受过任何关于处理模棱两可情况的训练。&lt;/p&gt;
+&lt;p&gt;我以人们的周旋能力为筛选标准进行选择，好学的人一般不善于与人周旋：他们需要有一个明确的任务。
+当我 10 岁的时候我就意识到，好成绩在校外不像在校内那么受欢迎，因为它们会带来一定的副作用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我知道有本书&lt;a href=&#34;https://book.douban.com/subject/36190074/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《金榜题名之后：大学生出路分化之谜》&lt;/a&gt;，也是写（来自普通/贫穷家庭的）“书呆子”一旦离开校园，失去了以成绩作为评价标准（非常单一直接）的目标，就会变得迷茫，而富裕家庭的孩子会提前观察到社会多样性的评价标准，进而在校园中提前做准备。《反脆弱》作者说的“不善处理混沌情况”似乎和此书的论点有些重合的地方。&lt;/p&gt;
+&lt;h2 id=&#34;拖延来处理混沌情况&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/book-antifragile/#拖延来处理混沌情况&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/book-antifragile/#contents:拖延来处理混沌情况&#34; class=&#34;headings&#34;&gt;拖延来处理混沌情况&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;事实上，人类是非常不擅长过滤信息的，特别是短期信息，而拖延则是帮助我们筛选信息的较好方式，它能避免我们由于冲动而轻信某个信息。
+你越频繁地寻找数据，你会发现，你找到的噪声（而非被称为信号的宝贵数据）的比例就越高，噪声–信号比就越高。噪声和信号的混淆并非心理问题，而是数据本身所固有的问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;拖延处理混沌情况的前提是，信噪比会随着时间的推移而增大，错误信息会被时间证伪。这个在投资上体现的最明显。一天看几次大盘，只能收获焦虑。我在推上看过一句批评“短期投资者看到波动就总是将同时发生的事情擅自联系起来，实际上两者无关”，作者在书里也写了“先发生事件，事后找个看起来合理的理论解释事件”（第四卷）的行为是很不明智的。&lt;/p&gt;
+&lt;p&gt;或者前提是，随着时间推移，可能的情况会越来越多，就像多重宇宙理论，从一个时间点开始宇宙因为选择分裂成无数时间线，提前计划大概率 miss（缓存击穿），计划赶不上变化。这个前提在编程上体现的比较多：“不要过早优化”，“不要冲出前灯范围”，行业抛弃瀑布流程的原因。大概编程是讨厌信息熵大（可能性多）的东西的，我们讨厌公共耦合，因为公共值有更多可能被无意中修改为不合适的值。&lt;/p&gt;
+&lt;h2 id=&#34;减法性知识消除错误&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/book-antifragile/#减法性知识消除错误&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/book-antifragile/#contents:减法性知识消除错误&#34; class=&#34;headings&#34;&gt;减法性知识消除错误&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;鉴于我们今天所知的知识可能被证实是错误的，但是我们今天认识到是错误的知识则不可能变得正确，至少不那么容易，因此，我们通过减法获得的知识远远比通过加法获得的知识多。如果我发现了一只黑天鹅（注意是真的天鹅），我就可以肯定地说“天鹅都是白色的”这一论断是错误的。但是，即使我从来没有见过一只黑天鹅，我也不可以认为上述论断就真的正确。再说一遍：由于一个小小的例外便可以推翻一个论断，因此，虽然我们不能确定某个事物就是什么，但证伪总是比证实更容易找到依据。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;作者提倡“不做优于多做”。我在 FPS 游戏里发现了对应，这里贴一下&lt;a href=&#34;https://twitter.com/NekoStranding/status/1753360752046735860&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;推友相关的推&lt;/a&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;周末打 Apex 排位的时候突然有个感想
+低段位和高段位玩家之间有个明显区别：高段位玩家每个动作都有明确的意图，追求对自己有利；而低段位玩家经常做各种迷之操作，比如跑位路上突然开始 poke 别人，没有好处并且贻误战机。职业领域的多数事情都应该套用这种竞技玩家的心态，阻力小能才游得快。&lt;/p&gt;
+&lt;p&gt;（这是回复我的：）OODA 当然好，但一没有强调多余动作导致资源浪费，二没有强调有意识的规划要通过强化去改变无意识的习惯。光是别挨没必要的打，别跑没必要的路就能升段，很多人却一直在练枪刷级骂队友。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;OODA 是指&lt;a href=&#34;https://en.wikipedia.org/wiki/OODA_loop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OODA 循环&lt;/a&gt;，你可以当作“提前规划 + 根据新输入快速调整规划”，我个人总是在军事领域听到 OODA 循环这个词。他说的是 APEX，我不玩 APEX，我玩战地，但我发现他说的是真的，“别挨没必要的打，别跑没必要的路”，比熟背地图、苦练技巧等方式又方便记忆又好用。我又联想到真实的战场，老兵交给新兵的生存技巧都是“不要做 XX”，因为失误的惩罚很严重——死掉，而且也没有多少人会在现实里贪多杀人的机会吧。&lt;/p&gt;
+&lt;h2 id=&#34;重新引入波动性&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/book-antifragile/#重新引入波动性&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/book-antifragile/#contents:重新引入波动性&#34; class=&#34;headings&#34;&gt;重新引入波动性&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;杠铃策略&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/book-antifragile/#杠铃策略&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/book-antifragile/#contents:杠铃策略&#34; class=&#34;headings&#34;&gt;杠铃策略&lt;/a&gt;&lt;/h2&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text"></title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/minecraft-screen-navigation/" />
+            <id>https://boholder.github.io/blogs/minecraft-screen-navigation/</id>
+            <updated>2025-04-03T09:40:39&#43;08:00</updated>
+            <published>0001-01-01T00:00:00&#43;00:00</published>
+            <author>
+                    <uri>https://boholder.github.io/</uri>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">我需要通过修改 cloth-config 库逻辑，为所有使用了 cloth-config 库的 mod 增加配置界面的视觉无障碍支持。 其中一个目标是让 cloth-config 的界面组件支持通过键盘在组件间导航，因此我需要阅读、理解并复用 Minecraft 源码中的相关逻辑。具体来说，包 net.minecraft.client.gui.navigation 负责通过键盘</summary>
             
                 <content type="html">&lt;p&gt;我需要通过&lt;a href=&#34;https://github.com/minecraft-access/minecraft-access/pull/347&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;修改 cloth-config 库逻辑&lt;/a&gt;，为所有使用了 cloth-config 库的 mod 增加配置界面的视觉无障碍支持。&lt;/p&gt;
-&lt;p&gt;其中一个目标是让 cloth-config 的界面组件支持通过键盘在组件间导航，因此我需要阅读、理解并复用 Minecraft 源码中的相关逻辑。具体来说，包 &lt;a href=&#34;https://maven.fabricmc.net/docs/yarn-1.21.4&amp;#43;build.1/net/minecraft/client/gui/navigation/package-summary.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;net.minecraft.client.gui.navigation&lt;/code&gt;&lt;/a&gt; 负责通过键盘导航并选中组件，包 &lt;a href=&#34;https://maven.fabricmc.net/docs/yarn-1.21.4&amp;#43;build.1/net/minecraft/client/gui/screen/narration/package-summary.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;net.minecraft.client.gui.screen.narration&lt;/code&gt;&lt;/a&gt; 负责组织并读出所选中组件的文字描述。我没能搜索到现有的代码讲解或教程，所以打算自己写一篇。&lt;/p&gt;
+&lt;p&gt;其中一个目标是让 cloth-config 的界面组件支持通过键盘在组件间导航，因此我需要阅读、理解并复用 Minecraft 源码中的相关逻辑。具体来说，包 &lt;a href=&#34;https://maven.fabricmc.net/docs/yarn-1.21.4+build.1/net/minecraft/client/gui/navigation/package-summary.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;net.minecraft.client.gui.navigation&lt;/code&gt;&lt;/a&gt; 负责通过键盘导航并选中组件，包 &lt;a href=&#34;https://maven.fabricmc.net/docs/yarn-1.21.4+build.1/net/minecraft/client/gui/screen/narration/package-summary.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;net.minecraft.client.gui.screen.narration&lt;/code&gt;&lt;/a&gt; 负责组织并读出所选中组件的文字描述。我没能搜索到现有的代码讲解或教程，所以打算自己写一篇。&lt;/p&gt;
 &lt;p&gt;本篇内容仅包含组件导航，即介绍源码中对包 [&lt;code&gt;net.minecraft.client.gui.navigation&lt;/code&gt;] 的使用、以及我们 mod 开发者如何复用这个包使自定义界面也支持组件导航。游戏版本为&lt;code&gt;1.21.4&lt;/code&gt;，使用的 Mappings 为 Mojang 官方发布的 Mappings，即 Mojmaps。&lt;/p&gt;
 &lt;p&gt;希望这篇文章能帮到你，也希望有更多 mod 开发者为自己 mod 的&lt;del&gt;古法手工&lt;/del&gt;自定义界面提供视觉无障碍支持。另外，关于如何创建自定义界面，可参考 &lt;a href=&#34;https://docs.fabricmc.net/develop/rendering/gui/custom-screens&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fabric 网站上的这篇文章&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;screen-基类&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/minecraft-screen-navigation/#screen-基类&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/minecraft-screen-navigation/#contents:screen-基类&#34; class=&#34;headings&#34;&gt;&lt;code&gt;Screen&lt;/code&gt; 基类&lt;/a&gt;&lt;/h2&gt;
@@ -6484,122 +6617,6 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html"></summary>
             
                 <content type="html"></content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text"></title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/z_accept-interpersonal-friction/" />
-            <id>https://boholder.github.io/blogs/z_accept-interpersonal-friction/</id>
-            <updated>2025-09-05T14:29:23&#43;08:00</updated>
-            <published>0001-01-01T00:00:00&#43;00:00</published>
-            <author>
-                    <uri>https://boholder.github.io/</uri>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">&lt;p&gt;title = &amp;ldquo;交新朋友，别怕摩擦&amp;rdquo;
-date = &amp;ldquo;2025-07-16&amp;rdquo;
-description = &amp;ldquo;摩擦产生友谊的火花&amp;rdquo;
-categories = [&amp;ldquo;knowledge&amp;rdquo;]
-tags = [&amp;ldquo;blog&amp;rdquo;]&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Life is such a wonderful waste of time
-I wanna spend it with you
-&amp;ndash; &lt;a href=&#34;https://www.youtube.com/watch?v=kzHT-Hjwm9o&#34;&gt;Almost Nothing feat. Okay Kaya&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;我这代在小城读书、大城工作的人时常苦喊孤独却又不知如何结交新朋友，我也是。&lt;/p&gt;</summary>
-            
-                <content type="html">&lt;p&gt;title = &amp;ldquo;交新朋友，别怕摩擦&amp;rdquo;
-date = &amp;ldquo;2025-07-16&amp;rdquo;
-description = &amp;ldquo;摩擦产生友谊的火花&amp;rdquo;
-categories = [&amp;ldquo;knowledge&amp;rdquo;]
-tags = [&amp;ldquo;blog&amp;rdquo;]&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Life is such a wonderful waste of time
-I wanna spend it with you
-&amp;ndash; &lt;a href=&#34;https://www.youtube.com/watch?v=kzHT-Hjwm9o&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Almost Nothing feat. Okay Kaya&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;我这代在小城读书、大城工作的人时常苦喊孤独却又不知如何结交新朋友，我也是。&lt;/p&gt;
-&lt;p&gt;不知在哪看到过一句话：“指出问题是好的，更重要的是提供解决问题的方案”。最近读了些材料并和朋友交换意见，有了些谈不上解决方案的想法，连同读到的知识一并写下来分享给大家。&lt;/p&gt;
-&lt;h2 id=&#34;交往的客观条件共处同一时间空间&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_accept-interpersonal-friction/#交往的客观条件共处同一时间空间&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_accept-interpersonal-friction/#contents:交往的客观条件共处同一时间空间&#34; class=&#34;headings&#34;&gt;交往的客观条件：共处同一时间空间&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;那么陌生人间交往的客观必需条件是什么？回想一下之前我们是在哪交到朋友的：发小是家住得近，放学后一起玩；和同学们一起上课，课间课后聊天；舍友更是朝夕相处，从谁扔垃圾到几点关灯，都要象征性约法三章。总结来看，共同的条件便是：多个人在同一有限空间下共处一段时间。&lt;/p&gt;
-&lt;h2 id=&#34;造成人们疏远的客观因素&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_accept-interpersonal-friction/#造成人们疏远的客观因素&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_accept-interpersonal-friction/#contents:造成人们疏远的客观因素&#34; class=&#34;headings&#34;&gt;造成人们疏远的客观因素&lt;/a&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;城市设计导致公共空间减少&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_accept-interpersonal-friction/#城市设计导致公共空间减少&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_accept-interpersonal-friction/#contents:城市设计导致公共空间减少&#34; class=&#34;headings&#34;&gt;城市设计导致公共空间减少&lt;/a&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;个人主义&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_accept-interpersonal-friction/#个人主义&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_accept-interpersonal-friction/#contents:个人主义&#34; class=&#34;headings&#34;&gt;个人主义&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;日本：不麻烦别人，但也不希望别人麻烦我&lt;/p&gt;
-&lt;h2 id=&#34;更重要的是你的选择&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_accept-interpersonal-friction/#更重要的是你的选择&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_accept-interpersonal-friction/#contents:更重要的是你的选择&#34; class=&#34;headings&#34;&gt;更重要的是你的选择&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;搭子文化-vs-熟人社交&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_accept-interpersonal-friction/#搭子文化-vs-熟人社交&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_accept-interpersonal-friction/#contents:搭子文化-vs-熟人社交&#34; class=&#34;headings&#34;&gt;搭子文化 vs 熟人社交&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;我观察到，相同的人身处小地方和大城市，在有参与多人活动的需求时，选择伙伴的倾向不同。我朋友肯定了这点，并给出一个绝妙的例子：“比如想找人打羽毛球，小地方是大家普遍愿意从现有的朋友里找愿意打球的，大城市是大家从愿意打球的陌生人里找搭子（并且不想发展成朋友）”。&lt;/p&gt;
-&lt;p&gt;大城市中这种交往倾向，已经有对应的网络用语“搭子文化”：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“搭子”定义为因某一共同兴趣爱好或需求而结合成的社会关系，处于陌生人之上，朋友之下，主打的是细分领域的精准陪伴。相对于知己与恋人，“搭子”关系往往显得轻浅，人们因某一次活动相聚在一起，又快速散开，不再参与到彼此的私人生活中。
-&amp;ndash; 百度百科&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;为什么会出现这种差异？有一定客观原因：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;统计学上，小城市相比大城市，和自己有共同爱好的（陌生）人数量更少，更难找到“搭子”。&lt;/li&gt;
-&lt;li&gt;过往经历上，我们在小城市已经培养了一批现成的朋友、发小、同学，但在大城市没有对应的归属群体。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这两种倾向，谈不上谁对谁错、谁好谁坏。&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text"></title>
-            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/z_book-antifragile/" />
-            <id>https://boholder.github.io/blogs/z_book-antifragile/</id>
-            <updated>2025-09-05T14:29:23&#43;08:00</updated>
-            <published>0001-01-01T00:00:00&#43;00:00</published>
-            <author>
-                    <uri>https://boholder.github.io/</uri>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">&lt;h2 id=&#34;好学生不善处理混沌情况&#34;&gt;好学生不善处理混沌情况&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;足球妈妈们试图从孩子们的生活中消除试错和反脆弱性，使他们远离生态模式，而将他们改造成按照预设的现实模式（符合足球妈妈的想法）行事的书呆子。就这样，孩子们成为好学生，但也成为书呆子，也就是说，这些孩子就像是计算机，除了计算速度慢了一些。此外，他们完全没有受过任何关于处理模棱两可情况的训练。&lt;/p&gt;</summary>
-            
-                <content type="html">&lt;h2 id=&#34;好学生不善处理混沌情况&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_book-antifragile/#好学生不善处理混沌情况&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_book-antifragile/#contents:好学生不善处理混沌情况&#34; class=&#34;headings&#34;&gt;好学生不善处理混沌情况&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;足球妈妈们试图从孩子们的生活中消除试错和反脆弱性，使他们远离生态模式，而将他们改造成按照预设的现实模式（符合足球妈妈的想法）行事的书呆子。就这样，孩子们成为好学生，但也成为书呆子，也就是说，这些孩子就像是计算机，除了计算速度慢了一些。此外，他们完全没有受过任何关于处理模棱两可情况的训练。&lt;/p&gt;
-&lt;p&gt;我以人们的周旋能力为筛选标准进行选择，好学的人一般不善于与人周旋：他们需要有一个明确的任务。
-当我 10 岁的时候我就意识到，好成绩在校外不像在校内那么受欢迎，因为它们会带来一定的副作用。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;我知道有本书&lt;a href=&#34;https://book.douban.com/subject/36190074/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《金榜题名之后：大学生出路分化之谜》&lt;/a&gt;，也是写（来自普通/贫穷家庭的）“书呆子”一旦离开校园，失去了以成绩作为评价标准（非常单一直接）的目标，就会变得迷茫，而富裕家庭的孩子会提前观察到社会多样性的评价标准，进而在校园中提前做准备。《反脆弱》作者说的“不善处理混沌情况”似乎和此书的论点有些重合的地方。&lt;/p&gt;
-&lt;h2 id=&#34;拖延来处理混沌情况&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_book-antifragile/#拖延来处理混沌情况&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_book-antifragile/#contents:拖延来处理混沌情况&#34; class=&#34;headings&#34;&gt;拖延来处理混沌情况&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;事实上，人类是非常不擅长过滤信息的，特别是短期信息，而拖延则是帮助我们筛选信息的较好方式，它能避免我们由于冲动而轻信某个信息。
-你越频繁地寻找数据，你会发现，你找到的噪声（而非被称为信号的宝贵数据）的比例就越高，噪声–信号比就越高。噪声和信号的混淆并非心理问题，而是数据本身所固有的问题。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;拖延处理混沌情况的前提是，信噪比会随着时间的推移而增大，错误信息会被时间证伪。这个在投资上体现的最明显。一天看几次大盘，只能收获焦虑。我在推上看过一句批评“短期投资者看到波动就总是将同时发生的事情擅自联系起来，实际上两者无关”，作者在书里也写了“先发生事件，事后找个看起来合理的理论解释事件”（第四卷）的行为是很不明智的。&lt;/p&gt;
-&lt;p&gt;或者前提是，随着时间推移，可能的情况会越来越多，就像多重宇宙理论，从一个时间点开始宇宙因为选择分裂成无数时间线，提前计划大概率 miss（缓存击穿），计划赶不上变化。这个前提在编程上体现的比较多：“不要过早优化”，“不要冲出前灯范围”，行业抛弃瀑布流程的原因。大概编程是讨厌信息熵大（可能性多）的东西的，我们讨厌公共耦合，因为公共值有更多可能被无意中修改为不合适的值。&lt;/p&gt;
-&lt;h2 id=&#34;减法性知识消除错误&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_book-antifragile/#减法性知识消除错误&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_book-antifragile/#contents:减法性知识消除错误&#34; class=&#34;headings&#34;&gt;减法性知识消除错误&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;鉴于我们今天所知的知识可能被证实是错误的，但是我们今天认识到是错误的知识则不可能变得正确，至少不那么容易，因此，我们通过减法获得的知识远远比通过加法获得的知识多。如果我发现了一只黑天鹅（注意是真的天鹅），我就可以肯定地说“天鹅都是白色的”这一论断是错误的。但是，即使我从来没有见过一只黑天鹅，我也不可以认为上述论断就真的正确。再说一遍：由于一个小小的例外便可以推翻一个论断，因此，虽然我们不能确定某个事物就是什么，但证伪总是比证实更容易找到依据。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;作者提倡“不做优于多做”。我在 FPS 游戏里发现了对应，这里贴一下&lt;a href=&#34;https://twitter.com/NekoStranding/status/1753360752046735860&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;推友相关的推&lt;/a&gt;：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;周末打 Apex 排位的时候突然有个感想
-低段位和高段位玩家之间有个明显区别：高段位玩家每个动作都有明确的意图，追求对自己有利；而低段位玩家经常做各种迷之操作，比如跑位路上突然开始 poke 别人，没有好处并且贻误战机。职业领域的多数事情都应该套用这种竞技玩家的心态，阻力小能才游得快。&lt;/p&gt;
-&lt;p&gt;（这是回复我的：）OODA 当然好，但一没有强调多余动作导致资源浪费，二没有强调有意识的规划要通过强化去改变无意识的习惯。光是别挨没必要的打，别跑没必要的路就能升段，很多人却一直在练枪刷级骂队友。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;OODA 是指&lt;a href=&#34;https://en.wikipedia.org/wiki/OODA_loop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OODA 循环&lt;/a&gt;，你可以当作“提前规划 + 根据新输入快速调整规划”，我个人总是在军事领域听到 OODA 循环这个词。他说的是 APEX，我不玩 APEX，我玩战地，但我发现他说的是真的，“别挨没必要的打，别跑没必要的路”，比熟背地图、苦练技巧等方式又方便记忆又好用。我又联想到真实的战场，老兵交给新兵的生存技巧都是“不要做 XX”，因为失误的惩罚很严重——死掉，而且也没有多少人会在现实里贪多杀人的机会吧。&lt;/p&gt;
-&lt;h2 id=&#34;重新引入波动性&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_book-antifragile/#重新引入波动性&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_book-antifragile/#contents:重新引入波动性&#34; class=&#34;headings&#34;&gt;重新引入波动性&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;杠铃策略&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_book-antifragile/#杠铃策略&#34; class=&#34;anchor-link&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/z_book-antifragile/#contents:杠铃策略&#34; class=&#34;headings&#34;&gt;杠铃策略&lt;/a&gt;&lt;/h2&gt;
-</content>
             
             
             

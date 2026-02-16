@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -244,7 +244,7 @@
 </li>
 </ol>
 <p>我们的测试要覆盖这两种行为，尤其要注意不太直观的第二种行为。（但是说测第二种行为，也会忽略方法对模块实例本身状态的改动，毕竟这个算模块自己的私事，我们强行去测就破坏封装性了（比如在 Java 里用反射去看类私有字段的值，也不是不能做到）。）</p>
-<p><img src="/img/postimg/2021/mock-0.svg" alt="一张展示一个看起来人畜无害的 add 方法可以背地里偷偷删库的图片"></p>
+<p><img alt="一张展示一个看起来人畜无害的 add 方法可以背地里偷偷删库的图片" src="/img/postimg/2021/mock-0.svg"></p>
 <h2 id="不用-mock-技巧直接测试方法的返回值或输入值的改变"><a href="#不用-mock-技巧直接测试方法的返回值或输入值的改变" class="anchor-link">#</a><a href="#contents:不用-mock-技巧直接测试方法的返回值或输入值的改变" class="headings">不用 Mock 技巧，直接测试方法的返回值或输入值的改变</a></h2>
 <p>我们可以直接用断言测试这两种值。很普通，大家都会，没什么好讲的，但是还是要写出来。</p>
 <div class="highlight"><div class="chroma">
@@ -428,11 +428,11 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
-</div><p><img src="/img/postimg/2021/mock-1.svg" alt="一张展示用 Mock 技巧回避删库的图片"></p>
+</div><p><img alt="一张展示用 Mock 技巧回避删库的图片" src="/img/postimg/2021/mock-1.svg"></p>
 <h2 id="延伸"><a href="#延伸" class="anchor-link">#</a><a href="#contents:延伸" class="headings">延伸</a></h2>
 <p>特别的，Mockito 含有断言 Mock 组件行为的 API，比如上面示例中断言方法调用次数。一般单独的 Mock 技巧只能用来取值，还要结合其他断言库去验证值的正确性。Mock 不仅可以让我们取得被测模块传给依赖的值，还能让我们设定依赖对被测模块调用的返回值，我称之为“第二种输入”，比如让依赖抛异常，看被测模块能否妥善处理。</p>
 <p>Mock 技巧不止局限于单元测试层面，这是一个通用概念。假如上面的坏计算模块不再依赖删库模块，而是自己实现了删库操作&hellip;&hellip;没事，我们还能往数据库里导<a href="https://mockaroo.com/" target="_blank" rel="noopener">假数据</a> 或者一整个的<a href="https://springtestdbunit.github.io/spring-test-dbunit/" target="_blank" rel="noopener">数据库实例</a> 都是假的，这是在集成测试中应用 Mock 概念的一个例子。</p>
-<p><img src="/img/postimg/2021/mock-2.svg" alt="展示单元测试需要设置输入值和依赖的返回值，而要断言输入值、输出值和被测对依赖的调用值的图片"></p>
+<p><img alt="展示单元测试需要设置输入值和依赖的返回值，而要断言输入值、输出值和被测对依赖的调用值的图片" src="/img/postimg/2021/mock-2.svg"></p>
 
             </div>
 
@@ -647,7 +647,7 @@
             
     <footer id="footer" class="footer">
         <div class="footer-inner">
-            <div class="site-info">©&nbsp;2019–2025&nbsp;<svg  xmlns="http://www.w3.org/2000/svg" height="16" width="16" id="glider_svg" ><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="8.3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="3" cy="13.6" r="2"/></svg></div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+            <div class="site-info">©&nbsp;2019–2026&nbsp;<svg  xmlns="http://www.w3.org/2000/svg" height="16" width="16" id="glider_svg" ><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="8.3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="3" cy="13.6" r="2"/></svg></div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
 
             
     

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,8 +58,8 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2025-09-05T00:00:00+00:00",
-        "dateModified": "2025-09-05T14:29:23+08:00",
+        "datePublished": "2026-02-16T00:00:00+00:00",
+        "dateModified": "2026-02-16T16:34:56+08:00",
         "url": "https://boholder.github.io/",
         "description": "BoHolder's site: crafts, blogs etc",
         "image": "https://boholder.github.io/icons/apple-touch-icon.png",
@@ -208,11 +208,7 @@
 
                 
                 <summary class="summary p-summary">
-                    <p>首先提醒一下记得<a href="https://en.wikipedia.org/wiki/Single-responsibility_principle">单一职责原则（SRP）</a>是面向对象实践下的设计原则，也是<a href="https://en.wikipedia.org/wiki/SOLID">SOLID</a>五大面向对象设计原则之一。然后<a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">不要重复自己（DRY）</a>原则则是更泛化的编程原则，也可以用在编程工作以外。这个短文讲两个原则的关系，总归还是把前提限定在了面向对象编程之内。</p>
-<p>我记得这是哪本书上的例子，大概是<a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a>，它是用这个例子来解释 SRP 的含义的，我稍微改一下，不翻原书了：</p>
-<blockquote>
-<p>需求 1：有三种员工，经理和普通员工和临时工，计算他们薪资的算法是相同的。</p></blockquote>
-<p>需求 1 映射到代码里就是，三个分开的员工类，然后三个类计算薪资的方法内部会调用同一个工具函数，DRY，对吧。</p>
+                    首先提醒一下记得单一职责原则（SRP）是面向对象实践下的设计原则，也是SOLID五大面向对象设计原则之一。然后不要重复自己（DRY）原则则是更泛化的编程原则，也可以用在编程工作以外。这个短文讲两个原则
                 </summary>
                 
                     <div class="read-more-container">
@@ -261,10 +257,7 @@
 
                 
                 <summary class="summary p-summary">
-                    <h2 id="前言">前言</h2>
-<p>我不是装机发烧友，过程中也请教了不少朋友和互联网，但现在想想其实不是很麻烦，主要是没有整体的知识框架，是无知导致的畏手畏脚。所以把最近第一次组装台式主机的经历和总结记下来，如果能帮到其他人就更好了。</p>
-<h2 id="选配件">选配件</h2>
-<p>就算知道配件的知识，什么接口什么协议，那些都是抽象的行业标准，对选配件没太大帮助。比如你知道牛奶的国标，但还是在货架旁纠结买哪个品牌的牛奶。和买牛奶一样，选电脑配件就是选品牌，需要对品牌甚至品牌下的产品线有一个整体的了解，不是发烧友一般不会主动去获取这方面的知识。下面我会多次提到某个配件“竞争品牌多，勤搜索论坛和评测，注意别翻车”这类话，就是指，首先搜着看一些广谱的推荐文章，选定一些品牌型号，然后挨个在网上搜这个型号的评价。</p>
+                    前言 我不是装机发烧友，过程中也请教了不少朋友和互联网，但现在想想其实不是很麻烦，主要是没有整体的知识框架，是无知导致的畏手畏脚。所以把最近第一次组装台式主机的经历和总结记下来，如果能帮到其他人就更好了
                 </summary>
                 
                     <div class="read-more-container">
@@ -313,17 +306,7 @@
 
                 
                 <summary class="summary p-summary">
-                    <h2 id="前言">前言</h2>
-<p>本文旨在配合图示帮助读者理解单元测试中的“Mock”这个技巧概念，希望下次开发时大家可以用到这个技巧。</p>
-<p>简单说一下单元测试的概念：</p>
-<ul>
-<li>测试对象通常是（单个模块的）单个方法。</li>
-<li>目标是用代码把对方法的行为的期望固定成能重复执行的脚本，以实现自动化测试。</li>
-<li>通过预先定义输入值与对应的<a href="https://en.wikipedia.org/wiki/Test_assertion">断言 (assertion)</a>
-这种二元组，来检查某个状态值是否符合预期。（语义即：我期望给方法传值 A 时，返回值 | 输入值变成 | 实例的某个依赖收到值 B）</li>
-<li>断言是另一个二元组，即<strong>期望值</strong>和<strong>实际值</strong>，常用<code>except</code>和<code>actual</code>两个变量名。</li>
-</ul>
-<p>调用方法会产生两种行为，两种行为可同时发生，但至少发生一种，要不它就失去了作为方法的方生意义：</p>
+                    前言 本文旨在配合图示帮助读者理解单元测试中的“Mock”这个技巧概念，希望下次开发时大家可以用到这个技巧。 简单说一下单元测试的概念： 测试对象通常是（单个模块的）单个方法。 目标是用代码把对方法的行为的期
                 </summary>
                 
                     <div class="read-more-container">
@@ -372,9 +355,7 @@
 
                 
                 <summary class="summary p-summary">
-                    <h2 id="前言">前言</h2>
-<p>本文试图通过介绍编程工作中的部分技能和知识，帮助新进入程序员职业的朋友熟悉未来的工作。特别的，本文将额外提供以 Java 编程语言下的 Spring 框架开发 Web 应用后端逻辑的工作相关的介绍。</p>
-<p>因本文实在冗长，建议你结合目录挑选自己感兴趣的部分阅读。如果你想通过文本做跳板寻找优质学习资源，希望附录部分我精心挑选的网站和书籍推荐让你满意。</p>
+                    前言 本文试图通过介绍编程工作中的部分技能和知识，帮助新进入程序员职业的朋友熟悉未来的工作。特别的，本文将额外提供以 Java 编程语言下的 Spring 框架开发 Web 应用后端逻辑的工作相关的介绍。 因本文实在冗长，建议你结合目录
                 </summary>
                 
                     <div class="read-more-container">
@@ -423,14 +404,7 @@
 
                 
                 <summary class="summary p-summary">
-                    <p>这是一篇译制博客文章，原博客为
-<a href="https://coderscat.com/learn-from-source-code/">Learn from Source Code (an Effective Way to Grow for Beginners)</a>
-，原作者为<a href="mailto:nickmose8@gmail.com">Nick Mose</a> 。
-<a href="mailto:bottleholder@anche.no">我</a> 向 Nick 申请获得了此文的中文翻译权与中文翻译文章发布权。</p>
-<h2 id="前言">前言</h2>
-<p>上周我在和一位年轻程序员聊天时，他问到我：“如何阅读源码？”，我们讨论了一段时间，我还列举了几种有效阅读源码的方式。
-然后他说：“你应该就这个话题写篇文章，这对初学者很有帮助，而且这种经验无法从书籍和教程中获得。”
-那么开始吧，下面是我关于阅读源码的小技巧。</p>
+                    这是一篇译制博客文章，原博客为 Learn from Source Code (an Effective Way to Grow for Beginners) ，原作者为Nick Mose 。 我 向 Nick 申请获得了此文的中文翻译权与中文翻译文章发布权。 前言 上周我在和一位年轻程序员聊天时，他问到我：“如何阅读源码？”，我们讨
                 </summary>
                 
                     <div class="read-more-container">
@@ -469,7 +443,7 @@
             
     <footer id="footer" class="footer">
         <div class="footer-inner">
-            <div class="site-info">©&nbsp;2019–2025&nbsp;<svg  xmlns="http://www.w3.org/2000/svg" height="16" width="16" id="glider_svg" ><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="8.3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="3" cy="13.6" r="2"/></svg></div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+            <div class="site-info">©&nbsp;2019–2026&nbsp;<svg  xmlns="http://www.w3.org/2000/svg" height="16" width="16" id="glider_svg" ><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="8.3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="3" cy="13.6" r="2"/></svg></div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
 
             
     
