@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -22,7 +22,7 @@
     
     
         
-            <script src="/js/meme.min.d8a113c9ce78010711be55ec6e3c4bab960dd298030050887d9bd88354c5aeb7.js"></script>
+            <script src="/js/meme.min.d3d6424379ffbc6d2be91a9df17513c31e3dd4dedc69709a7692a70d7b4d6de3.js"></script>
 
         
     
@@ -49,7 +49,7 @@
     
 
     
-        <link rel="canonical" href="https://boholder.github.io/blogs/tdd-tips/" />
+        <link rel="canonical" href="http://localhost:1313/blogs/tdd-tips/" />
     
 
 <script type="application/ld+json">
@@ -58,16 +58,16 @@
         "@type": "BlogPosting",
         "datePublished": "2020-07-17T00:00:00+00:00",
         "dateModified": "2025-05-02T18:34:35+08:00",
-        "url": "https://boholder.github.io/blogs/tdd-tips/",
+        "url": "http://localhost:1313/blogs/tdd-tips/",
         "headline": "TDD 实践经验分享与对 TDD 实践程度的讨论",
         "description": "TDD 是好的，但要求对测试库很熟悉才能实践；但这不妨碍我们按照 TDD 的思路来指导代码编写",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
         "wordCount":  6703 ,
-        "image": "https://boholder.github.io/icons/apple-touch-icon.png",
+        "image": "http://localhost:1313/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
-            "url": "https://boholder.github.io/",
+            "url": "http://localhost:1313/",
             
         },
         "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)",
@@ -76,13 +76,13 @@
             "name": "BoHolder的网站：博客，小玩意及其他",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://boholder.github.io/icons/apple-touch-icon.png"
+                "url": "http://localhost:1313/icons/apple-touch-icon.png"
             },
-            "url": "https://boholder.github.io/"
+            "url": "http://localhost:1313/"
         },
         "mainEntityOfPage": {
             "@type": "WebSite",
-            "@id": "https://boholder.github.io/"
+            "@id": "http://localhost:1313/"
         }
     }
 </script>
@@ -98,9 +98,9 @@
 
 <meta property="og:title" content="TDD 实践经验分享与对 TDD 实践程度的讨论" />
 <meta property="og:description" content="TDD 是好的，但要求对测试库很熟悉才能实践；但这不妨碍我们按照 TDD 的思路来指导代码编写" />
-<meta property="og:url" content="https://boholder.github.io/blogs/tdd-tips/" />
+<meta property="og:url" content="http://localhost:1313/blogs/tdd-tips/" />
 <meta property="og:site_name" content="BoHolder的网站：博客，小玩意及其他" />
-<meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
+<meta property="og:locale" content="zh-cn" /><meta property="og:image" content="http://localhost:1313/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2020-07-17T00:00:00&#43;00:00" />
     <meta property="article:modified_time" content="2025-05-02T18:34:35&#43;08:00" />
@@ -281,12 +281,10 @@
 <p>&hellip;首先，他写了一个单元测试的一小部分，没几行代码。然后，他写了刚好能使那个测试通过的代码。
 接着，他又写了些测试，然后再写一些代码&hellip;从编码到运行的周期如此之短&hellip;Kent 居然每 30 秒运行一次（测试）程序&hellip;
 忽然，我发现这种周期似曾相识！许多年前，当我还是孩子的时候&hellip;解释型语言，无需编译构建，你要做的只是添加一行代码，
-然后执行，再添加，再执行&hellip;使用这些语言的编程效率极高。</p>
-</blockquote>
+然后执行，再添加，再执行&hellip;使用这些语言的编程效率极高。</p></blockquote>
 <p>（我看到“30 秒”那里，就对 TDD 感兴趣了。）Bob 大叔说得对，我们在刚开始编程时都有一个时期，小心翼翼，一次只加一行代码，然后运行看看 print 出的变量值发生了什么变化。</p>
 <blockquote>
-<p>符合预期的变化会给我们信心，而且直白的目标使下一行要加的代码“呼之欲出”。</p>
-</blockquote>
+<p>符合预期的变化会给我们信心，而且直白的目标使下一行要加的代码“呼之欲出”。</p></blockquote>
 <p>这就是 TDD 的魔力所在。它鼓励你拿出勇气去重构（烂）代码，因为你不再害怕重构它有破坏功能的风险，快速方便的回归测试集的 re-run 报告帮你撑腰。</p>
 <p>TDD 还有如下优势：</p>
 <ul>
@@ -305,19 +303,19 @@
 <p>TDD 理论说来容易，但如果自身技能不够扎实，只是从头疼怎么写业务代码转到头疼怎么写测试而已。测试先行意味着，测试写得不够“好”，则直接影响开发人员进一步的思考方向，严重时会把开发人员带进思考泥潭。</p>
 <h3 id="41不需要在编写测试时编写非法输入测试"><a href="#41不需要在编写测试时编写非法输入测试" class="anchor-link">#</a><a href="#contents:41不需要在编写测试时编写非法输入测试" class="headings">4.1.不需要在编写测试时编写非法输入测试</a></h3>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>问：如何在使用 TDD 时保证代码的健壮性？是否需要考虑非法输入？</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>答：TDD 时不需要。TDD 之后，部分代码会需要，再加上就是。</td>
-</tr>
-<tr>
-<td>资料：<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup>的第二个回答，<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup>1.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>问：如何在使用 TDD 时保证代码的健壮性？是否需要考虑非法输入？</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>答：TDD 时不需要。TDD 之后，部分代码会需要，再加上就是。</td>
+      </tr>
+      <tr>
+          <td>资料：<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup>的第二个回答，<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup>1.</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>编写非法输入测试 (比如输入 NULL，空对象指针 etc，这不是一个正规名词但涵盖范围正确）是 QA（测试人员）的任务，当他们测试时，会在至少是单元测试的层面的封装（或者调用链）上测试非法输入，这意味着 <strong>不是每个方法都要考虑非法输入</strong> ，
 而 TDD 的测试会覆盖到每个方法。另外，在 TDD 之后而不是 TDD 时考虑这个部分，修改代码会更头脑清晰更方便（回归测试给的信心）。</p>
@@ -325,59 +323,55 @@
 （这是一个优雅如禅宗公案的“kata”）最后，为了考虑逻辑的“周全性”而添加的两个测试。（一个输入情况对应一个测试）</p>
 <h3 id="42避免错误的步子大的测试"><a href="#42避免错误的步子大的测试" class="anchor-link">#</a><a href="#contents:42避免错误的步子大的测试" class="headings">4.2.避免错误的步子大的测试</a></h3>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>问：我写出了下一个测试，但在编业务代码时卡壳了</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>答：先排除自身编码不熟练的因素，然后检查这个测试，</td>
-</tr>
-<tr>
-<td>是不是覆盖的逻辑太大了，重新写一个小一些的测试（4.3 详解）</td>
-</tr>
-<tr>
-<td>资料：<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>3.，<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>问：我写出了下一个测试，但在编业务代码时卡壳了</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>答：先排除自身编码不熟练的因素，然后检查这个测试，</td>
+      </tr>
+      <tr>
+          <td>是不是覆盖的逻辑太大了，重新写一个小一些的测试（4.3 详解）</td>
+      </tr>
+      <tr>
+          <td>资料：<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>3.，<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
+      </tr>
+  </tbody>
 </table></div>
 <blockquote>
-<p>酒要一口一口地喝，路要一步一步走，步子迈大了，容易_ _ _。————《让子弹飞》</p>
-</blockquote>
+<p>酒要一口一口地喝，路要一步一步走，步子迈大了，容易_ _ _。————《让子弹飞》</p></blockquote>
 <p>在 TDD 过程中，业务逻辑编码只需要恰好满足使测试通过，如果坚持住这个原则，那么唯一使编程步骤卡壳的原因就在于：开发人员不能快速想出通过测试的方案，又陷入了使用 TDD 前的窘境————没有短又直白的编码目标，头疼怎么一步到位。
 这个测试不能驱动编码思路<em>呼之欲出</em>，说明这个测试有问题，需要重新换一个。两个资料里都提到了这样含义的话：</p>
 <blockquote>
-<p>避免一个测试覆盖太大的逻辑范围，这违反了 TDD 单个测试对应小目标的原则。</p>
-</blockquote>
+<p>避免一个测试覆盖太大的逻辑范围，这违反了 TDD 单个测试对应小目标的原则。</p></blockquote>
 <p>错误实例：就像文章<sup id="fnref2:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>中“我”在第一次分析需求时，选择了不明朗的测试“演化”方向，导致最后一步测试，实质上对应的是一步到位处理超过一种的新加入的情况，无法延续现有的代码继续修改以通过测试。</p>
 <p>现在的问题转换为“如何写出下一个测试”，请接着读 4.3。</p>
 <h3 id="43简化问题场景-逐步添加限制--条件"><a href="#43简化问题场景-逐步添加限制--条件" class="anchor-link">#</a><a href="#contents:43简化问题场景-逐步添加限制--条件" class="headings">4.3.简化问题场景-&gt;逐步添加限制 | 条件</a></h3>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th>问：我无法写出下一个测试，卡壳了</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>答：接着上一步测试的目的，继续分析需求，我们走到哪了？或者我们应该换个思路重新分析需求？</td>
-</tr>
-<tr>
-<td>资料：<sup id="fnref2:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>2.，<sup id="fnref3:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>问：我无法写出下一个测试，卡壳了</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>答：接着上一步测试的目的，继续分析需求，我们走到哪了？或者我们应该换个思路重新分析需求？</td>
+      </tr>
+      <tr>
+          <td>资料：<sup id="fnref2:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>2.，<sup id="fnref3:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>文章中间</td>
+      </tr>
+  </tbody>
 </table></div>
 <blockquote>
 <p>&ldquo;When faced with a problem you do not understand, do any part of it you do understand,
-then look at it again.&rdquo;</p>
-</blockquote>
+then look at it again.&rdquo;</p></blockquote>
 <p>这是文章<sup id="fnref4:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>给出的引用，来自一部科幻小说。下面我要写的是我根据文章<sup id="fnref5:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>和其他 kata 解决需求的思路悟出的门路，总结来说：</p>
 <blockquote>
 <p>不要按步骤 1-2-3 线性流程切分需求，而是按套娃，
 从理想的简单状态机（简单输入简单处理输出 | 复杂输入简化处理输出）到有条件 | 限制的复杂状态机（复杂处理 + 复杂输入 | 输出），
-一步步完善处理逻辑。</p>
-</blockquote>
+一步步完善处理逻辑。</p></blockquote>
 <p>如果你手边有《计算机网络》这类书，看看每个层的第一个教学使用的理论协议的假设条件有多理想，以数据链路层的协议为例：单工，发送方和接收方的网络层总是准备就绪，数据处理不计时间，可用缓存无限大，信道不会在物理层损坏 | 丢失。
 这种理想协议只会在教科书上存在，但它形象地描述了该层协议 <em>可能的风险 | 考量</em> 。之后的篇幅逐渐引入各种机制来解决理想协议中忽略的考量，最终一个能在现实场景中使用的协议完成了。</p>
 <p>咱们的测试也应该像设计协议一样，每次只测试一个考量 | 一种情况，修改少量代码通过这个测试，接着向下走，直到考虑了所有情况。</p>
@@ -507,8 +501,7 @@ then look at it again.&rdquo;</p>
 在长时间坚持这么做后，我写不写测试都会这样思考。代码仍是可测试的，只是无须真的写出来测试。</p>
 <p>&hellip;测试也是与其他开发人员交流的一种方式，所以我开始会在与他人共享代码时为其编写测试，或给有外部依赖的事情写测试。</p>
 <p>Andy 说我不应该加上这个知识栏，他担心这会诱使缺乏经验的开发人员不写测试。下面是我的折衷方案：</p>
-<p>应该编写测试吗？要，但等你写了 30 年后，不妨从容地做些实验，看看它究竟给你带来的什么好处。</p>
-</blockquote>
+<p>应该编写测试吗？要，但等你写了 30 年后，不妨从容地做些实验，看看它究竟给你带来的什么好处。</p></blockquote>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -580,26 +573,26 @@ then look at it again.&rdquo;</p>
                 
                     <div class="share-item facebook">
                         
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/blogs/tdd-tips/&amp;hashtag=%23Unit-Test" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/blogs/tdd-tips/&amp;hashtag=%23Unit-Test" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
                     </div>
                 
             
                 
                     <div class="share-item mastodon">
-                            <a href="/fedishare.html#title=TDD%20%e5%ae%9e%e8%b7%b5%e7%bb%8f%e9%aa%8c%e5%88%86%e4%ba%ab%e4%b8%8e%e5%af%b9%20TDD%20%e5%ae%9e%e8%b7%b5%e7%a8%8b%e5%ba%a6%e7%9a%84%e8%ae%a8%e8%ae%ba&amp;description=TDD%20%e6%98%af%e5%a5%bd%e7%9a%84%ef%bc%8c%e4%bd%86%e8%a6%81%e6%b1%82%e5%af%b9%e6%b5%8b%e8%af%95%e5%ba%93%e5%be%88%e7%86%9f%e6%82%89%e6%89%8d%e8%83%bd%e5%ae%9e%e8%b7%b5%ef%bc%9b%e4%bd%86%e8%bf%99%e4%b8%8d%e5%a6%a8%e7%a2%8d%e6%88%91%e4%bb%ac%e6%8c%89%e7%85%a7%20TDD%20%e7%9a%84%e6%80%9d%e8%b7%af%e6%9d%a5%e6%8c%87%e5%af%bc%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99&amp;url=https://boholder.github.io/blogs/tdd-tips/" title="分享到「Mastodon」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon mastodon-icon"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg></a>
+                            <a href="/fedishare.html#title=TDD%20%e5%ae%9e%e8%b7%b5%e7%bb%8f%e9%aa%8c%e5%88%86%e4%ba%ab%e4%b8%8e%e5%af%b9%20TDD%20%e5%ae%9e%e8%b7%b5%e7%a8%8b%e5%ba%a6%e7%9a%84%e8%ae%a8%e8%ae%ba&amp;description=TDD%20%e6%98%af%e5%a5%bd%e7%9a%84%ef%bc%8c%e4%bd%86%e8%a6%81%e6%b1%82%e5%af%b9%e6%b5%8b%e8%af%95%e5%ba%93%e5%be%88%e7%86%9f%e6%82%89%e6%89%8d%e8%83%bd%e5%ae%9e%e8%b7%b5%ef%bc%9b%e4%bd%86%e8%bf%99%e4%b8%8d%e5%a6%a8%e7%a2%8d%e6%88%91%e4%bb%ac%e6%8c%89%e7%85%a7%20TDD%20%e7%9a%84%e6%80%9d%e8%b7%af%e6%9d%a5%e6%8c%87%e5%af%bc%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99&amp;url=http://localhost:1313/blogs/tdd-tips/" title="分享到「Mastodon」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon mastodon-icon"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg></a>
                         </div>
                     
             
                 
                     <div class="share-item fediverse">
-                            <a href="/fedishare.html#title=TDD%20%e5%ae%9e%e8%b7%b5%e7%bb%8f%e9%aa%8c%e5%88%86%e4%ba%ab%e4%b8%8e%e5%af%b9%20TDD%20%e5%ae%9e%e8%b7%b5%e7%a8%8b%e5%ba%a6%e7%9a%84%e8%ae%a8%e8%ae%ba&amp;description=TDD%20%e6%98%af%e5%a5%bd%e7%9a%84%ef%bc%8c%e4%bd%86%e8%a6%81%e6%b1%82%e5%af%b9%e6%b5%8b%e8%af%95%e5%ba%93%e5%be%88%e7%86%9f%e6%82%89%e6%89%8d%e8%83%bd%e5%ae%9e%e8%b7%b5%ef%bc%9b%e4%bd%86%e8%bf%99%e4%b8%8d%e5%a6%a8%e7%a2%8d%e6%88%91%e4%bb%ac%e6%8c%89%e7%85%a7%20TDD%20%e7%9a%84%e6%80%9d%e8%b7%af%e6%9d%a5%e6%8c%87%e5%af%bc%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99&amp;url=https://boholder.github.io/blogs/tdd-tips/" title="分享到「Fediverse」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="64 163 873 873" class="icon fediverse-icon"><defs><linearGradient id="fediverse-gradient"><stop offset="0%" stop-color="#ff0101"/><stop offset="10%" stop-color="#9501ff"/><stop offset="50%" stop-color="#ffca01"/><stop offset="75%" stop-color="#01a3ff"/><stop offset="100%" stop-color="#65ff01"/></linearGradient></defs><path d="M539 176q-32 0 -55 22t-25 55t20.5 58t56 27t58.5 -20.5t27 -56t-20.5 -59t-56.5 -26.5h-5zM452 271l-232 118q20 20 25 48l231 -118q-19 -20 -24 -48zM619 298q-13 25 -38 38l183 184q13 -25 39 -38zM477 320l-135 265l40 40l143 -280q-28 -5 -48 -25zM581 336 q-22 11 -46 10l-8 -1l21 132l56 9zM155 370q-32 0 -55 22.5t-25 55t20.5 58t56.5 27t59 -21t26.5 -56t-21 -58.5t-55.5 -27h-6zM245 438q1 9 1 18q-1 19 -10 35l132 21l26 -50zM470 474l-26 51l311 49q-1 -8 -1 -17q1 -19 10 -36zM842 480q-32 1 -55 23t-24.5 55t21 58 t56 27t58.5 -20.5t27 -56.5t-20.5 -59t-56.5 -27h-6zM236 493q-13 25 -39 38l210 210l51 -25zM196 531q-21 11 -44 10l-9 -1l40 256q21 -10 45 -9l8 1zM560 553l48 311q21 -10 44 -9l10 1l-46 -294zM755 576l-118 60l8 56l135 -68q-20 -20 -25 -48zM781 625l-119 231 q28 5 48 25l119 -231q-28 -5 -48 -25zM306 654l-68 134q28 5 48 25l60 -119zM568 671l-281 143q19 20 24 48l265 -135zM513 771l-51 25l106 107q13 -25 39 -38zM222 795q-32 0 -55.5 22.5t-25 55t21 57.5t56 27t58.5 -20.5t27 -56t-20.5 -58.5t-56.5 -27h-5zM311 863 q2 9 1 18q-1 19 -9 35l256 41q-1 -9 -1 -18q1 -18 10 -35zM646 863q-32 0 -55 22.5t-24.5 55t20.5 58t56 27t59 -21t27 -56t-20.5 -58.5t-56.5 -27h-6z"/></svg></a>
+                            <a href="/fedishare.html#title=TDD%20%e5%ae%9e%e8%b7%b5%e7%bb%8f%e9%aa%8c%e5%88%86%e4%ba%ab%e4%b8%8e%e5%af%b9%20TDD%20%e5%ae%9e%e8%b7%b5%e7%a8%8b%e5%ba%a6%e7%9a%84%e8%ae%a8%e8%ae%ba&amp;description=TDD%20%e6%98%af%e5%a5%bd%e7%9a%84%ef%bc%8c%e4%bd%86%e8%a6%81%e6%b1%82%e5%af%b9%e6%b5%8b%e8%af%95%e5%ba%93%e5%be%88%e7%86%9f%e6%82%89%e6%89%8d%e8%83%bd%e5%ae%9e%e8%b7%b5%ef%bc%9b%e4%bd%86%e8%bf%99%e4%b8%8d%e5%a6%a8%e7%a2%8d%e6%88%91%e4%bb%ac%e6%8c%89%e7%85%a7%20TDD%20%e7%9a%84%e6%80%9d%e8%b7%af%e6%9d%a5%e6%8c%87%e5%af%bc%e4%bb%a3%e7%a0%81%e7%bc%96%e5%86%99&amp;url=http://localhost:1313/blogs/tdd-tips/" title="分享到「Fediverse」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="64 163 873 873" class="icon fediverse-icon"><defs><linearGradient id="fediverse-gradient"><stop offset="0%" stop-color="#ff0101"/><stop offset="10%" stop-color="#9501ff"/><stop offset="50%" stop-color="#ffca01"/><stop offset="75%" stop-color="#01a3ff"/><stop offset="100%" stop-color="#65ff01"/></linearGradient></defs><path d="M539 176q-32 0 -55 22t-25 55t20.5 58t56 27t58.5 -20.5t27 -56t-20.5 -59t-56.5 -26.5h-5zM452 271l-232 118q20 20 25 48l231 -118q-19 -20 -24 -48zM619 298q-13 25 -38 38l183 184q13 -25 39 -38zM477 320l-135 265l40 40l143 -280q-28 -5 -48 -25zM581 336 q-22 11 -46 10l-8 -1l21 132l56 9zM155 370q-32 0 -55 22.5t-25 55t20.5 58t56.5 27t59 -21t26.5 -56t-21 -58.5t-55.5 -27h-6zM245 438q1 9 1 18q-1 19 -10 35l132 21l26 -50zM470 474l-26 51l311 49q-1 -8 -1 -17q1 -19 10 -36zM842 480q-32 1 -55 23t-24.5 55t21 58 t56 27t58.5 -20.5t27 -56.5t-20.5 -59t-56.5 -27h-6zM236 493q-13 25 -39 38l210 210l51 -25zM196 531q-21 11 -44 10l-9 -1l40 256q21 -10 45 -9l8 1zM560 553l48 311q21 -10 44 -9l10 1l-46 -294zM755 576l-118 60l8 56l135 -68q-20 -20 -25 -48zM781 625l-119 231 q28 5 48 25l119 -231q-28 -5 -48 -25zM306 654l-68 134q28 5 48 25l60 -119zM568 671l-281 143q19 20 24 48l265 -135zM513 771l-51 25l106 107q13 -25 39 -38zM222 795q-32 0 -55.5 22.5t-25 55t21 57.5t56 27t58.5 -20.5t27 -56t-20.5 -58.5t-56.5 -27h-5zM311 863 q2 9 1 18q-1 19 -9 35l256 41q-1 -9 -1 -18q1 -18 10 -35zM646 863q-32 0 -55 22.5t-24.5 55t20.5 58t56 27t59 -21t27 -56t-20.5 -58.5t-56.5 -27h-6z"/></svg></a>
                         </div>
                     
             
                 
                     <div class="share-item twitter">
                         
-                        <a href="https://twitter.com/share?url=https://boholder.github.io/blogs/tdd-tips/&amp;text=TDD%20%e5%ae%9e%e8%b7%b5%e7%bb%8f%e9%aa%8c%e5%88%86%e4%ba%ab%e4%b8%8e%e5%af%b9%20TDD%20%e5%ae%9e%e8%b7%b5%e7%a8%8b%e5%ba%a6%e7%9a%84%e8%ae%a8%e8%ae%ba&amp;hashtags=Unit-Test,Programming,&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                        <a href="https://twitter.com/share?url=http://localhost:1313/blogs/tdd-tips/&amp;text=TDD%20%e5%ae%9e%e8%b7%b5%e7%bb%8f%e9%aa%8c%e5%88%86%e4%ba%ab%e4%b8%8e%e5%af%b9%20TDD%20%e5%ae%9e%e8%b7%b5%e7%a8%8b%e5%ba%a6%e7%9a%84%e8%ae%a8%e8%ae%ba&amp;hashtags=Unit-Test,Programming,&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                     </div>
                 
             
@@ -705,26 +698,6 @@ then look at it again.&rdquo;</p>
 
 
         
-    
-
-        
-
-        
-
-        
-
-        
-            <div id="utterances"></div>
-        
-
-        
-
-        
-
-        
-
-    
-
 
 
     </div>
@@ -769,47 +742,6 @@ then look at it again.&rdquo;</p>
 
 
 
-
-    
-
-        
-
-        
-
-        
-            <script>
-    function loadComments() {
-        (function() {
-            const utterances = document.getElementById("utterances");
-            if (!utterances) {
-                return;
-            }
-            const script = document.createElement('script');
-            script.src = 'https:\/\/utteranc.es\/client.js';
-            script.async = true;
-            script.crossOrigin = 'anonymous';
-            script.setAttribute('repo', 'boholder\/boholder.github.io');
-            script.setAttribute('issue-term', 'pathname');
-            const isDark = getCurrentTheme() === 'dark';
-        if (isDark) {
-            script.setAttribute('theme', 'photon-dark');
-        } else {
-            script.setAttribute('theme', 'github-light');
-        }
-            
-            utterances.appendChild(script);
-        })();
-    }
-</script>
-        
-
-        
-
-        
-
-        
-
-    
 
 
 
