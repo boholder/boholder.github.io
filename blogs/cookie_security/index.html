@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
     <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
@@ -15,14 +15,15 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>HTTP cookie 的安全性、安全使用方法和攻击防御手段 | BoHolder的网站：博客，小玩意及其他</title>
+    <title>
+HTTP cookie 的安全性、安全使用方法和攻击防御手段 | BoHolder的网站：博客，小玩意及其他</title>
 
-    <link rel="stylesheet" href="/css/meme.min.b53218f81c9c711bbb3f9df2b462678547d5b3dba22f5a3aaacae86a6084bb04.css"/>
+    <link rel="stylesheet" href="/css/meme.min.50f4ea04f9d43b41dbb3cbdf2a61526c3f5a7a70445051dc20ba30172c553e79.css"/>
 
     
     
         
-            <script src="/js/meme.min.d3d6424379ffbc6d2be91a9df17513c31e3dd4dedc69709a7692a70d7b4d6de3.js"></script>
+            <script src="/js/meme.min.450164ffacdaeaf2decb0b09688941df78b699185fb0963dd0492284c50eeb53.js"></script>
 
         
     
@@ -49,7 +50,7 @@
     
 
     
-        <link rel="canonical" href="http://localhost:1313/blogs/cookie_security/" />
+        <link rel="canonical" href="https://boholder.github.io/blogs/cookie_security/" />
     
 
 <script type="application/ld+json">
@@ -58,16 +59,16 @@
         "@type": "BlogPosting",
         "datePublished": "2019-05-18T00:00:00+00:00",
         "dateModified": "2025-05-02T18:34:35+08:00",
-        "url": "http://localhost:1313/blogs/cookie_security/",
-        "headline": "HTTP cookie 的安全性、安全使用方法和攻击防御手段",
+        "url": "https://boholder.github.io/blogs/cookie_security/",
+        "headline": "\r\nHTTP cookie 的安全性、安全使用方法和攻击防御手段",
         "description": "工作需要，要上台讲讲 cookie 安全性，索性总结成博客，自认为蛮全的",
         "inLanguage" : "zh-CN",
         "articleSection": "blogs",
         "wordCount":  4418 ,
-        "image": "http://localhost:1313/icons/apple-touch-icon.png",
+        "image": "https://boholder.github.io/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
-            "url": "http://localhost:1313/",
+            "url": "https://boholder.github.io/",
             
         },
         "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)",
@@ -76,13 +77,13 @@
             "name": "BoHolder的网站：博客，小玩意及其他",
             "logo": {
                 "@type": "ImageObject",
-                "url": "http://localhost:1313/icons/apple-touch-icon.png"
+                "url": "https://boholder.github.io/icons/apple-touch-icon.png"
             },
-            "url": "http://localhost:1313/"
+            "url": "https://boholder.github.io/"
         },
         "mainEntityOfPage": {
             "@type": "WebSite",
-            "@id": "http://localhost:1313/"
+            "@id": "https://boholder.github.io/"
         }
     }
 </script>
@@ -96,11 +97,12 @@
 
 
 
-<meta property="og:title" content="HTTP cookie 的安全性、安全使用方法和攻击防御手段" />
+<meta property="og:title" content="
+HTTP cookie 的安全性、安全使用方法和攻击防御手段" />
 <meta property="og:description" content="工作需要，要上台讲讲 cookie 安全性，索性总结成博客，自认为蛮全的" />
-<meta property="og:url" content="http://localhost:1313/blogs/cookie_security/" />
+<meta property="og:url" content="https://boholder.github.io/blogs/cookie_security/" />
 <meta property="og:site_name" content="BoHolder的网站：博客，小玩意及其他" />
-<meta property="og:locale" content="zh-cn" /><meta property="og:image" content="http://localhost:1313/icons/apple-touch-icon.png" />
+<meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2019-05-18T00:00:00&#43;00:00" />
     <meta property="article:modified_time" content="2025-05-02T18:34:35&#43;08:00" />
@@ -160,7 +162,7 @@
 
                 
                 
-                <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
+                <button id="theme-switcher" type="button" aria-label="切换主题"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon theme-icon-system"><path d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z"/></svg></button>
             
             
     <main class="main single" id="main">
@@ -170,12 +172,14 @@
 
         <article class="content post h-entry" data-align="justify" data-type="blogs" data-toc-num="true">
 
-            <h1 class="post-title p-name">HTTP cookie 的安全性、安全使用方法和攻击防御手段</h1>
+            <h1 class="post-title p-name">
+HTTP cookie 的安全性、安全使用方法和攻击防御手段</h1>
 
             
 
             
-                <div class="post-description p-summary">工作需要，要上台讲讲 cookie 安全性，索性总结成博客，自认为蛮全的</div>
+                <div class="post-description p-summary">
+工作需要，要上台讲讲 cookie 安全性，索性总结成博客，自认为蛮全的</div>
                 
             
 
@@ -274,14 +278,15 @@
     <li><a id="contents:summary" href="#summary">Summary</a></li>
   </ol>
 </nav><div class="post-body e-content">
-                <h2 id="前言"><a href="#前言" class="anchor-link">#</a><a href="#contents:前言" class="headings">前言</a></h2>
+                
+<h2 id="前言"><a href="#前言" class="anchor-link" aria-label="前言">#</a><a href="#contents:前言" class="headings">前言</a></h2>
 <p>本文将把，截至 2019-05-18 的，从互联网上搜集到</p>
 <p>（&ldquo;cookie+security&rdquo; -&gt; Google 与 StartPage 前两页结果为源 + 相关学术文献）的，
 有关 Cookie 标准与用法、cookie 安全性的信息，汇总索引，以方便读者学习了解相关信息。</p>
 <p>本文需要读者对计算机网络有大致了解，<br>
 没有了解也可以，术语会挂上解释链接，但阅读体验就比较差了。</p>
 <p>小段英文的翻译交给谷歌处理。</p>
-<h2 id="目录"><a href="#目录" class="anchor-link">#</a><a href="#contents:目录" class="headings">目录</a></h2>
+<h2 id="目录"><a href="#目录" class="anchor-link" aria-label="目录">#</a><a href="#contents:目录" class="headings">目录</a></h2>
 <p>2 部分与 3 部分的解决方案部分有重复，<br>
 但我认为还是把攻防和开发分开，缺陷与解决结合，比较方便阅读。</p>
 <ol>
@@ -291,9 +296,9 @@
 <li><a href="/blogs/cookie_security/#academic-discussion-about-cookies">学术讨论涉及 cookie 的攻防</a></li>
 <li><a href="/blogs/cookie_security/#summary">总结</a></li>
 </ol>
-<h2 id="what-is-cookie"><a href="#what-is-cookie" class="anchor-link">#</a><a href="#contents:what-is-cookie" class="headings">What is cookie</a></h2>
+<h2 id="what-is-cookie"><a href="#what-is-cookie" class="anchor-link" aria-label="what-is-cookie">#</a><a href="#contents:what-is-cookie" class="headings">What is cookie</a></h2>
 <p><strong>1.Cookie 是什么&amp;用法</strong></p>
-<h3 id="定义"><a href="#定义" class="anchor-link">#</a><a href="#contents:定义" class="headings">定义</a></h3>
+<h3 id="定义"><a href="#定义" class="anchor-link" aria-label="定义">#</a><a href="#contents:定义" class="headings">定义</a></h3>
 <p>英文<a href="https://en.wikipedia.org/wiki/HTTP_cookie" target="_blank" rel="noopener">维基百科</a> 还是蛮丰富的，中文维基简单点，可以看<a href="https://baike.baidu.com/item/cookie/1119" target="_blank" rel="noopener">百度百科</a>。</p>
 <p>RFC：<a href="https://tools.ietf.org/html/rfc2109" target="_blank" rel="noopener">rfc2109-1997</a> -&gt; <a href="https://tools.ietf.org/html/rfc2965" target="_blank" rel="noopener">rfc2965-2000</a> -&gt; <a href="https://tools.ietf.org/html/rfc6265" target="_blank" rel="noopener">rfc6265-2011</a> -&gt; <a href="https://datatracker.ietf.org/doc/draft-ietf-httpbis-rfc6265bis/" target="_blank" rel="noopener">rfc6265bis</a></p>
 <p><a href="https://hc.apache.org/httpcomponents-client-ga/tutorial/html/statemgmt.html" target="_blank" rel="noopener">https://hc.apache.org/httpcomponents-client-ga/tutorial/html/statemgmt.html</a></p>
@@ -322,7 +327,7 @@ and that gets stored by the user agent.</p></blockquote>
 <li>个性化定制 <a href="https://en.wikipedia.org/wiki/Zombie_cookie" target="_blank" rel="noopener">wikipedia-Zombie cookie（有点意思）</a></li>
 <li>追踪</li>
 </ol>
-<h3 id="格式用法"><a href="#格式用法" class="anchor-link">#</a><a href="#contents:格式用法" class="headings">格式&amp;用法</a></h3>
+<h3 id="格式用法"><a href="#格式用法" class="anchor-link" aria-label="格式用法">#</a><a href="#contents:格式用法" class="headings">格式&amp;用法</a></h3>
 <p>一个 cookie 由一个键值对（key=value）组成，同时在<em>被设置时</em> 会附加一些变量（attributes），<br>
 这些变量用来控制该 cookie 的使用方法。</p>
 <p>想了解详细属性，看<a href="https://tools.ietf.org/html/rfc6265#section-5.2" target="_blank" rel="noopener">rfc6265-The Set-Cookie Header</a> ，<br>
@@ -336,7 +341,7 @@ and that gets stored by the user agent.</p></blockquote>
 <p><a href="https://en.wikipedia.org/wiki/HTTP_cookie#Implementation" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/HTTP_cookie#Implementation</a></p>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie</a></p>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-4.2" target="_blank" rel="noopener">https://tools.ietf.org/html/rfc6265#section-4.2</a></p>
-<h2 id="security-risk-in-design-and-use-and-solution"><a href="#security-risk-in-design-and-use-and-solution" class="anchor-link">#</a><a href="#contents:security-risk-in-design-and-use-and-solution" class="headings">Security risk in design and use and solution</a></h2>
+<h2 id="security-risk-in-design-and-use-and-solution"><a href="#security-risk-in-design-and-use-and-solution" class="anchor-link" aria-label="security-risk-in-design-and-use-and-solution">#</a><a href="#contents:security-risk-in-design-and-use-and-solution" class="headings">Security risk in design and use and solution</a></h2>
 <p><strong>2.Cookie 设计与使用中的安全隐患，以及相应改进</strong></p>
 <p>Cookie 安全性这点，<a href="https://tools.ietf.org/html/rfc6265#section-8" target="_blank" rel="noopener">rfc6265 中有一整段 (8. Security Considerations)</a> 去阐述，<br>
 务必读一下，总结的很好，我会跳过那些内容，只给出一个目录以供预览。</p>
@@ -382,7 +387,7 @@ from network attackers, even when used in conjunction with HTTPS.</p></blockquot
 <blockquote>
 <p>此外，默认情况下，cookie 不会为网络攻击者提供机密性或完整性，<br>
 即使与 HTTPS 结合使用也是如此。</p></blockquote>
-<h3 id="1服务器只能读取-cookie-键值对读不到属性"><a href="#1服务器只能读取-cookie-键值对读不到属性" class="anchor-link">#</a><a href="#contents:1服务器只能读取-cookie-键值对读不到属性" class="headings">1.服务器只能读取 cookie 键值对，读不到属性</a></h3>
+<h3 id="1服务器只能读取-cookie-键值对读不到属性"><a href="#1服务器只能读取-cookie-键值对读不到属性" class="anchor-link" aria-label="1服务器只能读取-cookie-键值对读不到属性">#</a><a href="#contents:1服务器只能读取-cookie-键值对读不到属性" class="headings">1.服务器只能读取 cookie 键值对，读不到属性</a></h3>
 <blockquote>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-4.2.2" target="_blank" rel="noopener">rfc6265#section-4.2.2</a> :<br>
 Notice that the cookie attributes are not returned.<br>
@@ -397,16 +402,16 @@ or whether the cookie was set with the Secure or HttpOnly attributes.</p></block
 或者 cookie 是否使用 Secure 或 HttpOnly 属性设置。</p></blockquote>
 <p>同时在设置 cookie 时，客户端并不会发回结果反馈。这使得服务器不知道 cookie 是否被正确设置。<br>
 这等于要从数据库读一个不知道是否干净的数据，对数据完整性有影响。</p>
-<h4 id="解决服务器容错与键名走私smuggle"><a href="#解决服务器容错与键名走私smuggle" class="anchor-link">#</a><a href="#contents:解决服务器容错与键名走私smuggle" class="headings">解决：服务器容错与键名“走私（Smuggle）”</a></h4>
+<h4 id="解决服务器容错与键名走私smuggle"><a href="#解决服务器容错与键名走私smuggle" class="anchor-link" aria-label="解决服务器容错与键名走私smuggle">#</a><a href="#contents:解决服务器容错与键名走私smuggle" class="headings">解决：服务器容错与键名“走私（Smuggle）”</a></h4>
 <p>大多数情况下，可以用服务器逻辑容错。<br>
 <a href="https://www.owasp.org/images/a/a0/OWASPLondon20171130_Cookie_Security_Myths_Misconceptions_David_Johansson.pdf" target="_blank" rel="noopener">OWASPLondon20171130_Cookie_Security_Myths_Misconceptions_David_Johansson</a><br>
 此报告提供了在 cookie 名里添加“私货”以标识属性的方法，<br>
 比如一个 cookie 设置了属性<code>http-only</code>，名字就加个前缀 HTTP_ONLY_。</p>
-<h3 id="2-domainpath属性影响完整性"><a href="#2-domainpath属性影响完整性" class="anchor-link">#</a><a href="#contents:2-domainpath属性影响完整性" class="headings">2. “Domain”“Path”属性影响完整性</a></h3>
+<h3 id="2-domainpath属性影响完整性"><a href="#2-domainpath属性影响完整性" class="anchor-link" aria-label="2-domainpath属性影响完整性">#</a><a href="#contents:2-domainpath属性影响完整性" class="headings">2. “Domain”“Path”属性影响完整性</a></h3>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-5.2.3" target="_blank" rel="noopener">rfc6265-两个属性的设置</a></p>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-5.1.2" target="_blank" rel="noopener">rfc6265-两个属性在客户端的处理算法</a></p>
 <p>不贴原文了，简单地总结（参照维基）：</p>
-<h4 id="path-是指域名host-下的路径归属"><a href="#path-是指域名host-下的路径归属" class="anchor-link">#</a><a href="#contents:path-是指域名host-下的路径归属" class="headings"><code>Path</code> 是指域名|Host 下的路径归属。</a></h4>
+<h4 id="path-是指域名host-下的路径归属"><a href="#path-是指域名host-下的路径归属" class="anchor-link" aria-label="path-是指域名host-下的路径归属">#</a><a href="#contents:path-是指域名host-下的路径归属" class="headings"><code>Path</code> 是指域名|Host 下的路径归属。</a></h4>
 <ul>
 <li>比如两网站<code>example.com/site1/index.htm</code>,<code>example/com/site2/index.htm</code>，<br>
 设置 Path 属性为<code>/site1</code>,<code>/site2</code>两个值以分离两个目录中的页面的 cookie。</li>
@@ -416,12 +421,12 @@ or whether the cookie was set with the Secure or HttpOnly attributes.</p></block
 <p>看起来很好，但稍有不慎（或故意为之），就可以用来绕过<a href="https://en.wikipedia.org/wiki/Same-origin_policy" target="_blank" rel="noopener">SOE-同源策略</a> 。<br>
 比如，设置 path 成<code>/</code>，好，域名下所有页面都能读该 cookie 了。</p>
 <p>这是一种减少网站开发人员工作量的窍门，也能被攻击者用来做窃取 cookie 的手段。</p>
-<h4 id="domain-是指域名归属"><a href="#domain-是指域名归属" class="anchor-link">#</a><a href="#contents:domain-是指域名归属" class="headings"><code>Domain</code> 是指域名归属。</a></h4>
+<h4 id="domain-是指域名归属"><a href="#domain-是指域名归属" class="anchor-link" aria-label="domain-是指域名归属">#</a><a href="#contents:domain-是指域名归属" class="headings"><code>Domain</code> 是指域名归属。</a></h4>
 <p>它和<code>Path</code>属性的缺点差不多类型，设置了<code>Domain</code>的 cookie 是<strong>默认暴露给所有子域名</strong>的。<br>
 我们都知道，同域名不一定等于同服务器 IP，所以攻击者可以劫持域名解析偷 cookie。 <br>
 因为这个原因，实际开发中一般不建议设置<code>Domain</code>属性。</p>
-<h4 id="解决samesite-属性-2016-年不设置domain属性"><a href="#解决samesite-属性-2016-年不设置domain属性" class="anchor-link">#</a><a href="#contents:解决samesite-属性-2016-年不设置domain属性" class="headings">解决：<code>SameSite</code> 属性 (2016 年)&amp;不设置<code>Domain</code>属性</a></h4>
-<h5 id="samesite"><a href="#samesite" class="anchor-link">#</a><a href="#contents:samesite" class="headings"><code>SameSite</code></a></h5>
+<h4 id="解决samesite-属性-2016-年不设置domain属性"><a href="#解决samesite-属性-2016-年不设置domain属性" class="anchor-link" aria-label="解决samesite-属性-2016-年不设置domain属性">#</a><a href="#contents:解决samesite-属性-2016-年不设置domain属性" class="headings">解决：<code>SameSite</code> 属性 (2016 年)&amp;不设置<code>Domain</code>属性</a></h4>
+<h5 id="samesite"><a href="#samesite" class="anchor-link" aria-label="samesite">#</a><a href="#contents:samesite" class="headings"><code>SameSite</code></a></h5>
 <blockquote>
 <p><a href="https://en.wikipedia.org/wiki/HTTP_cookie#Same-site_cookie" target="_blank" rel="noopener">维基#Same-site_cookie</a>:<br>
 In 2016 Google Chrome version 51 introduced a new kind of cookie, the same-site cookie,<br>
@@ -439,14 +444,14 @@ A cookie is given this characteristic by setting the SameSite flag to Strict or 
 <li>浏览器支持：几个主流浏览器，的新版本都已支持，不再列举名字。</li>
 </ul>
 <p><a href="https://www.lambdatest.com/SameSite-cookie-attribute" target="_blank" rel="noopener">Browser Compatibility Testing of &lsquo;SameSite&rsquo; cookie - LambdaTest</a></p>
-<h5 id="不设置domain属性"><a href="#不设置domain属性" class="anchor-link">#</a><a href="#contents:不设置domain属性" class="headings">不设置<code>Domain</code>属性</a></h5>
+<h5 id="不设置domain属性"><a href="#不设置domain属性" class="anchor-link" aria-label="不设置domain属性">#</a><a href="#contents:不设置domain属性" class="headings">不设置<code>Domain</code>属性</a></h5>
 <p><a href="https://stackoverflow.com/questions/12387338/what-is-a-host-only-cookie" target="_blank" rel="noopener">Stack over flow-What is a host only cookie?</a></p>
 <p>之所以不设置<code>Domain</code>属性，其实是为了激活<code>host-only-flag</code>，<br>
 <strong>当 host-only-flag 被设置，子域名无法访问此 cookie。</strong></p>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-5.3" target="_blank" rel="noopener">rfc6265-5.3.  Storage Model</a></p>
-<h3 id="3对-cookie-的误用"><a href="#3对-cookie-的误用" class="anchor-link">#</a><a href="#contents:3对-cookie-的误用" class="headings">3.对 cookie 的误用</a></h3>
+<h3 id="3对-cookie-的误用"><a href="#3对-cookie-的误用" class="anchor-link" aria-label="3对-cookie-的误用">#</a><a href="#contents:3对-cookie-的误用" class="headings">3.对 cookie 的误用</a></h3>
 <p>上面算是设计问题，下面是多数文章主要讲的，开发者对 cookie 的误用。</p>
-<h4 id="http-明文传递-cookie"><a href="#http-明文传递-cookie" class="anchor-link">#</a><a href="#contents:http-明文传递-cookie" class="headings">①http 明文传递 cookie</a></h4>
+<h4 id="http-明文传递-cookie"><a href="#http-明文传递-cookie" class="anchor-link" aria-label="http-明文传递-cookie">#</a><a href="#contents:http-明文传递-cookie" class="headings">①http 明文传递 cookie</a></h4>
 <p>cookie 默认不加密传输，可以在传输中被坏家伙窃听或修改。</p>
 <p><strong>解决：设置<code> Secure</code>属性&amp;cookie 加密和签名</strong></p>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-5.2.5" target="_blank" rel="noopener">rfc6265-5.2.5.  The Secure Attribute</a><br>
@@ -462,22 +467,22 @@ user agent (even when sending the cookies over a secure channel).</p></blockquot
 <blockquote>
 <p>当将服务器传输给用户代理时，服务器应该对 cookie 的内容进行加密和签名<br>
 （使用服务器所需的任何格式）（即使通过安全通道发送 cookie）。</p></blockquote>
-<h4 id="cookie-默认可被客户端-apijs-etc-读取"><a href="#cookie-默认可被客户端-apijs-etc-读取" class="anchor-link">#</a><a href="#contents:cookie-默认可被客户端-apijs-etc-读取" class="headings">②cookie 默认可被客户端 API(JS etc) 读取</a></h4>
+<h4 id="cookie-默认可被客户端-apijs-etc-读取"><a href="#cookie-默认可被客户端-apijs-etc-读取" class="anchor-link" aria-label="cookie-默认可被客户端-apijs-etc-读取">#</a><a href="#contents:cookie-默认可被客户端-apijs-etc-读取" class="headings">②cookie 默认可被客户端 API(JS etc) 读取</a></h4>
 <p><strong>解决：设置时加 <code>Http-only-flag</code> ，禁止客户端 JS 读取 cookie。</strong></p>
-<h4 id="错误规划max-ageexpires"><a href="#错误规划max-ageexpires" class="anchor-link">#</a><a href="#contents:错误规划max-ageexpires" class="headings">③错误规划<code>max-age</code>、<code>expires</code></a></h4>
+<h4 id="错误规划max-ageexpires"><a href="#错误规划max-ageexpires" class="anchor-link" aria-label="错误规划max-ageexpires">#</a><a href="#contents:错误规划max-ageexpires" class="headings">③错误规划<code>max-age</code>、<code>expires</code></a></h4>
 <p><a href="https://tools.ietf.org/html/rfc6265#section-5.2" target="_blank" rel="noopener">rfc6265-The Set-Cookie Header</a></p>
 <p>标准太长，简单总结：<br>
 <code>max-age</code>: 类似 TTL，以秒计，到时删除。<br>
 <code>expires</code>: GMT 时间字符串（Wed, 09 Jun 2021 10:18:14 GMT）,到时删除。<br>
 <code>max-age</code> 是 <code>expires</code> 的一个补充性属性。没有这两个属性，cookie 被视为<a href="https://en.wikipedia.org/wiki/HTTP_cookie#Session_cookie" target="_blank" rel="noopener">session cookie</a> 。<br>
 cookie 保留在客户端的时间越长，被攻击的可能性越高。</p>
-<h4 id="解决谨慎设计max-ageexpires的值"><a href="#解决谨慎设计max-ageexpires的值" class="anchor-link">#</a><a href="#contents:解决谨慎设计max-ageexpires的值" class="headings">解决：谨慎设计<code>max-age</code>、<code>expires</code>的值</a></h4>
+<h4 id="解决谨慎设计max-ageexpires的值"><a href="#解决谨慎设计max-ageexpires的值" class="anchor-link" aria-label="解决谨慎设计max-ageexpires的值">#</a><a href="#contents:解决谨慎设计max-ageexpires的值" class="headings">解决：谨慎设计<code>max-age</code>、<code>expires</code>的值</a></h4>
 <p>越敏感的数据，越要设置时间短，保持用户频繁认证。</p>
-<h2 id="attack-on-cookies-and-solution"><a href="#attack-on-cookies-and-solution" class="anchor-link">#</a><a href="#contents:attack-on-cookies-and-solution" class="headings">Attack on cookies and solution</a></h2>
+<h2 id="attack-on-cookies-and-solution"><a href="#attack-on-cookies-and-solution" class="anchor-link" aria-label="attack-on-cookies-and-solution">#</a><a href="#contents:attack-on-cookies-and-solution" class="headings">Attack on cookies and solution</a></h2>
 <p><strong>3.针对 cookie 窃取的攻击与相应防御</strong></p>
 <p>以下所有攻击手段，都能单独拉出来写好多篇技术报告 | 分享，<br>
 很明显本文没有这个篇幅，因此本文征求做到全而不详，并附链接以供详求。</p>
-<h3 id="为什么我们要攻击--保护-cookie"><a href="#为什么我们要攻击--保护-cookie" class="anchor-link">#</a><a href="#contents:为什么我们要攻击--保护-cookie" class="headings">为什么我们要攻击 | 保护 cookie？</a></h3>
+<h3 id="为什么我们要攻击--保护-cookie"><a href="#为什么我们要攻击--保护-cookie" class="anchor-link" aria-label="为什么我们要攻击--保护-cookie">#</a><a href="#contents:为什么我们要攻击--保护-cookie" class="headings">为什么我们要攻击 | 保护 cookie？</a></h3>
 <p><a href="https://odino.org/security-hardening-http-cookies/" target="_blank" rel="noopener">这篇文章</a> 的一段话讲得不错：</p>
 <blockquote>
 <p>Because the data they contain is, more often than not, extremely sensitive<br>
@@ -488,7 +493,7 @@ or escalate their privileges on your application.</p></blockquote>
 <blockquote>
 <p>因为它们包含的数据通常非常敏感 - 通常用于存储会话 ID 或访问令牌，攻击者的圣杯。<br>
 一旦他们暴露或受到攻击，攻击者就可以冒充用户，或者升级他们对您的应用程序的权限。</p></blockquote>
-<h3 id="常见攻击方式"><a href="#常见攻击方式" class="anchor-link">#</a><a href="#contents:常见攻击方式" class="headings">常见攻击方式</a></h3>
+<h3 id="常见攻击方式"><a href="#常见攻击方式" class="anchor-link" aria-label="常见攻击方式">#</a><a href="#contents:常见攻击方式" class="headings">常见攻击方式</a></h3>
 <p><a href="https://en.wikipedia.org/wiki/HTTP_cookie#Cookie_theft_and_session_hijacking" target="_blank" rel="noopener">维基百科</a>总结了几种常见的攻击方式，包括攻击过程简介与防御手段，在此不复述，只提供目录。</p>
 <div class="table-container"><table>
   <thead>
@@ -531,10 +536,10 @@ TLS 协议不是完全安全的，因为设计或实现的缺陷，<br>
 <li><a href="https://blog.qualys.com/ssllabs/2012/09/14/crime-information-leakage-attack-against-ssltls" target="_blank" rel="noopener">CRIME</a></li>
 <li><a href="http://breachattack.com/" target="_blank" rel="noopener">BREACH</a></li>
 </ul>
-<h3 id="非常见方式"><a href="#非常见方式" class="anchor-link">#</a><a href="#contents:非常见方式" class="headings">非常见方式</a></h3>
+<h3 id="非常见方式"><a href="#非常见方式" class="anchor-link" aria-label="非常见方式">#</a><a href="#contents:非常见方式" class="headings">非常见方式</a></h3>
 <p>非单一的、利用知识组合各种部分的针对 cookie 的攻击方式，<br>
 可惜我只找到一个。</p>
-<h4 id="cookiejacking-rosario-valotta-2011-05link"><a href="#cookiejacking-rosario-valotta-2011-05link" class="anchor-link">#</a><a href="#contents:cookiejacking-rosario-valotta-2011-05link" class="headings">①cookiejacking-Rosario Valotta-2011-05<a href="https://sites.google.com/site/tentacoloviola/cookiejacking" target="_blank" rel="noopener">[link]</a></a></h4>
+<h4 id="cookiejacking-rosario-valotta-2011-05link"><a href="#cookiejacking-rosario-valotta-2011-05link" class="anchor-link" aria-label="cookiejacking-rosario-valotta-2011-05link">#</a><a href="#contents:cookiejacking-rosario-valotta-2011-05link" class="headings">①cookiejacking-Rosario Valotta-2011-05<a href="https://sites.google.com/site/tentacoloviola/cookiejacking" target="_blank" rel="noopener">[link]</a></a></h4>
 <p>该方法利用了 IE 浏览器的“跨域交互策略”的一个漏洞，<br>
 外部 HTML 的&lt;iframe&gt;标签可以加载本地 cookie 文件（本应不能）。<br>
 恶意服务器通过一系列正常的手段获知用于构造 cookie 路径的信息，<br>
@@ -542,11 +547,11 @@ TLS 协议不是完全安全的，因为设计或实现的缺陷，<br>
 因为读的是文件，任何 cookie 都会被窃取。</p>
 <p>微软<a href="https://digitizor.com/cookiejacking-patch/" target="_blank" rel="noopener">6 月</a> 给这个漏洞打了补丁。<br>
 至于 Clickjacking，<code>x-frame-options</code><a href="https://www.keycdn.com/blog/x-frame-options" target="_blank" rel="noopener">(XFO)</a> 可以防止。</p>
-<h2 id="academic-discussion-about-cookies"><a href="#academic-discussion-about-cookies" class="anchor-link">#</a><a href="#contents:academic-discussion-about-cookies" class="headings">Academic discussion about cookies</a></h2>
+<h2 id="academic-discussion-about-cookies"><a href="#academic-discussion-about-cookies" class="anchor-link" aria-label="academic-discussion-about-cookies">#</a><a href="#contents:academic-discussion-about-cookies" class="headings">Academic discussion about cookies</a></h2>
 <p><strong>关于 cookie 的学术讨论</strong></p>
 <p>本来想把理论方面作为 2、3 段的添头，没想到专家们已经在纸头上打过一两轮攻防了。<br>
 故单开此段，索引几个我觉得有意思的学术文献。</p>
-<h3 id="cookie-masking-cookie-掩盖"><a href="#cookie-masking-cookie-掩盖" class="anchor-link">#</a><a href="#contents:cookie-masking-cookie-掩盖" class="headings">cookie masking-cookie 掩盖</a></h3>
+<h3 id="cookie-masking-cookie-掩盖"><a href="#cookie-masking-cookie-掩盖" class="anchor-link" aria-label="cookie-masking-cookie-掩盖">#</a><a href="#contents:cookie-masking-cookie-掩盖" class="headings">cookie masking-cookie 掩盖</a></h3>
 <blockquote>
 <p><a href="https://dl.acm.org/citation.cfm?id=2714592" target="_blank" rel="noopener">TLS Record Protocol: Security Analysis and<br>
 Defense-in-depth Countermeasures for HTTPS</a><br>
@@ -561,7 +566,7 @@ Author: Kenneth G. PatersonEmail author etc<br>
 Time: 2018-02</p></blockquote>
 <p>该文验证了上篇文章两种掩盖方式理论上可被加大提供算力后破解，<br>
 因此该掩盖方式只能提供不强的机密性。</p>
-<h3 id="测信道攻击"><a href="#测信道攻击" class="anchor-link">#</a><a href="#contents:测信道攻击" class="headings">测信道攻击</a></h3>
+<h3 id="测信道攻击"><a href="#测信道攻击" class="anchor-link" aria-label="测信道攻击">#</a><a href="#contents:测信道攻击" class="headings">测信道攻击</a></h3>
 <blockquote>
 <p><a href="https://link.springer.com/chapter/10.1007/978-3-319-89641-0_11" target="_blank" rel="noopener">Path Leaks of HTTPS Side-Channel by Cookie Injection</a><br>
 Author: Fuqing Chen etc<br>
@@ -580,7 +585,7 @@ Time: 2015-07</p></blockquote>
 针对它们的常规解决方法是禁止传输中压缩，<br>
 这意味着加大使用带宽资源。<br>
 该文阐述了两种新的压缩方式，用于实现压缩并保护机密信息的功能。</p>
-<h2 id="summary"><a href="#summary" class="anchor-link">#</a><a href="#contents:summary" class="headings">Summary</a></h2>
+<h2 id="summary"><a href="#summary" class="anchor-link" aria-label="summary">#</a><a href="#contents:summary" class="headings">Summary</a></h2>
 <p><strong>总结</strong></p>
 <p>首先，关于此文，不包括素材阅读的，纯搜索时间，大概只有 2 小时多，<br>
 因此即使是截至 2019-05，此文大概还是遗漏了许多值得一提的部分，请读者海涵。</p>
@@ -640,26 +645,29 @@ Time: 2015-07</p></blockquote>
                 
                     <div class="share-item facebook">
                         
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/blogs/cookie_security/&amp;hashtag=%23Web-Security" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                        
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://boholder.github.io/blogs/cookie_security/&amp;hashtag=%23Web-Security" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
                     </div>
                 
             
                 
                     <div class="share-item mastodon">
-                            <a href="/fedishare.html#title=HTTP%20cookie%20%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7%e3%80%81%e5%ae%89%e5%85%a8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95%e5%92%8c%e6%94%bb%e5%87%bb%e9%98%b2%e5%be%a1%e6%89%8b%e6%ae%b5&amp;description=%e5%b7%a5%e4%bd%9c%e9%9c%80%e8%a6%81%ef%bc%8c%e8%a6%81%e4%b8%8a%e5%8f%b0%e8%ae%b2%e8%ae%b2%20cookie%20%e5%ae%89%e5%85%a8%e6%80%a7%ef%bc%8c%e7%b4%a2%e6%80%a7%e6%80%bb%e7%bb%93%e6%88%90%e5%8d%9a%e5%ae%a2%ef%bc%8c%e8%87%aa%e8%ae%a4%e4%b8%ba%e8%9b%ae%e5%85%a8%e7%9a%84&amp;url=http://localhost:1313/blogs/cookie_security/" title="分享到「Mastodon」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon mastodon-icon"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg></a>
+                            <a href="/fedishare.html#title=%0d%0aHTTP%20cookie%20%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7%e3%80%81%e5%ae%89%e5%85%a8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95%e5%92%8c%e6%94%bb%e5%87%bb%e9%98%b2%e5%be%a1%e6%89%8b%e6%ae%b5&amp;description=%e5%b7%a5%e4%bd%9c%e9%9c%80%e8%a6%81%ef%bc%8c%e8%a6%81%e4%b8%8a%e5%8f%b0%e8%ae%b2%e8%ae%b2%20cookie%20%e5%ae%89%e5%85%a8%e6%80%a7%ef%bc%8c%e7%b4%a2%e6%80%a7%e6%80%bb%e7%bb%93%e6%88%90%e5%8d%9a%e5%ae%a2%ef%bc%8c%e8%87%aa%e8%ae%a4%e4%b8%ba%e8%9b%ae%e5%85%a8%e7%9a%84&amp;url=https://boholder.github.io/blogs/cookie_security/" title="分享到「Mastodon」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon mastodon-icon"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg></a>
                         </div>
                     
             
                 
                     <div class="share-item fediverse">
-                            <a href="/fedishare.html#title=HTTP%20cookie%20%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7%e3%80%81%e5%ae%89%e5%85%a8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95%e5%92%8c%e6%94%bb%e5%87%bb%e9%98%b2%e5%be%a1%e6%89%8b%e6%ae%b5&amp;description=%e5%b7%a5%e4%bd%9c%e9%9c%80%e8%a6%81%ef%bc%8c%e8%a6%81%e4%b8%8a%e5%8f%b0%e8%ae%b2%e8%ae%b2%20cookie%20%e5%ae%89%e5%85%a8%e6%80%a7%ef%bc%8c%e7%b4%a2%e6%80%a7%e6%80%bb%e7%bb%93%e6%88%90%e5%8d%9a%e5%ae%a2%ef%bc%8c%e8%87%aa%e8%ae%a4%e4%b8%ba%e8%9b%ae%e5%85%a8%e7%9a%84&amp;url=http://localhost:1313/blogs/cookie_security/" title="分享到「Fediverse」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="64 163 873 873" class="icon fediverse-icon"><defs><linearGradient id="fediverse-gradient"><stop offset="0%" stop-color="#ff0101"/><stop offset="10%" stop-color="#9501ff"/><stop offset="50%" stop-color="#ffca01"/><stop offset="75%" stop-color="#01a3ff"/><stop offset="100%" stop-color="#65ff01"/></linearGradient></defs><path d="M539 176q-32 0 -55 22t-25 55t20.5 58t56 27t58.5 -20.5t27 -56t-20.5 -59t-56.5 -26.5h-5zM452 271l-232 118q20 20 25 48l231 -118q-19 -20 -24 -48zM619 298q-13 25 -38 38l183 184q13 -25 39 -38zM477 320l-135 265l40 40l143 -280q-28 -5 -48 -25zM581 336 q-22 11 -46 10l-8 -1l21 132l56 9zM155 370q-32 0 -55 22.5t-25 55t20.5 58t56.5 27t59 -21t26.5 -56t-21 -58.5t-55.5 -27h-6zM245 438q1 9 1 18q-1 19 -10 35l132 21l26 -50zM470 474l-26 51l311 49q-1 -8 -1 -17q1 -19 10 -36zM842 480q-32 1 -55 23t-24.5 55t21 58 t56 27t58.5 -20.5t27 -56.5t-20.5 -59t-56.5 -27h-6zM236 493q-13 25 -39 38l210 210l51 -25zM196 531q-21 11 -44 10l-9 -1l40 256q21 -10 45 -9l8 1zM560 553l48 311q21 -10 44 -9l10 1l-46 -294zM755 576l-118 60l8 56l135 -68q-20 -20 -25 -48zM781 625l-119 231 q28 5 48 25l119 -231q-28 -5 -48 -25zM306 654l-68 134q28 5 48 25l60 -119zM568 671l-281 143q19 20 24 48l265 -135zM513 771l-51 25l106 107q13 -25 39 -38zM222 795q-32 0 -55.5 22.5t-25 55t21 57.5t56 27t58.5 -20.5t27 -56t-20.5 -58.5t-56.5 -27h-5zM311 863 q2 9 1 18q-1 19 -9 35l256 41q-1 -9 -1 -18q1 -18 10 -35zM646 863q-32 0 -55 22.5t-24.5 55t20.5 58t56 27t59 -21t27 -56t-20.5 -58.5t-56.5 -27h-6z"/></svg></a>
+                            <a href="/fedishare.html#title=%0d%0aHTTP%20cookie%20%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7%e3%80%81%e5%ae%89%e5%85%a8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95%e5%92%8c%e6%94%bb%e5%87%bb%e9%98%b2%e5%be%a1%e6%89%8b%e6%ae%b5&amp;description=%e5%b7%a5%e4%bd%9c%e9%9c%80%e8%a6%81%ef%bc%8c%e8%a6%81%e4%b8%8a%e5%8f%b0%e8%ae%b2%e8%ae%b2%20cookie%20%e5%ae%89%e5%85%a8%e6%80%a7%ef%bc%8c%e7%b4%a2%e6%80%a7%e6%80%bb%e7%bb%93%e6%88%90%e5%8d%9a%e5%ae%a2%ef%bc%8c%e8%87%aa%e8%ae%a4%e4%b8%ba%e8%9b%ae%e5%85%a8%e7%9a%84&amp;url=https://boholder.github.io/blogs/cookie_security/" title="分享到「Fediverse」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="64 163 873 873" class="icon fediverse-icon"><defs><linearGradient id="fediverse-gradient"><stop offset="0%" stop-color="#ff0101"/><stop offset="10%" stop-color="#9501ff"/><stop offset="50%" stop-color="#ffca01"/><stop offset="75%" stop-color="#01a3ff"/><stop offset="100%" stop-color="#65ff01"/></linearGradient></defs><path d="M539 176q-32 0 -55 22t-25 55t20.5 58t56 27t58.5 -20.5t27 -56t-20.5 -59t-56.5 -26.5h-5zM452 271l-232 118q20 20 25 48l231 -118q-19 -20 -24 -48zM619 298q-13 25 -38 38l183 184q13 -25 39 -38zM477 320l-135 265l40 40l143 -280q-28 -5 -48 -25zM581 336 q-22 11 -46 10l-8 -1l21 132l56 9zM155 370q-32 0 -55 22.5t-25 55t20.5 58t56.5 27t59 -21t26.5 -56t-21 -58.5t-55.5 -27h-6zM245 438q1 9 1 18q-1 19 -10 35l132 21l26 -50zM470 474l-26 51l311 49q-1 -8 -1 -17q1 -19 10 -36zM842 480q-32 1 -55 23t-24.5 55t21 58 t56 27t58.5 -20.5t27 -56.5t-20.5 -59t-56.5 -27h-6zM236 493q-13 25 -39 38l210 210l51 -25zM196 531q-21 11 -44 10l-9 -1l40 256q21 -10 45 -9l8 1zM560 553l48 311q21 -10 44 -9l10 1l-46 -294zM755 576l-118 60l8 56l135 -68q-20 -20 -25 -48zM781 625l-119 231 q28 5 48 25l119 -231q-28 -5 -48 -25zM306 654l-68 134q28 5 48 25l60 -119zM568 671l-281 143q19 20 24 48l265 -135zM513 771l-51 25l106 107q13 -25 39 -38zM222 795q-32 0 -55.5 22.5t-25 55t21 57.5t56 27t58.5 -20.5t27 -56t-20.5 -58.5t-56.5 -27h-5zM311 863 q2 9 1 18q-1 19 -9 35l256 41q-1 -9 -1 -18q1 -18 10 -35zM646 863q-32 0 -55 22.5t-24.5 55t20.5 58t56 27t59 -21t27 -56t-20.5 -58.5t-56.5 -27h-6z"/></svg></a>
                         </div>
                     
             
                 
-                    <div class="share-item twitter">
+                    <div class="share-item x">
                         
-                        <a href="https://twitter.com/share?url=http://localhost:1313/blogs/cookie_security/&amp;text=HTTP%20cookie%20%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7%e3%80%81%e5%ae%89%e5%85%a8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95%e5%92%8c%e6%94%bb%e5%87%bb%e9%98%b2%e5%be%a1%e6%89%8b%e6%ae%b5&amp;hashtags=Web-Security,Cookie,&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                        
+                        
+                        <a href="https://x.com/share?url=https://boholder.github.io/blogs/cookie_security/&amp;text=%0d%0aHTTP%20cookie%20%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7%e3%80%81%e5%ae%89%e5%85%a8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95%e5%92%8c%e6%94%bb%e5%87%bb%e9%98%b2%e5%be%a1%e6%89%8b%e6%ae%b5&amp;hashtags=Web-Security,Cookie," title="分享到「𝕏」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon x-icon"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
                     </div>
                 
             
@@ -732,12 +740,14 @@ Time: 2015-07</p></blockquote>
         <ul class="post-nav">
             
                 <li class="post-nav-prev">
-                    <a href="/blogs/markdown-obsidian-user-defined-language-for-notepadpp/" rel="prev">&lt; 自制 notepad++，MarkDown(Obsidian 配色) 用户定义语言格式（自定义高亮）</a>
+                    <a href="/blogs/markdown-obsidian-user-defined-language-for-notepadpp/" rel="prev">&lt; 
+自制 notepad++，MarkDown(Obsidian 配色) 用户定义语言格式（自定义高亮）</a>
                 </li>
             
             
                 <li class="post-nav-next">
-                    <a href="/blogs/minecraft-screen-navigation/" rel="next"> &gt;</a>
+                    <a href="/blogs/minecraft-screen-navigation/" rel="next">
+ &gt;</a>
                 </li>
             
         </ul>
@@ -746,6 +756,26 @@ Time: 2015-07</p></blockquote>
 
 
         
+    
+
+        
+
+        
+
+        
+
+        
+            <div id="utterances"></div>
+        
+
+        
+
+        
+
+        
+
+    
+
 
 
     </div>
@@ -754,14 +784,18 @@ Time: 2015-07</p></blockquote>
 
             
     <div id="back-to-top" class="back-to-top">
-        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+        <a href="#top" aria-label="回到顶部">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+        </a>
     </div>
 
 
             
     <footer id="footer" class="footer">
         <div class="footer-inner">
-            <div class="site-info">©&nbsp;2019–2026&nbsp;<svg  xmlns="http://www.w3.org/2000/svg" height="16" width="16" id="glider_svg" ><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="8.3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="3" cy="13.6" r="2"/></svg></div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+            <div class="site-info">©&nbsp;2019–2026&nbsp;<svg  xmlns="http://www.w3.org/2000/svg" height="16" width="16" id="glider_svg" ><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="8.3" r="2"/><circle style="fill:gray;stroke-width:0;" cx="13.6" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="8.3" cy="13.6" r="2"/><circle style="fill:gray;stroke-width:0;" cx="3" cy="13.6" r="2"/></svg></div><div class="powered-by">
+Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright">
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
 
             
     
@@ -790,6 +824,47 @@ Time: 2015-07</p></blockquote>
 
 
 
+
+    
+
+        
+
+        
+
+        
+            <script>
+    function loadComments() {
+        (function() {
+            const utterances = document.getElementById("utterances");
+            if (!utterances) {
+                return;
+            }
+            const script = document.createElement('script');
+            script.src = 'https:\/\/utteranc.es\/client.js';
+            script.async = true;
+            script.crossOrigin = 'anonymous';
+            script.setAttribute('repo', 'boholder\/boholder.github.io');
+            script.setAttribute('issue-term', 'pathname');
+            const isDark = getCurrentTheme() === 'dark';
+        if (isDark) {
+            script.setAttribute('theme', 'photon-dark');
+        } else {
+            script.setAttribute('theme', 'github-light');
+        }
+            
+            utterances.appendChild(script);
+        })();
+    }
+</script>
+        
+
+        
+
+        
+
+        
+
+    
 
 
 

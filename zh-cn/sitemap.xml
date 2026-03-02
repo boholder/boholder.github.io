@@ -2,480 +2,480 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/blog/</loc>
+    <loc>https://boholder.github.io/tags/blog/</loc>
     <lastmod>2026-02-16T16:34:56+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://boholder.github.io/</loc>
     <lastmod>2026-02-16T16:34:56+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/"
+                href="https://boholder.github.io/en-us/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/"
+                href="https://boholder.github.io/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/game/</loc>
+    <loc>https://boholder.github.io/categories/game/</loc>
     <lastmod>2026-02-16T16:34:56+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/rim-world-note/</loc>
+    <loc>https://boholder.github.io/blogs/rim-world-note/</loc>
     <lastmod>2026-02-16T16:34:56+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/life/</loc>
+    <loc>https://boholder.github.io/categories/life/</loc>
     <lastmod>2025-09-05T14:29:23+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/categories/life/"
+                href="https://boholder.github.io/en-us/categories/life/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/categories/life/"
+                href="https://boholder.github.io/categories/life/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blogs/chunks-about-socialization/</loc>
+    <loc>https://boholder.github.io/blogs/chunks-about-socialization/</loc>
     <lastmod>2025-09-05T14:29:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/knowledge/</loc>
+    <loc>https://boholder.github.io/categories/knowledge/</loc>
     <lastmod>2025-07-16T13:34:45+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/psychology/</loc>
+    <loc>https://boholder.github.io/tags/psychology/</loc>
     <lastmod>2025-07-16T13:34:45+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/transmarginal-inhibition/</loc>
+    <loc>https://boholder.github.io/blogs/transmarginal-inhibition/</loc>
     <lastmod>2025-07-16T13:34:45+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/practice/</loc>
+    <loc>https://boholder.github.io/categories/practice/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/categories/practice/"
+                href="https://boholder.github.io/en-us/categories/practice/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/categories/practice/"
+                href="https://boholder.github.io/categories/practice/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/programming/</loc>
+    <loc>https://boholder.github.io/categories/programming/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/categories/programming/"
+                href="https://boholder.github.io/en-us/categories/programming/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/categories/programming/"
+                href="https://boholder.github.io/categories/programming/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/programming/</loc>
+    <loc>https://boholder.github.io/tags/programming/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/tags/programming/"
+                href="https://boholder.github.io/en-us/tags/programming/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/tags/programming/"
+                href="https://boholder.github.io/tags/programming/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/ssh/</loc>
+    <loc>https://boholder.github.io/tags/ssh/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/x11fwd/</loc>
+    <loc>https://boholder.github.io/blogs/x11fwd/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/x11/</loc>
+    <loc>https://boholder.github.io/tags/x11/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/biology/</loc>
+    <loc>https://boholder.github.io/tags/biology/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/buddism/</loc>
+    <loc>https://boholder.github.io/tags/buddism/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/tips/</loc>
+    <loc>https://boholder.github.io/categories/tips/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/categories/tips/"
+                href="https://boholder.github.io/en-us/categories/tips/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/categories/tips/"
+                href="https://boholder.github.io/categories/tips/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blogs/embrace-impermanence/</loc>
+    <loc>https://boholder.github.io/blogs/embrace-impermanence/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/information/</loc>
+    <loc>https://boholder.github.io/tags/information/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/program_awareness/</loc>
+    <loc>https://boholder.github.io/blogs/program_awareness/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/concurrency/</loc>
+    <loc>https://boholder.github.io/tags/concurrency/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
+    <loc>https://boholder.github.io/tags/python/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/event-loop-and-multithread-in-python/</loc>
+    <loc>https://boholder.github.io/blogs/event-loop-and-multithread-in-python/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/execution_event/</loc>
+    <loc>https://boholder.github.io/blogs/execution_event/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/blogs/execution_event/"
+                href="https://boholder.github.io/en-us/blogs/execution_event/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/blogs/execution_event/"
+                href="https://boholder.github.io/blogs/execution_event/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blogs/two-books-on-buddhism/</loc>
+    <loc>https://boholder.github.io/blogs/two-books-on-buddhism/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/buddhism/</loc>
+    <loc>https://boholder.github.io/tags/buddhism/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/design/</loc>
+    <loc>https://boholder.github.io/tags/design/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/talk-with-nishuang-about-minecraft-access/</loc>
+    <loc>https://boholder.github.io/blogs/talk-with-nishuang-about-minecraft-access/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/open-source/</loc>
+    <loc>https://boholder.github.io/tags/open-source/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/join-minecraft-access-development/</loc>
+    <loc>https://boholder.github.io/blogs/join-minecraft-access-development/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/java/</loc>
+    <loc>https://boholder.github.io/tags/java/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/java-9-to-17/</loc>
+    <loc>https://boholder.github.io/blogs/java-9-to-17/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/craft/</loc>
+    <loc>https://boholder.github.io/categories/craft/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/categories/craft/"
+                href="https://boholder.github.io/en-us/categories/craft/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/categories/craft/"
+                href="https://boholder.github.io/categories/craft/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/lora/</loc>
+    <loc>https://boholder.github.io/tags/lora/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/tags/lora/"
+                href="https://boholder.github.io/en-us/tags/lora/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/tags/lora/"
+                href="https://boholder.github.io/tags/lora/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/otaku/</loc>
+    <loc>https://boholder.github.io/tags/otaku/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/tags/otaku/"
+                href="https://boholder.github.io/en-us/tags/otaku/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/tags/otaku/"
+                href="https://boholder.github.io/tags/otaku/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/stable-diffusion/</loc>
+    <loc>https://boholder.github.io/tags/stable-diffusion/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/tags/stable-diffusion/"
+                href="https://boholder.github.io/en-us/tags/stable-diffusion/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/tags/stable-diffusion/"
+                href="https://boholder.github.io/tags/stable-diffusion/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blogs/train-a-lora-model-for-an-anime-character/</loc>
+    <loc>https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/blogs/train-a-lora-model-for-an-anime-character/"
+                href="https://boholder.github.io/en-us/blogs/train-a-lora-model-for-an-anime-character/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/blogs/train-a-lora-model-for-an-anime-character/"
+                href="https://boholder.github.io/blogs/train-a-lora-model-for-an-anime-character/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/sstv/</loc>
+    <loc>https://boholder.github.io/tags/sstv/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/sstv-intro/</loc>
+    <loc>https://boholder.github.io/blogs/sstv-intro/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/maven/</loc>
+    <loc>https://boholder.github.io/tags/maven/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/what-i-learned-from-putgun/</loc>
+    <loc>https://boholder.github.io/blogs/what-i-learned-from-putgun/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/maven-build-advance/</loc>
+    <loc>https://boholder.github.io/blogs/maven-build-advance/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/favor/</loc>
+    <loc>https://boholder.github.io/blogs/favor/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/information-flies-in-the-wind-on-the-internet/</loc>
+    <loc>https://boholder.github.io/blogs/information-flies-in-the-wind-on-the-internet/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/prgramming/</loc>
+    <loc>https://boholder.github.io/tags/prgramming/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/yarrow-divination/</loc>
+    <loc>https://boholder.github.io/blogs/yarrow-divination/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cooking/</loc>
+    <loc>https://boholder.github.io/tags/cooking/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/lazy-cooking/</loc>
+    <loc>https://boholder.github.io/blogs/lazy-cooking/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/currying/</loc>
+    <loc>https://boholder.github.io/tags/currying/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/currying/</loc>
+    <loc>https://boholder.github.io/blogs/currying/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/srp-against-dry/</loc>
+    <loc>https://boholder.github.io/blogs/srp-against-dry/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/diy/</loc>
+    <loc>https://boholder.github.io/tags/diy/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/introspection-of-pc-diy/</loc>
+    <loc>https://boholder.github.io/blogs/introspection-of-pc-diy/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/unit-test/</loc>
+    <loc>https://boholder.github.io/tags/unit-test/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/mock-in-nutshell/</loc>
+    <loc>https://boholder.github.io/blogs/mock-in-nutshell/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/what-you-need-for-programming/</loc>
+    <loc>https://boholder.github.io/blogs/what-you-need-for-programming/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/learn-from-source-code/</loc>
+    <loc>https://boholder.github.io/blogs/learn-from-source-code/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/unit-test-methods/</loc>
+    <loc>https://boholder.github.io/blogs/unit-test-methods/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/backup/</loc>
+    <loc>https://boholder.github.io/tags/backup/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/tags/backup/"
+                href="https://boholder.github.io/en-us/tags/backup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/tags/backup/"
+                href="https://boholder.github.io/tags/backup/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/sre/</loc>
+    <loc>https://boholder.github.io/tags/sre/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/tags/sre/"
+                href="https://boholder.github.io/en-us/tags/sre/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/tags/sre/"
+                href="https://boholder.github.io/tags/sre/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blogs/individual-data-backup-summary/</loc>
+    <loc>https://boholder.github.io/blogs/individual-data-backup-summary/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/blogs/individual-data-backup-summary/"
+                href="https://boholder.github.io/en-us/blogs/individual-data-backup-summary/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/blogs/individual-data-backup-summary/"
+                href="https://boholder.github.io/blogs/individual-data-backup-summary/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blogs/tdd-tips/</loc>
+    <loc>https://boholder.github.io/blogs/tdd-tips/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://boholder.github.io/about/</loc>
     <lastmod>2025-09-05T14:29:23+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/about/"
+                href="https://boholder.github.io/en-us/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/about/"
+                href="https://boholder.github.io/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blogs/java-arrangement-combination/</loc>
+    <loc>https://boholder.github.io/blogs/java-arrangement-combination/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ide/</loc>
+    <loc>https://boholder.github.io/tags/ide/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/tags/ide/"
+                href="https://boholder.github.io/en-us/tags/ide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/tags/ide/"
+                href="https://boholder.github.io/tags/ide/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blogs/markdown-obsidian-user-defined-language-for-notepadpp/</loc>
+    <loc>https://boholder.github.io/blogs/markdown-obsidian-user-defined-language-for-notepadpp/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cookie/</loc>
+    <loc>https://boholder.github.io/tags/cookie/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/cookie_security/</loc>
+    <loc>https://boholder.github.io/blogs/cookie_security/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/information-security/</loc>
+    <loc>https://boholder.github.io/categories/information-security/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/web-security/</loc>
+    <loc>https://boholder.github.io/tags/web-security/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/minecraft-screen-navigation/</loc>
+    <loc>https://boholder.github.io/blogs/minecraft-screen-navigation/</loc>
     <lastmod>2025-09-05T14:29:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/one-record-about-debuging-unkown-unkown/</loc>
+    <loc>https://boholder.github.io/blogs/one-record-about-debuging-unkown-unkown/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/two-threads-for-async-and-sync-work-in-python/</loc>
+    <loc>https://boholder.github.io/blogs/two-threads-for-async-and-sync-work-in-python/</loc>
     <lastmod>2025-05-02T18:34:35+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/z_accept-interpersonal-friction/</loc>
+    <loc>https://boholder.github.io/blogs/z_accept-interpersonal-friction/</loc>
     <lastmod>2025-09-05T14:29:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blogs/z_book-antifragile/</loc>
+    <loc>https://boholder.github.io/blogs/z_book-antifragile/</loc>
     <lastmod>2025-09-05T14:29:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://boholder.github.io/tags/</loc>
     <lastmod>2025-09-05T14:29:23+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/tags/"
+                href="https://boholder.github.io/en-us/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/tags/"
+                href="https://boholder.github.io/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blogs/</loc>
+    <loc>https://boholder.github.io/blogs/</loc>
     <lastmod>2025-09-05T14:29:23+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/blogs/"
+                href="https://boholder.github.io/en-us/blogs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/blogs/"
+                href="https://boholder.github.io/blogs/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://boholder.github.io/categories/</loc>
     <lastmod>2025-09-05T14:29:23+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/categories/"
+                href="https://boholder.github.io/en-us/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/categories/"
+                href="https://boholder.github.io/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/archive/</loc>
+    <loc>https://boholder.github.io/archive/</loc>
     <lastmod>2025-09-05T14:29:23+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/archive/"
+                href="https://boholder.github.io/en-us/archive/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/archive/"
+                href="https://boholder.github.io/archive/"
                 />
   </url><url>
-    <loc>http://localhost:1313/crafts/</loc>
+    <loc>https://boholder.github.io/crafts/</loc>
     <lastmod>2025-09-05T14:29:23+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/crafts/"
+                href="https://boholder.github.io/en-us/crafts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/crafts/"
+                href="https://boholder.github.io/crafts/"
                 />
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://boholder.github.io/series/</loc>
     <lastmod>2025-09-05T14:29:23+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:1313/en-us/series/"
+                href="https://boholder.github.io/en-us/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:1313/series/"
+                href="https://boholder.github.io/series/"
                 />
   </url>
 </urlset>
