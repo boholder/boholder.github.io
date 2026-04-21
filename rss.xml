@@ -19,10 +19,77 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Tue, 07 Apr 2026 09:22:19 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 21 Apr 2026 16:53:17 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
+        
+            <item>
+                <title>
+业余爱好，最重要的是保持兴趣</title>
+                <link>https://boholder.github.io/blogs/the_most_important_thing_is_to_stay_interested/</link>
+                <guid isPermaLink="true">https://boholder.github.io/blogs/the_most_important_thing_is_to_stay_interested/</guid>
+                <pubDate>Tue, 21 Apr 2026 00:00:00 &#43;0000</pubDate>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
+                
+                
+                <description>
+                        
+&lt;blockquote&gt;
+&lt;p&gt;A: &amp;hellip;（分享业余用 AI 写代码的成果和给 AI 擦屁股的痛苦）&lt;/p&gt;
+&lt;p&gt;我：不是为了生产而做的编程工作，那就是爱好、是娱乐，开心最重要。那我问你，自己写开心还是给 AI 擦屁股开心&lt;/p&gt;
+&lt;p&gt;A: 能跑的程序我写不出来。AI 虽然需要擦屁股但是它写得出来。我有得选吗？&lt;/p&gt;
+&lt;p&gt;我：有啊，不写，去吃个冰淇淋&lt;/p&gt;
+&lt;p&gt;B: 对于没有创造欲的人是这样的，对有创造欲的就是骂骂咧咧让 AI 干活&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;这个话题我有发言权，因为我有志愿维护（有用户在背后催的）开源项目的经历。这不仅适用于“业余编程”，任何业余爱好都适用。道理很简单，但我想多分享一点经历总结出的经验，故写此文。&lt;/p&gt;
+&lt;p&gt;愿意用空闲时间做事的动机，除却想增加额外收入等理性动机，只有内源的、非理性的、来去无踪的、无法量化的兴趣。下文所论仅限定这种“源自兴趣”的业余爱好，你说我先射箭再画靶，说得对，但是此文目的不是辩论，是分享如何长久保持兴趣的经验。&lt;/p&gt;
+&lt;p&gt;引文中 B 的发言有个词用得好，“创造欲”，相似词——灵感、缪斯女神，突出了其捉摸不定的特性。“突然来了兴致”也是小说中常见的连接词。兴趣来了是好事，这种突然产生的兴趣就像拨弄温暖的炉灰时升起的小火苗，要主动投入最宝贵的资源——时间做柴薪才能让它保持燃烧。本文的核心是控制这团火焰&lt;strong&gt;持续&lt;/strong&gt;地燃烧，不是让它越烧越旺（后者需要投入更多）。就像鼓风、添柴、等待火焰沿着柴火蔓延一样，我们可以通过选择主动做哪些事来强化兴趣、不做哪些事防止兴趣被浇灭。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;少学多做，即时反馈&lt;/strong&gt;。很多事有门槛，而自身能力经验能够满足爱好所需的情况不常见，尤其是从零入门一个新爱好时。我发现“学习与爱好相关的新知识”这个行为会通过消耗精力、减少（或者说抵消）好奇心而间接磨损兴趣，可能是因为我们的大脑生来讨厌复杂性，然后“爱屋及乌恨屋及乌”的心理就发挥作用了。我还发现如果能尽早地看到劳动成果，人会很开心，进而增强兴趣。结合这两点我们可以得出“少学多做，即时反馈”的结论。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在很多行业中有类似理论，比如软件工程中的“敏捷开发”，可以借用这些理论的方法论。&lt;/li&gt;
+&lt;li&gt;把一块空闲时间做不完的爱好作品（或学不会的知识）拆分成小块。如何吃大象？一次一口。&lt;/li&gt;
+&lt;li&gt;分小节手把手实践的系列教程（比如这个&lt;a href=&#34;https://www.justinguitar.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;吉他教程&lt;/a&gt;）比只看老师动嘴的网课好很多。你们可能知道 &lt;a href=&#34;https://scratch.mit.edu/projects/editor/?tutorial=getStarted&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scratch programming language&lt;/a&gt; ，常用的少儿编程工具，积木拖拽式。但你们可能不知道，美国好多著名程序员（包括比尔盖茨）对编程的兴趣都源自摆弄 BASIC programming language，这个语言语法简单、同时可用来写复杂程序。（我不理解的是那时候他们对数学的掌握和兴趣，比如有个人写了个模拟火箭登月的数学程序，并称其为游戏。）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;把奖励放在苦头后&lt;/strong&gt;。即使能力满足爱好所需，爱好活动本身也包含不开心的琐事，比如做饭需要备菜，写代码需要写单侧、CI、文档，把丙烯画笔或者毛笔涮干净要花不少力气。或者想要认真对待爱好，需要补习理论、反复练习。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;时间管理方面的书（如&lt;a href=&#34;https://book.douban.com/subject/36687146/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《时间贫困》Happier Hour - [英]凯茜·霍姆斯（Cassie Holmes）&lt;/a&gt;）会探讨类似实践，即如何平衡“乐事”和“苦事”。&lt;/li&gt;
+&lt;li&gt;教吉他的 Justin 老师&lt;a href=&#34;https://www.justinguitar.com/guitar-lessons/module-1-practice-routine-b1-116&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;说&lt;/a&gt;，重复性练习很重要（因为要练肌肉记忆），但每天最后留十分钟练习自己想弹的任何曲子，因为你是为了弹想弹的曲子才学吉他的！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;保持自己的节奏，只在想做的时候做&lt;/strong&gt;。千万不要在没有自发的兴趣时强迫自己做业余爱好，比如设定包含明确时间的计划和目标，真的没有什么比这样做更磨灭兴趣了，大脑会把负面情绪和这件事建立联系的。重复性练习、抽时间为了用户维护开源项目&amp;hellip;&amp;hellip;这些事全都可以留到“兴致来了”的时候做，没人有立场责怪你。不想做、来不及就不做，人不能落了绩优主义的陷阱。如果怕忘记灵感，可以把想法记录到备忘录。跳过一天一周一个月甚至一年都无所谓的，因为只要那个火种还不灭，日后机会合适，就能再捡起来继续。&lt;/p&gt;
+&lt;p&gt;暂时想到这么多。快夏天了，向大家推荐 Kinco 金鸟防蚊挂网，去年夏天家里老进蚊子，我在纱窗和门口都挂上，再没见过。今年是厄尔尼诺，说明夏天会很热。&lt;/p&gt;
+
+                        
+
+                    </description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/categories/life/">Life</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://boholder.github.io/tags/tips/">Tips</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>
