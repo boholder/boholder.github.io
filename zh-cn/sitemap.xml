@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://boholder.github.io/</loc>
-    <lastmod>2026-04-21T16:52:58+08:00</lastmod>
+    <lastmod>2026-07-13T17:53:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -15,8 +15,17 @@
                 href="https://boholder.github.io/"
                 />
   </url><url>
+    <loc>https://boholder.github.io/categories/game/</loc>
+    <lastmod>2026-07-13T17:53:27+08:00</lastmod>
+  </url><url>
+    <loc>https://boholder.github.io/tags/game/</loc>
+    <lastmod>2026-07-13T17:53:27+08:00</lastmod>
+  </url><url>
+    <loc>https://boholder.github.io/blogs/vrchat-server-info/</loc>
+    <lastmod>2026-07-13T17:53:27+08:00</lastmod>
+  </url><url>
     <loc>https://boholder.github.io/categories/life/</loc>
-    <lastmod>2026-04-21T16:52:58+08:00</lastmod>
+    <lastmod>2026-04-21T16:53:38+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -29,15 +38,12 @@
                 />
   </url><url>
     <loc>https://boholder.github.io/tags/tips/</loc>
-    <lastmod>2026-04-21T16:52:58+08:00</lastmod>
+    <lastmod>2026-04-21T16:53:38+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/the_most_important_thing_is_to_stay_interested/</loc>
-    <lastmod>2026-04-21T16:52:58+08:00</lastmod>
+    <lastmod>2026-04-21T16:53:38+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/tags/blog/</loc>
-    <lastmod>2026-02-16T16:34:56+08:00</lastmod>
-  </url><url>
-    <loc>https://boholder.github.io/categories/game/</loc>
     <lastmod>2026-02-16T16:34:56+08:00</lastmod>
   </url><url>
     <loc>https://boholder.github.io/blogs/rim-world-note/</loc>

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2026-04-21T16:53:17&#43;08:00</updated>
+    <updated>2026-07-14T19:24:27&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -13,10 +13,591 @@
     <generator uri="https://gohugo.io/" version="0.145.0">Hugo</generator>
         <entry>
             <title type="text">
+VRChat 服务器信息</title>
+            <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/vrchat-server-info/" />
+            <id>https://boholder.github.io/blogs/vrchat-server-info/</id>
+            <updated>2026-07-13T17:53:27&#43;08:00</updated>
+            <published>2026-07-13T00:00:00&#43;00:00</published>
+            <author>
+                    <uri>https://boholder.github.io/</uri>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</rights><summary type="html">
+                域名、IP 等
+                
+
+            </summary>
+            
+                <content type="html">
+                    
+&lt;p&gt;本文准备作为长期更新文章，若发现错误，请务必在评论区（GitHub issue）配依据指出。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#总结&#34; class=&#34;anchor-link&#34; aria-label=&#34;总结&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:总结&#34; class=&#34;headings&#34;&gt;总结&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;域名&lt;/th&gt;
+          &lt;th&gt;IP&lt;/th&gt;
+          &lt;th&gt;所属运营商&lt;/th&gt;
+          &lt;th&gt;地理位置&lt;/th&gt;
+          &lt;th&gt;用途&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#vrchatcom&#34;&gt;vrchat.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://ipinfo.io/104.18.6.156&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;104.18.6.156&lt;/a&gt;, &lt;a href=&#34;https://ipinfo.io/104.18.7.156&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;104.18.7.156&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Cloudflare&lt;/td&gt;
+          &lt;td&gt;San Francisco, California, US&lt;/td&gt;
+          &lt;td&gt;官网（/home）、旧 API（/api）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#wikivrchatcom&#34;&gt;wiki.vrchat.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;网站解析：&lt;a href=&#34;https://ipinfo.io/104.18.6.156&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;104.18.6.156&lt;/a&gt;, &lt;a href=&#34;https://ipinfo.io/104.18.7.156&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;104.18.7.156&lt;/a&gt; Cloudflare DoH 解析：&lt;a href=&#34;https://ipinfo.io/8.6.112.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;8.6.112.0&lt;/a&gt;, &lt;a href=&#34;https://ipinfo.io/8.47.69.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;8.47.69.0&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Cloudflare&lt;/td&gt;
+          &lt;td&gt;San Francisco, California, US&lt;/td&gt;
+          &lt;td&gt;官方 Wiki&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#statusvrchatcom&#34;&gt;status.vrchat.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;很多&lt;/td&gt;
+          &lt;td&gt;Amazon CloudFront CDN, Atlassian&lt;/td&gt;
+          &lt;td&gt;多地&lt;/td&gt;
+          &lt;td&gt;官方服务器可用性监控&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#vrchat&#34;&gt;vrch.at&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://ipinfo.io/104.18.28.35&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;104.18.28.35&lt;/a&gt;, &lt;a href=&#34;https://ipinfo.io/104.18.29.35&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;104.18.29.35&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Cloudflare&lt;/td&gt;
+          &lt;td&gt;San Francisco, California, US&lt;/td&gt;
+          &lt;td&gt;短域名（用户、世界、实例、群组&amp;hellip;）&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#apivrchatcloud&#34;&gt;api.vrchat.cloud&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://ipinfo.io/104.18.26.36&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;104.18.26.36&lt;/a&gt;, &lt;a href=&#34;https://ipinfo.io/104.18.27.36&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;104.18.27.36&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Cloudflare&lt;/td&gt;
+          &lt;td&gt;San Francisco, California, US&lt;/td&gt;
+          &lt;td&gt;网站后端、游戏服务端 API&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[2]&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#pipelinevrchatcloud&#34;&gt;pipeline.vrchat.cloud&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://ipinfo.io/104.18.26.36&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;104.18.26.36&lt;/a&gt;, &lt;a href=&#34;https://ipinfo.io/104.18.27.36&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;104.18.27.36&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Cloudflare&lt;/td&gt;
+          &lt;td&gt;San Francisco, California, US&lt;/td&gt;
+          &lt;td&gt;Websocket API&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[3]&lt;/a&gt;&lt;/sup&gt;，向游戏客户端推送群组通知、好友申请、好友状态等消息&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#filesvrchatcloud&#34;&gt;files.vrchat.cloud&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;因存在 CDN，结果不唯一&lt;/td&gt;
+          &lt;td&gt;Amazon CloudFront CDN, AWS S3&lt;/td&gt;
+          &lt;td&gt;多地&lt;/td&gt;
+          &lt;td&gt;World、Avatar、SDK 等资源文件分发，域名在 CloudFront 上，背后是 S3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#file-variantsvrchatcloud&#34;&gt;file-variants.vrchat.cloud&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;因存在 CDN，结果不唯一&lt;/td&gt;
+          &lt;td&gt;Amazon CloudFront CDN&lt;/td&gt;
+          &lt;td&gt;多地&lt;/td&gt;
+          &lt;td&gt;用途不明，肯定是资源分发否则不会用 CDN&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#assetsvrchatcom&#34;&gt;assets.vrchat.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;因存在 CDN，结果不唯一&lt;/td&gt;
+          &lt;td&gt;Amazon CloudFront CDN, AWS S3&lt;/td&gt;
+          &lt;td&gt;多地&lt;/td&gt;
+          &lt;td&gt;图片资源分发，域名在 CloudFront 上，背后是 S3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ns.photonengine.io, *.exitgames.com, ns.photonengine.cn&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://doc.photonengine.com/realtime/current/troubleshooting/faq#can-we-get-a-list-of-all-cloud-servers-ips&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Such an IP list does not exist as the Photon Cloud is changing too frequently&amp;rdquo;&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Photon Engine&lt;/td&gt;
+          &lt;td&gt;多地&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#%e7%8e%a9%e5%ae%b6%e5%ae%9e%e6%97%b6%e5%8a%a8%e4%bd%9c%e5%92%8c%e8%af%ad%e9%9f%b3&#34;&gt;玩家实时动作和语音&lt;/a&gt;，“VRChat 无响应（VRChat is not responding）”弹窗（存疑），“网络连接已超时（Your connection has timed out）”弹窗（存疑）&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[4]&lt;/a&gt;&lt;/sup&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;
+&lt;h2 id=&#34;vrchatcom&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#vrchatcom&#34; class=&#34;anchor-link&#34; aria-label=&#34;vrchatcom&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:vrchatcom&#34; class=&#34;headings&#34;&gt;vrchat.com&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;官网域名 &lt;a href=&#34;https://vrchat.com/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://vrchat.com/home&lt;/a&gt;，同时下面有子域名 &lt;code&gt;https://api.vrchat.com&lt;/code&gt;（虽然叫 api 但似乎只起到重定向到其他域名的作用）。&lt;/p&gt;
+&lt;p&gt;同时它曾经（2025 及以前？）承接 API，如 Unity 里的 &lt;a href=&#34;https://wiki.vrchat.com/wiki/VRChat_SDK&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VRChat SDK&lt;/a&gt; 所用到的 &lt;a href=&#34;https://feedback.vrchat.com/sdk-bug-reports/p/sdk-keeps-getting-http404-when-putting-avatar-thumbnail-to-server&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;https://vrchat.com/api/1/file/image/code/{id}&lt;/code&gt;&lt;/a&gt;。不清楚目前 API 是否全面转为 &lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#apivrchatcloud&#34;&gt;&lt;code&gt;api.vrchat.cloud&lt;/code&gt;&lt;/a&gt;，搜到一篇&lt;a href=&#34;https://forum.ripper.store/topic/116641/how-to-download-unencrypted-vrchat-world-bundle-s-.vrcw-s-browser-only&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2026 年的文章&lt;/a&gt;还在用 &lt;code&gt;https://vrchat.com/api/1/file/{fileId}&lt;/code&gt; 而不是 &lt;a href=&#34;https://vrchat.community/reference/get-file/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;https://api.vrchat.cloud/api/1/file/{fileId}&lt;/code&gt;&lt;/a&gt;，尝试调用该接口也不会重定向。&lt;/p&gt;
+&lt;p&gt;本地开 &lt;a href=&#34;https://github.com/DNSCrypt/dnscrypt-proxy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dnscrypt-proxy&lt;/a&gt; DoH 代理（部分域名如 &lt;code&gt;vrchat.com&lt;/code&gt; 会被 GFW 污染），dig 结果（其实是 HTTP 代理到日本的代理服务器再 DoH 到 Cloudflare 的 DNS 服务器，解析结果是 Cloudflare 提供的，下同、不再赘述）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short vrchat.com A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#104.18.6.156&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#104.18.7.156&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short vrchat.com NS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#nina.ns.cloudflare.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#owen.ns.cloudflare.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;找俩在线 DNS 解析网站交查验证，没错就只有这俩 IP（下面若本地和两网站解析结果相同则不再赘述）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#A/vrchat.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#A/vrchat.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3avrchat.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3avrchat.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;wikivrchatcom&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#wikivrchatcom&#34; class=&#34;anchor-link&#34; aria-label=&#34;wikivrchatcom&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:wikivrchatcom&#34; class=&#34;headings&#34;&gt;wiki.vrchat.com&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;官方 Wiki &lt;a href=&#34;https://wiki.vrchat.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://wiki.vrchat.com&lt;/a&gt;。本地解析出的 IP 和两个网站不一样，网站解出的 IP 同 vrchat.com，本地解出的这俩也是 Cloudflare 的 IP，是 CDN？&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short wiki.vrchat.com A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#8.6.112.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#8.47.69.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short wiki.vrchat.com NS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#空响应&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#A/wiki.vrchat.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#A/wiki.vrchat.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3awiki.vrchat.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3awiki.vrchat.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;statusvrchatcom&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#statusvrchatcom&#34; class=&#34;anchor-link&#34; aria-label=&#34;statusvrchatcom&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:statusvrchatcom&#34; class=&#34;headings&#34;&gt;status.vrchat.com&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;服务器可用性监控 &lt;a href=&#34;https://status.vrchat.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://status.vrchat.com&lt;/a&gt;，监控的 IP 就是多，那几个 99.86 开头的裸 IP 是 &lt;a href=&#34;https://ipinfo.io/ips/99.86.195.0/24&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Amazon CloudFront&lt;/a&gt;（CDN），还用了第三方平台 Atlassian（stspg-customer.com 和 atlassian.com 两个域名），两个网站也是各地理位置解出的结果都不同。另外 FYI 社区也有一个监控 &lt;a href=&#34;https://metrics.vrchat.community&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://metrics.vrchat.community&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short status.vrchat.com A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#gw6db8tk47y2.stspg-customer.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#status-vrchat-com-b6fffffd-4213-47ae-b0cb-30b98d501ff6.saas.atlassian.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#99.86.195.14&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#99.86.195.45&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#99.86.195.28&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#99.86.195.56&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short api.vrchat.com NS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#空响应&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#A/status.vrchat.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#A/status.vrchat.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3astatus.vrchat.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3astatus.vrchat.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vrchat&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#vrchat&#34; class=&#34;anchor-link&#34; aria-label=&#34;vrchat&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:vrchat&#34; class=&#34;headings&#34;&gt;vrch.at&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;还真不知道有这么一个短域名，从社区维护的 API 文档&lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;（官方没有 API 文档）里看到的。它可以重定向到对应的 &lt;code&gt;https://vrchat.com/home/&lt;/code&gt; 链接。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short vrch.at A    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#104.18.28.35&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#104.18.29.35&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short vrch.at NS    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#nina.ns.cloudflare.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#owen.ns.cloudflare.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#A/vrch.at&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#A/vrch.at&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3avrch.at&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3avrch.at&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;apivrchatcloud&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#apivrchatcloud&#34; class=&#34;anchor-link&#34; aria-label=&#34;apivrchatcloud&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:apivrchatcloud&#34; class=&#34;headings&#34;&gt;api.vrchat.cloud&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;游戏客户端、网站都会调用的 API 域名，社区整理的 REST API &lt;sup id=&#34;fnref1:2&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;大部分都在这个域名下，用中国互联网公司的架构行话，我们可以说这是“管理端”。&lt;a href=&#34;https://ipinfo.io/ips/104.18.26.0/24&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;104.18.26.0/24&lt;/a&gt;、&lt;a href=&#34;https://ipinfo.io/ips/104.18.27.0/24&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;104.18.27.0/24&lt;/a&gt; 这俩都是 Cloudflare 的 IP 段，不像社区传言中说的 VRChat 部署在 AWS 上，至少这个域名不是。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# vrchat.cloud 本身解析不出 IP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short vrchat.cloud A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#空响应&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short vrchat.cloud NS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#owen.ns.cloudflare.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#nina.ns.cloudflare.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short api.vrchat.cloud A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#104.18.26.36&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#104.18.27.36&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short api.vrchat.cloud NS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#nina.ns.cloudflare.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#owen.ns.cloudflare.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#A/api.vrchat.cloud&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#A/api.vrchat.cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3aapi.vrchat.cloud&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3aapi.vrchat.cloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pipelinevrchatcloud&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#pipelinevrchatcloud&#34; class=&#34;anchor-link&#34; aria-label=&#34;pipelinevrchatcloud&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:pipelinevrchatcloud&#34; class=&#34;headings&#34;&gt;pipeline.vrchat.cloud&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;VRChat&amp;rsquo;s Websocket API, also known as &amp;ldquo;the pipeline&amp;rdquo;, is used receiving updates regarding the API, such as receiving an invite request. The connection is receive-only, meaning that you can only listen for messages. Sending messages is undefined behavior.
+&amp;ndash; Community Wiki &lt;sup id=&#34;fnref1:3&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;从&lt;a href=&#34;https://ask.vrchat.com/t/vrc-websocket-issue/36580&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;游戏客户端日志&lt;/a&gt;里也能看到，客户端会尝试保持 Websocket 一直连接。根据社区 API 文档所提及的 API 功能，链接不稳定会导致游戏客户端无法显示最新状态，如好友在线情况不准、收不到各种请求通知。Websocket 是 TCP 长连接，如果这部分出、入双向流量选择走代理，则代理自身的 TCP 配置会影响连接的稳定性，具体在&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#%e9%80%9a%e8%bf%87%e4%bb%a3%e7%90%86%e7%8e%a9-vrc&#34;&gt;文章后面&lt;/a&gt;解释。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short pipeline.vrchat.cloud A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#104.18.27.36&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#104.18.26.36&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short pipeline.vrchat.cloud NS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#空响应&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#A/pipeline.vrchat.cloud&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#A/pipeline.vrchat.cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3apipeline.vrchat.cloud&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3apipeline.vrchat.cloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;filesvrchatcloud&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#filesvrchatcloud&#34; class=&#34;anchor-link&#34; aria-label=&#34;filesvrchatcloud&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:filesvrchatcloud&#34; class=&#34;headings&#34;&gt;files.vrchat.cloud&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;该域名上存放着各种资源文件，游戏客户端会从上面下载 World（.vrcw）和 Avatar（.vrca）文件，&lt;a href=&#34;https://vcc.docs.vrchat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VRChat Creator Companion (VCC)&lt;/a&gt;会从上面下载 Unity VRC SDK，甚至这里有一个有效的意义不明的测试链接 &lt;a href=&#34;https://files.vrchat.cloud/testfiles/100M.bin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://files.vrchat.cloud/testfiles/100M.bin&lt;/a&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short files.vrchat.cloud A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#d2jw20of4mijnb.cloudfront.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#108.157.229.115&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#108.157.229.62&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#108.157.229.48&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#108.157.229.98&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short files.vrchat.cloud NS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#d2jw20of4mijnb.cloudfront.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-61.awsdns-07.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-953.awsdns-55.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-1451.awsdns-53.org.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-1880.awsdns-43.co.uk.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#A/files.vrchat.cloud&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#A/files.vrchat.cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3afiles.vrchat.cloud&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3afiles.vrchat.cloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;解析出的四个 108.157.229.* 裸 IP，反向 DNS（PTR）结果为 CloudFront 的 CDN 域名。这里本地和网站对四个 IP 的 PTR 结果都是 &lt;code&gt;arn56.r.cloudfront.net&lt;/code&gt;，搜了下这是瑞典斯德哥尔摩 Stockholm, Sweden (ARN 是其 Arlanda 机场 IATA code)。因存在 CDN，不同地区的客户端去解析 &lt;code&gt;files.vrchat.cloud&lt;/code&gt; 应该会得到不同的结果。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short -x 108.157.229.*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#server-108-157-229-*.arn56.r.cloudfront.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#PTR/108.157.229.115&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#PTR/108.157.229.115&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=ptr%3a108.157.229.115&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=ptr%3a108.157.229.115&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有证据表明，该域名上的文件资源存储在 AWS S3 上：&lt;a href=&#34;https://vrchat.community/reference/start-file-data-upload&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;社区 API 文档&lt;/a&gt;提到了调用文件传输接口响应是 AWS S3 链接（猜测应该是&lt;a href=&#34;https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pre-signed url&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;请求 &lt;a href=&#34;https://s3.amazonaws.com/files.vrchat.cloud/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://s3.amazonaws.com/files.vrchat.cloud/&lt;/a&gt; ，会看到这个 bucket 是存在的，从 HTTP header 里可见 &lt;code&gt;x-amz-bucket-region: us-east-1&lt;/code&gt;，说明该 bucket 位于“声名显赫”的 us-east-1（位于美国弗吉尼亚），向其他 AWS 地区请求该 bucket（如 &lt;a href=&#34;https://s3.eu-west-1.amazonaws.com/files.vrchat.cloud/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://s3.eu-west-1.amazonaws.com/files.vrchat.cloud/&lt;/a&gt; ），会收到“PermanentRedirect”响应，说明该 bucket 没开多地区备份策略如 &lt;a href=&#34;https://aws.amazon.com/s3/features/multi-region-access-points/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multi-Region Access Points&lt;/a&gt;。嗯&amp;hellip;假如 us-east-1 down 了，VRC 玩家就加载不了世界和模型了吧。&lt;/p&gt;
+&lt;h2 id=&#34;file-variantsvrchatcloud&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#file-variantsvrchatcloud&#34; class=&#34;anchor-link&#34; aria-label=&#34;file-variantsvrchatcloud&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:file-variantsvrchatcloud&#34; class=&#34;headings&#34;&gt;file-variants.vrchat.cloud&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.google.com/search?q=%22file-variants.vrchat.cloud%22&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;谷歌搜索&lt;/a&gt; （和 AI 辅助搜索）搜不到这个域名的用途，它只是不断出现在各帖子的代理规则配置中，同时这个域名又确实是实际存在可解析的，神秘。看解析结果，这个也套了 CloudFront，不过没有对应 S3 bucket &lt;a href=&#34;https://s3.amazonaws.com/file-variants.vrchat.cloud&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://s3.amazonaws.com/file-variants.vrchat.cloud&lt;/a&gt;。本地和网站解析结果理所当然得不同。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short file-variants.vrchat.cloud A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#d86w0jkslet2t.cloudfront.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#3.164.110.125&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#3.164.110.9&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#3.164.110.12&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#3.164.110.87&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short file-variants.vrchat.cloud NS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#d86w0jkslet2t.cloudfront.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-1896.awsdns-45.co.uk.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-237.awsdns-29.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-515.awsdns-00.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-1189.awsdns-20.org.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#A/file-variants.vrchat.cloud&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#A/file-variants.vrchat.cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3afile-variants.vrchat.cloud&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3afile-variants.vrchat.cloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;assetsvrchatcom&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#assetsvrchatcom&#34; class=&#34;anchor-link&#34; aria-label=&#34;assetsvrchatcom&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:assetsvrchatcom&#34; class=&#34;headings&#34;&gt;assets.vrchat.com&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;应该是保存静态资源（如图像、缩略图）的域名，搜索得知 &lt;a href=&#34;https://creators.vrchat.com/worlds/udon/image-loading/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Udon Image Loading&lt;/a&gt; 即世界中的图片加载功能会请求该域名，该域名也在游戏客户端内置的 &lt;a href=&#34;https://wiki.vrchat.com/wiki/Trusted_URLs&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Image loading allowlist&lt;/a&gt; 中。套了 CloudFront，&lt;a href=&#34;https://s3.amazonaws.com/assets.vrchat.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;S3 bucket 存在&lt;/a&gt;，还是在 us-east-1。本地和网站解析结果理所当然得不同。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short assets.vrchat.com A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#d14hwloucscbyy.cloudfront.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#3.173.219.57&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#3.173.219.102&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#3.173.219.39&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#3.173.219.30&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short assets.vrchat.com NS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#d14hwloucscbyy.cloudfront.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-1331.awsdns-38.org.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-1718.awsdns-22.co.uk.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-268.awsdns-33.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-674.awsdns-20.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#A/assets.vrchat.cloud&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#A/assets.vrchat.cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3aassets.vrchat.cloud&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3aassets.vrchat.cloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;玩家实时动作和语音&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#玩家实时动作和语音&#34; class=&#34;anchor-link&#34; aria-label=&#34;玩家实时动作和语音&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:玩家实时动作和语音&#34; class=&#34;headings&#34;&gt;玩家实时动作和语音&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;像其他在线游戏一样，玩家在 VRC 世界中的动作和语音，是通过 UDP 流量传输的，因为这类信息时效性较低，丢一部分也不影响。VRChat 借助名为 &lt;a href=&#34;https://doc.photonengine.com/realtime/current/connection-and-authentication/regions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Photon Engine&lt;/a&gt; 的平台的资源来处理这部分数据传输。众所周知在 VRC 中创建世界实例时有&lt;a href=&#34;https://vrchat.community/instances#region&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;四个地理位置选项&lt;/a&gt;，对应 &lt;a href=&#34;https://doc.photonengine.com/realtime/current/connection-and-authentication/regions#available-regions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Photon Engine 的四个地区集群&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;根据这篇官方 FAQ&lt;sup id=&#34;fnref1:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;（和&lt;a href=&#34;https://ask.vrchat.com/t/connection-timed-out-problem/45702/3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;论坛贴&lt;/a&gt;），恼人的“VRChat 无响应（VRChat is not responding）”和“网络连接已超时（Your connection has timed out）”弹窗&lt;strong&gt;可能&lt;/strong&gt;（该文章和&lt;a href=&#34;https://help.vrchat.com/hc/en-us/articles/360062658793-Which-ports-do-I-need-to-open-for-VRChat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方开端口文章&lt;/a&gt;都用了“real-time networking”字眼）提醒电脑与 Photon Engine 服务器之间存在网络问题。&lt;/p&gt;
+&lt;p&gt;搜索&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[5]&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[6]&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[7]&lt;/a&gt;&lt;/sup&gt;得知，ns.photonengine.io，*.exitgames.com 两个域名在游戏客户端日志中出现，另外 Photon Engine 官方文档列出中国有个特殊的域名 ns.photonengine.cn。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% dig @127.0.0.1 +short ns.photonengine.cn A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#nameserver.trafficmanager.cn.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ec-nameserver-public-cn-default-chinanorth3.chinanorth3.cloudapp.chinacloudapi.cn.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#163.228.253.89 台湾&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% dig @127.0.0.1 +short ns.photonengine.cn NS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#nameserver.trafficmanager.cn.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ec-nameserver-public-cn-default-chinanorth3.chinanorth3.cloudapp.chinacloudapi.cn.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short ns.photonengine.io A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#nameserver-public.trafficmanager.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-jp.photonengine.io.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#216.120.180.24 Cloudflare&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short ns.photonengine.io NS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#nameserver-public.trafficmanager.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-jp.photonengine.io.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short exitgames.com A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#65.52.128.33&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dig @127.0.0.1 +short exitgames.com NS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-1046.awsdns-02.org.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-1936.awsdns-50.co.uk.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-262.awsdns-32.com.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ns-713.awsdns-25.net.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#A/ns.photonengine.cn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#A/ns.photonengine.cn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3ans.photonengine.cn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3ans.photonengine.cn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#A/ns.photonengine.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#A/ns.photonengine.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3ans.photonengine.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3ans.photonengine.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dnschecker.org/#A/exitgames.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dnschecker.org/#A/exitgames.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3aexitgames.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3aexitgames.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;trafficmanager.cn，trafficmanager.net 是 Microsoft Azure 的域名，好嘛，三个域名背后 Cloudflare AWS Azure 都有了。本地和网站解析结果理所当然得不同。&lt;/p&gt;
+&lt;h2 id=&#34;通过代理玩-vrc&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#通过代理玩-vrc&#34; class=&#34;anchor-link&#34; aria-label=&#34;通过代理玩-vrc&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:通过代理玩-vrc&#34; class=&#34;headings&#34;&gt;通过代理玩 VRC&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Connecting to VRChat requires a reliable connection to Cloudflare, AWS Cloudfront, and Photon Engine and a stable connection to download content such as Worlds and Avatars.
+&amp;ndash; &lt;a href=&#34;https://help.vrchat.com/hc/en-us/articles/360062658433-Troubleshooting-Connection-Issues-with-VRChat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://help.vrchat.com/hc/en-us/articles/360062658433-Troubleshooting-Connection-Issues-with-VRChat&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;为下载资源文件，游戏客户端将产生大量对端地址是 files.vrchat.cloud 的下行流量，若该域名在你本地没有被污染，走直连可以节约代理流量。&lt;/p&gt;
+&lt;p&gt;若 Websocket API 域名（pipeline.vrchat.cloud）的出入流量走代理，则因代理服务器 TCP 超时配置，可能出现 TCP 半开的情况，其中一种情况是：本地到代理服务器间正常，但代理服务器到 pipeline 间网络不稳定，代理服务器不主动断开与客户端的连接，长时间等待 pipeline 服务器的响应。结果是本地迟迟等不到响应，游戏弹窗“VRChat 无响应”。&lt;/p&gt;
+&lt;p&gt;代理规则编写参考&lt;a href=&#34;https://linux.do/t/topic/293347/3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;一篇论坛帖&lt;/a&gt;和上面整理的内容。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# https://clashparty.org/docs/guide/override/yaml&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;+rules&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# --- vrchat start ---&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 用端口判断 UDP 走直连，如果有问题（观察游戏日志），改成走代理&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 其中 5055 5056 是官方文档中列出的&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ref: https://help.vrchat.com/hc/en-us/articles/360062658793-Which-ports-do-I-need-to-open-for-VRChat&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 5058 是社区列出的 Photon Engine 语音传输端口，27000-27100 是 Steam 要求打开的端口&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ref: https://portforward.com/vrchat/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ref: https://help.steampowered.com/en/faqs/view/2EA8-4D75-DA21-31EB&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;AND,((NETWORK,UDP),(DST-PORT,5055)),DIRECT&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;AND,((NETWORK,UDP),(DST-PORT,5056)),DIRECT&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;AND,((NETWORK,UDP),(DST-PORT,5058)),DIRECT&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;AND,((NETWORK,UDP),(DST-PORT,27000-27100)),DIRECT&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Photon Engine 域名直连（上面 UDP 端口规则应该会优先匹配，走不到这里）&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;DOMAIN-SUFFIX,exitgames.com,DIRECT&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;DOMAIN-SUFFIX,photonengine.io,DIRECT&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;DOMAIN-SUFFIX,photonengine.cn,DIRECT&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 其他域名走代理&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;DOMAIN,vrchat.com,Proxies&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;DOMAIN,api.vrchat.cloud,Proxies&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;DOMAIN,pipeline.vrchat.cloud,Proxies&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;DOMAIN,files.vrchat.cloud,Proxies&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;DOMAIN,file-variants.vrchat.cloud,Proxies&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;s1&#34;&gt;&amp;#39;DOMAIN,assets.vrchat.com,Proxies&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# --- vrchat end ---&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://vrchat.community/shortlinks&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://vrchat.community/shortlinks&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 320 512&#34; class=&#34;icon footnote-icon&#34;&gt;&lt;path d=&#34;M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fnref1:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://vrchat.community/reference&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://vrchat.community/reference&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 320 512&#34; class=&#34;icon footnote-icon&#34;&gt;&lt;path d=&#34;M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fnref1:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://vrchat.community/websocket&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://vrchat.community/websocket&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 320 512&#34; class=&#34;icon footnote-icon&#34;&gt;&lt;path d=&#34;M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fnref1:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://help.vrchat.com/hc/en-us/articles/29016182583571-VRChat-is-not-responding-Your-connection-has-timed-out&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://help.vrchat.com/hc/en-us/articles/29016182583571-VRChat-is-not-responding-Your-connection-has-timed-out&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 320 512&#34; class=&#34;icon footnote-icon&#34;&gt;&lt;path d=&#34;M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fnref1:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://doc.photonengine.com/realtime/current/connection-and-authentication/regions#available-regions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doc.photonengine.com/realtime/current/connection-and-authentication/regions#available-regions&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 320 512&#34; class=&#34;icon footnote-icon&#34;&gt;&lt;path d=&#34;M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:6&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://ask.vrchat.com/t/recent-consistent-disconnects-timeouts/26996&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://ask.vrchat.com/t/recent-consistent-disconnects-timeouts/26996&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 320 512&#34; class=&#34;icon footnote-icon&#34;&gt;&lt;path d=&#34;M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:7&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://ask.vrchat.com/t/player-from-china-was-unable-to-join-some-instances-always-timed-out/14394&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://ask.vrchat.com/t/player-from-china-was-unable-to-join-some-instances-always-timed-out/14394&lt;/a&gt;&amp;#160;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 320 512&#34; class=&#34;icon footnote-icon&#34;&gt;&lt;path d=&#34;M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+
+                    
+
+                </content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/categories/game/" term="Game" label="Game" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://boholder.github.io/tags/game/" term="Game" label="Game" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">
 业余爱好，最重要的是保持兴趣</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/the_most_important_thing_is_to_stay_interested/" />
             <id>https://boholder.github.io/blogs/the_most_important_thing_is_to_stay_interested/</id>
-            <updated>2026-04-21T16:52:58&#43;08:00</updated>
+            <updated>2026-04-21T16:53:38&#43;08:00</updated>
             <published>2026-04-21T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://boholder.github.io/</uri>
