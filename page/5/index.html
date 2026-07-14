@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.157.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -60,7 +60,7 @@ BoHolder的网站：博客，小玩意及其他</title>
         "@context": "https://schema.org",
         "@type": "WebSite",
         "datePublished": "2026-07-13T00:00:00+00:00",
-        "dateModified": "2026-07-13T17:53:27+08:00",
+        "dateModified": "2026-07-14T22:59:53+08:00",
         "url": "https://boholder.github.io/",
         "description": "BoHolder's site: crafts, blogs etc",
         "image": "https://boholder.github.io/icons/apple-touch-icon.png",
@@ -376,7 +376,8 @@ SRP 提醒你不要盲目遵守 DRY 设计原则</a>
                     <p>首先提醒一下记得<a href="https://en.wikipedia.org/wiki/Single-responsibility_principle">单一职责原则（SRP）</a>是面向对象实践下的设计原则，也是<a href="https://en.wikipedia.org/wiki/SOLID">SOLID</a>五大面向对象设计原则之一。然后<a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">不要重复自己（DRY）</a>原则则是更泛化的编程原则，也可以用在编程工作以外。这个短文讲两个原则的关系，总归还是把前提限定在了面向对象编程之内。</p>
 <p>我记得这是哪本书上的例子，大概是<a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a>，它是用这个例子来解释 SRP 的含义的，我稍微改一下，不翻原书了：</p>
 <blockquote>
-<p>需求 1：有三种员工，经理和普通员工和临时工，计算他们薪资的算法是相同的。</p></blockquote>
+<p>需求 1：有三种员工，经理和普通员工和临时工，计算他们薪资的算法是相同的。</p>
+</blockquote>
 <p>需求 1 映射到代码里就是，三个分开的员工类，然后三个类计算薪资的方法内部会调用同一个工具函数，DRY，对吧。</p>
                 </summary>
                 

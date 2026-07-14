@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.157.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -312,11 +312,11 @@ classic <a href="https://codingdojo.org/kata/Bowling/" target="_blank" rel="noop
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.practice.daily.d20210606</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Checker</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Checker</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">checkLiveCellNextState</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>Wait, what parameters should we type in? Lets <strong>think based on testing</strong> (you don&rsquo;t need to really write unit test
@@ -348,7 +348,7 @@ Java, this type method is a &ldquo;static method&rdquo;.</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">checkCellNextState</span><span class="p">(</span><span class="kt">boolean</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 id="write-test-code"><a href="#write-test-code" class="anchor-link" aria-label="write-test-code">#</a><a href="#contents:write-test-code" class="headings">Write test code</a></h3>
@@ -364,7 +364,7 @@ generate directories and files, it&rsquo;s enough:</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CheckerTest</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w"> 
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>Now add first test case (using JUnit to test). I had written an <code>Editor &gt; Live Templates</code>, set abbreviation &ldquo;tpv&rdquo; as &quot;
@@ -385,7 +385,7 @@ generate directories and files, it&rsquo;s enough:</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Test</span><span class="w"> </span><span class="c1">// junit annotation</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">liveLessThanTwoDie</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w"> 
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>Now&hellip; we have to decide how to construct test data, mainly means that grid. Let&rsquo;s shrink Checker&rsquo;s behavior without &quot;
@@ -422,7 +422,7 @@ it&rsquo;s a Simple Factory):</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="n">gird</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">1</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">gird</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w"> 
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>Replacing 2-level-repeat for-loop with Java 8 Stream API can reduce keyboard typing. If you use for-loop, you&rsquo;ll find
@@ -450,7 +450,7 @@ condition&rsquo;s characters are allover the keyboard. You can get IDEA auto-com
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Checker</span><span class="p">.</span><span class="na">checkCellNextState</span><span class="p">(</span><span class="n">gird</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">assertThat</span><span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="n">Matchers</span><span class="p">.</span><span class="na">is</span><span class="p">(</span><span class="kc">false</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>Type <code>Run</code>: <code>Shift</code> + <code>F10</code>, test failed, test turn over, now it&rsquo;s turn of function code.</p>
@@ -486,7 +486,7 @@ neighbors count of given cell (8 cells), judging it by rules, then return the ju
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">});</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">.</span><span class="na">get</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>I use Stream API again, but what is
@@ -580,7 +580,7 @@ the GUI button besides Quick Evaluate button), the top invoke frame is dropped, 
 </span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="n">getTestGrid</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">),</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">),</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">Matchers</span><span class="p">.</span><span class="na">is</span><span class="p">(</span><span class="kc">false</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>Run it with <code>Run</code>, fail as expected. Now change the function code:</p>
@@ -613,7 +613,7 @@ the GUI button besides Quick Evaluate button), the top invoke frame is dropped, 
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">});</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">.</span><span class="na">get</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">count</span><span class="p">.</span><span class="na">get</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">3</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>Now we want to run both two test cases to check our change not break the first test.</p>
@@ -689,8 +689,8 @@ neighbors count code into separate privat method by select lines and push
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//import java.util.concurrent.atomic.AtomicInteger;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//import java.util.stream.IntStream;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Checker</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">//import java.util.stream.IntStream;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Checker</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">checkCellNextState</span><span class="p">(</span><span class="kt">boolean</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">countLiveCells</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">liveNeighborCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="p">.</span><span class="na">get</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
@@ -708,14 +708,14 @@ neighbors count code into separate privat method by select lines and push
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">});</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">.</span><span class="na">get</span><span class="p">();</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//------------------------------</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//import org.hamcrest.Matchers;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//import org.junit.Test;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//import java.util.stream.IntStream;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//import static org.hamcrest.MatcherAssert.assertThat;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CheckerTest</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">//------------------------------</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">//import org.hamcrest.Matchers;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">//import org.junit.Test;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">//import java.util.stream.IntStream;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">//import static org.hamcrest.MatcherAssert.assertThat;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CheckerTest</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Test</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">liveLessThanTwoDie</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">boolean</span><span class="o">[][]</span><span class="w"> </span><span class="n">gird</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getTestGrid</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">);</span><span class="w">
@@ -738,7 +738,7 @@ neighbors count code into separate privat method by select lines and push
 </span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="n">gird</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">1</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">gird</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w"> 
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="make-the-234-rules-pass-test"><a href="#make-the-234-rules-pass-test" class="anchor-link" aria-label="make-the-234-rules-pass-test">#</a><a href="#contents:make-the-234-rules-pass-test" class="headings">Make the 2,3,4 rules pass test</a></h2>
@@ -767,7 +767,7 @@ neighbors count code into separate privat method by select lines and push
 </span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="n">getTestGrid</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">),</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">),</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">Matchers</span><span class="p">.</span><span class="na">is</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>Run test, oh, test pass, don&rsquo;t worry about test not fail, it&rsquo;s ok for now. Next rule:</p>
@@ -813,7 +813,7 @@ write them down as new tests to make the test suit stay completed:</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="n">getTestGrid</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">),</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">),</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">Matchers</span><span class="p">.</span><span class="na">is</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>There&rsquo;s no doubt that these tests can pass. Work on the rule 4 now:</p>
@@ -857,7 +857,7 @@ write them down as new tests to make the test suit stay completed:</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="n">getTestGrid</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">),</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">),</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">Matchers</span><span class="p">.</span><span class="na">is</span><span class="p">(</span><span class="kc">false</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>&ldquo;deadTwoDie()&rdquo; passes and &ldquo;deadMoreThanThreeDie()&rdquo; fail&hellip;.. Time to change function code. We can easily
@@ -890,7 +890,7 @@ cell don&rsquo;t need to minus itself after count all live cells. So we can chan
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">.</span><span class="na">get</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">3</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>Yep, all 7 test cases pass after change. By the way, you can move two exist lines by move cursor on first line, keep
@@ -950,7 +950,7 @@ to wrong judgment. The corresponding test code is:</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">assertThat</span><span class="p">(</span><span class="n">Checker</span><span class="p">.</span><span class="na">checkCellNextState</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">),</span><span class="w"> </span><span class="n">Matchers</span><span class="p">.</span><span class="na">is</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">assertThat</span><span class="p">(</span><span class="n">Checker</span><span class="p">.</span><span class="na">checkCellNextState</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">),</span><span class="w"> </span><span class="n">Matchers</span><span class="p">.</span><span class="na">is</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>None of them pass, how to make them pass? This feature is sort of like circular array, we want to
@@ -989,7 +989,7 @@ assume that it&rsquo;s coordinate is (i,j).</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">});</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">.</span><span class="na">get</span><span class="p">();</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>Tests pass, we finished the last requirement. After a little more refactors, now the whole code is:</p>
@@ -1122,9 +1122,9 @@ assume that it&rsquo;s coordinate is (i,j).</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//import java.util.concurrent.atomic.AtomicInteger;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//import java.util.stream.IntStream;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">//import java.util.stream.IntStream;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Checker</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Checker</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">checkCellNextState</span><span class="p">(</span><span class="kt">boolean</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">countLiveCells</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">);</span><span class="w">
@@ -1157,14 +1157,14 @@ assume that it&rsquo;s coordinate is (i,j).</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">});</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">.</span><span class="na">get</span><span class="p">();</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//import org.hamcrest.Matchers;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//import org.junit.Test;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//import java.util.stream.IntStream;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//import static org.hamcrest.MatcherAssert.assertThat;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">//import org.hamcrest.Matchers;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">//import org.junit.Test;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">//import java.util.stream.IntStream;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">//import static org.hamcrest.MatcherAssert.assertThat;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CheckerTest</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CheckerTest</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Test</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">liveLessThanTwoDie</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">boolean</span><span class="o">[][]</span><span class="w"> </span><span class="n">gird</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getTestGrid</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">);</span><span class="w">
@@ -1244,7 +1244,7 @@ assume that it&rsquo;s coordinate is (i,j).</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="n">gird</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">1</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">gird</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>I think that&rsquo;s about as &ldquo;clean&rdquo; a code as I can do.</p>

@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.157.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -447,9 +447,9 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// -------service.ServiceTest</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Given-When-Then - Behavior Driven Development (BDD)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Test</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">withNormalResponse</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Given-When-Then - Behavior Driven Development (BDD)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Test</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">withNormalResponse</span><span class="p">(){</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;normal&#34;</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// given, Mockito</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">given</span><span class="p">(</span><span class="n">mapper</span><span class="p">.</span><span class="na">getEntitiesBy</span><span class="p">(</span><span class="n">index</span><span class="p">))</span><span class="w">
@@ -465,34 +465,34 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">verify</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span><span class="n">times</span><span class="p">(</span><span class="n">1</span><span class="p">)).</span><span class="na">getEntitiesBy</span><span class="p">(</span><span class="n">mapperArgCaptor</span><span class="p">.</span><span class="na">capture</span><span class="p">());</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">whatMapperGot</span><span class="o">=</span><span class="n">mapperArgCaptor</span><span class="p">.</span><span class="na">getValue</span><span class="p">();</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">assertThat</span><span class="p">(</span><span class="n">whatMapperGot</span><span class="p">,</span><span class="n">is</span><span class="p">(</span><span class="n">index</span><span class="p">));</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// 构造 Mapper 桩所返回的测试数据</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Entity</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">buildDummyMapperReturn</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 构造 Mapper 桩所返回的测试数据</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Entity</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">buildDummyMapperReturn</span><span class="p">(){</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Collections</span><span class="p">.</span><span class="na">singletonList</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Entity</span><span class="p">().</span><span class="na">setCategory</span><span class="p">(</span><span class="s">&#34;c&#34;</span><span class="p">).</span><span class="na">setName</span><span class="p">(</span><span class="s">&#34;n&#34;</span><span class="p">));</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// -------dto.Response</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Getter</span><span class="w"> </span><span class="c1">// Lombok</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Setter</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Accessors</span><span class="p">(</span><span class="n">chain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Response</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// -------dto.Response</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Getter</span><span class="w"> </span><span class="c1">// Lombok</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Setter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Accessors</span><span class="p">(</span><span class="n">chain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Response</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Entity</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Response</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">message</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// -------dao.entity.Entity</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Getter</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Setter</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nd">@Accessors</span><span class="p">(</span><span class="n">chain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> 
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Entity</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// -------dao.entity.Entity</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Getter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Setter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Accessors</span><span class="p">(</span><span class="n">chain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Entity</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">category</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="3-基于特性的测试-property-based-testing-pbt"><a href="#3-基于特性的测试-property-based-testing-pbt" class="anchor-link" aria-label="3-基于特性的测试-property-based-testing-pbt">#</a><a href="#contents:3-基于特性的测试-property-based-testing-pbt" class="headings">3. 基于特性的测试 (property-based testing, PBT)</a></h2>

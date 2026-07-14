@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.145.0"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.157.0"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -245,12 +245,12 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">net.minecraft.client.gui.components.events</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ContainerEventHandler</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">GuiEventListener</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ContainerEventHandler</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">GuiEventListener</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="cm">/**
 </span></span></span><span class="line"><span class="cl"><span class="cm">    * {@return a List containing all GUI element children of this GUI element}
 </span></span></span><span class="line"><span class="cl"><span class="cm">    */</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">List</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">GuiEventListener</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">children</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><code>Screen</code> 类有两个列表类型的类字段，<code>children</code> 中保存的是可导航的子组件，<code>narratables</code> 中保存的是可讲述的组件。两个列表中的内容是动态的，随不同条件不断刷新。</p>
@@ -266,10 +266,10 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">net.minecraft.client.gui.screens</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Screen</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Screen</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">GuiEventListener</span><span class="o">&gt;</span><span class="w"> </span><span class="n">children</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lists</span><span class="p">.</span><span class="o">&lt;</span><span class="n">GuiEventListener</span><span class="o">&gt;</span><span class="n">newArrayList</span><span class="p">();</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">NarratableEntry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">narratables</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Lists</span><span class="p">.</span><span class="o">&lt;</span><span class="n">NarratableEntry</span><span class="o">&gt;</span><span class="n">newArrayList</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="packselectionscreen-资源包选择界面"><a href="#packselectionscreen-资源包选择界面" class="anchor-link" aria-label="packselectionscreen-资源包选择界面">#</a><a href="#contents:packselectionscreen-资源包选择界面" class="headings"><code>PackSelectionScreen</code> 资源包选择界面</a></h2>
@@ -308,7 +308,7 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">net.minecraft.client.gui.screens.packs</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PackSelectionScreen</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Screen</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PackSelectionScreen</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Screen</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">HeaderAndFooterLayout</span><span class="w"> </span><span class="n">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HeaderAndFooterLayout</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">TransferableSelectionList</span><span class="w"> </span><span class="n">availablePackList</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">TransferableSelectionList</span><span class="w"> </span><span class="n">selectedPackList</span><span class="p">;</span><span class="w">
@@ -332,7 +332,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">narratables</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">listener</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">listener</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="如何算出下一个焦点组件"><a href="#如何算出下一个焦点组件" class="anchor-link" aria-label="如何算出下一个焦点组件">#</a><a href="#contents:如何算出下一个焦点组件" class="headings">如何算出下一个焦点组件</a></h2>
@@ -396,7 +396,7 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><code>PackSelectionScreen</code> 类的 <code>nextFocusPath</code> 方法继承自 <code>ContainerEventHandler</code> 接口。根据代码，我以为 &ldquo;Avaliable&rdquo; 实例的 <code>nextFocusPath</code> 方法会返回非 null 的结果，但结果出人意外的是 null。</p>
@@ -426,7 +426,7 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">net.minecraft.client.gui.components.events</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ContainerEventHandler</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">GuiEventListener</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ContainerEventHandler</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">GuiEventListener</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="n">ComponentPath</span><span class="w"> </span><span class="nf">nextFocusPath</span><span class="p">(</span><span class="n">FocusNavigationEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">GuiEventListener</span><span class="w"> </span><span class="n">guiEventListener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">getFocused</span><span class="p">();</span><span class="w"> </span><span class="c1">// guiEventListener = &#34;Avaliable&#34;</span><span class="w">
@@ -443,7 +443,7 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//     return event instanceof FocusNavigationEvent.ArrowNavigation arrowNavigation ? this.handleArrowNavigation(arrowNavigation) : null;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// }</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>让我们 step into 看看 <code>&quot;Avaliable&quot;.nextFocusPath</code> 里发生了什么。<code>TransferableSelectionList</code> 的 <code>nextFocusPath</code> 方法由所继承的 <code>ObjectSelectionList</code> 实现。</p>
@@ -466,7 +466,7 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">net.minecraft.client.gui.components</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ObjectSelectionList</span><span class="o">&lt;</span><span class="n">E</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ObjectSelectionList</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ObjectSelectionList</span><span class="o">&lt;</span><span class="n">E</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ObjectSelectionList</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ComponentPath</span><span class="w"> </span><span class="nf">nextFocusPath</span><span class="p">(</span><span class="n">FocusNavigationEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getItemCount</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// nope, we get two packages inside &#34;Avaliable&#34; list</span><span class="w">
@@ -476,7 +476,7 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// &lt;-- So that&#39;s why we end up to a null return value</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>回到 <code>PackSelectionScreen</code> （<code>ContainerEventHandler</code>）的 <code>nextFocusPath</code> 继续向下走，进入 <code>handleTabNavigation</code> 方法。</p>
@@ -506,7 +506,7 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">net.minecraft.client.gui.components.events</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ContainerEventHandler</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">GuiEventListener</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ContainerEventHandler</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">GuiEventListener</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="n">ComponentPath</span><span class="w"> </span><span class="nf">nextFocusPath</span><span class="p">(</span><span class="n">FocusNavigationEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">GuiEventListener</span><span class="w"> </span><span class="n">guiEventListener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">getFocused</span><span class="p">();</span><span class="w"> </span><span class="c1">// guiEventListener = &#34;Avaliable&#34;</span><span class="w">
@@ -523,7 +523,7 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//     return event instanceof FocusNavigationEvent.ArrowNavigation arrowNavigation ? this.handleArrowNavigation(arrowNavigation) : null;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><code>PackSelectionScreen</code> 的 <code>handleTabNavigation</code> 方法依然由 <code>ContainerEventHandler</code> 提供。</p>
@@ -608,7 +608,7 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>哦，又回到了 <code>ObjectSelectionList.nextFocusPath</code>，不过这次要执行的分支改变了。</p>
@@ -637,7 +637,7 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">net.minecraft.client.gui.components</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ObjectSelectionList</span><span class="o">&lt;</span><span class="n">E</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ObjectSelectionList</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ObjectSelectionList</span><span class="o">&lt;</span><span class="n">E</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ObjectSelectionList</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ComponentPath</span><span class="w"> </span><span class="nf">nextFocusPath</span><span class="p">(</span><span class="n">FocusNavigationEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getItemCount</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// nope, we get two packages inside &#34;Selected&#34; list</span><span class="w">
@@ -653,7 +653,7 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>最终该方法返回值为 <code>ComponentPath.path(&quot;Selected&quot;, ComponentPath.leaf(&quot;first package&quot;))</code>，回到上一步的 <code>handleTabNavigation</code> 方法。</p>
@@ -692,7 +692,7 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>返回值为 <code>ComponentPath.path(&quot;PackSelectionScreen&quot;, ComponentPath.path(&quot;Selected&quot;, ComponentPath.leaf(&quot;first package&quot;)))</code>，&ldquo;Selected&rdquo; 列表的第一个包。这个结果将一路返回到 <code>keyPressed</code> 方法。</p>
@@ -749,7 +749,7 @@ keyPressed:145, Screen (net.minecraft.client.gui.screens)
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>总结：单击 <code>Tab</code> 键使界面焦点从 &ldquo;Avaliable&rdquo; 列表的第一个包转移到 &ldquo;Selected&rdquo; 列表的第一个包。</p>
