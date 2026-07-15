@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://boholder.github.io/en-us/</loc>
-    <lastmod>2026-04-07T09:21:25+08:00</lastmod>
+    <lastmod>2026-07-15T09:51:37+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -13,6 +13,45 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://boholder.github.io/en-us/"
+                />
+  </url><url>
+    <loc>https://boholder.github.io/en-us/categories/game/</loc>
+    <lastmod>2026-07-15T09:51:37+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://boholder.github.io/categories/game/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://boholder.github.io/en-us/categories/game/"
+                />
+  </url><url>
+    <loc>https://boholder.github.io/en-us/tags/game/</loc>
+    <lastmod>2026-07-15T09:51:37+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://boholder.github.io/tags/game/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://boholder.github.io/en-us/tags/game/"
+                />
+  </url><url>
+    <loc>https://boholder.github.io/en-us/blogs/vrchat-server-info/</loc>
+    <lastmod>2026-07-15T09:51:37+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://boholder.github.io/blogs/vrchat-server-info/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://boholder.github.io/en-us/blogs/vrchat-server-info/"
                 />
   </url><url>
     <loc>https://boholder.github.io/en-us/blogs/execution_event/</loc>

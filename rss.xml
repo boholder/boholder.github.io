@@ -19,7 +19,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)</copyright>
         
-        <lastBuildDate>Tue, 14 Jul 2026 23:01:26 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 15 Jul 2026 09:51:39 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://boholder.github.io/rss.xml" />
         
@@ -415,7 +415,7 @@ VRChat 服务器信息</title>
 &lt;li&gt;&lt;a href=&#34;https://mxtoolbox.com/SuperTool.aspx?action=a%3aassets.vrchat.cloud&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mxtoolbox.com/SuperTool.aspx?action=a%3aassets.vrchat.cloud&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;玩家实时动作和语音&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#玩家实时动作和语音&#34; class=&#34;anchor-link&#34; aria-label=&#34;玩家实时动作和语音&#34;&gt;#&lt;/a&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#contents:玩家实时动作和语音&#34; class=&#34;headings&#34;&gt;玩家实时动作和语音&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;像其他在线游戏一样，玩家在 VRC 世界中的动作和语音，是通过 UDP 流量传输的，因为这类信息时效性较低，丢一部分也不影响。VRChat 借助名为 &lt;a href=&#34;https://doc.photonengine.com/realtime/current/connection-and-authentication/regions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Photon Engine&lt;/a&gt; 的平台的资源来处理这部分数据传输。众所周知在 VRC 中创建世界实例时有&lt;a href=&#34;https://vrchat.community/instances#region&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;四个地理位置选项&lt;/a&gt;，对应 &lt;a href=&#34;https://doc.photonengine.com/realtime/current/connection-and-authentication/regions#available-regions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Photon Engine 的四个地区集群&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;像其他在线游戏一样，玩家在 VRC 世界中的动作和语音，是通过 UDP 流量传输的，因为这类信息时效性较高，丢一部分也不需要重发。VRChat 借助名为 &lt;a href=&#34;https://doc.photonengine.com/realtime/current/connection-and-authentication/regions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Photon Engine&lt;/a&gt; 的平台的资源来处理这部分数据传输。众所周知在 VRC 中创建世界实例时有&lt;a href=&#34;https://vrchat.community/instances#region&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;四个地理位置选项&lt;/a&gt;，对应 &lt;a href=&#34;https://doc.photonengine.com/realtime/current/connection-and-authentication/regions#available-regions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Photon Engine 的四个地区集群&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;根据这篇官方 FAQ&lt;sup id=&#34;fnref1:4&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;（和&lt;a href=&#34;https://ask.vrchat.com/t/connection-timed-out-problem/45702/3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;论坛贴&lt;/a&gt;），恼人的“VRChat 无响应（VRChat is not responding）”和“网络连接已超时（Your connection has timed out）”弹窗&lt;strong&gt;可能&lt;/strong&gt;（该文章和&lt;a href=&#34;https://help.vrchat.com/hc/en-us/articles/360062658793-Which-ports-do-I-need-to-open-for-VRChat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方开端口文章&lt;/a&gt;都用了“real-time networking”字眼）提醒电脑与 Photon Engine 服务器之间存在网络问题。&lt;/p&gt;
 &lt;p&gt;搜索&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[5]&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[6]&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;https://boholder.github.io/blogs/vrchat-server-info/#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;[7]&lt;/a&gt;&lt;/sup&gt;得知，ns.photonengine.io，*.exitgames.com 两个域名在游戏客户端日志中出现，另外 Photon Engine 官方文档列出中国有个特殊的域名 ns.photonengine.cn。观察游戏日志和网络行为，只看到对 ns.photonengine.io 的请求：&lt;code&gt;[Behaviour] Using nameserver host: ns.photonengine.io&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -484,7 +484,7 @@ VRChat 服务器信息</title>
 &lt;p&gt;Connecting to VRChat requires a reliable connection to Cloudflare, AWS Cloudfront, and Photon Engine and a stable connection to download content such as Worlds and Avatars.
 &amp;ndash; &lt;a href=&#34;https://help.vrchat.com/hc/en-us/articles/360062658433-Troubleshooting-Connection-Issues-with-VRChat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://help.vrchat.com/hc/en-us/articles/360062658433-Troubleshooting-Connection-Issues-with-VRChat&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;为下载资源文件，游戏客户端将产生大量目的地址是 file-variants.vrchat.cloud 的入向流量，若该域名在你本地没有被污染，走直连可以节约代理流量。&lt;/p&gt;
+&lt;p&gt;为下载资源文件，游戏客户端将产生大量对端地址是 file-variants.vrchat.cloud 的入向流量，若该域名在你本地没有被污染，走直连可以节约代理流量。&lt;/p&gt;
 &lt;p&gt;若 Websocket API 域名（pipeline.vrchat.cloud）的出入流量走代理，则因代理客户端、代理服务器 TCP 超时配置和网络不稳定，可能出现 TCP 半开的情况，其中一种情况是：本地（代理客户端）到代理服务器间正常，但代理服务器到 pipeline 间网络不稳定，代理服务器不主动断开与客户端的连接，长时间等待 pipeline 服务器的响应。结果是本地迟迟等不到响应。&lt;/p&gt;
 &lt;p&gt;代理规则编写参考&lt;a href=&#34;https://linux.do/t/topic/293347/3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;一篇论坛帖&lt;/a&gt;和上面整理的内容。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
