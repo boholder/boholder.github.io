@@ -58,13 +58,13 @@ VRChat Server Information | BoHolder&#39;s site: crafts, blogs etc</title>
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2026-07-13T00:00:00+00:00",
-        "dateModified": "2026-07-15T09:51:37+08:00",
+        "dateModified": "2026-07-15T09:51:50+08:00",
         "url": "https://boholder.github.io/en-us/blogs/vrchat-server-info/",
         "headline": "\r\nVRChat Server Information",
         "description": "Domains, IP addresses, and more",
         "inLanguage" : "en-US",
         "articleSection": "blogs",
-        "wordCount":  2004 ,
+        "wordCount":  2064 ,
         "image": "https://boholder.github.io/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
@@ -107,7 +107,7 @@ VRChat Server Information" />
         <meta property="og:image" content="https://boholder.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2026-07-13T00:00:00&#43;00:00" />
-    <meta property="article:modified_time" content="2026-07-15T09:51:37&#43;08:00" />
+    <meta property="article:modified_time" content="2026-07-15T09:51:50&#43;08:00" />
     
     <meta property="article:section" content="blogs" />
 
@@ -204,7 +204,7 @@ Domains, IP addresses, and more</div>
     
     
         
-        <time datetime="2026-07-15T09:51:37&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2026.7.15</time>
+        <time datetime="2026-07-15T09:51:50&#43;08:00" class="post-meta-item modified dt-updated"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M44.4 36.9L26.1 18.6c1.8-4.6.8-10.1-2.9-13.8-4-4-10-4.8-14.8-2.5l8.7 8.7-6.1 6.1-8.7-8.7C0 13.2.8 19.2 4.8 23.2c3.7 3.7 9.2 4.7 13.8 2.9l18.3 18.3c.8.8 2.1.8 2.8 0l4.7-4.7c.8-.7.8-2 0-2.8z"></path></svg>&nbsp;2026.7.15</time>
     
     
     
@@ -218,7 +218,7 @@ Domains, IP addresses, and more</div>
     
     
         
-        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;2004</span>
+        <span class="post-meta-item wordcount"><svg class="icon post-meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M0 28.69v7.5h7.5l22.13-22.13-7.5-7.5L0 28.69zM35.41 8.28c.78-.78.78-2.05 0-2.83L30.74.78c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"></path></svg>&nbsp;2064</span>
     
     
         
@@ -328,7 +328,7 @@ Domains, IP addresses, and more</div>
           <td><a href="https://doc.photonengine.com/realtime/current/troubleshooting/faq#can-we-get-a-list-of-all-cloud-servers-ips" target="_blank" rel="noopener">&ldquo;Such an IP list does not exist as the Photon Cloud is changing too frequently&rdquo;</a></td>
           <td>Photon Engine</td>
           <td>Multiple locations</td>
-          <td><a href="/en-us/blogs/vrchat-server-info/#real-time-player-movement-and-voice">Real-time player movement and voice</a>, the “VRChat is not responding” popup (uncertain), and the “Your connection has timed out” popup (uncertain)<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup></td>
+          <td><a href="/en-us/blogs/vrchat-server-info/#real-time-player-movement-and-voice">Real-time player movement and voice</a>, the “VRChat is not responding” popup , and the “Your connection has timed out” popup<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup></td>
       </tr>
   </tbody>
 </table></div>
@@ -627,8 +627,13 @@ Domains, IP addresses, and more</div>
 </ul>
 <h2 id="real-time-player-movement-and-voice"><a href="#real-time-player-movement-and-voice" class="anchor-link" aria-label="real-time-player-movement-and-voice">#</a><a href="#contents:real-time-player-movement-and-voice" class="headings">Real-Time Player Movement and Voice</a></h2>
 <p>As in other online games, player movement and voice in VRC worlds are transmitted over UDP. This type of information is highly time-sensitive, so losing some of it does not matter. VRChat uses resources from a platform called <a href="https://doc.photonengine.com/realtime/current/connection-and-authentication/regions" target="_blank" rel="noopener">Photon Engine</a> to handle these data transfers. As is well known, there are <a href="https://vrchat.community/instances#region" target="_blank" rel="noopener">four geographic options</a> when creating a world instance in VRC, corresponding to <a href="https://doc.photonengine.com/realtime/current/connection-and-authentication/regions#available-regions" target="_blank" rel="noopener">Photon Engine&rsquo;s four regional clusters</a>.</p>
-<p>According to this official FAQ<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> (and a <a href="https://ask.vrchat.com/t/connection-timed-out-problem/45702/3" target="_blank" rel="noopener">forum post</a>), the annoying “VRChat is not responding” and “Your connection has timed out” dialogs <strong>may</strong> indicate a network problem between the computer and Photon Engine&rsquo;s servers. This is uncertain because the only evidence is that both that article and the <a href="https://help.vrchat.com/hc/en-us/articles/360062658793-Which-ports-do-I-need-to-open-for-VRChat" target="_blank" rel="noopener">official port-opening article</a> use the term “real-time networking.”</p>
-<p>Search results<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">[5]</a></sup><sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">[6]</a></sup><sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">[7]</a></sup> show that the domains <code>ns.photonengine.io</code> and <code>*.exitgames.com</code> appear in game client logs. Photon Engine&rsquo;s official documentation also lists the special Chinese domain <code>ns.photonengine.cn</code>. Observing the game logs and network behavior, however, I only saw requests to <code>ns.photonengine.io</code>: <code>[Behaviour] Using nameserver host: ns.photonengine.io</code>.</p>
+<p>According to this official FAQ<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> (and a <a href="https://ask.vrchat.com/t/connection-timed-out-problem/45702/3" target="_blank" rel="noopener">forum post</a>), the annoying “VRChat is not responding” and “Your connection has timed out” dialogs indicate a network problem between the computer and Photon Engine&rsquo;s servers. Both that article and the <a href="https://help.vrchat.com/hc/en-us/articles/360062658793-Which-ports-do-I-need-to-open-for-VRChat" target="_blank" rel="noopener">official port-opening article</a> use the term “real-time networking.” And here is a snippet I copied from my own game client log when the popup appears:</p>
+<pre tabindex="0"><code class="language-log" data-lang="log">Error      -  [Behaviour] {{ NameServerAddress: &#39;ns.photonengine.io:27000&#39;, MasterServerAddress: &#39;gctok1018.exitgames.com:27001&#39;, GameServerAddress: &#39;82.117.224.125:27002&#39;, Code: &#39;ClientTimeout&#39;, State: &#39;Disconnected&#39;, Time: &#39;-1777227.993&#39; }}
+Debug      -  [Behaviour] Disconnected: ClientTimeout with Reason: 
+Debug      -  [Behaviour] Connection summary: SCS v0 UDP SocketErrorCode: 0 WinSock
+Error      -  [Behaviour] Timeout: 您与 VRChat 的连接已超时，请确认网络状态并重试。
+Debug      -  [Behaviour] &lt;color=red&gt;Resetting game flow because &#34;您与 VRChat 的连接已超时，请确认网络状态并重试。&#34;: [RejoinInstance, SkipLogin]&lt;/color&gt;
+</code></pre><p>Search results<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">[5]</a></sup><sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">[6]</a></sup><sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">[7]</a></sup> show that the domains <code>ns.photonengine.io</code> and <code>*.exitgames.com</code> appear in game client logs. Photon Engine&rsquo;s official documentation also lists the special Chinese domain <code>ns.photonengine.cn</code>. Observing the game logs and network behavior, however, I only saw requests to <code>ns.photonengine.io</code>: <code>[Behaviour] Using nameserver host: ns.photonengine.io</code>.</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -795,7 +800,7 @@ Domains, IP addresses, and more</div>
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2026-07-15 09:51:37 CST" style="cursor:help">
+        <span title="Updated @ 2026-07-15 09:51:50 CST" style="cursor:help">
 
 <svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2026-07-15</text><text x="915" y="140" textLength="650" transform="scale(.1)">2026-07-15</text></g></svg>
         </span></div>
@@ -803,6 +808,24 @@ Domains, IP addresses, and more</div>
 
 
         
+    
+        <div class="post-gitinfo">
+            
+            
+                <div class="post-gitinfo-right">
+                    
+                        
+                            <div class="gitinfo-item feedback">
+                                <a href="https://github.com/boholder/boholder.github.io/issues" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon feedback-icon"><path d="M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z"/></svg>Feedback</a>
+                            </div>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+
 
 
         <div class="post-share">
