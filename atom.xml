@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">BoHolder的网站：博客，小玩意及其他</title>
     <subtitle type="html">BoHolder&#39;s site: crafts, blogs etc</subtitle>
-    <updated>2026-07-18T00:10:17&#43;08:00</updated>
+    <updated>2026-07-22T19:03:40&#43;08:00</updated>
     <id>https://boholder.github.io/</id>
     <link rel="alternate" type="text/html" href="https://boholder.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://boholder.github.io/atom.xml" />
@@ -16,7 +16,7 @@
 VRChat 服务器信息</title>
             <link rel="alternate" type="text/html" href="https://boholder.github.io/blogs/vrchat-server-info/" />
             <id>https://boholder.github.io/blogs/vrchat-server-info/</id>
-            <updated>2026-07-15T09:51:50&#43;08:00</updated>
+            <updated>2026-07-18T00:11:01&#43;08:00</updated>
             <published>2026-07-13T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://boholder.github.io/</uri>
@@ -483,9 +483,10 @@ Debug      -  [Behaviour] &amp;lt;color=red&amp;gt;Resetting game flow because &
 &lt;p&gt;Connecting to VRChat requires a reliable connection to Cloudflare, AWS Cloudfront, and Photon Engine and a stable connection to download content such as Worlds and Avatars.
 &amp;ndash; &lt;a href=&#34;https://help.vrchat.com/hc/en-us/articles/360062658433-Troubleshooting-Connection-Issues-with-VRChat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://help.vrchat.com/hc/en-us/articles/360062658433-Troubleshooting-Connection-Issues-with-VRChat&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;VRC 游戏客户端中没有网络代理相关的配置项，但观察到它&lt;strong&gt;遵守 Windows 系统代理配置&lt;/strong&gt;，因此若本机配置了系统代理，TCP 流量部分也将走代理。同时因 Windows 系统代理不会代理 UDP 流量，故若希望 UDP 流量（即与 Photon Engine 服务间的交互）也走代理（UDP over &lt;code&gt;&amp;lt;proxy protocol&amp;gt;&lt;/code&gt;），则需要开启代理客户端的 TUN 模式，或使用其他虚拟网口软件如 SStap（2017 年停止开发）、Netch（2022 年停止开发）等将 VRC 游戏客户端的网络连接转发到代理客户端，进而配合代理客户端的代理规则使这部分流量走代理。&lt;/p&gt;
 &lt;p&gt;为下载资源文件，游戏客户端将产生大量对端地址是 file-variants.vrchat.cloud 的入向流量，若该域名在你本地没有被污染，走直连可以节约代理流量。&lt;/p&gt;
-&lt;p&gt;若 Websocket API 域名（pipeline.vrchat.cloud）的出入流量走代理，则因代理客户端、代理服务器 TCP 超时配置和网络不稳定，可能出现 TCP 半开的情况，其中一种情况是：本地（代理客户端）到代理服务器间正常，但代理服务器到 pipeline 间网络不稳定，代理服务器不主动断开与客户端的连接，长时间等待 pipeline 服务器的响应。结果是本地迟迟等不到响应。&lt;/p&gt;
-&lt;p&gt;代理规则编写参考&lt;a href=&#34;https://linux.do/t/topic/293347/3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;一篇论坛帖&lt;/a&gt;和上面整理的内容。&lt;/p&gt;
+&lt;p&gt;若 Websocket API 域名（pipeline.vrchat.cloud）的出入流量走代理，则因代理客户端、代理服务器 TCP 超时配置和网络不稳定，可能出现 TCP 半开的情况，其中一种情况是：本地（代理客户端）到代理服务器间正常，但代理服务器到 pipeline 间网络不稳定，代理服务器不主动断开与客户端的连接，长时间等待 pipeline 服务器的响应，结果是本地迟迟等不到响应。&lt;/p&gt;
+&lt;p&gt;代理规则编写参考&lt;a href=&#34;https://linux.do/t/topic/293347/3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;一篇论坛帖&lt;/a&gt;和上面整理的内容，包含 UDP 流量相关的规则。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
